@@ -45,10 +45,10 @@ cards:
       pinyin: chū pái
       meaning: Play (a hand) / Hands remaining
       explanation: 出 (chū) means 'to go out' or 'produce'. To produce a card from your hand into the play area.
-      interval: 1
-      ease: 1.9000000000000001
-      reps: 1
-      next_review: "2026-08-28"
+      interval: 6
+      ease: 1.7600000000000002
+      reps: 2
+      next_review: "2026-09-02"
     - character: 牌型
       pinyin: pái xíng
       meaning: Poker Hand
@@ -83,6 +83,7 @@ cards:
       explanation: 行 (xíng) means 'to move/travel' and 星 (xīng) means 'star'. Ancient astronomers called planets 'moving stars'.
       interval: 1
       ease: 1.3
+      reps: 1
       next_review: "2026-08-28"
     - character: 补充包
       pinyin: bǔ chōng bāo

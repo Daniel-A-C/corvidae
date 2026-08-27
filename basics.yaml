@@ -1,17 +1,33 @@
 cards:
-  - character: 你好
-    pinyin: nǐ hǎo
-    meaning: Hello
-    explanation: "你 (nǐ) means 'you' and 好 (hǎo) means 'good' or 'well'. Literally: 'You good'."
-  - character: 谢谢
-    pinyin: xièxiè
-    meaning: Thank you
-    explanation: "The left radical 讠 (speech) combines with 射 (to shoot/project). It symbolizes words being projected outward in gratitude."
-  - character: 知道
-    pinyin: zhīdào
-    meaning: To know / to be aware of
-    explanation: "知 (zhī) means 'to know' or 'realize', and 道 (dào) means 'path', 'way', or 'principle'. To know something is to know its path."
-  - character: 为什么
-    pinyin: wèishénme
-    meaning: Why
-    explanation: "为 (wèi) means 'for', 什 (shén) means 'what', and 么 (me) is a suffix. Literally: 'For what?'"
+    - character: 你好
+      pinyin: nǐ hǎo
+      meaning: Hello
+      explanation: '你 (nǐ) means ''you'' and 好 (hǎo) means ''good'' or ''well''. Literally: ''You good''.'
+      interval: 1
+      ease: 2.6
+      reps: 1
+      next_review: "2026-08-28"
+    - character: 谢谢
+      pinyin: xièxiè
+      meaning: Thank you
+      explanation: The left radical 讠 (speech) combines with 射 (to shoot/project). It symbolizes words being projected outward in gratitude.
+      interval: 1
+      ease: 2.6
+      reps: 1
+      next_review: "2026-08-28"
+    - character: 知道
+      pinyin: zhīdào
+      meaning: To know / to be aware of
+      explanation: 知 (zhī) means 'to know' or 'realize', and 道 (dào) means 'path', 'way', or 'principle'. To know something is to know its path.
+      interval: 1
+      ease: 2.6
+      reps: 1
+      next_review: "2026-08-28"
+    - character: 为什么
+      pinyin: wèishénme
+      meaning: Why
+      explanation: '为 (wèi) means ''for'', 什 (shén) means ''what'', and 么 (me) is a suffix. Literally: ''For what?'''
+      interval: 1
+      ease: 2.6
+      reps: 1
+      next_review: "2026-08-28"
