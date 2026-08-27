@@ -1,0 +1,100 @@
+cards:
+    - character: 小丑牌
+      pinyin: xiǎo chǒu pái
+      meaning: Joker
+      explanation: 小丑 (xiǎochǒu) means 'clown' or 'jester', and 牌 (pái) means 'card'. The Jester Card.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 底注
+      pinyin: dǐ zhù
+      meaning: Ante
+      explanation: 底 (dǐ) means 'bottom' or 'base', and 注 (zhù) means 'bet' or 'stake'. The base bet you must clear.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 盲注
+      pinyin: máng zhù
+      meaning: Blind
+      explanation: 盲 (máng) means 'blind' (the eye 目 radical is under the dead/lost 亡 radical), and 注 (zhù) means 'bet'.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 筹码
+      pinyin: chóu mǎ
+      meaning: Chips
+      explanation: 筹 (chóu) originally meant bamboo tallies used for counting, and 码 (mǎ) means marker/weight. Tally markers = Casino chips.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 倍率
+      pinyin: bèi lǜ
+      meaning: Mult (Multiplier)
+      explanation: 倍 (bèi) means 'times/fold' (as in double/triple), and 率 (lǜ) means 'rate'. The multiplier rate.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 弃牌
+      pinyin: qì pái
+      meaning: Discard
+      explanation: 弃 (qì) means 'to abandon' or 'throw away', and 牌 (pái) is 'card'.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 出牌
+      pinyin: chū pái
+      meaning: Play (a hand) / Hands remaining
+      explanation: 出 (chū) means 'to go out' or 'produce'. To produce a card from your hand into the play area.
+      interval: 1
+      ease: 1.9000000000000001
+      reps: 1
+      next_review: "2026-08-28"
+    - character: 牌型
+      pinyin: pái xíng
+      meaning: Poker Hand
+      explanation: 牌 (pái) is 'card', and 型 (xíng) means 'model', 'type', or 'shape'. The shape or formation your cards take (e.g., a Flush).
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 同花
+      pinyin: tóng huā
+      meaning: Flush
+      explanation: 同 (tóng) means 'same' and 花 (huā) means 'flower' or 'suit' in card games. Cards of the same suit.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 顺子
+      pinyin: shùn zi
+      meaning: Straight
+      explanation: 顺 (shùn) means 'smooth', 'obey', or 'in sequence', combined with the noun suffix 子 (zi). A smooth numerical sequence.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 塔罗牌
+      pinyin: tǎ luó pái
+      meaning: Tarot card
+      explanation: 塔罗 (tǎluó) is a direct phonetic translation of the English word 'Tarot', plus 牌 (card).
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 行星牌
+      pinyin: xíng xīng pái
+      meaning: Planet card
+      explanation: 行 (xíng) means 'to move/travel' and 星 (xīng) means 'star'. Ancient astronomers called planets 'moving stars'.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 补充包
+      pinyin: bǔ chōng bāo
+      meaning: Booster Pack
+      explanation: 补 (bǔ) means 'to mend/supplement', 充 (chōng) means 'to fill/charge', and 包 (bāo) means 'bag/pack'. A pack that supplements your run.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 优惠券
+      pinyin: yōu huì quàn
+      meaning: Voucher
+      explanation: 优 (yōu) means 'excellent/preferential', 惠 (huì) means 'benefit', and 券 (quàn) means 'ticket/voucher'. A preferential benefit ticket.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"

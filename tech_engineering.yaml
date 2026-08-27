@@ -1,0 +1,17 @@
+cards:
+  - character: 软件
+    pinyin: ruǎnjiàn
+    meaning: Software
+    explanation: "软 (ruǎn) means 'soft' and 件 (jiàn) means 'item' or 'component'. 'Soft component' = Software (as opposed to 硬件 / hardware)."
+  - character: 电脑
+    pinyin: diànnǎo
+    meaning: Computer
+    explanation: "电 (diàn) means 'electric' and 脑 (nǎo) means 'brain'. Literally: 'Electric brain'."
+  - character: 数据库
+    pinyin: shùjùkù
+    meaning: Database
+    explanation: "数据 (shùjù) means 'data' (literally number-evidence), and 库 (kù) means 'warehouse' or 'storehouse'. A warehouse for data."
+  - character: 代码
+    pinyin: dàimǎ
+    meaning: Code / Source code
+    explanation: "代 (dài) means 'to substitute' or 'represent', and 码 (mǎ) means 'symbol', 'number', or 'code'. Symbols representing logic."
