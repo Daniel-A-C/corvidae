@@ -1,13 +1,25 @@
 cards:
-  - character: 铸铁
-    pinyin: zhùtiě
-    meaning: Cast iron
-  - character: 姜
-    pinyin: jiāng
-    meaning: Ginger
-  - character: 烤箱
-    pinyin: kǎoxiāng
-    meaning: Oven
-  - character: 炖
-    pinyin: dùn
-    meaning: To stew / to simmer
+    - character: 铸铁
+      pinyin: zhùtiě
+      meaning: Cast iron
+      interval: 1
+      ease: 1.7000000000000002
+      next_review: "2026-08-28"
+    - character: 姜
+      pinyin: jiāng
+      meaning: Ginger
+      interval: 1
+      ease: 1.96
+      next_review: "2026-08-28"
+    - character: 烤箱
+      pinyin: kǎoxiāng
+      meaning: Oven
+      interval: 1
+      ease: 1.7000000000000002
+      next_review: "2026-08-28"
+    - character: 炖
+      pinyin: dùn
+      meaning: To stew / to simmer
+      interval: 1
+      ease: 1.7000000000000002
+      next_review: "2026-08-28"

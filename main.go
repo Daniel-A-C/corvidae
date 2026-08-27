@@ -30,36 +30,57 @@ type Deck struct {
 	Cards []Flashcard `yaml:"cards"`
 }
 
+// Used to map a reviewed card back to its specific source file
+type cardRef struct {
+	filename string
+	origIdx  int
+}
+
 // --- Styles ---
 
 var (
 	charStyle        = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FF7CCB"))
 	pinyinStyle      = lipgloss.NewStyle().Foreground(lipgloss.Color("#569CD6"))
-	meaningStyle     = lipgloss.NewStyle().Italic(true).Foreground(lipgloss.Color("#D4D4D4"))
+	meaningStyle     = lipgloss.NewStyle().Italic(true).Foreground(lipgloss.Color("#ebebeb"))
 	explanationStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("#EBCB8B")).Italic(true).Width(60).Align(lipgloss.Center)
-	hintStyle        = lipgloss.NewStyle().Faint(true)
+	hintStyle        = lipgloss.NewStyle().Faint(false)
 	keyStyle         = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#4EC9B0"))
 	cursorStyle      = lipgloss.NewStyle().Foreground(lipgloss.Color("#FF7CCB")).Bold(true)
+	errorStyle       = lipgloss.NewStyle().Foreground(lipgloss.Color("#FF5555")).Bold(true)
+	correctStyle     = lipgloss.NewStyle().Foreground(lipgloss.Color("#50FA7B")).Bold(true)
 )
 
 // --- App States ---
 
 const (
-	stateDeckSelect = iota
+	stateModeSelect = iota
+	stateDeckSelect
 	stateReview
+	stateQuiz
+)
+
+const (
+	modeReview = iota
+	modeQuiz
 )
 
 type model struct {
 	state           int
+	mode            int
 	deckFiles       []string
 	cursor          int
-	selectedFile    string
+	selectedFiles   map[string]bool
 
-	deck            Deck
-	dueIndices      []int
+	decks           map[string]Deck
+	activeCards     []cardRef
 	currentIndex    int
 	showAnswer      bool
 	showExplanation bool
+
+	// Quiz state variables
+	quizOptions  []string
+	correctIndex int
+	showFeedback bool
 
 	err    error
 	width  int
@@ -132,31 +153,109 @@ func calculateSM2(card Flashcard, grade int) Flashcard {
 func initialModel() model {
 	files, err := getDeckFiles()
 	return model{
-		state:     stateDeckSelect,
-		deckFiles: files,
-		err:       err,
+		state:         stateModeSelect,
+		mode:          modeReview,
+		deckFiles:     files,
+		selectedFiles: make(map[string]bool),
+		err:           err,
 	}
+}
+
+func (m *model) loadSelectedDecks() error {
+	m.decks = make(map[string]Deck)
+	for file, isSelected := range m.selectedFiles {
+		if isSelected {
+			deck, err := loadDeck(file)
+			if err != nil {
+				return err
+			}
+			m.decks[file] = deck
+		}
+	}
+	return nil
 }
 
 func (m *model) setupReview() {
 	today := time.Now().Format("2006-01-02")
-	var due []int
+	var due []cardRef
 
-	for i, card := range m.deck.Cards {
-		if card.NextReview == "" || card.NextReview <= today {
-			due = append(due, i)
+	for file, deck := range m.decks {
+		for i, card := range deck.Cards {
+			if card.NextReview == "" || card.NextReview <= today {
+				due = append(due, cardRef{filename: file, origIdx: i})
+			}
 		}
 	}
 
-	rand.Seed(time.Now().UnixNano())
-	rand.Shuffle(len(due), func(i, j int) {
-		due[i], due[j] = due[j], due[i]
-	})
+	rand.Shuffle(len(due), func(i, j int) { due[i], due[j] = due[j], due[i] })
 
-	m.dueIndices = due
+	m.activeCards = due
 	m.currentIndex = 0
 	m.showAnswer = false
 	m.showExplanation = false
+}
+
+func (m *model) setupQuiz() {
+	var all []cardRef
+	for file, deck := range m.decks {
+		for i := range deck.Cards {
+			all = append(all, cardRef{filename: file, origIdx: i})
+		}
+	}
+
+	rand.Shuffle(len(all), func(i, j int) { all[i], all[j] = all[j], all[i] })
+	m.activeCards = all
+	m.currentIndex = 0
+	m.showFeedback = false
+	m.generateQuizOptions()
+}
+
+func (m *model) generateQuizOptions() {
+	if m.currentIndex >= len(m.activeCards) {
+		return
+	}
+
+	ref := m.activeCards[m.currentIndex]
+	correctCard := m.decks[ref.filename].Cards[ref.origIdx]
+	
+	// Create combined Pinyin and Meaning strings for the options
+	correctOption := fmt.Sprintf("%s - %s", correctCard.Pinyin, correctCard.Meaning)
+
+	var allOptions []string
+	for _, deck := range m.decks {
+		for _, card := range deck.Cards {
+			allOptions = append(allOptions, fmt.Sprintf("%s - %s", card.Pinyin, card.Meaning))
+		}
+	}
+
+	uniquePool := make(map[string]bool)
+	var pool []string
+	for _, opt := range allOptions {
+		if opt != correctOption && !uniquePool[opt] {
+			uniquePool[opt] = true
+			pool = append(pool, opt)
+		}
+	}
+
+	rand.Shuffle(len(pool), func(i, j int) { pool[i], pool[j] = pool[j], pool[i] })
+
+	numOptions := 5
+	if len(pool) < 5 {
+		numOptions = len(pool)
+	}
+
+	options := []string{correctOption}
+	options = append(options, pool[:numOptions]...)
+
+	rand.Shuffle(len(options), func(i, j int) { options[i], options[j] = options[j], options[i] })
+
+	m.quizOptions = options
+	for i, opt := range options {
+		if opt == correctOption {
+			m.correctIndex = i
+			break
+		}
+	}
 }
 
 func (m model) Init() tea.Cmd {
@@ -170,7 +269,19 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m, tea.Quit
 		}
 
-		if m.state == stateDeckSelect {
+		switch m.state {
+		case stateModeSelect:
+			switch msg.String() {
+			case "up", "k":
+				m.mode = modeReview
+			case "down", "j":
+				m.mode = modeQuiz
+			case "enter", " ":
+				m.cursor = 0
+				m.state = stateDeckSelect
+			}
+
+		case stateDeckSelect:
 			switch msg.String() {
 			case "up", "k":
 				if m.cursor > 0 {
@@ -180,41 +291,56 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				if m.cursor < len(m.deckFiles)-1 {
 					m.cursor++
 				}
-			case "enter", " ":
-				if len(m.deckFiles) > 0 {
-					m.selectedFile = m.deckFiles[m.cursor]
-					deck, err := loadDeck(m.selectedFile)
+			case " ":
+				// Toggle multiple deck selections
+				file := m.deckFiles[m.cursor]
+				m.selectedFiles[file] = !m.selectedFiles[file]
+			case "enter":
+				hasSelection := false
+				for _, selected := range m.selectedFiles {
+					if selected {
+						hasSelection = true
+						break
+					}
+				}
+
+				if hasSelection {
+					err := m.loadSelectedDecks()
 					if err != nil {
 						m.err = err
 						return m, nil
 					}
-					m.deck = deck
-					m.setupReview()
-					m.state = stateReview
+					if m.mode == modeReview {
+						m.setupReview()
+						m.state = stateReview
+					} else {
+						m.setupQuiz()
+						m.state = stateQuiz
+					}
 				}
 			}
-		} else if m.state == stateReview {
-			// Catch state where no cards are due, or deck is finished
-			if len(m.dueIndices) == 0 || m.currentIndex >= len(m.dueIndices) {
+
+		case stateReview:
+			if len(m.activeCards) == 0 || m.currentIndex >= len(m.activeCards) {
 				if msg.String() == "r" {
-					// Load every card in the deck for a force review
-					var all []int
-					for i := range m.deck.Cards {
-						all = append(all, i)
+					var all []cardRef
+					for file, deck := range m.decks {
+						for i := range deck.Cards {
+							all = append(all, cardRef{filename: file, origIdx: i})
+						}
 					}
-					rand.Seed(time.Now().UnixNano())
-					rand.Shuffle(len(all), func(i, j int) {
-						all[i], all[j] = all[j], all[i]
-					})
-					m.dueIndices = all
+					rand.Shuffle(len(all), func(i, j int) { all[i], all[j] = all[j], all[i] })
+					m.activeCards = all
 					m.currentIndex = 0
 					m.showAnswer = false
 					m.showExplanation = false
+				} else if msg.String() == "enter" {
+					// Return to mode select
+					m.state = stateModeSelect
 				}
 				return m, nil
 			}
 
-			// Normal review logic
 			if !m.showAnswer {
 				if msg.String() == " " {
 					m.showAnswer = true
@@ -236,17 +362,60 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				}
 
 				if grade != -1 {
-					realIndex := m.dueIndices[m.currentIndex]
-					m.deck.Cards[realIndex] = calculateSM2(m.deck.Cards[realIndex], grade)
+					ref := m.activeCards[m.currentIndex]
+					deck := m.decks[ref.filename]
 					
-					saveDeck(m.selectedFile, m.deck)
+					deck.Cards[ref.origIdx] = calculateSM2(deck.Cards[ref.origIdx], grade)
+					m.decks[ref.filename] = deck 
+					
+					saveDeck(ref.filename, deck)
 
 					m.currentIndex++
 					m.showAnswer = false
 					m.showExplanation = false
 				}
 			}
+
+		case stateQuiz:
+			if m.currentIndex >= len(m.activeCards) {
+				if msg.String() == "enter" {
+					m.state = stateModeSelect
+				}
+				return m, nil
+			}
+
+			if m.showFeedback {
+				if msg.String() == " " || msg.String() == "enter" {
+					m.showFeedback = false
+					m.currentIndex++
+					m.generateQuizOptions()
+				}
+				return m, nil
+			}
+
+			input := msg.String()
+			choiceIdx := -1
+			
+			// Map home row keys to options 0-5
+			switch input {
+			case "d": choiceIdx = 0
+			case "f": choiceIdx = 1
+			case "g": choiceIdx = 2
+			case "h": choiceIdx = 3
+			case "j": choiceIdx = 4
+			case "k": choiceIdx = 5
+			}
+			
+			if choiceIdx != -1 && choiceIdx < len(m.quizOptions) {
+				if choiceIdx == m.correctIndex {
+					m.currentIndex++
+					m.generateQuizOptions()
+				} else {
+					m.showFeedback = true
+				}
+			}
 		}
+
 	case tea.WindowSizeMsg:
 		m.width = msg.Width
 		m.height = msg.Height
@@ -261,32 +430,56 @@ func (m model) View() string {
 
 	var content string
 
-	if m.state == stateDeckSelect {
+	switch m.state {
+	case stateModeSelect:
+		content = "Select Practice Mode:\n\n"
+		
+		modes := []string{"Spaced Repetition (SM-2)", "Multiple Choice Quiz"}
+		for i, label := range modes {
+			cursor := "  "
+			if m.mode == i {
+				cursor = "> "
+				label = cursorStyle.Render(label)
+			}
+			content += fmt.Sprintf("%s%s\n", cursorStyle.Render(cursor), label)
+		}
+		content += "\n" + hintStyle.Render("(Use j/k to move, Enter to select)")
+
+	case stateDeckSelect:
 		if len(m.deckFiles) == 0 {
 			content = "No .yaml files found in this directory.\n(Press 'q' to quit)"
 		} else {
-			content = "Select a deck to practice:\n\n"
+			content = "Select decks to practice:\n\n"
 			for i, file := range m.deckFiles {
 				cursor := "  "
-				fileName := file
 				if m.cursor == i {
 					cursor = "> "
-					fileName = cursorStyle.Render(file)
 				}
-				content += fmt.Sprintf("%s%s\n", cursorStyle.Render(cursor), fileName)
+				
+				check := "[ ]"
+				if m.selectedFiles[file] {
+					check = "[x]"
+				}
+
+				line := fmt.Sprintf("%s %s %s", cursorStyle.Render(cursor), keyStyle.Render(check), file)
+				if m.cursor == i {
+					line = cursorStyle.Render(fmt.Sprintf("%s %s %s", cursor, check, file))
+				}
+				content += line + "\n"
 			}
-			content += "\n" + hintStyle.Render("(Use j/k to move, Enter to select)")
+			content += "\n" + hintStyle.Render("(Space to toggle, Enter to confirm, q to quit)")
 		}
-	} else if m.state == stateReview {
-		if len(m.dueIndices) == 0 {
-			content = fmt.Sprintf("No cards due in %s today!\n\n%s", m.selectedFile, hintStyle.Render("[r] Review all cards anyway  •  [q] Quit"))
-		} else if m.currentIndex >= len(m.dueIndices) {
-			content = fmt.Sprintf("Daily review complete! Great job.\n\n%s", hintStyle.Render("[r] Review all cards again  •  [q] Quit"))
+
+	case stateReview:
+		if len(m.activeCards) == 0 {
+			content = fmt.Sprintf("No cards due today!\n\n%s", hintStyle.Render("[r] Review all cards anyway  •  [Enter] Main Menu  •  [q] Quit"))
+		} else if m.currentIndex >= len(m.activeCards) {
+			content = fmt.Sprintf("Daily review complete! Great job.\n\n%s", hintStyle.Render("[r] Review all cards again  •  [Enter] Main Menu  •  [q] Quit"))
 		} else {
-			realIndex := m.dueIndices[m.currentIndex]
-			card := m.deck.Cards[realIndex]
-			
-			content = hintStyle.Render(fmt.Sprintf("Card %d of %d  •  %s", m.currentIndex+1, len(m.dueIndices), m.selectedFile)) + "\n\n"
+			ref := m.activeCards[m.currentIndex]
+			card := m.decks[ref.filename].Cards[ref.origIdx]
+
+			content = hintStyle.Render(fmt.Sprintf("Card %d of %d  •  %s", m.currentIndex+1, len(m.activeCards), ref.filename)) + "\n\n"
 			content += charStyle.Render(card.Character) + "\n\n"
 
 			if !m.showAnswer {
@@ -295,18 +488,41 @@ func (m model) View() string {
 			} else {
 				content += fmt.Sprintf("Pinyin:  %s\n", pinyinStyle.Render(card.Pinyin))
 				content += fmt.Sprintf("Meaning: %s\n\n", meaningStyle.Render(card.Meaning))
-				
+
 				if m.showExplanation && card.Explanation != "" {
 					content += explanationStyle.Render(card.Explanation) + "\n\n"
 				}
 
 				content += "How well did you know this?\n"
-				content += fmt.Sprintf("[%s] Blackout  [%s] Wrong  [%s] Hard\n", 
+				content += fmt.Sprintf("[%s] Blackout  [%s] Wrong  [%s] Hard\n",
 					keyStyle.Render("d"), keyStyle.Render("f"), keyStyle.Render("g"))
-				content += fmt.Sprintf("[%s] Good      [%s] Easy   [%s] Perfect\n", 
+				content += fmt.Sprintf("[%s] Good      [%s] Easy   [%s] Perfect\n",
 					keyStyle.Render("h"), keyStyle.Render("j"), keyStyle.Render("k"))
-				
+
 				content += "\n" + hintStyle.Render("[e] Toggle Explanation  •  [q] Quit")
+			}
+		}
+		
+	case stateQuiz:
+		if m.currentIndex >= len(m.activeCards) {
+			content = fmt.Sprintf("Quiz complete!\n\n%s", hintStyle.Render("[Enter] Main Menu  •  [q] Quit"))
+		} else {
+			ref := m.activeCards[m.currentIndex]
+			card := m.decks[ref.filename].Cards[ref.origIdx]
+
+			content = hintStyle.Render(fmt.Sprintf("Quiz: Question %d of %d  •  %s", m.currentIndex+1, len(m.activeCards), ref.filename)) + "\n\n"
+			content += charStyle.Render(card.Character) + "\n\n"
+			
+			if m.showFeedback {
+				content += errorStyle.Render("Incorrect!") + "\n"
+				content += fmt.Sprintf("The correct answer was: %s\n\n", correctStyle.Render(m.quizOptions[m.correctIndex]))
+				content += hintStyle.Render("[ Spacebar to continue ]")
+			} else {
+				quizKeys := []string{"d", "f", "g", "h", "j", "k"}
+				for i, opt := range m.quizOptions {
+					content += fmt.Sprintf("[%s] %s\n", keyStyle.Render(quizKeys[i]), opt)
+				}
+				content += "\n" + hintStyle.Render("(Press d, f, g, h, j, k to select, q to quit)")
 			}
 		}
 	}
