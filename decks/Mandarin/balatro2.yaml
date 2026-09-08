@@ -1,0 +1,36 @@
+cards:
+    - character: 葫芦
+      pinyin: hú lu
+      meaning: Full House
+      explanation: 葫 (hú) and 芦 (lu) together mean 'bottle gourd'. This is the standard Chinese poker slang for a Full House, likely because the shape of a gourd (small top, big bottom) mimics the pair-and-three-of-a-kind structure.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 同花顺
+      pinyin: tóng huā shùn
+      meaning: Straight Flush
+      explanation: A literal combination of previous terms. 同花 (tóng huā) means 'same suit/flush', and 顺 (shùn) means 'straight/sequence'. 
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 对子
+      pinyin: duì zi
+      meaning: Pair
+      explanation: 对 (duì) means 'pair/couple' and 子 (zi) is a standard noun suffix. Two cards of the same rank.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 高牌
+      pinyin: gāo pái
+      meaning: High Card
+      explanation: 高 (gāo) means 'high/tall', and 牌 (pái) is 'card'. The lowest scoring hand type.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 幻灵牌
+      pinyin: huàn líng pái
+      meaning: Spectral Card
+      explanation: 幻 (huàn) means 'illusion/phantom', and 灵 (líng) means 'spirit/soul'. The ghostly, high-risk/high-reward blue cards.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"

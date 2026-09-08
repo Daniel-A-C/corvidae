@@ -1,0 +1,43 @@
+cards:
+    - character: 版本
+      pinyin: bǎn běn
+      meaning: Edition
+      explanation: 版 (bǎn) means 'printing plate/edition' and 本 (běn) means 'volume/root'. The category that Foil, Holographic, Polychrome, and Negative fall under.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 闪箔
+      pinyin: shǎn bó
+      meaning: Foil
+      explanation: 闪 (shǎn) means 'flash/sparkle' and 箔 (bó) means 'foil/thin metal'. The edition that grants +50 Chips.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 镭射
+      pinyin: léi shè
+      meaning: Holographic
+      explanation: 镭射 (léi shè) is a phonetic translation of the English word 'laser', commonly used in Chinese for holographic or laser-reflective materials. Grants +10 Mult.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 彩色
+      pinyin: cǎi sè
+      meaning: Polychrome
+      explanation: 彩 (cǎi) means 'color/variety' and 色 (sè) means 'color'. The edition that grants an x1.5 Mult.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 负片
+      pinyin: fù piàn
+      meaning: Negative
+      explanation: 负 (fù) means 'negative/minus' and 片 (piàn) means 'slice/film'. Like a photographic negative. Grants +1 Joker slot.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 印章
+      pinyin: yìn zhāng
+      meaning: Seal
+      explanation: 印 (yìn) means 'print/stamp' and 章 (zhāng) means 'seal/badge'. Used for the Red, Blue, Gold, and Purple stamps on standard playing cards.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
