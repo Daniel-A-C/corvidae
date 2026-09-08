@@ -40,9 +40,9 @@ Ensure you have [Go installed](https://go.dev/doc/install) on your system.
 
 ## Creating Decks
 
-Corvidae reads any `.yaml` file located in the directory where the app is executed. The structure is simple, allowing you or an AI agent to generate new decks instantly.
+Corvidae organizes flashcard decks into language subdirectories under the `decks/` folder (for example, `decks/Mandarin/` or `decks/Spanish/`). Any `.yaml` deck placed inside a language directory will be automatically discovered. The structure is simple, allowing you or an AI agent to generate new decks instantly.
 
-Example `deck.yaml`:
+Example `decks/Mandarin/basics.yaml`:
 
 ```yaml
 cards:
@@ -60,10 +60,17 @@ cards:
 
 ## Usage & Controls
 
-When you launch Corvidae, you will be prompted to select a deck.
+When you launch Corvidae, you will be guided through a selection workflow:
 
-- `j` / `k` or Arrow Keys: Navigate the deck menu.
-- `Enter` or `Spacebar`: Select a deck.
+1. **Practice Mode**: Choose between SM-2 Spaced Repetition or Multiple Choice Quiz.
+2. **Directory / Language Selection**: Select which language category you want to study (e.g. `Mandarin`, `Spanish`, `French`, `Polish`, `Arabic`).
+3. **Deck Selection**: Pick one or more decks within that language directory.
+
+- `j` / `k` or Arrow Keys: Navigate menus.
+- `Spacebar`: Toggle deck selections on/off.
+- `Enter`: Confirm selection or enter directory.
+- `Esc` or `b`: Go back to the previous menu.
+- `q`: Quit the app at any time.
 
 During a review session, the controls map to a 6-point grading scale:
 

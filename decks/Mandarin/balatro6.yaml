@@ -1,0 +1,36 @@
+cards:
+    - character: 选择
+      pinyin: xuǎn zé
+      meaning: Select
+      explanation: 选 (xuǎn) and 择 (zé) both mean 'to pick/choose'. The button used to lock in a blind, deck, or menu option.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-02"
+    - character: 跳过
+      pinyin: tiào guò
+      meaning: Skip
+      explanation: 跳 (tiào) means 'to jump' and 过 (guò) means 'to pass/cross'. Used when deciding to bypass a Small or Big Blind in exchange for a Tag.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-02"
+    - character: 返回
+      pinyin: fǎn huí
+      meaning: Back
+      explanation: 返 (fǎn) and 回 (huí) both mean 'to return'. Used strictly for UI navigation to return to the previous screen.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-02"
+    - character: 主菜单
+      pinyin: zhǔ cài dān
+      meaning: Main Menu
+      explanation: 主 (zhǔ) means 'main', 菜 (cài) means 'dish/vegetable', and 单 (dān) means 'list/bill'. 菜单 (càidān) together is the standard UI term for 'menu'. 
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-02"
+    - character: 对局信息
+      pinyin: duì jú xìn xī
+      meaning: Run Info
+      explanation: 对局 (duì jú) refers to a 'match' or 'game session', and 信息 (xìn xī) means 'information'. The button to check your current deck contents, vouchers, and stats during a run.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-02"

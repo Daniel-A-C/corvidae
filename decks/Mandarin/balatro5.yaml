@@ -1,0 +1,36 @@
+cards:
+    - character: 游玩
+      pinyin: yóu wán
+      meaning: Play
+      explanation: 游 (yóu) means 'tour/roam' or 'play', and 玩 (wán) means 'to play'. The main button on the start screen to begin.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-02"
+    - character: 继续
+      pinyin: jì xù
+      meaning: Continue
+      explanation: 继 (jì) means 'to continue/follow' and 续 (xù) means 'to continue/join'. Used to resume an ongoing run from the main menu.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-02"
+    - character: 选项
+      pinyin: xuǎn xiàng
+      meaning: Options
+      explanation: 选 (xuǎn) means 'to choose' and 项 (xiàng) means 'item/term'. The settings menu for audio, video, and gameplay adjustments.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-02"
+    - character: 退出
+      pinyin: tuì chū
+      meaning: Quit
+      explanation: 退 (tuì) means 'to retreat/decline' and 出 (chū) means 'to go out'. Used to exit a run or close the game entirely.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-02"
+    - character: 收藏
+      pinyin: shōu cáng
+      meaning: Collection
+      explanation: 收 (shōu) means 'to receive/gather' and 藏 (cáng) means 'to hide/store'. The menu where you view discovered Jokers, decks, and vouchers.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-02"

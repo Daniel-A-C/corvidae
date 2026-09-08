@@ -1,0 +1,36 @@
+cards:
+    - character: 商店
+      pinyin: shāng diàn
+      meaning: Shop
+      explanation: 商 (shāng) means 'commerce/trade' and 店 (diàn) means 'shop/store'. Where you spend your hard-earned chips.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 刷新
+      pinyin: shuā xīn
+      meaning: Reroll
+      explanation: 刷 (shuā) means 'to brush/swipe' and 新 (xīn) means 'new'. Used across UI/gaming in Chinese to mean 'refreshing' the page or shop offerings.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 利息
+      pinyin: lì xī
+      meaning: Interest
+      explanation: 利 (lì) means 'profit/benefit' and 息 (xī) means 'interest/breath'. The extra $1 you earn for every $5 you hold at the end of a blind.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 出售
+      pinyin: chū shòu
+      meaning: Sell
+      explanation: 出 (chū) means 'to go out' and 售 (shòu) means 'to sell'. Used when deleting a Joker from your lineup for cash.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"
+    - character: 标签
+      pinyin: biāo qiān
+      meaning: Tag
+      explanation: 标 (biāo) means 'mark/sign' and 签 (qiān) means 'label/ticket'. The reward you receive when you choose to skip a blind.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-08-28"

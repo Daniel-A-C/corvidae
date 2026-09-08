@@ -5,6 +5,8 @@ import (
 	"math"
 	"math/rand"
 	"os"
+	"path/filepath"
+	"sort"
 	"strings"
 	"time"
 
@@ -67,6 +69,7 @@ const asciiLogo = `                           .-.
 
 const (
 	stateModeSelect = iota
+	stateDirSelect
 	stateDeckSelect
 	stateReview
 	stateQuiz
@@ -80,6 +83,9 @@ const (
 type model struct {
 	state           int
 	mode            int
+	dirs            []string
+	dirCursor       int
+	selectedDir     string
 	deckFiles       []string
 	cursor          int
 	selectedFiles   map[string]bool
@@ -102,18 +108,46 @@ type model struct {
 
 // --- Helpers ---
 
-func getDeckFiles() ([]string, error) {
-	var files []string
-	entries, err := os.ReadDir(".")
+func getDeckDirectories() ([]string, error) {
+	entries, err := os.ReadDir("decks")
+	if err != nil {
+		if os.IsNotExist(err) {
+			return []string{}, nil
+		}
+		return nil, err
+	}
+	var dirs []string
+	for _, entry := range entries {
+		if entry.IsDir() && !strings.HasPrefix(entry.Name(), ".") {
+			dirs = append(dirs, entry.Name())
+		}
+	}
+	sort.Strings(dirs)
+	return dirs, nil
+}
+
+func getDeckFiles(dir string) ([]string, error) {
+	dirPath := filepath.Join("decks", dir)
+	entries, err := os.ReadDir(dirPath)
 	if err != nil {
 		return nil, err
 	}
+	var files []string
 	for _, entry := range entries {
-		if !entry.IsDir() && strings.HasSuffix(entry.Name(), ".yaml") {
+		if !entry.IsDir() && strings.HasSuffix(entry.Name(), ".yaml") && !strings.HasPrefix(entry.Name(), ".") {
 			files = append(files, entry.Name())
 		}
 	}
+	sort.Strings(files)
 	return files, nil
+}
+
+func countDecksInDir(dir string) int {
+	files, err := getDeckFiles(dir)
+	if err != nil {
+		return 0
+	}
+	return len(files)
 }
 
 func loadDeck(filename string) (Deck, error) {
@@ -164,11 +198,11 @@ func calculateSM2(card Flashcard, grade int) Flashcard {
 // --- Bubble Tea Interface ---
 
 func initialModel() model {
-	files, err := getDeckFiles()
+	dirs, err := getDeckDirectories()
 	return model{
 		state:         stateModeSelect,
 		mode:          modeReview,
-		deckFiles:     files,
+		dirs:          dirs,
 		selectedFiles: make(map[string]bool),
 		err:           err,
 	}
@@ -178,11 +212,12 @@ func (m *model) loadSelectedDecks() error {
 	m.decks = make(map[string]Deck)
 	for file, isSelected := range m.selectedFiles {
 		if isSelected {
-			deck, err := loadDeck(file)
+			fullPath := filepath.Join("decks", m.selectedDir, file)
+			deck, err := loadDeck(fullPath)
 			if err != nil {
 				return err
 			}
-			m.decks[file] = deck
+			m.decks[fullPath] = deck
 		}
 	}
 	return nil
@@ -290,8 +325,41 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			case "down", "j":
 				m.mode = modeQuiz
 			case "enter", " ":
-				m.cursor = 0
-				m.state = stateDeckSelect
+				dirs, err := getDeckDirectories()
+				if err != nil {
+					m.err = err
+					return m, nil
+				}
+				m.dirs = dirs
+				m.dirCursor = 0
+				m.state = stateDirSelect
+			}
+
+		case stateDirSelect:
+			switch msg.String() {
+			case "up", "k":
+				if m.dirCursor > 0 {
+					m.dirCursor--
+				}
+			case "down", "j":
+				if m.dirCursor < len(m.dirs)-1 {
+					m.dirCursor++
+				}
+			case "esc", "b":
+				m.state = stateModeSelect
+			case "enter", " ":
+				if len(m.dirs) > 0 {
+					m.selectedDir = m.dirs[m.dirCursor]
+					files, err := getDeckFiles(m.selectedDir)
+					if err != nil {
+						m.err = err
+						return m, nil
+					}
+					m.deckFiles = files
+					m.cursor = 0
+					m.selectedFiles = make(map[string]bool)
+					m.state = stateDeckSelect
+				}
 			}
 
 		case stateDeckSelect:
@@ -304,11 +372,19 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				if m.cursor < len(m.deckFiles)-1 {
 					m.cursor++
 				}
+			case "esc", "b":
+				m.state = stateDirSelect
 			case " ":
-				// Toggle multiple deck selections
-				file := m.deckFiles[m.cursor]
-				m.selectedFiles[file] = !m.selectedFiles[file]
+				if len(m.deckFiles) > 0 {
+					file := m.deckFiles[m.cursor]
+					m.selectedFiles[file] = !m.selectedFiles[file]
+				}
 			case "enter":
+				if len(m.deckFiles) == 0 {
+					m.state = stateDirSelect
+					return m, nil
+				}
+
 				hasSelection := false
 				for _, selected := range m.selectedFiles {
 					if selected {
@@ -459,11 +535,36 @@ func (m model) View() string {
 		}
 		content += "\n" + hintStyle.Render("(Use j/k to move, Enter to select)")
 
+	case stateDirSelect:
+		if len(m.dirs) == 0 {
+			content = "No language directories found in decks/.\n\n" + hintStyle.Render("(Press Esc to return, q to quit)")
+		} else {
+			content = "Select Deck Directory / Language:\n\n"
+			for i, dir := range m.dirs {
+				cursor := "  "
+				label := dir
+				count := countDecksInDir(dir)
+				var countStr string
+				if count == 1 {
+					countStr = hintStyle.Render(" (1 deck)")
+				} else {
+					countStr = hintStyle.Render(fmt.Sprintf(" (%d decks)", count))
+				}
+
+				if m.dirCursor == i {
+					cursor = "> "
+					label = cursorStyle.Render(label)
+				}
+				content += fmt.Sprintf("%s%s%s\n", cursorStyle.Render(cursor), label, countStr)
+			}
+			content += "\n" + hintStyle.Render("(Use j/k to move, Enter to select, Esc to go back, q to quit)")
+		}
+
 	case stateDeckSelect:
 		if len(m.deckFiles) == 0 {
-			content = "No .yaml files found in this directory.\n(Press 'q' to quit)"
+			content = fmt.Sprintf("No .yaml files found in decks/%s.\n\n%s", m.selectedDir, hintStyle.Render("(Press Esc or Enter to go back, q to quit)"))
 		} else {
-			content = "Select decks to practice:\n\n"
+			content = fmt.Sprintf("Select decks to practice (%s):\n\n", m.selectedDir)
 			for i, file := range m.deckFiles {
 				cursor := "  "
 				if m.cursor == i {
@@ -481,7 +582,7 @@ func (m model) View() string {
 				}
 				content += line + "\n"
 			}
-			content += "\n" + hintStyle.Render("(Space to toggle, Enter to confirm, q to quit)")
+			content += "\n" + hintStyle.Render("(Space to toggle, Enter to confirm, Esc to go back, q to quit)")
 		}
 
 	case stateReview:
@@ -492,8 +593,9 @@ func (m model) View() string {
 		} else {
 			ref := m.activeCards[m.currentIndex]
 			card := m.decks[ref.filename].Cards[ref.origIdx]
+			displayName := strings.TrimPrefix(ref.filename, "decks/")
 
-			content = hintStyle.Render(fmt.Sprintf("Card %d of %d  •  %s", m.currentIndex+1, len(m.activeCards), ref.filename)) + "\n\n"
+			content = hintStyle.Render(fmt.Sprintf("Card %d of %d  •  %s", m.currentIndex+1, len(m.activeCards), displayName)) + "\n\n"
 			content += charStyle.Render(card.Character) + "\n\n"
 
 			if !m.showAnswer {
@@ -523,8 +625,9 @@ func (m model) View() string {
 		} else {
 			ref := m.activeCards[m.currentIndex]
 			card := m.decks[ref.filename].Cards[ref.origIdx]
+			displayName := strings.TrimPrefix(ref.filename, "decks/")
 
-			content = hintStyle.Render(fmt.Sprintf("Quiz: Question %d of %d  •  %s", m.currentIndex+1, len(m.activeCards), ref.filename)) + "\n\n"
+			content = hintStyle.Render(fmt.Sprintf("Quiz: Question %d of %d  •  %s", m.currentIndex+1, len(m.activeCards), displayName)) + "\n\n"
 			content += charStyle.Render(card.Character) + "\n\n"
 			
 			if m.showFeedback {
@@ -552,3 +655,4 @@ func main() {
 		os.Exit(1)
 	}
 }
+

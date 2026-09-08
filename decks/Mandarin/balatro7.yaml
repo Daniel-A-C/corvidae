@@ -1,0 +1,36 @@
+cards:
+    - character: 万能牌
+      pinyin: wàn néng pái
+      meaning: Wild Card
+      explanation: 万能 (wàn néng) means 'omnipotent' or 'all-purpose', and 牌 (pái) is 'card'. This card can be used as any suit.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-05"
+    - character: 玻璃牌
+      pinyin: bō li pái
+      meaning: Glass Card
+      explanation: 玻璃 (bō li) means 'glass'. It grants an x2 Mult but has a 1 in 4 chance to shatter when played.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-05"
+    - character: 钢铁牌
+      pinyin: gāng tiě pái
+      meaning: Steel Card
+      explanation: 钢铁 (gāng tiě) means 'steel'. It grants an x1.5 Mult while this card stays in your hand.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-05"
+    - character: 石头牌
+      pinyin: shí tou pái
+      meaning: Stone Card
+      explanation: 石头 (shí tou) means 'stone'. A card with no rank or suit that simply adds 50 extra chips.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-05"
+    - character: 黄金牌
+      pinyin: huáng jīn pái
+      meaning: Gold Card
+      explanation: 黄金 (huáng jīn) means 'gold'. Earns you $3 if it is held in your hand at the end of a round.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-05"
