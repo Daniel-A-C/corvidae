@@ -1,0 +1,61 @@
+cards:
+  - character: 大小
+    pinyin: dà xiǎo
+    meaning: Size
+    explanation: "大 (dà) means 'big', and 小 (xiǎo) means 'small'. Combined, they represent the concept of 'size'."
+    interval: 1
+    ease: 2.5
+  - character: 出色
+    pinyin: chū sè
+    meaning: Outstanding / Remarkable
+    explanation: "出 (chū) means 'to go out/stand out', and 色 (sè) means 'color'. To have your colors stand out is to be outstanding."
+    interval: 1
+    ease: 2.5
+  - character: 金山
+    pinyin: jīn shān
+    meaning: Gold mountain
+    explanation: "金 (jīn) means 'gold', and 山 (shān) means 'mountain'."
+    interval: 1
+    ease: 2.5
+  - character: 同道
+    pinyin: tóng dào
+    meaning: People with the same goals / Comrade
+    explanation: "同 (tóng) means 'same', and 道 (dào) means 'path' or 'way'. People walking the same path."
+    interval: 1
+    ease: 2.5
+  - character: 车票
+    pinyin: chē piào
+    meaning: Train or Bus ticket
+    explanation: "车 (chē) means 'car/vehicle', and 票 (piào) means 'ticket'."
+    interval: 1
+    ease: 2.5
+  - character: 大门
+    pinyin: dà mén
+    meaning: Main gate / Main entrance
+    explanation: "大 (dà) means 'big', and 门 (mén) means 'door/gate'. The large main entrance to a building or park."
+    interval: 1
+    ease: 2.5
+  - character: 游乐园
+    pinyin: yóu lè yuán
+    meaning: Amusement park
+    explanation: "游 (yóu) means 'to roam/play', and 乐园 (lèyuán) means 'happy garden' (amusement park). The full term for a theme park."
+    interval: 1
+    ease: 2.5
+  - character: 时光
+    pinyin: shí guāng
+    meaning: Time / Era / Days
+    explanation: "时 (shí) means 'time', and 光 (guāng) means 'light'. Often used poetically to describe passing time or happy days."
+    interval: 1
+    ease: 2.5
+  - character: 奇人
+    pinyin: qí rén
+    meaning: Eccentric or remarkable person
+    explanation: "奇 (qí) means 'magical/wondrous/strange', and 人 (rén) means 'person'."
+    interval: 1
+    ease: 2.5
+  - character: 门卡
+    pinyin: mén kǎ
+    meaning: Keycard / Door card
+    explanation: "门 (mén) means 'door/gate', and 卡 (kǎ) means 'card'. The electronic card you use to open a hotel room or secure door."
+    interval: 1
+    ease: 2.5
