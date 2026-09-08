@@ -1,0 +1,71 @@
+cards:
+  - character: 出门
+    pinyin: chū mén
+    meaning: To go out
+    explanation: >
+      出 (chū) means 'to go out' or 'to produce'. Historically, its ancient script depicted a foot walking out of a pit or a plant sprouting upward from the earth. 门 (mén) is a pictograph of a traditional double-leaved door or gate (acting as its own radical). Together, they literally mean 'to go out the door', commonly used in everyday speech to refer to leaving the house for errands, work, or travel.
+    interval: 1
+    ease: 2.5
+  - character: 大人
+    pinyin: dà rén
+    meaning: Adult
+    explanation: >
+      大 (dà) means 'big' or 'large' and is a pictograph of a person standing with their arms stretched wide. 人 (rén) is a pictograph of a walking person and means 'people' or 'person'. Literally 'big person', this term is used for 'adult' today. Historically in dynastic China, '大人' (dàren) was also used as a respectful title to address high-ranking officials or one's superiors (similar to "Your Excellency").
+    interval: 1
+    ease: 2.5
+  - character: 好玩
+    pinyin: hǎo wán
+    meaning: Fun / Interesting
+    explanation: >
+      好 (hǎo) generally means 'good', composed of the radicals 女 (woman) and 子 (child)—representing the goodness of a mother and child. When placed before a verb, '好' acts as a modifier meaning 'easy to' or 'pleasant to'. 玩 (wán) means 'to play', featuring the 王/玉 (jade) radical, as playing with jade trinkets was an ancient pastime. Together, 'good to play' translates perfectly to 'fun' or 'amusing'.
+    interval: 1
+    ease: 2.5
+  - character: 商品
+    pinyin: shāng pǐn
+    meaning: Merchandise / Goods
+    explanation: >
+      商 (shāng) means 'commerce' or 'trade'. Historically, it relates to the Shang Dynasty, whose people were renowned for trading, leading to their name becoming synonymous with merchants. 品 (pǐn) means 'item', 'grade', or 'quality'. It is composed of three 口 (mouth) radicals, representing multiple people discussing, tasting, or grading the quality of items. Together, they represent commercial items or merchandise.
+    interval: 1
+    ease: 2.5
+  - character: 金牌
+    pinyin: jīn pái
+    meaning: Gold medal
+    explanation: >
+      金 (jīn) acts as the radical for metal and specifically means 'gold'. Its ancient form depicts nuggets of gold hidden deep in the earth beneath a mountain. 牌 (pái) means 'card', 'sign', or 'plaque', containing the 片 (slice/sheet) radical. When combined, a 'gold plaque' refers to a gold medal, frequently used in the context of the Olympics (奥运会) or other sports competitions.
+    interval: 1
+    ease: 2.5
+  - character: 小时
+    pinyin: xiǎo shí
+    meaning: Hour
+    explanation: >
+      小 (xiǎo) means 'small'. 时 (shí) relates to 'time', featuring the 日 (sun) radical to represent the measurement of time via the sun's shadow. The etymology here is fascinating: in ancient China, a traditional unit of time (时辰, shíchen) was equal to two modern hours. When Western clocks were introduced, the modern 60-minute hour was adopted and named a 'small time' (小时) to differentiate it from the traditional 'large' two-hour blocks.
+    interval: 1
+    ease: 2.5
+  - character: 花园
+    pinyin: huā yuán
+    meaning: Garden
+    explanation: >
+      花 (huā) means 'flower'. It uses the 艹 (grass/plant) radical on top and 化 (change/transform) on the bottom, symbolizing a plant that transforms or blooms. 园 (yuán) means 'garden' or 'park', featuring the 囗 (enclosure) radical around 元 (yuán) which acts as a phonetic marker. Together, an enclosed space for blooming plants is a garden.
+    interval: 1
+    ease: 2.5
+  - character: 海星
+    pinyin: hǎi xīng
+    meaning: Starfish
+    explanation: >
+      海 (hǎi) means 'sea' or 'ocean', indicated by the 氵 (water) radical on the left, with 每 (měi) on the right acting as a phonetic component. 星 (xīng) means 'star', containing the 日 (sun) radical over 生 (to be born/produce). This is a direct, visual translation: a 'sea star', exactly mirroring the English etymology for starfish.
+    interval: 1
+    ease: 2.5
+  - character: 星光
+    pinyin: xīng guāng
+    meaning: Starlight
+    explanation: >
+      星 (xīng) means 'star' (sun radical 日 + to produce 生). 光 (guāng) means 'light' or 'ray'. The ancient oracle bone script for 光 depicted a person (儿) carrying a torch of fire (火) on their head, representing illumination. Together, the phrase literally translates to 'starlight', often used in poetry, literature, and romantic descriptions of the night sky.
+    interval: 1
+    ease: 2.5
+  - character: 退回
+    pinyin: tuì huí
+    meaning: To return / Send back
+    explanation: >
+      退 (tuì) means 'to retreat', 'to move back', or 'to decline', using the 辶 (movement/walking) radical alongside 艮 (stopping/obstinate). 回 (huí) means 'to return'. Its character is a pictograph of swirling water or a spiral, symbolizing returning to the origin (an enclosure 囗 within an enclosure). Together, retreating and returning form the action of sending a physical item back (e.g., a package) or rejecting an application.
+    interval: 1
+    ease: 2.5
