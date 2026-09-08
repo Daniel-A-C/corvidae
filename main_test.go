@@ -2,6 +2,7 @@ package main
 
 import (
 	"path/filepath"
+	"strings"
 	"testing"
 
 	tea "github.com/charmbracelet/bubbletea"
@@ -200,6 +201,175 @@ func TestViews(t *testing.T) {
 	view = m.View()
 	if view == "" {
 		t.Fatalf("expected non-empty view for stateDeckSelect")
+	}
+}
+
+func TestQuizModeCorrectAnswer(t *testing.T) {
+	m := initialModel()
+	m.width = 120
+	m.height = 40
+	m.mode = modeQuiz
+	m.selectedDir = "Mandarin"
+	m.selectedFiles["tech_engineering.yaml"] = true
+
+	err := m.loadSelectedDecks()
+	if err != nil {
+		t.Fatalf("failed to load decks: %v", err)
+	}
+
+	m.setupQuiz()
+	m.state = stateQuiz
+
+	if len(m.activeCards) == 0 {
+		t.Fatalf("expected active cards, got 0")
+	}
+
+	keys := []string{"d", "f", "g", "h", "j", "k"}
+	correctKey := keys[m.correctIndex]
+
+	ref := m.activeCards[m.currentIndex]
+	card := m.decks[ref.filename].Cards[ref.origIdx]
+
+	// Send the correct answer key
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(correctKey)})
+	m = updatedM.(model)
+
+	if !m.showFeedback {
+		t.Fatalf("expected showFeedback to be true after answering")
+	}
+	if !m.isCorrect {
+		t.Fatalf("expected isCorrect to be true for correct answer")
+	}
+
+	view := m.View()
+	if !strings.Contains(view, "Correct!") {
+		t.Errorf("expected view to contain 'Correct!', got:\n%s", view)
+	}
+	if !strings.Contains(view, card.Pinyin) {
+		t.Errorf("expected view to contain pinyin '%s'", card.Pinyin)
+	}
+	if !strings.Contains(view, card.Meaning) {
+		t.Errorf("expected view to contain meaning '%s'", card.Meaning)
+	}
+	if card.Explanation != "" {
+		normalizedView := strings.Join(strings.Fields(view), " ")
+		if !strings.Contains(normalizedView, card.Explanation) {
+			t.Errorf("expected view to contain explanation '%s'", card.Explanation)
+		}
+	}
+	if !strings.Contains(view, "Spacebar to continue") {
+		t.Errorf("expected view to contain continue prompt")
+	}
+
+	// Press spacebar to advance
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(model)
+
+	if m.showFeedback {
+		t.Fatalf("expected showFeedback to be false after spacebar")
+	}
+	if m.currentIndex != 1 {
+		t.Fatalf("expected currentIndex to advance to 1, got %d", m.currentIndex)
+	}
+}
+
+func TestQuizModeIncorrectAnswer(t *testing.T) {
+	m := initialModel()
+	m.width = 120
+	m.height = 40
+	m.mode = modeQuiz
+	m.selectedDir = "Mandarin"
+	m.selectedFiles["tech_engineering.yaml"] = true
+
+	err := m.loadSelectedDecks()
+	if err != nil {
+		t.Fatalf("failed to load decks: %v", err)
+	}
+
+	m.setupQuiz()
+	m.state = stateQuiz
+
+	if len(m.activeCards) == 0 {
+		t.Fatalf("expected active cards, got 0")
+	}
+
+	keys := []string{"d", "f", "g", "h", "j", "k"}
+	wrongIdx := (m.correctIndex + 1) % len(m.quizOptions)
+	wrongKey := keys[wrongIdx]
+
+	ref := m.activeCards[m.currentIndex]
+	card := m.decks[ref.filename].Cards[ref.origIdx]
+
+	// Send an incorrect answer key
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(wrongKey)})
+	m = updatedM.(model)
+
+	if !m.showFeedback {
+		t.Fatalf("expected showFeedback to be true after answering")
+	}
+	if m.isCorrect {
+		t.Fatalf("expected isCorrect to be false for incorrect answer")
+	}
+
+	view := m.View()
+	if !strings.Contains(view, "Incorrect!") {
+		t.Errorf("expected view to contain 'Incorrect!', got:\n%s", view)
+	}
+	if !strings.Contains(view, "The correct answer was:") {
+		t.Errorf("expected view to contain 'The correct answer was:'")
+	}
+	if card.Explanation != "" {
+		normalizedView := strings.Join(strings.Fields(view), " ")
+		if !strings.Contains(normalizedView, card.Explanation) {
+			t.Errorf("expected view to contain explanation '%s'", card.Explanation)
+		}
+	}
+	if !strings.Contains(view, "Spacebar to continue") {
+		t.Errorf("expected view to contain continue prompt")
+	}
+
+	// Press Enter to advance
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(model)
+
+	if m.showFeedback {
+		t.Fatalf("expected showFeedback to be false after enter")
+	}
+	if m.currentIndex != 1 {
+		t.Fatalf("expected currentIndex to advance to 1, got %d", m.currentIndex)
+	}
+}
+
+func TestQuizModeWithoutExplanation(t *testing.T) {
+	m := initialModel()
+	m.width = 120
+	m.height = 40
+	m.mode = modeQuiz
+	m.selectedDir = "Mandarin"
+	m.selectedFiles["kitchen.yaml"] = true
+
+	err := m.loadSelectedDecks()
+	if err != nil {
+		t.Fatalf("failed to load decks: %v", err)
+	}
+
+	m.setupQuiz()
+	m.state = stateQuiz
+
+	// Correct answer flow
+	keys := []string{"d", "f", "g", "h", "j", "k"}
+	correctKey := keys[m.correctIndex]
+
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(correctKey)})
+	m = updatedM.(model)
+
+	if !m.showFeedback || !m.isCorrect {
+		t.Fatalf("expected correct feedback state")
+	}
+
+	view := m.View()
+	if !strings.Contains(view, "Correct!") {
+		t.Errorf("expected view to contain 'Correct!', got:\n%s", view)
 	}
 }
 

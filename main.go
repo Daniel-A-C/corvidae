@@ -100,6 +100,7 @@ type model struct {
 	quizOptions  []string
 	correctIndex int
 	showFeedback bool
+	isCorrect    bool
 
 	err    error
 	width  int
@@ -255,6 +256,7 @@ func (m *model) setupQuiz() {
 	m.activeCards = all
 	m.currentIndex = 0
 	m.showFeedback = false
+	m.isCorrect = false
 	m.generateQuizOptions()
 }
 
@@ -496,12 +498,8 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			}
 			
 			if choiceIdx != -1 && choiceIdx < len(m.quizOptions) {
-				if choiceIdx == m.correctIndex {
-					m.currentIndex++
-					m.generateQuizOptions()
-				} else {
-					m.showFeedback = true
-				}
+				m.showFeedback = true
+				m.isCorrect = (choiceIdx == m.correctIndex)
 			}
 		}
 
@@ -631,9 +629,22 @@ func (m model) View() string {
 			content += charStyle.Render(card.Character) + "\n\n"
 			
 			if m.showFeedback {
-				content += errorStyle.Render("Incorrect!") + "\n"
-				content += fmt.Sprintf("The correct answer was: %s\n\n", correctStyle.Render(m.quizOptions[m.correctIndex]))
-				content += hintStyle.Render("[ Spacebar to continue ]")
+				if m.isCorrect {
+					content += correctStyle.Render("Correct!") + "\n\n"
+					content += fmt.Sprintf("Pinyin:  %s\n", pinyinStyle.Render(card.Pinyin))
+					content += fmt.Sprintf("Meaning: %s\n\n", meaningStyle.Render(card.Meaning))
+					if card.Explanation != "" {
+						content += explanationStyle.Render(card.Explanation) + "\n\n"
+					}
+					content += hintStyle.Render("[ Spacebar to continue ]")
+				} else {
+					content += errorStyle.Render("Incorrect!") + "\n\n"
+					content += fmt.Sprintf("The correct answer was: %s\n\n", correctStyle.Render(m.quizOptions[m.correctIndex]))
+					if card.Explanation != "" {
+						content += explanationStyle.Render(card.Explanation) + "\n\n"
+					}
+					content += hintStyle.Render("[ Spacebar to continue ]")
+				}
 			} else {
 				quizKeys := []string{"d", "f", "g", "h", "j", "k"}
 				for i, opt := range m.quizOptions {
