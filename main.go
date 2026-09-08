@@ -48,7 +48,20 @@ var (
 	cursorStyle      = lipgloss.NewStyle().Foreground(lipgloss.Color("#FF7CCB")).Bold(true)
 	errorStyle       = lipgloss.NewStyle().Foreground(lipgloss.Color("#FF5555")).Bold(true)
 	correctStyle     = lipgloss.NewStyle().Foreground(lipgloss.Color("#50FA7B")).Bold(true)
+	logoStyle        = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#BD93F9")).Width(60).Align(lipgloss.Left)
 )
+
+const asciiLogo = `                           .-.
+                          ( o>
+                          / ) \
+                         ='---'=
+                           m m
+   ____                          _       _                
+  / ___|   ___    _ __  __   __ (_)   __| |   __ _    ___ 
+ | |      / _ \  | '__| \ \ / / | |  / _' |  / _' |  / _ \
+ | |___  | (_) | | |     \ V /  | | | (_| | | (_| | |  __/
+  \____|  \___/  |_|      \_/   |_|  \__,_|  \__,_|  \___|`
+
 
 // --- App States ---
 
@@ -432,7 +445,8 @@ func (m model) View() string {
 
 	switch m.state {
 	case stateModeSelect:
-		content = "Select Practice Mode:\n\n"
+		content = logoStyle.Render(asciiLogo) + "\n\n"
+		content += "Select Practice Mode:\n\n"
 		
 		modes := []string{"Spaced Repetition (SM-2)", "Multiple Choice Quiz"}
 		for i, label := range modes {
