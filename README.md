@@ -38,6 +38,12 @@ Ensure you have [Go installed](https://go.dev/doc/install) on your system.
    sudo mv corvidae /usr/local/bin/
    ```
 
+   You can point Corvidae to your decks folder from anywhere:
+
+   ```bash
+   corvidae -d /path/to/decks
+   ```
+
 ## Creating Decks
 
 Corvidae organizes flashcard decks into language subdirectories under the `decks/` folder (for example, `decks/Mandarin/` or `decks/Spanish/`). Any `.yaml` deck placed inside a language directory will be automatically discovered. The structure is simple, allowing you or an AI agent to generate new decks instantly.
