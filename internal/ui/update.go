@@ -13,7 +13,10 @@ import (
 func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch msg := msg.(type) {
 	case tea.KeyMsg:
-		if msg.String() == "ctrl+c" || msg.String() == "q" {
+		if msg.String() == "ctrl+c" {
+			return m, tea.Quit
+		}
+		if msg.String() == "q" && !m.isSelectionKey("q") {
 			return m, tea.Quit
 		}
 
@@ -38,32 +41,74 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return m, nil
 }
 
+func (m Model) isSelectionKey(key string) bool {
+	idx := KeyToIndex(key)
+	if idx == -1 {
+		return false
+	}
+	switch m.State {
+	case StateModeSelect:
+		return idx < 2
+	case StateDirSelect:
+		return idx < len(m.Dirs)
+	case StateDeckSelect:
+		return idx < len(m.DeckFiles)
+	case StateQuiz:
+		return !m.ShowFeedback && idx < len(m.QuizOptions)
+	}
+	return false
+}
+
 func (m Model) updateModeSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	switch msg.String() {
+	case "a":
+		m.Mode = ModeReview
+		return m.confirmModeSelect()
+	case "s":
+		m.Mode = ModeQuiz
+		return m.confirmModeSelect()
 	case "up", "k":
 		m.Mode = ModeReview
 	case "down", "j":
 		m.Mode = ModeQuiz
 	case "enter", " ":
-		dirs, err := deck.GetDeckDirectories(m.BaseDir)
-		if err != nil {
-			m.Err = err
-			return m, nil
-		}
-		m.Dirs = dirs
-		m.DirCursor = 0
-		m.State = StateDirSelect
+		return m.confirmModeSelect()
 	}
 	return m, nil
 }
 
+func (m Model) confirmModeSelect() (tea.Model, tea.Cmd) {
+	dirs, err := deck.GetDeckDirectories(m.BaseDir)
+	if err != nil {
+		m.Err = err
+		return m, nil
+	}
+	m.Dirs = dirs
+	m.DirCursor = 0
+	m.State = StateDirSelect
+	return m, nil
+}
+
 func (m Model) updateDirSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	idx := KeyToIndex(msg.String())
+	if idx >= 0 && idx < len(m.Dirs) {
+		return m.selectDirectory(idx)
+	}
+
 	switch msg.String() {
-	case "up", "k":
+	case "up":
 		if m.DirCursor > 0 {
 			m.DirCursor--
 		}
-	case "down", "j":
+	case "down":
+		if m.DirCursor < len(m.Dirs)-1 {
+			m.DirCursor++
+		}
+	case "k":
+		if m.DirCursor > 0 {
+			m.DirCursor--
+		}
+	case "j":
 		if m.DirCursor < len(m.Dirs)-1 {
 			m.DirCursor++
 		}
@@ -71,28 +116,50 @@ func (m Model) updateDirSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 		m.State = StateModeSelect
 	case "enter", " ":
 		if len(m.Dirs) > 0 {
-			m.SelectedDir = m.Dirs[m.DirCursor]
-			files, err := deck.GetDeckFiles(m.BaseDir, m.SelectedDir)
-			if err != nil {
-				m.Err = err
-				return m, nil
-			}
-			m.DeckFiles = files
-			m.Cursor = 0
-			m.SelectedFiles = make(map[string]bool)
-			m.State = StateDeckSelect
+			return m.selectDirectory(m.DirCursor)
 		}
 	}
 	return m, nil
 }
 
+func (m Model) selectDirectory(idx int) (tea.Model, tea.Cmd) {
+	m.DirCursor = idx
+	m.SelectedDir = m.Dirs[idx]
+	files, err := deck.GetDeckFiles(m.BaseDir, m.SelectedDir)
+	if err != nil {
+		m.Err = err
+		return m, nil
+	}
+	m.DeckFiles = files
+	m.Cursor = 0
+	m.SelectedFiles = make(map[string]bool)
+	m.State = StateDeckSelect
+	return m, nil
+}
+
 func (m Model) updateDeckSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	idx := KeyToIndex(msg.String())
+	if idx >= 0 && idx < len(m.DeckFiles) {
+		m.Cursor = idx
+		file := m.DeckFiles[idx]
+		m.SelectedFiles[file] = !m.SelectedFiles[file]
+		return m, nil
+	}
+
 	switch msg.String() {
-	case "up", "k":
+	case "up":
 		if m.Cursor > 0 {
 			m.Cursor--
 		}
-	case "down", "j":
+	case "down":
+		if m.Cursor < len(m.DeckFiles)-1 {
+			m.Cursor++
+		}
+	case "k":
+		if m.Cursor > 0 {
+			m.Cursor--
+		}
+	case "j":
 		if m.Cursor < len(m.DeckFiles)-1 {
 			m.Cursor++
 		}
@@ -220,22 +287,7 @@ func (m Model) updateQuiz(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 		return m, nil
 	}
 
-	choiceIdx := -1
-	switch msg.String() {
-	case "d":
-		choiceIdx = 0
-	case "f":
-		choiceIdx = 1
-	case "g":
-		choiceIdx = 2
-	case "h":
-		choiceIdx = 3
-	case "j":
-		choiceIdx = 4
-	case "k":
-		choiceIdx = 5
-	}
-
+	choiceIdx := KeyToIndex(msg.String())
 	if choiceIdx != -1 && choiceIdx < len(m.QuizOptions) {
 		m.ShowFeedback = true
 		m.IsCorrect = (choiceIdx == m.CorrectIndex)

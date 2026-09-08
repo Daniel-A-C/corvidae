@@ -38,14 +38,16 @@ func (m Model) viewModeSelect() string {
 
 	modes := []string{"Spaced Repetition (SM-2)", "Multiple Choice Quiz"}
 	for i, label := range modes {
+		key := IndexToKey(i)
+		keyBadge := KeyStyle.Render(fmt.Sprintf("[%s]", key))
 		cursor := "  "
 		if m.Mode == i {
 			cursor = "> "
 			label = CursorStyle.Render(label)
 		}
-		content += fmt.Sprintf("%s%s\n", CursorStyle.Render(cursor), label)
+		content += fmt.Sprintf("%s%s %s\n", CursorStyle.Render(cursor), keyBadge, label)
 	}
-	content += "\n" + HintStyle.Render("(Use j/k to move, Enter to select)")
+	content += "\n" + HintStyle.Render("(Press a/s to select, Enter to confirm, q to quit)")
 	return content
 }
 
@@ -56,6 +58,11 @@ func (m Model) viewDirSelect() string {
 
 	content := "Select Deck Directory / Language:\n\n"
 	for i, dir := range m.Dirs {
+		key := IndexToKey(i)
+		keyBadge := ""
+		if key != "" {
+			keyBadge = KeyStyle.Render(fmt.Sprintf("[%s]", key)) + " "
+		}
 		cursor := "  "
 		label := dir
 		count := deck.CountDecksInDir(m.BaseDir, dir)
@@ -70,9 +77,12 @@ func (m Model) viewDirSelect() string {
 			cursor = "> "
 			label = CursorStyle.Render(label)
 		}
-		content += fmt.Sprintf("%s%s%s\n", CursorStyle.Render(cursor), label, countStr)
+		content += fmt.Sprintf("%s%s%s%s\n", CursorStyle.Render(cursor), keyBadge, label, countStr)
+		if (i+1)%5 == 0 && i < len(m.Dirs)-1 {
+			content += "\n"
+		}
 	}
-	content += "\n" + HintStyle.Render("(Use j/k to move, Enter to select, Esc to go back, q to quit)")
+	content += "\n" + HintStyle.Render("(Press key to select, Esc to go back, q to quit)")
 	return content
 }
 
@@ -83,6 +93,11 @@ func (m Model) viewDeckSelect() string {
 
 	content := fmt.Sprintf("Select decks to practice (%s):\n\n", m.SelectedDir)
 	for i, file := range m.DeckFiles {
+		key := IndexToKey(i)
+		keyBadge := ""
+		if key != "" {
+			keyBadge = KeyStyle.Render(fmt.Sprintf("[%s]", key)) + " "
+		}
 		cursor := "  "
 		if m.Cursor == i {
 			cursor = "> "
@@ -93,13 +108,17 @@ func (m Model) viewDeckSelect() string {
 			check = "[x]"
 		}
 
-		line := fmt.Sprintf("%s %s %s", CursorStyle.Render(cursor), KeyStyle.Render(check), file)
+		displayFile := file
 		if m.Cursor == i {
-			line = CursorStyle.Render(fmt.Sprintf("%s %s %s", cursor, check, file))
+			displayFile = CursorStyle.Render(file)
 		}
+		line := fmt.Sprintf("%s%s%s %s", CursorStyle.Render(cursor), keyBadge, KeyStyle.Render(check), displayFile)
 		content += line + "\n"
+		if (i+1)%5 == 0 && i < len(m.DeckFiles)-1 {
+			content += "\n"
+		}
 	}
-	content += "\n" + HintStyle.Render("(Space to toggle, Enter to confirm, Esc to go back, q to quit)")
+	content += "\n" + HintStyle.Render("(Press key to toggle, Enter to confirm, Esc to go back, q to quit)")
 	return content
 }
 
@@ -183,10 +202,14 @@ func (m Model) viewQuiz() string {
 		return content
 	}
 
-	quizKeys := []string{"d", "f", "g", "h", "j", "k"}
 	for i, opt := range m.QuizOptions {
-		content += fmt.Sprintf("[%s] %s\n", KeyStyle.Render(quizKeys[i]), opt)
+		key := IndexToKey(i)
+		keyBadge := KeyStyle.Render(fmt.Sprintf("[%s]", key))
+		content += fmt.Sprintf("%s %s\n", keyBadge, opt)
+		if (i+1)%5 == 0 && i < len(m.QuizOptions)-1 {
+			content += "\n"
+		}
 	}
-	content += "\n" + HintStyle.Render("(Press d, f, g, h, j, k to select, q to quit)")
+	content += "\n" + HintStyle.Render("(Press key to select, q to quit)")
 	return content
 }
