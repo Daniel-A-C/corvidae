@@ -1,36 +1,73 @@
 cards:
-    - character: 游玩
-      pinyin: yóu wán
-      meaning: Play
-      explanation: 游 (yóu) means 'tour/roam' or 'play', and 玩 (wán) means 'to play'. The main button on the start screen to begin.
+    - character: 黑桃
+      pinyin: hēi táo
+      meaning: Spades
+      explanation: 黑 (hēi) means 'black' and 桃 (táo) means 'peach'. In Chinese card games, the spade suit is traditionally called 'black peach' because its shape resembles an inverted peach leaf.
       interval: 1
-      ease: 1.3
-      next_review: "2026-09-02"
-    - character: 继续
-      pinyin: jì xù
-      meaning: Continue
-      explanation: 继 (jì) means 'to continue/follow' and 续 (xù) means 'to continue/join'. Used to resume an ongoing run from the main menu.
+      ease: 2.5
+    - character: 红桃
+      pinyin: hóng táo
+      meaning: Hearts
+      explanation: 红 (hóng) means 'red' and 桃 (táo) means 'peach'. The heart suit is called 'red peach' in Chinese playing cards.
       interval: 1
-      ease: 1.3
-      next_review: "2026-09-02"
-    - character: 选项
-      pinyin: xuǎn xiàng
-      meaning: Options
-      explanation: 选 (xuǎn) means 'to choose' and 项 (xiàng) means 'item/term'. The settings menu for audio, video, and gameplay adjustments.
+      ease: 2.5
+    - character: 方块
+      pinyin: fāng kuài
+      meaning: Diamonds
+      explanation: 方 (fāng) means 'square' and 块 (kuài) means 'piece/block'. The diamond suit is named 'square blocks' due to its geometric rhombic shape.
       interval: 1
-      ease: 1.3
-      next_review: "2026-09-02"
-    - character: 退出
-      pinyin: tuì chū
-      meaning: Quit
-      explanation: 退 (tuì) means 'to retreat/decline' and 出 (chū) means 'to go out'. Used to exit a run or close the game entirely.
+      ease: 2.5
+    - character: 梅花
+      pinyin: méi huā
+      meaning: Clubs
+      explanation: 梅 (méi) means 'plum/plum blossom' and 花 (huā) means 'flower'. The three-lobed club suit resembles a blooming plum flower.
       interval: 1
-      ease: 1.3
-      next_review: "2026-09-02"
-    - character: 收藏
-      pinyin: shōu cáng
-      meaning: Collection
-      explanation: 收 (shōu) means 'to receive/gather' and 藏 (cáng) means 'to hide/store'. The menu where you view discovered Jokers, decks, and vouchers.
+      ease: 2.5
+    - character: 人头牌
+      pinyin: rén tóu pái
+      meaning: Face Card
+      explanation: 人 (rén) means 'person', 头 (tóu) means 'head', and 牌 (pái) is 'card'. Cards with portraits of people (King, Queen, Jack). Several Balatro Jokers (like Scary Face or Pareidolia) trigger specifically on face cards.
       interval: 1
-      ease: 1.3
-      next_review: "2026-09-02"
+      ease: 2.5
+    - character: 国王
+      pinyin: guó wáng
+      meaning: King
+      explanation: 国 (guó) means 'country/kingdom' and 王 (wáng) means 'king/ruler'. The King (K) rank card in a standard deck.
+      interval: 1
+      ease: 2.5
+    - character: 王后
+      pinyin: wáng hòu
+      meaning: Queen
+      explanation: 王 (wáng) means 'king' and 后 (hòu) means 'queen/empress'. The Queen (Q) rank card in a standard deck.
+      interval: 1
+      ease: 2.5
+    - character: 杰克
+      pinyin: jié kè
+      meaning: Jack
+      explanation: 杰克 (jié kè) is the standard phonetic transliteration of the English name 'Jack'. The Jack (J) rank card in a standard deck.
+      interval: 1
+      ease: 2.5
+    - character: 牌组
+      pinyin: pái zǔ
+      meaning: Deck / Card Pool
+      explanation: 牌 (pái) is 'card' and 组 (zǔ) means 'group', 'set', or 'team'. Refers to your full deck of cards (such as the starting Red Deck, Blue Deck, or Checkered Deck).
+      interval: 1
+      ease: 2.5
+    - character: 手牌
+      pinyin: shǒu pái
+      meaning: Hand / Cards in hand
+      explanation: 手 (shǒu) means 'hand' and 牌 (pái) is 'card'. The cards currently dealt into your hand waiting to be played or discarded.
+      interval: 1
+      ease: 2.5
+    - character: 抽牌
+      pinyin: chōu pái
+      meaning: Draw cards
+      explanation: 抽 (chōu) means 'to pull out' or 'draw' and 牌 (pái) is 'card'. The action of drawing replacement cards from your deck into your hand.
+      interval: 1
+      ease: 2.5
+    - character: 消耗牌
+      pinyin: xiāo hào pái
+      meaning: Consumable Card
+      explanation: 消 (xiāo) means 'disappear', 耗 (hào) means 'consume/spend', and 牌 (pái) is 'card'. Single-use cards (Tarot, Planet, and Spectral cards) held in your consumable slots.
+      interval: 1
+      ease: 2.5
