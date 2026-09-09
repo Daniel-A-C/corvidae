@@ -1,0 +1,61 @@
+cards:
+  - character: 电子
+    pinyin: diàn zǐ
+    meaning: Electronic / Electron
+    explanation: "电 (diàn) means 'electric' (seen in 电脑) and 子 (zǐ) is a suffix/particle (seen in 顺子 and 对子). In physics it means an electron, and in modern technology it forms the root for electronic items like 电子邮件 (email) and 电子书 (e-book)."
+    interval: 1
+    ease: 2.5
+  - character: 水花
+    pinyin: shuǐ huā
+    meaning: Splash / Spray of water
+    explanation: "水 (shuǐ) means 'water' (the water radical found in 海 and 漂流) and 花 (huā) means 'flower' (from 同花 and 梅花). Literally 'water flowers'—the blossoming droplets created when water is splashed or sprayed."
+    interval: 1
+    ease: 2.5
+  - character: 人口
+    pinyin: rén kǒu
+    meaning: Population
+    explanation: "人 (rén) means 'person' (from 大人 and 人头牌) and 口 (kǒu) means 'mouth' (the mouth radical from 品 and 唱). Literally 'human mouths' that need to be fed, which is the universal Chinese term for population."
+    interval: 1
+    ease: 2.5
+  - character: 信用卡
+    pinyin: xìn yòng kǎ
+    meaning: Credit Card
+    explanation: "信 (xìn) means 'trust' (from 对局信息), 用 (yòng) means 'to use' (from 禁用), and 卡 (kǎ) means 'card' (from 门卡 and 尊享卡). 信用 (xìnyòng) means 'credit/trustworthiness', making this literally a 'credit card'—just like the Balatro voucher!"
+    interval: 1
+    ease: 2.5
+  - character: 王牌
+    pinyin: wáng pái
+    meaning: Trump card / Ace in the hole
+    explanation: "王 (wáng) means 'king/ruler' (from 国王 and 王后) and 牌 (pái) means 'card' (from 小丑牌). A 'king card' is an idiom for a trump card, winning move, or secret weapon in games and business."
+    interval: 1
+    ease: 2.5
+  - character: 红茶
+    pinyin: hóng chá
+    meaning: Black tea
+    explanation: "红 (hóng) means 'red' (from 红桃) and 茶 (chá) means 'tea'. In Chinese culture, Western 'black tea' is called 'red tea' because the brewed liquid has a deep reddish-amber color, whereas 'black tea' (黑茶) refers to fermented dark teas like Pu-erh."
+    interval: 1
+    ease: 2.5
+  - character: 头条
+    pinyin: tóu tiáo
+    meaning: Headline / Lead story
+    explanation: "头 (tóu) means 'head' or 'top' (from 人头牌 and 石头牌) and 条 (tiáo) is a classifier for strips or news items (from 三条 and 四条). The lead headline placed at the very top of a newspaper or news app."
+    interval: 1
+    ease: 2.5
+  - character: 车站
+    pinyin: chē zhàn
+    meaning: Station / Stop
+    explanation: "车 (chē) means 'vehicle/car' (from 车票 and 花车) and 站 (zhàn) means 'to stand' or 'station'. A designated stopping point for buses or trains."
+    interval: 1
+    ease: 2.5
+  - character: 号码
+    pinyin: hào mǎ
+    meaning: Number (phone / code)
+    explanation: "号 (hào) means 'number' or 'mark' and 码 (mǎ) means 'code/digit' (from 筹码, 代码, and 种子码). The standard Chinese word for identifying numbers like phone numbers (电话号码) or license plate numbers."
+    interval: 1
+    ease: 2.5
+  - character: 黄金时间
+    pinyin: huáng jīn shí jiān
+    meaning: Prime time / Golden hours
+    explanation: "黄金 (huángjīn) means 'gold' (from 黄金牌) and 时间 (shíjiān) means 'time' (from 排队时间). Literally 'golden time'—commonly used for peak TV broadcast hours or the most productive hours of the day."
+    interval: 1
+    ease: 2.5

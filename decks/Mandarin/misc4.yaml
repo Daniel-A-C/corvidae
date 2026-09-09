@@ -1,0 +1,61 @@
+cards:
+  - character: 密码
+    pinyin: mì mǎ
+    meaning: Password / PIN
+    explanation: "密 (mì) means 'secret/confidential' and 码 (mǎ) means 'code/number' (from 筹码, 代码, and 种子码). The universal term for login passwords, phone passcodes, and bank card PINs."
+    interval: 1
+    ease: 2.5
+  - character: 手机
+    pinyin: shǒu jī
+    meaning: Mobile phone / Cellphone
+    explanation: "手 (shǒu) means 'hand' (from 手牌) and 机 (jī) means 'machine' or 'device'. Literally 'hand machine'—the universal Chinese word for smartphones and mobile phones."
+    interval: 1
+    ease: 2.5
+  - character: 铁门
+    pinyin: tiě mén
+    meaning: Iron gate / Security door
+    explanation: "铁 (tiě) means 'iron' (from 钢铁牌 and 铸铁) and 门 (mén) means 'door/gate' (from 出门 and 大门). A sturdy metal security gate or courtyard entrance."
+    interval: 1
+    ease: 2.5
+  - character: 电车
+    pinyin: diàn chē
+    meaning: Tram / Trolley / Electric car
+    explanation: "电 (diàn) means 'electric' (from 电脑) and 车 (chē) means 'vehicle/car' (from 车票 and 花车). Used for traditional streetcars/trams as well as modern electric vehicles."
+    interval: 1
+    ease: 2.5
+  - character: 游客
+    pinyin: yóu kè
+    meaning: Tourist / Visitor
+    explanation: "游 (yóu) means 'to travel/roam' (from 游玩 and 迪士尼乐园) and 客 (kè) means 'guest' (seen in the phonetic loan 杰克). Travelers and sightseers visiting attractions."
+    interval: 1
+    ease: 2.5
+  - character: 极大
+    pinyin: jí dà
+    meaning: Enormous / Immense
+    explanation: "极 (jí) means 'extreme/utmost' (from 创极速光轮) and 大 (dà) means 'big/large' (from 大人 and 大盲注). Used to describe immense scale, great impact, or maximum values."
+    interval: 1
+    ease: 2.5
+  - character: 出品
+    pinyin: chū pǐn
+    meaning: Produced by / Product release
+    explanation: "出 (chū) means 'to produce/put forth' (from 出牌 and 出门) and 品 (pǐn) means 'item/product' (from 商品 and 纪念品). Commonly seen in film credits ('Produced by ...') or on gourmet restaurant menus."
+    interval: 1
+    ease: 2.5
+  - character: 顺手
+    pinyin: shùn shǒu
+    meaning: Conveniently / In passing / Handy
+    explanation: "顺 (shùn) means 'smooth/along' (from 顺子 and 同花顺) and 手 (shǒu) means 'hand' (from 手牌). Doing an action conveniently while on the way, or an item that feels natural and smooth in the hand."
+    interval: 1
+    ease: 2.5
+  - character: 宝石
+    pinyin: bǎo shí
+    meaning: Gemstone / Precious stone / Jewel
+    explanation: "宝 (bǎo) means 'treasure/precious' (from 奇幻童话城堡) and 石 (shí) means 'stone' (from 石头牌). Literally 'treasure stone'—the Chinese word for gems like rubies, sapphires, and emeralds."
+    interval: 1
+    ease: 2.5
+  - character: 小红花
+    pinyin: xiǎo hóng huā
+    meaning: Little red flower (award sticker / recognition)
+    explanation: "小 (xiǎo) means 'little' (from 小丑牌 and 小盲注), 红 (hóng) means 'red' (from 红桃), and 花 (huā) means 'flower' (from 同花 and 梅花). In Chinese elementary schools, teachers reward well-behaved and hardworking children with 'little red flower' stickers, making this a famous cultural symbol for praise and accomplishment."
+    interval: 1
+    ease: 2.5

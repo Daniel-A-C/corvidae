@@ -1,36 +1,71 @@
 cards:
-    - character: 商店
-      pinyin: shāng diàn
-      meaning: Shop
-      explanation: 商 (shāng) means 'commerce/trade' and 店 (diàn) means 'shop/store'. Where you spend your hard-earned chips.
+    - character: 游玩
+      pinyin: yóu wán
+      meaning: Play
+      explanation: 游 (yóu) means 'tour/roam' or 'play', and 玩 (wán) means 'to play'. The main button on the start screen to begin.
       interval: 1
       ease: 1.3
-      next_review: "2026-08-28"
-    - character: 刷新
-      pinyin: shuā xīn
-      meaning: Reroll
-      explanation: 刷 (shuā) means 'to brush/swipe' and 新 (xīn) means 'new'. Used across UI/gaming in Chinese to mean 'refreshing' the page or shop offerings.
+      next_review: "2026-09-02"
+    - character: 继续
+      pinyin: jì xù
+      meaning: Continue
+      explanation: 继 (jì) means 'to continue/follow' and 续 (xù) means 'to continue/join'. Used to resume an ongoing run from the main menu.
       interval: 1
       ease: 1.3
-      next_review: "2026-08-28"
-    - character: 利息
-      pinyin: lì xī
-      meaning: Interest
-      explanation: 利 (lì) means 'profit/benefit' and 息 (xī) means 'interest/breath'. The extra $1 you earn for every $5 you hold at the end of a blind.
+      next_review: "2026-09-02"
+    - character: 选项
+      pinyin: xuǎn xiàng
+      meaning: Options
+      explanation: 选 (xuǎn) means 'to choose' and 项 (xiàng) means 'item/term'. The settings menu for audio, video, and gameplay adjustments.
       interval: 1
       ease: 1.3
-      next_review: "2026-08-28"
-    - character: 出售
-      pinyin: chū shòu
-      meaning: Sell
-      explanation: 出 (chū) means 'to go out' and 售 (shòu) means 'to sell'. Used when deleting a Joker from your lineup for cash.
+      next_review: "2026-09-02"
+    - character: 退出
+      pinyin: tuì chū
+      meaning: Quit
+      explanation: 退 (tuì) means 'to retreat/decline' and 出 (chū) means 'to go out'. Used to exit a run or close the game entirely.
       interval: 1
       ease: 1.3
-      next_review: "2026-08-28"
-    - character: 标签
-      pinyin: biāo qiān
-      meaning: Tag
-      explanation: 标 (biāo) means 'mark/sign' and 签 (qiān) means 'label/ticket'. The reward you receive when you choose to skip a blind.
+      next_review: "2026-09-02"
+    - character: 收藏
+      pinyin: shōu cáng
+      meaning: Collection
+      explanation: 收 (shōu) means 'to receive/gather' and 藏 (cáng) means 'to hide/store'. The menu where you view discovered Jokers, decks, and vouchers.
       interval: 1
       ease: 1.3
-      next_review: "2026-08-28"
+      next_review: "2026-09-02"
+    - character: 选择
+      pinyin: xuǎn zé
+      meaning: Select
+      explanation: 选 (xuǎn) and 择 (zé) both mean 'to pick/choose'. The button used to lock in a blind, deck, or menu option.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-02"
+    - character: 跳过
+      pinyin: tiào guò
+      meaning: Skip
+      explanation: 跳 (tiào) means 'to jump' and 过 (guò) means 'to pass/cross'. Used when deciding to bypass a Small or Big Blind in exchange for a Tag.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-02"
+    - character: 返回
+      pinyin: fǎn huí
+      meaning: Back
+      explanation: 返 (fǎn) and 回 (huí) both mean 'to return'. Used strictly for UI navigation to return to the previous screen.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-02"
+    - character: 主菜单
+      pinyin: zhǔ cài dān
+      meaning: Main Menu
+      explanation: 主 (zhǔ) means 'main', 菜 (cài) means 'dish/vegetable', and 单 (dān) means 'list/bill'. 菜单 (càidān) together is the standard UI term for 'menu'.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-02"
+    - character: 对局信息
+      pinyin: duì jú xìn xī
+      meaning: Run Info
+      explanation: 对局 (duì jú) refers to a 'match' or 'game session', and 信息 (xìn xī) means 'information'. The button to check your current deck contents, vouchers, and stats during a run.
+      interval: 1
+      ease: 1.3
+      next_review: "2026-09-02"
