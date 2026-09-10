@@ -211,3 +211,53 @@ func TestMiscDecks(t *testing.T) {
 		t.Fatalf("expected 40 total cards across 4 misc decks, got %d", totalCards)
 	}
 }
+
+func TestDisneyMovieDecks(t *testing.T) {
+	decksPath := filepath.Join("..", "..", "decks", "Mandarin")
+	if _, err := os.Stat(decksPath); os.IsNotExist(err) {
+		t.Skip("decks directory not present at expected relative path")
+	}
+
+	movieDecks := []string{
+		"sleeping_beauty.yaml",
+		"snow_white.yaml",
+		"cinderella.yaml",
+	}
+
+	seen := make(map[string]string)
+	for _, file := range movieDecks {
+		fullPath := filepath.Join(decksPath, file)
+		d, err := LoadDeck(fullPath)
+		if err != nil {
+			t.Fatalf("failed to load %s: %v", file, err)
+		}
+		if len(d.Cards) != 15 {
+			t.Errorf("expected %s to have 15 cards, got %d", file, len(d.Cards))
+		}
+
+		for _, card := range d.Cards {
+			if card.Character == "" {
+				t.Errorf("%s: card missing character", file)
+			}
+			if card.Pinyin == "" {
+				t.Errorf("%s: card %s missing pinyin", file, card.Character)
+			}
+			if card.Meaning == "" {
+				t.Errorf("%s: card %s missing meaning", file, card.Character)
+			}
+			if card.Explanation == "" {
+				t.Errorf("%s: card %s missing explanation", file, card.Character)
+			}
+			if card.Interval != 1 {
+				t.Errorf("%s: card %s expected interval 1, got %d", file, card.Character, card.Interval)
+			}
+			if card.Ease != 2.5 {
+				t.Errorf("%s: card %s expected ease 2.5, got %f", file, card.Character, card.Ease)
+			}
+			if origFile, exists := seen[card.Character]; exists {
+				t.Errorf("duplicate card %s found in %s and %s", card.Character, origFile, file)
+			}
+			seen[card.Character] = file
+		}
+	}
+}

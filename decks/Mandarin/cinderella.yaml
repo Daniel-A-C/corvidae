@@ -1,0 +1,106 @@
+cards:
+  - character: 灰姑娘
+    pinyin: Huī gūniang
+    meaning: Cinderella
+    explanation: >
+      灰 (huī) means 'ash/cinders' and 姑娘 (gūniang) means 'girl/young woman'. Taunted by her cruel stepsisters for sitting among the soot and cinders near the fireplace after finishing her chores, she was given the nickname '灰姑娘' (Cinderella). The 1950 Disney animated film is also known in Chinese as 仙履奇缘 (Xiānlǚ Qíyuán).
+    interval: 1
+    ease: 2.5
+  - character: 水晶鞋
+    pinyin: shuǐ jīng xié
+    meaning: Glass slipper
+    explanation: >
+      水晶 (shuǐ jīng) means 'crystal' or 'glass' (水 water + 晶 sparkling) and 鞋 (xié) means 'shoe' (with the 革 leather radical). The shimmering glass slipper is magically gifted by the Fairy Godmother and becomes the key to Cinderella's identity when she leaves one behind at midnight.
+    interval: 1
+    ease: 2.5
+  - character: 南瓜马车
+    pinyin: nán guā mǎ chē
+    meaning: Pumpkin carriage
+    explanation: >
+      南瓜 (nán guā) means 'pumpkin' (南 south + 瓜 gourd/melon) and 马车 (mǎ chē) means 'horse-drawn carriage' (马 horse + 车 carriage). With a wave of her magic wand and the words "Bibbidi-Bobbidi-Boo", the Fairy Godmother transforms an ordinary garden pumpkin into an opulent golden carriage.
+    interval: 1
+    ease: 2.5
+  - character: 午夜
+    pinyin: wǔ yè
+    meaning: Midnight
+    explanation: >
+      午 (wǔ) refers to the midday/noon hour, and combined with 夜 (yè, night), 午夜 specifically denotes 12 o'clock midnight (the stroke of 12). The Fairy Godmother strictly warns Cinderella that the spell will be broken and all will return to its original form at the final stroke of midnight.
+    interval: 1
+    ease: 2.5
+  - character: 继母
+    pinyin: jì mǔ
+    meaning: Stepmother
+    explanation: >
+      继 (jì) means 'to continue/adoptive/step-' (with the 纟 thread/connection radical) and 母 (mǔ) means 'mother'. Lady Tremaine is Cinderella's calculating and authoritarian stepmother who exploits Cinderella as an unpaid scullery maid while favoring her own daughters.
+    interval: 1
+    ease: 2.5
+  - character: 舞会
+    pinyin: wǔ huì
+    meaning: Royal ball / Dance party
+    explanation: >
+      舞 (wǔ) means 'dance' and 会 (huì) means 'gathering/party'. The King organizes a royal ball for every eligible maiden in the realm so that Prince Charming may choose a suitable bride.
+    interval: 1
+    ease: 2.5
+  - character: 仙女教母
+    pinyin: Xiānnǚ jiàomǔ
+    meaning: Fairy Godmother
+    explanation: >
+      仙女 (xiānnǚ) means 'fairy/celestial woman' and 教母 (jiàomǔ) means 'godmother' (教 church/spiritual + 母 mother). When Cinderella's pink dress is torn to shreds by her stepsisters and all hope seems lost, the Fairy Godmother appears in the garden to grant her heart's desire.
+    interval: 1
+    ease: 2.5
+  - character: 钟声
+    pinyin: zhōng shēng
+    meaning: Clock chime / Toll of the bell
+    explanation: >
+      钟 (zhōng) means 'clock/bell' (with the 金 metal radical) and 声 (shēng) means 'sound/chime'. As Cinderella dances joyously with Prince Charming, the sudden deep chimes of the palace tower clock remind her that midnight has arrived.
+    interval: 1
+    ease: 2.5
+  - character: 试穿
+    pinyin: shì chuān
+    meaning: To try on (shoes/clothing)
+    explanation: >
+      试 (shì) means 'to try/test' (with the 讠 speech radical) and 穿 (chuān) means 'to wear/put on' (with the 穴 cave/aperture radical). By royal decree, the Grand Duke travels to every household across the kingdom to have every young maiden try on the delicate glass slipper.
+    interval: 1
+    ease: 2.5
+  - character: 仆人
+    pinyin: pú rén
+    meaning: Servant
+    explanation: >
+      仆 (pú) means 'servant/lackey' (亻 person + 卜 divination/humble attendant) and 人 (rén) means 'person'. Deprived of her noble inheritance, Cinderella is forced into the role of a domestic servant in her own home, answering to every demand from dawn to nightfall.
+    interval: 1
+    ease: 2.5
+  - character: 礼服
+    pinyin: lǐ fú
+    meaning: Ball gown / Formal dress
+    explanation: >
+      礼 (lǐ) denotes 'ceremony, etiquette, or ritual' (with the 礻 spirit/divine radical) and 服 (fú) means 'clothing/garment'. Cinderella transforms from wearing patched rags into a breathtaking sparkling silver-blue ball gown fitted with glass slippers.
+    interval: 1
+    ease: 2.5
+  - character: 老鼠
+    pinyin: lǎo shǔ
+    meaning: Mouse / Mice
+    explanation: >
+      老 (lǎo) is a familiar noun prefix and 鼠 (shǔ) is the pictograph radical for a rodent with paws and a tail. Jaq (杰克) and Gus (葛斯) are Cinderella's loyal and plucky mouse companions who help her make her original dress and rescue the key to her locked attic bedroom.
+    interval: 1
+    ease: 2.5
+  - character: 台阶
+    pinyin: tái jiē
+    meaning: Palace steps / Stairs
+    explanation: >
+      台 (tái) means 'platform/terrace' and 阶 (jiē) means 'steps/stairs' (featuring the 阝 hill/mound radical). Rushing desperately down the grand palace stairs as the clock strikes twelve, Cinderella accidentally loses one of her glass slippers on the steps.
+    interval: 1
+    ease: 2.5
+  - character: 恶毒
+    pinyin: è dú
+    meaning: Vicious / Malicious
+    explanation: >
+      恶 (è) means 'bad/evil' (featuring the 心 heart radical beneath 亚 secondary) and 毒 (dú) means 'poisonous/venomous'. Encapsulates the spiteful behavior of Cinderella's stepsisters Anastasia and Drizella, who rip apart her sash and bead necklaces out of pure malice.
+    interval: 1
+    ease: 2.5
+  - character: 相配
+    pinyin: xiāng pèi
+    meaning: Perfect match / To fit
+    explanation: >
+      相 (xiāng) means 'mutually/together' and 配 (pèi) means 'to match/pair' (with the 酉 vessel radical, originally related to matching wines). When the Duke places the slipper on Cinderella's foot, it slips on effortlessly with a perfect fit, proving beyond doubt that she is the mysterious maiden.
+    interval: 1
+    ease: 2.5
