@@ -1,0 +1,106 @@
+cards:
+  - character: 白雪公主
+    pinyin: Bái xuě gōngzhǔ
+    meaning: Snow White
+    explanation: >
+      白 (bái) means 'white', 雪 (xuě) means 'snow', and 公主 (gōngzhǔ) means 'princess'. Named for her skin as white as snow, lips as red as a rose, and hair as black as ebony, Snow White was the heroine of Disney's first full-length animated feature film in 1937.
+    interval: 1
+    ease: 2.5
+  - character: 邪恶王后
+    pinyin: xié'è wánghòu
+    meaning: The Evil Queen
+    explanation: >
+      邪恶 (xié'è) means 'evil/wicked' (邪 unorthodox/nefarious + 恶 bad/evil). 王后 (wánghòu) means 'queen' (王 king + 后 empress/queen consort). Queen Grimhilde is Snow White's vain and cold-hearted stepmother, consumed with being the fairest in the land.
+    interval: 1
+    ease: 2.5
+  - character: 魔镜
+    pinyin: mó jìng
+    meaning: Magic Mirror
+    explanation: >
+      魔 (mó) means 'magic' and 镜 (jìng) means 'mirror' (with the 金 metal radical, as ancient mirrors were made of polished bronze). The Magic Mirror houses an enigmatic masked spirit compelled to speak only the absolute truth: "Magic Mirror on the wall, who is the fairest one of all?"
+    interval: 1
+    ease: 2.5
+  - character: 毒苹果
+    pinyin: dú píng guǒ
+    meaning: Poisoned apple
+    explanation: >
+      毒 (dú) means 'poison' or 'venom'. 苹果 (píng guǒ) means 'apple' (苹 duckweed/apple + 果 fruit). Brewed with the 'Sleeping Death', the apple's tempting red skin conceals a deadly draught that causes the victim's breath to still and blood to congeal.
+    interval: 1
+    ease: 2.5
+  - character: 小矮人
+    pinyin: xiǎo ǎi rén
+    meaning: Dwarfs / The Seven Dwarfs
+    explanation: >
+      小 (xiǎo) means 'little/small', 矮 (ǎi) means 'short of stature' (with the 矢 arrow radical, used as a standard measure of length), and 人 (rén) means 'person'. Refers to the seven beloved dwarfs: Doc, Grumpy, Happy, Sleepy, Bashful, Sneezy, and Dopey.
+    interval: 1
+    ease: 2.5
+  - character: 猎人
+    pinyin: liè rén
+    meaning: Huntsman
+    explanation: >
+      猎 (liè) means 'to hunt' (featuring the 犭 beast radical) and 人 (rén) means 'person'. Humbert the Huntsman is ordered by the Evil Queen to take Snow White deep into the forest and kill her, but he cannot bring himself to do it and urges her to run away.
+    interval: 1
+    ease: 2.5
+  - character: 水晶棺
+    pinyin: shuǐ jīng guān
+    meaning: Crystal coffin / Glass casket
+    explanation: >
+      水晶 (shuǐ jīng) means 'crystal/quartz' (水 water + 晶 sparkling/clear) and 棺 (guān) means 'coffin' (with the 木 wood radical). Heartbroken and refusing to bury Snow White in the dark ground, the dwarfs fashioned a casket of glass and gold placed upon a hill.
+    interval: 1
+    ease: 2.5
+  - character: 木屋
+    pinyin: mù wū
+    meaning: Cottage / Wooden cabin
+    explanation: >
+      木 (mù) means 'wood/timber' and 屋 (wū) means 'house/room' (featuring the 尸 radical denoting a shelter or body of a building). Lost and terrified in the dark forest, Snow White discovers the messy, charming cottage belonging to the seven dwarfs.
+    interval: 1
+    ease: 2.5
+  - character: 挖矿
+    pinyin: wā kuàng
+    meaning: Mining / Digging for gems
+    explanation: >
+      挖 (wā) means 'to dig/excavate' (with the 扌 hand radical) and 矿 (kuàng) means 'mine/ore' (with the 石 stone radical). The dwarfs march cheerfully to their daily work in the gem-rich mountain mine singing "Heigh-Ho" (嗨嗬).
+    interval: 1
+    ease: 2.5
+  - character: 嫉妒
+    pinyin: jí dù
+    meaning: Jealousy / Envy
+    explanation: >
+      Both 嫉 (jí) and 妒 (dù) feature the 女 (woman) radical, historically reflecting societal views on jealousy. Together, 嫉妒 represents the bitter envy that drives the Evil Queen to repeatedly attempt to destroy Snow White once the mirror declares the princess fairer than she.
+    interval: 1
+    ease: 2.5
+  - character: 伪装
+    pinyin: wěi zhuāng
+    meaning: Disguise / To disguise
+    explanation: >
+      伪 (wěi) means 'false/counterfeit' (亻 person + 为 act, literally human contrivance rather than nature) and 装 (zhuāng) means 'attire/outfit'. The Evil Queen drinks a dark potion to disguise her beauty, transforming into a haggard old peddler woman selling apples.
+    interval: 1
+    ease: 2.5
+  - character: 打扫
+    pinyin: dǎ sǎo
+    meaning: To clean / Sweep
+    explanation: >
+      打 (dǎ) is a versatile action verb prefix and 扫 (sǎo) means 'to sweep' (with the 扌 hand radical). Snow White notices the thick cobwebs and messy kitchen in the dwarfs' cottage and organizes the animals to help her sweep and tidy up while singing "Whistle While You Work".
+    interval: 1
+    ease: 2.5
+  - character: 森林
+    pinyin: sēn lín
+    meaning: Forest
+    explanation: >
+      森 (sēn) is a triple-tree pictograph meaning 'dense trees', and 林 (lín) is a double-tree pictograph meaning 'woods/grove'. After fleeing the Huntsman, Snow White runs panicked through the menacing, shadowy forest until dawn breaks.
+    interval: 1
+    ease: 2.5
+  - character: 小动物
+    pinyin: xiǎo dòng wù
+    meaning: Woodland creatures / Small animals
+    explanation: >
+      小 (xiǎo) means 'small/little', 动 (dòng) means 'to move', and 物 (wù) means 'thing/being' (动物 = animals). The gentle woodland deer, rabbits, squirrels, and birds comfort Snow White in the forest and guide her to safety.
+    interval: 1
+    ease: 2.5
+  - character: 苏醒
+    pinyin: sū xǐng
+    meaning: To awaken / Revive
+    explanation: >
+      苏 (sū) means 'to revive/come around' and 醒 (xǐng) means 'to wake up' (featuring the 酉 radical, originally related to sobering up after drinking wine). When the Prince finds Snow White and kisses her, the sleeping death spell is broken and she awakens.
+    interval: 1
+    ease: 2.5

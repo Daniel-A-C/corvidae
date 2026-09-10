@@ -1,0 +1,106 @@
+cards:
+  - character: 睡美人
+    pinyin: shuì měi rén
+    meaning: Sleeping Beauty
+    explanation: >
+      睡 (shuì) means 'to sleep' (composed of 目 eye and 垂 to droop). 美 (měi) means 'beautiful' and 人 (rén) means 'person'. Together, 'Sleeping Beauty' is the Chinese title of both the Charles Perrault fairy tale and the 1959 Disney classic animated film.
+    interval: 1
+    ease: 2.5
+  - character: 爱洛公主
+    pinyin: Àiluò gōngzhǔ
+    meaning: Princess Aurora
+    explanation: >
+      爱洛 (Àiluò) is the official Disney phonetic transliteration for Aurora (literally 'love and river/water'). 公主 (gōngzhǔ) means 'princess' (historically, dukes or 'gong' presided over royal marriages). Aurora was cursed at her christening to fall into a deathlike sleep before the sun sets on her sixteenth birthday.
+    interval: 1
+    ease: 2.5
+  - character: 黑魔女
+    pinyin: hēi mó nǚ
+    meaning: Maleficent (Dark Fairy / Evil Sorceress)
+    explanation: >
+      黑 (hēi) means 'dark/black', 魔 (mó) means 'magic/demon/devil', and 女 (nǚ) means 'female/woman'. Literally 'Dark Sorceress', this is the official Disney localized title for Maleficent (also transliterated as 玛琳菲森 Mǎlín Fēisēn), the mistress of all evil who curses infant Aurora after being omitted from the guest list.
+    interval: 1
+    ease: 2.5
+  - character: 纺车
+    pinyin: fǎng chē
+    meaning: Spinning wheel
+    explanation: >
+      纺 (fǎng) means 'to spin thread/yarn' (with the 纟 silk radical) and 车 (chē) means 'wheel/machine'. In an attempt to prevent Maleficent's curse from coming true, King Stefan ordered every spinning wheel in the entire kingdom to be burned.
+    interval: 1
+    ease: 2.5
+  - character: 纺锤
+    pinyin: fǎng chuí
+    meaning: Spindle
+    explanation: >
+      纺 (fǎng) means 'to spin' and 锤 (chuí) means 'weight', 'hammer', or 'spindle' (featuring the 金 metal radical). On her sixteenth birthday, lured into a tower by Maleficent's glowing green orb, Aurora pricks her finger on the sharp spindle of an enchanted spinning wheel.
+    interval: 1
+    ease: 2.5
+  - character: 诅咒
+    pinyin: zǔ zhòu
+    meaning: Curse / To curse
+    explanation: >
+      Both 诅 (zǔ) and 咒 (zhòu) contain the 口 (mouth) radical, as curses are spoken incantations. 诅 means 'to curse/wish evil upon' and 咒 means 'incantation/spell'. Maleficent unleashes her wrathful curse upon baby Aurora before Merryweather can grant her gift.
+    interval: 1
+    ease: 2.5
+  - character: 仙女
+    pinyin: xiān nǚ
+    meaning: Fairy / Fairy godmother
+    explanation: >
+      仙 (xiān) denotes an 'immortal' or 'celestial being' (composed of 亻 person and 山 mountain, invoking mountain recluses who attained immortality) and 女 (nǚ) means 'woman'. Refers to the three good fairies Flora (花仙子 / 芙劳拉), Fauna (翡翠仙子 / 芳娜), and Merryweather (蓝天仙子 / 玛丽韦瑟).
+    interval: 1
+    ease: 2.5
+  - character: 沉睡
+    pinyin: chén shuì
+    meaning: Deep sleep / Slumber
+    explanation: >
+      沉 (chén) means 'deep', 'heavy', or 'to sink' (with the 氵 water radical). 睡 (shuì) means 'sleep'. Rather than letting Aurora perish, Merryweather uses her remaining blessing to alter the curse so that Aurora will only fall into a century-long deep slumber.
+    interval: 1
+    ease: 2.5
+  - character: 真爱之吻
+    pinyin: zhēn ài zhī wěn
+    meaning: True love's kiss
+    explanation: >
+      真爱 (zhēn ài) means 'true love' (真 real/genuine + 爱 love), 之 (zhī) is a classical Chinese possessive connector equivalent to 的 ('s / of), and 吻 (wěn) means 'kiss' (with the 口 mouth radical). In Disney lore, true love's kiss is the most potent magical force capable of shattering any dark enchantment.
+    interval: 1
+    ease: 2.5
+  - character: 荆棘
+    pinyin: jīng jí
+    meaning: Thorns / Brambles
+    explanation: >
+      Both 荆 (jīng) and 棘 (jí) represent thorny shrubs and bushes, featuring the 艹 (grass/plant) radical and thorns. To prevent anyone from reaching the slumbering kingdom, Maleficent conjures a treacherous forest of thorny brambles around the castle.
+    interval: 1
+    ease: 2.5
+  - character: 巨龙
+    pinyin: jù lóng
+    meaning: Giant dragon
+    explanation: >
+      巨 (jù) means 'gigantic' or 'enormous', and 龙 (lóng) is 'dragon'. Maleficent calls upon 'all the powers of hell' to transform herself into a towering, fire-breathing black dragon in the climactic showdown against Prince Phillip.
+    interval: 1
+    ease: 2.5
+  - character: 菲利普王子
+    pinyin: Fēilìpǔ wángzǐ
+    meaning: Prince Phillip
+    explanation: >
+      菲利普 (Fēilìpǔ) is the phonetic transliteration of 'Phillip', and 王子 (wángzǐ) means 'prince' (王 king + 子 son). Armed with the Shield of Virtue and the Sword of Truth gifted by the fairies, Prince Phillip slays Maleficent and wakes Aurora.
+    interval: 1
+    ease: 2.5
+  - character: 魔杖
+    pinyin: mó zhàng
+    meaning: Magic wand
+    explanation: >
+      魔 (mó) means 'magic' and 杖 (zhàng) means 'cane', 'staff', or 'wand' (featuring the 木 wood radical). The three fairies Flora, Fauna, and Merryweather carry glowing magic wands, which they also hilariously use while baking a cake and magically changing Aurora's dress back and forth between pink and blue.
+    interval: 1
+    ease: 2.5
+  - character: 祝福
+    pinyin: zhù fú
+    meaning: Blessing / To bless
+    explanation: >
+      祝 (zhù) means 'to pray' or 'to wish' (with the 礻 spirit/divine radical), and 福 (fú) means 'good fortune' or 'blessing'. At Aurora's celebration, Flora blesses her with the gift of beauty, and Fauna blesses her with the gift of song.
+    interval: 1
+    ease: 2.5
+  - character: 破除
+    pinyin: pò chú
+    meaning: To break / Dispel (a curse or spell)
+    explanation: >
+      破 (pò) means 'to break' or 'destroy' (with the 石 stone radical) and 除 (chú) means 'to eliminate', 'get rid of', or 'dispel'. Commonly paired with 诅咒 (curse) or 魔法 (magic) as '破除诅咒' (to break a curse).
+    interval: 1
+    ease: 2.5
