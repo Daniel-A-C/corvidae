@@ -172,12 +172,17 @@ func (m Model) viewQuiz() string {
 
 	ref := m.ActiveCards[m.CurrentIndex]
 	card := m.Decks[ref.Filename].Cards[ref.OrigIdx]
-	displayName, err := filepath.Rel(m.BaseDir, ref.Filename)
-	if err != nil {
-		displayName = ref.Filename
+
+	header := fmt.Sprintf("Quiz: Question %d of %d", m.CurrentIndex+1, len(m.ActiveCards))
+	if m.ShowFeedback {
+		displayName, err := filepath.Rel(m.BaseDir, ref.Filename)
+		if err != nil {
+			displayName = ref.Filename
+		}
+		header += fmt.Sprintf("  •  %s", displayName)
 	}
 
-	content := HintStyle.Render(fmt.Sprintf("Quiz: Question %d of %d  •  %s", m.CurrentIndex+1, len(m.ActiveCards), displayName)) + "\n\n"
+	content := HintStyle.Render(header) + "\n\n"
 	content += CharStyle.Render(card.Character) + "\n\n"
 
 	if m.ShowFeedback {

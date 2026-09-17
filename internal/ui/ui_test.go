@@ -158,6 +158,15 @@ func TestQuizFlowAndFeedback(t *testing.T) {
 	m.SetupQuiz()
 	m.State = StateQuiz
 
+	// Verify deck name is hidden while picking an answer
+	questionView := m.View()
+	if strings.Contains(questionView, "tech.yaml") {
+		t.Errorf("expected question view to NOT contain deck name 'tech.yaml', got:\n%s", questionView)
+	}
+	if !strings.Contains(questionView, "Quiz: Question 1 of") {
+		t.Errorf("expected question view to contain 'Quiz: Question 1 of', got:\n%s", questionView)
+	}
+
 	correctKey := HummingbirdKeys[m.CorrectIndex]
 
 	// Answer correctly
@@ -171,6 +180,9 @@ func TestQuizFlowAndFeedback(t *testing.T) {
 	view := m.View()
 	if !strings.Contains(view, "Correct!") {
 		t.Errorf("expected view to contain 'Correct!', got:\n%s", view)
+	}
+	if !strings.Contains(view, "tech.yaml") {
+		t.Errorf("expected feedback view to contain deck name 'tech.yaml', got:\n%s", view)
 	}
 
 	// Advance
