@@ -1,0 +1,148 @@
+cards:
+  - character: 零
+    pinyin: líng
+    meaning: Zero (0)
+    explanation: >
+      The character 零 consists of 雨 (rain) at the top and 令 (order/command) at the bottom, originally referring to a gentle drizzle or remnant drops. Over time, it came to represent leftovers or a nil remainder, becoming the standard character for zero (0).
+    interval: 1
+    ease: 2.5
+  - character: 一
+    pinyin: yī
+    meaning: One (1)
+    explanation: >
+      A single horizontal stroke representing the number one and the concept of unity. In speech, its tone shifts via tone sandhi rules (e.g. falling to 4th tone before 1st, 2nd, and 3rd tones, and rising to 2nd tone before 4th tone).
+    interval: 1
+    ease: 2.5
+  - character: 二
+    pinyin: èr
+    meaning: Two (2)
+    explanation: >
+      Two horizontal strokes symbolizing the number two. In Mandarin, 二 is used for counting, mathematics, ordinal numbers, and phone numbers, whereas 两 (liǎng) is used when quantifying objects with measure words.
+    interval: 1
+    ease: 2.5
+  - character: 三
+    pinyin: sān
+    meaning: Three (3)
+    explanation: >
+      Three horizontal strokes symbolizing heaven, earth, and humanity, representing the number three. Because its pronunciation sounds similar to 生 (shēng, birth/life), three is traditionally considered an auspicious number in Chinese culture.
+    interval: 1
+    ease: 2.5
+  - character: 四
+    pinyin: sì
+    meaning: Four (4)
+    explanation: >
+      Originally drawn as four horizontal strokes, it evolved into an enclosed box containing curved dispersing strokes. In Chinese culture, four is often associated with bad luck because its pronunciation sounds similar to 死 (sǐ, death).
+    interval: 1
+    ease: 2.5
+  - character: 五
+    pinyin: wǔ
+    meaning: Five (5)
+    explanation: >
+      Originally an ancient counting tally marking an intersection or crossing between heaven and earth, representing the number five. It is central to Chinese philosophy, such as the Five Elements (五行: metal, wood, water, fire, earth).
+    interval: 1
+    ease: 2.5
+  - character: 六
+    pinyin: liù
+    meaning: Six (6)
+    explanation: >
+      Originally a pictograph of a shelter or hut, representing the number six. In Chinese culture, six is highly auspicious because it sounds similar to 流 (liú, smooth/flowing) or 溜 (liū), commonly used in modern slang like '666' to praise smooth or skillful play.
+    interval: 1
+    ease: 2.5
+  - character: 七
+    pinyin: qī
+    meaning: Seven (7)
+    explanation: >
+      Composed of a horizontal stroke cut across by a curved vertical stroke, historically symbolizing cutting or parting. Represents the number seven.
+    interval: 1
+    ease: 2.5
+  - character: 八
+    pinyin: bā
+    meaning: Eight (8)
+    explanation: >
+      Two curved strokes parting away from each other, originally indicating division or separation, representing eight. In Chinese culture, eight is universally prized as the luckiest number because its pronunciation rhymes with 发 (fā, to prosper / become wealthy).
+    interval: 1
+    ease: 2.5
+  - character: 九
+    pinyin: jiǔ
+    meaning: Nine (9)
+    explanation: >
+      Historically depicting a bending forearm or winding movement, representing nine. In imperial China, nine was the number of the Emperor and ultimate yang energy, as well as symbolizing longevity because it sounds identical to 久 (jiǔ, long-lasting/eternal).
+    interval: 1
+    ease: 2.5
+  - character: 十
+    pinyin: shí
+    meaning: Ten (10)
+    explanation: >
+      Represented by a simple cross (+), originally depicting a needle or central knot that united all directions (north, south, east, west) to complete the base-ten cycle.
+    interval: 1
+    ease: 2.5
+  - character: 两
+    pinyin: liǎng
+    meaning: Two / A pair (for quantities)
+    explanation: >
+      Historically depicting a balance scale with two equal weights. In Mandarin grammar, 两 is used instead of 二 when counting objects before measure words (e.g. 两个人 = two people) and when expressing two hundred (两百) or two thousand (两千).
+    interval: 1
+    ease: 2.5
+  - character: 百
+    pinyin: bǎi
+    meaning: Hundred (100)
+    explanation: >
+      Composed of 一 (one) atop 白 (white/clear), representing one hundred. It is also used idiomatically to denote 'all' or 'numerous', such as in 百姓 (bǎixìng, the common people / the hundred surnames).
+    interval: 1
+    ease: 2.5
+  - character: 千
+    pinyin: qiān
+    meaning: Thousand (1,000)
+    explanation: >
+      Composed of 十 (ten) with a slanted stroke at the top, representing a thousand. Like 百, it often denotes large quantities or endlessness in idioms (e.g. 千方百计 = by every conceivable means).
+    interval: 1
+    ease: 2.5
+  - character: 万
+    pinyin: wàn
+    meaning: Ten thousand (10,000)
+    explanation: >
+      Originally depicting a scorpion in its traditional form (萬), simplified to 万. Chinese numbers are grouped in base-10,000 (myriads) rather than base-1,000, making 万 the fundamental transition unit for large sums (e.g. 100,000 is 十万 / ten ten-thousands).
+    interval: 1
+    ease: 2.5
+  - character: 亿
+    pinyin: yì
+    meaning: Hundred million (100,000,000)
+    explanation: >
+      Composed of the person radical 亻 and 乙. In the Chinese numbering system, 亿 represents ten thousand times ten thousand (10,000 x 10,000 = 100,000,000). It is indispensable for discussing national populations, national budgets, and astronomy.
+    interval: 1
+    ease: 2.5
+  - character: 半
+    pinyin: bàn
+    meaning: Half
+    explanation: >
+      Composed of 八 (to divide) and 牛 (ox), anciently evoking the division of an ox into two halves. Today it means 'half' (e.g. 半个 = half of an item, 半天 = half a day / a long time).
+    interval: 1
+    ease: 2.5
+  - character: 几
+    pinyin: jǐ
+    meaning: How many / A few (small numbers)
+    explanation: >
+      Used as a question word to ask 'how many?' for small countable quantities (typically expected to be under 10, e.g. 几天 = how many days?), or as an indefinite number meaning 'several' or 'a few' (e.g. 几本书 = a few books).
+    interval: 1
+    ease: 2.5
+  - character: 多少
+    pinyin: duōshao
+    meaning: How many / How much
+    explanation: >
+      Compound of 多 (duō, many) and 少 (shǎo, few). Unlike 几, 多少 is used to ask for quantities of any magnitude, including large numbers, prices (多少钱 = how much money?), and uncountable quantities.
+    interval: 1
+    ease: 2.5
+  - character: 第
+    pinyin: dì
+    meaning: Ordinal number prefix (e.g. 第一 = first)
+    explanation: >
+      Composed of the bamboo radical ⺮ at the top and 弟 (younger brother) at the bottom, originally referring to sequential registers on bamboo strips. Placed before any cardinal number to turn it into an ordinal number (e.g. 第一 = first, 第二 = second).
+    interval: 1
+    ease: 2.5
+  - character: 一共
+    pinyin: yígòng
+    meaning: Altogether / In total
+    explanation: >
+      Formed by combining 一 (yī, whole/one) and 共 (gòng, shared/together). Used when calculating total amounts, costs, or headcounts (e.g. 一共多少钱？ = How much is it in total?).
+    interval: 1
+    ease: 2.5

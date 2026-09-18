@@ -325,3 +325,45 @@ func TestLanguageDecksIntegrity(t *testing.T) {
 	}
 }
 
+func TestNumbersDeck(t *testing.T) {
+	numbersPath := filepath.Join("..", "..", "decks", "Mandarin", "numbers.yaml")
+	if _, err := os.Stat(numbersPath); os.IsNotExist(err) {
+		t.Skip("numbers.yaml not present at expected relative path")
+	}
+
+	d, err := LoadDeck(numbersPath)
+	if err != nil {
+		t.Fatalf("failed to load numbers.yaml: %v", err)
+	}
+
+	if len(d.Cards) != 21 {
+		t.Errorf("expected 21 cards in numbers.yaml, got %d", len(d.Cards))
+	}
+
+	seen := make(map[string]bool)
+	for i, card := range d.Cards {
+		if card.Character == "" {
+			t.Errorf("card %d missing character", i)
+		}
+		if card.Pinyin == "" {
+			t.Errorf("card %d (%s) missing pinyin", i, card.Character)
+		}
+		if card.Meaning == "" {
+			t.Errorf("card %d (%s) missing meaning", i, card.Character)
+		}
+		if card.Explanation == "" {
+			t.Errorf("card %d (%s) missing explanation", i, card.Character)
+		}
+		if card.Interval != 1 {
+			t.Errorf("card %d (%s) expected interval 1, got %d", i, card.Character, card.Interval)
+		}
+		if card.Ease != 2.5 {
+			t.Errorf("card %d (%s) expected ease 2.5, got %f", i, card.Character, card.Ease)
+		}
+		if seen[card.Character] {
+			t.Errorf("duplicate character found in numbers.yaml: %s", card.Character)
+		}
+		seen[card.Character] = true
+	}
+}
+
