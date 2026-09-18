@@ -1,0 +1,37 @@
+cards:
+  - character: Dworzec
+    meaning: Station
+    explanation: Main railway or bus station hub (e.g., 'Dworzec Główny' for central station).
+  - character: Lotnisko
+    meaning: Airport
+    explanation: Aviation facility for passenger air transit.
+  - character: Gdzie jest...?
+    meaning: Where is...?
+    explanation: Essential navigational phrase to ask directions for monuments, streets, or facilities.
+  - character: Ile to kosztuje?
+    meaning: How much does this cost?
+    explanation: Everyday question used when purchasing goods, food, or services.
+  - character: Rachunek
+    meaning: Bill / Check
+    explanation: The payment bill requested when finishing a meal in a restaurant or café.
+  - character: Bilet
+    meaning: Ticket
+    explanation: Entry or transit pass for trains, trams, buses, or cultural venues.
+  - character: W prawo
+    meaning: To the right
+    explanation: Directional instruction indicating a turn toward the right side.
+  - character: W lewo
+    meaning: To the left
+    explanation: Directional instruction indicating a turn toward the left side.
+  - character: Hotel
+    meaning: Hotel
+    explanation: Accommodation establishment providing lodging for travelers.
+  - character: Pomoc
+    meaning: Help
+    explanation: Word used to seek assistance or call for help in an emergency.
+  - character: Woda
+    meaning: Water
+    explanation: Essential beverage, frequently requested in restaurants as still ('niegazowana') or sparkling ('gazowana').
+  - character: Jedzenie
+    meaning: Food
+    explanation: General term for food, meals, and nourishment.

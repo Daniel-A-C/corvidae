@@ -4,14 +4,15 @@ import "fmt"
 
 // Flashcard represents an individual flashcard item with spaced repetition metadata.
 type Flashcard struct {
-	Character   string  `yaml:"character"`
-	Pinyin      string  `yaml:"pinyin,omitempty"`
-	Meaning     string  `yaml:"meaning"`
-	Explanation string  `yaml:"explanation,omitempty"`
-	Interval    int     `yaml:"interval,omitempty"`
-	Ease        float64 `yaml:"ease,omitempty"`
-	Reps        int     `yaml:"reps,omitempty"`
-	NextReview  string  `yaml:"next_review,omitempty"`
+	Character     string  `yaml:"character"`
+	Pinyin        string  `yaml:"pinyin,omitempty"`
+	Pronunciation string  `yaml:"pronunciation,omitempty"`
+	Meaning       string  `yaml:"meaning"`
+	Explanation   string  `yaml:"explanation,omitempty"`
+	Interval      int     `yaml:"interval,omitempty"`
+	Ease          float64 `yaml:"ease,omitempty"`
+	Reps          int     `yaml:"reps,omitempty"`
+	NextReview    string  `yaml:"next_review,omitempty"`
 }
 
 // Deck represents a collection of flashcards stored in a YAML deck file.
@@ -27,8 +28,12 @@ type CardRef struct {
 
 // FormatQuizOption returns a formatted string representation suitable for multiple-choice quiz options.
 func (f Flashcard) FormatQuizOption() string {
-	if f.Pinyin != "" {
-		return fmt.Sprintf("%s - %s", f.Pinyin, f.Meaning)
+	phonetic := f.Pinyin
+	if phonetic == "" {
+		phonetic = f.Pronunciation
+	}
+	if phonetic != "" {
+		return fmt.Sprintf("%s - %s", phonetic, f.Meaning)
 	}
 	return f.Meaning
 }

@@ -1,0 +1,37 @@
+cards:
+  - character: Dzień dobry
+    meaning: Good day / Hello
+    explanation: Universal formal greeting used from morning until dusk.
+  - character: Cześć
+    meaning: Hi / Bye
+    explanation: Friendly, casual greeting and farewell used among peers and friends.
+  - character: Dziękuję
+    meaning: Thank you
+    explanation: Standard Polish expression of gratitude and appreciation.
+  - character: Proszę
+    meaning: Please / You're welcome
+    explanation: Versatile polite word used for please, you're welcome, here you go, or come in.
+  - character: Tak
+    meaning: Yes
+    explanation: Standard affirmative response in Polish.
+  - character: Nie
+    meaning: No
+    explanation: Standard negative response in Polish.
+  - character: Do widzenia
+    meaning: Goodbye
+    explanation: Standard formal farewell; literally translates to 'until seeing'.
+  - character: Przepraszam
+    meaning: Excuse me / Sorry
+    explanation: Used to apologize, express regret, or politely get someone's attention.
+  - character: Jak się masz?
+    meaning: How are you?
+    explanation: Casual inquiry to ask a friend or peer how they are feeling.
+  - character: Dobrze
+    meaning: Good / Well
+    explanation: Common positive response to greetings and questions of well-being.
+  - character: Dobry wieczór
+    meaning: Good evening
+    explanation: Formal polite greeting used once darkness or evening sets in.
+  - character: Dobranoc
+    meaning: Good night
+    explanation: Parting wish or farewell said right before going to sleep.

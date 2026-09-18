@@ -108,6 +108,16 @@ func TestStoreOperations(t *testing.T) {
 	if noPinyinCard.FormatQuizOption() != "Hello" {
 		t.Fatalf("expected 'Hello', got %s", noPinyinCard.FormatQuizOption())
 	}
+
+	// 6. Test card with pronunciation
+	pronunciationCard := Flashcard{
+		Character:     "مَرْحَبًا",
+		Pronunciation: "marḥaban",
+		Meaning:       "Hello",
+	}
+	if pronunciationCard.FormatQuizOption() != "marḥaban - Hello" {
+		t.Fatalf("expected 'marḥaban - Hello', got %s", pronunciationCard.FormatQuizOption())
+	}
 }
 
 func TestBalatroDecksConsolidated(t *testing.T) {
@@ -261,3 +271,57 @@ func TestDisneyMovieDecks(t *testing.T) {
 		}
 	}
 }
+
+func TestLanguageDecksIntegrity(t *testing.T) {
+	decksPath := filepath.Join("..", "..", "decks")
+	if _, err := os.Stat(decksPath); os.IsNotExist(err) {
+		t.Skip("decks directory not present at expected relative path")
+	}
+
+	dirs, err := GetDeckDirectories(decksPath)
+	if err != nil {
+		t.Fatalf("failed to get deck directories: %v", err)
+	}
+
+	expectedLanguages := []string{"Arabic", "French", "Mandarin", "Polish", "Spanish"}
+	for _, lang := range expectedLanguages {
+		found := false
+		for _, d := range dirs {
+			if d == lang {
+				found = true
+				break
+			}
+		}
+		if !found {
+			t.Errorf("expected language directory %s to exist in decks/", lang)
+		}
+
+		files, err := GetDeckFiles(decksPath, lang)
+		if err != nil {
+			t.Fatalf("failed to get deck files for %s: %v", lang, err)
+		}
+		if len(files) < 2 {
+			t.Errorf("expected at least 2 decks for %s, got %d", lang, len(files))
+		}
+
+		for _, file := range files {
+			fullPath := filepath.Join(decksPath, lang, file)
+			d, err := LoadDeck(fullPath)
+			if err != nil {
+				t.Fatalf("failed to load deck %s/%s: %v", lang, file, err)
+			}
+			if len(d.Cards) == 0 {
+				t.Errorf("deck %s/%s has 0 cards", lang, file)
+			}
+			for i, card := range d.Cards {
+				if card.Character == "" {
+					t.Errorf("%s/%s card %d missing character", lang, file, i)
+				}
+				if card.Meaning == "" {
+					t.Errorf("%s/%s card %d (%s) missing meaning", lang, file, i, card.Character)
+				}
+			}
+		}
+	}
+}
+

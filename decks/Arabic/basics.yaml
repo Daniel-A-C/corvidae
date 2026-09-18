@@ -1,0 +1,49 @@
+cards:
+  - character: مَرْحَبًا
+    pronunciation: marḥaban
+    meaning: Hello
+    explanation: Standard greeting used across the Arabic-speaking world.
+  - character: أَهْلًا وَسَهْلًا
+    pronunciation: ahlan wa sahlan
+    meaning: Welcome
+    explanation: Traditional Arabic welcoming formula meaning you have arrived among family and ease.
+  - character: شُكْرًا
+    pronunciation: shukran
+    meaning: Thank you
+    explanation: Universal expression of thanks and appreciation.
+  - character: عَفْوًا
+    pronunciation: ʿafwan
+    meaning: You're welcome / Excuse me
+    explanation: Polite response to thank you, or used to apologize or request pardon.
+  - character: نَعَمْ
+    pronunciation: naʿam
+    meaning: Yes
+    explanation: Standard affirmative response.
+  - character: لَا
+    pronunciation: lā
+    meaning: No
+    explanation: Standard negative response.
+  - character: مِنْ فَضْلِك
+    pronunciation: min faḍlik
+    meaning: Please
+    explanation: Polite request phrase literally translating to 'from your favor/grace'.
+  - character: إِلَى اللِّقَاء
+    pronunciation: ilā al-liqāʾ
+    meaning: Goodbye / Until next time
+    explanation: Literally means 'until the meeting'.
+  - character: كَيْفَ حَالُك؟
+    pronunciation: kayfa ḥāluk?
+    meaning: How are you?
+    explanation: Common inquiry asking after someone's condition and well-being.
+  - character: أَنَا بِخَيْر
+    pronunciation: anā bi-khayr
+    meaning: I am well
+    explanation: Standard positive reply to 'how are you'; literally 'I am in goodness'.
+  - character: مَعَ السَّلَامَة
+    pronunciation: maʿa as-salāmah
+    meaning: Goodbye / Go with peace
+    explanation: Warm farewell wish meaning 'with safety and peace'.
+  - character: صَبَاحُ الْخَيْر
+    pronunciation: ṣabāḥ al-khayr
+    meaning: Good morning
+    explanation: Traditional morning greeting meaning 'morning of goodness'.

@@ -1,0 +1,37 @@
+cards:
+  - character: Hola
+    meaning: Hello
+    explanation: Universal and friendly greeting used in all Spanish-speaking cultures.
+  - character: Buenos días
+    meaning: Good morning
+    explanation: Polite morning greeting used before midday.
+  - character: Buenas tardes
+    meaning: Good afternoon
+    explanation: Polite greeting used from noon until the sunset hours.
+  - character: Buenas noches
+    meaning: Good evening / Good night
+    explanation: Used both as a greeting in the evening and as a farewell before bed.
+  - character: Gracias
+    meaning: Thank you
+    explanation: Standard Spanish word expressing gratitude and thanks.
+  - character: De nada
+    meaning: You're welcome
+    explanation: Standard polite response to 'gracias'; literally means 'of nothing'.
+  - character: Por favor
+    meaning: Please
+    explanation: Polite formula added to questions and requests; literally 'by favor'.
+  - character: Sí
+    meaning: Yes
+    explanation: Standard affirmative response in Spanish.
+  - character: No
+    meaning: No
+    explanation: Standard negative response in Spanish.
+  - character: Adiós
+    meaning: Goodbye
+    explanation: Traditional farewell; etymologically from 'a Dios' (to God).
+  - character: ¿Cómo estás?
+    meaning: How are you?
+    explanation: Friendly, casual inquiry to ask how a friend or acquaintance is doing.
+  - character: Mucho gusto
+    meaning: Nice to meet you
+    explanation: Polite introduction phrase; literally translates to 'much pleasure'.

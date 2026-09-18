@@ -217,6 +217,48 @@ func TestFrenchDeckWithoutPinyin(t *testing.T) {
 	}
 }
 
+func TestArabicDeckWithPronunciation(t *testing.T) {
+	tempDir := t.TempDir()
+	arabicDir := filepath.Join(tempDir, "Arabic")
+	if err := os.Mkdir(arabicDir, 0755); err != nil {
+		t.Fatal(err)
+	}
+	arabicDeck := deck.Deck{
+		Cards: []deck.Flashcard{
+			{
+				Character:     "مَرْحَبًا",
+				Pronunciation: "marḥaban",
+				Meaning:       "Hello",
+				Explanation:   "Standard greeting",
+			},
+		},
+	}
+	if err := deck.SaveDeck(filepath.Join(arabicDir, "basics.yaml"), arabicDeck); err != nil {
+		t.Fatal(err)
+	}
+
+	m := New(tempDir)
+	m.SelectedDir = "Arabic"
+	m.SelectedFiles["basics.yaml"] = true
+	if err := m.LoadSelectedDecks(); err != nil {
+		t.Fatal(err)
+	}
+	m.SetupReview()
+	m.State = StateReview
+	m.ShowAnswer = true
+
+	view := m.View()
+	if !strings.Contains(view, "Pronunciation: marḥaban") {
+		t.Errorf("expected view to contain 'Pronunciation: marḥaban', got:\n%s", view)
+	}
+	if strings.Contains(view, "Pinyin:") {
+		t.Errorf("arabic deck should not display 'Pinyin:', got:\n%s", view)
+	}
+	if !strings.Contains(view, "Meaning: Hello") {
+		t.Errorf("expected view to contain 'Meaning: Hello', got:\n%s", view)
+	}
+}
+
 func TestHummingbirdKeyMapping(t *testing.T) {
 	if len(HummingbirdKeys) != 30 {
 		t.Fatalf("expected 30 HummingbirdKeys, got %d", len(HummingbirdKeys))

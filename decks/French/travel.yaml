@@ -1,0 +1,37 @@
+cards:
+  - character: L'addition
+    meaning: The bill / check
+    explanation: Used to request the check at a café or restaurant ('L'addition, s'il vous plaît').
+  - character: La gare
+    meaning: Train station
+    explanation: Major railway station for regional and high-speed train connections.
+  - character: L'aéroport
+    meaning: Airport
+    explanation: Terminal facility for domestic and international air travel.
+  - character: Où est... ?
+    meaning: Where is...?
+    explanation: Crucial interrogative expression for navigating cities and locating landmarks.
+  - character: Combien coûte... ?
+    meaning: How much does ... cost?
+    explanation: Practical question when shopping, buying tickets, or ordering services.
+  - character: Un billet
+    meaning: A ticket
+    explanation: Transit or admission pass for trains, metro, museums, or events.
+  - character: À droite
+    meaning: To the right
+    explanation: Directional navigation phrase indicating a turn or location on the right.
+  - character: À gauche
+    meaning: To the left
+    explanation: Directional navigation phrase indicating a turn or location on the left.
+  - character: L'hôtel
+    meaning: Hotel
+    explanation: Lodging and hospitality establishment for travelers.
+  - character: Le menu
+    meaning: The menu
+    explanation: Printed list of available meals, courses, and drinks in a restaurant.
+  - character: De l'eau
+    meaning: Water
+    explanation: Essential beverage request, often ordered as 'une carafe d'eau' in French restaurants.
+  - character: Aidez-moi
+    meaning: Help me
+    explanation: Direct call for assistance in urgent or emergency situations.
