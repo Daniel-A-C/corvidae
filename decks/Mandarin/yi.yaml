@@ -1,0 +1,36 @@
+cards:
+  - character: 可以
+    pinyin: kě yǐ
+    meaning: Can / May
+    explanation: >
+      可 (kě) means 'can', 'able to', or 'permitted'. 以 (yǐ) means 'to use' or 'by means of'. Together, the phrase literally translates to 'permitted to use', forming one of the most foundational words in Mandarin for expressing permission or ability.
+    interval: 1
+    ease: 2.5
+  - character: 所以
+    pinyin: suǒ yǐ
+    meaning: Therefore / So
+    explanation: >
+      所 (suǒ) originally meant 'place' but often acts as a structural particle meaning 'that which'. 以 (yǐ) means 'because of' or 'by means of'. Combined, they mean 'that which is because of' or 'the reason why', serving as the standard connector for cause and effect.
+    interval: 1
+    ease: 2.5
+  - character: 以前
+    pinyin: yǐ qián
+    meaning: Before / Previously
+    explanation: >
+      以 (yǐ) functions here as a grammatical pivot point (taking a specific point in time as the reference). 前 (qián) means 'front' or 'before'. Together, they mean taking the current reference point and looking backward in time, indicating 'before' or 'previously'.
+    interval: 1
+    ease: 2.5
+  - character: 以后
+    pinyin: yǐ hòu
+    meaning: After / In the future
+    explanation: >
+      以 (yǐ) acts as the time pivot, and 后 (hòu) means 'back', 'behind', or 'after'. Together, they mean taking the current reference point and looking forward, indicating 'after' or 'in the future'.
+    interval: 1
+    ease: 2.5
+  - character: 以为
+    pinyin: yǐ wéi
+    meaning: To think (mistakenly)
+    explanation: >
+      以 (yǐ) means 'to take' or 'by means of', and 为 (wéi) means 'to be' or 'to act as'. The phrase literally means 'to take [something] as being [something]'. In modern Mandarin, it is highly specific and used when you assumed or believed something was true, but it turned out not to be.
+    interval: 1
+    ease: 2.5
