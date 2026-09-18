@@ -1,0 +1,37 @@
+cards:
+  - character: La cuenta
+    meaning: The bill / check
+    explanation: Requested at the end of dining ('La cuenta, por favor').
+  - character: La estación
+    meaning: The station
+    explanation: Facility for train, bus, or metro departures and arrivals.
+  - character: El aeropuerto
+    meaning: The airport
+    explanation: Air terminal for domestic and international flights.
+  - character: ¿Dónde está...?
+    meaning: Where is...?
+    explanation: Indispensable question phrase for finding streets, restrooms, or attractions.
+  - character: ¿Cuánto cuesta?
+    meaning: How much does it cost?
+    explanation: Direct question to ask the price of an item or service.
+  - character: El billete
+    meaning: The ticket
+    explanation: Transportation pass for train, bus, or flight (also known as 'el boleto' in the Americas).
+  - character: A la derecha
+    meaning: To the right
+    explanation: Navigational direction indicating the right-hand path or turn.
+  - character: A la izquierda
+    meaning: To the left
+    explanation: Navigational direction indicating the left-hand path or turn.
+  - character: El hotel
+    meaning: The hotel
+    explanation: Lodging and hospitality establishment for travelers.
+  - character: Ayuda
+    meaning: Help
+    explanation: Call for assistance or support during difficult situations or emergencies.
+  - character: Agua
+    meaning: Water
+    explanation: Basic beverage request; feminine noun that takes masculine article in singular ('el agua').
+  - character: El restaurante
+    meaning: The restaurant
+    explanation: Establishment where meals and drinks are prepared and served to customers.

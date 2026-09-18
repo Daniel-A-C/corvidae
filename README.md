@@ -62,6 +62,8 @@ cards:
     explanation: "电 (diàn) means 'electric' and 脑 (nǎo) means 'brain'. Literally: 'Electric brain'."
 ```
 
+For languages requiring phonetic transliterations (such as Arabic), you can use the `pronunciation` field. For Latin-alphabet languages (such as Spanish, French, or Polish), `character`, `meaning`, and `explanation` are sufficient.
+
 > **Note:** The app will automatically inject tracking fields (`ease`, `interval`, `reps`, `next_review`) into the YAML file as you study to persist your progress.
 
 ## Usage & Controls

@@ -1,0 +1,37 @@
+cards:
+  - character: Bonjour
+    meaning: Hello / Good day
+    explanation: Standard daytime greeting used in all social contexts; literally 'good day'.
+  - character: Bonsoir
+    meaning: Good evening
+    explanation: Polite greeting used starting in late afternoon and evening.
+  - character: Merci
+    meaning: Thank you
+    explanation: Essential French expression of gratitude and appreciation.
+  - character: De rien
+    meaning: You're welcome
+    explanation: Everyday response to 'merci'; literally means 'of nothing'.
+  - character: S'il vous plaît
+    meaning: Please (formal/plural)
+    explanation: Polite request formula; literally 'if it pleases you'.
+  - character: Oui
+    meaning: Yes
+    explanation: Primary affirmative response in French.
+  - character: Non
+    meaning: No
+    explanation: Primary negative response in French.
+  - character: Au revoir
+    meaning: Goodbye
+    explanation: Standard farewell used in all contexts; literally 'until seeing again'.
+  - character: Comment allez-vous ?
+    meaning: How are you? (formal)
+    explanation: Polite and formal way to ask how someone is doing.
+  - character: Ça va
+    meaning: I'm doing well / It's going fine
+    explanation: Very common conversational phrase used both as a question and an answer.
+  - character: Excusez-moi
+    meaning: Excuse me
+    explanation: Polite formula used to catch attention or apologize for minor disruption.
+  - character: Enchanté
+    meaning: Nice to meet you
+    explanation: Traditional courteous expression said when being introduced to someone; literally 'delighted'.

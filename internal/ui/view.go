@@ -148,6 +148,8 @@ func (m Model) viewReview() string {
 
 	if card.Pinyin != "" {
 		content += fmt.Sprintf("Pinyin:  %s\n", PinyinStyle.Render(card.Pinyin))
+	} else if card.Pronunciation != "" {
+		content += fmt.Sprintf("Pronunciation: %s\n", PronunciationStyle.Render(card.Pronunciation))
 	}
 	content += fmt.Sprintf("Meaning: %s\n\n", MeaningStyle.Render(card.Meaning))
 
@@ -190,6 +192,8 @@ func (m Model) viewQuiz() string {
 			content += CorrectStyle.Render("Correct!") + "\n\n"
 			if card.Pinyin != "" {
 				content += fmt.Sprintf("Pinyin:  %s\n", PinyinStyle.Render(card.Pinyin))
+			} else if card.Pronunciation != "" {
+				content += fmt.Sprintf("Pronunciation: %s\n", PronunciationStyle.Render(card.Pronunciation))
 			}
 			content += fmt.Sprintf("Meaning: %s\n\n", MeaningStyle.Render(card.Meaning))
 			if card.Explanation != "" {
