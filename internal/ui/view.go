@@ -3,8 +3,10 @@ package ui
 import (
 	"fmt"
 	"path/filepath"
+	"strings"
 
 	"github.com/charmbracelet/lipgloss"
+	"flashcards/internal/arabic"
 	"flashcards/internal/deck"
 )
 
@@ -26,6 +28,16 @@ func (m Model) View() string {
 		content = m.viewReview()
 	case StateQuiz:
 		content = m.viewQuiz()
+	case StateArabicMenu:
+		content = m.viewArabicMenu()
+	case StateArabicExplorer:
+		content = m.viewArabicExplorer()
+	case StateArabicDrill:
+		content = m.viewArabicDrill()
+	case StateArabicStages:
+		content = m.viewArabicStages()
+	case StateArabicStageView:
+		content = m.viewArabicStageView()
 	}
 
 	styledContent := lipgloss.NewStyle().Align(lipgloss.Center).Render(content)
@@ -34,9 +46,13 @@ func (m Model) View() string {
 
 func (m Model) viewModeSelect() string {
 	content := LogoStyle.Render(AsciiLogo) + "\n\n"
-	content += "Select Practice Mode:\n\n"
+	content += "Select Mode:\n\n"
 
-	modes := []string{"Spaced Repetition (SM-2)", "Multiple Choice Quiz"}
+	modes := []string{
+		"Spaced Repetition (SM-2)",
+		"Multiple Choice Quiz",
+		"Arabic Alphabet Academy",
+	}
 	for i, label := range modes {
 		key := IndexToKey(i)
 		keyBadge := KeyStyle.Render(fmt.Sprintf("[%s]", key))
@@ -47,7 +63,7 @@ func (m Model) viewModeSelect() string {
 		}
 		content += fmt.Sprintf("%s%s %s\n", CursorStyle.Render(cursor), keyBadge, label)
 	}
-	content += "\n" + HintStyle.Render("(Press a/s to select, Enter to confirm, q to quit)")
+	content += "\n" + HintStyle.Render("(Press a/s/d to select, Enter to confirm, q to quit)")
 	return content
 }
 
@@ -256,4 +272,353 @@ func (m Model) viewQuiz() string {
 	}
 	content += "\n" + HintStyle.Render("(Press key to select, q to quit)")
 	return content
+}
+
+func (m Model) viewArabicMenu() string {
+	var b strings.Builder
+	title := ArabicHeaderStyle.Render("★ ARABIC ALPHABET ACADEMY ★") + "\n"
+	sub := ArabicSubHeaderStyle.Render("أكاديمية الحروف العربية — Master the Modern Standard Arabic Script") + "\n\n"
+	b.WriteString(title)
+	b.WriteString(sub)
+	b.WriteString("Select Learning Activity:\n\n")
+
+	activities := []struct {
+		title string
+		desc  string
+	}{
+		{"Alphabet Explorer & Letter Inspector", "Interactive 28-letter browser with 4 cursive shapes, sounds, & examples"},
+		{"Positional Forms Drill", "Master Isolated, Initial, Medial, and Final cursive recognition"},
+		{"Letter Sounds & Transliteration Quiz", "Connect letters, names, IPA sounds, and transliterations"},
+		{"Minimal Pairs & Confusable Letters", "Contrast tricky letters (ت/ط, د/ض, س/ص, ذ/ظ, ح/ه, ع/غ)"},
+		{"Non-Connecting Letters Drill", "Drill the 6 non-connecting letters (ا, د, ذ, ر, ز, و)"},
+		{"Sun & Moon Letters Drill", "Master definite article (الـ) assimilation and pronunciation"},
+		{"Progressive Guided Lessons", "Step-by-step curriculum through 8 pedagogical stages"},
+	}
+
+	for i, act := range activities {
+		key := IndexToKey(i)
+		keyBadge := KeyStyle.Render(fmt.Sprintf("[%s]", key))
+		cursor := "  "
+		label := act.title
+		if m.ArabicMenuCursor == i {
+			cursor = "> "
+			label = CursorStyle.Render(label)
+		}
+		descStr := HintStyle.Render(" — " + act.desc)
+		b.WriteString(fmt.Sprintf("%s%s %s%s\n", CursorStyle.Render(cursor), keyBadge, label, descStr))
+		if i == 0 || i == 3 || i == 5 {
+			b.WriteString("\n")
+		}
+	}
+
+	b.WriteString("\n" + HintStyle.Render("(Press key to select, Enter to confirm, Esc to return to Main Menu, q to quit)"))
+	return b.String()
+}
+
+func (m Model) viewArabicExplorer() string {
+	var b strings.Builder
+	header := ArabicHeaderStyle.Render("ALPHABET EXPLORER & LETTER INSPECTOR") + "\n"
+	var tabBar string
+	if m.ArabicExplorerTab == 0 {
+		tabBar = CorrectStyle.Render("[ Tab 1: The 28 Letters (Active) ]") + "   " + HintStyle.Render("[ Tab 2: Auxiliary & Harakat (Tab to switch) ]")
+	} else {
+		tabBar = HintStyle.Render("[ Tab 1: The 28 Letters (Tab to switch) ]") + "   " + CorrectStyle.Render("[ Tab 2: Auxiliary & Harakat (Active) ]")
+	}
+	b.WriteString(header)
+	b.WriteString(tabBar + "\n\n")
+
+	if m.ArabicExplorerTab == 0 {
+		cursor := m.ArabicLetterCursor
+		if cursor < 0 || cursor >= len(arabic.Letters) {
+			cursor = 0
+		}
+		l := arabic.Letters[cursor]
+
+		// Alphabet Strip
+		var strip strings.Builder
+		for idx, item := range arabic.Letters {
+			glyph := item.Forms.Isolated
+			if idx == cursor {
+				strip.WriteString(CursorStyle.Render(fmt.Sprintf("[%s]", glyph)))
+			} else {
+				strip.WriteString(fmt.Sprintf(" %s ", glyph))
+			}
+			if idx == 13 {
+				strip.WriteString("\n")
+			}
+		}
+		b.WriteString(strip.String() + "\n\n")
+
+		cellStyle := lipgloss.NewStyle().Width(15).Align(lipgloss.Center)
+		posTable := fmt.Sprintf(
+			"┌───────────────┬───────────────┬───────────────┬───────────────┐\n"+
+				"│%s│%s│%s│%s│\n"+
+				"│%s│%s│%s│%s│\n"+
+				"└───────────────┴───────────────┴───────────────┴───────────────┘",
+			cellStyle.Render("Isolated"),
+			cellStyle.Render("Initial"),
+			cellStyle.Render("Medial"),
+			cellStyle.Render("Final"),
+			cellStyle.Render(ArabicFormGlyph.Render(l.Forms.Isolated)),
+			cellStyle.Render(ArabicFormGlyph.Render(l.Forms.Initial)),
+			cellStyle.Render(ArabicFormGlyph.Render(l.Forms.Medial)),
+			cellStyle.Render(ArabicFormGlyph.Render(l.Forms.Final)),
+		)
+
+		letterHeader := fmt.Sprintf("%s   %s (%s)",
+			ArabicGlyphHuge.Render(l.Forms.Isolated),
+			ArabicHeaderStyle.Render(l.ArabicName),
+			KeyStyle.Render(l.EnglishName),
+		)
+
+		phonetics := fmt.Sprintf("Transliteration: %s   •   IPA: %s",
+			PinyinStyle.Render(l.Translit),
+			PronunciationStyle.Render(l.IPA),
+		)
+
+		soundInfo := fmt.Sprintf("Sound & Articulation: %s", l.SoundDesc)
+
+		connBadge := BadgeConnectorStyle.Render("[✓ Dual-Connecting Letter]")
+		if !l.IsConnector {
+			connBadge = BadgeNonConnectorStyle.Render("[⚠️ Non-Connecting Letter (Never connects to left)]")
+		}
+
+		sunMoonBadge := BadgeMoonStyle.Render("[🌙 Moon Letter (al-)]")
+		if l.IsSunLetter {
+			sunMoonBadge = BadgeSunStyle.Render("[☀️ Sun Letter (assimilates)]")
+		}
+
+		emphaticBadge := ""
+		if l.Emphatic {
+			emphaticBadge = "   " + ErrorStyle.Render("[Emphatic / Heavy]")
+		}
+
+		groupInfo := HintStyle.Render(fmt.Sprintf("Group %d: %s", l.PedGroup, l.GroupName))
+
+		tips := ""
+		if l.Tips != "" {
+			tips = "\nMnemonic / Tip: " + ExplanationStyle.Render(l.Tips)
+		}
+
+		var exStr strings.Builder
+		exStr.WriteString("Vocabulary Examples:\n")
+		for _, ex := range l.Examples {
+			exStr.WriteString(fmt.Sprintf("  • %s (%s) — %s [%s]\n",
+				ArabicHeaderStyle.Render(ex.Arabic),
+				PinyinStyle.Render(ex.Translit),
+				MeaningStyle.Render(ex.Meaning),
+				HintStyle.Render(ex.Position),
+			))
+		}
+
+		cardContent := fmt.Sprintf(
+			"%s\n%s\n%s\n\n%s\n\n%s   %s%s   •   %s%s\n\n%s",
+			letterHeader,
+			phonetics,
+			soundInfo,
+			posTable,
+			connBadge, sunMoonBadge, emphaticBadge, groupInfo,
+			tips,
+			exStr.String(),
+		)
+
+		b.WriteString(ArabicCardBox.Render(cardContent) + "\n\n")
+		b.WriteString(HintStyle.Render("(←/h Prev Letter • →/l Next Letter • Tab Toggle Auxiliary • Esc/b Return to Menu • q Quit)"))
+	} else {
+		cursor := m.ArabicAuxCursor
+		if cursor < 0 || cursor >= len(arabic.AuxiliaryItems) {
+			cursor = 0
+		}
+		item := arabic.AuxiliaryItems[cursor]
+
+		var strip strings.Builder
+		for idx, a := range arabic.AuxiliaryItems {
+			if idx == cursor {
+				strip.WriteString(CursorStyle.Render(fmt.Sprintf("[%s]", a.Name)))
+			} else {
+				strip.WriteString(fmt.Sprintf(" %s ", a.Name))
+			}
+			if (idx+1)%3 == 0 && idx < len(arabic.AuxiliaryItems)-1 {
+				strip.WriteString("\n")
+			}
+		}
+		b.WriteString(strip.String() + "\n\n")
+
+		cardContent := fmt.Sprintf(
+			"%s\n\n%s (%s)\n\nCategory: %s\nTransliteration: %s\n\nDescription: %s\n\nExample in Word: %s\n",
+			ArabicGlyphHuge.Render(item.Arabic),
+			ArabicHeaderStyle.Render(item.Name),
+			KeyStyle.Render(fmt.Sprintf("%d of %d", cursor+1, len(arabic.AuxiliaryItems))),
+			MeaningStyle.Render(item.Category),
+			PinyinStyle.Render(item.Translit),
+			item.Description,
+			CorrectStyle.Render(item.Example),
+		)
+
+		b.WriteString(ArabicCardBox.Render(cardContent) + "\n\n")
+		b.WriteString(HintStyle.Render("(←/h Prev Item • →/l Next Item • Tab Toggle 28 Letters • Esc/b Return to Menu • q Quit)"))
+	}
+
+	return b.String()
+}
+
+func (m Model) viewArabicDrill() string {
+	if len(m.ArabicQuestions) == 0 {
+		return fmt.Sprintf("No questions loaded.\n\n%s", HintStyle.Render("[Enter / Esc] Return to Menu"))
+	}
+
+	if m.ArabicQuestionIdx >= len(m.ArabicQuestions) {
+		pct := (m.ArabicScore * 100) / len(m.ArabicQuestions)
+		statusMsg := "Excellent! You've mastered this session!"
+		if pct < 70 {
+			statusMsg = "Good effort! Regular practice will make these letter shapes automatic."
+		}
+
+		result := fmt.Sprintf(
+			"%s\n\nFinal Score: %s / %s (%d%%)\n\n%s\n\n%s",
+			ArabicHeaderStyle.Render("★ DRILL COMPLETED ★"),
+			CorrectStyle.Render(fmt.Sprintf("%d", m.ArabicScore)),
+			KeyStyle.Render(fmt.Sprintf("%d", len(m.ArabicQuestions))),
+			pct,
+			ExplanationStyle.Render(statusMsg),
+			HintStyle.Render("[r] Retry Drill  •  [Enter / Esc] Academy Menu  •  [q] Quit"),
+		)
+		return result
+	}
+
+	q := m.ArabicQuestions[m.ArabicQuestionIdx]
+	header := fmt.Sprintf("Question %d of %d   •   Score: %d/%d",
+		m.ArabicQuestionIdx+1, len(m.ArabicQuestions), m.ArabicScore, m.ArabicQuestionIdx)
+
+	var b strings.Builder
+	b.WriteString(HintStyle.Render(header) + "\n\n")
+	b.WriteString(ArabicHeaderStyle.Render(q.Prompt) + "\n")
+	if q.SubPrompt != "" {
+		b.WriteString(HintStyle.Render(q.SubPrompt) + "\n")
+	}
+	b.WriteString("\n")
+
+	if q.Glyph != "" {
+		b.WriteString(ArabicGlyphHuge.Render(q.Glyph) + "\n\n")
+	}
+
+	if m.ArabicShowFeedback {
+		if m.ArabicIsCorrect {
+			b.WriteString(CorrectStyle.Render("✓ Correct!") + "\n\n")
+		} else {
+			b.WriteString(ErrorStyle.Render("✗ Incorrect!") + "\n\n")
+			b.WriteString(fmt.Sprintf("The correct answer was: %s\n\n", CorrectStyle.Render(q.Options[q.CorrectIndex])))
+		}
+		if q.Explanation != "" {
+			b.WriteString(ExplanationStyle.Render(q.Explanation) + "\n\n")
+		}
+		b.WriteString(HintStyle.Render("[ Spacebar or Enter to continue ]"))
+		return b.String()
+	}
+
+	for i, opt := range q.Options {
+		key := IndexToKey(i)
+		keyBadge := KeyStyle.Render(fmt.Sprintf("[%s]", key))
+		b.WriteString(fmt.Sprintf("%s %s\n", keyBadge, opt))
+		if (i+1)%5 == 0 && i < len(q.Options)-1 {
+			b.WriteString("\n")
+		}
+	}
+
+	b.WriteString("\n" + HintStyle.Render("(Press key to select, Esc to return to menu, q to quit)"))
+	return b.String()
+}
+
+func (m Model) viewArabicStages() string {
+	var b strings.Builder
+	b.WriteString(ArabicHeaderStyle.Render("PROGRESSIVE GUIDED LESSONS") + "\n")
+	b.WriteString(ArabicSubHeaderStyle.Render("8 Structured Stages from The Anchors to Auxiliary Marks") + "\n\n")
+	b.WriteString("Select Stage to Study & Drill:\n\n")
+
+	for i, st := range arabic.Stages {
+		key := IndexToKey(i)
+		keyBadge := KeyStyle.Render(fmt.Sprintf("[%s]", key))
+		cursor := "  "
+		name := fmt.Sprintf("Stage %d: %s", st.Number, st.Name)
+		if m.ArabicStageCursor == i {
+			cursor = "> "
+			name = CursorStyle.Render(name)
+		}
+
+		var letterPreview string
+		if len(st.LetterIDs) > 0 {
+			var glyphs []string
+			for _, id := range st.LetterIDs {
+				l := arabic.GetLetterByID(id)
+				if l != nil {
+					glyphs = append(glyphs, l.Forms.Isolated)
+				}
+			}
+			letterPreview = fmt.Sprintf(" (%s)", strings.Join(glyphs, " "))
+		} else {
+			letterPreview = " (ء, ة, ى, َ, ُ, ِ, ْ, ّ, ً)"
+		}
+
+		b.WriteString(fmt.Sprintf("%s%s %s%s\n", CursorStyle.Render(cursor), keyBadge, name, CorrectStyle.Render(letterPreview)))
+		b.WriteString(fmt.Sprintf("     %s\n\n", HintStyle.Render(st.Description)))
+	}
+
+	b.WriteString(HintStyle.Render("(Press key / Enter to view stage, Esc to return to menu, q to quit)"))
+	return b.String()
+}
+
+func (m Model) viewArabicStageView() string {
+	cursor := m.ArabicStageCursor
+	if cursor < 0 || cursor >= len(arabic.Stages) {
+		cursor = 0
+	}
+	st := arabic.Stages[cursor]
+
+	var b strings.Builder
+	b.WriteString(ArabicHeaderStyle.Render(fmt.Sprintf("STAGE %d: %s", st.Number, st.Name)) + "\n")
+	b.WriteString(HintStyle.Render(st.Description) + "\n\n")
+
+	if len(st.LetterIDs) > 0 {
+		b.WriteString("Letters in this stage:\n\n")
+		for _, id := range st.LetterIDs {
+			l := arabic.GetLetterByID(id)
+			if l == nil {
+				continue
+			}
+			connBadge := "[dual-connector]"
+			if !l.IsConnector {
+				connBadge = "[non-connector ⚠️]"
+			}
+			sunMoonBadge := "[moon]"
+			if l.IsSunLetter {
+				sunMoonBadge = "[sun]"
+			}
+			b.WriteString(fmt.Sprintf("  %s  %s (%s)  •  Forms: [%s | %s | %s | %s]  •  %s %s\n",
+				ArabicGlyphHuge.Render(l.Forms.Isolated),
+				ArabicHeaderStyle.Render(l.ArabicName),
+				KeyStyle.Render(l.EnglishName),
+				l.Forms.Isolated, l.Forms.Initial, l.Forms.Medial, l.Forms.Final,
+				BadgeConnectorStyle.Render(connBadge),
+				BadgeMoonStyle.Render(sunMoonBadge),
+			))
+			b.WriteString(fmt.Sprintf("      Sound: %s  •  Tip: %s\n\n",
+				PinyinStyle.Render(l.SoundDesc),
+				ExplanationStyle.Render(l.Tips),
+			))
+		}
+	} else {
+		b.WriteString("Auxiliary characters and diacritics in this stage:\n\n")
+		for _, a := range arabic.AuxiliaryItems {
+			b.WriteString(fmt.Sprintf("  %s  %s  •  %s\n      %s  •  Example: %s\n\n",
+				ArabicGlyphHuge.Render(a.Arabic),
+				ArabicHeaderStyle.Render(a.Name),
+				MeaningStyle.Render(a.Category),
+				HintStyle.Render(a.Description),
+				CorrectStyle.Render(a.Example),
+			))
+		}
+	}
+
+	b.WriteString(HintStyle.Render("[Space / Enter] Start Stage Drill  •  [Esc / b] Back to Stages List  •  [q] Quit"))
+	return b.String()
 }

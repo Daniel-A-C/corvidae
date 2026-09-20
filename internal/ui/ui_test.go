@@ -780,3 +780,207 @@ func TestStartPracticeFromDirSelectWithTab(t *testing.T) {
 	}
 }
 
+func TestArabicModeEntry(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+
+	if m.State != StateModeSelect {
+		t.Fatalf("expected StateModeSelect, got %d", m.State)
+	}
+
+	// Pressing 'd' selects ModeArabic and transitions to StateArabicMenu
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'d'}})
+	m = updatedM.(Model)
+	if m.State != StateArabicMenu {
+		t.Fatalf("expected StateArabicMenu after pressing 'd', got %d", m.State)
+	}
+
+	view := m.View()
+	if !strings.Contains(view, "ARABIC ALPHABET ACADEMY") {
+		t.Errorf("expected menu view to mention ARABIC ALPHABET ACADEMY, got: %s", view)
+	}
+
+	// Pressing 'esc' returns to StateModeSelect
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.State != StateModeSelect {
+		t.Fatalf("expected StateModeSelect after pressing Esc, got %d", m.State)
+	}
+}
+
+func TestArabicExplorerFlow(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+	m.State = StateArabicMenu
+
+	// Select Alphabet Explorer (activity 0)
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'a'}})
+	m = updatedM.(Model)
+	if m.State != StateArabicExplorer {
+		t.Fatalf("expected StateArabicExplorer, got %d", m.State)
+	}
+	if m.ArabicLetterCursor != 0 {
+		t.Fatalf("expected ArabicLetterCursor 0, got %d", m.ArabicLetterCursor)
+	}
+
+	// Right arrow / 'l' advances to letter 1 (Baa)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'l'}})
+	m = updatedM.(Model)
+	if m.ArabicLetterCursor != 1 {
+		t.Fatalf("expected ArabicLetterCursor 1, got %d", m.ArabicLetterCursor)
+	}
+
+	// Left arrow / 'h' wraps back to 0 (Alif)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'h'}})
+	m = updatedM.(Model)
+	if m.ArabicLetterCursor != 0 {
+		t.Fatalf("expected ArabicLetterCursor 0, got %d", m.ArabicLetterCursor)
+	}
+
+	// Tab toggles to Tab 1 (Auxiliary & Harakat)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyTab})
+	m = updatedM.(Model)
+	if m.ArabicExplorerTab != 1 {
+		t.Fatalf("expected ArabicExplorerTab 1, got %d", m.ArabicExplorerTab)
+	}
+
+	viewAux := m.View()
+	if !strings.Contains(viewAux, "Auxiliary & Harakat") {
+		t.Errorf("expected view to render Auxiliary & Harakat, got: %s", viewAux)
+	}
+
+	// Tab toggles back to Tab 0
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyTab})
+	m = updatedM.(Model)
+	if m.ArabicExplorerTab != 0 {
+		t.Fatalf("expected ArabicExplorerTab 0, got %d", m.ArabicExplorerTab)
+	}
+
+	// Esc returns to StateArabicMenu
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.State != StateArabicMenu {
+		t.Fatalf("expected StateArabicMenu, got %d", m.State)
+	}
+}
+
+func TestArabicDrillFlow(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+	m.State = StateArabicMenu
+
+	// Select Positional Forms Drill (activity 1, key 's')
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'s'}})
+	m = updatedM.(Model)
+	if m.State != StateArabicDrill {
+		t.Fatalf("expected StateArabicDrill, got %d", m.State)
+	}
+	if len(m.ArabicQuestions) != 10 {
+		t.Fatalf("expected 10 questions, got %d", len(m.ArabicQuestions))
+	}
+
+	// Initial drill view
+	view := m.View()
+	if !strings.Contains(view, "Question 1 of 10") {
+		t.Errorf("expected view to show Question 1 of 10, got: %s", view)
+	}
+
+	// Answer question with key 'a' (index 0)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'a'}})
+	m = updatedM.(Model)
+	if !m.ArabicShowFeedback {
+		t.Fatalf("expected ArabicShowFeedback true after answering")
+	}
+
+	// View shows feedback
+	fbView := m.View()
+	if !strings.Contains(fbView, "Correct") && !strings.Contains(fbView, "Incorrect") {
+		t.Errorf("expected feedback in view, got: %s", fbView)
+	}
+
+	// Spacebar advances to Question 2
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+	if m.ArabicShowFeedback {
+		t.Fatalf("expected ArabicShowFeedback false after pressing Space")
+	}
+	if m.ArabicQuestionIdx != 1 {
+		t.Fatalf("expected ArabicQuestionIdx 1, got %d", m.ArabicQuestionIdx)
+	}
+
+	// Complete all questions
+	m.ArabicQuestionIdx = len(m.ArabicQuestions)
+	completeView := m.View()
+	if !strings.Contains(completeView, "DRILL COMPLETED") {
+		t.Errorf("expected DRILL COMPLETED view, got: %s", completeView)
+	}
+
+	// Press 'r' to retry
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'r'}})
+	m = updatedM.(Model)
+	if m.ArabicQuestionIdx != 0 {
+		t.Fatalf("expected ArabicQuestionIdx 0 after retry, got %d", m.ArabicQuestionIdx)
+	}
+
+	// Esc returns to Arabic Menu
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.State != StateArabicMenu {
+		t.Fatalf("expected StateArabicMenu, got %d", m.State)
+	}
+}
+
+func TestArabicStagesFlow(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+	m.State = StateArabicMenu
+
+	// Select Guided Lessons (activity 6, key 'j')
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'j'}})
+	m = updatedM.(Model)
+	if m.State != StateArabicStages {
+		t.Fatalf("expected StateArabicStages, got %d", m.State)
+	}
+
+	viewStages := m.View()
+	if !strings.Contains(viewStages, "PROGRESSIVE GUIDED LESSONS") {
+		t.Errorf("expected view to contain PROGRESSIVE GUIDED LESSONS, got: %s", viewStages)
+	}
+
+	// Select Stage 0 (Stage 1: The Anchors & Boat Letters)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	if m.State != StateArabicStageView {
+		t.Fatalf("expected StateArabicStageView, got %d", m.State)
+	}
+
+	viewStageDetail := m.View()
+	if !strings.Contains(viewStageDetail, "The Anchors & Boat Letters") {
+		t.Errorf("expected stage details in view, got: %s", viewStageDetail)
+	}
+
+	// Press Enter to start Stage Drill
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	if m.State != StateArabicDrill {
+		t.Fatalf("expected StateArabicDrill, got %d", m.State)
+	}
+	if len(m.ArabicQuestions) == 0 {
+		t.Fatalf("expected stage questions loaded")
+	}
+
+	// Esc returns back to Stages
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.State != StateArabicStages {
+		t.Fatalf("expected StateArabicStages after esc, got %d", m.State)
+	}
+
+	// Esc returns back to Arabic Menu
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.State != StateArabicMenu {
+		t.Fatalf("expected StateArabicMenu after esc, got %d", m.State)
+	}
+}
+

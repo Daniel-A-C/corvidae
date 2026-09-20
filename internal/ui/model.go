@@ -8,6 +8,7 @@ import (
 	"time"
 
 	tea "github.com/charmbracelet/bubbletea"
+	"flashcards/internal/arabic"
 	"flashcards/internal/deck"
 	"flashcards/internal/quiz"
 )
@@ -18,11 +19,17 @@ const (
 	StateDeckSelect
 	StateReview
 	StateQuiz
+	StateArabicMenu
+	StateArabicExplorer
+	StateArabicDrill
+	StateArabicStages
+	StateArabicStageView
 )
 
 const (
 	ModeReview = iota
 	ModeQuiz
+	ModeArabic
 )
 
 // Model represents the Bubble Tea state model for Corvidae.
@@ -48,6 +55,19 @@ type Model struct {
 	CorrectIndex int
 	ShowFeedback bool
 	IsCorrect    bool
+
+	// Arabic Academy state
+	ArabicMenuCursor    int
+	ArabicLetterCursor  int // 0 to 27 in arabic.Letters
+	ArabicExplorerTab   int // 0: Letters, 1: Auxiliary & Harakat
+	ArabicAuxCursor     int // index into arabic.AuxiliaryItems
+	ArabicStageCursor   int // 0 to 7 in arabic.Stages
+	ArabicDrillType     arabic.DrillType
+	ArabicQuestions     []arabic.DrillQuestion
+	ArabicQuestionIdx   int
+	ArabicScore         int
+	ArabicShowFeedback  bool
+	ArabicIsCorrect     bool
 
 	Err    error
 	Width  int
@@ -206,4 +226,30 @@ func (m *Model) GenerateQuizOptions() {
 	}
 
 	m.QuizOptions, m.CorrectIndex = quiz.GenerateOptions(targetCard, allCards, 5)
+}
+
+// SetupArabicDrill prepares question sets for the chosen Arabic drill type.
+func (m *Model) SetupArabicDrill(dType arabic.DrillType, stageIdx int) {
+	m.ArabicDrillType = dType
+	m.ArabicQuestionIdx = 0
+	m.ArabicScore = 0
+	m.ArabicShowFeedback = false
+	m.ArabicIsCorrect = false
+
+	switch dType {
+	case arabic.DrillPositionalForms:
+		m.ArabicQuestions = arabic.GeneratePositionalFormQuestions(10)
+	case arabic.DrillLetterSounds:
+		m.ArabicQuestions = arabic.GenerateLetterSoundQuestions(10)
+	case arabic.DrillConnectors:
+		m.ArabicQuestions = arabic.GenerateConnectorQuestions(10)
+	case arabic.DrillSunMoon:
+		m.ArabicQuestions = arabic.GenerateSunMoonQuestions(10)
+	case arabic.DrillConfusables:
+		m.ArabicQuestions = arabic.GenerateConfusableQuestions(10)
+	case arabic.DrillStage:
+		if stageIdx >= 0 && stageIdx < len(arabic.Stages) {
+			m.ArabicQuestions = arabic.GenerateStageQuestions(arabic.Stages[stageIdx], 8)
+		}
+	}
 }
