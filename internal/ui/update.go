@@ -2,6 +2,7 @@ package ui
 
 import (
 	"math/rand"
+	"path/filepath"
 	"time"
 
 	tea "github.com/charmbracelet/bubbletea"
@@ -85,6 +86,7 @@ func (m Model) confirmModeSelect() (tea.Model, tea.Cmd) {
 	}
 	m.Dirs = dirs
 	m.DirCursor = 0
+	m.SelectedDir = ""
 	m.State = StateDirSelect
 	return m, nil
 }
@@ -112,8 +114,12 @@ func (m Model) updateDirSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 		if m.DirCursor < len(m.Dirs)-1 {
 			m.DirCursor++
 		}
+	case "tab":
+		if m.hasAnySelectedDeck() {
+			return m.startPractice()
+		}
 	case "esc", "b":
-		m.State = StateModeSelect
+		return m.goUpLevel()
 	case "enter", " ":
 		if len(m.Dirs) > 0 {
 			return m.selectDirectory(m.DirCursor)
@@ -124,16 +130,38 @@ func (m Model) updateDirSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 
 func (m Model) selectDirectory(idx int) (tea.Model, tea.Cmd) {
 	m.DirCursor = idx
-	m.SelectedDir = m.Dirs[idx]
-	files, err := deck.GetDeckFiles(m.BaseDir, m.SelectedDir)
+	dirName := m.Dirs[idx]
+	var targetDir string
+	if m.SelectedDir == "" {
+		targetDir = dirName
+	} else {
+		targetDir = filepath.Join(m.SelectedDir, dirName)
+	}
+
+	fullDirPath := filepath.Join(m.BaseDir, targetDir)
+	subdirs, err := deck.GetDeckDirectories(fullDirPath)
 	if err != nil {
 		m.Err = err
 		return m, nil
 	}
-	m.DeckFiles = files
-	m.Cursor = 0
-	m.SelectedFiles = make(map[string]bool)
-	m.State = StateDeckSelect
+	deckFiles, err := deck.GetDeckFiles(m.BaseDir, targetDir)
+	if err != nil {
+		m.Err = err
+		return m, nil
+	}
+
+	m.SelectedDir = targetDir
+	if len(subdirs) > 0 {
+		m.Dirs = subdirs
+		m.DirCursor = 0
+		m.DeckFiles = deckFiles
+		m.State = StateDirSelect
+	} else {
+		m.DeckFiles = deckFiles
+		m.Cursor = 0
+		// Retain m.SelectedFiles so decks in other directories remain selected
+		m.State = StateDeckSelect
+	}
 	return m, nil
 }
 
@@ -142,7 +170,7 @@ func (m Model) updateDeckSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	if idx >= 0 && idx < len(m.DeckFiles) {
 		m.Cursor = idx
 		file := m.DeckFiles[idx]
-		m.SelectedFiles[file] = !m.SelectedFiles[file]
+		m.toggleDeck(file)
 		return m, nil
 	}
 
@@ -164,40 +192,96 @@ func (m Model) updateDeckSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 			m.Cursor++
 		}
 	case "esc", "b":
-		m.State = StateDirSelect
+		return m.goUpLevel()
 	case " ":
 		if len(m.DeckFiles) > 0 {
 			file := m.DeckFiles[m.Cursor]
-			m.SelectedFiles[file] = !m.SelectedFiles[file]
+			m.toggleDeck(file)
 		}
 	case "enter":
 		if len(m.DeckFiles) == 0 {
-			m.State = StateDirSelect
+			return m.goUpLevel()
+		}
+		if m.hasAnySelectedDeck() {
+			return m.startPractice()
+		}
+	}
+	return m, nil
+}
+
+func (m Model) goUpLevel() (tea.Model, tea.Cmd) {
+	if m.State == StateDeckSelect {
+		parentDir := filepath.Dir(m.SelectedDir)
+		if parentDir == "." {
+			parentDir = ""
+		}
+		prevName := filepath.Base(m.SelectedDir)
+
+		subdirs, err := deck.GetDeckDirectories(filepath.Join(m.BaseDir, parentDir))
+		if err != nil {
+			m.Err = err
 			return m, nil
 		}
-
-		hasSelection := false
-		for _, selected := range m.SelectedFiles {
-			if selected {
-				hasSelection = true
+		m.SelectedDir = parentDir
+		m.Dirs = subdirs
+		m.DirCursor = 0
+		for i, d := range m.Dirs {
+			if d == prevName {
+				m.DirCursor = i
 				break
 			}
 		}
+		m.State = StateDirSelect
+		return m, nil
+	}
 
-		if hasSelection {
-			err := m.LoadSelectedDecks()
-			if err != nil {
-				m.Err = err
-				return m, nil
-			}
-			if m.Mode == ModeReview {
-				m.SetupReview()
-				m.State = StateReview
-			} else {
-				m.SetupQuiz()
-				m.State = StateQuiz
+	if m.State == StateDirSelect {
+		if m.SelectedDir == "" {
+			m.State = StateModeSelect
+			return m, nil
+		}
+
+		parentDir := filepath.Dir(m.SelectedDir)
+		if parentDir == "." {
+			parentDir = ""
+		}
+		prevName := filepath.Base(m.SelectedDir)
+
+		subdirs, err := deck.GetDeckDirectories(filepath.Join(m.BaseDir, parentDir))
+		if err != nil {
+			m.Err = err
+			return m, nil
+		}
+		m.SelectedDir = parentDir
+		m.Dirs = subdirs
+		m.DirCursor = 0
+		for i, d := range m.Dirs {
+			if d == prevName {
+				m.DirCursor = i
+				break
 			}
 		}
+		return m, nil
+	}
+
+	return m, nil
+}
+
+func (m Model) startPractice() (tea.Model, tea.Cmd) {
+	err := m.LoadSelectedDecks()
+	if err != nil {
+		m.Err = err
+		return m, nil
+	}
+	if len(m.Decks) == 0 {
+		return m, nil
+	}
+	if m.Mode == ModeReview {
+		m.SetupReview()
+		m.State = StateReview
+	} else {
+		m.SetupQuiz()
+		m.State = StateQuiz
 	}
 	return m, nil
 }

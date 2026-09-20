@@ -2,7 +2,9 @@ package ui
 
 import (
 	"math/rand"
+	"os"
 	"path/filepath"
+	"strings"
 	"time"
 
 	tea "github.com/charmbracelet/bubbletea"
@@ -73,20 +75,82 @@ func (m Model) Init() tea.Cmd {
 	return tea.EnterAltScreen
 }
 
-// LoadSelectedDecks loads all currently marked decks into memory.
+// LoadSelectedDecks loads all currently marked decks into memory across any directories.
 func (m *Model) LoadSelectedDecks() error {
 	m.Decks = make(map[string]deck.Deck)
-	for file, isSelected := range m.SelectedFiles {
-		if isSelected {
-			fullPath := filepath.Join(m.BaseDir, m.SelectedDir, file)
+	loadedPaths := make(map[string]bool)
+	for key, isSelected := range m.SelectedFiles {
+		if !isSelected {
+			continue
+		}
+		var fullPath string
+		if filepath.IsAbs(key) {
+			fullPath = key
+		} else {
+			candidate1 := filepath.Join(m.BaseDir, key)
+			if _, err := os.Stat(candidate1); err == nil {
+				fullPath = candidate1
+			} else if m.SelectedDir != "" {
+				candidate2 := filepath.Join(m.BaseDir, m.SelectedDir, key)
+				if _, err := os.Stat(candidate2); err == nil {
+					fullPath = candidate2
+				}
+			}
+		}
+		if fullPath != "" && !loadedPaths[fullPath] {
 			loaded, err := deck.LoadDeck(fullPath)
 			if err != nil {
 				return err
 			}
 			m.Decks[fullPath] = loaded
+			loadedPaths[fullPath] = true
 		}
 	}
 	return nil
+}
+
+// isDeckSelected reports whether a deck file in the current SelectedDir is marked as selected.
+func (m Model) isDeckSelected(file string) bool {
+	relPath := file
+	if m.SelectedDir != "" && !strings.HasPrefix(file, m.SelectedDir) {
+		relPath = filepath.Join(m.SelectedDir, file)
+	}
+	return m.SelectedFiles[relPath] || m.SelectedFiles[file]
+}
+
+// hasAnySelectedDeck reports whether at least one deck is selected across all directories.
+func (m Model) hasAnySelectedDeck() bool {
+	for _, selected := range m.SelectedFiles {
+		if selected {
+			return true
+		}
+	}
+	return false
+}
+
+// countSelectedDecks returns the number of uniquely selected deck files across all directories.
+func (m Model) countSelectedDecks() int {
+	count := 0
+	for _, selected := range m.SelectedFiles {
+		if selected {
+			count++
+		}
+	}
+	return count
+}
+
+// toggleDeck toggles the selection status of a deck file within the current directory.
+func (m *Model) toggleDeck(file string) {
+	relPath := file
+	if m.SelectedDir != "" && !strings.HasPrefix(file, m.SelectedDir) {
+		relPath = filepath.Join(m.SelectedDir, file)
+	}
+	if m.isDeckSelected(file) {
+		delete(m.SelectedFiles, relPath)
+		delete(m.SelectedFiles, file)
+	} else {
+		m.SelectedFiles[relPath] = true
+	}
 }
 
 // SetupReview prepares cards scheduled for today or unreviewed cards.
