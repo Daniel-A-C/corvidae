@@ -14,6 +14,19 @@ var (
 	ErrorStyle         = lipgloss.NewStyle().Foreground(lipgloss.Color("#FF5555")).Bold(true)
 	CorrectStyle       = lipgloss.NewStyle().Foreground(lipgloss.Color("#50FA7B")).Bold(true)
 	LogoStyle          = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#BD93F9")).Width(60).Align(lipgloss.Left)
+
+	// Arabic Academy styles
+	ArabicHeaderStyle       = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FFB86C"))
+	ArabicSubHeaderStyle    = lipgloss.NewStyle().Foreground(lipgloss.Color("#8BE9FD")).Italic(true)
+	ArabicGlyphHuge         = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FF7CCB"))
+	ArabicCardBox           = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#BD93F9")).Padding(1, 2)
+	ArabicFormBox           = lipgloss.NewStyle().Border(lipgloss.NormalBorder()).BorderForeground(lipgloss.Color("#6272A4")).Padding(0, 1)
+	ArabicFormLabel         = lipgloss.NewStyle().Foreground(lipgloss.Color("#6272A4")).Faint(false)
+	ArabicFormGlyph         = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#50FA7B"))
+	BadgeSunStyle           = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FFB86C"))
+	BadgeMoonStyle          = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#8BE9FD"))
+	BadgeConnectorStyle     = lipgloss.NewStyle().Foreground(lipgloss.Color("#50FA7B"))
+	BadgeNonConnectorStyle  = lipgloss.NewStyle().Foreground(lipgloss.Color("#FF5555")).Bold(true)
 )
 
 const AsciiLogo = `                           .-.
