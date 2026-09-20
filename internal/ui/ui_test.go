@@ -95,7 +95,7 @@ func TestNavigationFlow(t *testing.T) {
 	// Space to toggle tech.yaml
 	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
 	m = updatedM.(Model)
-	if !m.SelectedFiles["tech.yaml"] {
+	if !m.isDeckSelected("tech.yaml") {
 		t.Fatalf("expected tech.yaml to be selected")
 	}
 
@@ -483,7 +483,7 @@ func TestHummingbirdRealDecksRendering(t *testing.T) {
 	m := New(decksPath)
 	m.State = StateDeckSelect
 	m.SelectedDir = "Mandarin"
-	files, err := deck.GetDeckFiles(decksPath, "Mandarin")
+	files, err := deck.GetAllDeckFiles(decksPath, "Mandarin")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -540,6 +540,243 @@ func TestHummingbirdRealDecksRendering(t *testing.T) {
 				t.Errorf("expected blank line between [;] and [z]")
 			}
 		}
+	}
+}
+
+func setupNestedTestDecks(t *testing.T) string {
+	t.Helper()
+	tempDir := t.TempDir()
+
+	subA := filepath.Join(tempDir, "Mandarin", "Balatro")
+	subB := filepath.Join(tempDir, "Mandarin", "Disney")
+	subC := filepath.Join(tempDir, "Spanish")
+	if err := os.MkdirAll(subA, 0755); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.MkdirAll(subB, 0755); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.MkdirAll(subC, 0755); err != nil {
+		t.Fatal(err)
+	}
+
+	deckA := deck.Deck{Cards: []deck.Flashcard{{Character: "同花", Meaning: "Flush"}}}
+	deckB := deck.Deck{Cards: []deck.Flashcard{{Character: "灰姑娘", Meaning: "Cinderella"}}}
+	deckC := deck.Deck{Cards: []deck.Flashcard{{Character: "Hola", Meaning: "Hello"}}}
+
+	if err := deck.SaveDeck(filepath.Join(subA, "balatro1.yaml"), deckA); err != nil {
+		t.Fatal(err)
+	}
+	if err := deck.SaveDeck(filepath.Join(subB, "cinderella.yaml"), deckB); err != nil {
+		t.Fatal(err)
+	}
+	if err := deck.SaveDeck(filepath.Join(subC, "basics.yaml"), deckC); err != nil {
+		t.Fatal(err)
+	}
+
+	return tempDir
+}
+
+func TestMultiDirectorySelectionPersistence(t *testing.T) {
+	decksDir := setupNestedTestDecks(t)
+	m := New(decksDir)
+
+	// ModeSelect -> Enter -> DirSelect (root)
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	if m.State != StateDirSelect || m.SelectedDir != "" {
+		t.Fatalf("expected StateDirSelect at root, got state %d, dir %q", m.State, m.SelectedDir)
+	}
+
+	// Root dirs: Mandarin=0, Spanish=1
+	// Enter Mandarin
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	if m.State != StateDirSelect || m.SelectedDir != "Mandarin" {
+		t.Fatalf("expected StateDirSelect at Mandarin, got state %d, dir %q", m.State, m.SelectedDir)
+	}
+	if len(m.Dirs) != 2 || m.Dirs[0] != "Balatro" || m.Dirs[1] != "Disney" {
+		t.Fatalf("expected [Balatro, Disney], got %v", m.Dirs)
+	}
+
+	// Enter Balatro -> DeckSelect
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	if m.State != StateDeckSelect || m.SelectedDir != filepath.Join("Mandarin", "Balatro") {
+		t.Fatalf("expected StateDeckSelect in Mandarin/Balatro, got dir %q", m.SelectedDir)
+	}
+
+	// Toggle balatro1.yaml using Space
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+	if !m.isDeckSelected("balatro1.yaml") {
+		t.Fatalf("expected balatro1.yaml to be selected")
+	}
+
+	// Press Esc to go up a level to Mandarin
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.State != StateDirSelect || m.SelectedDir != "Mandarin" {
+		t.Fatalf("expected StateDirSelect in Mandarin, got dir %q", m.SelectedDir)
+	}
+	if m.countSelectedDecks() != 1 {
+		t.Fatalf("expected 1 deck selected, got %d", m.countSelectedDecks())
+	}
+
+	// Move cursor down to Disney (index 1) and press Enter
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'j'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	if m.State != StateDeckSelect || m.SelectedDir != filepath.Join("Mandarin", "Disney") {
+		t.Fatalf("expected StateDeckSelect in Mandarin/Disney, got dir %q", m.SelectedDir)
+	}
+
+	// Verify balatro1.yaml is NOT in current view, but cinderella.yaml is
+	if len(m.DeckFiles) != 1 || m.DeckFiles[0] != "cinderella.yaml" {
+		t.Fatalf("expected [cinderella.yaml], got %v", m.DeckFiles)
+	}
+	if m.isDeckSelected("cinderella.yaml") {
+		t.Fatalf("cinderella.yaml should not be selected yet")
+	}
+
+	// Toggle cinderella.yaml
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+	if !m.isDeckSelected("cinderella.yaml") {
+		t.Fatalf("expected cinderella.yaml to be selected")
+	}
+	if m.countSelectedDecks() != 2 {
+		t.Fatalf("expected 2 decks selected across folders, got %d", m.countSelectedDecks())
+	}
+
+	// Go back up to Mandarin, then up to root
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.SelectedDir != "Mandarin" {
+		t.Fatalf("expected Mandarin, got %q", m.SelectedDir)
+	}
+
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.SelectedDir != "" {
+		t.Fatalf("expected root dir '', got %q", m.SelectedDir)
+	}
+
+	// Enter Spanish -> DeckSelect
+	// Move down to Spanish (cursor was on Mandarin=0, Spanish=1)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'j'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	if m.State != StateDeckSelect || m.SelectedDir != "Spanish" {
+		t.Fatalf("expected StateDeckSelect in Spanish, got dir %q", m.SelectedDir)
+	}
+
+	// Toggle Spanish basics.yaml
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+	if m.countSelectedDecks() != 3 {
+		t.Fatalf("expected 3 decks selected across folders, got %d", m.countSelectedDecks())
+	}
+
+	// Press Enter to start practice
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	if m.State != StateReview {
+		t.Fatalf("expected StateReview, got %d", m.State)
+	}
+
+	// Verify all 3 decks loaded into m.Decks and ActiveCards has cards from all 3
+	if len(m.Decks) != 3 {
+		t.Fatalf("expected 3 decks loaded, got %d: %v", len(m.Decks), m.Decks)
+	}
+	if len(m.ActiveCards) != 3 {
+		t.Fatalf("expected 3 active cards, got %d", len(m.ActiveCards))
+	}
+}
+
+func TestHierarchicalDirectoryNavigationEsc(t *testing.T) {
+	decksDir := setupNestedTestDecks(t)
+	m := New(decksDir)
+
+	// ModeSelect -> Enter -> DirSelect (root)
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	// Enter Mandarin -> DirSelect (Mandarin)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	if m.SelectedDir != "Mandarin" {
+		t.Fatalf("expected Mandarin, got %q", m.SelectedDir)
+	}
+
+	// Enter Balatro -> DeckSelect (Mandarin/Balatro)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	if m.State != StateDeckSelect || m.SelectedDir != filepath.Join("Mandarin", "Balatro") {
+		t.Fatalf("expected DeckSelect in Mandarin/Balatro, got %d / %q", m.State, m.SelectedDir)
+	}
+
+	// Esc -> back to Mandarin (DirSelect)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.State != StateDirSelect || m.SelectedDir != "Mandarin" {
+		t.Fatalf("expected DirSelect in Mandarin, got %d / %q", m.State, m.SelectedDir)
+	}
+	if m.DirCursor != 0 || m.Dirs[m.DirCursor] != "Balatro" {
+		t.Fatalf("expected cursor restored to Balatro (0), got %d (%s)", m.DirCursor, m.Dirs[m.DirCursor])
+	}
+
+	// Esc -> back to root (DirSelect)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.State != StateDirSelect || m.SelectedDir != "" {
+		t.Fatalf("expected DirSelect at root, got %d / %q", m.State, m.SelectedDir)
+	}
+	if m.DirCursor != 0 || m.Dirs[m.DirCursor] != "Mandarin" {
+		t.Fatalf("expected cursor restored to Mandarin (0), got %d (%s)", m.DirCursor, m.Dirs[m.DirCursor])
+	}
+
+	// Esc -> back to ModeSelect
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.State != StateModeSelect {
+		t.Fatalf("expected StateModeSelect, got %d", m.State)
+	}
+}
+
+func TestStartPracticeFromDirSelectWithTab(t *testing.T) {
+	decksDir := setupNestedTestDecks(t)
+	m := New(decksDir)
+
+	// ModeSelect -> Enter -> DirSelect (root)
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	// Enter Mandarin -> Enter Balatro -> Space (select balatro1.yaml)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+
+	// Esc back to Mandarin (StateDirSelect)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.State != StateDirSelect {
+		t.Fatalf("expected StateDirSelect, got %d", m.State)
+	}
+
+	// Press Tab to start practice directly from DirSelect
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyTab})
+	m = updatedM.(Model)
+	if m.State != StateReview {
+		t.Fatalf("expected StateReview, got %d", m.State)
+	}
+	if len(m.ActiveCards) != 1 {
+		t.Fatalf("expected 1 active card, got %d", len(m.ActiveCards))
 	}
 }
 

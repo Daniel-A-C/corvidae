@@ -51,9 +51,46 @@ func GetDeckFiles(baseDir, dir string) ([]string, error) {
 	return files, nil
 }
 
-// CountDecksInDir counts the number of YAML decks present in a language directory.
+// GetAllDeckFiles recursively retrieves all YAML deck files inside the given directory tree,
+// returning their paths relative to dir.
+func GetAllDeckFiles(baseDir, dir string) ([]string, error) {
+	if baseDir == "" {
+		baseDir = "decks"
+	}
+	dirPath := filepath.Join(baseDir, dir)
+	var files []string
+	err := filepath.WalkDir(dirPath, func(path string, d os.DirEntry, err error) error {
+		if err != nil {
+			return err
+		}
+		if d.IsDir() {
+			if strings.HasPrefix(d.Name(), ".") && path != dirPath {
+				return filepath.SkipDir
+			}
+			return nil
+		}
+		if strings.HasSuffix(d.Name(), ".yaml") && !strings.HasPrefix(d.Name(), ".") {
+			rel, relErr := filepath.Rel(dirPath, path)
+			if relErr != nil {
+				return relErr
+			}
+			files = append(files, rel)
+		}
+		return nil
+	})
+	if err != nil {
+		if os.IsNotExist(err) {
+			return []string{}, nil
+		}
+		return nil, err
+	}
+	sort.Strings(files)
+	return files, nil
+}
+
+// CountDecksInDir counts the number of YAML decks present in a directory (including subdirectories).
 func CountDecksInDir(baseDir, dir string) int {
-	files, err := GetDeckFiles(baseDir, dir)
+	files, err := GetAllDeckFiles(baseDir, dir)
 	if err != nil {
 		return 0
 	}

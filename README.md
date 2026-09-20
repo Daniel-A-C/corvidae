@@ -46,10 +46,9 @@ Ensure you have [Go installed](https://go.dev/doc/install) on your system.
 
 ## Creating Decks
 
-Corvidae organizes flashcard decks into language subdirectories under the `decks/` folder (for example, `decks/Mandarin/` or `decks/Spanish/`). Any `.yaml` deck placed inside a language directory will be automatically discovered. The structure is simple, allowing you or an AI agent to generate new decks instantly.
+Corvidae organizes flashcard decks into language directories and subdirectories under the `decks/` folder (for example, `decks/Mandarin/Basics/` or `decks/Spanish/`). Any `.yaml` deck placed inside a directory or subfolder will be automatically discovered. The structure is simple, allowing you or an AI agent to generate new decks instantly.
 
-Example `decks/Mandarin/basics.yaml`:
-
+Example `decks/Mandarin/Basics/basics.yaml`:
 ```yaml
 cards:
   - character: 你好
@@ -71,13 +70,14 @@ For languages requiring phonetic transliterations (such as Arabic), you can use 
 When you launch Corvidae, you will be guided through a selection workflow:
 
 1. **Practice Mode**: Choose between SM-2 Spaced Repetition or Multiple Choice Quiz.
-2. **Directory / Language Selection**: Select which language category you want to study (e.g. `Mandarin`, `Spanish`, `French`, `Polish`, `Arabic`).
-3. **Deck Selection**: Pick one or more decks within that language directory.
+2. **Directory / Language Selection**: Navigate folders and subdirectories (e.g. `Mandarin/Balatro`, `Mandarin/Disney`, `Spanish`).
+3. **Deck Selection**: Pick one or more decks. Decks selected across different folders and subfolders remain selected.
 
 - `j` / `k` or Arrow Keys: Navigate menus.
 - `Spacebar`: Toggle deck selections on/off.
-- `Enter`: Confirm selection or enter directory.
-- `Esc` or `b`: Go back to the previous menu.
+- `Enter`: Confirm selection, enter folder, or start practice.
+- `Tab`: Start practice immediately from directory navigation when decks are selected.
+- `Esc` or `b`: Go up a level / back to the previous menu.
 - `q`: Quit the app at any time.
 
 During a review session, the controls map to a 6-point grading scale:

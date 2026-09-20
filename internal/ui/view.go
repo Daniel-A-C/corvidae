@@ -53,10 +53,16 @@ func (m Model) viewModeSelect() string {
 
 func (m Model) viewDirSelect() string {
 	if len(m.Dirs) == 0 {
-		return fmt.Sprintf("No language directories found in %s/.\n\n%s", m.BaseDir, HintStyle.Render("(Press Esc to return, q to quit)"))
+		return fmt.Sprintf("No directories found in %s/%s.\n\n%s", m.BaseDir, m.SelectedDir, HintStyle.Render("(Press Esc to return, q to quit)"))
 	}
 
-	content := "Select Deck Directory / Language:\n\n"
+	var content string
+	if m.SelectedDir == "" {
+		content = "Select Deck Directory / Language:\n\n"
+	} else {
+		content = fmt.Sprintf("Select Deck Directory (%s):\n\n", m.SelectedDir)
+	}
+
 	for i, dir := range m.Dirs {
 		key := IndexToKey(i)
 		keyBadge := ""
@@ -65,7 +71,11 @@ func (m Model) viewDirSelect() string {
 		}
 		cursor := "  "
 		label := dir
-		count := deck.CountDecksInDir(m.BaseDir, dir)
+		dirRelPath := dir
+		if m.SelectedDir != "" {
+			dirRelPath = filepath.Join(m.SelectedDir, dir)
+		}
+		count := deck.CountDecksInDir(m.BaseDir, dirRelPath)
 		var countStr string
 		if count == 1 {
 			countStr = HintStyle.Render(" (1 deck)")
@@ -82,7 +92,20 @@ func (m Model) viewDirSelect() string {
 			content += "\n"
 		}
 	}
-	content += "\n" + HintStyle.Render("(Press key to select, Esc to go back, q to quit)")
+
+	selectedCount := m.countSelectedDecks()
+	if selectedCount > 0 {
+		var deckWord string
+		if selectedCount == 1 {
+			deckWord = "1 deck"
+		} else {
+			deckWord = fmt.Sprintf("%d decks", selectedCount)
+		}
+		content += "\n" + CorrectStyle.Render(fmt.Sprintf("%s selected across folders  •  [Tab] Start Practice", deckWord)) + "\n"
+		content += "\n" + HintStyle.Render("(Press key to select, Tab to start, Esc to go back, q to quit)")
+	} else {
+		content += "\n" + HintStyle.Render("(Press key to select, Esc to go back, q to quit)")
+	}
 	return content
 }
 
@@ -91,7 +114,19 @@ func (m Model) viewDeckSelect() string {
 		return fmt.Sprintf("No .yaml files found in %s/%s.\n\n%s", m.BaseDir, m.SelectedDir, HintStyle.Render("(Press Esc or Enter to go back, q to quit)"))
 	}
 
-	content := fmt.Sprintf("Select decks to practice (%s):\n\n", m.SelectedDir)
+	content := fmt.Sprintf("Select decks to practice (%s)", m.SelectedDir)
+	selectedCount := m.countSelectedDecks()
+	if selectedCount > 0 {
+		var deckWord string
+		if selectedCount == 1 {
+			deckWord = "1 deck selected"
+		} else {
+			deckWord = fmt.Sprintf("%d decks selected", selectedCount)
+		}
+		content += fmt.Sprintf(" [%s]", deckWord)
+	}
+	content += ":\n\n"
+
 	for i, file := range m.DeckFiles {
 		key := IndexToKey(i)
 		keyBadge := ""
@@ -104,7 +139,7 @@ func (m Model) viewDeckSelect() string {
 		}
 
 		check := "[ ]"
-		if m.SelectedFiles[file] {
+		if m.isDeckSelected(file) {
 			check = "[x]"
 		}
 

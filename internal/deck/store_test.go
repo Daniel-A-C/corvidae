@@ -121,7 +121,7 @@ func TestStoreOperations(t *testing.T) {
 }
 
 func TestBalatroDecksConsolidated(t *testing.T) {
-	decksPath := filepath.Join("..", "..", "decks", "Mandarin")
+	decksPath := filepath.Join("..", "..", "decks", "Mandarin", "Balatro")
 	if _, err := os.Stat(decksPath); os.IsNotExist(err) {
 		t.Skip("decks directory not present at expected relative path")
 	}
@@ -177,7 +177,7 @@ func TestBalatroDecksConsolidated(t *testing.T) {
 }
 
 func TestMiscDecks(t *testing.T) {
-	decksPath := filepath.Join("..", "..", "decks", "Mandarin")
+	decksPath := filepath.Join("..", "..", "decks", "Mandarin", "Misc")
 	if _, err := os.Stat(decksPath); os.IsNotExist(err) {
 		t.Skip("decks directory not present at expected relative path")
 	}
@@ -223,7 +223,7 @@ func TestMiscDecks(t *testing.T) {
 }
 
 func TestDisneyMovieDecks(t *testing.T) {
-	decksPath := filepath.Join("..", "..", "decks", "Mandarin")
+	decksPath := filepath.Join("..", "..", "decks", "Mandarin", "Disney")
 	if _, err := os.Stat(decksPath); os.IsNotExist(err) {
 		t.Skip("decks directory not present at expected relative path")
 	}
@@ -296,7 +296,7 @@ func TestLanguageDecksIntegrity(t *testing.T) {
 			t.Errorf("expected language directory %s to exist in decks/", lang)
 		}
 
-		files, err := GetDeckFiles(decksPath, lang)
+		files, err := GetAllDeckFiles(decksPath, lang)
 		if err != nil {
 			t.Fatalf("failed to get deck files for %s: %v", lang, err)
 		}
@@ -326,7 +326,7 @@ func TestLanguageDecksIntegrity(t *testing.T) {
 }
 
 func TestNumbersDeck(t *testing.T) {
-	numbersPath := filepath.Join("..", "..", "decks", "Mandarin", "numbers.yaml")
+	numbersPath := filepath.Join("..", "..", "decks", "Mandarin", "Basics", "numbers.yaml")
 	if _, err := os.Stat(numbersPath); os.IsNotExist(err) {
 		t.Skip("numbers.yaml not present at expected relative path")
 	}
@@ -364,6 +364,108 @@ func TestNumbersDeck(t *testing.T) {
 			t.Errorf("duplicate character found in numbers.yaml: %s", card.Character)
 		}
 		seen[card.Character] = true
+	}
+}
+
+func TestSexualityDeck(t *testing.T) {
+	deckPath := filepath.Join("..", "..", "decks", "Mandarin", "sexuality.yaml")
+	if _, err := os.Stat(deckPath); os.IsNotExist(err) {
+		t.Skip("sexuality.yaml not present at expected relative path")
+	}
+
+	d, err := LoadDeck(deckPath)
+	if err != nil {
+		t.Fatalf("failed to load sexuality.yaml: %v", err)
+	}
+
+	if len(d.Cards) != 30 {
+		t.Errorf("expected 30 cards in sexuality.yaml, got %d", len(d.Cards))
+	}
+
+	seen := make(map[string]bool)
+	for i, card := range d.Cards {
+		if card.Character == "" {
+			t.Errorf("card %d missing character", i)
+		}
+		if card.Pinyin == "" {
+			t.Errorf("card %d (%s) missing pinyin", i, card.Character)
+		}
+		if card.Meaning == "" {
+			t.Errorf("card %d (%s) missing meaning", i, card.Character)
+		}
+		if card.Explanation == "" {
+			t.Errorf("card %d (%s) missing explanation", i, card.Character)
+		}
+		if card.Interval != 1 {
+			t.Errorf("card %d (%s) expected interval 1, got %d", i, card.Character, card.Interval)
+		}
+		if card.Ease != 2.5 {
+			t.Errorf("card %d (%s) expected ease 2.5, got %f", i, card.Character, card.Ease)
+		}
+		if seen[card.Character] {
+			t.Errorf("duplicate character found in sexuality.yaml: %s", card.Character)
+		}
+		seen[card.Character] = true
+	}
+}
+
+func TestGetAllDeckFiles(t *testing.T) {
+	tempDir := t.TempDir()
+
+	sub1 := filepath.Join(tempDir, "Sub1")
+	sub2 := filepath.Join(tempDir, "Sub2")
+	nested := filepath.Join(sub1, "Nested")
+	hidden := filepath.Join(tempDir, ".hidden")
+	if err := os.MkdirAll(nested, 0755); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.MkdirAll(sub2, 0755); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.MkdirAll(hidden, 0755); err != nil {
+		t.Fatal(err)
+	}
+
+	dummyDeck := Deck{Cards: []Flashcard{{Character: "test", Meaning: "test"}}}
+	if err := SaveDeck(filepath.Join(tempDir, "root.yaml"), dummyDeck); err != nil {
+		t.Fatal(err)
+	}
+	if err := SaveDeck(filepath.Join(sub1, "sub1.yaml"), dummyDeck); err != nil {
+		t.Fatal(err)
+	}
+	if err := SaveDeck(filepath.Join(nested, "nested.yaml"), dummyDeck); err != nil {
+		t.Fatal(err)
+	}
+	if err := SaveDeck(filepath.Join(hidden, "hidden.yaml"), dummyDeck); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.WriteFile(filepath.Join(sub2, "ignore.txt"), []byte("txt"), 0644); err != nil {
+		t.Fatal(err)
+	}
+
+	files, err := GetAllDeckFiles(tempDir, "")
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
+	expected := []string{
+		filepath.Join("Sub1", "Nested", "nested.yaml"),
+		filepath.Join("Sub1", "sub1.yaml"),
+		"root.yaml",
+	}
+	if len(files) != len(expected) {
+		t.Fatalf("expected %d files, got %d: %v", len(expected), len(files), files)
+	}
+	for i, exp := range expected {
+		if files[i] != exp {
+			t.Errorf("file %d: expected %s, got %s", i, exp, files[i])
+		}
+	}
+
+	if count := CountDecksInDir(tempDir, ""); count != 3 {
+		t.Errorf("expected count 3, got %d", count)
+	}
+	if count := CountDecksInDir(tempDir, "Sub1"); count != 2 {
+		t.Errorf("expected count 2 for Sub1, got %d", count)
 	}
 }
 
