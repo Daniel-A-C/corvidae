@@ -2,72 +2,72 @@ cards:
     - character: 首领盲注
       pinyin: shǒu lǐng máng zhù
       meaning: Boss Blind
-      explanation: 首领 (shǒulǐng) means 'boss' or 'leader' (首 head + 领 lead), combined with 盲注 (mángzhù) for 'blind bet'. The challenging 3rd blind of every ante with unique restrictions.
+      explanation: "首 (head with hair = chief), 领 (令 command + 页 head = collar, leader), 盲 (blind), 注 (stake). 'Chief blind' = Boss Blind, the climax of each ante featuring special debuffs."
       interval: 1
       ease: 2.5
     - character: 禁用
       pinyin: jìn yòng
       meaning: Debuffed / Disabled
-      explanation: 禁 (jìn) means 'to prohibit/forbid' and 用 (yòng) means 'to use'. Indicates that a card's suit, rank, or special ability has been debuffed by a Boss Blind.
+      explanation: "禁 (林 sacred grove + 示 altar = taboo, forbidden), 用 (bell vessel = use). Indicates a card's suit, rank, or ability is debuffed/disabled by a Boss Blind."
       interval: 1
       ease: 2.5
     - character: 概率
       pinyin: gài lǜ
       meaning: Probability / Odds
-      explanation: 概 (gài) means 'approximate/general' and 率 (lǜ) means 'rate/ratio'. The probability governing random effects in Balatro (e.g., 1 in 4 chance for Lucky Cards or Glass Cards).
+      explanation: "概 (木 wood + 既 = wooden leveling rod on grain measure -> general standard), 率 (rate, ratio). Probability governing chances (1 in 4 Glass, 1 in 5 Lucky)."
       interval: 1
       ease: 2.5
     - character: 幸运牌
       pinyin: xìng yùn pái
       meaning: Lucky Card
-      explanation: 幸 (xìng) means 'fortunate', 运 (yùn) means 'luck/destiny', and 牌 (pái) is 'card'. A card enhancement with a 1 in 5 chance to grant +20 Mult and a 1 in 15 chance to earn $20.
+      explanation: "幸 (shackles avoided = lucky escape), 运 (辶 walk + 军 chariot = movement of fate, destiny), 牌 (card). Lucky Card (1 in 5 for +20 Mult, 1 in 15 for $20)."
       interval: 1
       ease: 2.5
     - character: 强化牌
       pinyin: qiáng huà pái
       meaning: Enhanced Card
-      explanation: 强 (qiáng) means 'strong', 化 (huà) means '-ize / transform', and 牌 (pái) is 'card'. The broad category of cards modified with Bonus, Mult, Wild, Glass, Steel, Stone, Gold, or Lucky effects.
+      explanation: "强 (弓 bow + 虫 = strong), 化 (亻 person + 匕 inverted person = transform, -ize), 牌 (card). Enhanced Cards modified with special bonus chips, mult, gold, or stone properties."
       interval: 1
       ease: 2.5
     - character: 借贷
       pinyin: jiè dài
       meaning: Debt / Credit
-      explanation: 借 (jiè) means 'to borrow' and 贷 (dài) means 'loan/credit'. Allowed by the Credit Card voucher, letting your chip money dip into negative balance up to -$20.
+      explanation: "借 (亻 person + 昔 past = borrow), 贷 (代 substitute + 贝 money = loan, credit). Granted by Credit Card voucher, allowing money to dip into negative balance up to -$20."
       interval: 1
       ease: 2.5
     - character: 获胜
       pinyin: huò shèng
       meaning: Victory / Win
-      explanation: 获 (huò) means 'to obtain/gain' and 胜 (shèng) means 'victory'. Displayed on the victory screen when you clear Ante 8.
+      explanation: "获 (犭 hound + 艹 grass + 又 hand catching prey = obtain), 胜 (lift arms in triumph = victory). Displayed on the triumphant victory screen after clearing Ante 8!"
       interval: 1
       ease: 2.5
     - character: 失败
       pinyin: shī bài
       meaning: Defeat / Game Over
-      explanation: 失 (shī) means 'to lose' and 败 (bài) means 'defeat'. Displayed when your played hands run out before meeting the blind's required chip score.
+      explanation: "失 (hand dropping object = lose, slip away), 败 (贝 money + 攵 hand striking = ruin, defeat). Displayed when played hands run out before reaching the required score."
       interval: 1
       ease: 2.5
     - character: 种子码
       pinyin: zhǒng zi mǎ
       meaning: Game Seed
-      explanation: 种子 (zhǒngzi) means 'seed', and 码 (mǎ) means 'code/number'. The alphanumeric code that determines the procedural generation of card draws, shop items, and blinds.
+      explanation: "种 (禾 grain + 重 heavy = seed grain), 子 (seed/suffix), 码 (石 stone + 马 = numerical code). The alphanumeric seed governing procedural generation of cards and blinds."
       interval: 1
       ease: 2.5
     - character: 解锁
       pinyin: jiě suǒ
       meaning: Unlock
-      explanation: 解 (jiě) means 'to loosen/release' and 锁 (suǒ) means 'lock'. Used when achieving milestones to unlock new Jokers, starting decks, and vouchers in the collection.
+      explanation: "解 (角 horn + 刀 knife + 牛 ox = carve apart, untie, release), 锁 (钅 metal + 𧴪 chained lock = lock). Unlocking new Jokers, decks, and vouchers by achieving milestones."
       interval: 1
       ease: 2.5
     - character: 重掷
       pinyin: chóng zhì
       meaning: Reroll
-      explanation: 重 (chóng) means 'again/re-' and 掷 (zhì) means 'to toss/throw'. Frequently used for rerolling Boss Blinds (via the Director's Cut voucher) or rerolling tags.
+      explanation: "重 (again, re-), 掷 (扌 hand + 郑 toss away = toss, hurl). Rerolling Boss Blinds (via Director's Cut voucher) or rerolling tags."
       interval: 1
       ease: 2.5
     - character: 上限
       pinyin: shàng xiàn
       meaning: Cap / Upper Limit
-      explanation: 上 (shàng) means 'upper/top' and 限 (xiàn) means 'limit/boundary'. Used for statistics with a ceiling, such as hand size limit (手牌上限) or Joker slot limit.
+      explanation: "上 (line above horizon = top), 限 (阝 hill barrier + 艮 glaring back = boundary, limit). The ceiling on values like hand size limit (手牌上限) or Joker slot capacity."
       interval: 1
       ease: 2.5
