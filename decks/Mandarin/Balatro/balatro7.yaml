@@ -1,0 +1,97 @@
+cards:
+    - character: 触发
+      pinyin: chù fā
+      meaning: Trigger / Activate
+      explanation: "触 (角 animal horn + 虫 insect/creature = horn making contact, bump into), 发 (弓 bow shooting arrow = release, discharge). To make contact and release a card's ability (e.g. Gros Michel triggering)."
+      interval: 1
+      ease: 2.5
+    - character: 获得
+      pinyin: huò dé
+      meaning: Gain / Obtain
+      explanation: "获 (犭 hunting hound + 艹 grass + 又 hand catching prey = capture), 得 (彳 walk + 贝 money + 寸 hand receiving = acquire, get). Gaining chips, mult, or money upon meeting card conditions."
+      interval: 1
+      ease: 2.5
+    - character: 给予
+      pinyin: jǐ yǔ
+      meaning: Grant / Give
+      explanation: "给 (纟 silk cord + 合 join = supply threads -> provide, give), 予 (pictograph of a hand thrusting forth an offering = bestow). Used in card descriptions: granting +4 Mult, +50 Chips, etc."
+      interval: 1
+      ease: 2.5
+    - character: 增加
+      pinyin: zēng jiā
+      meaning: Increase / Add
+      explanation: "增 (土 earth piled high + 曾 = heap up, expand), 加 (力 muscle power + 口 voice cheering = exert extra strength -> add). Boosting stats, hand counts, or cumulative multipliers."
+      interval: 1
+      ease: 2.5
+    - character: 减少
+      pinyin: jiǎn shǎo
+      meaning: Decrease / Reduce
+      explanation: "减 (氵 water + 咸 all evaporated = diminish, deduct), 少 (four small specks = few, little). Lowering stats over time (e.g. Ice Cream losing chips each round)."
+      interval: 1
+      ease: 2.5
+    - character: 摧毁
+      pinyin: cuī huǐ
+      meaning: Destroy
+      explanation: "摧 (扌 hand + 隹 bird + 山 mountain = batter, crush), 毁 (𣪊 break mortar + 殳 strike with club = demolish). Obliterating cards from your deck (e.g. The Hanged Man tarot or Immolate)."
+      interval: 1
+      ease: 2.5
+    - character: 复制
+      pinyin: fù zhì
+      meaning: Copy / Duplicate
+      explanation: "复 (彳 walk + 𡰣 return back = repeat, double), 制 (刂 knife tailoring fabric = cut pattern, manufacture). Replicating an existing Joker or card ability (e.g. Blueprint, Brainstorm, Ankh)."
+      interval: 1
+      ease: 2.5
+    - character: 转换
+      pinyin: zhuǎn huàn
+      meaning: Convert / Transform
+      explanation: "转 (车 chariot wheel turning direction = turn, shift), 换 (扌 hand + 奂 swap goods = exchange, barter). Altering cards from one suit or rank into another (e.g. suit-changing Tarots)."
+      interval: 1
+      ease: 2.5
+    - character: 升级
+      pinyin: shēng jí
+      meaning: Upgrade / Level up
+      explanation: "升 (measuring scoop rising upward = elevate, rise), 级 (纟 silk rank / graded steps of thread = rank, grade). Raising poker hand levels using Planet cards."
+      interval: 1
+      ease: 2.5
+    - character: 计分
+      pinyin: jì fēn
+      meaning: Score / Scoring
+      explanation: "计 (讠 words + 十 count to ten = calculate, reckon), 分 (八 divide + 刀 knife = parts, marks, points). The action of scoring played cards and triggering in-play bonuses."
+      interval: 1
+      ease: 2.5
+    - character: 结算
+      pinyin: jié suàn
+      meaning: Settle / Tally score
+      explanation: "结 (纟 silk knot tied = conclusion, tie up), 算 (竹 bamboo tallies + 目 eyes + 廾 hands = compute). The end-of-round calculation phase where hands, discards, and interest are tallied."
+      interval: 1
+      ease: 2.5
+    - character: 重置
+      pinyin: chóng zhì
+      meaning: Reset
+      explanation: "重 (again, re-), 置 (罒 net + 直 upright = put in place, establish). Returning values to their starting baseline (e.g. Jokers that reset mult back to zero after triggering)."
+      interval: 1
+      ease: 2.5
+    - character: 随机
+      pinyin: suí jī
+      meaning: Random / Randomly
+      explanation: "随 (阝 hillside + 辶 walk along = follow terrain, adapt as it comes), 机 (木 wood + 几 subtle mechanism / spark of opportunity = chance). Unpredictable procedural events."
+      interval: 1
+      ease: 2.5
+    - character: 永久
+      pinyin: yǒng jiǔ
+      meaning: Permanent / Permanently
+      explanation: "永 (flowing river with diverging channels = eternal, unending), 久 (person walking slow with cane = enduring long time). Upgrades that persist across the entire run."
+      interval: 1
+      ease: 2.5
+    - character: 额外
+      pinyin: é wài
+      meaning: Extra / Additional
+      explanation: "额 (页 forehead / tablet quota = fixed allowance), 外 (夕 evening + 卜 divination outside normal hours = outside). Surplus benefits exceeding the base quota (+1 extra discard, etc.)."
+      interval: 1
+      ease: 2.5
+    - character: 剩余
+      pinyin: shèng yú
+      meaning: Remaining / Leftover
+      explanation: "剩 (乘 chariot riding + 刂 knife left uncut = surplus left behind), 余 (roof over pillar = surplus grain storage). Leftover hands or discards converted to cash at blind completion."
+      interval: 1
+      ease: 2.5

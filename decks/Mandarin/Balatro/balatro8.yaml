@@ -1,0 +1,97 @@
+cards:
+    - character: 每当
+      pinyin: měi dāng
+      meaning: Whenever / Every time
+      explanation: "每 (mother with hair pin = each, every), 当 (field with boundary = just at the moment of). The universal trigger condition prefix on reactive Jokers (e.g. 'Whenever a card is scored...')."
+      interval: 1
+      ease: 2.5
+    - character: 若
+      pinyin: ruò
+      meaning: If / Provided that
+      explanation: "若 (艹 grass + 右 hand to mouth = pliant, yielding -> in case, if, supposing). The classic conditional in card descriptions (e.g. '若打出的牌包含...')."
+      interval: 1
+      ease: 2.5
+    - character: 包含
+      pinyin: bāo hán
+      meaning: Contain / Include
+      explanation: "包 (勹 wrap/womb + 巳 fetus = encompass, package), 含 (今 present + 口 mouth = hold inside mouth, contain). Used in poker hand condition checks (e.g. if played hand contains a Pair)."
+      interval: 1
+      ease: 2.5
+    - character: 连续
+      pinyin: lián xù
+      meaning: Consecutive / In a row
+      explanation: "连 (车 carriage procession joined together = link, unbroken), 续 (纟 silk thread prolonged = continue). Triggers requiring unbroken streaks (e.g. consecutive hands without discarding)."
+      interval: 1
+      ease: 2.5
+    - character: 花色
+      pinyin: huā sè
+      meaning: Suit
+      explanation: "花 (flower / playing card suit), 色 (color, appearance). The overarching category covering the four suits: Spades, Hearts, Diamonds, and Clubs."
+      interval: 1
+      ease: 2.5
+    - character: 点数
+      pinyin: diǎn shù
+      meaning: Rank / Pip value
+      explanation: "点 (黑 black ink mark = pip, dot, score point), 数 (攵 hand counting grains = number). The numeric rank/value of a card (2 through 10, Ace, King, Queen, Jack)."
+      interval: 1
+      ease: 2.5
+    - character: 奇数
+      pinyin: qí shù
+      meaning: Odd number
+      explanation: "奇 (大 big + 可 strange/gasping = unusual, uneven leftover -> odd number), 数 (number). Referring to odd rank cards (A, 9, 7, 5, 3) used by Jokers like Odd Todd."
+      interval: 1
+      ease: 2.5
+    - character: 偶数
+      pinyin: ǒu shù
+      meaning: Even number
+      explanation: "偶 (亻 person + 禺 paired figure / idol duplicate = mate, pair -> even number), 数 (number). Referring to even rank cards (10, 8, 6, 4, 2) used by Jokers like Even Steven."
+      interval: 1
+      ease: 2.5
+    - character: 回合
+      pinyin: huí hé
+      meaning: Round / Turn
+      explanation: "回 (concentric swirling circles = rotate, return), 合 (mouths joined under roof = close, meet). A full cycle or turn within a blind match."
+      interval: 1
+      ease: 2.5
+    - character: 槽位
+      pinyin: cáo wèi
+      meaning: Slot
+      explanation: "槽 (木 wooden trough / hollowed groove = channel, slot), 位 (亻 person at assigned station = position, seat). Capacity slots for Jokers (小丑牌槽位) or Consumables."
+      interval: 1
+      ease: 2.5
+    - character: 目标
+      pinyin: mù biāo
+      meaning: Target / Goal
+      explanation: "目 (eye gazing forward), 标 (木 tree with fluttering banner = signpost, beacon). The required chip target to clear the current blind."
+      interval: 1
+      ease: 2.5
+    - character: 免费
+      pinyin: miǎn fèi
+      meaning: Free of charge
+      explanation: "免 (kneeling figure taking off helmet = exempt, excused), 费 (弗 knot + 贝 currency = cost, spend). $0 cost items, such as voucher perks or free reroll tags."
+      interval: 1
+      ease: 2.5
+    - character: 费用
+      pinyin: fèi yòng
+      meaning: Cost / Price
+      explanation: "费 (贝 currency + 弗 = expense, cost), 用 (bell vessel = spend, use). The dollar price required to purchase cards, packs, and rerolls in the shop."
+      interval: 1
+      ease: 2.5
+    - character: 罕见
+      pinyin: hǎn jiàn
+      meaning: Uncommon
+      explanation: "罕 (罒 net with handle = rare catch), 见 (eye on legs = see, encounter). The Uncommon Joker rarity tier (indicated with a blue ribbon in the shop)."
+      interval: 1
+      ease: 2.5
+    - character: 稀有
+      pinyin: xī yǒu
+      meaning: Rare
+      explanation: "稀 (禾 grain planted spaced wide apart = sparse, scarce), 有 (hand holding meat = possess). The Rare Joker rarity tier (indicated with a red ribbon in the shop)."
+      interval: 1
+      ease: 2.5
+    - character: 传奇
+      pinyin: chuán qí
+      meaning: Legendary
+      explanation: "传 (亻 person + 专 spindle = pass record across generations), 奇 (extraordinary marvel). The rarest Legendary Joker tier spawned exclusively from The Soul spectral card (purple ribbon)."
+      interval: 1
+      ease: 2.5

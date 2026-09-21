@@ -2,49 +2,49 @@ cards:
     - character: 小丑牌
       pinyin: xiǎo chǒu pái
       meaning: Joker
-      explanation: 小丑 (xiǎochǒu) means 'clown' or 'jester', and 牌 (pái) means 'card'. The Jester Card.
+      explanation: "小 (pictograph of dividing lines -> small), 丑 (ancient earthly branch / hand twisted like a claw, borrowed for clown/jester; simplified from 醜: 酉 wine vessel + 鬼 ghost = hideous like a drunken demon), 牌 (片 wood slice radical + 卑 tablet = card/plaque). The Jester Card."
       interval: 1
       ease: 1.3
       next_review: "2026-08-28"
     - character: 底注
       pinyin: dǐ zhù
       meaning: Ante
-      explanation: 底 (dǐ) means 'bottom' or 'base', and 注 (zhù) means 'bet' or 'stake'. The base bet you must clear.
+      explanation: "底 (广 shelter radical + 氐 foundation/person bowing low = bottom/base), 注 (氵 water radical + 主 master/wick phonetic = pour into, stake money into a betting pool). The base stake you must conquer each round."
       interval: 1
       ease: 1.3
       next_review: "2026-08-28"
     - character: 盲注
       pinyin: máng zhù
       meaning: Blind
-      explanation: 盲 (máng) means 'blind' (the eye 目 radical is under the dead/lost 亡 radical), and 注 (zhù) means 'bet'.
+      explanation: "盲 (亡 lost/perish on top of 目 eye = eyes lost/blind), 注 (氵 water + 主 candle wick = pour stake). Blind bet; a wager made without seeing what comes next."
       interval: 1
       ease: 1.3
       next_review: "2026-08-28"
     - character: 筹码
       pinyin: chóu mǎ
       meaning: Chips
-      explanation: 筹 (chóu) originally meant bamboo tallies used for counting, and 码 (mǎ) means marker/weight. Tally markers = Casino chips.
+      explanation: "筹 (竹 bamboo radical + 寿 counting lines = ancient bamboo counting rods/tallies used for calculation), 码 (石 stone radical + 马 phonetic = stone weights on scales -> numerical markers). Tally markers = Casino chips!"
       interval: 1
       ease: 1.3
       next_review: "2026-08-28"
     - character: 倍率
       pinyin: bèi lǜ
       meaning: Mult (Multiplier)
-      explanation: 倍 (bèi) means 'times/fold' (as in double/triple), and 率 (lǜ) means 'rate'. The multiplier rate.
+      explanation: "倍 (亻 person radical + 咅 spit out = fold/multiply a person's share), 率 (rope with twisted strands used for measuring -> ratio, rate, proportion). The multiplier rate that magnifies your chips!"
       interval: 1
       ease: 1.3
       next_review: "2026-08-28"
     - character: 弃牌
       pinyin: qì pái
       meaning: Discard
-      explanation: 弃 (qì) means 'to abandon' or 'throw away', and 牌 (pái) is 'card'.
+      explanation: "弃 (ancient script showed an unwanted baby 子 held in hands 廾 cast into a basket = cast aside/abandon), 牌 (片 wood slice + 卑 tablet = card). To throw away cards from hand to draw new ones."
       interval: 1
       ease: 1.3
       next_review: "2026-08-28"
     - character: 出牌
       pinyin: chū pái
       meaning: Play (a hand) / Hands remaining
-      explanation: 出 (chū) means 'to go out' or 'produce'. To produce a card from your hand into the play area.
+      explanation: "出 (pictograph of a foot stepping out or plant sprouting from a container 凵 = exit, produce, go forth), 牌 (片 wood slice + 卑 tablet = card). To produce cards onto the table; also your remaining play attempts."
       interval: 6
       ease: 1.7600000000000002
       reps: 2
@@ -52,35 +52,35 @@ cards:
     - character: 牌型
       pinyin: pái xíng
       meaning: Poker Hand
-      explanation: 牌 (pái) is 'card', and 型 (xíng) means 'model', 'type', or 'shape'. The shape or formation your cards take (e.g., a Flush).
+      explanation: "牌 (片 wood slice + 卑 tablet = card), 型 (刑 law/carved mold + 土 clay = a casting mold, shape, pattern, type). The structural pattern or formation of your cards (e.g. Flush, Straight)."
       interval: 1
       ease: 1.3
       next_review: "2026-08-28"
     - character: 同花
       pinyin: tóng huā
       meaning: Flush
-      explanation: 同 (tóng) means 'same' and 花 (huā) means 'flower' or 'suit' in card games. Cards of the same suit.
+      explanation: "同 (冂 cover over 口 mouth = speaking with one mouth/in unison -> identical, same), 花 (艹 plant radical + 化 transform = blossom, flower; in Chinese cards, suits are called flowers). Cards of the identical suit = Flush!"
       interval: 1
       ease: 1.3
       next_review: "2026-08-28"
     - character: 顺子
       pinyin: shùn zi
       meaning: Straight
-      explanation: 顺 (shùn) means 'smooth', 'obey', or 'in sequence', combined with the noun suffix 子 (zi). A smooth numerical sequence.
+      explanation: "顺 (川 flowing river + 页 head = going smoothly along with the current, in sequence), 子 (child/noun suffix). Cards flowing in smooth numerical sequence = Straight!"
       interval: 1
       ease: 1.3
       next_review: "2026-08-28"
     - character: 塔罗牌
       pinyin: tǎ luó pái
       meaning: Tarot card
-      explanation: 塔罗 (tǎluó) is a direct phonetic translation of the English word 'Tarot', plus 牌 (card).
+      explanation: "塔 (土 earth + 荅 cover = pagoda/tower), 罗 (罒 net + 夕 evening = bird net / spread out; 塔罗 tǎluó is phonetic for Tarot), 牌 (片 wood slice + 卑 tablet = card). Mystical consumable cards that alter cards and game state."
       interval: 1
       ease: 1.3
       next_review: "2026-08-28"
     - character: 行星牌
       pinyin: xíng xīng pái
       meaning: Planet card
-      explanation: 行 (xíng) means 'to move/travel' and 星 (xīng) means 'star'. Ancient astronomers called planets 'moving stars'.
+      explanation: "行 (pictograph of a crossroads 彳+亍 = walk, travel), 星 (日 sun/celestial body + 生 sprout = star), 牌 (card). Ancient astronomers called planets 'wandering stars' (行星). Cards that upgrade your poker hands."
       interval: 1
       ease: 1.3
       reps: 1
@@ -88,14 +88,14 @@ cards:
     - character: 补充包
       pinyin: bǔ chōng bāo
       meaning: Booster Pack
-      explanation: 补 (bǔ) means 'to mend/supplement', 充 (chōng) means 'to fill/charge', and 包 (bāo) means 'bag/pack'. A pack that supplements your run.
+      explanation: "补 (衤 clothing radical 衣 + 卜 phonetic = patch torn clothes -> supplement, replenish), 充 (亠 + 允 swollen head/swelling load = fill up, pack full), 包 (勹 + 巳 fetus in womb = wrap, package). Supplement-filling pack = Booster Pack!"
       interval: 1
       ease: 1.3
       next_review: "2026-08-28"
     - character: 优惠券
       pinyin: yōu huì quàn
       meaning: Voucher
-      explanation: 优 (yōu) means 'excellent/preferential', 惠 (huì) means 'benefit', and 券 (quàn) means 'ticket/voucher'. A preferential benefit ticket.
+      explanation: "优 (亻 person + 尤 exceptional mark = superior, favorable), 惠 (心 heart below + 叀 spool = kindness/benefit from the heart), 券 (𢍜 contract tally + 刀 knife = tally split in half for proof -> ticket, voucher). Favorable benefit ticket = Voucher!"
       interval: 1
       ease: 1.3
       next_review: "2026-08-28"

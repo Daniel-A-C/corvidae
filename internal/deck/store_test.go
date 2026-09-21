@@ -133,6 +133,8 @@ func TestBalatroDecksConsolidated(t *testing.T) {
 		"balatro4.yaml",
 		"balatro5.yaml",
 		"balatro6.yaml",
+		"balatro7.yaml",
+		"balatro8.yaml",
 	}
 
 	seen := make(map[string]string)
@@ -156,6 +158,9 @@ func TestBalatroDecksConsolidated(t *testing.T) {
 			if card.Meaning == "" {
 				t.Errorf("%s: card %s missing meaning", file, card.Character)
 			}
+			if card.Explanation == "" {
+				t.Errorf("%s: card %s missing explanation", file, card.Character)
+			}
 			if origFile, exists := seen[card.Character]; exists {
 				t.Errorf("duplicate card %s found in %s and %s", card.Character, origFile, file)
 			}
@@ -163,16 +168,8 @@ func TestBalatroDecksConsolidated(t *testing.T) {
 		}
 	}
 
-	if totalCards != 74 {
-		t.Fatalf("expected 74 total cards across balatro decks, got %d", totalCards)
-	}
-
-	// Verify old balatro files (7 and 8) are removed
-	for i := 7; i <= 8; i++ {
-		oldPath := filepath.Join(decksPath, "balatro"+string(rune('0'+i))+".yaml")
-		if _, err := os.Stat(oldPath); !os.IsNotExist(err) {
-			t.Errorf("expected old deck %s to be deleted", oldPath)
-		}
+	if totalCards != 106 {
+		t.Fatalf("expected 106 total cards across balatro decks, got %d", totalCards)
 	}
 }
 

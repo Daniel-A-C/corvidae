@@ -2,72 +2,72 @@ cards:
     - character: 黑桃
       pinyin: hēi táo
       meaning: Spades
-      explanation: 黑 (hēi) means 'black' and 桃 (táo) means 'peach'. In Chinese card games, the spade suit is traditionally called 'black peach' because its shape resembles an inverted peach leaf.
+      explanation: "黑 (soot from fire 灬 under chimney = black), 桃 (木 tree + 兆 split = peach). 'Black peach' — the Chinese card term for Spades because the inverted leaf shape resembles a dark peach."
       interval: 1
       ease: 2.5
     - character: 红桃
       pinyin: hóng táo
       meaning: Hearts
-      explanation: 红 (hóng) means 'red' and 桃 (táo) means 'peach'. The heart suit is called 'red peach' in Chinese playing cards.
+      explanation: "红 (纟 silk + 工 work = reddish dyed silk), 桃 (peach). 'Red peach' — the Chinese card term for Hearts, mirroring the peach-like rounded lobes of the heart icon."
       interval: 1
       ease: 2.5
     - character: 方块
       pinyin: fāng kuài
       meaning: Diamonds
-      explanation: 方 (fāng) means 'square' and 块 (kuài) means 'piece/block'. The diamond suit is named 'square blocks' due to its geometric rhombic shape.
+      explanation: "方 (carpenter's square = square, direction), 块 (土 earth + 夬 divide = clod, solid block). 'Square blocks' — Chinese card name for Diamonds due to its geometric rhombus shape."
       interval: 1
       ease: 2.5
     - character: 梅花
       pinyin: méi huā
       meaning: Clubs
-      explanation: 梅 (méi) means 'plum/plum blossom' and 花 (huā) means 'flower'. The three-lobed club suit resembles a blooming plum flower.
+      explanation: "梅 (木 tree + 每 fertile = plum tree/blossom), 花 (flower). 'Plum blossom' — Chinese card name for Clubs because the tri-lobed trefoil symbol resembles a blooming plum flower."
       interval: 1
       ease: 2.5
     - character: 人头牌
       pinyin: rén tóu pái
       meaning: Face Card
-      explanation: 人 (rén) means 'person', 头 (tóu) means 'head', and 牌 (pái) is 'card'. Cards with portraits of people (King, Queen, Jack). Several Balatro Jokers (like Scary Face or Pareidolia) trigger specifically on face cards.
+      explanation: "人 (person), 头 (豆 bean vessel + 页 head = head), 牌 (card). Literally 'person head card' = Face Cards (K, Q, J) that trigger Jokers like Scary Face and Pareidolia."
       interval: 1
       ease: 2.5
     - character: 国王
       pinyin: guó wáng
       meaning: King
-      explanation: 国 (guó) means 'country/kingdom' and 王 (wáng) means 'king/ruler'. The King (K) rank card in a standard deck.
+      explanation: "国 (囗 walled city + 玉 jade/scepter = nation, kingdom), 王 (three realms linked by central axis = monarch, king). The King (K) card in playing cards."
       interval: 1
       ease: 2.5
     - character: 王后
       pinyin: wáng hòu
       meaning: Queen
-      explanation: 王 (wáng) means 'king' and 后 (hòu) means 'queen/empress'. The Queen (Q) rank card in a standard deck.
+      explanation: "王 (king), 后 (ancient ruler issuing commands from shelter = empress, queen). The Queen (Q) card in playing cards."
       interval: 1
       ease: 2.5
     - character: 杰克
       pinyin: jié kè
       meaning: Jack
-      explanation: 杰克 (jié kè) is the standard phonetic transliteration of the English name 'Jack'. The Jack (J) rank card in a standard deck.
+      explanation: "杰 (木 tree + 灬 fire = towering hero, prominent), 克 (shoulder bearing armor = overcome). Phonetic transliteration for 'Jack' (J) in playing cards."
       interval: 1
       ease: 2.5
     - character: 牌组
       pinyin: pái zǔ
       meaning: Deck / Card Pool
-      explanation: 牌 (pái) is 'card' and 组 (zǔ) means 'group', 'set', or 'team'. Refers to your full deck of cards (such as the starting Red Deck, Blue Deck, or Checkered Deck).
+      explanation: "牌 (card), 组 (纟 silk + 且 pedestal = braided cords, assembled set/team). Your full deck of cards (such as the starting Red, Blue, or Checkered decks)."
       interval: 1
       ease: 2.5
     - character: 手牌
       pinyin: shǒu pái
       meaning: Hand / Cards in hand
-      explanation: 手 (shǒu) means 'hand' and 牌 (pái) is 'card'. The cards currently dealt into your hand waiting to be played or discarded.
+      explanation: "手 (pictograph of a hand with five fingers), 牌 (card). The active cards currently held in your hand waiting to be played or discarded."
       interval: 1
       ease: 2.5
     - character: 抽牌
       pinyin: chōu pái
       meaning: Draw cards
-      explanation: 抽 (chōu) means 'to pull out' or 'draw' and 牌 (pái) is 'card'. The action of drawing replacement cards from your deck into your hand.
+      explanation: "抽 (扌 hand + 由 sprout reaching upward = pull forth, draw out), 牌 (card). The action of drawing fresh replacement cards from your deck into your hand."
       interval: 1
       ease: 2.5
     - character: 消耗牌
       pinyin: xiāo hào pái
       meaning: Consumable Card
-      explanation: 消 (xiāo) means 'disappear', 耗 (hào) means 'consume/spend', and 牌 (pái) is 'card'. Single-use cards (Tarot, Planet, and Spectral cards) held in your consumable slots.
+      explanation: "消 (氵 water + 肖 melt = vanish), 耗 (耒 plough + 毛 hair = wear down, expend), 牌 (card). Single-use consumables (Tarot, Planet, and Spectral cards) held in consumable slots."
       interval: 1
       ease: 2.5
