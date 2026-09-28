@@ -1,0 +1,91 @@
+cards:
+    - character: 你好，很高兴认识你！
+      pinyin: Nǐ hǎo, hěn gāoxìng rènshi nǐ!
+      meaning: Hello, very nice to meet you!
+      explanation: "你好 (hello: 你 you + 好 good), 很高兴 (very happy: 很 very, 高 tall/high, 兴 mood/excitement - as in 兴趣 interest, 兴奋 excited), 认识 (to know/recognize: 认 recognize + 识 know/knowledge - as in 见识 knowledge/experience), 你 (you). The fundamental opening sentence when meeting someone for the first time."
+      interval: 1
+      ease: 2.5
+    - character: 请问你叫什么名字？
+      pinyin: Qǐngwèn nǐ jiào shénme míngzi?
+      meaning: May I ask, what is your name?
+      explanation: "请问 (may I ask: 请 please, 问 ask), 你 (you), 叫 (to be called/yell - as in 叫喊 shout), 什么 (what: 什 what + 么 question suffix), 名字 (name: 名 name/fame + 字 character/word - as in 著名 famous, 汉字 Chinese characters). Polite and natural way to ask someone's name."
+      interval: 1
+      ease: 2.5
+    - character: 我叫……，你呢？
+      pinyin: Wǒ jiào ..., nǐ ne?
+      meaning: My name is ..., and you?
+      explanation: "我 (I/me), 叫 (am called), 你呢 (and you? - 呢 is the reciprocal bounce-back particle used to bounce a question back to the other speaker: 'What about you?')."
+      interval: 1
+      ease: 2.5
+    - character: 怎么称呼你？
+      pinyin: Zěnme chēnghu nǐ?
+      meaning: How should I address you?
+      explanation: "怎么 (how: 怎 how + 么 suffix), 称呼 (to call/address: 称 to call/name/weigh + 呼 to shout/call out - as in 称赞 praise, 呼吸 breathe), 你 (you). A very polite, native way to ask what name, title, or nickname someone prefers to go by."
+      interval: 1
+      ease: 2.5
+    - character: 请问您贵姓？
+      pinyin: Qǐngwèn nín guìxìng?
+      meaning: May I ask your honorable surname?
+      explanation: "请问 (may I ask), 您 (courteous 'you' - 心 heart placed respectfully under 你), 贵姓 (honorable surname: 贵 expensive/precious/honorable - as in 宝贵 precious, 贵重 valuable; 姓 surname). Formal, respectful way to ask someone's surname in business or formal introductions. Standard humble reply: '免贵姓李' (Dispense with the 'honorable', my surname is Li)."
+      interval: 1
+      ease: 2.5
+    - character: 认识你我也很高兴。
+      pinyin: Rènshi nǐ wǒ yě hěn gāoxìng.
+      meaning: Nice to meet you too.
+      explanation: "认识 (know/meet), 你 (you), 我 (I), 也 (also/too - as in 也是 also is), 很高兴 (very glad). The standard reciprocal reply to '很高兴认识你'."
+      interval: 1
+      ease: 2.5
+    - character: 这是我的朋友。
+      pinyin: Zhè shì wǒ de péngyou.
+      meaning: This is my friend.
+      explanation: "这 (this), 是 (is), 我的 (my: 我 I + 的 possessive particle), 朋友 (friend: 朋 two moons side by side = companion + 友 two hands joined = friendly - as in 友好 friendly, 友情 friendship). Essential sentence when introducing a companion."
+      interval: 1
+      ease: 2.5
+    - character: 这是我的名片。
+      pinyin: Zhè shì wǒ de míngpiàn.
+      meaning: This is my business card.
+      explanation: "这 (this), 是 (is), 我的 (my), 名片 (business card: 名 name + 片 thin slice/card - as in 照片 photo, 药片 medicine tablet). Customary in professional and social introductions (traditionally presented and received with both hands)."
+      interval: 1
+      ease: 2.5
+    - character: 欢迎欢迎！
+      pinyin: Huānyíng huānyíng!
+      meaning: Welcome, welcome!
+      explanation: "欢 (joyful, delighted - as in 喜欢 like, 欢乐 joy), 迎 (welcome, step forward to meet - as in 迎接 receive/greet guests). Repeating the word doubles the warmth, enthusiasm, and hospitality."
+      interval: 1
+      ease: 2.5
+    - character: 最近怎么样？
+      pinyin: Zuìjìn zěnmeyàng?
+      meaning: How have you been lately?
+      explanation: "最近 (recently, lately: 最 most + 近 near/close - as in 靠近 approach, 近期 near future), 怎么样 (how is it: 怎样 how + 样 appearance/manner - as in 模样 appearance, 样子 look). The natural Chinese equivalent to 'How's it going?' or 'What's new?'."
+      interval: 1
+      ease: 2.5
+    - character: 挺好的，你呢？
+      pinyin: Tǐng hǎo de, nǐ ne?
+      meaning: Pretty good, and you?
+      explanation: "挺 (quite, pretty, very; also stick out/straighten - as in 挺拔 tall and straight), 好 (good), 的 (particle conveying confirmation), 你呢 (and you?). Casual, upbeat everyday response to '最近怎么样？'."
+      interval: 1
+      ease: 2.5
+    - character: 好久不见！
+      pinyin: Hǎojiǔ bùjiàn!
+      meaning: Long time no see!
+      explanation: "好 (very, quite - intensive prefix), 久 (long duration of time - as in 很久 long time, 永久 permanent), 不 (not), 见 (see - as in 见面 meet, 看见 see). The classic Chinese greeting when seeing someone after an interval (the origin of the English idiom 'long time no see')."
+      interval: 1
+      ease: 2.5
+    - character: 你今天忙吗？
+      pinyin: Nǐ jīntiān máng ma?
+      meaning: Are you busy today?
+      explanation: "你 (you), 今天 (today: 今 present + 天 day), 忙 (busy - 忄 heart + 亡 perish/loss = heart overwhelmed with tasks - as in 帮忙 help, 匆忙 hurried), 吗 (yes/no question particle). Friendly icebreaker to start a conversation or check availability."
+      interval: 1
+      ease: 2.5
+    - character: 我还好，不太忙。
+      pinyin: Wǒ hái hǎo, bú tài máng.
+      meaning: I'm alright, not too busy.
+      explanation: "我 (I), 还好 (pretty okay / not bad: 还 still + 好 good), 不太 (not too / not very: 不 not + 太 excessively), 忙 (busy). Useful conversational reply conveying a relaxed, approachable mood."
+      interval: 1
+      ease: 2.5
+    - character: 明天见！
+      pinyin: Míngtiān jiàn!
+      meaning: See you tomorrow!
+      explanation: "明天 (tomorrow: 明 bright/next + 天 day), 见 (see/meet - as in 再见 goodbye / see you again, 常见 common). Standard warm parting phrase."
+      interval: 1
+      ease: 2.5

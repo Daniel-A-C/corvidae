@@ -1,0 +1,97 @@
+cards:
+    - character: 大卫
+      pinyin: Dàwèi
+      meaning: David
+      explanation: "大 (big, great) + 卫 (guard, defend, protect). Key everyday vocabulary with 卫: 卫生 (hygiene, sanitation), 卫生间 (restroom/toilet - essential daily word!), 卫星 (satellite), 保卫 (defend, guard)."
+      interval: 1
+      ease: 2.5
+    - character: 丹尼尔
+      pinyin: Dānní'ěr
+      meaning: Daniel
+      explanation: "丹 (cinnabar, red essence, loyalty - as in 丹心 loyal heart, 牡丹 peony flower), 尼 (Buddhist nun; phonetic 'ni' - as in 尼姑 nun, 肯尼亚 Kenya), 尔 (literary 'you', that; universal transliteration suffix for '-r/-el' - as in 偶尔 occasionally, 尔后 thereafter, 首尔 Seoul)."
+      interval: 1
+      ease: 2.5
+    - character: 约翰
+      pinyin: Yuēhàn
+      meaning: John
+      explanation: "约 (agreement, appoint, restrict, about - as in 预约 appointment, 条约 treaty, 大约 approximately), 翰 (writing brush, feather, quill - as in 翰墨 calligraphy/writing). Standard biblical and secular transliteration for John."
+      interval: 1
+      ease: 2.5
+    - character: 迈克
+      pinyin: Mèikè
+      meaning: Mike / Michael
+      explanation: "迈 (take big stride, step forward; mile - as in 迈步 take a step, 年迈 elderly, 迈克尔 Michael), 克 (overcome, conquer, gram - as in 克服 overcome hardships, 克制 exert self-restraint, 千克 kilogram)."
+      interval: 1
+      ease: 2.5
+    - character: 亚历克斯
+      pinyin: Yàlìkèsī
+      meaning: Alex
+      explanation: "亚 (second, runner-up; Asia - as in 亚洲 Asia, 亚军 second place / silver medalist), 历 (experience, passage of time - as in 历史 history, 经历 personal experience, 日历 calendar), 克 (overcome, gram), 斯 (this, scholarly suffix 's' - as in 斯文 refined/scholarly, 威尼斯 Venice)."
+      interval: 1
+      ease: 2.5
+    - character: 汤姆
+      pinyin: Tāngmǔ
+      meaning: Tom
+      explanation: "汤 (soup, broth, boiling water - as in 鸡汤 chicken soup, 喝汤 drink soup, 煲汤 slow-cook soup), 姆 (matron, governess - as in 保姆 nanny/babysitter/housekeeper). Used in classic literature and names (e.g. Tom Sawyer 汤姆·索亚)."
+      interval: 1
+      ease: 2.5
+    - character: 保罗
+      pinyin: Bǎoluó
+      meaning: Paul
+      explanation: "保 (protect, keep, guarantee - as in 保护 protect, 保留 retain/keep, 保险 insurance, 保证 guarantee), 罗 (catch with bird-net, gather, array; surname Luo - as in 罗马 Rome, 俄罗斯 Russia, 搜罗 collect/scour)."
+      interval: 1
+      ease: 2.5
+    - character: 彼得
+      pinyin: Bǐdé
+      meaning: Peter
+      explanation: "彼 (that, the other, each other - as in 彼此 each other / mutually, 彼岸 the opposite shore), 德 (virtue, character, morality; Germany - as in 道德 morality, 品德 moral character, 德国 Germany)."
+      interval: 1
+      ease: 2.5
+    - character: 莎拉
+      pinyin: Shālā
+      meaning: Sarah
+      explanation: "莎 (fragrant water sedge grass; standard feminine 'sha' transliteration - as in 莎士比亚 Shakespeare), 拉 (pull, drag, play bowed instrument - as in 拉门 pull open door, 拉小提琴 play violin, 拉丁 Latin)."
+      interval: 1
+      ease: 2.5
+    - character: 玛丽
+      pinyin: Mǎlì
+      meaning: Mary
+      explanation: "玛 (agate gem - as in 玛瑙 agate; ubiquitous transliteration character for 'ma' in female names like 玛格丽特 Margaret), 丽 (beautiful, magnificent - as in 美丽 beautiful, 华丽 gorgeous, 秀丽 lovely)."
+      interval: 1
+      ease: 2.5
+    - character: 艾米丽
+      pinyin: Àimǐlì
+      meaning: Emily
+      explanation: "艾 (Chinese mugwort / moxa; phonetic 'ai' - as in 艾草 mugwort herb used in TCM and Dragon Boat festival), 米 (rice, meter - as in 白米 white rice, 厘米 centimeter, 平方米 square meter), 丽 (beautiful)."
+      interval: 1
+      ease: 2.5
+    - character: 安娜
+      pinyin: Ānnà
+      meaning: Anna
+      explanation: "安 (peaceful, tranquil, safe - as in 安全 safe, 安静 quiet, 安排 arrange), 娜 (graceful, lithe - standard transliteration for feminine 'na')."
+      interval: 1
+      ease: 2.5
+    - character: 詹姆斯
+      pinyin: Zhānmǔsī
+      meaning: James
+      explanation: "詹 (talkative, surname Zhan; phonetic 'jam'), 姆 (matron, nanny - as in 保姆), 斯 (this, refined; phonetic 's' suffix). Used for biblical figures and modern celebrities (e.g. LeBron James 勒布朗·詹姆斯)."
+      interval: 1
+      ease: 2.5
+    - character: 威廉
+      pinyin: Wēilián
+      meaning: William
+      explanation: "威 (power, might, prestige, imposing - as in 威力 power/might, 权威 authority, 威风 imposing display), 廉 (incorruptible, honest, inexpensive - as in 廉洁 incorruptible, 廉价 cheap/low price)."
+      interval: 1
+      ease: 2.5
+    - character: 凯文
+      pinyin: Kǎiwén
+      meaning: Kevin
+      explanation: "凯 (triumphant, victory song - as in 凯旋 return victorious, 凯歌 song of triumph), 文 (culture, writing, language, refined - as in 中文 Chinese, 文化 culture, 文章 article, 文明 civilization)."
+      interval: 1
+      ease: 2.5
+    - character: 托马斯
+      pinyin: Tuōmǎsī
+      meaning: Thomas
+      explanation: "托 (hold up with palm, entrust, rely on - as in 拜托 please / do me a favor, 托运 check luggage, 摩托车 motorcycle), 玛 (agate), 斯 (this / 's' suffix). Used in names like Thomas Edison (托马斯·爱迪生)."
+      interval: 1
+      ease: 2.5

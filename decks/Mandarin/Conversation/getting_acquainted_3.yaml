@@ -1,0 +1,91 @@
+cards:
+    - character: 你会说中文吗？
+      pinyin: Nǐ huì shuō Zhōngwén ma?
+      meaning: Can you speak Chinese?
+      explanation: "你 (you), 会 (can, know how through learning - as in 会议 meeting, 开会), 说 (speak, talk - 讠 words + 兑 exchange = exchanging words - as in 说话 speak, 说明 explain), 中文 (Chinese language: 中 China + 文 written language/culture), 吗 (question particle)."
+      interval: 1
+      ease: 2.5
+    - character: 我会说一点儿中文。
+      pinyin: Wǒ huì shuō yìdiǎnr Zhōngwén.
+      meaning: I can speak a little bit of Chinese.
+      explanation: "我 (I), 会说 (can speak), 一点儿 (a little bit: 一 one + 点 dot/spot + 儿 erhua), 中文 (Chinese). The humble and universally useful phrase for any Chinese learner."
+      interval: 1
+      ease: 2.5
+    - character: 你的中文说得真好！
+      pinyin: Nǐ de Zhōngwén shuō de zhēn hǎo!
+      meaning: Your Chinese is spoken really well!
+      explanation: "你的 (your), 中文 (Chinese), 说得 (spoken to the degree of: 说 speak + 得 complement marker evaluating manner), 真 (really, truly - as in 真正 genuine, 真诚 sincere), 好 (good). The classic encouragement native speakers will give you the moment you speak Chinese!"
+      interval: 1
+      ease: 2.5
+    - character: 哪里哪里，还在学习。
+      pinyin: Nǎlǐ nǎlǐ, hái zài xuéxí.
+      meaning: Not at all, I'm still learning.
+      explanation: "哪里哪里 (traditional humble deflection literally meaning 'Where? Where?' = 'You flatter me!'), 还在 (still currently: 还 still + 在 continuous aspect), 学习 (studying, learning: 学 study + 习 practice/habit - as in 学生 student, 习惯 habit). The ultimate polite, culturally authentic response to a compliment."
+      interval: 1
+      ease: 2.5
+    - character: 请你说得慢一点儿。
+      pinyin: Qǐng nǐ shuō de màn yìdiǎnr.
+      meaning: Please speak a little slower.
+      explanation: "请 (please), 你 (you), 说得 (speak such that), 慢 (slow - 忄 heart + 曼 spread out = relaxed pace - as in 慢走 take care/walk slowly), 一点儿 (a little bit). Essential survival sentence when listening to fast native speech."
+      interval: 1
+      ease: 2.5
+    - character: 这个用中文怎么说？
+      pinyin: Zhège yòng Zhōngwén zěnme shuō?
+      meaning: How do you say this in Chinese?
+      explanation: "这个 (this one), 用 (use, using - as in 用法 usage), 中文 (Chinese language), 怎么 (how), 说 (say). The golden phrase to ask native speakers for new vocabulary in real time."
+      interval: 1
+      ease: 2.5
+    - character: 我听得懂，但说得不太好。
+      pinyin: Wǒ tīngdedǒng, dàn shuō de bú tài hǎo.
+      meaning: I can understand what I hear, but I can't speak very well.
+      explanation: "我 (I), 听得懂 (can understand by listening: 听 listen + 得 potential complement + 懂 understand - as in 听懂), 但 (but/however - as in 但是), 说得 (speak to the degree that), 不太好 (not too well). Very relatable description of language ability."
+      interval: 1
+      ease: 2.5
+    - character: 平时你有什么爱好？
+      pinyin: Píngshí nǐ yǒu shénme àihào?
+      meaning: What hobbies do you usually have?
+      explanation: "平时 (normally, in ordinary times: 平 flat/ordinary + 时 time - as in 平常 usually), 你 (you), 有 (have), 什么 (what), 爱好 (hobbies/interests: 爱 love + 好 fond of/interest - as in 好奇 curious). Great casual question to transition from basic info to personal interests."
+      interval: 1
+      ease: 2.5
+    - character: 我喜欢看书和听音乐。
+      pinyin: Wǒ xǐhuan kànshū hé tīng yīnyuè.
+      meaning: I like reading books and listening to music.
+      explanation: "我 (I), 喜欢 (like, enjoy: 喜 joy/delight + 欢 happy), 看书 (read books: 看 look/read + 书 book - as in 图书馆 library), 和 (and), 听音乐 (listen to music: 听 listen + 音 sound + 乐 music - as in 乐器 musical instrument)."
+      interval: 1
+      ease: 2.5
+    - character: 周末你喜欢做什么？
+      pinyin: Zhōumò nǐ xǐhuan zuò shénme?
+      meaning: What do you like to do on weekends?
+      explanation: "周末 (weekend: 周 week/cycle + 末 end/tip - as in 期末 end of term, 周末愉快 have a good weekend), 你 (you), 喜欢 (like), 做 (do), 什么 (what). Perfect friendly conversational prompt."
+      interval: 1
+      ease: 2.5
+    - character: 我们加个微信吧！
+      pinyin: Wǒmen jiā ge Wēixìn ba!
+      meaning: Let's add each other on WeChat!
+      explanation: "我们 (we/us), 加 (add, plus - as in 参加 participate, 加油 keep going!), 个 (casual measure word softening the request), 微信 (WeChat: 微 micro + 信 message/letter - as in 短信 SMS, 信任 trust), 吧 (suggestion particle). The universal way people stay in touch in the Chinese-speaking world."
+      interval: 1
+      ease: 2.5
+    - character: 我扫你还是你扫我？
+      pinyin: Wǒ sǎo nǐ háishì nǐ sǎo wǒ?
+      meaning: Should I scan you or do you scan me?
+      explanation: "我 (I), 扫 (scan / sweep - 扌 hand + 帚 broom = sweep; modern meaning: scan a QR code! - as in 打扫 clean/sweep, 扫码 scan QR code), 你 (you), 还是 (or - used in choices/questions), 你扫我 (you scan me). The exact sentence spoken hundreds of times every day whenever two people exchange contacts or pay for something!"
+      interval: 1
+      ease: 2.5
+    - character: 很高兴跟你聊天！
+      pinyin: Hěn gāoxìng gēn nǐ liáotiān!
+      meaning: It was great chatting with you!
+      explanation: "很高兴 (very glad), 跟 (with - as in 跟随 follow), 你 (you), 聊天 (to chat: 聊 chat/rely + 天 sky/day - as in 闲聊 chat idly, 聊得来 get along well). Warm, polite closing as a conversation winds down."
+      interval: 1
+      ease: 2.5
+    - character: 有空一起喝咖啡！
+      pinyin: Yǒu kòng yìqǐ hē kāfēi!
+      meaning: When you have free time, let's grab coffee together!
+      explanation: "有空 (have free time: 有 have + 空 free time/leisure - as in 空闲 leisure), 一起 (together: 一 one + 起 rise), 喝咖啡 (drink coffee: 喝 drink + 咖啡 coffee - phonetic transliteration). A standard friendly invitation to hang out again."
+      interval: 1
+      ease: 2.5
+    - character: 保持联系！
+      pinyin: Bǎochí liánxì!
+      meaning: Keep in touch! / Stay in contact!
+      explanation: "保持 (maintain, keep, preserve: 保 protect/guard + 持 hold/grasp - as in 支持 support, 持久 durable), 联系 (contact, connection: 联 connect/join + 系 tie/bind/system - as in 联合 united, 系统 system). A classic, warm way to end an encounter."
+      interval: 1
+      ease: 2.5

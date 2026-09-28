@@ -1,0 +1,109 @@
+cards:
+    - character: 广东
+      pinyin: Guǎngdōng
+      meaning: Guangdong Province
+      explanation: "广 (broad, expansive, wide - as in 广大 vast, 广阔 expansive), 东 (east - as in 东方 the East, 东西 east and west / things). Literally 'Eastern Expanse'. China's most populous province and economic engine; heartland of Cantonese (粤语), Dim Sum (点心), Lingnan culture, and global Chinese diaspora history."
+      interval: 1
+      ease: 2.5
+    - character: 四川
+      pinyin: Sìchuān
+      meaning: Sichuan Province
+      explanation: "四 (four), 川 (river, stream, plain - as in 山川 mountains and rivers, 川流不息 flowing endlessly). Named for the four major river circuits in the basin (Min, Tuo, Jialing, and Jinsha). Famous for Sichuan peppercorns (花椒), numbing-spicy cuisine (麻辣), giant pandas, Mount Emei, and tea culture."
+      interval: 1
+      ease: 2.5
+    - character: 山东
+      pinyin: Shāndōng
+      meaning: Shandong Province
+      explanation: "山 (mountain - referring to the Taihang Mountains 太行山), 东 (east). Literally 'East of the Mountains'. Historic cradle of Confucianism (Confucius 孔子 was born in Qufu 曲阜); home to Mount Tai (泰山, foremost of China's sacred peaks), hearty wheat mantou and pancakes (煎饼), and Lu cuisine (鲁菜)."
+      interval: 1
+      ease: 2.5
+    - character: 浙江
+      pinyin: Zhèjiāng
+      meaning: Zhejiang Province
+      explanation: "浙 (ancient name for the meandering, tidal Qiantang River), 江 (river - as in 长江 Yangtze River). Wealthy eastern coastal province south of Shanghai. Renowned for commerce, private enterprise, Longjing green tea, ancient water towns (乌镇 Wuzhen), and the historic Ningbo-Hangzhou cultural corridor."
+      interval: 1
+      ease: 2.5
+    - character: 江苏
+      pinyin: Jiāngsū
+      meaning: Jiangsu Province
+      explanation: "江 (river - taken from Jiangning 江宁, ancient name for Nanjing), 苏 (revive/perilla - taken from Suzhou 苏州). Named by combining its two historic cultural pillars: Jiangning and Suzhou. Famous for canals, classical gardens, silk, scholarly traditions, and refined Huaiyang cuisine (淮扬菜)."
+      interval: 1
+      ease: 2.5
+    - character: 湖南
+      pinyin: Húnán
+      meaning: Hunan Province
+      explanation: "湖 (lake - referring to Dongting Lake 洞庭湖), 南 (south). 'South of Dongting Lake'. Famous for spicy cuisine (湘菜 - using fresh chopped chilies and smoked meats 腊肉), birth province of Mao Zedong, picturesque Zhangjiajie sandstone peaks (张家界), and Changsha entertainment."
+      interval: 1
+      ease: 2.5
+    - character: 湖北
+      pinyin: Húběi
+      meaning: Hubei Province
+      explanation: "湖 (lake - Dongting Lake), 北 (north). 'North of Dongting Lake'. Known as the 'Province of a Thousand Lakes' (千湖之省) in central China along the Yangtze. Home of the Three Gorges Dam (三峡大坝) and Mount Wudang (武当山), sacred cradle of Daoism and Tai Chi martial arts."
+      interval: 1
+      ease: 2.5
+    - character: 河南
+      pinyin: Hénán
+      meaning: Henan Province
+      explanation: "河 (river - referring to the Yellow River 黄河), 南 (south). 'South of the Yellow River'. Heartland of ancient Chinese civilization for thousands of years; home of ancient capitals Luoyang and Kaifeng, the Shaolin Temple (少林寺, Chan Buddhism & Kung Fu), and the Longmen Grottoes (龙门石窟)."
+      interval: 1
+      ease: 2.5
+    - character: 河北
+      pinyin: Héběi
+      meaning: Hebei Province
+      explanation: "河 (river - Yellow River), 北 (north). 'North of the Yellow River'. Surrounds Beijing and Tianjin; known for historic frontier passes like Shanhaiguan (山海关, where the Great Wall meets the sea) and the imperial Chengde Mountain Resort (避暑山庄)."
+      interval: 1
+      ease: 2.5
+    - character: 陕西
+      pinyin: Shǎnxī
+      meaning: Shaanxi Province
+      explanation: "陕 (mountain pass - historically the Shan Plateau / Shanzhou pass 陕塬), 西 (west). Spelled 'Shaanxi' in English with double 'a' to distinguish it in tone from neighboring Shanxi (山西, first tone). Ancient imperial heartland of Qin and Western Han dynasties, home to Xi'an, Mount Hua (华山), and the Loess Plateau (黄土高原)."
+      interval: 1
+      ease: 2.5
+    - character: 山西
+      pinyin: Shānxī
+      meaning: Shanxi Province
+      explanation: "山 (mountain - Taihang Mountains), 西 (west). Literally 'West of the Mountains'. Famous for historic Jin merchants (晋商) who pioneered ancient Chinese banking, Pingyao ancient walled city (平遥古城), mature aged vinegar (山西老陈醋), and knife-sliced noodles (刀削面)."
+      interval: 1
+      ease: 2.5
+    - character: 云南
+      pinyin: Yúnnán
+      meaning: Yunnan Province
+      explanation: "云 (cloud - as in 白云 white cloud, 云朵), 南 (south). Literally 'South of the Clouds' (south of the Yunling Mountains). China's southwest border province renowned for ethnic minority diversity (Dai, Bai, Naxi), high mountains, ancient towns (Dali, Lijiang), and Pu'er fermented tea (普洱茶)."
+      interval: 1
+      ease: 2.5
+    - character: 新疆
+      pinyin: Xīnjiāng
+      meaning: Xinjiang
+      explanation: "新 (new - as in 新年 New Year, 新鲜 fresh), 疆 (border, frontier, territory - 弓 bow + 土 earth + 畺 bordered fields). Literally 'New Frontier'; officially Xinjiang Uyghur Autonomous Region. Enormous northwestern region encompassing the Taklamakan Desert, Tianshan Mountains, ancient Silk Road oases, naan bread, and spiced lamb skewers (烤羊肉串)."
+      interval: 1
+      ease: 2.5
+    - character: 西藏
+      pinyin: Xīzàng
+      meaning: Tibet (Xizang)
+      explanation: "西 (west), 藏 (storehouse, hide; also pronounced Zàng referring to the Tibetan plateau / Tsang region; as in 宝藏 treasure, 收藏 collect). Officially Tibet Autonomous Region on the Qinghai-Tibet Plateau ('Roof of the World' 世界屋脊). Home to Lhasa (拉萨), Potala Palace (布达拉宫), Mount Everest, Tibetan Buddhism, and yak butter tea (酥油茶)."
+      interval: 1
+      ease: 2.5
+    - character: 内蒙古
+      pinyin: Nèiměnggǔ
+      meaning: Inner Mongolia
+      explanation: "内 (inner, inside - as in 内部 internal, 内容 content), 蒙 (Mongol / cover, receive - as in 启蒙 enlightenment), 古 (ancient, old - as in 古代 ancient times, 古老 ancient). Inner Mongolia Autonomous Region; vast northern grassland steppes, traditional yurts (蒙古包), nomadic horseback culture, dairy milk tea, and throat singing."
+      interval: 1
+      ease: 2.5
+    - character: 东北
+      pinyin: Dōngběi
+      meaning: Northeast China (Dongbei)
+      explanation: "东 (east), 北 (north). Geographic region comprising three provinces: Liaoning (辽宁), Jilin (吉林), and Heilongjiang (黑龙江). Known for cold snowy winters, industrial history, warm and comedic people (Dongbei sketches), and hearty dishes like sweet-and-sour pork (锅包肉) and sauerkraut pork stew (酸菜白肉)."
+      interval: 1
+      ease: 2.5
+    - character: 江南
+      pinyin: Jiāngnán
+      meaning: Jiangnan (South of the Yangtze)
+      explanation: "江 (river - specifically the Yangtze River 长江), 南 (south). Literally 'South of the River'. The celebrated cultural, artistic, and poetic heartland of the lower Yangtze River delta (covering southern Jiangsu, northern Zhejiang, and Shanghai). Celebrated for misty waters, arched stone bridges, scholar gardens, green tea, and silk."
+      interval: 1
+      ease: 2.5
+    - character: 台湾
+      pinyin: Táiwān
+      meaning: Taiwan
+      explanation: "台 (platform, terrace, stage - as in 舞台 stage, 讲台 podium), 湾 (bay, gulf, water bend - as in 海湾 bay, 港湾 harbour). Island across the Taiwan Strait; celebrated for scenic mountain landscapes (Taroko Gorge 太鲁阁, Sun Moon Lake 日月潭), night market street food culture, boba tea (珍珠奶茶), and warm hospitality."
+      interval: 1
+      ease: 2.5

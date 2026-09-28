@@ -1,0 +1,91 @@
+cards:
+    - character: 你是哪国人？
+      pinyin: Nǐ shì nǎ guó rén?
+      meaning: Which country are you from? (What is your nationality?)
+      explanation: "你 (you), 是 (are), 哪 (which - 口 mouth + 那 that), 国 (country/nation - 囗 borders surrounding 玉 jade treasure), 人 (person). Standard polite question to ask someone's nationality."
+      interval: 1
+      ease: 2.5
+    - character: 我是美国人。
+      pinyin: Wǒ shì Měiguó rén.
+      meaning: I am American.
+      explanation: "我 (I), 是 (am), 美国 (United States: 美 beautiful + 国 country), 人 (person). Note: 美 is used because of the phonetic match for 'America' and conveys 'beautiful' (as in 美好 fine/lovely, 美食 gourmet food, 美术 fine arts)."
+      interval: 1
+      ease: 2.5
+    - character: 你是哪里人？
+      pinyin: Nǐ shì nǎlǐ rén?
+      meaning: Where are you from? (Which hometown / region?)
+      explanation: "你 (you), 是 (are), 哪里 (where: 哪 which + 里 inside/neighborhood), 人 (person). The universal question Chinese people ask to find out what province, city, or hometown someone comes from."
+      interval: 1
+      ease: 2.5
+    - character: 你老家在哪儿？
+      pinyin: Nǐ lǎojiā zài nǎr?
+      meaning: Where is your ancestral hometown?
+      explanation: "你 (you), 老家 (ancestral hometown: 老 old/venerable + 家 home/family - as in 家乡 hometown), 在 (is at/located), 哪儿 (where - northern colloquial with erhua 儿). In Chinese culture, 老家 is deeply significant, often referring to where one's family roots originate."
+      interval: 1
+      ease: 2.5
+    - character: 我的家乡在……
+      pinyin: Wǒ de jiāxiāng zài ...
+      meaning: My hometown is in ...
+      explanation: "我的 (my), 家乡 (hometown: 家 home + 乡 countryside/village - as in 乡村 countryside, 乡音 native accent), 在 (in/at). A natural, warm way to describe your roots and where you grew up."
+      interval: 1
+      ease: 2.5
+    - character: 你去过中国吗？
+      pinyin: Nǐ qùguo Zhōngguó ma?
+      meaning: Have you ever been to China?
+      explanation: "你 (you), 去过 (have been to: 去 go + 过 experiential aspect particle indicating past life experience - as in 吃过 have eaten), 中国 (China: 中 middle + 国 country), 吗 (question particle). Perfect question when discussing travels and origins."
+      interval: 1
+      ease: 2.5
+    - character: 我去过北京和上海。
+      pinyin: Wǒ qùguo Běijīng hé Shànghǎi.
+      meaning: I have been to Beijing and Shanghai.
+      explanation: "我 (I), 去过 (have been to), 北京 (Beijing), 和 (and - conjunction connecting nouns), 上海 (Shanghai). Great conversational sentence showcasing past travel experience."
+      interval: 1
+      ease: 2.5
+    - character: 那个城市很漂亮！
+      pinyin: Nàge chéngshì hěn piàoliang!
+      meaning: That city is very beautiful!
+      explanation: "那个 (that: 那 that + 个 general measure word), 城市 (city: 城 city wall/fortress + 市 market/trade - as in 市场 market, 长城 Great Wall), 很 (very), 漂亮 (beautiful: 漂 elegant/float + 亮 bright/shining - as in 响亮 resonant, 月亮 moon). Great compliment to offer when someone tells you where they are from."
+      interval: 1
+      ease: 2.5
+    - character: 那里的菜很好吃！
+      pinyin: Nàlǐ de cài hěn hǎochī!
+      meaning: The food there is delicious!
+      explanation: "那里 (there), 的 (possessive / attributive), 菜 (food, dish, cuisine, vegetable - as in 炒菜 stir-fry, 川菜 Sichuan cuisine), 很 (very), 好吃 (delicious: 好 good + 吃 eat). Talking about regional food is the ultimate bonding conversation in Chinese culture!"
+      interval: 1
+      ease: 2.5
+    - character: 你住在哪里？
+      pinyin: Nǐ zhù zài nǎlǐ?
+      meaning: Where do you live?
+      explanation: "你 (you), 住 (live, dwell, reside - 亻 person + 主 master/stay - as in 住宿 accommodation, 住宅 residence), 在 (at), 哪里 (where). Asks for someone's current city or neighborhood of residence."
+      interval: 1
+      ease: 2.5
+    - character: 你在这里住多久了？
+      pinyin: Nǐ zài zhèlǐ zhù duō jiǔ le?
+      meaning: How long have you lived here?
+      explanation: "你 (you), 在这里 (here: 在 at + 这里 here), 住 (live), 多久 (how long: 多 how much + 久 long duration), 了 (change of state / ongoing continuation). Natural follow-up when someone shares their current city."
+      interval: 1
+      ease: 2.5
+    - character: 你是做什么工作的？
+      pinyin: Nǐ shì zuò shénme gōngzuò de?
+      meaning: What kind of work do you do?
+      explanation: "你 (you), 是……的 (structure emphasizing details/category), 做 (to do/make - as in 做法 method), 什么 (what), 工作 (work, job: 工 labor/work + 作 produce/act - as in 工人 worker, 作者 author). Standard, polite way to ask someone's profession."
+      interval: 1
+      ease: 2.5
+    - character: 我在一家科技公司工作。
+      pinyin: Wǒ zài yì jiā kējì gōngsī gōngzuò.
+      meaning: I work at a tech company.
+      explanation: "我 (I), 在 (at), 一家 (one: 家 is the measure word for companies, shops, and restaurants), 科技 (science and technology: 科 scientific field + 技 skill/technique - as in 科学 science, 技术 technology), 公司 (company: 公 public/shared + 司 manage/administer), 工作 (work)."
+      interval: 1
+      ease: 2.5
+    - character: 工作忙不忙？
+      pinyin: Gōngzuò máng bù máng?
+      meaning: Is work busy?
+      explanation: "工作 (work), 忙不忙 (busy or not busy - affirmative-negative question pattern: 忙 busy + 不 not + 忙 busy). Extremely common conversational check-in among acquaintances."
+      interval: 1
+      ease: 2.5
+    - character: 还可以，挺充实的。
+      pinyin: Hái kěyǐ, tǐng chōngshí de.
+      meaning: It's okay, quite fulfilling.
+      explanation: "还可以 (pretty good / passable: 还 still + 可以 can/acceptable), 挺 (quite/pretty), 充实 (fulfilling, substantial, enriched: 充 fill/charge + 实 solid/real - as in 充分 ample, 真实 true/real). A positive, mature way to describe a busy but satisfying schedule."
+      interval: 1
+      ease: 2.5

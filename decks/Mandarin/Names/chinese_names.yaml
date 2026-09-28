@@ -1,0 +1,121 @@
+cards:
+    - character: 王
+      pinyin: Wáng
+      meaning: Wang (surname) / King, monarch
+      explanation: "Three horizontal bars (heaven, humanity, earth) joined by a vertical stroke (the sovereign connecting all three). The most common surname in China (~100 million people). Everyday vocabulary: 王国 (kingdom), 王牌 (trump card / ace), 拳王 (boxing champion), 亲王 (prince)."
+      interval: 1
+      ease: 2.5
+    - character: 李
+      pinyin: Lǐ
+      meaning: Li (surname) / Plum
+      explanation: "Composed of 木 (tree) + 子 (child, seed). Tied for most common surname in China (~100 million people); royal surname of the golden Tang Dynasty emperors (e.g. Li Shimin). Everyday vocabulary: 李子 (plum fruit), 行李 (luggage/baggage - historically traveler's provisions), 桃李满天下 (pupils spread everywhere)."
+      interval: 1
+      ease: 2.5
+    - character: 张
+      pinyin: Zhāng
+      meaning: Zhang (surname) / To stretch, open, sheet of
+      explanation: "Composed of 弓 (bow) + 长 (long) = stretching a bowstring wide. Third most common surname in China (~95 million people). Everyday vocabulary: 一张纸 (a sheet of paper - primary measure word for flat items like tickets, beds, tables), 紧张 (nervous, tense), 开张 (open business), 张开 (open wide, e.g. mouth/arms)."
+      interval: 1
+      ease: 2.5
+    - character: 刘
+      pinyin: Liú
+      meaning: Liu (surname)
+      explanation: "Composed of 文 (culture/pattern) + 刂 (knife). Imperial royal surname of the Han Dynasty (founded by Emperor Gaozu Liu Bang 刘邦, ruling for over 400 years). Borne by ~70 million people worldwide."
+      interval: 1
+      ease: 2.5
+    - character: 陈
+      pinyin: Chén
+      meaning: Chen (surname) / To display, state, old
+      explanation: "Composed of 阝 (mound/hill) + 东方 (east/dawn). Dominant surname in Southern China, Taiwan, and Southeast Asian diaspora (often romanized as Chan, Tan, or Chin). Everyday vocabulary: 陈述 (to state/declare), 陈列 (to display/exhibit), 陈旧 (obsolete, antiquated), 推陈出新 (weed through the old to bring forth the new)."
+      interval: 1
+      ease: 2.5
+    - character: 杨
+      pinyin: Yáng
+      meaning: Yang (surname) / Poplar, willow
+      explanation: "Composed of 木 (wood/tree) + 昜 (sun rising brightly). Royal surname of the Sui Dynasty. Borne by over 40 million people. Everyday vocabulary: 杨树 (poplar tree), 白杨 (aspen), 杨梅 (waxberry / Chinese bayberry)."
+      interval: 1
+      ease: 2.5
+    - character: 黄
+      pinyin: Huáng
+      meaning: Huang (surname) / Yellow
+      explanation: "Depicts a person wearing a jade pendant at the waist; the imperial color of earth, the Yellow River (黄河), and the Yellow Emperor (黄帝). Borne by ~30 million people (often romanized as Wong, Ng, or Hwang). Everyday vocabulary: 黄色 (yellow), 黄金 (gold), 蛋黄 (egg yolk), 黄金时代 (golden age)."
+      interval: 1
+      ease: 2.5
+    - character: 赵
+      pinyin: Zhào
+      meaning: Zhao (surname)
+      explanation: "Composed of 走 (walk, run) + 肖 (resemble). Imperial royal surname of the Song Dynasty (emperors Zhao Kuangyin, etc.), and famously the very first surname listed in the classic primer 'The Hundred Family Surnames' (百家姓: 赵钱孙李...)."
+      interval: 1
+      ease: 2.5
+    - character: 伟
+      pinyin: wěi
+      meaning: Great, grand, imposing (common given name)
+      explanation: "Composed of 亻 (person) + 韦 (leather, surround). Statistically the single most common character in modern Chinese male given names (e.g. 张伟 Zhang Wei is one of the most frequent full names in China). Everyday vocabulary: 伟大 (great, magnificent), 雄伟 (grand, imposing), 伟人 (great person)."
+      interval: 1
+      ease: 2.5
+    - character: 芳
+      pinyin: fāng
+      meaning: Fragrant, sweet-smelling (common given name)
+      explanation: "Composed of 艹 (grass, flora) + 方 (square, direction). Quintessential character in traditional and modern feminine given names, representing virtue and floral fragrance. Everyday vocabulary: 芳香 (sweet-scented aroma), 芬芳 (fragrant), 流芳百世 (leave a fragrant name for eternity)."
+      interval: 1
+      ease: 2.5
+    - character: 娜
+      pinyin: nà
+      meaning: Elegant, graceful (common given name)
+      explanation: "Composed of 女 (woman) + 那 (that). Very popular character for female names (e.g. 丽娜, 安娜) and the standard character used to transliterate foreign female names with 'na'. Everyday vocabulary: 婀娜多姿 (graceful, lithe, and charming posture)."
+      interval: 1
+      ease: 2.5
+    - character: 静
+      pinyin: jìng
+      meaning: Quiet, calm, tranquil (common given name)
+      explanation: "Composed of 青 (green/blue) + 争 (struggle, strive) = harmony and stillness once turmoil ceases. Extremely common in female given names, symbolizing serenity and composure. Everyday vocabulary: 安静 (quiet, peaceful), 冷静 (calm, cool-headed), 镇静 (composed), 静态 (static state)."
+      interval: 1
+      ease: 2.5
+    - character: 敏
+      pinyin: mǐn
+      meaning: Quick, agile, sharp, clever (common given name)
+      explanation: "Composed of 每 (every) + 攵 (tap, action) = prompt in thought and action. Frequent in both male and female given names. Everyday vocabulary: 敏捷 (nimble, agile), 敏感 (sensitive), 敏锐 (keen, perceptive), 机敏 (resourceful)."
+      interval: 1
+      ease: 2.5
+    - character: 强
+      pinyin: qiáng
+      meaning: Strong, powerful, unyielding (common given name)
+      explanation: "Composed of 弓 (bow) + 虽 (insect with shell). A staple character for boys' names denoting strength and resilience (e.g. 王强, 刘强). Everyday vocabulary: 坚强 (resolute, steadfast), 强大 (mighty, powerful), 强调 (emphasize, stress), 勉强 (reluctant, barely)."
+      interval: 1
+      ease: 2.5
+    - character: 军
+      pinyin: jūn
+      meaning: Army, military (common given name)
+      explanation: "Composed of 冖 (canopy/encirclement) + 车 (war chariot). Extremely common in names of Chinese men born between 1950 and 1980 (e.g. 建军 'found the army', 军). Everyday vocabulary: 军队 (army, armed forces), 军人 (soldier), 冠军 (champion / first place), 军训 (military training)."
+      interval: 1
+      ease: 2.5
+    - character: 洋
+      pinyin: yáng
+      meaning: Ocean, vast, modern/foreign (common given name)
+      explanation: "Composed of 氵 (water) + 羊 (sheep, phonetic). Very popular modern given name character for boys and girls, conveying expansive horizons. Everyday vocabulary: 海洋 (ocean), 太平洋 (Pacific Ocean), 洋气 (stylish, chic, international flair), 汪洋 (vast expanse of water)."
+      interval: 1
+      ease: 2.5
+    - character: 婷
+      pinyin: tíng
+      meaning: Graceful, slender, charming (common given name)
+      explanation: "Composed of 女 (woman) + 亭 (pavilion, upright and graceful). Ubiquitous character in girls' names across Chinese-speaking regions (e.g. 婷婷). Everyday vocabulary: 亭亭玉立 (standing slim and graceful like fine jade)."
+      interval: 1
+      ease: 2.5
+    - character: 宇
+      pinyin: yǔ
+      meaning: Universe, cosmos, demeanor, eaves (common given name)
+      explanation: "Composed of 宀 (roof, canopy of heaven) + 于 (phonetic). Top-ranking character in modern 21st-century Chinese boys' names (e.g. 浩宇, 宇轩). Everyday vocabulary: 宇宙 (the universe, cosmos), 屋宇 (house, architecture), 气宇轩昂 (commanding presence, dignified bearing)."
+      interval: 1
+      ease: 2.5
+    - character: 杰
+      pinyin: jié
+      meaning: Outstanding, hero, person of rare talent (common given name)
+      explanation: "Composed of 木 (wood) + 4 dots (fire/prominence) = towering above the trees. Very popular given name character for men (e.g. pop star 周杰伦 Jay Chou, martial artist 李连杰 Jet Li). Everyday vocabulary: 杰出 (outstanding, distinguished), 豪杰 (heroic person), 杰作 (masterpiece)."
+      interval: 1
+      ease: 2.5
+    - character: 华
+      pinyin: huá
+      meaning: Magnificent, splendid, China/Chinese (common given name)
+      explanation: "Pictograph of blossoming flowers. A profoundly popular given name character across generations, symbolizing prosperity and pride in Chinese heritage (e.g. 刘德华 Andy Lau, 建华). Everyday vocabulary: 华人 (ethnic Chinese person), 中华 (China / the Chinese civilization), 繁华 (bustling, thriving), 华丽 (magnificent, gorgeous)."
+      interval: 1
+      ease: 2.5
