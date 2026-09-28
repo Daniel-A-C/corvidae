@@ -406,6 +406,155 @@ func TestSexualityDeck(t *testing.T) {
 	}
 }
 
+func TestGeographyDecks(t *testing.T) {
+	decksPath := filepath.Join("..", "..", "decks", "Mandarin", "Geography")
+	if _, err := os.Stat(decksPath); os.IsNotExist(err) {
+		t.Skip("Geography directory not present")
+	}
+
+	geoFiles := map[string]int{
+		"cities.yaml":  18,
+		"regions.yaml": 18,
+	}
+
+	for file, expectedCards := range geoFiles {
+		fullPath := filepath.Join(decksPath, file)
+		d, err := LoadDeck(fullPath)
+		if err != nil {
+			t.Fatalf("failed to load %s: %v", file, err)
+		}
+		if len(d.Cards) != expectedCards {
+			t.Errorf("expected %d cards in %s, got %d", expectedCards, file, len(d.Cards))
+		}
+
+		seen := make(map[string]bool)
+		for i, card := range d.Cards {
+			if card.Character == "" {
+				t.Errorf("%s: card %d missing character", file, i)
+			}
+			if card.Pinyin == "" {
+				t.Errorf("%s: card %d (%s) missing pinyin", file, i, card.Character)
+			}
+			if card.Meaning == "" {
+				t.Errorf("%s: card %d (%s) missing meaning", file, i, card.Character)
+			}
+			if card.Explanation == "" {
+				t.Errorf("%s: card %d (%s) missing explanation", file, i, card.Character)
+			}
+			if card.Interval != 1 {
+				t.Errorf("%s: card %d (%s) expected interval 1, got %d", file, i, card.Character, card.Interval)
+			}
+			if card.Ease != 2.5 {
+				t.Errorf("%s: card %d (%s) expected ease 2.5, got %f", file, i, card.Character, card.Ease)
+			}
+			if seen[card.Character] {
+				t.Errorf("%s: duplicate character found: %s", file, card.Character)
+			}
+			seen[card.Character] = true
+		}
+	}
+}
+
+func TestNamesDecks(t *testing.T) {
+	decksPath := filepath.Join("..", "..", "decks", "Mandarin", "Names")
+	if _, err := os.Stat(decksPath); os.IsNotExist(err) {
+		t.Skip("Names directory not present")
+	}
+
+	namesFiles := map[string]int{
+		"chinese_names.yaml":   20,
+		"transliterations.yaml": 16,
+	}
+
+	for file, expectedCards := range namesFiles {
+		fullPath := filepath.Join(decksPath, file)
+		d, err := LoadDeck(fullPath)
+		if err != nil {
+			t.Fatalf("failed to load %s: %v", file, err)
+		}
+		if len(d.Cards) != expectedCards {
+			t.Errorf("expected %d cards in %s, got %d", expectedCards, file, len(d.Cards))
+		}
+
+		seen := make(map[string]bool)
+		for i, card := range d.Cards {
+			if card.Character == "" {
+				t.Errorf("%s: card %d missing character", file, i)
+			}
+			if card.Pinyin == "" {
+				t.Errorf("%s: card %d (%s) missing pinyin", file, i, card.Character)
+			}
+			if card.Meaning == "" {
+				t.Errorf("%s: card %d (%s) missing meaning", file, i, card.Character)
+			}
+			if card.Explanation == "" {
+				t.Errorf("%s: card %d (%s) missing explanation", file, i, card.Character)
+			}
+			if card.Interval != 1 {
+				t.Errorf("%s: card %d (%s) expected interval 1, got %d", file, i, card.Character, card.Interval)
+			}
+			if card.Ease != 2.5 {
+				t.Errorf("%s: card %d (%s) expected ease 2.5, got %f", file, i, card.Character, card.Ease)
+			}
+			if seen[card.Character] {
+				t.Errorf("%s: duplicate character found: %s", file, card.Character)
+			}
+			seen[card.Character] = true
+		}
+	}
+}
+
+func TestConversationDecks(t *testing.T) {
+	decksPath := filepath.Join("..", "..", "decks", "Mandarin", "Conversation")
+	if _, err := os.Stat(decksPath); os.IsNotExist(err) {
+		t.Skip("Conversation directory not present")
+	}
+
+	convFiles := []string{
+		"getting_acquainted_1.yaml",
+		"getting_acquainted_2.yaml",
+		"getting_acquainted_3.yaml",
+	}
+
+	for _, file := range convFiles {
+		fullPath := filepath.Join(decksPath, file)
+		d, err := LoadDeck(fullPath)
+		if err != nil {
+			t.Fatalf("failed to load %s: %v", file, err)
+		}
+		if len(d.Cards) != 15 {
+			t.Errorf("expected 15 cards in %s, got %d", file, len(d.Cards))
+		}
+
+		seen := make(map[string]bool)
+		for i, card := range d.Cards {
+			if card.Character == "" {
+				t.Errorf("%s: card %d missing character", file, i)
+			}
+			if card.Pinyin == "" {
+				t.Errorf("%s: card %d (%s) missing pinyin", file, i, card.Character)
+			}
+			if card.Meaning == "" {
+				t.Errorf("%s: card %d (%s) missing meaning", file, i, card.Character)
+			}
+			if card.Explanation == "" {
+				t.Errorf("%s: card %d (%s) missing explanation", file, i, card.Character)
+			}
+			if card.Interval != 1 {
+				t.Errorf("%s: card %d (%s) expected interval 1, got %d", file, i, card.Character, card.Interval)
+			}
+			if card.Ease != 2.5 {
+				t.Errorf("%s: card %d (%s) expected ease 2.5, got %f", file, i, card.Character, card.Ease)
+			}
+			if seen[card.Character] {
+				t.Errorf("%s: duplicate sentence found: %s", file, card.Character)
+			}
+			seen[card.Character] = true
+		}
+	}
+}
+
+
 func TestGetAllDeckFiles(t *testing.T) {
 	tempDir := t.TempDir()
 

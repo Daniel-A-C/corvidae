@@ -36,9 +36,9 @@ cards:
       interval: 1
       ease: 2.5
     - character: 奇数
-      pinyin: qí shù
+      pinyin: jī shù
       meaning: Odd number
-      explanation: "奇 (大 big + 可 strange/gasping = unusual, uneven leftover -> odd number), 数 (number). Referring to odd rank cards (A, 9, 7, 5, 3) used by Jokers like Odd Todd."
+      explanation: "奇 (here pronounced jī in 1st tone for odd numbers/parity, paired with 偶 ǒu; distinctly different from qí in 奇怪 'strange' or 奇迹 'miracle'; 大 big + 可 -> uneven leftover -> odd number), 数 (number). Referring to odd rank cards (A, 9, 7, 5, 3) used by Jokers like Odd Todd."
       interval: 1
       ease: 2.5
     - character: 偶数

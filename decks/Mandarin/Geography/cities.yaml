@@ -1,0 +1,109 @@
+cards:
+    - character: 北京
+      pinyin: Běijīng
+      meaning: Beijing (capital of China)
+      explanation: "北 (north - as in 北极 North Pole, 东北 Northeast), 京 (capital, metropolis - as in 南京, 京剧 Beijing opera). Capital of China and political/cultural center for over 800 years. Famous for the Forbidden City (故宫), Great Wall (长城), roast duck (北京烤鸭), and historic alleyways (胡同). If someone is from Beijing: ask about their favorite hutong or local food like zhajiangmian (炸酱面)."
+      interval: 1
+      ease: 2.5
+    - character: 上海
+      pinyin: Shànghǎi
+      meaning: Shanghai
+      explanation: "上 (above, upon, go up - as in 上班 go to work, 上网 go online), 海 (sea, ocean - as in 海洋 ocean, 大海 sea). Literally 'Upon the Sea' or 'Going out to Sea'. China's largest economic, financial, and shipping metropolis at the mouth of the Yangtze River. Renowned for the Bund (外滩), modern skyline in Lujiazui, soup dumplings (小笼包), and Shanghainese culture/dialect (沪语)."
+      interval: 1
+      ease: 2.5
+    - character: 广州
+      pinyin: Guǎngzhōu
+      meaning: Guangzhou (Canton)
+      explanation: "广 (wide, broad, vast - as in 广泛 wide-ranging, 广告 advertisement), 州 (prefecture, ancient water-surrounded administrative district - as in 杭州, 苏州). Capital of Guangdong province and historic starting port of the Maritime Silk Road. Heart of Cantonese culture, Yue cuisine (粤菜), and dim sum morning tea (早茶)."
+      interval: 1
+      ease: 2.5
+    - character: 深圳
+      pinyin: Shēnzhèn
+      meaning: Shenzhen
+      explanation: "深 (deep, profound - as in 深刻 deep/profound, 深夜 late night), 圳 (field irrigation ditch, agricultural drainage channel). Bordering Hong Kong, Shenzhen transformed from a fishing village into China's tech and innovation capital ('China's Silicon Valley') and first Special Economic Zone. Home to DJI, Tencent, and Huawei, with a young, ambitious population."
+      interval: 1
+      ease: 2.5
+    - character: 成都
+      pinyin: Chéngdū
+      meaning: Chengdu
+      explanation: "成 (accomplish, become, succeed - as in 成功 success, 成为 become), 都 (capital, metropolis - as in 首都 capital city, 都市 metropolis; note: when pronounced dōu it means 'all'). Capital of Sichuan province, known as the 'Land of Abundance' (天府之国). Famous for giant pandas (大熊猫), spicy hotpot (麻辣火锅), teahouse culture (茶馆), and a delightfully relaxed pace of life."
+      interval: 1
+      ease: 2.5
+    - character: 重庆
+      pinyin: Chóngqìng
+      meaning: Chongqing
+      explanation: "重 (double, repeated, layer - as in 重复 repeat, 重新 anew; also pronounced zhòng meaning 'heavy' as in 重要 important), 庆 (celebrate, congratulate - as in 庆祝 celebrate, 国庆 National Day). Named 'Double Celebration' by Emperor Guangzong in 1189. A massive municipality known as the 'Mountain City' (山城), famous for 8D multi-level terrain, monorails driving through buildings, and fiery hotpot (九宫格老火锅)."
+      interval: 1
+      ease: 2.5
+    - character: 西安
+      pinyin: Xī'ān
+      meaning: Xi'an
+      explanation: "西 (west - as in 西方 the West, 西瓜 watermelon), 安 (peace, safe, secure - as in 安全 safe, 安静 quiet). Historically known as Chang'an (长安, 'Eternal Peace'). Ancient capital for 13 dynasties and the eastern terminus of the Silk Road. Home of the Terracotta Army (兵马俑), ancient city walls, and street food like Chinese hamburger (肉夹馍) and Biángbiáng noodles."
+      interval: 1
+      ease: 2.5
+    - character: 杭州
+      pinyin: Hángzhōu
+      meaning: Hangzhou
+      explanation: "杭 (ferry boat, crossing water - associated with ancient legend of Yu the Great landing his boat), 州 (prefecture). Capital of Zhejiang province; famed for scenic West Lake (西湖) and Longjing green tea (龙井茶). Historic proverb: '上有天堂，下有苏杭' ('Above is Heaven, below are Suzhou and Hangzhou'). Today also a global e-commerce and tech hub (home of Alibaba)."
+      interval: 1
+      ease: 2.5
+    - character: 苏州
+      pinyin: Sūzhōu
+      meaning: Suzhou
+      explanation: "苏 (revive, recover, thyme/perilla - as in 复苏 economic recovery, 苏醒 awaken; abbreviation for Jiangsu 江苏), 州 (prefecture). Ancient canal city in Jiangsu province, often called the 'Venice of the East'. Celebrated for classical UNESCO Chinese scholar gardens (古典园林, e.g. 拙政园), delicate silk embroidery (苏绣), and refined cuisine."
+      interval: 1
+      ease: 2.5
+    - character: 武汉
+      pinyin: Wǔhàn
+      meaning: Wuhan
+      explanation: "武 (martial, military, brave - as in 武术 martial arts, 武器 weapon), 汉 (the Han River / Han dynasty / Han ethnicity). Formed from three historic towns along the Yangtze River: Wuchang, Hankou, and Hanyang. Capital of Hubei province and vital central transit crossroads known as the 'Thoroughfare of Nine Provinces' (九省通衢). Famous for Yellow Crane Tower (黄鹤楼) and hot dry noodles (热干面)."
+      interval: 1
+      ease: 2.5
+    - character: 南京
+      pinyin: Nánjīng
+      meaning: Nanjing
+      explanation: "南 (south - as in 南方 south region, 南极 South Pole), 京 (capital). Literally 'Southern Capital'. One of China's Four Great Ancient Capitals; served as the capital of six dynasties, the early Ming dynasty, and the Republic of China. Famous for Purple Mountain (紫金山), Ming city walls, Confucius Temple (夫子庙), and Nanjing salted duck (盐水鸭)."
+      interval: 1
+      ease: 2.5
+    - character: 天津
+      pinyin: Tiānjīn
+      meaning: Tianjin
+      explanation: "天 (heaven, sky, emperor), 津 (ferry crossing, ford - as in 问津 inquiring the way/crossing). Literally 'Emperor's Ferry', named when the Yongle Emperor crossed the river here. Major northern port municipality neighboring Beijing. Renowned for crosstalk comedy (相声), European concession-era architecture, and Goubuli steamed buns (狗不理包子)."
+      interval: 1
+      ease: 2.5
+    - character: 香港
+      pinyin: Xiānggǎng
+      meaning: Hong Kong
+      explanation: "香 (fragrant, sweet-scented, appetizing - as in 香水 perfume, 香味 fragrance), 港 (harbor, port - as in 港口 port, 港币 HK dollar). Literally 'Fragrant Harbour', originating from historic trade in agarwood incense. Global financial hub and Cantonese cultural icon with Victoria Harbour (维多利亚港), double-decker trams, dim sum, and cinematic history."
+      interval: 1
+      ease: 2.5
+    - character: 台北
+      pinyin: Táiběi
+      meaning: Taipei
+      explanation: "台 (platform, terrace, stage - as in 舞台 stage, 阳台 balcony; shorthand for Taiwan 台湾), 北 (north). Located in northern Taiwan; cultural and economic hub famous for Taipei 101, the National Palace Museum (故宫博物院), vibrant night markets (夜市, such as Shilin and Raohe), and braised beef noodle soup (牛肉面)."
+      interval: 1
+      ease: 2.5
+    - character: 哈尔滨
+      pinyin: Hā'ěrbīn
+      meaning: Harbin
+      explanation: "哈 (laugh/exhale; phonetic 'ha' - as in 哈哈 haha), 尔 (literary 'you'; common phonetic suffix - as in 偶尔 occasionally), 滨 (waterfront, shore - as in 海滨 seashore, 湖滨 lakeside). Capital of Heilongjiang in Northeast China (东北). Famous for freezing winters, Russian architecture (Saint Sophia Cathedral), Harbin red sausage (红肠), and the annual Ice and Snow Festival (冰雪大世界)."
+      interval: 1
+      ease: 2.5
+    - character: 昆明
+      pinyin: Kūnmíng
+      meaning: Kunming
+      explanation: "昆 (elder brother, together, descendants; Kunlun mountains), 明 (bright, clear - composed of 日 sun + 月 moon; as in 明白 understand, 明天 tomorrow). Capital of Yunnan province, celebrated as the 'Spring City' (春城) for its perpetual mild climate. Gateway to Yunnan's 25 ethnic groups and famous for crossing-the-bridge rice noodles (过桥米线)."
+      interval: 1
+      ease: 2.5
+    - character: 青岛
+      pinyin: Qīngdǎo
+      meaning: Qingdao (Tsingtao)
+      explanation: "青 (blue-green, verdant, young - as in 青年 youth, 青春 adolescence), 岛 (island - composed of 鸟 bird + 山 mountain). Coastal city in Shandong province known for red-tiled roofs nestled among green trees against the sea (红瓦绿树，碧海蓝天), German heritage architecture, fresh seafood, and world-famous Tsingtao Brewery (青岛啤酒)."
+      interval: 1
+      ease: 2.5
+    - character: 长沙
+      pinyin: Chángshā
+      meaning: Changsha
+      explanation: "长 (long, length, grow - as in 长度 length, 长大 grow up), 沙 (sand, gravel - as in 沙漠 desert, 沙滩 sandy beach). Capital of Hunan province; vibrant culinary, entertainment, and media hub. Renowned for fiery Hunan cooking (湘菜), night markets, fried stinky tofu (长沙臭豆腐), and scenic Orange Isle (橘子洲)."
+      interval: 1
+      ease: 2.5
