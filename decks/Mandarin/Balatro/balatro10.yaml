@@ -1,0 +1,73 @@
+cards:
+    - character: 削弱
+      pinyin: xuē ruò
+      meaning: Debuff / Weaken
+      explanation: "削 (刀 knife peeling or shaving away layers), 弱 (two young flexed bows lacking strength = weak). When boss blinds debuff specific suits, face cards, or repeated hands so they give no chips or mult."
+      interval: 1
+      ease: 2.5
+    - character: 限制
+      pinyin: xiàn zhì
+      meaning: Restriction / Limit
+      explanation: "限 (阝 mound barrier + 艮 stopping foot = limit, threshold), 制 (knife trimming branches = regulate, restrict). Gameplay constraints imposed by Boss Blinds (such as 0 discards or 1 hand type)."
+      interval: 1
+      ease: 2.5
+    - character: 弃牌数
+      pinyin: qì pái shù
+      meaning: Discards remaining / Number of discards
+      explanation: "弃 (cast aside), 牌 (card), 数 (number, count). The tally of discard attempts available in the current round (e.g. reduced by The Water boss blind)."
+      interval: 1
+      ease: 2.5
+    - character: 出牌数
+      pinyin: chū pái shù
+      meaning: Hands remaining / Number of hands
+      explanation: "出 (produce, play), 牌 (card), 数 (number, count). The tally of hands remaining to beat the score target (e.g. reduced to only 1 by The Needle)."
+      interval: 1
+      ease: 2.5
+    - character: 手牌上限
+      pinyin: shǒu pái shàng xiàn
+      meaning: Hand size limit
+      explanation: "手 (hand), 牌 (cards), 上限 (upper ceiling/limit: 上 upper + 限 limit). The maximum number of cards held in hand at once (e.g. reduced by -1 by The Manacle)."
+      interval: 1
+      ease: 2.5
+    - character: 初始
+      pinyin: chū shǐ
+      meaning: Initial / Starting
+      explanation: "初 (knife cutting cloth to start a garment = beginning), 始 (woman giving birth = start, originate). Starting money ($4), starting hand size, or initial blind requirements."
+      interval: 1
+      ease: 2.5
+    - character: 奖励
+      pinyin: jiǎng lì
+      meaning: Reward / Payout
+      explanation: "奖 (large dog bringing prize -> reward, commend), 励 (grindstone giving strength -> encourage, incentivize). Cash prize awarded upon defeating small, big, and boss blinds."
+      interval: 1
+      ease: 2.5
+    - character: 收益
+      pinyin: shōu yì
+      meaning: Yield / Profit / Income
+      explanation: "收 (hand gathering harvest = receive, gather), 益 (water overflowing dish = surplus, profit). Total financial returns generated per round through interest, Jokers, and Gold cards."
+      interval: 1
+      ease: 2.5
+    - character: 亏损
+      pinyin: kuī sǔn
+      meaning: Loss / Deficit
+      explanation: "亏 (vapor escaping -> deficit, shortfall), 损 (hand diminishing an item -> damage, loss). Negative cashflow or losing money when forced into debt by vouchers like Credit Card."
+      interval: 1
+      ease: 2.5
+    - character: 翻面
+      pinyin: fān miàn
+      meaning: Face down / Flip over
+      explanation: "翻 (feathers fluttering -> flip, turn over), 面 (face, surface). Boss blind effect (e.g. The Pillar, The Mark) that forces cards to be drawn face down so ranks and suits are concealed."
+      interval: 1
+      ease: 2.5
+    - character: 强迫
+      pinyin: qiǎng pò
+      meaning: Force / Compel
+      explanation: "强 (strong, forceful), 迫 (walking close behind -> press, compel). Conditions that compel card play (e.g. always having to select 5 cards, or discarding cards on play)."
+      interval: 1
+      ease: 2.5
+    - character: 免疫
+      pinyin: miǎn yì
+      meaning: Immune / Immunity
+      explanation: "免 (exempt, excuse), 疫 (pestilence, illness). Cards or Jokers (like Director's Cut or Luchador) that negate or remain immune to Boss Blind debuffs."
+      interval: 1
+      ease: 2.5

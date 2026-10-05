@@ -1,0 +1,73 @@
+cards:
+    - character: 这个多少钱？
+      pinyin: Zhè ge duōshao qián?
+      meaning: How much is this?
+      explanation: "这个 (this one), 多少 (how many/how much), 钱 (money - 金 metal radical + 戋 small pieces). The single most essential shopping phrase in the Chinese language."
+      interval: 1
+      ease: 2.5
+    - character: 太贵了，可以便宜一点吗？
+      pinyin: Tài guì le, kěyǐ piányi yìdiǎnr ma?
+      meaning: It's too expensive, can it be a little cheaper?
+      explanation: "太贵了 (too expensive: 贵 precious/costly), 可以 (can), 便宜 (cheap/inexpensive: 便 convenient + 宜 suitable), 一点儿 (a little bit), 吗 (question particle). The polite cornerstone phrase for friendly bargaining in markets."
+      interval: 1
+      ease: 2.5
+    - character: 我可以试一下吗？
+      pinyin: Wǒ kěyǐ shì yíxià ma?
+      meaning: May I try this on / try this out?
+      explanation: "我 (I), 可以 (may/can), 试一下 (try a little / try on: 试 try/test + 一下 brief action particle). Used for trying on clothes, shoes, or sampling food at stalls."
+      interval: 1
+      ease: 2.5
+    - character: 有没有大一号的？
+      pinyin: Yǒu méiyǒu dà yí hào de?
+      meaning: Do you have one size larger?
+      explanation: "有没有 (do you have or not), 大一号 (one size bigger: 大 big + 一 one + 号 size/number), 的 (noun phrase marker). Change 大 to 小 (xiǎo) to ask for one size smaller (小一号)."
+      interval: 1
+      ease: 2.5
+    - character: 有没有别的颜色？
+      pinyin: Yǒu méiyǒu bié de yánsè?
+      meaning: Do you have other colors?
+      explanation: "有没有 (do you have), 别的 (other/another: 别 other/separate + 的), 颜色 (color: 颜 face/appearance + 色 color). Asking a shopkeeper for alternative shades or styles."
+      interval: 1
+      ease: 2.5
+    - character: 质量怎么样？
+      pinyin: Zhìliàng zěnmeyàng?
+      meaning: How is the quality?
+      explanation: "质量 (quality: 质 substance/matter + 量 quantity/measure), 怎么样 (how is it). Assessing the build, durability, or fabric of merchandise."
+      interval: 1
+      ease: 2.5
+    - character: 我很喜欢，我要这个。
+      pinyin: Wǒ hěn xǐhuan, wǒ yào zhè ge.
+      meaning: I like it very much, I'll take this one.
+      explanation: "我很喜欢 (I like it a lot: 喜 joy + 欢 happy), 我要 (I want/take), 这个 (this one). Clear and decisive statement to confirm a purchase."
+      interval: 1
+      ease: 2.5
+    - character: 微信还是支付宝？
+      pinyin: Wēixìn háishi Zhīfùbǎo?
+      meaning: WeChat Pay or Alipay?
+      explanation: "微信 (WeChat: 微 micro + 信 message), 还是 (or - for alternatives), 支付宝 (Alipay: 支 pay/support + 付 pay + 宝 treasure). The standard question asked by Chinese merchants at the checkout register for digital mobile payments."
+      interval: 1
+      ease: 2.5
+    - character: 我扫你的付款码。
+      pinyin: Wǒ sǎo nǐ de fùkuǎn mǎ.
+      meaning: I will scan your payment QR code.
+      explanation: "我 (I), 扫 (scan/sweep), 你的 (your), 付款码 (payment QR code: 付 pay + 款 fund/sum + 码 code/tally). The universal gesture in modern China: bringing up your phone camera to scan the shop's printed standee."
+      interval: 1
+      ease: 2.5
+    - character: 现金可以吗？
+      pinyin: Xiànjīn kěyǐ ma?
+      meaning: Is cash okay?
+      explanation: "现金 (cash: 现 present/ready + 金 money/gold), 可以吗 (is it acceptable?). Useful for travelers using physical paper RMB banknotes."
+      interval: 1
+      ease: 2.5
+    - character: 请给我一张发票和小票。
+      pinyin: Qǐng gěi wǒ yì zhāng fāpiào hé xiǎopiào.
+      meaning: Please give me an official invoice and receipt.
+      explanation: "请给我 (please give me), 一张 (one sheet of), 发票 (official tax invoice: 发 issue + 票 slip), 和 (and), 小票 (register receipt/chits). Essential for business expense reimbursements and warranty proof."
+      interval: 1
+      ease: 2.5
+    - character: 谢谢，不用找零了。
+      pinyin: Xièxie, bú yòng zhǎolíng le.
+      meaning: Thank you, no need to give change (keep the change).
+      explanation: "谢谢 (thank you), 不用 (no need), 找零 (give small change: 找 seek/return change + 零 remnant/fractional change). Polite way to leave small change when paying with cash."
+      interval: 1
+      ease: 2.5

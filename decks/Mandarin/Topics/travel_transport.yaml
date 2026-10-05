@@ -1,0 +1,85 @@
+cards:
+  - character: 飞机
+    pinyin: fēi jī
+    meaning: Airplane
+    explanation: >
+      飞 (fēi: to fly) + 机 (jī: machine, device - 木 wood + 几). Literally 'flying machine'. The standard term for commercial aircraft.
+    interval: 1
+    ease: 2.5
+  - character: 机场
+    pinyin: jī chǎng
+    meaning: Airport
+    explanation: >
+      机 (airplane) + 场 (open ground / arena - 土 earth + 昜 open sun). Large open tarmac and terminal complex for aircraft landings and departures.
+    interval: 1
+    ease: 2.5
+  - character: 高铁
+    pinyin: gāo tiě
+    meaning: High-speed rail (bullet train)
+    explanation: >
+      Abbreviation of 高速铁路 (gāosù tiělù: 高 high + 速 speed + 铁 iron/rail + 路 road). China operates the world's most extensive high-speed rail network (>45,000 km), with trains cruising smoothly at 350 km/h.
+    interval: 1
+    ease: 2.5
+  - character: 地铁
+    pinyin: dì tiě
+    meaning: Subway / Metro
+    explanation: >
+      地 (ground, earth) + 铁 (iron / railway). 'Underground railway'; the rapid transit lifeline of modern Chinese megacities.
+    interval: 1
+    ease: 2.5
+  - character: 出租车
+    pinyin: chū zū chē
+    meaning: Taxi / Cab
+    explanation: >
+      出 (go out) + 租 (rent/lease - 禾 grain rent + 且) + 车 (car). Vehicle hired for short-term rental. Also called 的士 (dīshì) in Hong Kong and Guangdong, and hailing a ride is 打车 (dǎchē).
+    interval: 1
+    ease: 2.5
+  - character: 护照
+    pinyin: hù zhào
+    meaning: Passport
+    explanation: >
+      护 (protect, defend) + 照 (photograph, official permit / certificate - 日 sun + 召 + 灬 fire). Official identification document permitting international travel across borders.
+    interval: 1
+    ease: 2.5
+  - character: 签证
+    pinyin: qiān zhèng
+    meaning: Visa (entry visa)
+    explanation: >
+      签 (sign, endorse - ⺮ bamboo slip + 佥) + 证 (certificate, evidence - 讠 speech + 正 upright). Endorsement on a passport authorizing entry into a foreign country.
+    interval: 1
+    ease: 2.5
+  - character: 行李箱
+    pinyin: xíng li xiāng
+    meaning: Suitcase / Luggage
+    explanation: >
+      行李 (luggage/baggage - historically traveler's rations) + 箱 (chest, box - ⺮ bamboo + 相). Rolling suitcase for packing travel essentials.
+    interval: 1
+    ease: 2.5
+  - character: 登机牌
+    pinyin: dēng jī pái
+    meaning: Boarding pass
+    explanation: >
+      登 (mount, ascend - two feet stepping up 癶 + 豆) + 机 (airplane) + 牌 (card, pass). Document granting passenger boarding clearance at the flight gate.
+    interval: 1
+    ease: 2.5
+  - character: 酒店
+    pinyin: jiǔ diàn
+    meaning: Hotel
+    explanation: >
+      酒 (wine) + 店 (shop/inn - 广 shelter + 占). Historically an inn providing travelers food and wine; standard modern term for luxury and commercial hotels.
+    interval: 1
+    ease: 2.5
+  - character: 预订
+    pinyin: yù dìng
+    meaning: To book / Make a reservation
+    explanation: >
+      预 (in advance) + 订 (settle, agree on - 讠 speech + 丁 nail down). Booking flight tickets, train seats, or hotel rooms ahead of travel.
+    interval: 1
+    ease: 2.5
+  - character: 乘客
+    pinyin: chéng kè
+    meaning: Passenger / Traveler
+    explanation: >
+      乘 (mount, ride in a vehicle) + 客 (guest - 宀 roof sheltering 各 newcomer). Person riding as a traveler on planes, trains, or buses.
+    interval: 1
+    ease: 2.5

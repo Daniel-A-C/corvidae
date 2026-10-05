@@ -1,0 +1,71 @@
+cards:
+  - character: 阿拉丁
+    pinyin: Ā lā dīng
+    meaning: Aladdin
+    explanation: >
+      Phonetic transliteration of Aladdin: 阿 (ā) is an affectionate prefix/phonetic sound, 拉 (lā) means 'pull', and 丁 (dīng) means 'individual/man'. The clever street urchin ("diamond in the rough") who dreams of a greater life beyond the rooftops of Agrabah.
+    interval: 1
+    ease: 2.5
+  - character: 神灯
+    pinyin: shén dēng
+    meaning: Magic lamp
+    explanation: >
+      神 (shén) means 'divine, magical, deity' (featuring the spirit radical 礻) and 灯 (dēng) means 'lamp/lantern' (with the fire radical 火 alongside 丁). The unassuming ancient oil lamp hidden deep within the Cave of Wonders that houses the cosmic power of the Genie.
+    interval: 1
+    ease: 2.5
+  - character: 灯神
+    pinyin: dēng shén
+    meaning: The Genie (Genie of the Lamp)
+    explanation: >
+      Literally 'the Spirit of the Lamp' (灯 lamp + 神 spirit/deity). Voiced iconically by Robin Williams, the blue shape-shifting Genie boasts "phenomenal cosmic powers, itty bitty living space!"
+    interval: 1
+    ease: 2.5
+  - character: 飞毯
+    pinyin: fēi tǎn
+    meaning: Magic carpet
+    explanation: >
+      飞 (fēi) is the pictograph of a bird flapping its wings in flight, and 毯 (tǎn) combines the fur radical 毛 with 炎 (heat/flames), meaning a woven rug or carpet. The sentient, tassel-waving woven carpet that guides Aladdin through the Cave of Wonders and takes Aladdin and Jasmine on "A Whole New World".
+    interval: 1
+    ease: 2.5
+  - character: 愿望
+    pinyin: yuàn wàng
+    meaning: Wishes
+    explanation: >
+      愿 (yuàn) features the heart radical 心 beneath 原 (source), meaning heart's desire, and 望 (wàng) depicts looking up at the full moon with longing, meaning hope or desire. The Genie grants Aladdin three wishes (with strict rules against making anyone fall in love, killing someone, or bringing people back from the dead).
+    interval: 1
+    ease: 2.5
+  - character: 洞穴
+    pinyin: dòng xué
+    meaning: Cave (Cave of Wonders)
+    explanation: >
+      洞 (dòng) combines the water radical 氵 with 同, meaning a hollow opening through rock, and 穴 (xué) is the cave/burrow radical. The tiger-headed sand cavern that permits only a "diamond in the rough" (未经雕琢的钻石) to enter.
+    interval: 1
+    ease: 2.5
+  - character: 宝藏
+    pinyin: bǎo zàng
+    meaning: Treasure / Hidden hoard
+    explanation: >
+      宝 (bǎo) features a roof 宀 sheltering jade 玉, shells 贝, and pottery (meaning cherished treasure), and 藏 (zàng) means 'treasury / storehouse'. The mountains of gold coins, rubies, and jeweled goblets filling the Cave of Wonders, which Abu must not touch.
+    interval: 1
+    ease: 2.5
+  - character: 巫师
+    pinyin: wū shī
+    meaning: Royal Sorcerer / Grand Vizier (Jafar)
+    explanation: >
+      巫 (wū) means 'sorcerer/shaman' and 师 (shī) means 'master or teacher' (as in 老师 teacher). The treacherous royal advisor Jafar (贾方) uses hypnotic snake staffs and dark sorcery to usurp the Sultan's throne.
+    interval: 1
+    ease: 2.5
+  - character: 自由
+    pinyin: zì yóu
+    meaning: Freedom / Liberty
+    explanation: >
+      自 (zì) is the ancient pictograph for one's own nose (meaning self), and 由 (yóu) depicts a sprouting source or cause (meaning coming from oneself). More than all the cosmic power in the universe, the Genie longs for his ultimate wish: freedom from the lamp, which Aladdin promises and proudly delivers.
+    interval: 1
+    ease: 2.5
+  - character: 街头
+    pinyin: jiē tóu
+    meaning: Street corner / City streets
+    explanation: >
+      街 (jiē) combines the crossroads radical 彳+亍 with 圭, meaning a public boulevard, and 头 (tóu) means 'head/end'. Aladdin survives on the bustling street corners of the city, darting away from royal guards with clever parkour and quick wit.
+    interval: 1
+    ease: 2.5

@@ -1,0 +1,85 @@
+cards:
+  - character: 咖啡
+    pinyin: kā fēi
+    meaning: Coffee
+    explanation: >
+      Both characters contain the mouth radical 口 paired with phonetics 加 (jiā) and 非 (fēi). The standard phonetic transliteration of coffee, consumed across modern China's flourishing third-wave cafes.
+    interval: 1
+    ease: 2.5
+  - character: 拿铁
+    pinyin: ná tiě
+    meaning: Caffe Latte
+    explanation: >
+      拿 (ná: hold) + 铁 (tiě: iron). Phonetic transliteration for Italian 'latte' (milk). The most popular espresso-and-steamed-milk drink ordered in cafes.
+    interval: 1
+    ease: 2.5
+  - character: 美式咖啡
+    pinyin: měi shì kā fēi
+    meaning: Americano (American-style coffee)
+    explanation: >
+      美 (American) + 式 (style/type) + 咖啡 (coffee). Espresso diluted with hot or cold water; widely ordered as an everyday morning pick-me-up.
+    interval: 1
+    ease: 2.5
+  - character: 浓缩咖啡
+    pinyin: nóng suō kā fēi
+    meaning: Espresso
+    explanation: >
+      浓 (dense, strong, concentrated - 氵 water + 农 agriculture) + 缩 (contract, shrink) + 咖啡. Highly concentrated shot of coffee brewed under intense pressure.
+    interval: 1
+    ease: 2.5
+  - character: 奶茶
+    pinyin: nǎi chá
+    meaning: Milk tea
+    explanation: >
+      奶 (nǎi: milk - woman radical 女 + 乃) + 茶 (chá: tea). Ubiquitous contemporary youth beverage culture originating in Taiwan and Hong Kong, now a multi-billion dollar cultural phenomenon across mainland China (brands like Heytea 喜茶, Nayuki 奈雪的茶).
+    interval: 1
+    ease: 2.5
+  - character: 珍珠
+    pinyin: zhēn zhū
+    meaning: Tapioca pearls / Boba / Lustrous pearl
+    explanation: >
+      珍 (precious jade) + 珠 (round pearl). Chewy cassava/tapioca spheres nestled at the bottom of milk tea cups (珍珠奶茶 = bubble tea).
+    interval: 1
+    ease: 2.5
+  - character: 绿茶
+    pinyin: lǜ chá
+    meaning: Green tea
+    explanation: >
+      绿 (green - silk radical 纟 + 录) + 茶 (tea). Unfermented tea preserving fresh chlorophyll and catechins; China's most celebrated historic tea variety (e.g. West Lake Longjing 西湖龙井, Dongting Biluochun 洞庭碧螺春).
+    interval: 1
+    ease: 2.5
+  - character: 乌龙茶
+    pinyin: wū lóng chá
+    meaning: Oolong tea
+    explanation: >
+      乌 (dark/black crow) + 龙 (dragon) + 茶 (tea). Literally 'Black Dragon Tea'; semi-oxidized whole-leaf tea revered for floral aroma and complex lingering aftertaste (e.g. Tieguanyin 铁观音, Da Hong Pao 大红袍).
+    interval: 1
+    ease: 2.5
+  - character: 冰块
+    pinyin: bīng kuài
+    meaning: Ice cubes
+    explanation: >
+      冰 (ice - 冫 + 水) + 块 (clod, chunk, piece - 土 earth + 夬). Cubes of ice added to cold brew, iced lattes, and fruit teas.
+    interval: 1
+    ease: 2.5
+  - character: 无糖
+    pinyin: wú táng
+    meaning: Sugar-free (0% sweetness)
+    explanation: >
+      无 (without, nil) + 糖 (sugar/candy - 米 rice radical + 唐). Essential customization option when ordering boba and coffee drinks in China.
+    interval: 1
+    ease: 2.5
+  - character: 半糖
+    pinyin: bàn táng
+    meaning: Half sugar (50% sweetness)
+    explanation: >
+      半 (half) + 糖 (sugar). The balanced sweet spot preferred by many tea connoisseurs seeking flavor without excess syrup.
+    interval: 1
+    ease: 2.5
+  - character: 吸管
+    pinyin: xī guǎn
+    meaning: Drinking straw
+    explanation: >
+      吸 (inhale, suck up - 口 mouth + 及 reach) + 管 (bamboo tube/pipe - ⺮ bamboo radical + 官). Essential accessory provided with iced teas and boba drinks.
+    interval: 1
+    ease: 2.5

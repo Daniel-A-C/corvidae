@@ -1,0 +1,71 @@
+cards:
+  - character: 飞车
+    pinyin: fēi chē
+    meaning: Speeding car / Flying vehicle
+    explanation: >
+      飞 (fēi) means 'to fly', depicting flapping wings, and 车 (chē) is the pictograph of a wheeled chariot or car. Together, a vehicle moving so fast it seems to take flight—used for high-speed chases, roller coasters, or sci-fi hovering vehicles.
+    interval: 1
+    ease: 2.5
+  - character: 阳光
+    pinyin: yáng guāng
+    meaning: Sunlight / Sunshine / Sunny personality
+    explanation: >
+      阳 (yáng) combines the mound radical 阝 with 昜 (the sun radiating warmth/light), and 光 (guāng) means 'rays of light' (a person carrying a torch of fire on their head). Used literally for warm sunshine, and metaphorically to describe a radiant, optimistic, upbeat person (阳光男孩 / 阳光女孩).
+    interval: 1
+    ease: 2.5
+  - character: 金币
+    pinyin: jīn bì
+    meaning: Gold coin
+    explanation: >
+      金 (jīn) means 'gold' or 'metal', depicting precious ore buried within the earth, and 币 (bì) depicts a bolt of silk or carved token representing currency (with the cloth radical 巾). Together, physical gold coins in fantasy games, pirate treasure chests, or ancient dynastic mints.
+    interval: 1
+    ease: 2.5
+  - character: 电门
+    pinyin: diàn mén
+    meaning: Power switch / Electric circuit gate
+    explanation: >
+      电 (diàn) is lightning discharging from rainclouds, and 门 (mén) is the pictograph of double door leaves. Literally 'electric doorway'; refers to an electric power switch, breaker, or motorized automated security gate.
+    interval: 1
+    ease: 2.5
+  - character: 大海
+    pinyin: dà hǎi
+    meaning: The vast ocean / The open sea
+    explanation: >
+      大 (dà) depicts a person with arms outstretched wide, and 海 (hǎi) combines the water radical 氵 with 每 (boundless mothers). Together, 'the immense sea', used throughout poetry, song, and literature to evoke limitless depth and open horizon.
+    interval: 1
+    ease: 2.5
+  - character: 水果
+    pinyin: shuǐ guǒ
+    meaning: Fruit
+    explanation: >
+      水 (shuǐ) means 'water', and 果 (guǒ) is a pictograph of round fruits hanging atop a tree 田+木. The ancient logic is pure poetry: nature's juicy, water-filled bounty plucked from trees = 'water fruit'.
+    interval: 1
+    ease: 2.5
+  - character: 人生
+    pinyin: rén shēng
+    meaning: Human life / One's lifetime journey
+    explanation: >
+      人 (rén) is a person standing on two legs, and 生 (shēng) is a green sprout bursting forth from the earth. Together, the journey of human existence from birth to maturity—one's lifetime, personal philosophy, or career path (人生目标 = life goals).
+    interval: 1
+    ease: 2.5
+  - character: 回家
+    pinyin: huí jiā
+    meaning: To go home / Return home
+    explanation: >
+      回 (huí) is a pictograph of swirling water or concentric spirals returning to the origin, and 家 (jiā) depicts a roof 宀 sheltering a pig 豕 (the quintessential symbol of domestic wealth and hearth in ancient agricultural China). To return to one's sanctuary.
+    interval: 1
+    ease: 2.5
+  - character: 生日
+    pinyin: shēng rì
+    meaning: Birthday
+    explanation: >
+      生 (shēng) means 'to be born' or 'life', and 日 (rì) is the sun or day. The exact solar day upon which one was brought into the world = birthday (祝你生日快乐! = Happy birthday to you!).
+    interval: 1
+    ease: 2.5
+  - character: 路线
+    pinyin: lù xiàn
+    meaning: Route / Path / Itinerary
+    explanation: >
+      路 (lù) combines foot 足 with 各 (arrival), meaning a traveled road, and 线 (xiàn) contains the silk thread radical 纟, meaning a line or strand. The drawn line connecting points on a travel journey = route or itinerary.
+    interval: 1
+    ease: 2.5

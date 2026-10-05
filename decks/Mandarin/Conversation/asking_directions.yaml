@@ -1,0 +1,61 @@
+cards:
+    - character: 请问去地铁站怎么走？
+      pinyin: Qǐngwèn qù dìtiězhàn zěnme zǒu?
+      meaning: Excuse me, how do I get to the subway station?
+      explanation: "请问 (may I ask), 去 (go to), 地铁站 (metro/subway station: 地 ground + 铁 iron/rail + 站 stop/station), 怎么走 (how to walk/get there: 怎么 how + 走 walk/go). The standard inquiry for seeking route directions."
+      interval: 1
+      ease: 2.5
+    - character: 一直往前走。
+      pinyin: Yìzhí wǎng qián zǒu.
+      meaning: Walk straight ahead.
+      explanation: "一直 (straight, continuously: 一 one + 直 straight), 往 (toward: 彳 step radical + 主 direction), 前 (forward/front), 走 (walk). The most common navigational instruction given by locals."
+      interval: 1
+      ease: 2.5
+    - character: 在下一个路口向右拐。
+      pinyin: Zài xià yí gè lùkǒu xiàng yòu guǎi.
+      meaning: Turn right at the next intersection.
+      explanation: "在 (at), 下一个 (the next one), 路口 (intersection/crossing: 路 road + 口 mouth/entrance), 向右拐 (turn right: 向 toward + 右 right + 拐 turn/veer). Note: turn left is 向左拐 (xiàng zuǒ guǎi)."
+      interval: 1
+      ease: 2.5
+    - character: 离这里远不远？
+      pinyin: Lí zhèlǐ yuǎn bu yuǎn?
+      meaning: Is it far from here?
+      explanation: "离 (away from / distance relative to), 这里 (here), 远不远 (far or not: 远 far, distant). Asking whether a destination is within reasonable walking distance."
+      interval: 1
+      ease: 2.5
+    - character: 走路大概十分钟。
+      pinyin: Zǒulù dàgài shí fēnzhōng.
+      meaning: It's about a ten-minute walk.
+      explanation: "走路 (walk: 走 walk + 路 path), 大概 (approximately/roughly: 大 big + 概 outline), 十分钟 (ten minutes). Standard way to describe estimated travel duration."
+      interval: 1
+      ease: 2.5
+    - character: 就在马路对面。
+      pinyin: Jiù zài mǎlù duìmiàn.
+      meaning: It's right across the street.
+      explanation: "就 (precisely, right there), 在 (at), 马路 (street/road: literally 'horse road'), 对面 (opposite side / facing: 对 facing/opposite + 面 surface/side). Directing someone to the opposite side of a thoroughfare."
+      interval: 1
+      ease: 2.5
+    - character: 不好意思，我迷路了。
+      pinyin: Bù hǎoyìsi, wǒ mílù le.
+      meaning: Excuse me / sorry, I am lost.
+      explanation: "不好意思 (embarrassed / excuse me / pardon), 我 (I), 迷路了 (lost my way: 迷 confused/lost + 路 path + 了 change of state). A polite and disarming icebreaker when seeking help from a pedestrian or police officer."
+      interval: 1
+      ease: 2.5
+    - character: 请问洗手间在哪里？
+      pinyin: Qǐngwèn xǐshǒujiān zài nǎlǐ?
+      meaning: Excuse me, where is the restroom?
+      explanation: "请问 (may I ask), 洗手间 (restroom: 洗 wash + 手 hands + 间 room/chamber), 在哪里 (is where). The most polite and universally understood term for the toilet."
+      interval: 1
+      ease: 2.5
+    - character: 几号线可以到机场？
+      pinyin: Jǐ hào xiàn kěyǐ dào jīchǎng?
+      meaning: Which subway line goes to the airport?
+      explanation: "几号线 (which number line: 几 which + 号 number + 线 line/track), 可以 (can), 到 (arrive at / reach), 机场 (airport: 机 machine/plane + 场 open field). Crucial for navigating major subway systems in Beijing, Shanghai, and Guangzhou."
+      interval: 1
+      ease: 2.5
+    - character: 非常感谢你的帮助！
+      pinyin: Fēicháng gǎnxiè nǐ de bāngzhù!
+      meaning: Thank you very much for your help!
+      explanation: "非常 (extraordinary/very: 非 not + 常 ordinary), 感谢 (grateful thanks: 感 feel + 谢 thank), 你的 (your), 帮助 (assistance/help: 帮 help + 助 aid). Gracious, respectful closing after receiving directions."
+      interval: 1
+      ease: 2.5
