@@ -1,0 +1,71 @@
+cards:
+  - character: 天气
+    pinyin: tiān qì
+    meaning: Weather / Atmosphere
+    explanation: >
+      天 (tiān) means 'sky/heaven' and 气 (qì) depicts billowing vapors or vital energy currents. Ancient Chinese science viewed rain, wind, heat, and cold as the shifting breath or vapor of the heavens = the weather.
+    interval: 1
+    ease: 2.5
+  - character: 发现
+    pinyin: fā xiàn
+    meaning: To discover / To find out / Realize
+    explanation: >
+      发 (fā) means 'to release, emit, or shoot forth', and 现 (xiàn) contains the jade radical 王/玉 and 见 (see), meaning to appear or become manifest. To bring something previously hidden into visible awareness = to discover.
+    interval: 1
+    ease: 2.5
+  - character: 欢笑
+    pinyin: huān xiào
+    meaning: Laughter / Joyous laughing
+    explanation: >
+      欢 (huān) means 'jubilant, delightful' and 笑 (xiào) features bamboo stalks ⺮ rustling merrily in the wind over an open, smiling posture. Together, unrestrained bubbling laughter and merriment.
+    interval: 1
+    ease: 2.5
+  - character: 好奇
+    pinyin: hào qí
+    meaning: Curious / Inquisitive
+    explanation: >
+      好 (here pronounced in the 4th tone 'hào', meaning to love, crave, or have an affinity for), and 奇 (qí) means 'novel, marvelous, unusual'. To have an innate appetite for the marvelous and unknown = curious.
+    interval: 1
+    ease: 2.5
+  - character: 书房
+    pinyin: shū fáng
+    meaning: Study room / Home library
+    explanation: >
+      书 (shū) is books/writing, and 房 (fáng) features a door 户 sheltering a room 方. The scholar's private sanctuary in traditional Chinese courtyards dedicated to reading, brush calligraphy, and contemplation.
+    interval: 1
+    ease: 2.5
+  - character: 动人
+    pinyin: dòng rén
+    meaning: Moving / Touching / Poignant
+    explanation: >
+      动 (dòng) means 'to move or stir' and 人 (rén) means 'person'. An artistic performance, story, or song so profound that it physically stirs the emotions of the listener = deeply moving.
+    interval: 1
+    ease: 2.5
+  - character: 成功
+    pinyin: chéng gōng
+    meaning: Success / To succeed
+    explanation: >
+      成 (chéng) means 'to complete, accomplish', and 功 (gōng) combines craft 工 with physical effort 力 (meaning merit or achievement). Bringing persistent effort to fruitful fruition = success.
+    interval: 1
+    ease: 2.5
+  - character: 变化
+    pinyin: biàn huà
+    meaning: Change / Transformation / Shift
+    explanation: >
+      变 (biàn) combines silk threads 䜌 with 攵 (action), meaning an alteration of pattern, and 化 (huà) depicts a person transforming. Together, dynamic transitions in state, fortune, or circumstances.
+    interval: 1
+    ease: 2.5
+  - character: 安全
+    pinyin: ān quán
+    meaning: Safe / Secure / Safety
+    explanation: >
+      安 (ān) shows a woman 女 peacefully sheltered beneath a roof 宀 (serenity, peace), and 全 (quán) shows pure jade 王 preserved intact without a single chip. Complete preservation without hazard = safety.
+    interval: 1
+    ease: 2.5
+  - character: 保护
+    pinyin: bǎo hù
+    meaning: To protect / Safeguard / Defend
+    explanation: >
+      保 (bǎo) shows a person 亻 cradling a young child on their back, and 护 (hù) features a hand 扌 shielding a dwelling. Tender, watchful safeguarding of people, environments, or sacred treasures.
+    interval: 1
+    ease: 2.5

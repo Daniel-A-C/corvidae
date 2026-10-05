@@ -1,0 +1,61 @@
+cards:
+    - character: 孔子
+      pinyin: Kǒngzǐ
+      meaning: Confucius (Master Kong)
+      explanation: "孔 (surname Kong - originally a baby nursing), 子 (master, revered sage). 551–479 BCE. China's most influential philosopher, teacher, and political theorist; founder of Confucianism (儒家), emphasizing benevolence (仁), righteousness (义), and filial piety (孝)."
+      interval: 1
+      ease: 2.5
+    - character: 老子
+      pinyin: Lǎozǐ
+      meaning: Laozi (Master Lao)
+      explanation: "老 (venerable elder), 子 (master). Legendary 6th-century BCE philosopher credited with authoring the Tao Te Ching (道德经) and founding Daoism (道家), advocating harmony with the natural flow of the Dao (无为而治)."
+      interval: 1
+      ease: 2.5
+    - character: 秦始皇
+      pinyin: Qín Shǐhuáng
+      meaning: Qin Shi Huang (First Emperor of Qin)
+      explanation: "秦 (Qin dynasty), 始 (first / beginning), 皇 (emperor / sovereign). 259–210 BCE. The first ruler to unify China under a single empire in 221 BCE, standardizing currency, weights, road widths, and Chinese writing (小篆), and beginning the Great Wall."
+      interval: 1
+      ease: 2.5
+    - character: 诸葛亮
+      pinyin: Zhūgě Liàng
+      meaning: Zhuge Liang (Marquis of Wu)
+      explanation: "诸葛 (two-character compound surname Zhuge), 亮 (bright / radiant). 181–234 CE. Prime Minister of Shu Han during the Three Kingdoms era (三国); celebrated in history and the classic novel Romance of the Three Kingdoms as the supreme strategist and epitome of loyalty."
+      interval: 1
+      ease: 2.5
+    - character: 李白
+      pinyin: Lǐ Bái
+      meaning: Li Bai (Poet Immortal)
+      explanation: "李 (surname Li), 白 (white / pure). 701–762 CE. The legendary Tang Dynasty poet revered as the 'Poet Immortal' (诗仙). Renowned for romantic, exuberant verses celebrating wine, moonlight, and untamed nature (e.g. 静夜思 'Quiet Night Thought')."
+      interval: 1
+      ease: 2.5
+    - character: 杜甫
+      pinyin: Dù Fǔ
+      meaning: Du Fu (Poet Sage)
+      explanation: "杜 (surname Du - birchleaf pear tree), 甫 (courtesy title / elder). 712–770 CE. Li Bai's contemporary and close friend, revered as the 'Poet Sage' (诗圣) and 'Poet Historian' for deeply compassionate verses depicting the hardships of common people during war."
+      interval: 1
+      ease: 2.5
+    - character: 孙悟空
+      pinyin: Sūn Wùkōng
+      meaning: Sun Wukong (The Monkey King)
+      explanation: "孙 (surname Sun - derived from 猢狲 monkey), 悟 (awakening / comprehension - 忄 heart + 吾), 空 (emptiness / void). The legendary mythological hero of the 16th-century epic novel Journey to the West (西游记), possessing 72 transformations and a magical golden staff."
+      interval: 1
+      ease: 2.5
+    - character: 花木兰
+      pinyin: Huā Mùlán
+      meaning: Hua Mulan
+      explanation: "花 (flower), 木兰 (magnolia blossom). Legendary heroine from the ancient Northern Dynasties folk ballad 'The Ballad of Mulan' (木兰辞), who disguised herself as a man to take her ailing father's place in the imperial army for 12 years."
+      interval: 1
+      ease: 2.5
+    - character: 乾隆
+      pinyin: Qiánlóng
+      meaning: Emperor Qianlong
+      explanation: "乾 (heaven / active yang energy), 隆 (abundant / eminent). Reign title of the fourth Qing emperor (reigned 1735–1796), presiding over the peak of Qing imperial wealth, territorial expansion, and the compilation of the Siku Quanshu encyclopedia."
+      interval: 1
+      ease: 2.5
+    - character: 曹操
+      pinyin: Cáo Cāo
+      meaning: Cao Cao
+      explanation: "曹 (surname Cao), 操 (conduct / grasp / exercise). 155–220 CE. Warlord, statesman, and brilliant poet who laid the foundations of the state of Cao Wei during the fall of the Han dynasty. Famous Chinese proverb: '说曹操，曹操到' ('Speak of Cao Cao, and Cao Cao arrives'—the Chinese equivalent of 'speak of the devil')."
+      interval: 1
+      ease: 2.5

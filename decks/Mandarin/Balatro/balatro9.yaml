@@ -1,0 +1,73 @@
+cards:
+    - character: 封印
+      pinyin: fēng yìn
+      meaning: Seal
+      explanation: "封 (clay heaped over mound -> boundary, seal/envelope), 印 (hand pressing a kneeling person down -> stamp, seal, imprint). Special seals applied to playing cards (Red, Blue, Purple, Gold) that trigger unique extra effects when played, held, or discarded."
+      interval: 1
+      ease: 2.5
+    - character: 红色封印
+      pinyin: hóng sè fēng yìn
+      meaning: Red Seal
+      explanation: "红 (silk thread dyed crimson), 色 (color), 封印 (seal). Retriggers the card one additional time whenever scored (essential for multiplying mult and chip retriggers)."
+      interval: 1
+      ease: 2.5
+    - character: 蓝色封印
+      pinyin: lán sè fēng yìn
+      meaning: Blue Seal
+      explanation: "蓝 (indigo plant), 色 (color), 封印 (seal). Creates the Planet card corresponding to the final poker hand played of the round if held in hand at the end of the round."
+      interval: 1
+      ease: 2.5
+    - character: 紫色封印
+      pinyin: zǐ sè fēng yìn
+      meaning: Purple Seal
+      explanation: "紫 (silk thread dyed violet), 色 (color), 封印 (seal). Creates a random Tarot card whenever this card is discarded from your hand."
+      interval: 1
+      ease: 2.5
+    - character: 金色封印
+      pinyin: jīn sè fēng yìn
+      meaning: Gold Seal
+      explanation: "金 (gold/metal), 色 (color), 封印 (seal). Earns $3 when this card is played and scores."
+      interval: 1
+      ease: 2.5
+    - character: 增强
+      pinyin: zēng qiáng
+      meaning: Enhance / Enhancement
+      explanation: "增 (土 earth piled higher = increase, augment), 强 (bow + armored insect = strong, potent). Card enhancements (Bonus, Mult, Wild, Glass, Steel, Stone, Gold, Lucky) modifying standard playing cards."
+      interval: 1
+      ease: 2.5
+    - character: 咒语
+      pinyin: zhòu yǔ
+      meaning: Spell / Incantation
+      explanation: "咒 (口 mouths repeating incantations + 兄 elder priest), 语 (words, speech). Magical incantations on Spectral cards that warp cards into powerful new forms."
+      interval: 1
+      ease: 2.5
+    - character: 灵媒
+      pinyin: líng méi
+      meaning: Medium / Spiritual conduit
+      explanation: "灵 (rain drops falling on altar fire -> divine spirit, mystical), 媒 (woman arranging matches -> intermediary, agent, medium). The Medium spectral card that places purple seals onto cards."
+      interval: 1
+      ease: 2.5
+    - character: 护身符
+      pinyin: hù shēn fú
+      meaning: Talisman / Amulet
+      explanation: "护 (扌 hand protecting/shielding), 身 (body), 符 (bamboo tally inscribed with mystic characters). The Talisman spectral card that embeds gold seals onto cards."
+      interval: 1
+      ease: 2.5
+    - character: 预言
+      pinyin: yù yán
+      meaning: Prophecy / Divination
+      explanation: "预 (beforehand, in advance - as in 预测 forecast, 预备 prepare), 言 (words, speech). Foretelling outcomes or mystical card effects across future hands."
+      interval: 1
+      ease: 2.5
+    - character: 秘术
+      pinyin: mì shù
+      meaning: Secret Art / Arcane
+      explanation: "秘 (禾 grain hidden in darkness = secret, mysterious), 术 (crossroads/pathway = technique, art, craft). The mystical disciplines behind Tarot and Spectral card manipulation."
+      interval: 1
+      ease: 2.5
+    - character: 转化
+      pinyin: zhuǎn huà
+      meaning: Transform / Convert
+      explanation: "转 (车 wheel rotating = turn, shift), 化 (person standing and person upside down = transform, change). Converting card suits, ranks, or editions into different ones."
+      interval: 1
+      ease: 2.5

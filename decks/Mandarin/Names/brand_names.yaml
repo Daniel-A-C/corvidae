@@ -1,0 +1,73 @@
+cards:
+    - character: 苹果
+      pinyin: Píngguǒ
+      meaning: Apple (Apple Inc.) / Apple fruit
+      explanation: "苹 (艹 plant + 平 peace/level), 果 (fruit). Literally 'Apple'. The world-famous tech titan founded by Steve Jobs. In China, iPhones are playfully called 苹果手机."
+      interval: 1
+      ease: 2.5
+    - character: 微软
+      pinyin: Wēiruǎn
+      meaning: Microsoft
+      explanation: "微 (micro / minute - 彳 step + 屾 + 攵), 软 (soft - 车 carriage + 欠). A brilliant literal morpheme translation of 'Micro-soft' (Micro-computer Software)."
+      interval: 1
+      ease: 2.5
+    - character: 谷歌
+      pinyin: Gǔgē
+      meaning: Google
+      explanation: "谷 (valley / grain), 歌 (song / singing). An ingenious phonetic translation of Google chosen for its poetic imagery: 'Harvest Song of the Valley' or 'Echoing Valley Song'."
+      interval: 1
+      ease: 2.5
+    - character: 特斯拉
+      pinyin: Tèsīlā
+      meaning: Tesla
+      explanation: "特 (special / exceptional), 斯 (this / refined), 拉 (pull / drive). Phonetic transliteration for Nikola Tesla / Tesla electric vehicles."
+      interval: 1
+      ease: 2.5
+    - character: 亚马逊
+      pinyin: Yàmǎxùn
+      meaning: Amazon
+      explanation: "亚 (Asia/second), 马 (horse), 逊 (modest / yielding). Standard transliteration for the Amazon River and e-commerce giant."
+      interval: 1
+      ease: 2.5
+    - character: 可口可乐
+      pinyin: Kěkǒu Kělè
+      meaning: Coca-Cola
+      explanation: "可口 (delicious, pleasing to the mouth: 可 suit + 口 mouth), 可乐 (bringing joy and happiness: 可 may + 乐 happiness/music). Widely acclaimed as the greatest brand name translation in marketing history: matches phonetically while meaning 'Tastes delicious and makes you happy'!"
+      interval: 1
+      ease: 2.5
+    - character: 星巴克
+      pinyin: Xīngbākè
+      meaning: Starbucks
+      explanation: "星 (star - literal translation of 'Star'), 巴克 (bākè - phonetic transliteration of '-bucks'). Hybrid semantic-phonetic translation."
+      interval: 1
+      ease: 2.5
+    - character: 麦当劳
+      pinyin: Màidāngláo
+      meaning: McDonald's
+      explanation: "麦 (wheat / grain), 当 (undertake / act as), 劳 (toil / meritorious labor). Phonetic transliteration of McDonald's, evoking wholesome wheat and diligent work."
+      interval: 1
+      ease: 2.5
+    - character: 耐克
+      pinyin: Nàikè
+      meaning: Nike
+      explanation: "耐 (endure, withstand hardships - as in 耐力 endurance), 克 (overcome, conquer). A powerful athletic transliteration matching Nike (Greek goddess of victory): 'Endure and conquer'!"
+      interval: 1
+      ease: 2.5
+    - character: 华为
+      pinyin: Huáwéi
+      meaning: Huawei
+      explanation: "华 (China / splendid magnificence), 为 (action / achievement / to do). Derived from the classical motto '中华有为' (China has promise and great potential)."
+      interval: 1
+      ease: 2.5
+    - character: 腾讯
+      pinyin: Téngxùn
+      meaning: Tencent
+      explanation: "腾 (soaring, galloping horse - 月 + 龹 + 马), 讯 (message, information, speedy - 讠 speech + 十). 'Soaring message'; creator of WeChat (微信) and QQ."
+      interval: 1
+      ease: 2.5
+    - character: 小米
+      pinyin: Xiǎomǐ
+      meaning: Xiaomi
+      explanation: "小 (small / modest), 米 (rice / millet). Named after Buddhist philosophy: 'A single grain of millet is as vast as Mount Sumeru', symbolizing humility, nourishment, and massive ambition."
+      interval: 1
+      ease: 2.5

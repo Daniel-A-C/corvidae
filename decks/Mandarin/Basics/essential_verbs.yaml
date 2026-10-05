@@ -1,0 +1,106 @@
+cards:
+  - character: 是
+    pinyin: shì
+    meaning: To be (is, am, are)
+    explanation: >
+      Ancient pictograph showing the sun 日 shining straight down over 正 (straight/upright), symbolizing truth, rightness, and existence. The fundamental equational copula linking nouns (e.g. 我是学生 = I am a student). Negated as 不是.
+    interval: 1
+    ease: 2.5
+  - character: 有
+    pinyin: yǒu
+    meaning: To have / There is / There are
+    explanation: >
+      Ancient character showing a hand 又 holding a cut of meat 月/肉, indicating possession or presence. Expresses both ownership (我有书 = I have books) and existential presence (桌子上有水 = There is water on the table). Negated exclusively with 没 as 没有.
+    interval: 1
+    ease: 2.5
+  - character: 在
+    pinyin: zài
+    meaning: To be located at / in / on; (ongoing action)
+    explanation: >
+      Depicts a sprout growing from the earth 土, indicating physical presence. Functions both as a locative verb (我在家 = I am at home) and as a progressive aspect marker indicating an action in progress (他在看书 = He is reading a book).
+    interval: 1
+    ease: 2.5
+  - character: 要
+    pinyin: yào
+    meaning: To want / To need / Going to
+    explanation: >
+      Originally depicted a woman with hands on her hips/waist (now 腰). Evolved to express necessity, will, and future intention (我要去 = I will go / I want to go). Indispensable for ordering food or stating future plans.
+    interval: 1
+    ease: 2.5
+  - character: 想
+    pinyin: xiǎng
+    meaning: To think / To want / To miss
+    explanation: >
+      Composed of 相 (mutual appearance / tree + eye) over 心 (heart). Represents thoughts welling up from the heart. Used for desire (我想喝水 = I'd like to drink water), cognitive thought, or missing someone (我想你 = I miss you).
+    interval: 1
+    ease: 2.5
+  - character: 去
+    pinyin: qù
+    meaning: To go
+    explanation: >
+      Originally depicted a person 大 walking away from an enclosure/pit 凵. Indicates movement away from the speaker's location (e.g. 去学校 = go to school). Often combined with other verbs to indicate direction.
+    interval: 1
+    ease: 2.5
+  - character: 来
+    pinyin: lái
+    meaning: To come / (bring on!)
+    explanation: >
+      Originally a pictograph of wheat/grain coming from heaven to nourish humanity. Indicates motion toward the speaker (e.g. 来这里 = come here). Colloquially used at restaurants to order: "来一碗米饭" (bring a bowl of rice!).
+    interval: 1
+    ease: 2.5
+  - character: 看
+    pinyin: kàn
+    meaning: To look / To see / To read / To watch
+    explanation: >
+      Vivid pictograph combining a hand 手 shading an eye 目 to look into the distance. Encompasses all visual perception: watching movies (看电影), reading books (看书), or seeing a doctor (看医生).
+    interval: 1
+    ease: 2.5
+  - character: 吃
+    pinyin: chī
+    meaning: To eat
+    explanation: >
+      Composed of the mouth radical 口 and 乞 (beg, phonetic). The fundamental verb for eating food (吃饭 = eat a meal). Chinese greeting culture often revolves around food: "你吃了吗？" (Have you eaten yet?).
+    interval: 1
+    ease: 2.5
+  - character: 喝
+    pinyin: hē
+    meaning: To drink
+    explanation: >
+      Composed of the mouth radical 口 and 曷 (exhale/shout). Used for imbibing all liquids: 喝水 (drink water), 喝茶 (drink tea), 喝咖啡 (drink coffee).
+    interval: 1
+    ease: 2.5
+  - character: 做
+    pinyin: zuò
+    meaning: To do / To make / To produce
+    explanation: >
+      Composed of the person radical 亻 and 故 (cause, work). The primary action verb for performing work, creating items, or preparing meals (做饭 = cook, 做作业 = do homework, 做工作 = work).
+    interval: 1
+    ease: 2.5
+  - character: 说
+    pinyin: shuō
+    meaning: To speak / To say
+    explanation: >
+      Composed of the speech radical 讠 and 兑 (radiate joy through talking). The primary verb for oral communication (说话 = speak words, 说中文 = speak Chinese).
+    interval: 1
+    ease: 2.5
+  - character: 听
+    pinyin: tīng
+    meaning: To listen / To hear
+    explanation: >
+      Composed of the mouth radical 口 and 斤 (axe, phonetic). Simplified from 聽 (which included ear 耳, eye 目, and heart 心). Used for listening to music (听音乐) or obeying advice (听话).
+    interval: 1
+    ease: 2.5
+  - character: 买
+    pinyin: mǎi
+    meaning: To buy / To purchase
+    explanation: >
+      Composed of net 罒 over 头 (historically cowrie shell 贝 currency). Means to buy. Contrasts directly in tone and character with 卖 (mài, 4th tone, topped with 十), which means 'to sell'. Together, 买卖 (mǎimài) means 'business/commerce'.
+    interval: 1
+    ease: 2.5
+  - character: 给
+    pinyin: gěi
+    meaning: To give / For / To
+    explanation: >
+      Composed of the silk radical 纟 and 合 (fit together). As a verb, it means to hand over or bestow (给我一本书 = give me a book). As a preposition, it introduces the beneficiary of an action (我给他打电话 = I make a phone call to/for him).
+    interval: 1
+    ease: 2.5

@@ -1,0 +1,99 @@
+cards:
+  - character: 我
+    pinyin: wǒ
+    meaning: I / Me
+    explanation: >
+      Ancient pictograph originally depicting a hand holding a weapon or rake-like halberd (戈), asserting oneself. The foundational first-person pronoun in Mandarin. Pluralized with 们 into 我们 (we/us).
+    interval: 1
+    ease: 2.5
+  - character: 你
+    pinyin: nǐ
+    meaning: You (singular)
+    explanation: >
+      Composed of the person radical 亻 and 尔 (ancient 'you'). The second-person singular pronoun. Pluralized into 你们 (you all). The polite/respectful form is 您 (nín), placing a heart 心 beneath 你.
+    interval: 1
+    ease: 2.5
+  - character: 他
+    pinyin: tā
+    meaning: He / Him
+    explanation: >
+      Composed of the person radical 亻 and 也 (phonetic). Originally meant 'other/another', becoming the standard third-person masculine and generic pronoun in the 20th century. Pluralized into 他们 (they/them).
+    interval: 1
+    ease: 2.5
+  - character: 她
+    pinyin: tā
+    meaning: She / Her
+    explanation: >
+      Composed of the woman radical 女 and 也. Created by modern linguist Liu Bannong in the early 20th century to provide a distinct written pronoun for females, while sharing the identical spoken pronunciation 'tā'. Pluralized into 她们 (they/them - all female).
+    interval: 1
+    ease: 2.5
+  - character: 它
+    pinyin: tā
+    meaning: It
+    explanation: >
+      Originally depicted a coiled snake in ancient script. Modern written Chinese adopted 它 as the third-person neuter pronoun for non-human animals and inanimate objects, also pronounced 'tā'.
+    interval: 1
+    ease: 2.5
+  - character: 我们
+    pinyin: wǒ men
+    meaning: We / Us
+    explanation: >
+      Formed by attaching the collective plural suffix 们 (mén: person 亻 + gate 门) to 我 (I/me). Means 'we' or 'us'. Note that northern speech also features 咱们 (zánmen), which explicitly includes the listener.
+    interval: 1
+    ease: 2.5
+  - character: 这
+    pinyin: zhè
+    meaning: This
+    explanation: >
+      Composed of the motion radical 辶 and 文. The primary proximal demonstrative in Mandarin, pointing to things near the speaker in space or time. Frequently paired with the general measure word as 这个 (zhège = this one).
+    interval: 1
+    ease: 2.5
+  - character: 那
+    pinyin: nà
+    meaning: That
+    explanation: >
+      Composed of 阝 (mound/city) and 𠂹. The primary distal demonstrative, pointing to things distant from the speaker. Paired with measure words as 那个 (nàge = that one). Also used colloquially as a verbal pause (like 'um / well then').
+    interval: 1
+    ease: 2.5
+  - character: 谁
+    pinyin: shéi
+    meaning: Who / Whom
+    explanation: >
+      Composed of the speech radical 讠 and 隹 (short-tailed bird). The universal interrogative pronoun for asking identity (e.g. 他是谁？ = Who is he?). In southern and formal contexts, it is also pronounced shuí.
+    interval: 1
+    ease: 2.5
+  - character: 什么
+    pinyin: shén me
+    meaning: What
+    explanation: >
+      什 (ten soldiers / miscellaneous) + 么 (question particle suffix). The fundamental interrogative pronoun for asking about things, actions, or names (e.g. 这是什么？ = What is this?).
+    interval: 1
+    ease: 2.5
+  - character: 哪
+    pinyin: nǎ
+    meaning: Which
+    explanation: >
+      Notice the mouth radical 口 placed on the left of 那 (that). Adding 口 turns the statement 'that' into a question 'which?'. Paired with measure words as 哪个 (nǎge = which one?) or 哪国 (which country?).
+    interval: 1
+    ease: 2.5
+  - character: 这里
+    pinyin: zhè lǐ
+    meaning: Here
+    explanation: >
+      这 (this) + 里 (inside, ancient village unit). 'Inside this place' = here. Interchangeable in Mandarin with the northern rhotic equivalent 这儿 (zhèr).
+    interval: 1
+    ease: 2.5
+  - character: 那里
+    pinyin: nà lǐ
+    meaning: There
+    explanation: >
+      那 (that) + 里 (inside, place). 'In that place' = there. Interchangeable with the northern equivalent 那儿 (nàr).
+    interval: 1
+    ease: 2.5
+  - character: 哪里
+    pinyin: nǎ lǐ
+    meaning: Where / Not at all (humble response)
+    explanation: >
+      哪 (which) + 里 (place). As a question, it asks 'where?' (interchangeable with 哪儿 nǎr). As a polite conversational response repeated twice ("哪里哪里"), it graciously deflects compliments: 'I am not that good / you flatter me'.
+    interval: 1
+    ease: 2.5

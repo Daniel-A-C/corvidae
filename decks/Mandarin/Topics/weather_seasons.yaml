@@ -1,0 +1,92 @@
+cards:
+  - character: 天气预报
+    pinyin: tiān qì yù bào
+    meaning: Weather forecast
+    explanation: >
+      天气 (weather) + 预 (in advance) + 报 (report/bulletin - 扌 hand + 𠬝). Daily meteorological broadcast forecasting temperatures and rain.
+    interval: 1
+    ease: 2.5
+  - character: 晴天
+    pinyin: qíng tiān
+    meaning: Sunny day / Clear skies
+    explanation: >
+      晴 (clear sky - 日 sun radical + 青 azure blue) + 天 (day/sky). Cloudless sky where the sun shines bright.
+    interval: 1
+    ease: 2.5
+  - character: 多云
+    pinyin: duō yún
+    meaning: Cloudy / Partly cloudy
+    explanation: >
+      多 (many/much - two pieces of meat 夕 stacked) + 云 (clouds - swirling vapors). Skies with drifting cloud cover.
+    interval: 1
+    ease: 2.5
+  - character: 下雨
+    pinyin: xià yǔ
+    meaning: Rain / Raining
+    explanation: >
+      下 (fall down) + 雨 (rain - clouds raining drops from the sky). Precipitation falling from storm clouds.
+    interval: 1
+    ease: 2.5
+  - character: 下雪
+    pinyin: xià xuě
+    meaning: Snow / Snowing
+    explanation: >
+      下 (fall down) + 雪 (snow - 雨 rain radical + 彐 sweeping hand). Frozen crystalline water falling during cold winter storms.
+    interval: 1
+    ease: 2.5
+  - character: 刮风
+    pinyin: guā fēng
+    meaning: Windy / Wind blowing
+    explanation: >
+      刮 (scrape, blow fiercely - 舌 tongue + 刂 knife) + 风 (wind - swirling air currents carrying insects 虫). Gusting winds across streets and open fields.
+    interval: 1
+    ease: 2.5
+  - character: 温度
+    pinyin: wēn dù
+    meaning: Temperature
+    explanation: >
+      温 (warm/mild - 氵 water + 昷 warm vessel) + 度 (degree/scale). Thermal measurement in Celsius (摄氏度 shèshìdù).
+    interval: 1
+    ease: 2.5
+  - character: 暖和
+    pinyin: nuǎn huo
+    meaning: Warm and comfortable
+    explanation: >
+      暖 (warm - 日 sun radical + 爰) + 和 (harmonious/soft). Pleasing mild warmth during spring sunlight or a heated room.
+    interval: 1
+    ease: 2.5
+  - character: 凉快
+    pinyin: liáng kuai
+    meaning: Cool and refreshing
+    explanation: >
+      凉 (cool - 冫 ice radical + 京 high tower) + 快 (pleasurable/fast). Refreshing crisp air after a summer rain or in early autumn.
+    interval: 1
+    ease: 2.5
+  - character: 春天
+    pinyin: chūn tiān
+    meaning: Spring (season)
+    explanation: >
+      春 (sun 日 coaxing shoots 艹 through the earth 屯) + 天 (season/sky). Season of new life, budding blossoms, and renewal.
+    interval: 1
+    ease: 2.5
+  - character: 夏天
+    pinyin: xià tiān
+    meaning: Summer (season)
+    explanation: >
+      夏 (pictograph of a dancing person in ceremonial regalia celebrating the peak of solar warmth) + 天 (season). Season of long days, cicadas, and heat.
+    interval: 1
+    ease: 2.5
+  - character: 秋天
+    pinyin: qiū tiān
+    meaning: Autumn / Fall (season)
+    explanation: >
+      秋 (禾 ripe golden grain + 火 scorching sun drying harvest) + 天 (season). Season of harvest, moon festivals, and golden foliage.
+    interval: 1
+    ease: 2.5
+  - character: 冬天
+    pinyin: dōng tiān
+    meaning: Winter (season)
+    explanation: >
+      冬 (ice drops 冫 freezing the tail end of the year) + 天 (season). Coldest season of frost, snow, and Lunar New Year family gatherings.
+    interval: 1
+    ease: 2.5

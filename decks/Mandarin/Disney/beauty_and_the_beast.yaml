@@ -1,0 +1,78 @@
+cards:
+  - character: 美女与野兽
+    pinyin: Měi nǚ yǔ Yě shòu
+    meaning: Beauty and the Beast
+    explanation: >
+      美女 (měinǚ) means 'beautiful woman / beauty', 与 (yǔ) is the literary conjunction for 'and', and 野兽 (yěshòu) means 'wild beast' (野 wild + 兽 animal). The official Chinese title of the 1991 Disney animated masterpiece.
+    interval: 1
+    ease: 2.5
+  - character: 野兽
+    pinyin: yě shòu
+    meaning: The Beast
+    explanation: >
+      野 (yě) combines 里 (field/land) and 予, meaning open wild country, and 兽 (shòu) is the pictograph for an animal or quadruped predator. Cursed by an enchantress for his selfish heart, the young prince is transformed into a fearsome beast until he can learn to love and be loved in return.
+    interval: 1
+    ease: 2.5
+  - character: 玫瑰
+    pinyin: méi gui
+    meaning: Enchanted rose
+    explanation: >
+      Both characters contain the jade radical 王/玉, historically referring to sparkling rose-colored gemstones before becoming the standard botanical name for fragrant roses. The mystical rose enclosed beneath a glass bell jar counts down the prince's 21st year.
+    interval: 1
+    ease: 2.5
+  - character: 花瓣
+    pinyin: huā bàn
+    meaning: Flower petal (falling rose petal)
+    explanation: >
+      花 (huā) means 'flower' and 瓣 (bàn) depicts two halves of a gourd or seed divided by a knife 刀/辛, meaning 'petal, segment, or clove'. As each glowing red rose petal gently falls, the Beast's time to break the spell runs out.
+    interval: 1
+    ease: 2.5
+  - character: 烛台
+    pinyin: zhú tái
+    meaning: Candelabra (Lumière)
+    explanation: >
+      烛 (zhú) combines the fire radical 火 with 虫, originally a candle made of tallow or wax, and 台 (tái) means 'stand or platform'. The debonair French royal maître d' Lumière is transformed by the curse into a charming, three-armed brass candelabra.
+    interval: 1
+    ease: 2.5
+  - character: 茶壶
+    pinyin: chá hú
+    meaning: Teapot (Mrs. Potts)
+    explanation: >
+      茶 (chá) is the character for 'tea' (plant radical 艹 + human roof + wood), and 壶 (hú) is a pictograph of a vessel with a lid, handle, and pouring spout. The castle's warm and maternal head housekeeper Mrs. Potts is transformed into a singing porcelain teapot, with her young son Chip as a cracked teacup.
+    interval: 1
+    ease: 2.5
+  - character: 时钟
+    pinyin: shí zhōng
+    meaning: Mantel clock (Cogsworth)
+    explanation: >
+      时 (shí) means 'time' and 钟 (zhōng) means 'clock/bell' (with the metal radical 金). The punctilious, rule-bound castle majordomo Cogsworth is transformed into a wound-up mantel clock with swinging pendulum.
+    interval: 1
+    ease: 2.5
+  - character: 图书馆
+    pinyin: tú shū guǎn
+    meaning: Grand library
+    explanation: >
+      图 (tú) means 'maps/drawings', 书 (shū) means 'books', and 馆 (guǎn) means 'public building/hall' (featuring the food radical 饣, historically a banquet lodge). Belle's passion is literature, and the Beast wins her affection by gifting her his castle's colossal, multi-story library filled with thousands of books.
+    interval: 1
+    ease: 2.5
+  - character: 魔镜
+    pinyin: mó jìng
+    meaning: Magic mirror
+    explanation: >
+      魔 (mó) means 'magic, illusion, demon' (with the demon radical 鬼 beneath 麻) and 镜 (jìng) means 'mirror' (metal radical 金 + 竟 border/light reflection). The magical mirror bestowed by the enchantress is the Beast's only window to the outside world, allowing the holder to gaze upon anything their heart desires.
+    interval: 1
+    ease: 2.5
+  - character: 诅咒
+    pinyin: zǔ zhòu
+    meaning: Curse / Hex
+    explanation: >
+      诅 (zǔ) combines the speech radical 讠 with 且, meaning swearing an oath of malice, and 咒 (zhòu) features mouths 口 speaking hexes. The dark enchantment cast over the castle and its inhabitants, which can only be lifted by true love before the final petal falls.
+    interval: 1
+    ease: 2.5
+  - character: 解除
+    pinyin: jiě chú
+    meaning: To lift / To break (a curse or spell)
+    explanation: >
+      解 (jiě) combines horn 角, knife 刀, and ox 牛, meaning untying or dissecting a knot, and 除 (chú) features the mound radical 阝 with 余, meaning eliminating or casting away. As Belle whispers her love through tears over the dying Beast, the spell is broken, bathing the castle in radiant golden light.
+    interval: 1
+    ease: 2.5

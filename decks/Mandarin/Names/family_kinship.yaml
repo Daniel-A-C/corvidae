@@ -1,0 +1,86 @@
+cards:
+    - character: 爸爸
+      pinyin: bà ba
+      meaning: Father / Dad
+      explanation: "父 (fù: hand holding a stick of authority -> father) acts as the radical on top, with 巴 (bā) below acting as phonetic. The universal informal and affectionate term for father."
+      interval: 1
+      ease: 2.5
+    - character: 妈妈
+      pinyin: mā ma
+      meaning: Mother / Mom
+      explanation: "女 (nǚ: woman) radical on the left combined with 马 (mǎ: horse) on the right for phonetics. The universal affectionate address for mother."
+      interval: 1
+      ease: 2.5
+    - character: 哥哥
+      pinyin: gē ge
+      meaning: Older brother
+      explanation: "Doubled 可 (kě: approval/singing). In Chinese family hierarchy, birth order is always explicitly distinguished; older brother carries traditional protective responsibility for younger siblings."
+      interval: 1
+      ease: 2.5
+    - character: 弟弟
+      pinyin: dì di
+      meaning: Younger brother
+      explanation: >
+        Originally depicted a leather cord wound around a wooden spool from top to bottom, signifying sequential descent. Younger male sibling.
+      interval: 1
+      ease: 2.5
+    - character: 姐姐
+      pinyin: jiě jie
+      meaning: Older sister
+      explanation: "女 (woman radical) + 且 (phonetic/ancestral marker). The elder sister in the family hierarchy, often helping care for younger siblings."
+      interval: 1
+      ease: 2.5
+    - character: 妹妹
+      pinyin: mèi mei
+      meaning: Younger sister
+      explanation: "女 (woman radical) + 未 (not yet / budding tree branch = youthful, not yet grown). Younger female sibling."
+      interval: 1
+      ease: 2.5
+    - character: 爷爷
+      pinyin: yé ye
+      meaning: Paternal grandfather
+      explanation: "父 (father radical) + 卩. Specifically the grandfather on the father's side of the family. In northern China, also used as an affectionate honorific for elderly men."
+      interval: 1
+      ease: 2.5
+    - character: 奶奶
+      pinyin: nǎi nai
+      meaning: Paternal grandmother
+      explanation: "女 (woman radical) + 乃 (soft curves). Specifically the grandmother on the father's side of the family. Associated with warmth, cooking, and spoiling grandchildren."
+      interval: 1
+      ease: 2.5
+    - character: 外公
+      pinyin: wài gōng
+      meaning: Maternal grandfather
+      explanation: "外 (outer / maternal side of the family: 夕 evening + 卜), 公 (respected elder / duke). Grandfather on the mother's side (widely called 姥爷 lǎoye in Beijing and northern China)."
+      interval: 1
+      ease: 2.5
+    - character: 外婆
+      pinyin: wài pó
+      meaning: Maternal grandmother
+      explanation: "外 (maternal side), 婆 (elderly matron). Grandmother on the mother's side (widely called 姥姥 lǎolao in northern China)."
+      interval: 1
+      ease: 2.5
+    - character: 叔叔
+      pinyin: shū shu
+      meaning: Uncle / Paternal younger uncle / Mister
+      explanation: "又 (hand) gathering beans 尗. Originally father's younger brother. In everyday modern Chinese life, children politely call any adult man '叔叔'."
+      interval: 1
+      ease: 2.5
+    - character: 阿姨
+      pinyin: ā yí
+      meaning: Aunt / Maternal aunt / Miss / Ma'am
+      explanation: "阿 (friendly prefix), 姨 (mother's sister: 女 woman + 夷). Universally used by children and adults alike to politely address adult women, housekeepers, or school staff."
+      interval: 1
+      ease: 2.5
+    - character: 孩子
+      pinyin: hái zi
+      meaning: Child / Children
+      explanation: "孩 (child: 子 child + 亥 embryo/seed), 子 (noun suffix). Refers to one's offspring or children in general."
+      interval: 1
+      ease: 2.5
+    - character: 父母
+      pinyin: fù mǔ
+      meaning: Parents
+      explanation: "父 (father) + 母 (mother, depicting a kneeling woman nursing a child with two nurturing breasts). Formal compound for one's parents (父母亲)."
+      interval: 1
+      ease: 2.5

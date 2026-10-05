@@ -1,0 +1,97 @@
+cards:
+    - character: 中国
+      pinyin: Zhōngguó
+      meaning: China (The Middle Kingdom)
+      explanation: "中 (center, middle - line striking the target center), 国 (country, nation - 囗 enclosing borders defending jade/treasure 玉 within). Ancient Chinese worldview of a civilization situated at the center of the earth."
+      interval: 1
+      ease: 2.5
+    - character: 美国
+      pinyin: Měiguó
+      meaning: United States of America
+      explanation: "美 (beautiful - large sheep 大 + 羊 representing fine nourishment and beauty; phonetic abbreviation for 亚美利加 America), 国 (country). Literally 'Beautiful Country'."
+      interval: 1
+      ease: 2.5
+    - character: 英国
+      pinyin: Yīngguó
+      meaning: United Kingdom / Britain / England
+      explanation: "英 (heroic, blossoming flower, outstanding talent; phonetic abbreviation for 英格兰 England), 国 (country). Literally 'Heroic / Flower Country'."
+      interval: 1
+      ease: 2.5
+    - character: 法国
+      pinyin: Fǎguó
+      meaning: France
+      explanation: "法 (law, method, dharma - 氵 water + 去 flow/level; phonetic abbreviation for 法兰西 France), 国 (country). Literally 'Country of Law'."
+      interval: 1
+      ease: 2.5
+    - character: 德国
+      pinyin: Déguó
+      meaning: Germany
+      explanation: "德 (virtue, character, morality - 彳 walk + 十 + 目 eye + 心 heart; phonetic abbreviation for 德意志 Deutschland), 国 (country). Literally 'Country of Virtue'."
+      interval: 1
+      ease: 2.5
+    - character: 日本
+      pinyin: Rìběn
+      meaning: Japan
+      explanation: "日 (sun), 本 (root, origin, base - tree 木 with bottom root stroke 一). Literally 'Origin of the Sun' (Land of the Rising Sun), named for its eastern geographical position facing China across the sea."
+      interval: 1
+      ease: 2.5
+    - character: 韩国
+      pinyin: Hánguó
+      meaning: South Korea (Republic of Korea)
+      explanation: "韩 (ancient state name; phonetic for Korean 'Han' 大韩民国), 国 (country). Located on the southern half of the Korean peninsula."
+      interval: 1
+      ease: 2.5
+    - character: 加拿大
+      pinyin: Jiānádà
+      meaning: Canada
+      explanation: "加 (add, augment), 拿 (hold, grasp with hand 手), 大 (big, vast). Pure phonetic transliteration of the Iroquoian word 'Kanata' (settlement/village)."
+      interval: 1
+      ease: 2.5
+    - character: 澳大利亚
+      pinyin: Àodàlìyà
+      meaning: Australia
+      explanation: "澳 (inlet, deep bay), 大 (large), 利 (favorable, sharp), 亚 (Asia/second). Phonetic transliteration of Latin 'Australis' (southern). Often affectionately shortened in speech to 澳洲 (Àozhōu)."
+      interval: 1
+      ease: 2.5
+    - character: 俄罗斯
+      pinyin: Éluósī
+      meaning: Russia
+      explanation: "俄 (sudden, lean), 罗 (spread net / silk), 斯 (this). Transliterated via Mongolian 'Oros', which prefixed a vowel onto the Slavic root 'Rus' (hence starting with É 俄)."
+      interval: 1
+      ease: 2.5
+    - character: 意大利
+      pinyin: Yìdàlì
+      meaning: Italy
+      explanation: "意 (meaning, intention), 大 (big), 利 (profit, benefit). Phonetic transliteration for Italia. Also written as 意国."
+      interval: 1
+      ease: 2.5
+    - character: 西班牙
+      pinyin: Xībānyá
+      meaning: Spain
+      explanation: "西 (west), 班 (class, rank), 牙 (tooth, tusk). Phonetic transliteration for España / Spain."
+      interval: 1
+      ease: 2.5
+    - character: 墨西哥
+      pinyin: Mòxīgē
+      meaning: Mexico
+      explanation: "墨 (ink, black - 黑 black + 土 earth), 西 (west), 哥 (elder brother). Phonetic transliteration for Mexico."
+      interval: 1
+      ease: 2.5
+    - character: 巴西
+      pinyin: Bāxī
+      meaning: Brazil
+      explanation: "巴 (cling to, hope; ancient Sichuan state), 西 (west). Phonetic transliteration for Brasil (named for the brazilwood tree)."
+      interval: 1
+      ease: 2.5
+    - character: 印度
+      pinyin: Yìndù
+      meaning: India
+      explanation: "印 (seal, stamp), 度 (measure, degree). Historic transliteration for the Indus River / Sindhu, standardized by the 7th-century Tang monk Xuanzang (玄奘) upon his pilgrimage to obtain Buddhist scriptures."
+      interval: 1
+      ease: 2.5
+    - character: 新加坡
+      pinyin: Xīnjiāpō
+      meaning: Singapore
+      explanation: "新 (new), 加 (add), 坡 (sloping hill - 土 earth + 皮). Phonetic transliteration of Malay 'Singapura' (Lion City). Major Southeast Asian island metropolis with a majority ethnic Chinese population."
+      interval: 1
+      ease: 2.5

@@ -1,0 +1,73 @@
+cards:
+    - character: 长城
+      pinyin: Chángchéng
+      meaning: The Great Wall of China
+      explanation: "长 (cháng: long, length), 城 (chéng: city wall, fortress - 土 earth radical + 成 become). Literally 'Long Fortress Wall'. Stretching over 21,000 kilometers across northern ridges, built across millennia to protect frontier borders. Famous proverb: '不到长城非好汉' ('He who has not climbed the Great Wall is not a true hero')."
+      interval: 1
+      ease: 2.5
+    - character: 故宫
+      pinyin: Gùgōng
+      meaning: The Forbidden City (Palace Museum)
+      explanation: "故 (gù: ancient, former, past - as in 故事 story, 故乡 hometown), 宫 (gōng: palace, imperial court - 宀 roof covering multiple connected chambers). Literally 'Former Palace'; historically called 紫禁城 (Purple Forbidden City). The imperial palace of 24 Ming and Qing emperors, holding 9,999.5 ceremonial rooms."
+      interval: 1
+      ease: 2.5
+    - character: 兵马俑
+      pinyin: Bīngmǎyǒng
+      meaning: Terracotta Army (in Xi'an)
+      explanation: "兵 (soldier, warrior - two hands holding an axe), 马 (horse), 俑 (burial figurine sculpted to accompany the deceased). The subterranean clay army of over 8,000 life-sized warriors, chariots, and horses buried with Qin Shi Huang in 210 BCE to guard his eternal tomb."
+      interval: 1
+      ease: 2.5
+    - character: 天坛
+      pinyin: Tiāntán
+      meaning: Temple of Heaven (in Beijing)
+      explanation: "天 (heaven, sky), 坛 (sacred sacrificial altar made of raised earth 土). Imperial sacrificial altar complex where Ming and Qing emperors performed solemn winter solstice rites to pray for bountiful harvests. Celebrated for the iconic triple-gabled circular Hall of Prayer for Good Harvests (祈年殿)."
+      interval: 1
+      ease: 2.5
+    - character: 颐和园
+      pinyin: Yíhéyuán
+      meaning: Summer Palace (in Beijing)
+      explanation: "颐 (yí: nourish, foster vitality - as in 颐养), 和 (hé: harmony, peace), 园 (yuán: imperial garden/park). Built during the Qing Dynasty centered around Kunming Lake (昆明湖) and Longevity Hill (万寿山); masterpieces of Chinese imperial landscape garden architecture."
+      interval: 1
+      ease: 2.5
+    - character: 莫高窟
+      pinyin: Mògāokū
+      meaning: Mogao Caves (Dunhuang Grottoes)
+      explanation: "莫 (desert/none), 高 (high/elevated), 窟 (caves, grottos - 穴 cave radical + 屈 bent/curved). Located along the Silk Road oasis of Dunhuang in Gansu province; nearly 500 hand-carved cliff temples housing over a millennium of breathtaking Buddhist murals and sculptures."
+      interval: 1
+      ease: 2.5
+    - character: 布达拉宫
+      pinyin: Bùdálǎ Gōng
+      meaning: Potala Palace (in Lhasa, Tibet)
+      explanation: "布达拉 (Bùdálǎ: phonetic for Sanskrit 'Potalaka', mythical abode of Bodhisattva Avalokiteshvara), 宫 (palace). Iconic hilltop palace fortress towering above Lhasa at 3,700 meters altitude; historic winter residence of the Dalai Lama and architectural symbol of Tibetan culture."
+      interval: 1
+      ease: 2.5
+    - character: 泰山
+      pinyin: Tàishān
+      meaning: Mount Tai (in Shandong)
+      explanation: "泰 (tài: peace, grandeur, supreme - as in 国泰民安 peaceful nation), 山 (mountain). Foremost among the Five Sacred Mountains of China (五岳之首). For 3,000 years, Chinese emperors climbed its 7,000 stone steps to perform the sacred Feng Shan (封禅) ceremonies to heaven and earth."
+      interval: 1
+      ease: 2.5
+    - character: 黄山
+      pinyin: Huángshān
+      meaning: Mount Huangshan (Yellow Mountain, in Anhui)
+      explanation: "黄 (yellow), 山 (mountain). Renowned for its four classic natural wonders: uniquely gnarled pine trees (奇松), absurdly shaped granite peaks (怪石), misty seas of rolling clouds (云海), and bubbling geothermal hot springs (温泉)."
+      interval: 1
+      ease: 2.5
+    - character: 张家界
+      pinyin: Zhāngjiājiè
+      meaning: Zhangjiajie (in Hunan)
+      explanation: "张 (surname Zhang), 家 (family), 界 (boundary, world - as in 世界 world). National forest park in Hunan famed for over 3,000 towering quartz-sandstone pillar pillars that inspired the floating 'Hallelujah Mountains' in James Cameron's movie Avatar."
+      interval: 1
+      ease: 2.5
+    - character: 外滩
+      pinyin: Wàitān
+      meaning: The Bund (in Shanghai)
+      explanation: "外 (outer, outside), 滩 (sandbank, shoal, riverbank - 氵 water + 难). Waterfront boulevard lining the Huangpu River in central Shanghai, celebrated for dozens of historic European neoclassical colonial banks and trading houses directly facing the futuristic Lujiazui skyline."
+      interval: 1
+      ease: 2.5
+    - character: 东方明珠
+      pinyin: Dōngfāng Míngzhū
+      meaning: Oriental Pearl Tower (in Shanghai)
+      explanation: "东方 (the Orient / East: 东 east + 方 direction), 明珠 (bright pearl: 明 bright + 珠 lustrous pearl - inspired by Bai Juyi's poem 'pearls large and small dropping into a jade dish'). The iconic 468-meter broadcast tower in Shanghai's Pudong district."
+      interval: 1
+      ease: 2.5

@@ -1,0 +1,73 @@
+cards:
+    - character: 再次触发
+      pinyin: zài cì chù fā
+      meaning: Retrigger
+      explanation: "再 (twice, again), 次 (order, time/occurrence), 触发 (trigger: 触 touch + 发 release). When a card or Joker activates an additional time (key mechanic for Hack, Dusk, Sock and Buskin)."
+      interval: 1
+      ease: 2.5
+    - character: 基础
+      pinyin: jī chǔ
+      meaning: Base / Foundation
+      explanation: "基 (earth under basket = base, foundation), 础 (plinth stone supporting a pillar). The base chips and base mult innate to each poker hand type prior to Joker buffs."
+      interval: 1
+      ease: 2.5
+    - character: 成长
+      pinyin: chéng zhǎng
+      meaning: Scaling / Grow
+      explanation: "成 (become, accomplish), 长 (grow, lengthen). Scaling Jokers (like Green Joker, Supernova, Constellation) whose values permanently increase over the run."
+      interval: 1
+      ease: 2.5
+    - character: 乘法
+      pinyin: chéng fǎ
+      meaning: Multiplication / X Mult
+      explanation: "乘 (person climbing onto a tree -> mount, multiply), 法 (method, law). Multiplicative scoring (X Mult) that compounds your mult exponentially, yielding massive scores."
+      interval: 1
+      ease: 2.5
+    - character: 加法
+      pinyin: jiā fǎ
+      meaning: Addition / + Mult or + Chips
+      explanation: "加 (force 力 + mouth 口 = add, augment), 法 (rule, method). Flat additive bonuses (+4 Mult, +50 Chips) that build your initial score base."
+      interval: 1
+      ease: 2.5
+    - character: 无尽模式
+      pinyin: wú jìn mó shì
+      meaning: Endless Mode
+      explanation: "无尽 (endless, infinite: 无 without + 尽 end/exhaustion), 模式 (pattern, mode: 模 mold + 式 style). Continuing past Ante 8 into escalating, astronomically high blinds."
+      interval: 1
+      ease: 2.5
+    - character: 通关
+      pinyin: tōng guān
+      meaning: Beat the game / Clear the run
+      explanation: "通 (pass through, connect), 关 (barrier gate, checkpoint). Successfully clearing Ante 8 and conquering the final Boss Blind."
+      interval: 1
+      ease: 2.5
+    - character: 记录
+      pinyin: jì lù
+      meaning: Record / High score
+      explanation: "记 (speech recording memory), 录 (strip of writing/record). Personal best round score, highest hand, or collection progress."
+      interval: 1
+      ease: 2.5
+    - character: 难度
+      pinyin: nán dù
+      meaning: Difficulty
+      explanation: "难 (difficult, arduous), 度 (degree, measure). The stake level difficulty tiers (White, Red, Green, Black, Blue, Purple, Orange, Gold)."
+      interval: 1
+      ease: 2.5
+    - character: 联动
+      pinyin: lián dòng
+      meaning: Synergy / Linkage
+      explanation: "联 (ears listening together -> unite, connect), 动 (movement, action). The interlocked synergy between Jokers, cards, and voucher effects that powers winning runs."
+      interval: 1
+      ease: 2.5
+    - character: 组合
+      pinyin: zǔ hé
+      meaning: Combo / Combination
+      explanation: "组 (silk threads braided together = organize, assemble), 合 (join, fit together). Strategic combinations of cards and abilities played together."
+      interval: 1
+      ease: 2.5
+    - character: 胜率
+      pinyin: shèng lǜ
+      meaning: Win rate
+      explanation: "胜 (conquer, triumph), 率 (ratio, rate). The statistical frequency of successfully completing runs on challenging deck stakes."
+      interval: 1
+      ease: 2.5

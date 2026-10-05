@@ -1,0 +1,99 @@
+cards:
+  - character: 今天
+    pinyin: jīn tiān
+    meaning: Today
+    explanation: >
+      今 (jīn) means 'present/current' and 天 (tiān) means 'day/sky'. Literally 'the present day'. Foundational anchor point for relative time in Mandarin.
+    interval: 1
+    ease: 2.5
+  - character: 明天
+    pinyin: míng tiān
+    meaning: Tomorrow
+    explanation: >
+      明 (míng) combines the sun 日 and moon 月 to symbolize brightness or the next dawn, and 天 (tiān) means 'day'. The bright day ahead = tomorrow.
+    interval: 1
+    ease: 2.5
+  - character: 昨天
+    pinyin: zuó tiān
+    meaning: Yesterday
+    explanation: >
+      昨 (zuó) combines the sun radical 日 with 乍 (suddenly/past) to mean the day just passed, and 天 means 'day'. Literally 'yesterday'.
+    interval: 1
+    ease: 2.5
+  - character: 现在
+    pinyin: xiàn zài
+    meaning: Now / Right now / Currently
+    explanation: >
+      现 (xiàn) contains the jade radical 王/玉 and 见 (see), originally meaning the luster of jade appearing, evolving to 'appear, present'. 在 (zài) indicates being present. 'Presently existing' = right now.
+    interval: 1
+    ease: 2.5
+  - character: 早上
+    pinyin: zǎo shang
+    meaning: Morning (early morning)
+    explanation: >
+      早 (zǎo) shows the sun 日 rising above the horizon 十, meaning early. 上 (shang) acts as a locative suffix. Refers to early morning from dawn until around 9:00 AM (often shortened to 早! as 'good morning!').
+    interval: 1
+    ease: 2.5
+  - character: 中午
+    pinyin: zhōng wǔ
+    meaning: Noon / Midday
+    explanation: >
+      中 (zhōng) means 'middle' or 'center', and 午 (wǔ) refers to the earthly branch marking the midday hour (11:00 AM to 1:00 PM). Midday / lunch hour.
+    interval: 1
+    ease: 2.5
+  - character: 晚上
+    pinyin: wǎn shang
+    meaning: Evening / Night
+    explanation: >
+      晚 (wǎn) combines the sun radical 日 with 免, meaning the sun setting or departing, hence late or night. 晚上好 (wǎnshang hǎo) = good evening.
+    interval: 1
+    ease: 2.5
+  - character: 星期
+    pinyin: xīng qī
+    meaning: Week
+    explanation: >
+      星 (xīng) means 'star/celestial body' and 期 (qī) means 'period/cycle'. Derived from ancient planetary calendars. In Mandarin, days of the week simply append numbers 1-6: 星期一 (Monday) through 星期六 (Saturday), with Sunday as 星期日 or 星期天.
+    interval: 1
+    ease: 2.5
+  - character: 年
+    pinyin: nián
+    meaning: Year
+    explanation: >
+      Originally depicted a person carrying ripe grain 禾 on their back, as the annual grain harvest marked the passing of a full agricultural year. Used for dates (2026年) and duration (三年 = three years).
+    interval: 1
+    ease: 2.5
+  - character: 月
+    pinyin: yuè
+    meaning: Month / Moon
+    explanation: >
+      Pictograph of the crescent moon. The moon's lunar cycle defines the month. Months in Mandarin are named sequentially: 一月 (January) through 十二月 (December). Duration uses the measure word: 一个月 (one month).
+    interval: 1
+    ease: 2.5
+  - character: 日
+    pinyin: rì
+    meaning: Day of the month / Sun / Date
+    explanation: >
+      Pictograph of the sun disk with a spot in the center. Used in formal and written dates (e.g. 10月5日). In casual spoken Mandarin, 号 (hào) is more frequently used for the calendar date (e.g. 5号).
+    interval: 1
+    ease: 2.5
+  - character: 点
+    pinyin: diǎn
+    meaning: O'clock / Hour / Dot / A little
+    explanation: >
+      Originally depicted black marks or drops of ink. In timekeeping, it marks the exact strikes/points on the clock face (e.g. 三点 = 3 o'clock). Paired with 一点儿 (yìdiǎnr) to mean 'a little bit'.
+    interval: 1
+    ease: 2.5
+  - character: 分钟
+    pinyin: fēn zhōng
+    meaning: Minute
+    explanation: >
+      分 (fēn) means 'to divide/separate' (knife 刀 dividing 八), and 钟 (zhōng) means 'clock/bell'. A divided unit of clock time = minute (e.g. 十分 / 十分钟 = ten minutes).
+    interval: 1
+    ease: 2.5
+  - character: 时候
+    pinyin: shí hou
+    meaning: Time / Moment / When...
+    explanation: >
+      时 (shí) means 'time' and 候 (hòu) means 'wait/season'. Combined, it refers to a duration or point in time. Ubiquitous in the grammatical construction '……的时候' (de shíhou = when / while doing something) and '什么时候？' (shénme shíhou = what time? / when?).
+    interval: 1
+    ease: 2.5

@@ -1,0 +1,79 @@
+cards:
+    - character: 山脉
+      pinyin: shān mài
+      meaning: Mountain range
+      explanation: "山 (mountain - three peaks), 脉 (blood vessels, arteries - 月 flesh + 永 eternal flowing water). Mountain peaks stretching in connected ridges like the pulsating blood vessels of the earth."
+      interval: 1
+      ease: 2.5
+    - character: 河流
+      pinyin: hé liú
+      meaning: River / Stream / Waterway
+      explanation: "河 (river - specifically originating from the Yellow River), 流 (flowing water - 氵 + child head downwards 𠫓 + streams 川). Natural freshwater courses flowing toward an ocean or lake."
+      interval: 1
+      ease: 2.5
+    - character: 湖泊
+      pinyin: hú pō
+      meaning: Lake
+      explanation: "湖 (lake - 氵 water + 古 old + 月), 泊 (moor boat / shallow body of water - 氵 + 白 white). Enclosed bodies of water surrounded entirely by land."
+      interval: 1
+      ease: 2.5
+    - character: 海洋
+      pinyin: hǎi yáng
+      meaning: Ocean / Sea
+      explanation: "海 (sea - water bordering the coast), 洋 (vast open high seas / ocean). Together referring to the interconnected global marine saltwater system."
+      interval: 1
+      ease: 2.5
+    - character: 岛屿
+      pinyin: dǎo yǔ
+      meaning: Island / Isles
+      explanation: "岛 (island - bird 鸟 perching atop an offshore sea mountain 山), 屿 (small islet - 山 mountain + 与). Land completely surrounded by water."
+      interval: 1
+      ease: 2.5
+    - character: 半岛
+      pinyin: bàn dǎo
+      meaning: Peninsula
+      explanation: "半 (half), 岛 (island). Literally 'half island'; a landmass projecting out into a body of water and surrounded by water on three sides (e.g. 朝鲜半岛 Korean Peninsula, 佛罗里达半岛 Florida Peninsula)."
+      interval: 1
+      ease: 2.5
+    - character: 平原
+      pinyin: píng yuán
+      meaning: Plain / Lowlands
+      explanation: "平 (flat, level, even), 原 (meadow, source, high ground). Expansive stretches of flat, unobstructed land (e.g. 华北平原 North China Plain)."
+      interval: 1
+      ease: 2.5
+    - character: 高原
+      pinyin: gāo yuán
+      meaning: Plateau / Highland
+      explanation: "高 (tall, high elevation), 原 (plains/field). Elevated land with relatively flat terrain (e.g. 青藏高原 Qinghai-Tibet Plateau, known as the 'Roof of the World')."
+      interval: 1
+      ease: 2.5
+    - character: 沙漠
+      pinyin: shā mò
+      meaning: Desert
+      explanation: "沙 (sand - 氵 water diminishing into tiny grains 少), 漠 (vast arid wasteland - 氵 water + 莫 sun setting in grass). Hyper-arid landscapes with little to no precipitation (e.g. 撒哈拉沙漠 Sahara Desert)."
+      interval: 1
+      ease: 2.5
+    - character: 森林
+      pinyin: sēn lín
+      meaning: Forest
+      explanation: "森 (three trees 木 stacked together = dense primeval woods), 林 (two trees 木 side by side = grove, woods). A dense canopy of trees covering an extensive geographic region."
+      interval: 1
+      ease: 2.5
+    - character: 瀑布
+      pinyin: pù bù
+      meaning: Waterfall
+      explanation: "瀑 (cascading rushing water - 氵 water + 暴 torrential/fierce), 布 (cloth, sheet). Water plunging over a precipice, resembling a hanging sheet of white silk."
+      interval: 1
+      ease: 2.5
+    - character: 海峡
+      pinyin: hǎi xiá
+      meaning: Strait / Channel
+      explanation: "海 (sea), 峡 (gorge, narrow passage - 山 mountains flanking夹 a narrow gap). A narrow waterway connecting two larger bodies of sea water (e.g. 台湾海峡 Taiwan Strait, 白令海峡 Bering Strait)."
+      interval: 1
+      ease: 2.5
+    - character: 盆地
+      pinyin: pén dì
+      meaning: Basin (geological depression)
+      explanation: "盆 (shallow washbasin / bowl - 分 divide + 皿 shallow dish), 地 (earth, terrain). A low-lying land depression completely encircled by higher mountain ridges (e.g. 四川盆地 Sichuan Basin)."
+      interval: 1
+      ease: 2.5

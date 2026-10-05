@@ -1,0 +1,73 @@
+cards:
+    - character: 服务员，请问有位子吗？
+      pinyin: Fúwùyuán, qǐngwèn yǒu wèizi ma?
+      meaning: Waiter, excuse me, is there a table available?
+      explanation: "服务员 (waiter/server: 服务 service + 员 personnel), 请问 (may I ask), 有 (have/exist), 位子 (seat/table: 位 seat/station + 子 noun suffix), 吗 (question particle). Standard polite greeting when entering any restaurant."
+      interval: 1
+      ease: 2.5
+    - character: 我们想点菜。
+      pinyin: Wǒmen xiǎng diǎn cài.
+      meaning: We would like to order food.
+      explanation: "我们 (we/us), 想 (would like to), 点菜 (order food: 点 choose/pick from menu + 菜 dish/cuisine). Standard signal to summon the server when ready to place your order."
+      interval: 1
+      ease: 2.5
+    - character: 这个菜辣不辣？
+      pinyin: Zhè ge cài là bu là?
+      meaning: Is this dish spicy?
+      explanation: "这个 (this), 菜 (dish), 辣不辣 (spicy or not: 辣 pungent/spicy, 辛 bitter/pungent radical + 束). Essential affirmative-negative question when dining in China, especially in Sichuan or Hunan restaurants."
+      interval: 1
+      ease: 2.5
+    - character: 请推荐一个特色菜。
+      pinyin: Qǐng tuījiàn yí gè tèsè cài.
+      meaning: Please recommend a specialty dish.
+      explanation: "请 (please), 推荐 (recommend: 推 push forward + 荐 present/introduce), 一个 (one), 特色菜 (specialty/signature dish: 特 special + 色 characteristic + 菜 dish). The best way to discover what the chef does best."
+      interval: 1
+      ease: 2.5
+    - character: 请不要放香菜。
+      pinyin: Qǐng bú yào fàng xiāngcài.
+      meaning: Please do not put cilantro (coriander).
+      explanation: "请 (please), 不要 (do not), 放 (put/add), 香菜 (cilantro/coriander: 香 fragrant + 菜 herb/vegetable). A lifesaver phrase for anyone with the cilantro aversion gene!"
+      interval: 1
+      ease: 2.5
+    - character: 少放一点辣和盐。
+      pinyin: Shǎo fàng yìdiǎnr là hé yán.
+      meaning: Put a little less spice and salt.
+      explanation: "少 (less/few), 放 (put), 一点儿 (a little bit), 辣 (spiciness), 和 (and), 盐 (salt - 卤 salt crystal + 皿 dish). Highly practical dietary adjustment phrase for tailoring dish seasoning."
+      interval: 1
+      ease: 2.5
+    - character: 来两碗米饭，一壶茶。
+      pinyin: Lái liǎng wǎn mǐfàn, yì hú chá.
+      meaning: Bring two bowls of rice and a pot of tea.
+      explanation: "来 (bring on / give us), 两碗 (two bowls: 碗 bowl), 米饭 (cooked white rice: 米 uncooked rice + 饭 cooked food), 一壶茶 (a pot of tea: 壶 pot/kettle + 茶 tea). The classic staple accompaniment in Chinese dining."
+      interval: 1
+      ease: 2.5
+    - character: 服务员，可以加点水吗？
+      pinyin: Fúwùyuán, kěyǐ jiā diǎn shuǐ ma?
+      meaning: Waiter, could you add some water / refill the tea?
+      explanation: "服务员 (server), 可以 (can/may), 加点水 (add a bit of water: 加 add + 点 a little + 水 water), 吗 (question particle). Used to ask for free hot water refills in the teapot or water pitcher."
+      interval: 1
+      ease: 2.5
+    - character: 服务员，买单！
+      pinyin: Fúwùyuán, mǎidān!
+      meaning: Waiter, the bill please!
+      explanation: "服务员 (waiter), 买单 (pay the bill: 买 buy + 单 receipt/bill - originally from Cantonese maaidan, now universally used across mainland China). The most common call to get the check."
+      interval: 1
+      ease: 2.5
+    - character: 可以帮我打包吗？
+      pinyin: Kěyǐ bāng wǒ dǎbāo ma?
+      meaning: Could you help me box this up to go?
+      explanation: "可以 (can), 帮我 (help me: 帮 assist/help + 我 me), 打包 (pack leftovers into containers / take away: 打 take/handle + 包 wrap/bundle). Chinese dining culture encourages taking uneaten dishes home."
+      interval: 1
+      ease: 2.5
+    - character: 结账，可以刷卡吗？
+      pinyin: Jiézhàng, kěyǐ shuākǎ ma?
+      meaning: Checking out, can I pay by card?
+      explanation: "结账 (settle accounts: 结 tie up/knot + 账 account/ledger), 可以 (can), 刷卡 (swipe/tap a credit card: 刷 brush/swipe + 卡 card). Formal term for paying the bill and inquiring about card payments."
+      interval: 1
+      ease: 2.5
+    - character: 味道真好，太好吃了！
+      pinyin: Wèidao zhēn hǎo, tài hǎochī le!
+      meaning: The flavor is really good, it's so delicious!
+      explanation: "味道 (flavor/taste: 味 taste/flavor + 道 principle/manner), 真好 (really good), 太好吃了 (extremely delicious: 太 extremely + 好吃 good to eat + 了 emphatic). Sincere, enthusiastic compliment to give the restaurant host or chef."
+      interval: 1
+      ease: 2.5

@@ -494,8 +494,12 @@ func TestHummingbirdRealDecksRendering(t *testing.T) {
 
 	view := m.View()
 
-	// Verify each deck file has its corresponding key badge
-	for i := 0; i < len(m.DeckFiles); i++ {
+	// Verify each deck file has its corresponding key badge (up to available Hummingbird keys)
+	numKeyed := len(m.DeckFiles)
+	if numKeyed > len(HummingbirdKeys) {
+		numKeyed = len(HummingbirdKeys)
+	}
+	for i := 0; i < numKeyed; i++ {
 		k := fmt.Sprintf("[%s]", HummingbirdKeys[i])
 		if !strings.Contains(view, k) {
 			t.Errorf("expected view to contain %s for item %d (%s)", k, i, m.DeckFiles[i])

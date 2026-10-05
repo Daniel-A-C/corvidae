@@ -1,0 +1,71 @@
+cards:
+  - character: 奇迹
+    pinyin: qí jì
+    meaning: Miracle / Wonder
+    explanation: >
+      奇 (qí) means 'extraordinary, wondrous, unusual', and 迹 (jì) combines the motion radical 辶 with 亦, meaning 'footprint, vestige, or trace'. Literally 'a wondrous trace left behind'—a miraculous event or unexplainable triumph against all odds.
+    interval: 1
+    ease: 2.5
+  - character: 明白
+    pinyin: míng bai
+    meaning: Clear / To understand / Obvious
+    explanation: >
+      明 (míng) combines the sun 日 and moon 月 to symbolize radiant illumination, and 白 (bái) means 'white, clear, spotless'. When a matter is illuminated and clear like daylight, the mind comprehends it fully (我明白了 = I understand!).
+    interval: 1
+    ease: 2.5
+  - character: 明星
+    pinyin: míng xīng
+    meaning: Movie star / Celebrity / Bright star
+    explanation: >
+      明 (míng) means 'bright' and 星 (xīng) means 'star'. Originally an astronomical term for the brightest visible morning star (Venus), modern Chinese uses 'bright star' identically to the Western idiom for famous actors, singers, and sports athletes.
+    interval: 1
+    ease: 2.5
+  - character: 花草
+    pinyin: huā cǎo
+    meaning: Flowers and grass / Greenery / Flora
+    explanation: >
+      花 (huā) is blooming flowers and 草 (cǎo) is the grass of the field (both sporting the leafy 艹 plant radical). Used collectively for decorative gardens, courtyard plants, and lush greenery.
+    interval: 1
+    ease: 2.5
+  - character: 茶馆
+    pinyin: chá guǎn
+    meaning: Traditional teahouse
+    explanation: >
+      茶 (chá) means 'tea' and 馆 (guǎn) means 'hall/establishment' (with the food radical 饣). Classical public establishments in Chengdu, Hangzhou, and Beijing where patrons gather to sip green tea, nibble sunflower seeds, play chess, and engage in endless conversation.
+    interval: 1
+    ease: 2.5
+  - character: 牌友
+    pinyin: pái yǒu
+    meaning: Card-playing buddy / Mahjong friend
+    explanation: >
+      牌 (pái) means 'playing card / tile / domino' and 友 (yǒu) depicts two right hands clasped in friendship. A warm colloquial term for friends who meet regularly around a card table or mahjong parlor.
+    interval: 1
+    ease: 2.5
+  - character: 冰水
+    pinyin: bīng shuǐ
+    meaning: Ice water
+    explanation: >
+      冰 (bīng) features the ice radical 冫 (two solid crystals) next to 水 (water). While hot water (热水) is traditionally favored for wellness in China, ice water is universally requested in hot summers and modern cafes.
+    interval: 1
+    ease: 2.5
+  - character: 东方
+    pinyin: dōng fāng
+    meaning: The East / The Orient
+    explanation: >
+      东 (dōng) depicts the sun rising behind a tree 木, and 方 (fāng) means 'direction or region'. Literally 'the direction of the dawn', referring to East Asia, sunrise, or the eastern orientation.
+    interval: 1
+    ease: 2.5
+  - character: 声音
+    pinyin: shēng yīn
+    meaning: Sound / Noise / Voice
+    explanation: >
+      声 (shēng) originally depicted a musical stone chime struck by a mallet, and 音 (yīn) depicts a mouth 口 with a tongue/sound marker inside (meaning tone or melody). Together, any acoustic wave, timbre of voice, or ambient chime.
+    interval: 1
+    ease: 2.5
+  - character: 自由
+    pinyin: zì yóu
+    meaning: Freedom / Free / Unrestrained
+    explanation: >
+      自 (zì) depicts the self (one's nose), and 由 (yóu) depicts a spring or origin. Acting from one's own volition without external shackles or coercion = liberty and freedom.
+    interval: 1
+    ease: 2.5
