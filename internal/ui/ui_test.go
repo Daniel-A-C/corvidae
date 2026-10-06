@@ -9,6 +9,7 @@ import (
 
 	tea "github.com/charmbracelet/bubbletea"
 	"flashcards/internal/deck"
+	"flashcards/internal/reading"
 )
 
 func setupTestDecks(t *testing.T) string {
@@ -1787,5 +1788,218 @@ func TestMemorizeBackEscNavigation(t *testing.T) {
 		t.Fatalf("expected StateModeSelect after Esc, got %d", m.State)
 	}
 }
+
+func TestReadingModeSelectAndNavigate(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	textsDir := filepath.Join("..", "..", "memorizationTexts")
+	readingDir := filepath.Join("..", "..", "readingTranslationTexts")
+
+	m := NewWithOptions(decksDir, textsDir, readingDir)
+	if m.State != StateModeSelect {
+		t.Fatalf("expected StateModeSelect, got %d", m.State)
+	}
+
+	// Press 'g' to enter Reading mode
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'g'}})
+	m = updatedM.(Model)
+
+	if m.State != StateReadingSelectText {
+		t.Fatalf("expected StateReadingSelectText, got %d", m.State)
+	}
+	if len(m.ReadingTexts) == 0 {
+		t.Fatalf("expected at least 1 reading text loaded, got 0")
+	}
+
+	// View output should list texts
+	view := m.View()
+	if !strings.Contains(view, "Learn by Reading") {
+		t.Errorf("expected view to contain 'Learn by Reading', got: %s", view)
+	}
+
+	// Navigate down with 'j'
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'j'}})
+	m = updatedM.(Model)
+	if len(m.ReadingTexts) > 1 && m.ReadingCursor != 1 {
+		t.Errorf("expected cursor at 1, got %d", m.ReadingCursor)
+	}
+
+	// Press Enter to start reading
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	if m.State != StateReading {
+		t.Fatalf("expected StateReading, got %d", m.State)
+	}
+	if m.ReadingSession == nil {
+		t.Fatalf("expected non-nil ReadingSession")
+	}
+
+	// Reading view should show sentence and title
+	readingView := m.View()
+	if !strings.Contains(readingView, "Sentence 1 of") {
+		t.Errorf("expected view to contain sentence progress, got: %s", readingView)
+	}
+	if !strings.Contains(readingView, "Aggressiveness:") {
+		t.Errorf("expected view to contain Aggressiveness indicator, got: %s", readingView)
+	}
+}
+
+func TestReadingFlowAndWordDetail(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	textsDir := filepath.Join("..", "..", "memorizationTexts")
+	readingDir := filepath.Join("..", "..", "readingTranslationTexts")
+
+	m := NewWithOptions(decksDir, textsDir, readingDir)
+	m.ReadingProgress = reading.DefaultProgress()
+
+	// Enter reading mode
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'g'}})
+	m = updatedM.(Model)
+	// Select first text
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	m.ReadingSession.SentenceIdx = 0
+	m.ReadingSession.Restart()
+
+	if m.State != StateReading {
+		t.Fatalf("expected StateReading, got %d", m.State)
+	}
+
+	// Ensure there are substituted words
+	session := m.ReadingSession
+	if len(session.CurrentWeave.SubstitutedWords) == 0 {
+		session.SetAggressiveness(4)
+	}
+	if len(session.CurrentWeave.SubstitutedWords) == 0 {
+		t.Fatalf("expected substituted words in sentence at aggressiveness 4")
+	}
+
+	firstKey := session.CurrentWeave.SubstitutedWords[0].Key
+	runes := []rune(firstKey)
+
+	// Press the shortcut key for the first substituted word
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: runes})
+	m = updatedM.(Model)
+
+	if m.State != StateReadingWordDetail {
+		t.Fatalf("expected StateReadingWordDetail after pressing word key, got %d", m.State)
+	}
+	if m.ReadingSession.SelectedWord == nil {
+		t.Fatalf("expected SelectedWord to be set")
+	}
+
+	detailView := m.View()
+	if !strings.Contains(detailView, "VOCABULARY DETAIL") {
+		t.Errorf("expected detail view to contain header, got: %s", detailView)
+	}
+
+	// Press 'm' to add word to Marked Cards deck
+	initialMarkedCount := len(m.MarkedCards)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'m'}})
+	m = updatedM.(Model)
+
+	if len(m.MarkedCards) != initialMarkedCount+1 {
+		t.Errorf("expected marked cards count to increase to %d, got %d", initialMarkedCount+1, len(m.MarkedCards))
+	}
+	if !strings.Contains(m.ReadingWordFeedback, "Marked Cards") {
+		t.Errorf("expected feedback message about marked cards, got %s", m.ReadingWordFeedback)
+	}
+
+	// Press 'k' to mark as known
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'k'}})
+	m = updatedM.(Model)
+	if !strings.Contains(m.ReadingWordFeedback, "Marked as Known") {
+		t.Errorf("expected feedback message about known, got %s", m.ReadingWordFeedback)
+	}
+
+	// Press Esc to return to reading sentence
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+
+	if m.State != StateReading {
+		t.Fatalf("expected StateReading after Esc, got %d", m.State)
+	}
+}
+
+func TestReadingAggressivenessAndPureReadingMode(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	textsDir := filepath.Join("..", "..", "memorizationTexts")
+	readingDir := filepath.Join("..", "..", "readingTranslationTexts")
+
+	m := NewWithOptions(decksDir, textsDir, readingDir)
+	m.ReadingProgress = reading.DefaultProgress()
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'g'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	m.ReadingSession.SentenceIdx = 0
+	m.ReadingSession.Restart()
+
+	// Press '0' for Pure Reading mode (English only)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'0'}})
+	m = updatedM.(Model)
+
+	if m.ReadingSession.Aggressiveness != 0 {
+		t.Errorf("expected Aggressiveness 0, got %d", m.ReadingSession.Aggressiveness)
+	}
+	if len(m.ReadingSession.CurrentWeave.SubstitutedWords) != 0 {
+		t.Errorf("expected 0 substituted words in pure reading mode, got %d", len(m.ReadingSession.CurrentWeave.SubstitutedWords))
+	}
+
+	view := m.View()
+	if !strings.Contains(view, "Pure Reading") {
+		t.Errorf("expected view to reflect Pure Reading mode, got: %s", view)
+	}
+
+	// Increase aggressiveness with '+'
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'+'}})
+	m = updatedM.(Model)
+	if m.ReadingSession.Aggressiveness != 1 {
+		t.Errorf("expected Aggressiveness 1 after +, got %d", m.ReadingSession.Aggressiveness)
+	}
+}
+
+func TestReadingDiscussionBoxAndAdvance(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	textsDir := filepath.Join("..", "..", "memorizationTexts")
+	readingDir := filepath.Join("..", "..", "readingTranslationTexts")
+
+	m := NewWithOptions(decksDir, textsDir, readingDir)
+	m.ReadingProgress = reading.DefaultProgress()
+
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'g'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	// Explicitly start from sentence 0 for deterministic test
+	m.ReadingSession.SentenceIdx = 0
+	m.ReadingSession.Restart()
+
+	// Press Enter to complete sentence -> shows discussion box
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	if m.State != StateReadingDiscussion {
+		t.Fatalf("expected StateReadingDiscussion, got %d", m.State)
+	}
+
+	discussView := m.View()
+	if !strings.Contains(discussView, "GRAMMAR") {
+		t.Errorf("expected grammar discussion header, got: %s", discussView)
+	}
+
+	// Press Enter in discussion box to advance to next sentence
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	if m.State != StateReading {
+		t.Fatalf("expected StateReading after advancing from discussion, got %d", m.State)
+	}
+	if m.ReadingSession.SentenceIdx != 1 {
+		t.Errorf("expected SentenceIdx 1, got %d", m.ReadingSession.SentenceIdx)
+	}
+}
+
 
 

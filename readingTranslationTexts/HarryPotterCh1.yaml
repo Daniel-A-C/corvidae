@@ -1,0 +1,193 @@
+id: HarryPotterCh1
+title: "Harry Potter and the Sorcerer's Stone - Chapter 1"
+source: "J.K. Rowling / Chinese Translation (人民文学出版社)"
+language: "Mandarin"
+category: "Literature"
+description: "Chapter 1: The Boy Who Lived (大难不死的男孩) - Opening Paragraphs"
+sentences:
+  - id: "hp-1-1"
+    english: "Mr. and Mrs. Dursley, of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much."
+    natural_target: "家住女贞路4号的德思礼夫妇总是得意地说，他们是非常规矩的正常人，拜托，多谢了。"
+    target_pinyin: "Jiā zhù Nǚzhēn Lù 4 hào de Désīlǐ fūfù zǒngshì déyì de shuō, tāmen shì fēicháng guīju de zhèngchángrén, bàituō, duōxiè le."
+    grammar_note: "In Mandarin, address and home location ('living at number four Privet Drive') forms an attributive clause modifying 德思礼夫妇 (the Dursley couple). 'Proud' is rendered 得意 (déyì: pleased with oneself). Note how polite idioms like 'thank you very much' become 多谢了 or 拜托."
+    words:
+      - english: "number"
+        target: "号"
+        pinyin: "hào"
+        meaning: "number (address/order)"
+        explanation: "Used for street addresses, room numbers, and dates."
+        difficulty: 1
+      - english: "proud"
+        target: "得意"
+        pinyin: "déyì"
+        meaning: "proud / pleased with oneself"
+        explanation: "得 (obtain) + 意 (intention/desire). Contented with one's situation."
+        difficulty: 2
+      - english: "say"
+        target: "说"
+        pinyin: "shuō"
+        meaning: "to say / speak"
+        explanation: "Left radical 讠 (speech) + 兑."
+        difficulty: 1
+      - english: "normal"
+        target: "正常"
+        pinyin: "zhèngcháng"
+        meaning: "normal / regular"
+        explanation: "正 (upright/correct) + 常 (ordinary/frequent)."
+        difficulty: 1
+      - english: "thank you"
+        target: "多谢"
+        pinyin: "duōxiè"
+        meaning: "many thanks / thank you"
+        explanation: "多 (many) + 谢 (thanks)."
+        difficulty: 1
+
+  - id: "hp-1-2"
+    english: "They were the last people you'd expect to be involved in anything strange or mysterious, because they just didn't hold with such nonsense."
+    natural_target: "他们最要不得的就是卷入什么神秘离奇的事情，因为他们根本不相信这一套废话。"
+    target_pinyin: "Tāmen zuì yàobude de jiùshì juǎnrù shénme shénmì líqí de shìqing, yīnwèi tāmen gēnběn bù xiāngxìn zhè yí tào fèihuà."
+    grammar_note: "The English idiom 'the last people you'd expect' is rendered with 最不... (least likely) or 最要不得. Notice 根本不 (gēnběn bù) means 'simply don't / at all don't', emphasizing total rejection."
+    words:
+      - english: "strange"
+        target: "离奇"
+        pinyin: "líqí"
+        meaning: "odd / bizarre / fantastic"
+        explanation: "离 (deviate) + 奇 (strange/curious)."
+        difficulty: 2
+      - english: "mysterious"
+        target: "神秘"
+        pinyin: "shénmì"
+        meaning: "mysterious / mystical"
+        explanation: "神 (divine/spirit) + 秘 (secret)."
+        difficulty: 2
+      - english: "nonsense"
+        target: "废话"
+        pinyin: "fèihuà"
+        meaning: "nonsense / useless words"
+        explanation: "废 (waste/abandon) + 话 (words)."
+        difficulty: 1
+
+  - id: "hp-1-3"
+    english: "Mr. Dursley was the director of a firm called Grunnings, which made drills."
+    natural_target: "德思礼先生是一家名叫格朗宁的钻机制造公司的老板。"
+    target_pinyin: "Désīlǐ xiānsheng shì yī jiā míng jiào Gélǎngníng de zuànjī zhìzào gōngsī de lǎobǎn."
+    grammar_note: "Notice the classifier 家 (jiā) used for firms/companies (一家公司). The relative clause 'which made drills' precedes 'company' in Chinese as an attributive: 钻机制造公司 (drill manufacturing company)."
+    words:
+      - english: "director"
+        target: "老板"
+        pinyin: "lǎobǎn"
+        meaning: "director / boss / proprietor"
+        explanation: "老 (venerable) + 板 (boss/timber)."
+        difficulty: 1
+      - english: "firm"
+        target: "公司"
+        pinyin: "gōngsī"
+        meaning: "company / firm"
+        explanation: "公 (public/corporate) + 司 (manage/operate)."
+        difficulty: 1
+      - english: "drills"
+        target: "钻机"
+        pinyin: "zuànjī"
+        meaning: "drills / drilling machine"
+        explanation: "钻 (bore/drill) + 机 (machine)."
+        difficulty: 2
+
+  - id: "hp-1-4"
+    english: "He was a big, beefy man with hardly any neck, although he did have a very large mustache."
+    natural_target: "他高大魁梧，几乎连脖子都没有，不过倒是蓄着一把大胡子。"
+    target_pinyin: "Tā gāodà kuíwú, jīhū lián bózi dōu méiyǒu, bùguò dàoshì xùzhe yī bǎ dà húzi."
+    grammar_note: "The 连...都... (lián... dōu...) pattern expresses 'even/hardly any': 连脖子都没有 (doesn't even have a neck). Measure word for mustache/beard in Chinese is 把 (bǎ): 一把大胡子."
+    words:
+      - english: "neck"
+        target: "脖子"
+        pinyin: "bózi"
+        meaning: "neck"
+        explanation: "脖 (neck radical 月) + 子."
+        difficulty: 1
+      - english: "mustache"
+        target: "胡子"
+        pinyin: "húzi"
+        meaning: "mustache / beard"
+        explanation: "General term for facial hair / mustache."
+        difficulty: 1
+
+  - id: "hp-1-5"
+    english: "Mrs. Dursley was thin and blonde and had nearly twice the usual amount of neck, which came in very useful as she spent so much of her time craning over garden fences, spying on the neighbors."
+    natural_target: "德思礼太太瘦削，金发，脖子比常人长了一倍，这就帮了她的大忙，因为她常常伸长脖子隔着篱笆偷窥邻居家的动静。"
+    target_pinyin: "Désīlǐ tàitai shòuxuē, jīnfà, bózi bǐ chángrén cháng le yībèi, zhè jiù bāng le tā de dàmáng, yīnwèi tā chángcháng shēn cháng bózi gézhe líba tōukuī línjū jiā de dòngjìng."
+    grammar_note: "Comparison structure 比...长了一倍 (bǐ... cháng le yíbèi: twice as long as normal people). The aspect particle 着 in 隔着篱笆 (gézhe líba) denotes a continuous state: 'across/over the fence'."
+    words:
+      - english: "blonde"
+        target: "金发"
+        pinyin: "jīnfà"
+        meaning: "blonde / golden hair"
+        explanation: "金 (gold) + 发 (hair)."
+        difficulty: 1
+      - english: "garden"
+        target: "花园"
+        pinyin: "huāyuán"
+        meaning: "garden"
+        explanation: "花 (flower) + 园 (garden/park)."
+        difficulty: 1
+      - english: "neighbors"
+        target: "邻居"
+        pinyin: "línjū"
+        meaning: "neighbors / neighbor"
+        explanation: "邻 (adjacent/neighbor) + 居 (dwell/reside)."
+        difficulty: 1
+
+  - id: "hp-1-6"
+    english: "The Dursleys had a small son called Dudley and in their opinion there was no finer boy anywhere."
+    natural_target: "德思礼夫妇有一个年幼的儿子叫达力，在他们看来，世上再没有比达力更乖的男孩了。"
+    target_pinyin: "Désīlǐ fūfù yǒu yí gè niányòu de érzi jiào Dálì, zài tāmen kànlái, shìshàng zài méiyǒu bǐ Dálì gèng guāi de nánhái le."
+    grammar_note: "Opinion marker 在他们看来 (zài tāmen kànlái - in their view/opinion). Comparative 再没有比...更... (nowhere is there any more... than...)."
+    words:
+      - english: "son"
+        target: "儿子"
+        pinyin: "érzi"
+        meaning: "son"
+        explanation: "Child/son."
+        difficulty: 1
+      - english: "opinion"
+        target: "看法"
+        pinyin: "kànfǎ"
+        meaning: "opinion / view"
+        explanation: "看 (see) + 法 (way/method)."
+        difficulty: 1
+      - english: "boy"
+        target: "男孩"
+        pinyin: "nánhái"
+        meaning: "boy"
+        explanation: "男 (male) + 孩 (child)."
+        difficulty: 1
+
+  - id: "hp-1-7"
+    english: "The Dursleys had everything they wanted, but they also had a secret, and their greatest fear was that somebody would discover it."
+    natural_target: "德思礼一家拥有一切他们想要的东西，可他们也有一个秘密，他们最害怕的就是有人会发现它。"
+    target_pinyin: "Désīlǐ yījiā yōngyǒu yíqiè tāmen xiǎng yào de dōngxi, kě tāmen yě yǒu yí gè mìmì, tāmen zuì hàipà de jiùshì yǒurén huì fāxiàn tā."
+    grammar_note: "Superlative noun phrase: 他们最害怕的 (what they feared most). The modal verb 会 (huì) indicates likelihood / possibility: 'would/might discover'."
+    words:
+      - english: "everything"
+        target: "一切"
+        pinyin: "yíqiè"
+        meaning: "all / everything"
+        explanation: "一 (one) + 切 (all/cut)."
+        difficulty: 1
+      - english: "secret"
+        target: "秘密"
+        pinyin: "mìmì"
+        meaning: "secret"
+        explanation: "秘 (secret) + 密 (confidential/dense)."
+        difficulty: 2
+      - english: "fear"
+        target: "害怕"
+        pinyin: "hàipà"
+        meaning: "fear / dread"
+        explanation: "害 (harm/suffer) + 怕 (fear)."
+        difficulty: 1
+      - english: "discover"
+        target: "发现"
+        pinyin: "fāxiàn"
+        meaning: "discover / find"
+        explanation: "发 (emit/open) + 现 (appear/present)."
+        difficulty: 1

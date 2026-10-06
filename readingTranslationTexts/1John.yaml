@@ -1,0 +1,342 @@
+id: 1John
+title: "The First Epistle of John"
+source: "ESV / Chinese Union Version"
+language: "Mandarin"
+category: "Scripture"
+description: "1 John Chapters 1 & 2 - Light, Fellowship, and Walking in Truth"
+sentences:
+  - id: "1john-1-1"
+    english: "That which was from the beginning, which we have heard, which we have seen with our eyes, which we looked upon and have touched with our hands, concerning the word of life—"
+    natural_target: "论到从起初原有的生命之道，就是我们所听见、所看见、亲眼看过、亲手摸过的——"
+    target_pinyin: "Lùn dào cóng qǐchū yuányǒu de shēngmìng zhī dào, jiùshì wǒmen suǒ tīngjiàn, suǒ kànjiàn, qīnyǎn kànguò, qīnshǒu mōguò de——"
+    grammar_note: "Notice how Mandarin structures relative clauses: the head noun 'the word of life' (生命之道) comes at the end, preceded by all descriptive modifiers joined by 的 (de). Also note 起初 (qǐchū) specifically translates 'from the beginning'."
+    words:
+      - english: "beginning"
+        target: "起初"
+        pinyin: "qǐchū"
+        meaning: "beginning / origin / at first"
+        explanation: "起 (to start/rise) + 初 (beginning/early). Used in biblical texts for primordial beginning."
+        difficulty: 1
+      - english: "heard"
+        target: "听见"
+        pinyin: "tīngjiàn"
+        meaning: "heard / to hear"
+        explanation: "听 (listen) + 见 (perceive). A resultative verb compound signifying successful hearing."
+        difficulty: 1
+      - english: "seen"
+        target: "看见"
+        pinyin: "kànjiàn"
+        meaning: "seen / to see"
+        explanation: "看 (look) + 见 (perceive). Resultative verb compound."
+        difficulty: 1
+      - english: "eyes"
+        target: "眼睛"
+        pinyin: "yǎnjing"
+        meaning: "eyes"
+        explanation: "眼 (eye radical) + 睛 (eyeball)."
+        difficulty: 1
+      - english: "hands"
+        target: "手"
+        pinyin: "shǒu"
+        meaning: "hand(s)"
+        explanation: "Basic character and radical representing a hand with fingers."
+        difficulty: 1
+      - english: "word"
+        target: "道"
+        pinyin: "dào"
+        meaning: "the Word / Logos / Way"
+        explanation: "The Logos; philosophical concept signifying divine truth and reason."
+        difficulty: 2
+      - english: "life"
+        target: "生命"
+        pinyin: "shēngmìng"
+        meaning: "life"
+        explanation: "生 (birth/life) + 命 (fate/life)."
+        difficulty: 1
+
+  - id: "1john-1-2"
+    english: "the life was made manifest, and we have seen it, and testify to it and proclaim to you the eternal life, which was with the Father and was made manifest to us—"
+    natural_target: "这生命已经显现出来，我们也看见过，现在又作见证，将原与父同在、且显现与我们那永远的生命传给你们。"
+    target_pinyin: "Zhè shēngmìng yǐjīng xiǎnxiàn chūlái, wǒmen yě kànjiànguò, xiànzài yòu zuò jiànzhèng, jiāng yuán yǔ Fù tóngzài, qiě xiǎnxiàn yǔ wǒmen nà yǒngyuǎn de shēngmìng chuán gěi nǐmen."
+    grammar_note: "Notice the prepositional phrase 'with the Father' becomes 与父同在 (yǔ Fù tóngzài - with Father together-exist), placed before the noun phrase it qualifies."
+    words:
+      - english: "manifest"
+        target: "显现"
+        pinyin: "xiǎnxiàn"
+        meaning: "manifest / appear / reveal"
+        explanation: "显 (apparent/show) + 现 (present/appear)."
+        difficulty: 2
+      - english: "testify"
+        target: "作见证"
+        pinyin: "zuò jiànzhèng"
+        meaning: "to testify / bear witness"
+        explanation: "作 (make/do) + 见证 (witness/testimony)."
+        difficulty: 2
+      - english: "proclaim"
+        target: "传给"
+        pinyin: "chuángěi"
+        meaning: "proclaim to / pass down to"
+        explanation: "传 (transmit/pass on) + 给 (to/give)."
+        difficulty: 2
+      - english: "eternal life"
+        target: "永远的生命"
+        pinyin: "yǒngyuǎn de shēngmìng"
+        meaning: "eternal life"
+        explanation: "永远 (forever/eternal) + 生命 (life)."
+        difficulty: 2
+      - english: "Father"
+        target: "父"
+        pinyin: "Fù"
+        meaning: "the Father"
+        explanation: "Reverent title for God the Father."
+        difficulty: 1
+
+  - id: "1john-1-3"
+    english: "that which we have seen and heard we proclaim also to you, so that you too may have fellowship with us; and indeed our fellowship is with the Father and with his Son Jesus Christ."
+    natural_target: "我们将所看见、所听见的传给你们，使你们与我们相交。我们乃是与父并他儿子耶稣基督相交的。"
+    target_pinyin: "Wǒmen jiāng suǒ kànjiàn, suǒ tīngjiàn de chuán gěi nǐmen, shǐ nǐmen yǔ wǒmen xiāngjiāo. Wǒmen nǎishì yǔ Fù bìng tā érzi Yēsū Jīdū xiāngjiāo de."
+    grammar_note: "The causative verb 使 (shǐ - to cause/make so that) introduces the purpose clause. 'Fellowship with us' is 与我们相交 (yǔ wǒmen xiāngjiāo)."
+    words:
+      - english: "fellowship"
+        target: "相交"
+        pinyin: "xiāngjiāo"
+        meaning: "fellowship / communion / mutual relation"
+        explanation: "相 (mutual) + 交 (interact/connect)."
+        difficulty: 2
+      - english: "Son"
+        target: "儿子"
+        pinyin: "érzi"
+        meaning: "Son"
+        explanation: "儿 (child/son) + 子 (noun suffix)."
+        difficulty: 1
+      - english: "Jesus Christ"
+        target: "耶稣基督"
+        pinyin: "Yēsū Jīdū"
+        meaning: "Jesus Christ"
+        explanation: "Standard Chinese transliteration of Jesus Christ."
+        difficulty: 1
+
+  - id: "1john-1-4"
+    english: "And we are writing these things so that our joy may be complete."
+    natural_target: "我们写这些事给你们，是要叫我们的喜乐充足。"
+    target_pinyin: "Wǒmen xiě zhèxiē shì gěi nǐmen, shì yào jiào wǒmen de xǐlè chōngzú."
+    grammar_note: "是要叫 (shì yào jiào) is used for purpose 'is in order that'. 充足 (chōngzú - sufficient/complete) modifies 喜乐 (joy)."
+    words:
+      - english: "writing"
+        target: "写"
+        pinyin: "xiě"
+        meaning: "write / writing"
+        explanation: "Basic character for writing."
+        difficulty: 1
+      - english: "things"
+        target: "事"
+        pinyin: "shì"
+        meaning: "things / matters / affairs"
+        explanation: "Matters or events."
+        difficulty: 1
+      - english: "joy"
+        target: "喜乐"
+        pinyin: "xǐlè"
+        meaning: "joy / gladness"
+        explanation: "喜 (delight/fondness) + 乐 (happiness/music)."
+        difficulty: 2
+      - english: "complete"
+        target: "充足"
+        pinyin: "chōngzú"
+        meaning: "complete / abundant / full"
+        explanation: "充 (fill) + 足 (sufficient/foot)."
+        difficulty: 2
+
+  - id: "1john-1-5"
+    english: "This is the message we have heard from him and proclaim to you, that God is light, and in him is no darkness at all."
+    natural_target: "神就是光，在他毫无黑暗！这是我们从主所听见、又报给你们的信息。"
+    target_pinyin: "Shén jiùshì guāng, zài tā háowú hēi'àn! Zhè shì wǒmen cóng zhǔ suǒ tīngjiàn, yòu bào gěi nǐmen de xìnxī."
+    grammar_note: "Notice 毫无 (háowú) literally means 'not a single hair of', conveying 'no ... at all'. In Chinese, equative sentences often use 就是 (jiùshì) for emphatic identity: 神就是光."
+    words:
+      - english: "message"
+        target: "信息"
+        pinyin: "xìnxī"
+        meaning: "message / news"
+        explanation: "信 (faith/letter) + 息 (breath/news)."
+        difficulty: 1
+      - english: "God"
+        target: "神"
+        pinyin: "Shén"
+        meaning: "God"
+        explanation: "Character for spirit/divinity/God."
+        difficulty: 1
+      - english: "light"
+        target: "光"
+        pinyin: "guāng"
+        meaning: "light"
+        explanation: "Basic light radical and character."
+        difficulty: 1
+      - english: "darkness"
+        target: "黑暗"
+        pinyin: "hēi'àn"
+        meaning: "darkness / dark"
+        explanation: "黑 (black) + 暗 (dim/dark)."
+        difficulty: 1
+
+  - id: "1john-1-6"
+    english: "If we say we have fellowship with him while we walk in darkness, we lie and do not practice the truth."
+    natural_target: "我们若说是与神相交，却仍在黑暗里行，就是说谎话，不行真理了。"
+    target_pinyin: "Wǒmen ruò shuō shì yǔ Shén xiāngjiāo, què réng zài hēi'àn lǐ xíng, jiùshì shuō huǎnghuà, bù xíng zhēnlǐ le."
+    grammar_note: "Conditional 'If... while...' is structured with 若 (ruò - if) and 却仍 (què réng - yet still). 'Practice the truth' is 行真理 (xíng zhēnlǐ - walk/do the truth)."
+    words:
+      - english: "walk"
+        target: "行"
+        pinyin: "xíng"
+        meaning: "to walk / conduct oneself"
+        explanation: "Classical and biblical term for conduct and walking."
+        difficulty: 2
+      - english: "lie"
+        target: "说谎"
+        pinyin: "shuōhuǎng"
+        meaning: "to tell lies / lie"
+        explanation: "说 (speak) + 谎 (lie)."
+        difficulty: 1
+      - english: "truth"
+        target: "真理"
+        pinyin: "zhēnlǐ"
+        meaning: "truth"
+        explanation: "真 (true/genuine) + 理 (principle/reason)."
+        difficulty: 1
+
+  - id: "1john-1-7"
+    english: "But if we walk in the light, as he is in the light, we have fellowship with one another, and the blood of Jesus his Son cleanses us from all sin."
+    natural_target: "我们若在光明中行，如同神在光明中，就彼此相交，他儿子耶稣的血也洗净我们一切的罪。"
+    target_pinyin: "Wǒmen ruò zài guāngmíng zhōng xíng, rútóng Shén zài guāngmíng zhōng, jiù bǐcǐ xiāngjiāo, tā érzi Yēsū de xuè yě xǐjìng wǒmen yíqiè de zuì."
+    grammar_note: "彼此 (bǐcǐ) means 'one another / mutually'. 洗净 (xǐjìng) combines 洗 (wash) + 净 (clean) as a resultative compound: 'washes clean'."
+    words:
+      - english: "one another"
+        target: "彼此"
+        pinyin: "bǐcǐ"
+        meaning: "one another / each other"
+        explanation: "彼 (that) + 此 (this)."
+        difficulty: 1
+      - english: "blood"
+        target: "血"
+        pinyin: "xuè"
+        meaning: "blood"
+        explanation: "Radical and character for blood."
+        difficulty: 1
+      - english: "cleanses"
+        target: "洗净"
+        pinyin: "xǐjìng"
+        meaning: "cleanses / washes clean"
+        explanation: "洗 (wash) + 净 (clean)."
+        difficulty: 2
+      - english: "sin"
+        target: "罪"
+        pinyin: "zuì"
+        meaning: "sin / guilt"
+        explanation: "Composed of 网 (net) + 非 (wrongdoing) - ensnared by wrong."
+        difficulty: 1
+
+  - id: "1john-1-8"
+    english: "If we say we have no sin, we deceive ourselves, and the truth is not in us."
+    natural_target: "我们若说自己无罪，便是自欺，真理不在我们心里了。"
+    target_pinyin: "Wǒmen ruò shuō zìjǐ wú zuì, biàn shì zìqī, zhēnlǐ bù zài wǒmen xīnlǐ le."
+    grammar_note: "Deceive ourselves is concisely rendered 自欺 (zìqī: self-deceive). 'Not in us' in Chinese idiom adds 心里 (in our hearts)."
+    words:
+      - english: "ourselves"
+        target: "自己"
+        pinyin: "zìjǐ"
+        meaning: "oneself / ourselves"
+        explanation: "自 (self) + 己 (oneself)."
+        difficulty: 1
+      - english: "deceive"
+        target: "自欺"
+        pinyin: "zìqī"
+        meaning: "deceive oneself"
+        explanation: "自 (self) + 欺 (deceive/cheat)."
+        difficulty: 2
+
+  - id: "1john-1-9"
+    english: "If we confess our sins, he is faithful and just to forgive us our sins and to cleanse us from all unrighteousness."
+    natural_target: "我们若认自己的罪，神是信实的，是公义的，必要赦免我们的罪，洗净我们一切的不义。"
+    target_pinyin: "Wǒmen ruò rèn zìjǐ de zuì, Shén shì xìnshí de, shì gōngyì de, bìyào shèmiǎn wǒmen de zuì, xǐjìng wǒmen yíqiè de búyì."
+    grammar_note: "Notice 信实 (faithful) and 公义 (just/righteous) are predicate adjectives marked by 的. 'Forgive' uses the formal theological term 赦免 (shèmiǎn - pardon/forgive)."
+    words:
+      - english: "confess"
+        target: "认"
+        pinyin: "rèn"
+        meaning: "confess / admit / recognize"
+        explanation: "认 (recognize/admit) sins."
+        difficulty: 1
+      - english: "faithful"
+        target: "信实"
+        pinyin: "xìnshí"
+        meaning: "faithful / trustworthy"
+        explanation: "信 (faith/trust) + 实 (solid/true)."
+        difficulty: 2
+      - english: "just"
+        target: "公义"
+        pinyin: "gōngyì"
+        meaning: "just / righteous"
+        explanation: "公 (public/fair) + 义 (righteousness)."
+        difficulty: 2
+      - english: "forgive"
+        target: "赦免"
+        pinyin: "shèmiǎn"
+        meaning: "to forgive / pardon"
+        explanation: "赦 (pardon/remit) + 免 (exempt/spare)."
+        difficulty: 3
+      - english: "unrighteousness"
+        target: "不义"
+        pinyin: "búyì"
+        meaning: "unrighteousness / injustice"
+        explanation: "不 (not) + 义 (righteousness)."
+        difficulty: 2
+
+  - id: "1john-1-10"
+    english: "If we say we have not sinned, we make him a liar, and his word is not in us."
+    natural_target: "我们若说自己没有犯过罪，便是以神为说谎的，他的道也不在我们心里了。"
+    target_pinyin: "Wǒmen ruò shuō zìjǐ méiyǒu fànguò zuì, biàn shì yǐ Shén wéi shuōhuǎng de, tā de dào yě bù zài wǒmen xīnlǐ le."
+    grammar_note: "The structure 以...为... (yǐ... wéi...) means 'to take/regard [someone] as [something]', translating 'we make him a liar' into 以神为说谎的."
+    words:
+      - english: "sinned"
+        target: "犯罪"
+        pinyin: "fànzuì"
+        meaning: "committed sin / sinned"
+        explanation: "犯 (violate/commit) + 罪 (sin/crime)."
+        difficulty: 2
+      - english: "liar"
+        target: "说谎的"
+        pinyin: "shuōhuǎng de"
+        meaning: "liar / one who lies"
+        explanation: "说谎 (tell lies) + nominalizer 的."
+        difficulty: 1
+
+  - id: "1john-2-1"
+    english: "My little children, I am writing these things to you so that you may not sin."
+    natural_target: "我小子们哪，我将这些事写给你们，是要叫你们不犯罪。"
+    target_pinyin: "Wǒ xiǎozǐmen na, wǒ jiāng zhèxiē shì xiě gěi nǐmen, shì yào jiào nǐmen bù fànzuì."
+    grammar_note: "Affectionate direct address 小子们 (xiǎozǐmen) followed by modal particle 哪 (na). The 把/将 construction 将这些事写给你们 moves the object before the verb."
+    words:
+      - english: "little children"
+        target: "小子们"
+        pinyin: "xiǎozǐmen"
+        meaning: "little children / dear children"
+        explanation: "Biblical affectionate term for spiritual disciples."
+        difficulty: 2
+
+  - id: "1john-2-2"
+    english: "He is the propitiation for our sins, and not for ours only but also for the sins of the whole world."
+    natural_target: "他为我们的罪作了挽回祭，不是单为我们的罪，也是为普天下人的罪。"
+    target_pinyin: "Tā wèi wǒmen de zuì zuò le wǎnhuíjì, búshì dān wèi wǒmen de zuì, yě shì wèi pǔtiānxià rén de zuì."
+    grammar_note: "The correlative pair 不是单...也是为... translates 'not only for... but also for...'. 普天下 (pǔtiānxià) means 'the whole wide world under heaven'."
+    words:
+      - english: "propitiation"
+        target: "挽回祭"
+        pinyin: "wǎnhuíjì"
+        meaning: "propitiation / atoning sacrifice"
+        explanation: "挽回 (redeem/reclaim) + 祭 (sacrifice)."
+        difficulty: 3
+      - english: "world"
+        target: "天下"
+        pinyin: "tiānxià"
+        meaning: "world / under heaven"
+        explanation: "天 (heaven) + 下 (under). Classic idiom for the world."
+        difficulty: 1

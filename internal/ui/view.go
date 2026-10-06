@@ -8,6 +8,7 @@ import (
 	"github.com/charmbracelet/lipgloss"
 	"flashcards/internal/arabic"
 	"flashcards/internal/deck"
+	"flashcards/internal/reading"
 )
 
 // View renders the terminal user interface according to the current state.
@@ -46,6 +47,16 @@ func (m Model) View() string {
 		content = m.viewMemorize()
 	case StateMemorizeComplete:
 		content = m.viewMemorizeComplete()
+	case StateReadingSelectText:
+		content = m.viewReadingSelectText()
+	case StateReading:
+		content = m.viewReading()
+	case StateReadingWordDetail:
+		content = m.viewReadingWordDetail()
+	case StateReadingDiscussion:
+		content = m.viewReadingDiscussion()
+	case StateReadingComplete:
+		content = m.viewReadingComplete()
 	}
 
 	styledContent := lipgloss.NewStyle().Align(lipgloss.Center).Render(content)
@@ -61,6 +72,7 @@ func (m Model) viewModeSelect() string {
 		"Multiple Choice Quiz",
 		"Arabic Alphabet Academy",
 		"Memorize by Options",
+		"Learn by Reading",
 	}
 	for i, label := range modes {
 		key := IndexToKey(i)
@@ -90,7 +102,7 @@ func (m Model) viewModeSelect() string {
 		content += "\n" + ExplanationStyle.Render(m.StatusMessage) + "\n"
 	}
 
-	content += "\n" + HintStyle.Render("(Press a/s/d/f to select, Enter to confirm, q to quit)")
+	content += "\n" + HintStyle.Render("(Press a/s/d/f/g to select, Enter to confirm, q to quit)")
 	return content
 }
 
@@ -972,4 +984,232 @@ func (m Model) viewMemorizeComplete() string {
 		Align(lipgloss.Center)
 	return cardBox.Render(b.String())
 }
+
+func (m Model) viewReadingSelectText() string {
+	var b strings.Builder
+	b.WriteString(ReadingHeaderStyle.Render("★ Corvidae: Learn by Reading (Diglot Weave) ★") + "\n")
+	b.WriteString(HintStyle.Render("Read literature and scripture with progressive target language vocabulary immersion.") + "\n\n")
+
+	if len(m.ReadingTexts) == 0 {
+		b.WriteString(ErrorStyle.Render(fmt.Sprintf("No texts found in %s.", m.ReadingDir)) + "\n\n")
+		b.WriteString(HintStyle.Render("[Esc] Return to Mode Select  •  [q] Quit"))
+		return b.String()
+	}
+
+	b.WriteString("Select a Text to Read:\n\n")
+	for i, t := range m.ReadingTexts {
+		key := IndexToKey(i)
+		keyBadge := ""
+		if key != "" {
+			keyBadge = KeyStyle.Render(fmt.Sprintf("[%s]", key)) + " "
+		}
+
+		cursor := "  "
+		label := t.Title
+		if m.ReadingCursor == i {
+			cursor = "> "
+			label = CursorStyle.Render(label)
+		}
+
+		catBadge := ReadingCategoryBadge.Render(t.Category)
+		langBadge := PinyinStyle.Render("[" + t.Language + "]")
+		progressStr := HintStyle.Render(fmt.Sprintf("(%d sentences)", t.SentenceCount))
+		if t.Progress > 0 && t.SentenceCount > 0 {
+			pct := float64(t.Progress) / float64(t.SentenceCount) * 100
+			progressStr = HintStyle.Render(fmt.Sprintf("(Sentence %d of %d • %.0f%%)", t.Progress+1, t.SentenceCount, pct))
+		}
+
+		b.WriteString(fmt.Sprintf("%s%s%s  %s  %s  %s\n",
+			CursorStyle.Render(cursor), keyBadge, label, catBadge, langBadge, progressStr))
+	}
+
+	b.WriteString("\n" + HintStyle.Render("(Press a/s to select, Enter/Space to start reading, Esc to return, q to quit)"))
+	return b.String()
+}
+
+func (m Model) viewReading() string {
+	if m.ReadingSession == nil || m.ReadingSession.Text == nil {
+		return m.viewReadingSelectText()
+	}
+
+	session := m.ReadingSession
+	_, exists := session.CurrentSentence()
+	if !exists {
+		return m.viewReadingComplete()
+	}
+
+	totalSentences := len(session.Text.Sentences)
+	currentSentNum := session.SentenceIdx + 1
+	pct := 0.0
+	if totalSentences > 0 {
+		pct = float64(currentSentNum) / float64(totalSentences) * 100
+	}
+
+	var b strings.Builder
+	titleLine := fmt.Sprintf("📖 %s", session.Text.Title)
+	if session.Text.Source != "" {
+		titleLine += fmt.Sprintf(" (%s)", session.Text.Source)
+	}
+	b.WriteString(ReadingHeaderStyle.Render(titleLine) + "\n")
+	b.WriteString(HintStyle.Render(fmt.Sprintf("Sentence %d of %d (%.0f%%)  •  Language: %s",
+		currentSentNum, totalSentences, pct, session.Text.Language)) + "\n\n")
+
+	// Aggressiveness meter
+	barLen := 5
+	filled := session.Aggressiveness
+	if filled > barLen {
+		filled = barLen
+	}
+	meter := strings.Repeat("█", filled) + strings.Repeat("░", barLen-filled)
+	aggLabel := reading.AggressivenessLabels[session.Aggressiveness]
+	b.WriteString(HintStyle.Render("Aggressiveness: ") +
+		ReadingAggressivenessStyle.Render("["+meter+"] "+aggLabel) +
+		HintStyle.Render("  [-/+] Tune  •  [0] Pure English") + "\n\n")
+
+	// Render weaved sentence with center justification
+	var sentenceRender strings.Builder
+	for _, seg := range session.CurrentWeave.Segments {
+		if !seg.IsSubstituted {
+			sentenceRender.WriteString(MemorizeCompleted.Render(seg.Text))
+		} else {
+			keyTag := ReadingKeyBadge.Render("[" + seg.SubstitutedInfo.Key + "]")
+			wordTag := ReadingWordSubstituted.Render(seg.SubstitutedInfo.Translation.Target)
+			sentenceRender.WriteString(" " + keyTag + " " + wordTag + " ")
+		}
+	}
+
+	b.WriteString(ReadingBoxStyle.Render(strings.TrimSpace(sentenceRender.String())) + "\n\n")
+
+	// Substituted words quick-reference legend
+	if len(session.CurrentWeave.SubstitutedWords) > 0 {
+		var wordBadges []string
+		for _, sw := range session.CurrentWeave.SubstitutedWords {
+			badge := ReadingKeyBadge.Render(sw.Key) + ":" + ReadingWordSubstituted.Render(sw.Translation.Target)
+			wordBadges = append(wordBadges, badge)
+		}
+		b.WriteString(HintStyle.Render("Unknown words? Press key: ") + strings.Join(wordBadges, "  ") + "\n\n")
+	}
+
+	b.WriteString(HintStyle.Render("[Space / Enter / n] Got It (Next)  •  [h] Discussion & Grammar  •  [p] Prev  •  [r] Restart  •  [Esc] Texts"))
+	return b.String()
+}
+
+func (m Model) viewReadingWordDetail() string {
+	if m.ReadingSession == nil || m.ReadingSession.SelectedWord == nil {
+		return m.viewReading()
+	}
+
+	sw := m.ReadingSession.SelectedWord
+	trans := sw.Translation
+
+	var b strings.Builder
+	b.WriteString(ReadingHeaderStyle.Render("★ VOCABULARY DETAIL & RECALL ★") + "\n\n")
+
+	// Prominent glyph
+	b.WriteString(CharStyle.Render(trans.Target) + "\n")
+	if trans.Pinyin != "" {
+		b.WriteString(PinyinStyle.Render(trans.Pinyin) + "\n")
+	} else if trans.Pronunciation != "" {
+		b.WriteString(PronunciationStyle.Render(trans.Pronunciation) + "\n")
+	}
+
+	b.WriteString(MeaningStyle.Render("“"+trans.Meaning+"”") + "\n\n")
+
+	if trans.Explanation != "" {
+		b.WriteString(ExplanationStyle.Render(trans.Explanation) + "\n\n")
+	}
+
+	// Status note
+	b.WriteString(HintStyle.Render(fmt.Sprintf("Original English: \"%s\"  •  Tracking: Marked as Learning", sw.Original)) + "\n")
+
+	if m.ReadingWordFeedback != "" {
+		b.WriteString("\n" + CorrectStyle.Render(m.ReadingWordFeedback) + "\n")
+	}
+
+	b.WriteString("\n" + HintStyle.Render("[m] Add to Marked Flashcards  •  [k] Actually I Know This  •  [Space / Enter / Esc] Return"))
+
+	return ReadingWordDetailCard.Render(b.String())
+}
+
+func (m Model) viewReadingDiscussion() string {
+	if m.ReadingSession == nil {
+		return m.viewReading()
+	}
+
+	session := m.ReadingSession
+	sent, exists := session.CurrentSentence()
+	if !exists {
+		return m.viewReadingComplete()
+	}
+
+	var b strings.Builder
+	b.WriteString(ReadingHeaderStyle.Render("★ SENTENCE GRAMMAR & TRANSLATION DISCUSSION ★") + "\n\n")
+
+	b.WriteString(KeyStyle.Render("English:") + "\n")
+	b.WriteString(MemorizeCompleted.Render(sent.English) + "\n\n")
+
+	if sent.NaturalTarget != "" {
+		b.WriteString(ReadingWordSubstituted.Render(fmt.Sprintf("Natural %s (Word Order):", session.Text.Language)) + "\n")
+		b.WriteString(CharStyle.Render(sent.NaturalTarget) + "\n")
+		if sent.TargetPinyin != "" {
+			b.WriteString(ReadingWordPinyin.Render(sent.TargetPinyin) + "\n")
+		}
+		b.WriteString("\n")
+	}
+
+	if sent.GrammarNote != "" {
+		b.WriteString(ReadingAggressivenessStyle.Render("Grammar & Contrast Notes:") + "\n")
+		b.WriteString(ExplanationStyle.Align(lipgloss.Left).Render(sent.GrammarNote) + "\n\n")
+	}
+
+	if len(sent.Words) > 0 {
+		b.WriteString(ReadingSourceStyle.Render("Sentence Vocabulary:") + "\n")
+		var vocabLines []string
+		for _, w := range sent.Words {
+			pinyinPart := ""
+			if w.Pinyin != "" {
+				pinyinPart = fmt.Sprintf(" (%s)", w.Pinyin)
+			}
+			line := fmt.Sprintf("• %s%s : %s",
+				ReadingWordSubstituted.Render(w.Target),
+				PinyinStyle.Render(pinyinPart),
+				MeaningStyle.Render(w.Meaning),
+			)
+			vocabLines = append(vocabLines, line)
+		}
+		b.WriteString(strings.Join(vocabLines, "\n") + "\n\n")
+	}
+
+	b.WriteString(HintStyle.Render("[Space / Enter / n] Next Sentence  •  [h / Esc] Back to Reading  •  [p] Prev  •  [-/+] Aggressiveness"))
+
+	return ReadingDiscussionCard.Render(b.String())
+}
+
+func (m Model) viewReadingComplete() string {
+	title := "★ TEXT READING COMPLETE! ★"
+	totalSentences := 0
+	textTitle := ""
+	if m.ReadingSession != nil && m.ReadingSession.Text != nil {
+		totalSentences = len(m.ReadingSession.Text.Sentences)
+		textTitle = m.ReadingSession.Text.Title
+	}
+
+	var b strings.Builder
+	b.WriteString(MemorizeSuccessStyle.Render(title) + "\n\n")
+	if textTitle != "" {
+		b.WriteString(ReadingHeaderStyle.Render(textTitle) + "\n\n")
+	}
+	b.WriteString(fmt.Sprintf("Total Sentences Completed: %d\n", totalSentences))
+	b.WriteString("Your vocabulary recall and progress have been saved.\n\n")
+
+	b.WriteString(HintStyle.Render("[r] Read Again from Beginning  •  [Enter / Space] Select Another Text  •  [q] Quit"))
+
+	cardBox := lipgloss.NewStyle().
+		Border(lipgloss.RoundedBorder()).
+		BorderForeground(lipgloss.Color("#50FA7B")).
+		Padding(1, 4).
+		Align(lipgloss.Center)
+	return cardBox.Render(b.String())
+}
+
 

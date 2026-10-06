@@ -141,6 +141,29 @@ words:
 ```
 If a plain `.txt` file is placed in `memorizationTexts/` without a YAML counterpart, Corvidae will automatically generate plausible distractors and create the companion `.yaml` file.
 
+## Learn by Reading (Diglot Weave)
+
+Corvidae features a **Learn by Reading** mode based on the *Diglot Weave* technique. Read through beloved scripture or literature while target vocabulary is progressively woven directly into the text.
+
+1. **Center-Justified Terminal Reader**: Beautiful, distraction-free center-justified reader layout designed for reading the Bible (1 John) or literature (Harry Potter) in the terminal.
+2. **Progressive Vocabulary Immersion**: Words in each sentence are replaced with target language equivalents (e.g. Mandarin Chinese characters).
+3. **Active Recall & Word Lookup**:
+   - If you know all words in the sentence, press `[Space]`, `[Enter]`, or `[n]` to proceed.
+   - If you encounter an unfamiliar word, press its assigned shortcut key (e.g. `[a]`, `[s]`, `[d]`) to pop up its definition, Pinyin transliteration, and grammatical breakdown.
+   - The system automatically updates its tracking of words you know vs. words you are learning.
+4. **Instant Flashcard Integration**: Press `[m]` in the word detail popup to add any unfamiliar word directly to your **Marked Cards** deck for SM-2 Spaced Repetition review!
+5. **Real-Time Aggressiveness Tuning**: Adjust substitution aggressiveness on the fly using `+` / `-` (or `[` / `]`):
+   - **0%**: Pure English reading mode (uninterrupted Bible or book reading in the terminal).
+   - **20% (Gentle)**: Reviews known words and introduces ~1 new word per sentence.
+   - **40% (Balanced)**: Balanced vocabulary immersion.
+   - **70% (Intensive)**: Accelerating vocabulary exposure.
+   - **100% (Full Immersion)**: Every translatable word replaced.
+6. **Sentence Grammar & Discussion Box**: Pops up after each sentence (or toggle with `[h]`), detailing:
+   - Natural target language sentence in proper word order (e.g. full Mandarin sentence + Pinyin).
+   - In-depth grammar notes explaining syntax differences (e.g., relative clauses, prepositional order, aspect particles like 的, 了, 着).
+   - Substituted vocabulary recap table.
+7. **Extensible Texts**: Place `.yaml` or `.txt` texts in `readingTranslationTexts/` (configurable with `-r /path/to/readingTranslationTexts`). Initial texts include *1 John* and *Harry Potter Chapter 1*.
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

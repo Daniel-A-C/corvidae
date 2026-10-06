@@ -3,13 +3,16 @@ package ui
 import (
 	"fmt"
 	"math/rand"
+	"os"
 	"path/filepath"
+	"strings"
 	"time"
 
 	tea "github.com/charmbracelet/bubbletea"
 	"flashcards/internal/arabic"
 	"flashcards/internal/deck"
 	"flashcards/internal/memorize"
+	"flashcards/internal/reading"
 	"flashcards/internal/sm2"
 )
 
@@ -53,6 +56,16 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m.updateMemorize(msg)
 		case StateMemorizeComplete:
 			return m.updateMemorizeComplete(msg)
+		case StateReadingSelectText:
+			return m.updateReadingSelectText(msg)
+		case StateReading:
+			return m.updateReading(msg)
+		case StateReadingWordDetail:
+			return m.updateReadingWordDetail(msg)
+		case StateReadingDiscussion:
+			return m.updateReadingDiscussion(msg)
+		case StateReadingComplete:
+			return m.updateReadingComplete(msg)
 		}
 
 	case tea.WindowSizeMsg:
@@ -70,7 +83,7 @@ func (m Model) isSelectionKey(key string) bool {
 	}
 	switch m.State {
 	case StateModeSelect:
-		return idx < 4
+		return idx < 5
 	case StateDirSelect:
 		return idx < len(m.Dirs)
 	case StateDeckSelect:
@@ -89,6 +102,8 @@ func (m Model) isSelectionKey(key string) bool {
 		return idx < len(m.MemorizeTexts)
 	case StateMemorize:
 		return !m.MemorizeShowFeedback && idx < len(m.MemorizeCurrentOptions)
+	case StateReadingSelectText:
+		return idx < len(m.ReadingTexts)
 	}
 	return false
 }
@@ -113,12 +128,15 @@ func (m Model) updateModeSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	case "f":
 		m.Mode = ModeMemorize
 		return m.confirmModeSelect()
+	case "g":
+		m.Mode = ModeReading
+		return m.confirmModeSelect()
 	case "up", "k":
 		if m.Mode > 0 {
 			m.Mode--
 		}
 	case "down", "j":
-		if m.Mode < 3 {
+		if m.Mode < 4 {
 			m.Mode++
 		}
 	case "enter", " ":
@@ -143,6 +161,18 @@ func (m Model) confirmModeSelect() (tea.Model, tea.Cmd) {
 		m.MemorizeTexts = texts
 		m.MemorizeCursor = 0
 		m.State = StateMemorizeSelectText
+		return m, nil
+	}
+
+	if m.Mode == ModeReading {
+		texts, err := reading.ListTexts(m.ReadingDir, m.ReadingProgress)
+		if err != nil {
+			m.Err = err
+			return m, nil
+		}
+		m.ReadingTexts = texts
+		m.ReadingCursor = 0
+		m.State = StateReadingSelectText
 		return m, nil
 	}
 
@@ -953,4 +983,215 @@ func (m Model) updateMemorizeComplete(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	}
 	return m, nil
 }
+
+func (m Model) updateReadingSelectText(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	if m.StatusMessage != "" {
+		m.StatusMessage = ""
+	}
+
+	idx := KeyToIndex(msg.String())
+	if idx >= 0 && idx < len(m.ReadingTexts) {
+		m.ReadingCursor = idx
+		return m.startReadingSession()
+	}
+
+	switch msg.String() {
+	case "up", "k":
+		if m.ReadingCursor > 0 {
+			m.ReadingCursor--
+		}
+	case "down", "j":
+		if m.ReadingCursor < len(m.ReadingTexts)-1 {
+			m.ReadingCursor++
+		}
+	case "enter", " ":
+		return m.startReadingSession()
+	case "esc", "b":
+		m.State = StateModeSelect
+	}
+	return m, nil
+}
+
+func (m Model) startReadingSession() (tea.Model, tea.Cmd) {
+	if len(m.ReadingTexts) == 0 || m.ReadingCursor >= len(m.ReadingTexts) {
+		return m, nil
+	}
+
+	header := m.ReadingTexts[m.ReadingCursor]
+	var text *reading.Text
+	var err error
+
+	if strings.HasSuffix(header.Filename, ".yaml") || strings.HasSuffix(header.Filename, ".yml") || strings.HasSuffix(header.Filename, ".json") {
+		text, err = reading.LoadText(header.FullPath)
+	} else {
+		// Raw .txt file
+		raw, readErr := os.ReadFile(header.FullPath)
+		if readErr != nil {
+			err = readErr
+		} else {
+			sentences := reading.SplitIntoSentences(string(raw))
+			var sentList []reading.Sentence
+			for i, s := range sentences {
+				sentList = append(sentList, reading.Sentence{
+					ID:      fmt.Sprintf("%s-%d", header.ID, i+1),
+					English: s,
+				})
+			}
+			text = &reading.Text{
+				ID:        header.ID,
+				Title:     header.Title,
+				Language:  "Mandarin",
+				Category:  "Reading",
+				Sentences: sentList,
+				FilePath:  header.FullPath,
+			}
+		}
+	}
+
+	if err != nil {
+		m.Err = err
+		return m, nil
+	}
+
+	m.ReadingSession = reading.NewSession(text, m.ReadingProgress)
+	m.ReadingWordFeedback = ""
+	m.State = StateReading
+	return m, nil
+}
+
+func (m Model) updateReading(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	if m.ReadingSession == nil {
+		m.State = StateReadingSelectText
+		return m, nil
+	}
+
+	key := msg.String()
+
+	// Check if key matches a substituted word
+	if _, ok := m.ReadingSession.CurrentWeave.KeyToWord[key]; ok {
+		m.ReadingSession.SelectWordByKey(key)
+		m.ReadingWordFeedback = ""
+		m.State = StateReadingWordDetail
+		return m, nil
+	}
+
+	switch key {
+	case "enter", " ", "n":
+		m.ReadingSession.FinishSentence()
+		m.State = StateReadingDiscussion
+		return m, nil
+
+	case "h", "?", "d":
+		m.State = StateReadingDiscussion
+		return m, nil
+
+	case "+", "=", "]":
+		m.ReadingSession.CycleAggressiveness(1)
+		return m, nil
+
+	case "-", "_", "[":
+		m.ReadingSession.CycleAggressiveness(-1)
+		return m, nil
+
+	case "0":
+		m.ReadingSession.SetAggressiveness(0)
+		return m, nil
+
+	case "p", "left":
+		m.ReadingSession.Prev()
+		return m, nil
+
+	case "r":
+		m.ReadingSession.Restart()
+		return m, nil
+
+	case "esc", "b":
+		m.State = StateReadingSelectText
+		return m, nil
+	}
+
+	return m, nil
+}
+
+func (m Model) updateReadingWordDetail(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	if m.ReadingSession == nil || m.ReadingSession.SelectedWord == nil {
+		m.State = StateReading
+		return m, nil
+	}
+
+	switch msg.String() {
+	case "m":
+		added := m.MarkWordAsFlashcard(m.ReadingSession.SelectedWord.Translation)
+		if added {
+			m.ReadingWordFeedback = "★ Added to Marked Cards deck!"
+		} else {
+			m.ReadingWordFeedback = "★ Already in Marked Cards deck."
+		}
+		return m, nil
+
+	case "k":
+		m.ReadingSession.MarkSelectedWordKnown()
+		m.ReadingWordFeedback = "✓ Marked as Known!"
+		return m, nil
+
+	case "esc", "enter", " ", "b":
+		m.ReadingSession.CloseWordDetail()
+		m.ReadingWordFeedback = ""
+		m.State = StateReading
+		return m, nil
+	}
+
+	return m, nil
+}
+
+func (m Model) updateReadingDiscussion(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	if m.ReadingSession == nil {
+		m.State = StateReadingSelectText
+		return m, nil
+	}
+
+	switch msg.String() {
+	case "enter", " ", "n":
+		advanced := m.ReadingSession.Next()
+		if !advanced {
+			m.State = StateReadingComplete
+		} else {
+			m.State = StateReading
+		}
+		return m, nil
+
+	case "h", "esc", "b":
+		m.State = StateReading
+		return m, nil
+
+	case "p", "left":
+		m.ReadingSession.Prev()
+		m.State = StateReading
+		return m, nil
+
+	case "+", "=", "]":
+		m.ReadingSession.CycleAggressiveness(1)
+		return m, nil
+
+	case "-", "_", "[":
+		m.ReadingSession.CycleAggressiveness(-1)
+		return m, nil
+	}
+
+	return m, nil
+}
+
+func (m Model) updateReadingComplete(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	switch msg.String() {
+	case "r":
+		if m.ReadingSession != nil {
+			m.ReadingSession.Restart()
+			m.State = StateReading
+		}
+	case "enter", "esc", "b", " ":
+		m.State = StateReadingSelectText
+	}
+	return m, nil
+}
+
 
