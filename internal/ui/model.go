@@ -10,6 +10,7 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"flashcards/internal/arabic"
 	"flashcards/internal/deck"
+	"flashcards/internal/memorize"
 	"flashcards/internal/quiz"
 )
 
@@ -24,12 +25,17 @@ const (
 	StateArabicDrill
 	StateArabicStages
 	StateArabicStageView
+	StateMemorizeSelectText
+	StateMemorizePortionSelect
+	StateMemorize
+	StateMemorizeComplete
 )
 
 const (
 	ModeReview = iota
 	ModeQuiz
 	ModeArabic
+	ModeMemorize
 )
 
 // Model represents the Bubble Tea state model for Corvidae.
@@ -74,19 +80,50 @@ type Model struct {
 	PlayingMarkedDeck bool
 	StatusMessage     string
 
+	// Memorize by Options state
+	TextsDir               string
+	MemorizeTexts          []memorize.TextHeader
+	MemorizeCursor         int
+	MemorizeActiveText     *memorize.Text
+	MemorizeSections       []memorize.Section
+	PortionStartSection    int // 0-based index into MemorizeSections
+	PortionEndSection      int // 0-based index into MemorizeSections (inclusive)
+	PortionFocus           int // 0: Start, 1: End
+	PortionStartWordIdx    int
+	PortionEndWordIdx      int
+	PortionCompletedMsg    string
+	MemorizeCurrentIndex   int
+	MemorizeCurrentOptions []string
+	MemorizeCorrectIndex   int
+	MemorizeSelectedOption int
+	MemorizeMistakes       int
+	MemorizeStreak         int
+	MemorizeBestStreak     int
+	MemorizeShowFeedback   bool
+	MemorizeIsCorrect      bool
+
 	Err    error
 	Width  int
 	Height int
 }
 
-// New initializes and returns a new Model.
+// New initializes and returns a new Model using default directories.
 func New(baseDir string) Model {
+	return NewWithOptions(baseDir, "memorizationTexts")
+}
+
+// NewWithOptions initializes and returns a new Model with specified deck and text directories.
+func NewWithOptions(baseDir, textsDir string) Model {
 	if baseDir == "" {
 		baseDir = "decks"
+	}
+	if textsDir == "" {
+		textsDir = "memorizationTexts"
 	}
 	dirs, err := deck.GetDeckDirectories(baseDir)
 	m := Model{
 		BaseDir:       baseDir,
+		TextsDir:      textsDir,
 		State:         StateModeSelect,
 		Mode:          ModeReview,
 		Dirs:          dirs,
@@ -285,4 +322,75 @@ func (m *Model) SetupArabicDrill(dType arabic.DrillType, stageIdx int) {
 			m.ArabicQuestions = arabic.GenerateStageQuestions(arabic.Stages[stageIdx], 8)
 		}
 	}
+}
+
+// SetupMemorizeWord configures options for the active word in Memorize mode.
+func (m *Model) SetupMemorizeWord() {
+	if m.MemorizeActiveText == nil || m.MemorizeCurrentIndex >= len(m.MemorizeActiveText.Words) {
+		m.State = StateMemorizeComplete
+		return
+	}
+	item := m.MemorizeActiveText.Words[m.MemorizeCurrentIndex]
+	m.MemorizeCurrentOptions, m.MemorizeCorrectIndex = memorize.ShuffleOptions(item)
+	m.MemorizeShowFeedback = false
+	m.MemorizeSelectedOption = -1
+	m.MemorizeIsCorrect = false
+}
+
+// SelectMemorizeText loads the chosen text, extracts sections, and transitions to portion selection.
+func (m *Model) SelectMemorizeText(filePath string) error {
+	loaded, err := memorize.LoadText(filePath)
+	if err != nil {
+		return err
+	}
+	m.MemorizeActiveText = loaded
+	m.MemorizeSections = loaded.GetSections()
+	m.PortionStartSection = 0
+	if len(m.MemorizeSections) > 0 {
+		m.PortionEndSection = len(m.MemorizeSections) - 1
+	} else {
+		m.PortionEndSection = 0
+	}
+	m.PortionFocus = 0
+	m.PortionCompletedMsg = ""
+	m.State = StateMemorizePortionSelect
+	return nil
+}
+
+// StartMemorizePortion begins practicing the continuous portion between startSec and endSec.
+func (m *Model) StartMemorizePortion(startSec, endSec int) {
+	if len(m.MemorizeSections) == 0 {
+		return
+	}
+	if startSec < 0 {
+		startSec = 0
+	}
+	if endSec >= len(m.MemorizeSections) {
+		endSec = len(m.MemorizeSections) - 1
+	}
+	if startSec > endSec {
+		startSec = endSec
+	}
+
+	m.PortionStartSection = startSec
+	m.PortionEndSection = endSec
+	m.PortionStartWordIdx = m.MemorizeSections[startSec].StartIdx
+	m.PortionEndWordIdx = m.MemorizeSections[endSec].EndIdx
+
+	m.MemorizeCurrentIndex = m.PortionStartWordIdx
+	m.MemorizeMistakes = 0
+	m.MemorizeStreak = 0
+	m.MemorizeBestStreak = 0
+	m.PortionCompletedMsg = ""
+	m.State = StateMemorize
+	m.SetupMemorizeWord()
+}
+
+// StartMemorizeSession loads the chosen text and starts the full session.
+func (m *Model) StartMemorizeSession(filePath string) error {
+	if err := m.SelectMemorizeText(filePath); err != nil {
+		return err
+	}
+	m.StartMemorizePortion(0, len(m.MemorizeSections)-1)
+	return nil
 }

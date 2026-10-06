@@ -1490,3 +1490,302 @@ func TestWorkspaceMarkedDeck(t *testing.T) {
 	}
 }
 
+func TestMemorizeModeNavigation(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	textsDir := filepath.Join("..", "..", "memorizationTexts")
+
+	m := NewWithOptions(decksDir, textsDir)
+	if m.State != StateModeSelect {
+		t.Fatalf("expected StateModeSelect, got %d", m.State)
+	}
+
+	// Press 'f' to enter Memorize by Options mode
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'f'}})
+	m = updatedM.(Model)
+
+	if m.State != StateMemorizeSelectText {
+		t.Fatalf("expected StateMemorizeSelectText, got %d", m.State)
+	}
+	if len(m.MemorizeTexts) == 0 {
+		t.Fatalf("expected at least 1 memorization text, got %d", len(m.MemorizeTexts))
+	}
+
+	// First text should be Filemón
+	if !strings.Contains(strings.ToLower(m.MemorizeTexts[0].Title), "filemón") {
+		t.Errorf("expected Filemón text, got '%s'", m.MemorizeTexts[0].Title)
+	}
+
+	// Enter on the selected text -> StateMemorizePortionSelect
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	if m.State != StateMemorizePortionSelect {
+		t.Fatalf("expected StateMemorizePortionSelect, got %d", m.State)
+	}
+	if len(m.MemorizeSections) != 25 {
+		t.Fatalf("expected 25 verse sections in Filemón, got %d", len(m.MemorizeSections))
+	}
+
+	// Enter on portion select -> StateMemorize
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	if m.State != StateMemorize {
+		t.Fatalf("expected StateMemorize, got %d", m.State)
+	}
+	if m.MemorizeActiveText == nil {
+		t.Fatalf("expected MemorizeActiveText to be loaded")
+	}
+	if len(m.MemorizeActiveText.Words) != 423 {
+		t.Errorf("expected 423 words in Filemón, got %d", len(m.MemorizeActiveText.Words))
+	}
+	if len(m.MemorizeCurrentOptions) != 5 {
+		t.Errorf("expected 5 options, got %d", len(m.MemorizeCurrentOptions))
+	}
+
+	// Verify correct option
+	targetWord := m.MemorizeActiveText.Words[0].Word
+	if m.MemorizeCurrentOptions[m.MemorizeCorrectIndex] != targetWord {
+		t.Errorf("expected correct option to be '%s', got '%s'", targetWord, m.MemorizeCurrentOptions[m.MemorizeCorrectIndex])
+	}
+}
+
+func TestMemorizeWordProgressionAndFeedback(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	textsDir := filepath.Join("..", "..", "memorizationTexts")
+
+	m := NewWithOptions(decksDir, textsDir)
+	// Press 'f', then Enter (select text), then Enter (start portion)
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'f'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	if m.State != StateMemorize {
+		t.Fatalf("expected StateMemorize, got %d", m.State)
+	}
+
+	// 1. Submit the CORRECT answer
+	correctKey := IndexToKey(m.MemorizeCorrectIndex)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(correctKey)})
+	m = updatedM.(Model)
+
+	if m.MemorizeCurrentIndex != 1 {
+		t.Errorf("expected index 1 after correct answer, got %d", m.MemorizeCurrentIndex)
+	}
+	if m.MemorizeStreak != 1 {
+		t.Errorf("expected streak 1, got %d", m.MemorizeStreak)
+	}
+	if m.MemorizeMistakes != 0 {
+		t.Errorf("expected 0 mistakes, got %d", m.MemorizeMistakes)
+	}
+	if m.MemorizeShowFeedback {
+		t.Errorf("expected immediate advance without feedback pause on correct answer")
+	}
+
+	// 2. Submit an INCORRECT answer
+	wrongIdx := (m.MemorizeCorrectIndex + 1) % len(m.MemorizeCurrentOptions)
+	wrongKey := IndexToKey(wrongIdx)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(wrongKey)})
+	m = updatedM.(Model)
+
+	if !m.MemorizeShowFeedback {
+		t.Errorf("expected MemorizeShowFeedback to be true after incorrect answer")
+	}
+	if m.MemorizeCurrentIndex != 1 {
+		t.Errorf("expected index to stay at 1 during feedback, got %d", m.MemorizeCurrentIndex)
+	}
+	if m.MemorizeStreak != 0 {
+		t.Errorf("expected streak reset to 0, got %d", m.MemorizeStreak)
+	}
+	if m.MemorizeMistakes != 1 {
+		t.Errorf("expected mistakes to be 1, got %d", m.MemorizeMistakes)
+	}
+
+	// 3. Press Spacebar to acknowledge error and continue
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{' '}})
+	m = updatedM.(Model)
+
+	if m.MemorizeShowFeedback {
+		t.Errorf("expected feedback dismissed after spacebar")
+	}
+	if m.MemorizeCurrentIndex != 2 {
+		t.Errorf("expected index to advance to 2, got %d", m.MemorizeCurrentIndex)
+	}
+
+	// 4. Test View rendering in Memorize mode
+	rendered := m.View()
+	if !strings.Contains(rendered, "Portion Word 3 of 423") {
+		t.Errorf("expected view to contain 'Portion Word 3 of 423', got: %s", rendered)
+	}
+	if !strings.Contains(rendered, "[a]") {
+		t.Errorf("expected view to contain option keys [a], got: %s", rendered)
+	}
+}
+
+func TestMemorizePortionSelectionAndShifting(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	textsDir := filepath.Join("..", "..", "memorizationTexts")
+
+	m := NewWithOptions(decksDir, textsDir)
+	// 'f' -> Enter into portion select
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'f'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	if m.State != StateMemorizePortionSelect {
+		t.Fatalf("expected StateMemorizePortionSelect, got %d", m.State)
+	}
+
+	// Default: all verses (0 to 24)
+	if m.PortionStartSection != 0 || m.PortionEndSection != 24 {
+		t.Errorf("expected default portion 0..24, got %d..%d", m.PortionStartSection, m.PortionEndSection)
+	}
+
+	// Shift Start to Verse 15 (index 14) and End to Verse 20 (index 19)
+	m.PortionStartSection = 14
+	m.PortionEndSection = 19
+
+	// Test shifting start independently:
+	// '[' decreases start
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'['}})
+	m = updatedM.(Model)
+	if m.PortionStartSection != 13 {
+		t.Errorf("expected PortionStartSection 13 after '[', got %d", m.PortionStartSection)
+	}
+
+	// ']' increases start
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{']'}})
+	m = updatedM.(Model)
+	if m.PortionStartSection != 14 {
+		t.Errorf("expected PortionStartSection 14 after ']', got %d", m.PortionStartSection)
+	}
+
+	// Test shifting end independently:
+	// '}' increases end
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'}'}})
+	m = updatedM.(Model)
+	if m.PortionEndSection != 20 {
+		t.Errorf("expected PortionEndSection 20 after '}', got %d", m.PortionEndSection)
+	}
+
+	// '{' decreases end
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'{'}})
+	m = updatedM.(Model)
+	if m.PortionEndSection != 19 {
+		t.Errorf("expected PortionEndSection 19 after '{', got %d", m.PortionEndSection)
+	}
+
+	// Test Expand ('x')
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'x'}})
+	m = updatedM.(Model)
+	if m.PortionEndSection != 20 {
+		t.Errorf("expected PortionEndSection 20 after 'x', got %d", m.PortionEndSection)
+	}
+
+	// Test Contract ('c')
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'c'}})
+	m = updatedM.(Model)
+	if m.PortionEndSection != 19 {
+		t.Errorf("expected PortionEndSection 19 after 'c', got %d", m.PortionEndSection)
+	}
+
+	// Set exactly to verses 15–20 (indices 14 to 19)
+	m.PortionStartSection = 14
+	m.PortionEndSection = 19
+
+	// Verify view rendering of portion selector
+	viewStr := m.View()
+	if !strings.Contains(viewStr, "Verse 15 to Verse 20") {
+		t.Errorf("expected view to contain 'Verse 15 to Verse 20', got: %s", viewStr)
+	}
+	if !strings.Contains(viewStr, "[START]") || !strings.Contains(viewStr, "[END]") {
+		t.Errorf("expected view to contain [START] and [END] markers, got: %s", viewStr)
+	}
+
+	// Start practicing verses 15–20
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	if m.State != StateMemorize {
+		t.Fatalf("expected StateMemorize, got %d", m.State)
+	}
+	sec15 := m.MemorizeSections[14]
+	sec20 := m.MemorizeSections[19]
+	if m.MemorizeCurrentIndex != sec15.StartIdx {
+		t.Errorf("expected start word index %d, got %d", sec15.StartIdx, m.MemorizeCurrentIndex)
+	}
+	if m.PortionEndWordIdx != sec20.EndIdx {
+		t.Errorf("expected end word index %d, got %d", sec20.EndIdx, m.PortionEndWordIdx)
+	}
+
+	// Complete the portion: simulate reaching last word of portion
+	m.MemorizeCurrentIndex = m.PortionEndWordIdx - 1
+	m.SetupMemorizeWord()
+
+	correctKey := IndexToKey(m.MemorizeCorrectIndex)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(correctKey)})
+	m = updatedM.(Model)
+
+	// User MUST be sent back to portion selector!
+	if m.State != StateMemorizePortionSelect {
+		t.Fatalf("expected return to StateMemorizePortionSelect, got %d", m.State)
+	}
+	if !strings.Contains(m.PortionCompletedMsg, "Portion Complete") {
+		t.Errorf("expected PortionCompletedMsg to report completion, got: '%s'", m.PortionCompletedMsg)
+	}
+
+	// Now test 'n' (advance): moves from 14..19 to next chunk
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'n'}})
+	m = updatedM.(Model)
+	if m.PortionStartSection != 20 {
+		t.Errorf("expected advanced start section 20, got %d", m.PortionStartSection)
+	}
+}
+
+func TestMemorizeBackEscNavigation(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	textsDir := filepath.Join("..", "..", "memorizationTexts")
+
+	m := NewWithOptions(decksDir, textsDir)
+	// ModeSelect -> 'f' -> SelectText -> Enter -> PortionSelect -> Enter -> Memorize
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'f'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	if m.State != StateMemorize {
+		t.Fatalf("expected StateMemorize, got %d", m.State)
+	}
+
+	// Esc from StateMemorize -> back to StateMemorizePortionSelect
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+
+	if m.State != StateMemorizePortionSelect {
+		t.Fatalf("expected StateMemorizePortionSelect after Esc, got %d", m.State)
+	}
+
+	// Esc from StateMemorizePortionSelect -> back to StateMemorizeSelectText
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+
+	if m.State != StateMemorizeSelectText {
+		t.Fatalf("expected StateMemorizeSelectText after Esc, got %d", m.State)
+	}
+
+	// Esc from StateMemorizeSelectText -> back to StateModeSelect
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+
+	if m.State != StateModeSelect {
+		t.Fatalf("expected StateModeSelect after Esc, got %d", m.State)
+	}
+}
+
+

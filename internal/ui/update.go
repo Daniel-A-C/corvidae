@@ -1,6 +1,7 @@
 package ui
 
 import (
+	"fmt"
 	"math/rand"
 	"path/filepath"
 	"time"
@@ -8,6 +9,7 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"flashcards/internal/arabic"
 	"flashcards/internal/deck"
+	"flashcards/internal/memorize"
 	"flashcards/internal/sm2"
 )
 
@@ -43,6 +45,14 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m.updateArabicStages(msg)
 		case StateArabicStageView:
 			return m.updateArabicStageView(msg)
+		case StateMemorizeSelectText:
+			return m.updateMemorizeSelectText(msg)
+		case StateMemorizePortionSelect:
+			return m.updateMemorizePortionSelect(msg)
+		case StateMemorize:
+			return m.updateMemorize(msg)
+		case StateMemorizeComplete:
+			return m.updateMemorizeComplete(msg)
 		}
 
 	case tea.WindowSizeMsg:
@@ -60,7 +70,7 @@ func (m Model) isSelectionKey(key string) bool {
 	}
 	switch m.State {
 	case StateModeSelect:
-		return idx < 3
+		return idx < 4
 	case StateDirSelect:
 		return idx < len(m.Dirs)
 	case StateDeckSelect:
@@ -75,6 +85,10 @@ func (m Model) isSelectionKey(key string) bool {
 		}
 	case StateArabicStages:
 		return idx < len(arabic.Stages)
+	case StateMemorizeSelectText:
+		return idx < len(m.MemorizeTexts)
+	case StateMemorize:
+		return !m.MemorizeShowFeedback && idx < len(m.MemorizeCurrentOptions)
 	}
 	return false
 }
@@ -96,12 +110,15 @@ func (m Model) updateModeSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	case "d":
 		m.Mode = ModeArabic
 		return m.confirmModeSelect()
+	case "f":
+		m.Mode = ModeMemorize
+		return m.confirmModeSelect()
 	case "up", "k":
 		if m.Mode > 0 {
 			m.Mode--
 		}
 	case "down", "j":
-		if m.Mode < 2 {
+		if m.Mode < 3 {
 			m.Mode++
 		}
 	case "enter", " ":
@@ -114,6 +131,18 @@ func (m Model) confirmModeSelect() (tea.Model, tea.Cmd) {
 	if m.Mode == ModeArabic {
 		m.ArabicMenuCursor = 0
 		m.State = StateArabicMenu
+		return m, nil
+	}
+
+	if m.Mode == ModeMemorize {
+		texts, err := memorize.ListTexts(m.TextsDir)
+		if err != nil {
+			m.Err = err
+			return m, nil
+		}
+		m.MemorizeTexts = texts
+		m.MemorizeCursor = 0
+		m.State = StateMemorizeSelectText
 		return m, nil
 	}
 
@@ -637,3 +666,291 @@ func (m Model) updateArabicStageView(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	}
 	return m, nil
 }
+
+func (m Model) updateMemorizeSelectText(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	if len(m.MemorizeTexts) == 0 {
+		switch msg.String() {
+		case "esc", "b":
+			m.State = StateModeSelect
+		}
+		return m, nil
+	}
+
+	idx := KeyToIndex(msg.String())
+	if idx >= 0 && idx < len(m.MemorizeTexts) {
+		m.MemorizeCursor = idx
+		if err := m.SelectMemorizeText(m.MemorizeTexts[idx].FullPath); err != nil {
+			m.Err = err
+			return m, nil
+		}
+		return m, nil
+	}
+
+	switch msg.String() {
+	case "up", "k":
+		if m.MemorizeCursor > 0 {
+			m.MemorizeCursor--
+		}
+	case "down", "j":
+		if m.MemorizeCursor < len(m.MemorizeTexts)-1 {
+			m.MemorizeCursor++
+		}
+	case "enter", " ":
+		if m.MemorizeCursor >= 0 && m.MemorizeCursor < len(m.MemorizeTexts) {
+			if err := m.SelectMemorizeText(m.MemorizeTexts[m.MemorizeCursor].FullPath); err != nil {
+				m.Err = err
+				return m, nil
+			}
+		}
+	case "esc", "b":
+		m.State = StateModeSelect
+	}
+	return m, nil
+}
+
+func (m Model) updateMemorizePortionSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	numSecs := len(m.MemorizeSections)
+	if numSecs == 0 {
+		m.State = StateMemorizeSelectText
+		return m, nil
+	}
+
+	switch msg.String() {
+	case "tab", "up", "down", "j", "k":
+		// Toggle focus between Start and End
+		if m.PortionFocus == 0 {
+			m.PortionFocus = 1
+		} else {
+			m.PortionFocus = 0
+		}
+
+	case "s":
+		m.PortionFocus = 0
+	case "e":
+		m.PortionFocus = 1
+
+	case "left", "h":
+		if m.PortionFocus == 0 {
+			if m.PortionStartSection > 0 {
+				m.PortionStartSection--
+			}
+		} else {
+			if m.PortionEndSection > m.PortionStartSection {
+				m.PortionEndSection--
+			}
+		}
+
+	case "right", "l":
+		if m.PortionFocus == 0 {
+			if m.PortionStartSection < m.PortionEndSection {
+				m.PortionStartSection++
+			}
+		} else {
+			if m.PortionEndSection < numSecs-1 {
+				m.PortionEndSection++
+			}
+		}
+
+	case "[":
+		if m.PortionStartSection > 0 {
+			m.PortionStartSection--
+		}
+	case "]":
+		if m.PortionStartSection < m.PortionEndSection {
+			m.PortionStartSection++
+		}
+	case "{", "-":
+		if m.PortionEndSection > m.PortionStartSection {
+			m.PortionEndSection--
+		}
+	case "}", "+", "=":
+		if m.PortionEndSection < numSecs-1 {
+			m.PortionEndSection++
+		}
+
+	case "x":
+		// Expand portion: advance End by 1, or retreat Start by 1 if End is already at last
+		if m.PortionEndSection < numSecs-1 {
+			m.PortionEndSection++
+		} else if m.PortionStartSection > 0 {
+			m.PortionStartSection--
+		}
+
+	case "c":
+		// Contract portion
+		if m.PortionEndSection > m.PortionStartSection {
+			m.PortionEndSection--
+		}
+
+	case "n", ">":
+		// Advance portion to next chunk
+		chunkLen := m.PortionEndSection - m.PortionStartSection + 1
+		if m.PortionEndSection+1 < numSecs {
+			newStart := m.PortionEndSection + 1
+			newEnd := newStart + chunkLen - 1
+			if newEnd >= numSecs {
+				newEnd = numSecs - 1
+			}
+			m.PortionStartSection = newStart
+			m.PortionEndSection = newEnd
+		}
+
+	case "p", "<":
+		// Shift portion back to previous chunk
+		chunkLen := m.PortionEndSection - m.PortionStartSection + 1
+		if m.PortionStartSection > 0 {
+			newEnd := m.PortionStartSection - 1
+			newStart := newEnd - chunkLen + 1
+			if newStart < 0 {
+				newStart = 0
+			}
+			m.PortionStartSection = newStart
+			m.PortionEndSection = newEnd
+		}
+
+	case "a":
+		// Select All
+		m.PortionStartSection = 0
+		m.PortionEndSection = numSecs - 1
+
+	case "1":
+		// Collapse to single section
+		m.PortionEndSection = m.PortionStartSection
+
+	case "enter", " ":
+		m.StartMemorizePortion(m.PortionStartSection, m.PortionEndSection)
+		return m, nil
+
+	case "esc", "b":
+		m.State = StateMemorizeSelectText
+		return m, nil
+	}
+
+	return m, nil
+}
+
+func (m Model) updateMemorize(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	if m.MemorizeActiveText == nil || m.MemorizeCurrentIndex >= m.PortionEndWordIdx {
+		return m.finishPortion()
+	}
+
+	if m.MemorizeShowFeedback {
+		switch msg.String() {
+		case " ", "enter":
+			m.MemorizeShowFeedback = false
+			m.MemorizeCurrentIndex++
+			if m.MemorizeCurrentIndex >= m.PortionEndWordIdx {
+				return m.finishPortion()
+			}
+			m.SetupMemorizeWord()
+			return m, nil
+		case "r":
+			m.MemorizeShowFeedback = false
+			m.SetupMemorizeWord()
+			return m, nil
+		case "esc", "b":
+			m.State = StateMemorizePortionSelect
+			return m, nil
+		}
+		return m, nil
+	}
+
+	choiceIdx := KeyToIndex(msg.String())
+	if choiceIdx == -1 {
+		switch msg.String() {
+		case "1":
+			choiceIdx = 0
+		case "2":
+			choiceIdx = 1
+		case "3":
+			choiceIdx = 2
+		case "4":
+			choiceIdx = 3
+		case "5":
+			choiceIdx = 4
+		}
+	}
+
+	if choiceIdx >= 0 && choiceIdx < len(m.MemorizeCurrentOptions) {
+		if choiceIdx == m.MemorizeCorrectIndex {
+			m.MemorizeStreak++
+			if m.MemorizeStreak > m.MemorizeBestStreak {
+				m.MemorizeBestStreak = m.MemorizeStreak
+			}
+			m.MemorizeCurrentIndex++
+			if m.MemorizeCurrentIndex >= m.PortionEndWordIdx {
+				return m.finishPortion()
+			}
+			m.SetupMemorizeWord()
+			if m.MemorizeCurrentIndex%5 == 0 && m.MemorizeActiveText.FilePath != "" {
+				m.MemorizeActiveText.Progress = m.MemorizeCurrentIndex
+				_ = memorize.SaveText(m.MemorizeActiveText.FilePath, m.MemorizeActiveText)
+			}
+			return m, nil
+		}
+
+		// Wrong choice
+		m.MemorizeStreak = 0
+		m.MemorizeMistakes++
+		m.MemorizeSelectedOption = choiceIdx
+		m.MemorizeIsCorrect = false
+		m.MemorizeShowFeedback = true
+		return m, nil
+	}
+
+	switch msg.String() {
+	case "r":
+		m.MemorizeCurrentIndex = m.PortionStartWordIdx
+		m.MemorizeMistakes = 0
+		m.MemorizeStreak = 0
+		m.SetupMemorizeWord()
+	case "esc", "b":
+		m.State = StateMemorizePortionSelect
+	}
+	return m, nil
+}
+
+func (m Model) finishPortion() (tea.Model, tea.Cmd) {
+	totalPortionWords := m.PortionEndWordIdx - m.PortionStartWordIdx
+	attempts := totalPortionWords + m.MemorizeMistakes
+	acc := 100.0
+	if attempts > 0 {
+		acc = float64(totalPortionWords) / float64(attempts) * 100
+	}
+
+	startLabel := fmt.Sprintf("Section %d", m.PortionStartSection+1)
+	endLabel := fmt.Sprintf("Section %d", m.PortionEndSection+1)
+	if m.PortionStartSection < len(m.MemorizeSections) {
+		startLabel = m.MemorizeSections[m.PortionStartSection].Label
+	}
+	if m.PortionEndSection < len(m.MemorizeSections) {
+		endLabel = m.MemorizeSections[m.PortionEndSection].Label
+	}
+
+	var rangeLabel string
+	if m.PortionStartSection == m.PortionEndSection {
+		rangeLabel = startLabel
+	} else {
+		rangeLabel = fmt.Sprintf("%s to %s", startLabel, endLabel)
+	}
+
+	m.PortionCompletedMsg = fmt.Sprintf("★ Portion Complete: %s (%d words • Accuracy: %.1f%% • Mistakes: %d)",
+		rangeLabel, totalPortionWords, acc, m.MemorizeMistakes)
+	m.State = StateMemorizePortionSelect
+	return m, nil
+}
+
+func (m Model) updateMemorizeComplete(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	switch msg.String() {
+	case "r":
+		m.MemorizeCurrentIndex = m.PortionStartWordIdx
+		m.MemorizeMistakes = 0
+		m.MemorizeStreak = 0
+		m.State = StateMemorize
+		m.SetupMemorizeWord()
+	case "enter", "esc", "b", " ":
+		m.State = StateMemorizePortionSelect
+	}
+	return m, nil
+}
+
