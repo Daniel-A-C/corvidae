@@ -1,0 +1,2991 @@
+title: Epístola a Filemón
+language: Spanish
+description: Carta de Pablo a Filemón (NVI) - 25 versículos
+progress: 310
+words:
+    - word: Pablo,
+      options:
+        - Pablo,
+        - Pedro,
+        - Juan,
+        - Lucas,
+        - Santiago,
+      prefix: '1 '
+    - word: prisionero
+      options:
+        - prisionero
+        - siervo
+        - apóstol
+        - cautivo
+        - enviado
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: Cristo
+      options:
+        - Cristo
+        - Dios
+        - Señor
+        - Salvador
+        - Padre
+    - word: Jesús,
+      options:
+        - Jesús,
+        - Cristo,
+        - Señor,
+        - Salvador,
+        - Dios,
+    - word: "y"
+      options:
+        - "y"
+        - o
+        - pero
+        - así
+        - también
+    - word: el
+      options:
+        - el
+        - un
+        - mi
+        - su
+        - nuestro
+    - word: hermano
+      options:
+        - hermano
+        - amigo
+        - compañero
+        - hijo
+        - siervo
+    - word: Timoteo,
+      options:
+        - Timoteo,
+        - Tito,
+        - Silas,
+        - Lucas,
+        - Bernabé,
+    - word: a
+      options:
+        - a
+        - para
+        - hacia
+        - en
+        - con
+    - word: ti,
+      options:
+        - ti,
+        - mí,
+        - él,
+        - ustedes,
+        - nosotros,
+    - word: querido
+      options:
+        - querido
+        - deseado
+        - pretendido
+        - procurado
+        - intentado
+    - word: Filemón,
+      options:
+        - Filemón,
+        - Arquipo,
+        - Onésimo,
+        - Epafras,
+        - Tíquico,
+    - word: compañero
+      options:
+        - compañero
+        - colaborador
+        - hermano
+        - amigo
+        - siervo
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: trabajo,
+      options:
+        - trabajo,
+        - lucha,
+        - fe,
+        - servicio,
+        - ministerio,
+    - word: a
+      options:
+        - a
+        - para
+        - hacia
+        - en
+        - con
+      prefix: "\n\n2 "
+    - word: la
+      options:
+        - la
+        - una
+        - mi
+        - su
+        - nuestra
+    - word: hermana
+      options:
+        - hermana
+        - madre
+        - sierva
+        - hija
+        - compañera
+    - word: Apia,
+      options:
+        - Apia,
+        - Priscila,
+        - Febe,
+        - Lidia,
+        - María,
+    - word: a
+      options:
+        - a
+        - para
+        - hacia
+        - en
+        - con
+    - word: Arquipo
+      options:
+        - Arquipo
+        - Epafrodito
+        - Epafras
+        - Onésimo
+        - Tíquico
+    - word: nuestro
+      options:
+        - nuestro
+        - mi
+        - tu
+        - su
+        - vuestro
+    - word: compañero
+      options:
+        - compañero
+        - colaborador
+        - hermano
+        - amigo
+        - siervo
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: lucha
+      options:
+        - lucha
+        - batalla
+        - carrera
+        - fe
+        - esperanza
+    - word: "y"
+      options:
+        - "y"
+        - o
+        - pero
+        - así
+        - también
+    - word: a
+      options:
+        - a
+        - para
+        - hacia
+        - en
+        - con
+    - word: la
+      options:
+        - la
+        - una
+        - mi
+        - su
+        - nuestra
+    - word: iglesia
+      options:
+        - iglesia
+        - comunidad
+        - asamblea
+        - familia
+        - casa
+    - word: que
+      options:
+        - que
+        - cual
+        - donde
+        - cuando
+        - como
+    - word: se
+      options:
+        - se
+        - me
+        - te
+        - le
+        - nos
+    - word: reúne
+      options:
+        - reúne
+        - congrega
+        - junta
+        - encuentra
+        - halla
+    - word: en
+      options:
+        - en
+        - con
+        - por
+        - sobre
+        - hacia
+    - word: tu
+      options:
+        - tu
+        - mi
+        - su
+        - nuestro
+        - vuestro
+    - word: 'casa:'
+      options:
+        - 'casa:'
+        - 'familia:'
+        - 'morada:'
+        - 'asamblea:'
+        - 'ciudad:'
+    - word: Que
+      options:
+        - Que
+        - Cual
+        - Donde
+        - Cuando
+        - Como
+      prefix: "\n\n3 "
+    - word: Dios
+      options:
+        - Dios
+        - Señor
+        - Cristo
+        - Padre
+        - Salvador
+    - word: nuestro
+      options:
+        - nuestro
+        - mi
+        - tu
+        - su
+        - vuestro
+    - word: Padre
+      options:
+        - Padre
+        - Señor
+        - Creador
+        - Dios
+        - Salvador
+    - word: "y"
+      options:
+        - "y"
+        - o
+        - pero
+        - así
+        - también
+    - word: el
+      options:
+        - el
+        - un
+        - mi
+        - su
+        - nuestro
+    - word: Señor
+      options:
+        - Señor
+        - Padre
+        - Cristo
+        - Dios
+        - Maestro
+    - word: Jesucristo
+      options:
+        - Jesucristo
+        - Cristo
+        - Salvador
+        - Señor
+        - Mesías
+    - word: les
+      options:
+        - les
+        - nos
+        - te
+        - me
+        - le
+    - word: concedan
+      options:
+        - concedan
+        - otorguen
+        - den
+        - brinden
+        - derramen
+    - word: gracia
+      options:
+        - gracia
+        - paz
+        - misericordia
+        - bendición
+        - verdad
+    - word: "y"
+      options:
+        - "y"
+        - o
+        - pero
+        - así
+        - también
+    - word: paz.
+      options:
+        - paz.
+        - gracia.
+        - gozo.
+        - amor.
+        - esperanza.
+    - word: Siempre
+      options:
+        - Siempre
+        - Nunca
+        - Jamás
+        - Constante
+        - Continuo
+      prefix: "\n\n4 "
+    - word: doy
+      options:
+        - doy
+        - rindo
+        - ofrezco
+        - tributo
+        - hago
+    - word: gracias
+      options:
+        - gracias
+        - alegrado
+        - alejó
+        - estoy
+        - mismo
+    - word: a
+      options:
+        - a
+        - para
+        - hacia
+        - en
+        - con
+    - word: mi
+      options:
+        - mi
+        - tu
+        - su
+        - nuestro
+        - aquel
+    - word: Dios
+      options:
+        - Dios
+        - Señor
+        - Cristo
+        - Padre
+        - Salvador
+    - word: al
+      options:
+        - al
+        - del
+        - en
+        - hacia
+        - por
+    - word: recordarte
+      options:
+        - recordarte
+        - mencionarte
+        - nombrarte
+        - tenerte
+        - llevarte
+    - word: en
+      options:
+        - en
+        - con
+        - por
+        - sobre
+        - hacia
+    - word: mis
+      options:
+        - mis
+        - tus
+        - sus
+        - nuestros
+        - propios
+    - word: oraciones,
+      options:
+        - oraciones,
+        - peticiones,
+        - ruegos,
+        - súplicas,
+        - ofrendas,
+    - word: porque
+      options:
+        - porque
+        - pues
+        - como
+        - cuando
+        - si
+      prefix: "\n\n5 "
+    - word: tengo
+      options:
+        - tengo
+        - recibo
+        - guardo
+        - siento
+        - hallo
+    - word: noticias
+      options:
+        - noticias
+        - palabras
+        - informes
+        - cartas
+        - testimonios
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: tu
+      options:
+        - tu
+        - mi
+        - su
+        - nuestro
+        - vuestro
+    - word: amor
+      options:
+        - amor
+        - fe
+        - esperanza
+        - gracia
+        - paz
+    - word: por
+      options:
+        - por
+        - para
+        - según
+        - mediante
+        - con
+    - word: el
+      options:
+        - el
+        - un
+        - mi
+        - su
+        - nuestro
+    - word: Señor
+      options:
+        - Señor
+        - Padre
+        - Cristo
+        - Dios
+        - Maestro
+    - word: Jesús
+      options:
+        - Jesús
+        - Cristo
+        - Señor
+        - Salvador
+        - Dios
+    - word: "y"
+      options:
+        - "y"
+        - o
+        - pero
+        - así
+        - también
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: tu
+      options:
+        - tu
+        - mi
+        - su
+        - nuestro
+        - vuestro
+    - word: fidelidad
+      options:
+        - fidelidad
+        - lealtad
+        - obediencia
+        - fe
+        - rectitud
+    - word: hacia
+      options:
+        - hacia
+        - a
+        - para
+        - hasta
+        - con
+    - word: todos
+      options:
+        - todos
+        - muchos
+        - pocos
+        - algunos
+        - tantos
+    - word: los
+      options:
+        - los
+        - unos
+        - mis
+        - sus
+        - nuestros
+    - word: creyentes.
+      options:
+        - creyentes.
+        - santos.
+        - hermanos.
+        - fieles.
+        - discípulos.
+    - word: Pido
+      options:
+        - Pido
+        - Ruego
+        - Suplico
+        - Imploro
+        - Deseo
+      prefix: "\n\n6 "
+    - word: a
+      options:
+        - a
+        - para
+        - hacia
+        - en
+        - con
+    - word: Dios
+      options:
+        - Dios
+        - Señor
+        - Cristo
+        - Padre
+        - Salvador
+    - word: que
+      options:
+        - que
+        - cual
+        - donde
+        - cuando
+        - como
+    - word: el
+      options:
+        - el
+        - un
+        - mi
+        - su
+        - nuestro
+    - word: compañerismo
+      options:
+        - compañerismo
+        - comunión
+        - unión
+        - amistad
+        - hermandad
+    - word: que
+      options:
+        - que
+        - cual
+        - donde
+        - cuando
+        - como
+    - word: brota
+      options:
+        - brota
+        - nace
+        - surge
+        - fluye
+        - proviene
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: tu
+      options:
+        - tu
+        - mi
+        - su
+        - nuestro
+        - vuestro
+    - word: fe
+      options:
+        - fe
+        - amor
+        - esperanza
+        - gracia
+        - verdad
+    - word: sea
+      options:
+        - sea
+        - resulte
+        - permanezca
+        - quede
+        - muestre
+    - word: eficaz
+      options:
+        - eficaz
+        - poderoso
+        - fructífero
+        - firme
+        - verdadero
+    - word: para
+      options:
+        - para
+        - por
+        - hacia
+        - hasta
+        - según
+    - word: la
+      options:
+        - la
+        - una
+        - mi
+        - su
+        - nuestra
+    - word: causa
+      options:
+        - causa
+        - gloria
+        - obra
+        - reino
+        - mensaje
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: Cristo
+      options:
+        - Cristo
+        - Dios
+        - Señor
+        - Salvador
+        - Padre
+    - word: mediante
+      options:
+        - mediante
+        - por
+        - con
+        - según
+        - conforme
+    - word: el
+      options:
+        - el
+        - un
+        - mi
+        - su
+        - nuestro
+    - word: reconocimiento
+      options:
+        - reconocimiento
+        - conocimiento
+        - discernimiento
+        - confesión
+        - testimonio
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: todo
+      options:
+        - todo
+        - mucho
+        - tanto
+        - nada
+        - cuanto
+    - word: lo
+      options:
+        - lo
+        - la
+        - le
+        - los
+        - me
+    - word: bueno
+      options:
+        - bueno
+        - santo
+        - justo
+        - perfecto
+        - digno
+    - word: que
+      options:
+        - que
+        - cual
+        - donde
+        - cuando
+        - como
+    - word: compartimos.
+      options:
+        - compartimos.
+        - tenemos.
+        - gozamos.
+        - vivimos.
+        - poseemos.
+    - word: Hermano,
+      options:
+        - Hermano,
+        - Amigo,
+        - Compañero,
+        - Hijo,
+        - Siervo,
+      prefix: "\n\n7 "
+    - word: tu
+      options:
+        - tu
+        - mi
+        - su
+        - nuestro
+        - vuestro
+    - word: amor
+      options:
+        - amor
+        - fe
+        - esperanza
+        - gracia
+        - paz
+    - word: me
+      options:
+        - me
+        - te
+        - le
+        - nos
+        - les
+    - word: ha
+      options:
+        - ha
+        - había
+        - hubo
+        - haya
+        - habrá
+    - word: alegrado
+      options:
+        - alegrado
+        - regocijado
+        - animado
+        - consolado
+        - gozado
+    - word: "y"
+      options:
+        - "y"
+        - o
+        - pero
+        - así
+        - también
+    - word: animado
+      options:
+        - animado
+        - alegrado
+        - fortalecido
+        - inspirado
+        - motivado
+    - word: mucho
+      options:
+        - mucho
+        - poco
+        - tanto
+        - harto
+        - bastante
+    - word: porque
+      options:
+        - porque
+        - pues
+        - como
+        - cuando
+        - si
+    - word: has
+      options:
+        - has
+        - habías
+        - hayas
+        - puedas
+        - hagas
+    - word: reconfortado
+      options:
+        - reconfortado
+        - consolado
+        - alentado
+        - renovado
+        - fortalecido
+    - word: el
+      options:
+        - el
+        - un
+        - mi
+        - su
+        - nuestro
+    - word: corazón
+      options:
+        - corazón
+        - alma
+        - espíritu
+        - mente
+        - pensamiento
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: los
+      options:
+        - los
+        - unos
+        - mis
+        - sus
+        - nuestros
+    - word: creyentes.
+      options:
+        - creyentes.
+        - santos.
+        - hermanos.
+        - fieles.
+        - discípulos.
+    - word: Por
+      options:
+        - Por
+        - Para
+        - Según
+        - Mediante
+        - Con
+      prefix: "\n\n8 "
+    - word: eso,
+      options:
+        - eso,
+        - muy,
+        - era,
+        - va,
+        - sus,
+    - word: aunque
+      options:
+        - aunque
+        - porque
+        - pero
+        - mientras
+        - si
+    - word: en
+      options:
+        - en
+        - con
+        - por
+        - sobre
+        - hacia
+    - word: Cristo
+      options:
+        - Cristo
+        - Dios
+        - Señor
+        - Salvador
+        - Padre
+    - word: tengo
+      options:
+        - tengo
+        - recibo
+        - guardo
+        - siento
+        - hallo
+    - word: la
+      options:
+        - la
+        - una
+        - mi
+        - su
+        - nuestra
+    - word: franqueza
+      options:
+        - franqueza
+        - confianza
+        - libertad
+        - autoridad
+        - denuedo
+    - word: suficiente
+      options:
+        - suficiente
+        - bastante
+        - completa
+        - plena
+        - abundante
+    - word: para
+      options:
+        - para
+        - por
+        - hacia
+        - hasta
+        - según
+    - word: ordenarte
+      options:
+        - ordenarte
+        - mandarte
+        - exigirte
+        - pedirte
+        - imponerte
+    - word: lo
+      options:
+        - lo
+        - la
+        - le
+        - los
+        - me
+    - word: que
+      options:
+        - que
+        - cual
+        - donde
+        - cuando
+        - como
+    - word: debes
+      options:
+        - debes
+        - tienes
+        - adeudas
+        - deberías
+        - guardas
+    - word: hacer,
+      options:
+        - hacer,
+        - cumplir,
+        - obrar,
+        - realizar,
+        - acatar,
+    - word: prefiero
+      options:
+        - prefiero
+        - deseo
+        - quiero
+        - elijo
+        - resuelvo
+      prefix: "\n\n9 "
+    - word: rogártelo
+      options:
+        - rogártelo
+        - suplicártelo
+        - pedírtelo
+        - encargártelo
+        - solicitártelo
+    - word: en
+      options:
+        - en
+        - con
+        - por
+        - sobre
+        - hacia
+    - word: nombre
+      options:
+        - nombre
+        - honor
+        - gloria
+        - poder
+        - autoridad
+    - word: del
+      options:
+        - del
+        - al
+        - en
+        - por
+        - con
+    - word: amor.
+      options:
+        - amor.
+        - fe.
+        - esperanza.
+        - gracia.
+        - paz.
+    - word: Yo,
+      options:
+        - Yo,
+        - Tú,
+        - Él,
+        - Nosotros,
+        - Todos,
+    - word: Pablo,
+      options:
+        - Pablo,
+        - Pedro,
+        - Juan,
+        - Lucas,
+        - Santiago,
+    - word: ya
+      options:
+        - ya
+        - ahora
+        - todavía
+        - aún
+        - pronto
+    - word: anciano
+      options:
+        - anciano
+        - siervo
+        - apóstol
+        - presbítero
+        - maestro
+    - word: "y"
+      options:
+        - "y"
+        - o
+        - pero
+        - así
+        - también
+    - word: ahora,
+      options:
+        - ahora,
+        - antes,
+        - entonces,
+        - hoy,
+        - ya,
+    - word: además,
+      options:
+        - además,
+        - también,
+        - asimismo,
+        - luego,
+        - incluso,
+    - word: prisionero
+      options:
+        - prisionero
+        - siervo
+        - apóstol
+        - cautivo
+        - enviado
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: Cristo
+      options:
+        - Cristo
+        - Dios
+        - Señor
+        - Salvador
+        - Padre
+    - word: Jesús,
+      options:
+        - Jesús,
+        - Cristo,
+        - Señor,
+        - Salvador,
+        - Dios,
+    - word: te
+      options:
+        - te
+        - me
+        - le
+        - nos
+        - les
+      prefix: "\n\n10 "
+    - word: suplico
+      options:
+        - suplico
+        - ruego
+        - pido
+        - imploro
+        - exhorto
+    - word: por
+      options:
+        - por
+        - para
+        - según
+        - mediante
+        - con
+    - word: mi
+      options:
+        - mi
+        - tu
+        - su
+        - nuestro
+        - aquel
+    - word: hijo
+      options:
+        - hijo
+        - hermano
+        - siervo
+        - padre
+        - discípulo
+    - word: Onésimo,
+      options:
+        - Onésimo,
+        - Filemón,
+        - Arquipo,
+        - Tíquico,
+        - Epafras,
+    - word: quien
+      options:
+        - quien
+        - cual
+        - donde
+        - cuando
+        - que
+    - word: llegó
+      options:
+        - llegó
+        - vino
+        - pasó
+        - alcanzó
+        - empezó
+    - word: a
+      options:
+        - a
+        - para
+        - hacia
+        - en
+        - con
+    - word: ser
+      options:
+        - ser
+        - hacerse
+        - volverse
+        - quedar
+        - vivir
+    - word: hijo
+      options:
+        - hijo
+        - hermano
+        - siervo
+        - padre
+        - discípulo
+    - word: mío
+      options:
+        - mío
+        - dios
+        - alejó
+        - hacer
+        - estoy
+    - word: mientras
+      options:
+        - mientras
+        - querido
+        - epafras
+        - suficiente
+        - beneficio
+    - word: yo
+      options:
+        - yo
+        - tú
+        - él
+        - nosotros
+        - todos
+    - word: estaba
+      options:
+        - estaba
+        - hallaba
+        - encontraba
+        - permanecía
+        - vivía
+    - word: preso.
+      options:
+        - preso.
+        - cautivo.
+        - encadenado.
+        - detenido.
+        - esclavo.
+    - word: En
+      options:
+        - En
+        - Con
+        - Por
+        - Sobre
+        - Hacia
+      prefix: "\n\n11 "
+    - word: otro
+      options:
+        - otro
+        - mismo
+        - propio
+        - nuevo
+        - diferente
+    - word: tiempo
+      options:
+        - tiempo
+        - momento
+        - siglo
+        - día
+        - año
+    - word: te
+      options:
+        - te
+        - me
+        - le
+        - nos
+        - les
+    - word: era
+      options:
+        - era
+        - fue
+        - parecía
+        - resultaba
+        - quedaba
+    - word: inútil,
+      options:
+        - inútil,
+        - vano,
+        - infructuoso,
+        - indigno,
+        - ocioso,
+    - word: pero
+      options:
+        - pero
+        - sino
+        - aunque
+        - mas
+        - empero
+    - word: ahora
+      options:
+        - ahora
+        - antes
+        - entonces
+        - hoy
+        - ya
+    - word: nos
+      options:
+        - nos
+        - les
+        - me
+        - te
+        - se
+    - word: es
+      options:
+        - es
+        - será
+        - parece
+        - resulta
+        - queda
+    - word: útil
+      options:
+        - útil
+        - provechoso
+        - valioso
+        - servicial
+        - necesario
+    - word: tanto
+      options:
+        - tanto
+        - mucho
+        - cuanto
+        - igual
+        - poco
+    - word: a
+      options:
+        - a
+        - para
+        - hacia
+        - en
+        - con
+    - word: ti
+      options:
+        - ti
+        - mí
+        - él
+        - ustedes
+        - nosotros
+    - word: como
+      options:
+        - como
+        - cuando
+        - cual
+        - así
+        - tanto
+    - word: a
+      options:
+        - a
+        - para
+        - hacia
+        - en
+        - con
+    - word: mí.
+      options:
+        - mí.
+        - ti.
+        - él.
+        - ustedes.
+        - nosotros.
+    - word: Te
+      options:
+        - Te
+        - Me
+        - Le
+        - Nos
+        - Les
+      prefix: "\n\n12 "
+    - word: lo
+      options:
+        - lo
+        - la
+        - le
+        - los
+        - me
+    - word: envío
+      options:
+        - envío
+        - mando
+        - devuelvo
+        - remito
+        - entrego
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: vuelta
+      options:
+        - vuelta
+        - mandan
+        - debe
+        - arquipo
+        - modo
+    - word: "y"
+      options:
+        - "y"
+        - o
+        - pero
+        - así
+        - también
+    - word: con
+      options:
+        - con
+        - sin
+        - por
+        - en
+        - hacia
+    - word: él
+      options:
+        - él
+        - ella
+        - yo
+        - tú
+        - nosotros
+    - word: va
+      options:
+        - va
+        - viene
+        - sigue
+        - marcha
+        - entra
+    - word: mi
+      options:
+        - mi
+        - tu
+        - su
+        - nuestro
+        - aquel
+    - word: propio
+      options:
+        - propio
+        - mismo
+        - verdadero
+        - único
+        - fiel
+    - word: corazón.
+      options:
+        - corazón.
+        - alma.
+        - espíritu.
+        - mente.
+        - pensamiento.
+    - word: Yo
+      options:
+        - Yo
+        - Tú
+        - Él
+        - Nosotros
+        - Todos
+      prefix: "\n\n13 "
+    - word: hubiera
+      options:
+        - hubiera
+        - habría
+        - pudiera
+        - quisiera
+        - llegara
+    - word: querido
+      options:
+        - querido
+        - deseado
+        - pretendido
+        - procurado
+        - intentado
+    - word: retenerlo
+      options:
+        - retenerlo
+        - quedármelo
+        - guardarlo
+        - mantenerlo
+        - conservarlo
+    - word: para
+      options:
+        - para
+        - por
+        - hacia
+        - hasta
+        - según
+    - word: que
+      options:
+        - que
+        - cual
+        - donde
+        - cuando
+        - como
+    - word: me
+      options:
+        - me
+        - te
+        - le
+        - nos
+        - les
+    - word: sirviera
+      options:
+        - sirviera
+        - ayudara
+        - asistiera
+        - acompañara
+        - atendiera
+    - word: en
+      options:
+        - en
+        - con
+        - por
+        - sobre
+        - hacia
+    - word: tu
+      options:
+        - tu
+        - mi
+        - su
+        - nuestro
+        - vuestro
+    - word: lugar
+      options:
+        - lugar
+        - sitio
+        - puesto
+        - oficio
+        - favor
+    - word: mientras
+      options:
+        - mientras
+        - querido
+        - epafras
+        - suficiente
+        - beneficio
+    - word: estoy
+      options:
+        - estoy
+        - quedo
+        - permanezco
+        - vivo
+        - hallo
+    - word: preso
+      options:
+        - preso
+        - cautivo
+        - encadenado
+        - detenido
+        - esclavo
+    - word: por
+      options:
+        - por
+        - para
+        - según
+        - mediante
+        - con
+    - word: causa
+      options:
+        - causa
+        - gloria
+        - obra
+        - reino
+        - mensaje
+    - word: del
+      options:
+        - del
+        - al
+        - en
+        - por
+        - con
+    - word: evangelio.
+      options:
+        - evangelio.
+        - reino.
+        - mensaje.
+        - testimonio.
+        - palabra.
+    - word: Sin
+      options:
+        - Sin
+        - Con
+        - Según
+        - Bajo
+        - Ante
+      prefix: "\n\n14 "
+    - word: embargo,
+      options:
+        - embargo,
+        - quien,
+        - pablo,
+        - ahora,
+        - sirviera,
+    - word: "no"
+      options:
+        - "no"
+        - nunca
+        - jamás
+        - nada
+        - tampoco
+    - word: he
+      options:
+        - he
+        - había
+        - pude
+        - hube
+        - tengo
+    - word: querido
+      options:
+        - querido
+        - deseado
+        - pretendido
+        - procurado
+        - intentado
+    - word: hacer
+      options:
+        - hacer
+        - cumplir
+        - obrar
+        - realizar
+        - acatar
+    - word: nada
+      options:
+        - nada
+        - poco
+        - mucho
+        - algo
+        - todo
+    - word: sin
+      options:
+        - sin
+        - con
+        - según
+        - bajo
+        - ante
+    - word: tu
+      options:
+        - tu
+        - mi
+        - su
+        - nuestro
+        - vuestro
+    - word: consentimiento,
+      options:
+        - consentimiento,
+        - acuerdo,
+        - voluntad,
+        - permiso,
+        - aprobación,
+    - word: para
+      options:
+        - para
+        - por
+        - hacia
+        - hasta
+        - según
+    - word: que
+      options:
+        - que
+        - cual
+        - donde
+        - cuando
+        - como
+    - word: tu
+      options:
+        - tu
+        - mi
+        - su
+        - nuestro
+        - vuestro
+    - word: favor
+      options:
+        - favor
+        - gracia
+        - bien
+        - servicio
+        - ayuda
+    - word: "no"
+      options:
+        - "no"
+        - nunca
+        - jamás
+        - nada
+        - tampoco
+    - word: sea
+      options:
+        - sea
+        - resulte
+        - permanezca
+        - quede
+        - muestre
+    - word: por
+      options:
+        - por
+        - para
+        - según
+        - mediante
+        - con
+    - word: obligación,
+      options:
+        - obligación,
+        - deber,
+        - fuerza,
+        - necesidad,
+        - ley,
+    - word: sino
+      options:
+        - sino
+        - pero
+        - aunque
+        - mas
+        - excepto
+    - word: espontáneo.
+      options:
+        - espontáneo.
+        - voluntario.
+        - generoso.
+        - libre.
+        - sincero.
+    - word: Tal
+      options:
+        - Tal
+        - Cual
+        - Ese
+        - Este
+        - Aquel
+      prefix: "\n\n15 "
+    - word: vez
+      options:
+        - vez
+        - ocasión
+        - hora
+        - tiempo
+        - momento
+    - word: por
+      options:
+        - por
+        - para
+        - según
+        - mediante
+        - con
+    - word: eso
+      options:
+        - eso
+        - muy
+        - era
+        - va
+        - sus
+    - word: Onésimo
+      options:
+        - Onésimo
+        - Filemón
+        - Arquipo
+        - Tíquico
+        - Epafras
+    - word: se
+      options:
+        - se
+        - me
+        - te
+        - le
+        - nos
+    - word: alejó
+      options:
+        - alejó
+        - separó
+        - apartó
+        - fue
+        - ausentó
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: ti
+      options:
+        - ti
+        - mí
+        - él
+        - ustedes
+        - nosotros
+    - word: por
+      options:
+        - por
+        - para
+        - según
+        - mediante
+        - con
+    - word: algún
+      options:
+        - algún
+        - animado
+        - porque
+        - aún
+        - gracias
+    - word: tiempo,
+      options:
+        - tiempo,
+        - momento,
+        - siglo,
+        - día,
+        - año,
+    - word: para
+      options:
+        - para
+        - por
+        - hacia
+        - hasta
+        - según
+    - word: que
+      options:
+        - que
+        - cual
+        - donde
+        - cuando
+        - como
+    - word: ahora
+      options:
+        - ahora
+        - antes
+        - entonces
+        - hoy
+        - ya
+    - word: lo
+      options:
+        - lo
+        - la
+        - le
+        - los
+        - me
+    - word: recibas
+      options:
+        - recibas
+        - acojas
+        - aceptes
+        - tomes
+        - trates
+    - word: para
+      options:
+        - para
+        - por
+        - hacia
+        - hasta
+        - según
+    - word: siempre,
+      options:
+        - siempre,
+        - nunca,
+        - jamás,
+        - constante,
+        - continuo,
+    - word: ya
+      options:
+        - ya
+        - ahora
+        - todavía
+        - aún
+        - pronto
+      prefix: "\n\n16 "
+    - word: "no"
+      options:
+        - "no"
+        - nunca
+        - jamás
+        - nada
+        - tampoco
+    - word: como
+      options:
+        - como
+        - cuando
+        - cual
+        - así
+        - tanto
+    - word: a
+      options:
+        - a
+        - para
+        - hacia
+        - en
+        - con
+    - word: esclavo,
+      options:
+        - esclavo,
+        - siervo,
+        - sirviente,
+        - cautivo,
+        - criado,
+    - word: sino
+      options:
+        - sino
+        - pero
+        - aunque
+        - mas
+        - excepto
+    - word: como
+      options:
+        - como
+        - cuando
+        - cual
+        - así
+        - tanto
+    - word: algo
+      options:
+        - algo
+        - mucho
+        - nada
+        - poco
+        - tanto
+    - word: 'mejor:'
+      options:
+        - 'mejor:'
+        - 'superior:'
+        - 'mayor:'
+        - 'noble:'
+        - 'excelente:'
+    - word: como
+      options:
+        - como
+        - cuando
+        - cual
+        - así
+        - tanto
+    - word: a
+      options:
+        - a
+        - para
+        - hacia
+        - en
+        - con
+    - word: un
+      options:
+        - un
+        - el
+        - algún
+        - otro
+        - este
+    - word: hermano
+      options:
+        - hermano
+        - amigo
+        - compañero
+        - hijo
+        - siervo
+    - word: querido,
+      options:
+        - querido,
+        - deseado,
+        - pretendido,
+        - procurado,
+        - intentado,
+    - word: muy
+      options:
+        - muy
+        - tan
+        - bastante
+        - sumamente
+        - harto
+    - word: especial
+      options:
+        - especial
+        - precioso
+        - querido
+        - único
+        - estimado
+    - word: para
+      options:
+        - para
+        - por
+        - hacia
+        - hasta
+        - según
+    - word: mí,
+      options:
+        - mí,
+        - ti,
+        - él,
+        - ustedes,
+        - nosotros,
+    - word: pero
+      options:
+        - pero
+        - sino
+        - aunque
+        - mas
+        - empero
+    - word: mucho
+      options:
+        - mucho
+        - poco
+        - tanto
+        - harto
+        - bastante
+    - word: más
+      options:
+        - más
+        - menos
+        - mucho
+        - tanto
+        - mejor
+    - word: para
+      options:
+        - para
+        - por
+        - hacia
+        - hasta
+        - según
+    - word: ti,
+      options:
+        - ti,
+        - mí,
+        - él,
+        - ustedes,
+        - nosotros,
+    - word: como
+      options:
+        - como
+        - cuando
+        - cual
+        - así
+        - tanto
+    - word: persona
+      options:
+        - persona
+        - hombre
+        - hermano
+        - siervo
+        - criatura
+    - word: "y"
+      options:
+        - "y"
+        - o
+        - pero
+        - así
+        - también
+    - word: como
+      options:
+        - como
+        - cuando
+        - cual
+        - así
+        - tanto
+    - word: hermano
+      options:
+        - hermano
+        - amigo
+        - compañero
+        - hijo
+        - siervo
+    - word: en
+      options:
+        - en
+        - con
+        - por
+        - sobre
+        - hacia
+    - word: el
+      options:
+        - el
+        - un
+        - mi
+        - su
+        - nuestro
+    - word: Señor.
+      options:
+        - Señor.
+        - Padre.
+        - Cristo.
+        - Dios.
+        - Maestro.
+    - word: De
+      options:
+        - De
+        - En
+        - Por
+        - Para
+        - Con
+      prefix: "\n\n17 "
+    - word: modo
+      options:
+        - modo
+        - sí
+        - ha
+        - pablo
+        - seguro
+    - word: que,
+      options:
+        - que,
+        - cual,
+        - donde,
+        - cuando,
+        - como,
+    - word: si
+      options:
+        - si
+        - cuando
+        - como
+        - pues
+        - aunque
+    - word: me
+      options:
+        - me
+        - te
+        - le
+        - nos
+        - les
+    - word: tienes
+      options:
+        - tienes
+        - consideras
+        - estimas
+        - cuentas
+        - recibes
+    - word: por
+      options:
+        - por
+        - para
+        - según
+        - mediante
+        - con
+    - word: compañero,
+      options:
+        - compañero,
+        - colaborador,
+        - hermano,
+        - amigo,
+        - siervo,
+    - word: recíbelo
+      options:
+        - recíbelo
+        - acógelo
+        - trátalo
+        - ámalo
+        - perdónalo
+    - word: como
+      options:
+        - como
+        - cuando
+        - cual
+        - así
+        - tanto
+    - word: a
+      options:
+        - a
+        - para
+        - hacia
+        - en
+        - con
+    - word: mí
+      options:
+        - mí
+        - ti
+        - él
+        - ustedes
+        - nosotros
+    - word: mismo.
+      options:
+        - mismo.
+        - propio.
+        - otro.
+        - igual.
+        - semejante.
+    - word: Si
+      options:
+        - Si
+        - Cuando
+        - Como
+        - Pues
+        - Aunque
+      prefix: "\n\n18 "
+    - word: te
+      options:
+        - te
+        - me
+        - le
+        - nos
+        - les
+    - word: ha
+      options:
+        - ha
+        - había
+        - hubo
+        - haya
+        - habrá
+    - word: perjudicado
+      options:
+        - perjudicado
+        - dañado
+        - ofendido
+        - agraviado
+        - faltado
+    - word: o
+      options:
+        - o
+        - "y"
+        - pero
+        - ni
+        - bien
+    - word: te
+      options:
+        - te
+        - me
+        - le
+        - nos
+        - les
+    - word: debe
+      options:
+        - debe
+        - adeuda
+        - resta
+        - queda
+        - guarda
+    - word: algo,
+      options:
+        - algo,
+        - mucho,
+        - nada,
+        - poco,
+        - tanto,
+    - word: cárgalo
+      options:
+        - cárgalo
+        - anótalo
+        - pónmelo
+        - cuéntalo
+        - imputamelo
+    - word: a
+      options:
+        - a
+        - para
+        - hacia
+        - en
+        - con
+    - word: mi
+      options:
+        - mi
+        - tu
+        - su
+        - nuestro
+        - aquel
+    - word: cuenta.
+      options:
+        - cuenta.
+        - cargo.
+        - deuda.
+        - registro.
+        - memoria.
+    - word: Yo,
+      options:
+        - Yo,
+        - Tú,
+        - Él,
+        - Nosotros,
+        - Todos,
+      prefix: "\n\n19 "
+    - word: Pablo,
+      options:
+        - Pablo,
+        - Pedro,
+        - Juan,
+        - Lucas,
+        - Santiago,
+    - word: lo
+      options:
+        - lo
+        - la
+        - le
+        - los
+        - me
+    - word: escribo
+      options:
+        - escribo
+        - redacto
+        - mando
+        - declaro
+        - afirmo
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: mi
+      options:
+        - mi
+        - tu
+        - su
+        - nuestro
+        - aquel
+    - word: puño
+      options:
+        - puño
+        - mano
+        - letra
+        - pluma
+        - sello
+    - word: "y"
+      options:
+        - "y"
+        - o
+        - pero
+        - así
+        - también
+    - word: 'letra:'
+      options:
+        - 'letra:'
+        - 'mano:'
+        - 'palabra:'
+        - 'firma:'
+        - 'tinta:'
+    - word: te
+      options:
+        - te
+        - me
+        - le
+        - nos
+        - les
+    - word: lo
+      options:
+        - lo
+        - la
+        - le
+        - los
+        - me
+    - word: pagaré;
+      options:
+        - pagaré;
+        - devolveré;
+        - restituiré;
+        - saldaré;
+        - compensaré;
+    - word: por
+      options:
+        - por
+        - para
+        - según
+        - mediante
+        - con
+    - word: "no"
+      options:
+        - "no"
+        - nunca
+        - jamás
+        - nada
+        - tampoco
+    - word: decirte
+      options:
+        - decirte
+        - recordarte
+        - mencionarte
+        - reprocharte
+        - negarte
+    - word: que
+      options:
+        - que
+        - cual
+        - donde
+        - cuando
+        - como
+    - word: tú
+      options:
+        - tú
+        - yo
+        - él
+        - usted
+        - nosotros
+    - word: mismo
+      options:
+        - mismo
+        - propio
+        - otro
+        - igual
+        - semejante
+    - word: me
+      options:
+        - me
+        - te
+        - le
+        - nos
+        - les
+    - word: debes
+      options:
+        - debes
+        - tienes
+        - adeudas
+        - deberías
+        - guardas
+    - word: lo
+      options:
+        - lo
+        - la
+        - le
+        - los
+        - me
+    - word: que
+      options:
+        - que
+        - cual
+        - donde
+        - cuando
+        - como
+    - word: eres.
+      options:
+        - eres.
+        - tienes.
+        - vives.
+        - posees.
+        - vales.
+    - word: Sí,
+      options:
+        - Sí,
+        - Ciertamente,
+        - Amén,
+        - Seguro,
+        - Bien,
+      prefix: "\n\n20 "
+    - word: hermano,
+      options:
+        - hermano,
+        - amigo,
+        - compañero,
+        - hijo,
+        - siervo,
+    - word: ¡que
+      options:
+        - ¡que
+        - ¡cual
+        - ¡donde
+        - ¡cuando
+        - ¡como
+    - word: reciba
+      options:
+        - reciba
+        - alcance
+        - tenga
+        - goce
+        - haga
+    - word: yo
+      options:
+        - yo
+        - tú
+        - él
+        - nosotros
+        - todos
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: ti
+      options:
+        - ti
+        - mí
+        - él
+        - ustedes
+        - nosotros
+    - word: algún
+      options:
+        - algún
+        - animado
+        - porque
+        - aún
+        - gracias
+    - word: beneficio
+      options:
+        - beneficio
+        - consuelo
+        - gozo
+        - fruto
+        - alivio
+    - word: en
+      options:
+        - en
+        - con
+        - por
+        - sobre
+        - hacia
+    - word: el
+      options:
+        - el
+        - un
+        - mi
+        - su
+        - nuestro
+    - word: Señor!
+      options:
+        - Señor!
+        - Padre!
+        - Cristo!
+        - Dios!
+        - Maestro!
+    - word: Reconforta
+      options:
+        - Reconforta
+        - Alienta
+        - Consuela
+        - Anima
+        - Alegra
+    - word: mi
+      options:
+        - mi
+        - tu
+        - su
+        - nuestro
+        - aquel
+    - word: corazón
+      options:
+        - corazón
+        - alma
+        - espíritu
+        - mente
+        - pensamiento
+    - word: en
+      options:
+        - en
+        - con
+        - por
+        - sobre
+        - hacia
+    - word: Cristo.
+      options:
+        - Cristo.
+        - Dios.
+        - Señor.
+        - Salvador.
+        - Padre.
+    - word: Te
+      options:
+        - Te
+        - Me
+        - Le
+        - Nos
+        - Les
+      prefix: "\n\n21 "
+    - word: escribo
+      options:
+        - escribo
+        - redacto
+        - mando
+        - declaro
+        - afirmo
+    - word: confiado
+      options:
+        - confiado
+        - seguro
+        - firme
+        - gozoso
+        - esperanzado
+    - word: en
+      options:
+        - en
+        - con
+        - por
+        - sobre
+        - hacia
+    - word: tu
+      options:
+        - tu
+        - mi
+        - su
+        - nuestro
+        - vuestro
+    - word: obediencia,
+      options:
+        - obediencia,
+        - sumisión,
+        - fidelidad,
+        - disposición,
+        - entrega,
+    - word: seguro
+      options:
+        - seguro
+        - cierto
+        - convencido
+        - confiado
+        - firme
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: que
+      options:
+        - que
+        - cual
+        - donde
+        - cuando
+        - como
+    - word: harás
+      options:
+        - harás
+        - cumplirás
+        - darás
+        - obrarás
+        - concederás
+    - word: aún
+      options:
+        - aún
+        - ti
+        - puño
+        - pablo
+        - algo
+    - word: más
+      options:
+        - más
+        - menos
+        - mucho
+        - tanto
+        - mejor
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: lo
+      options:
+        - lo
+        - la
+        - le
+        - los
+        - me
+    - word: que
+      options:
+        - que
+        - cual
+        - donde
+        - cuando
+        - como
+    - word: te
+      options:
+        - te
+        - me
+        - le
+        - nos
+        - les
+    - word: pido.
+      options:
+        - pido.
+        - ruego.
+        - suplico.
+        - imploro.
+        - deseo.
+    - word: Además
+      options:
+        - Además
+        - También
+        - Asimismo
+        - Luego
+        - Incluso
+      prefix: "\n\n22 "
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: eso,
+      options:
+        - eso,
+        - muy,
+        - era,
+        - va,
+        - sus,
+    - word: prepárame
+      options:
+        - prepárame
+        - alístame
+        - dispónme
+        - prepárale
+        - resérvame
+    - word: alojamiento
+      options:
+        - alojamiento
+        - hospedaje
+        - posada
+        - habitación
+        - lugar
+    - word: porque
+      options:
+        - porque
+        - pues
+        - como
+        - cuando
+        - si
+    - word: espero
+      options:
+        - espero
+        - confío
+        - creo
+        - deseo
+        - sé
+    - word: que
+      options:
+        - que
+        - cual
+        - donde
+        - cuando
+        - como
+    - word: Dios
+      options:
+        - Dios
+        - Señor
+        - Cristo
+        - Padre
+        - Salvador
+    - word: les
+      options:
+        - les
+        - nos
+        - te
+        - me
+        - le
+    - word: conceda
+      options:
+        - conceda
+        - otorgue
+        - dé
+        - permita
+        - disponga
+    - word: el
+      options:
+        - el
+        - un
+        - mi
+        - su
+        - nuestro
+    - word: tenerme
+      options:
+        - tenerme
+        - verme
+        - llevarme
+        - recibirme
+        - abrazarme
+    - word: otra
+      options:
+        - otra
+        - espero
+        - sea
+        - apia
+        - he
+    - word: vez
+      options:
+        - vez
+        - ocasión
+        - hora
+        - tiempo
+        - momento
+    - word: con
+      options:
+        - con
+        - sin
+        - por
+        - en
+        - hacia
+    - word: ustedes
+      options:
+        - ustedes
+        - nosotros
+        - ellos
+        - vosotros
+        - todos
+    - word: en
+      options:
+        - en
+        - con
+        - por
+        - sobre
+        - hacia
+    - word: respuesta
+      options:
+        - respuesta
+        - atención
+        - premio
+        - fruto
+        - consuelo
+    - word: a
+      options:
+        - a
+        - para
+        - hacia
+        - en
+        - con
+    - word: sus
+      options:
+        - sus
+        - mis
+        - tus
+        - nuestros
+        - vuestros
+    - word: oraciones.
+      options:
+        - oraciones.
+        - peticiones.
+        - ruegos.
+        - súplicas.
+        - ofrendas.
+    - word: Te
+      options:
+        - Te
+        - Me
+        - Le
+        - Nos
+        - Les
+      prefix: "\n\n23 "
+    - word: mandan
+      options:
+        - mandan
+        - envían
+        - dan
+        - ofrecen
+        - hacen
+    - word: saludos
+      options:
+        - saludos
+        - bendiciones
+        - abrazos
+        - recuerdos
+        - palabras
+    - word: Epafras,
+      options:
+        - Epafras,
+        - Epafrodito,
+        - Aristarco,
+        - Marcos,
+        - Lucas,
+    - word: mi
+      options:
+        - mi
+        - tu
+        - su
+        - nuestro
+        - aquel
+    - word: compañero
+      options:
+        - compañero
+        - colaborador
+        - hermano
+        - amigo
+        - siervo
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: cárcel
+      options:
+        - cárcel
+        - prisión
+        - cadenas
+        - tribulación
+        - calabozo
+    - word: en
+      options:
+        - en
+        - con
+        - por
+        - sobre
+        - hacia
+    - word: Cristo
+      options:
+        - Cristo
+        - Dios
+        - Señor
+        - Salvador
+        - Padre
+    - word: Jesús,
+      options:
+        - Jesús,
+        - Cristo,
+        - Señor,
+        - Salvador,
+        - Dios,
+    - word: "y"
+      options:
+        - "y"
+        - o
+        - pero
+        - así
+        - también
+      prefix: "\n\n24 "
+    - word: también
+      options:
+        - también
+        - tampoco
+        - además
+        - asimismo
+        - incluso
+    - word: Marcos,
+      options:
+        - Marcos,
+        - Lucas,
+        - Aristarco,
+        - Demas,
+        - Epafras,
+    - word: Aristarco,
+      options:
+        - Aristarco,
+        - Marcos,
+        - Lucas,
+        - Demas,
+        - Epafras,
+    - word: Demas
+      options:
+        - Demas
+        - Marcos
+        - Aristarco
+        - Lucas
+        - Epafras
+    - word: "y"
+      options:
+        - "y"
+        - o
+        - pero
+        - así
+        - también
+    - word: Lucas,
+      options:
+        - Lucas,
+        - Marcos,
+        - Aristarco,
+        - Demas,
+        - Epafras,
+    - word: mis
+      options:
+        - mis
+        - tus
+        - sus
+        - nuestros
+        - propios
+    - word: compañeros
+      options:
+        - compañeros
+        - reconfortado
+        - franqueza
+        - evangelio
+        - concedan
+    - word: de
+      options:
+        - de
+        - en
+        - por
+        - para
+        - con
+    - word: trabajo.
+      options:
+        - trabajo.
+        - lucha.
+        - fe.
+        - servicio.
+        - ministerio.
+    - word: Que
+      options:
+        - Que
+        - Cual
+        - Donde
+        - Cuando
+        - Como
+      prefix: "\n\n25 "
+    - word: la
+      options:
+        - la
+        - una
+        - mi
+        - su
+        - nuestra
+    - word: gracia
+      options:
+        - gracia
+        - paz
+        - misericordia
+        - bendición
+        - verdad
+    - word: del
+      options:
+        - del
+        - al
+        - en
+        - por
+        - con
+    - word: Señor
+      options:
+        - Señor
+        - Padre
+        - Cristo
+        - Dios
+        - Maestro
+    - word: Jesucristo
+      options:
+        - Jesucristo
+        - Cristo
+        - Salvador
+        - Señor
+        - Mesías
+    - word: sea
+      options:
+        - sea
+        - resulte
+        - permanezca
+        - quede
+        - muestre
+    - word: con
+      options:
+        - con
+        - sin
+        - por
+        - en
+        - hacia
+    - word: su
+      options:
+        - su
+        - mi
+        - tu
+        - nuestro
+        - vuestro
+    - word: espíritu.
+      options:
+        - espíritu.
+        - alma.
+        - corazón.
+        - mente.
+        - vida.

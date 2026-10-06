@@ -103,6 +103,44 @@ When you grade a card, the algorithm calculates an "Ease" factor and determines 
 - Cards you struggle with (`d`, `f`, `g`) will show up more frequently.
 - Cards you know well (`j`, `k`) will have their intervals expanded aggressively, ensuring you spend your time strictly on what you are close to forgetting.
 
+## Memorize by Options
+
+Corvidae includes a dedicated **Memorize by Options** mode designed to help you memorize complete texts word-by-word through active recall:
+
+1. **Text Discovery**: Place any text files in the `memorizationTexts/` directory (e.g., `memorizationTexts/filemon.yaml` or `filemon.txt`). Corvidae automatically scans and detects all available texts in this folder.
+2. **Continuous Portion Selector**: After choosing a text, pick any continuous range of verses/sections to practice (e.g. Verses 15–20):
+   - **Independent Boundary Shifting**: Shift the Start and End bounds independently using `[Tab / ↑↓]` to switch focus and `[←→ / hl]` to adjust, or use direct hotkeys `[` / `]` for Start and `{` / `}` (or `-` / `+`) for End.
+   - **Expand & Advance**: Quickly expand `[x]` the portion (+1 verse) or advance `[n]` to the next continuous chunk.
+   - **Looping Workflow**: Once you finish a portion, you are automatically returned to the Portion Selector with completion stats, ready to re-practice, expand, or advance.
+3. **Word-by-Word Flow**: As you work through the text, each consecutive word presents 5 plausible options.
+4. **Home Row or Numeric Selection**: Select options instantly using `a, s, d, f, g` or numbers `1-5`.
+5. **Immediate Flow**: Correct selections advance to the next word immediately for fluid recitation and memorization.
+6. **Mistake Feedback**: If an incorrect option is chosen, the interface highlights the error, displays the correct word, and allows you to retry or continue.
+7. **Progress Persistence**: Progress is saved periodically, allowing you to resume long texts where you left off.
+
+To supply custom texts, create a YAML file in `memorizationTexts/`:
+```yaml
+title: "Epístola a Filemón"
+language: "Spanish"
+words:
+  - word: "Pablo,"
+    prefix: "1 "
+    options:
+      - "Pablo,"
+      - "Pedro,"
+      - "Juan,"
+      - "Lucas,"
+      - "Santiago,"
+  - word: "prisionero"
+    options:
+      - "prisionero"
+      - "siervo"
+      - "apóstol"
+      - "cautivo"
+      - "enviado"
+```
+If a plain `.txt` file is placed in `memorizationTexts/` without a YAML counterpart, Corvidae will automatically generate plausible distractors and create the companion `.yaml` file.
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

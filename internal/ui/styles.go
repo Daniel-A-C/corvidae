@@ -31,6 +31,20 @@ var (
 	// Marked Cards styles
 	MarkedBadgeStyle = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FFB86C")).Background(lipgloss.Color("#44475A")).Padding(0, 1)
 	MarkedStarStyle  = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#F1FA8C"))
+
+	// Memorize by Options styles
+	MemorizeTitleStyle    = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#BD93F9"))
+	MemorizeHeaderStyle   = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FFB86C"))
+	MemorizeSubStyle      = lipgloss.NewStyle().Foreground(lipgloss.Color("#8BE9FD")).Italic(true)
+	MemorizeVerseNum      = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#8BE9FD"))
+	MemorizeCompleted     = lipgloss.NewStyle().Foreground(lipgloss.Color("#F8F8F2"))
+	MemorizePreviousText  = lipgloss.NewStyle().Foreground(lipgloss.Color("#6272A4"))
+	MemorizeTargetBlank   = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FF7CCB")).Background(lipgloss.Color("#44475A")).Padding(0, 1)
+	MemorizeOptionBox     = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#6272A4")).Padding(0, 1)
+	MemorizeOptionActive  = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#FF7CCB")).Padding(0, 1)
+	MemorizeSuccessStyle  = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#50FA7B"))
+	MemorizeWrongStyle    = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FF5555"))
+	MemorizeProgressStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("#50FA7B")).Bold(true)
 )
 
 const AsciiLogo = `                           .-.

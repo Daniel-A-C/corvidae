@@ -38,6 +38,14 @@ func (m Model) View() string {
 		content = m.viewArabicStages()
 	case StateArabicStageView:
 		content = m.viewArabicStageView()
+	case StateMemorizeSelectText:
+		content = m.viewMemorizeSelectText()
+	case StateMemorizePortionSelect:
+		content = m.viewMemorizePortionSelect()
+	case StateMemorize:
+		content = m.viewMemorize()
+	case StateMemorizeComplete:
+		content = m.viewMemorizeComplete()
 	}
 
 	styledContent := lipgloss.NewStyle().Align(lipgloss.Center).Render(content)
@@ -52,6 +60,7 @@ func (m Model) viewModeSelect() string {
 		"Spaced Repetition (SM-2)",
 		"Multiple Choice Quiz",
 		"Arabic Alphabet Academy",
+		"Memorize by Options",
 	}
 	for i, label := range modes {
 		key := IndexToKey(i)
@@ -81,7 +90,7 @@ func (m Model) viewModeSelect() string {
 		content += "\n" + ExplanationStyle.Render(m.StatusMessage) + "\n"
 	}
 
-	content += "\n" + HintStyle.Render("(Press a/s/d to select, Enter to confirm, q to quit)")
+	content += "\n" + HintStyle.Render("(Press a/s/d/f to select, Enter to confirm, q to quit)")
 	return content
 }
 
@@ -689,3 +698,278 @@ func (m Model) viewArabicStageView() string {
 	b.WriteString(HintStyle.Render("[Space / Enter] Start Stage Drill  •  [Esc / b] Back to Stages List  •  [q] Quit"))
 	return b.String()
 }
+
+func (m Model) viewMemorizeSelectText() string {
+	if len(m.MemorizeTexts) == 0 {
+		return fmt.Sprintf("No memorization texts found in %s.\n\nPlace .yaml or .txt files in %s/\n\n%s",
+			m.TextsDir, m.TextsDir, HintStyle.Render("(Press Esc to return, q to quit)"))
+	}
+
+	content := MemorizeTitleStyle.Render("★ MEMORIZE BY OPTIONS ★") + "\n"
+	content += MemorizeSubStyle.Render("Work through a text word by word with plausible options:") + "\n\n"
+
+	for i, t := range m.MemorizeTexts {
+		key := IndexToKey(i)
+		keyBadge := ""
+		if key != "" {
+			keyBadge = KeyStyle.Render(fmt.Sprintf("[%s]", key)) + " "
+		}
+		cursor := "  "
+		label := t.Title
+		if m.MemorizeCursor == i {
+			cursor = "> "
+			label = CursorStyle.Render(label)
+		}
+
+		info := fmt.Sprintf(" (%d words)", t.WordCount)
+		if t.Progress > 0 && t.WordCount > 0 {
+			pct := float64(t.Progress) / float64(t.WordCount) * 100
+			info += fmt.Sprintf(" • In progress: %d/%d (%.0f%%)", t.Progress, t.WordCount, pct)
+		}
+		infoStr := HintStyle.Render(info)
+
+		content += fmt.Sprintf("%s%s%s%s\n", CursorStyle.Render(cursor), keyBadge, label, infoStr)
+	}
+
+	content += "\n" + HintStyle.Render("(Press key or Enter to select text, Esc to return, q to quit)")
+	return content
+}
+
+func (m Model) viewMemorizePortionSelect() string {
+	if m.MemorizeActiveText == nil || len(m.MemorizeSections) == 0 {
+		return fmt.Sprintf("No sections found for this text.\n\n%s", HintStyle.Render("[Esc] Back"))
+	}
+
+	startSec := m.MemorizeSections[m.PortionStartSection]
+	endSec := m.MemorizeSections[m.PortionEndSection]
+	portionWords := endSec.EndIdx - startSec.StartIdx
+	totalWords := len(m.MemorizeActiveText.Words)
+	numSections := m.PortionEndSection - m.PortionStartSection + 1
+
+	var b strings.Builder
+	b.WriteString(MemorizeTitleStyle.Render("★ PORTION SELECTOR ★") + "\n")
+	b.WriteString(MemorizeHeaderStyle.Render(m.MemorizeActiveText.Title) + "\n\n")
+
+	if m.PortionCompletedMsg != "" {
+		b.WriteString(CorrectStyle.Render(m.PortionCompletedMsg) + "\n\n")
+	}
+
+	rangeLabel := startSec.Label
+	if m.PortionStartSection != m.PortionEndSection {
+		rangeLabel = fmt.Sprintf("%s to %s", startSec.Label, endSec.Label)
+	}
+
+	pctRange := 0.0
+	if totalWords > 0 {
+		pctRange = float64(portionWords) / float64(totalWords) * 100
+	}
+	summary := fmt.Sprintf("Selected: %s  •  %d sections  •  %d of %d words (%.1f%%)",
+		rangeLabel, numSections, portionWords, totalWords, pctRange)
+	b.WriteString(MemorizeSubStyle.Render(summary) + "\n\n")
+
+	// Selector rows with indicators
+	cursorStart := "  "
+	cursorEnd := "  "
+	startBadge := "Start"
+	endBadge := "End"
+
+	if m.PortionFocus == 0 {
+		cursorStart = "> "
+		startBadge = CursorStyle.Render("▶ START")
+	} else {
+		cursorEnd = "> "
+		endBadge = CursorStyle.Render("▶ END")
+	}
+
+	startVal := KeyStyle.Render(fmt.Sprintf("< [ %s ] >", startSec.Label))
+	endVal := KeyStyle.Render(fmt.Sprintf("< [ %s ] >", endSec.Label))
+
+	b.WriteString(fmt.Sprintf("%s[%s]: %s  %s\n",
+		cursorStart, startBadge, startVal, HintStyle.Render("\""+startSec.Preview+"\"")))
+	b.WriteString(fmt.Sprintf("%s[%s]:   %s  %s\n\n",
+		cursorEnd, endBadge, endVal, HintStyle.Render("\""+endSec.Preview+"\"")))
+
+	// Window preview of sections around the selection
+	b.WriteString("Section Overview:\n")
+	windowStart := m.PortionStartSection - 2
+	if windowStart < 0 {
+		windowStart = 0
+	}
+	windowEnd := windowStart + 7
+	if windowEnd >= len(m.MemorizeSections) {
+		windowEnd = len(m.MemorizeSections) - 1
+		windowStart = windowEnd - 7
+		if windowStart < 0 {
+			windowStart = 0
+		}
+	}
+
+	for i := windowStart; i <= windowEnd; i++ {
+		sec := m.MemorizeSections[i]
+		inRange := (i >= m.PortionStartSection && i <= m.PortionEndSection)
+		prefix := "    "
+		line := fmt.Sprintf("%-10s (%2d words): %s", sec.Label, sec.WordCount, sec.Preview)
+		tag := ""
+		if i == m.PortionStartSection && i == m.PortionEndSection {
+			tag = " " + MarkedBadgeStyle.Render("PORTION")
+		} else if i == m.PortionStartSection {
+			tag = " " + KeyStyle.Render("[START]")
+		} else if i == m.PortionEndSection {
+			tag = " " + KeyStyle.Render("[END]")
+		}
+
+		if inRange {
+			prefix = "  ► "
+			b.WriteString(fmt.Sprintf("%s%s%s\n", CursorStyle.Render(prefix), MemorizeCompleted.Render(line), tag))
+		} else {
+			b.WriteString(fmt.Sprintf("%s%s\n", prefix, HintStyle.Render(line)))
+		}
+	}
+
+	b.WriteString("\n" + HintStyle.Render("[Tab / ↑↓] Switch Start/End  •  [←→ / hl] Shift  •  [x] Expand  •  [n] Advance") + "\n")
+	b.WriteString(HintStyle.Render("[a] Select All  •  [Enter / Space] Practice Portion  •  [Esc] Back"))
+	return b.String()
+}
+
+func (m Model) viewMemorize() string {
+	if m.MemorizeActiveText == nil || m.MemorizeCurrentIndex >= m.PortionEndWordIdx {
+		return m.viewMemorizeComplete()
+	}
+
+	totalPortionWords := m.PortionEndWordIdx - m.PortionStartWordIdx
+	currentInPortion := m.MemorizeCurrentIndex - m.PortionStartWordIdx
+	pct := 0.0
+	if totalPortionWords > 0 {
+		pct = float64(currentInPortion) / float64(totalPortionWords) * 100
+	}
+	attempts := currentInPortion + m.MemorizeMistakes
+	accStr := "100%"
+	if attempts > 0 {
+		accStr = fmt.Sprintf("%.1f%%", float64(currentInPortion)/float64(attempts)*100)
+	}
+
+	barLen := 26
+	filled := 0
+	if totalPortionWords > 0 {
+		filled = int(float64(barLen) * float64(currentInPortion) / float64(totalPortionWords))
+	}
+	if filled > barLen {
+		filled = barLen
+	}
+	bar := strings.Repeat("█", filled) + strings.Repeat("░", barLen-filled)
+
+	var portionTitle string
+	if len(m.MemorizeSections) > 0 && m.PortionStartSection < len(m.MemorizeSections) && m.PortionEndSection < len(m.MemorizeSections) {
+		startLabel := m.MemorizeSections[m.PortionStartSection].Label
+		endLabel := m.MemorizeSections[m.PortionEndSection].Label
+		if m.PortionStartSection == m.PortionEndSection {
+			portionTitle = fmt.Sprintf(" (%s)", startLabel)
+		} else {
+			portionTitle = fmt.Sprintf(" (%s–%s)", startLabel, endLabel)
+		}
+	}
+
+	var b strings.Builder
+	b.WriteString(MemorizeHeaderStyle.Render(fmt.Sprintf("★ %s%s ★", m.MemorizeActiveText.Title, portionTitle)) + "\n")
+	b.WriteString(HintStyle.Render(fmt.Sprintf("Portion Word %d of %d (%.1f%%)  •  Accuracy: %s  •  Streak: %d",
+		currentInPortion+1, totalPortionWords, pct, accStr, m.MemorizeStreak)) + "\n")
+	b.WriteString(MemorizeProgressStyle.Render("["+bar+"]") + "\n\n")
+
+	// Build rolling text window (last ~25 words)
+	startIdx := 0
+	if m.MemorizeCurrentIndex > 25 {
+		startIdx = m.MemorizeCurrentIndex - 25
+	}
+	var passage strings.Builder
+	if startIdx > 0 {
+		passage.WriteString("... ")
+	}
+	for i := startIdx; i < m.MemorizeCurrentIndex; i++ {
+		item := m.MemorizeActiveText.Words[i]
+		if item.Prefix != "" {
+			passage.WriteString(item.Prefix)
+		} else if i > startIdx {
+			passage.WriteString(" ")
+		}
+		passage.WriteString(item.Word)
+	}
+
+	activeItem := m.MemorizeActiveText.Words[m.MemorizeCurrentIndex]
+	if activeItem.Prefix != "" {
+		passage.WriteString(activeItem.Prefix)
+	} else if m.MemorizeCurrentIndex > 0 {
+		passage.WriteString(" ")
+	}
+	passage.WriteString("[TARGET_BLANK]")
+
+	parts := strings.Split(passage.String(), "[TARGET_BLANK]")
+	renderedPassage := MemorizeCompleted.Render(parts[0]) + MemorizeTargetBlank.Render("  ?  ")
+	if len(parts) > 1 {
+		renderedPassage += MemorizeCompleted.Render(parts[1])
+	}
+
+	cardBox := lipgloss.NewStyle().
+		Border(lipgloss.RoundedBorder()).
+		BorderForeground(lipgloss.Color("#BD93F9")).
+		Padding(1, 2).
+		Width(66).
+		Align(lipgloss.Left)
+
+	b.WriteString(cardBox.Render(renderedPassage) + "\n\n")
+
+	if m.MemorizeShowFeedback {
+		wrongWord := ""
+		if m.MemorizeSelectedOption >= 0 && m.MemorizeSelectedOption < len(m.MemorizeCurrentOptions) {
+			wrongWord = m.MemorizeCurrentOptions[m.MemorizeSelectedOption]
+		}
+		b.WriteString(MemorizeWrongStyle.Render(fmt.Sprintf("✗ Incorrect: \"%s\"", wrongWord)) + "\n")
+		b.WriteString(MemorizeSuccessStyle.Render(fmt.Sprintf("✓ The correct word was: \"%s\"", activeItem.Word)) + "\n\n")
+		b.WriteString(HintStyle.Render("[ Spacebar / Enter to continue  •  [r] Retry this word ]"))
+		return b.String()
+	}
+
+	b.WriteString("Choose the next word:\n\n")
+	for i, opt := range m.MemorizeCurrentOptions {
+		key := IndexToKey(i)
+		keyBadge := KeyStyle.Render(fmt.Sprintf("[%s]", key))
+		numBadge := HintStyle.Render(fmt.Sprintf("(%d)", i+1))
+		optRender := MemorizeCompleted.Render(opt)
+		b.WriteString(fmt.Sprintf("  %s %s  %s\n", keyBadge, numBadge, optRender))
+	}
+
+	b.WriteString("\n" + HintStyle.Render("(Press key [a/s/d/f/g] or [1-5] to select  •  [r] Restart  •  [Esc] Back  •  [q] Quit)"))
+	return b.String()
+}
+
+func (m Model) viewMemorizeComplete() string {
+	title := "★ TEXT MEMORIZATION COMPLETE! ★"
+	totalWords := 0
+	if m.MemorizeActiveText != nil {
+		totalWords = len(m.MemorizeActiveText.Words)
+	}
+	attempts := totalWords + m.MemorizeMistakes
+	acc := 100.0
+	if attempts > 0 {
+		acc = float64(totalWords) / float64(attempts) * 100
+	}
+
+	var b strings.Builder
+	b.WriteString(MemorizeSuccessStyle.Render(title) + "\n\n")
+	if m.MemorizeActiveText != nil {
+		b.WriteString(MemorizeHeaderStyle.Render(m.MemorizeActiveText.Title) + "\n\n")
+	}
+	b.WriteString(fmt.Sprintf("Total Words:    %d\n", totalWords))
+	b.WriteString(fmt.Sprintf("First-Try Acc:  %.1f%%\n", acc))
+	b.WriteString(fmt.Sprintf("Mistakes:       %d\n", m.MemorizeMistakes))
+	b.WriteString(fmt.Sprintf("Best Streak:    %d words\n\n", m.MemorizeBestStreak))
+
+	b.WriteString(HintStyle.Render("[r] Memorize again  •  [Enter] Select another text  •  [q] Quit"))
+
+	cardBox := lipgloss.NewStyle().
+		Border(lipgloss.RoundedBorder()).
+		BorderForeground(lipgloss.Color("#50FA7B")).
+		Padding(1, 4).
+		Align(lipgloss.Center)
+	return cardBox.Render(b.String())
+}
+
