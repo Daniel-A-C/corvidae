@@ -80,7 +80,13 @@ func (m Model) isSelectionKey(key string) bool {
 }
 
 func (m Model) updateModeSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	if m.StatusMessage != "" {
+		m.StatusMessage = ""
+	}
+
 	switch msg.String() {
+	case "m":
+		return m.startMarkedPractice()
 	case "a":
 		m.Mode = ModeReview
 		return m.confirmModeSelect()
@@ -124,26 +130,30 @@ func (m Model) confirmModeSelect() (tea.Model, tea.Cmd) {
 }
 
 func (m Model) updateDirSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	if m.StatusMessage != "" {
+		m.StatusMessage = ""
+	}
+
+	if msg.String() == "m" {
+		return m.startMarkedPractice()
+	}
+
 	idx := KeyToIndex(msg.String())
 	if idx >= 0 && idx < len(m.Dirs) {
 		return m.selectDirectory(idx)
 	}
 
 	switch msg.String() {
-	case "up":
+	case "up", "k":
 		if m.DirCursor > 0 {
 			m.DirCursor--
 		}
-	case "down":
-		if m.DirCursor < len(m.Dirs)-1 {
-			m.DirCursor++
+	case "down", "j":
+		maxCursor := len(m.Dirs) - 1
+		if m.SelectedDir == "" {
+			maxCursor = len(m.Dirs)
 		}
-	case "k":
-		if m.DirCursor > 0 {
-			m.DirCursor--
-		}
-	case "j":
-		if m.DirCursor < len(m.Dirs)-1 {
+		if m.DirCursor < maxCursor {
 			m.DirCursor++
 		}
 	case "tab":
@@ -153,6 +163,9 @@ func (m Model) updateDirSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	case "esc", "b":
 		return m.goUpLevel()
 	case "enter", " ":
+		if m.SelectedDir == "" && m.DirCursor == len(m.Dirs) {
+			return m.startMarkedPractice()
+		}
 		if len(m.Dirs) > 0 {
 			return m.selectDirectory(m.DirCursor)
 		}
@@ -300,6 +313,7 @@ func (m Model) goUpLevel() (tea.Model, tea.Cmd) {
 }
 
 func (m Model) startPractice() (tea.Model, tea.Cmd) {
+	m.PlayingMarkedDeck = false
 	err := m.LoadSelectedDecks()
 	if err != nil {
 		m.Err = err
@@ -335,6 +349,15 @@ func (m Model) updateReview(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 		} else if msg.String() == "enter" {
 			m.State = StateModeSelect
 		}
+		return m, nil
+	}
+
+	if msg.String() == "m" {
+		m.toggleCurrentCardMarked()
+		return m, nil
+	}
+	if msg.String() == "u" {
+		m.unmarkCurrentCard()
 		return m, nil
 	}
 
@@ -388,18 +411,46 @@ func (m Model) updateReview(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 
 func (m Model) updateQuiz(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	if m.CurrentIndex >= len(m.ActiveCards) {
-		if msg.String() == "enter" {
+		switch msg.String() {
+		case "r":
+			if m.isPlayingMarkedDeck() {
+				m.LoadMarkedDeck()
+				if len(m.MarkedCards) == 0 {
+					m.State = StateModeSelect
+					return m, nil
+				}
+				return m.startMarkedPractice()
+			}
+			m.SetupQuiz()
+		case "enter":
 			m.State = StateModeSelect
 		}
 		return m, nil
 	}
 
 	if m.ShowFeedback {
-		if msg.String() == " " || msg.String() == "enter" {
+		switch msg.String() {
+		case "m":
+			m.toggleCurrentCardMarked()
+			return m, nil
+		case "u":
+			m.unmarkCurrentCard()
+			return m, nil
+		case " ", "enter":
 			m.ShowFeedback = false
 			m.CurrentIndex++
 			m.GenerateQuizOptions()
+			return m, nil
 		}
+		return m, nil
+	}
+
+	if msg.String() == "m" {
+		m.toggleCurrentCardMarked()
+		return m, nil
+	}
+	if msg.String() == "u" {
+		m.unmarkCurrentCard()
 		return m, nil
 	}
 

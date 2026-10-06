@@ -27,6 +27,10 @@ var (
 	BadgeMoonStyle          = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#8BE9FD"))
 	BadgeConnectorStyle     = lipgloss.NewStyle().Foreground(lipgloss.Color("#50FA7B"))
 	BadgeNonConnectorStyle  = lipgloss.NewStyle().Foreground(lipgloss.Color("#FF5555")).Bold(true)
+
+	// Marked Cards styles
+	MarkedBadgeStyle = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FFB86C")).Background(lipgloss.Color("#44475A")).Padding(0, 1)
+	MarkedStarStyle  = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#F1FA8C"))
 )
 
 const AsciiLogo = `                           .-.

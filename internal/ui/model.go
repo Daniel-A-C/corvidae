@@ -69,6 +69,11 @@ type Model struct {
 	ArabicShowFeedback  bool
 	ArabicIsCorrect     bool
 
+	// Marked cards state
+	MarkedCards       []deck.Flashcard
+	PlayingMarkedDeck bool
+	StatusMessage     string
+
 	Err    error
 	Width  int
 	Height int
@@ -80,7 +85,7 @@ func New(baseDir string) Model {
 		baseDir = "decks"
 	}
 	dirs, err := deck.GetDeckDirectories(baseDir)
-	return Model{
+	m := Model{
 		BaseDir:       baseDir,
 		State:         StateModeSelect,
 		Mode:          ModeReview,
@@ -88,6 +93,8 @@ func New(baseDir string) Model {
 		SelectedFiles: make(map[string]bool),
 		Err:           err,
 	}
+	m.LoadMarkedDeck()
+	return m
 }
 
 // Init sets up the terminal alternate screen on launch.
@@ -211,7 +218,8 @@ func (m *Model) SetupQuiz() {
 	m.GenerateQuizOptions()
 }
 
-// GenerateQuizOptions generates random multiple-choice distractors for the current question.
+// GenerateQuizOptions generates random multiple-choice distractors for the current question,
+// ensuring distractors are primarily pulled from the same marked cards or the same language deck.
 func (m *Model) GenerateQuizOptions() {
 	if m.CurrentIndex >= len(m.ActiveCards) {
 		return
@@ -219,13 +227,38 @@ func (m *Model) GenerateQuizOptions() {
 
 	ref := m.ActiveCards[m.CurrentIndex]
 	targetCard := m.Decks[ref.Filename].Cards[ref.OrigIdx]
+	targetLang := m.DetectCardLanguage(targetCard)
 
-	var allCards []deck.Flashcard
+	// 1. Gather all candidate cards from currently loaded decks that match targetLang
+	var candidateCards []deck.Flashcard
 	for _, d := range m.Decks {
-		allCards = append(allCards, d.Cards...)
+		for _, c := range d.Cards {
+			if targetLang == "" || m.DetectCardLanguage(c) == targetLang {
+				candidateCards = append(candidateCards, c)
+			}
+		}
 	}
 
-	m.QuizOptions, m.CorrectIndex = quiz.GenerateOptions(targetCard, allCards, 5)
+	// 2. If fewer than 6 candidate cards are in loaded decks:
+	if len(candidateCards) < 6 {
+		if targetLang != "" {
+			// Supplement strictly from the same language deck(s)
+			preferredDeck := targetCard.Deck
+			if preferredDeck == "" && ref.Filename != m.getMarkedDeckPath() {
+				if rel, err := filepath.Rel(m.BaseDir, ref.Filename); err == nil {
+					preferredDeck = filepath.ToSlash(rel)
+				}
+			}
+			extraCards := m.getLanguageDistractorCards(targetLang, preferredDeck, 6-len(candidateCards))
+			candidateCards = append(candidateCards, extraCards...)
+		} else {
+			// Language unknown: supplement from any available deck
+			extraCards := m.getExtraDistractorCards(6 - len(candidateCards))
+			candidateCards = append(candidateCards, extraCards...)
+		}
+	}
+
+	m.QuizOptions, m.CorrectIndex = quiz.GenerateOptions(targetCard, candidateCards, 5)
 }
 
 // SetupArabicDrill prepares question sets for the chosen Arabic drill type.
