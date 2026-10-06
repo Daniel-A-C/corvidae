@@ -45,6 +45,18 @@ var (
 	MemorizeSuccessStyle  = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#50FA7B"))
 	MemorizeWrongStyle    = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FF5555"))
 	MemorizeProgressStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("#50FA7B")).Bold(true)
+
+	// Learn by Reading styles
+	ReadingHeaderStyle         = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#BD93F9"))
+	ReadingSourceStyle         = lipgloss.NewStyle().Foreground(lipgloss.Color("#6272A4")).Italic(true)
+	ReadingCategoryBadge       = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FFB86C")).Background(lipgloss.Color("#44475A")).Padding(0, 1)
+	ReadingWordSubstituted     = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#50FA7B"))
+	ReadingWordPinyin          = lipgloss.NewStyle().Foreground(lipgloss.Color("#8BE9FD")).Italic(true)
+	ReadingKeyBadge            = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FF7CCB"))
+	ReadingAggressivenessStyle = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FFB86C"))
+	ReadingBoxStyle            = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#BD93F9")).Padding(1, 3).Width(78).Align(lipgloss.Center)
+	ReadingDiscussionCard      = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#50FA7B")).Padding(1, 3).Width(78).Align(lipgloss.Left)
+	ReadingWordDetailCard      = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#FF7CCB")).Padding(1, 3).Width(68).Align(lipgloss.Center)
 )
 
 const AsciiLogo = `                           .-.

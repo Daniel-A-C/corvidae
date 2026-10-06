@@ -12,6 +12,7 @@ import (
 	"flashcards/internal/deck"
 	"flashcards/internal/memorize"
 	"flashcards/internal/quiz"
+	"flashcards/internal/reading"
 )
 
 const (
@@ -29,6 +30,11 @@ const (
 	StateMemorizePortionSelect
 	StateMemorize
 	StateMemorizeComplete
+	StateReadingSelectText
+	StateReading
+	StateReadingWordDetail
+	StateReadingDiscussion
+	StateReadingComplete
 )
 
 const (
@@ -36,6 +42,7 @@ const (
 	ModeQuiz
 	ModeArabic
 	ModeMemorize
+	ModeReading
 )
 
 // Model represents the Bubble Tea state model for Corvidae.
@@ -102,6 +109,14 @@ type Model struct {
 	MemorizeShowFeedback   bool
 	MemorizeIsCorrect      bool
 
+	// Learn by Reading state
+	ReadingDir          string
+	ReadingProgress     *reading.ReadingProgress
+	ReadingTexts        []reading.TextHeader
+	ReadingCursor       int
+	ReadingSession      *reading.Session
+	ReadingWordFeedback string
+
 	Err    error
 	Width  int
 	Height int
@@ -109,29 +124,61 @@ type Model struct {
 
 // New initializes and returns a new Model using default directories.
 func New(baseDir string) Model {
-	return NewWithOptions(baseDir, "memorizationTexts")
+	return NewWithOptions(baseDir, "memorizationTexts", "readingTranslationTexts")
 }
 
-// NewWithOptions initializes and returns a new Model with specified deck and text directories.
-func NewWithOptions(baseDir, textsDir string) Model {
+// NewWithOptions initializes and returns a new Model with specified deck, text, and reading directories.
+func NewWithOptions(baseDir, textsDir string, readingDir ...string) Model {
 	if baseDir == "" {
 		baseDir = "decks"
 	}
 	if textsDir == "" {
 		textsDir = "memorizationTexts"
 	}
+	rd := "readingTranslationTexts"
+	if len(readingDir) > 0 && readingDir[0] != "" {
+		rd = readingDir[0]
+	}
+
 	dirs, err := deck.GetDeckDirectories(baseDir)
+	prog, _ := reading.LoadProgress(filepath.Join(rd, "reading_progress.yaml"))
+
 	m := Model{
-		BaseDir:       baseDir,
-		TextsDir:      textsDir,
-		State:         StateModeSelect,
-		Mode:          ModeReview,
-		Dirs:          dirs,
-		SelectedFiles: make(map[string]bool),
-		Err:           err,
+		BaseDir:         baseDir,
+		TextsDir:        textsDir,
+		ReadingDir:      rd,
+		ReadingProgress: prog,
+		State:           StateModeSelect,
+		Mode:            ModeReview,
+		Dirs:            dirs,
+		SelectedFiles:   make(map[string]bool),
+		Err:             err,
 	}
 	m.LoadMarkedDeck()
 	return m
+}
+
+// MarkWordAsFlashcard adds a vocabulary word from reading mode to the Marked Cards deck.
+func (m *Model) MarkWordAsFlashcard(w reading.WordTranslation) bool {
+	card := deck.Flashcard{
+		Character:   w.Target,
+		Pinyin:      w.Pinyin,
+		Meaning:     w.Meaning,
+		Explanation: w.Explanation,
+		Language:    w.Language,
+		Interval:    1,
+		Ease:        2.5,
+		Reps:        0,
+		NextReview:  time.Now().Format("2006-01-02"),
+	}
+	for _, c := range m.MarkedCards {
+		if SameCard(c, card) {
+			return false
+		}
+	}
+	m.MarkedCards = append(m.MarkedCards, card)
+	m.saveMarkedDeck()
+	return true
 }
 
 // Init sets up the terminal alternate screen on launch.
