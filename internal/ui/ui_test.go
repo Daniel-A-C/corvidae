@@ -988,3 +988,505 @@ func TestArabicStagesFlow(t *testing.T) {
 	}
 }
 
+func TestQuizMarkAndUnmarkCard(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+	m.Mode = ModeQuiz
+	m.SelectedDir = "Mandarin"
+	m.SelectedFiles["tech.yaml"] = true
+	if err := m.LoadSelectedDecks(); err != nil {
+		t.Fatal(err)
+	}
+	m.SetupQuiz()
+	m.State = StateQuiz
+
+	// Initially, no card is marked
+	ref := m.ActiveCards[m.CurrentIndex]
+	currentCard := m.Decks[ref.Filename].Cards[ref.OrigIdx]
+	if m.isCardMarked(currentCard) {
+		t.Fatalf("expected card to not be marked initially")
+	}
+
+	// Question screen: press 'm' to mark
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'m'}})
+	m = updatedM.(Model)
+
+	if !m.isCardMarked(currentCard) {
+		t.Fatalf("expected card to be marked after pressing 'm'")
+	}
+	if len(m.MarkedCards) != 1 {
+		t.Fatalf("expected 1 marked card, got %d", len(m.MarkedCards))
+	}
+	view := m.View()
+	if !strings.Contains(view, "★ MARKED") {
+		t.Errorf("expected view to contain '★ MARKED', got:\n%s", view)
+	}
+	if !strings.Contains(view, "[m] Unmark card") {
+		t.Errorf("expected view to contain '[m] Unmark card', got:\n%s", view)
+	}
+
+	// Verify file was saved on disk
+	markedFile := filepath.Join(decksDir, "marked.yaml")
+	loaded, err := deck.LoadDeck(markedFile)
+	if err != nil {
+		t.Fatalf("failed to load marked deck from disk: %v", err)
+	}
+	if len(loaded.Cards) != 1 || loaded.Cards[0].Character != currentCard.Character {
+		t.Fatalf("expected disk marked deck to have %s, got %+v", currentCard.Character, loaded.Cards)
+	}
+
+	// Answer the question
+	correctKey := HummingbirdKeys[m.CorrectIndex]
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(correctKey)})
+	m = updatedM.(Model)
+
+	if !m.ShowFeedback {
+		t.Fatalf("expected feedback view")
+	}
+	feedbackView := m.View()
+	if !strings.Contains(feedbackView, "★ MARKED") {
+		t.Errorf("expected feedback view to show '★ MARKED', got:\n%s", feedbackView)
+	}
+	if !strings.Contains(feedbackView, "Unmark") {
+		t.Errorf("expected feedback view to contain 'Unmark', got:\n%s", feedbackView)
+	}
+
+	// Feedback screen: press 'u' to unmark
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'u'}})
+	m = updatedM.(Model)
+
+	if m.isCardMarked(currentCard) {
+		t.Fatalf("expected card to be unmarked after pressing 'u'")
+	}
+	if len(m.MarkedCards) != 0 {
+		t.Fatalf("expected 0 marked cards, got %d", len(m.MarkedCards))
+	}
+	feedbackViewAfterUnmark := m.View()
+	if strings.Contains(feedbackViewAfterUnmark, "★ MARKED") {
+		t.Errorf("expected feedback view to NOT show '★ MARKED' after unmark, got:\n%s", feedbackViewAfterUnmark)
+	}
+
+	// Feedback screen: press 'm' to re-mark
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'m'}})
+	m = updatedM.(Model)
+	if !m.isCardMarked(currentCard) {
+		t.Fatalf("expected card to be re-marked after pressing 'm'")
+	}
+}
+
+func TestSelectMarkedDeckFromMenus(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+
+	// Add 2 marked cards to marked.yaml
+	markedCards := []deck.Flashcard{
+		{Character: "电脑", Meaning: "Computer"},
+		{Character: "Bonjour", Meaning: "Hello"},
+	}
+	m.MarkedCards = markedCards
+	if err := m.saveMarkedDeck(); err != nil {
+		t.Fatal(err)
+	}
+
+	// Verify mode select view displays marked cards
+	m2 := New(decksDir)
+	modeView := m2.View()
+	if !strings.Contains(modeView, "★ Practice Marked Cards (2 cards)") {
+		t.Errorf("expected mode select to display marked cards, got:\n%s", modeView)
+	}
+
+	// Press 'm' from mode select to start practice
+	updatedM, _ := m2.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'m'}})
+	m2 = updatedM.(Model)
+	if m2.State != StateQuiz {
+		t.Fatalf("expected StateQuiz after pressing 'm' in mode select, got %d", m2.State)
+	}
+	if len(m2.ActiveCards) != 2 {
+		t.Fatalf("expected 2 active cards in marked quiz, got %d", len(m2.ActiveCards))
+	}
+
+	// Test selecting from DirSelect view
+	m3 := New(decksDir)
+	// Enter ModeQuiz
+	updatedM, _ = m3.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'s'}})
+	m3 = updatedM.(Model)
+	if m3.State != StateDirSelect {
+		t.Fatalf("expected StateDirSelect, got %d", m3.State)
+	}
+
+	dirView := m3.View()
+	if !strings.Contains(dirView, "★ Marked Cards (2 cards)") {
+		t.Errorf("expected dir select to display marked cards, got:\n%s", dirView)
+	}
+
+	// Press 'm' from DirSelect
+	updatedM, _ = m3.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'m'}})
+	m3 = updatedM.(Model)
+	if m3.State != StateQuiz {
+		t.Fatalf("expected StateQuiz after pressing 'm' in dir select, got %d", m3.State)
+	}
+	if len(m3.ActiveCards) != 2 {
+		t.Fatalf("expected 2 active cards, got %d", len(m3.ActiveCards))
+	}
+
+	// Test navigating down with arrow keys to Marked Cards in DirSelect
+	m4 := New(decksDir)
+	updatedM, _ = m4.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'s'}})
+	m4 = updatedM.(Model)
+	// In setupTestDecks, dirs are French (0), Mandarin (1).
+	// Marked Cards is at index 2 (len(m.Dirs)).
+	// Move down twice
+	updatedM, _ = m4.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'j'}})
+	m4 = updatedM.(Model)
+	updatedM, _ = m4.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'j'}})
+	m4 = updatedM.(Model)
+	if m4.DirCursor != len(m4.Dirs) {
+		t.Fatalf("expected DirCursor at %d, got %d", len(m4.Dirs), m4.DirCursor)
+	}
+	// Press Enter to start practice
+	updatedM, _ = m4.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m4 = updatedM.(Model)
+	if m4.State != StateQuiz {
+		t.Fatalf("expected StateQuiz after pressing Enter on Marked Cards, got %d", m4.State)
+	}
+}
+
+func TestEmptyMarkedCardsMessage(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+
+	// Press 'm' when 0 marked cards
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'m'}})
+	m = updatedM.(Model)
+
+	if m.State != StateModeSelect {
+		t.Fatalf("expected StateModeSelect, got %d", m.State)
+	}
+	if !strings.Contains(m.StatusMessage, "No marked cards yet") {
+		t.Errorf("expected StatusMessage to explain no marked cards, got: %s", m.StatusMessage)
+	}
+	view := m.View()
+	if !strings.Contains(view, "No marked cards yet") {
+		t.Errorf("expected view to contain status message, got:\n%s", view)
+	}
+}
+
+func TestPlayingMarkedDeckLoopingAndUnmarking(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+
+	m.MarkedCards = []deck.Flashcard{
+		{Character: "电脑", Meaning: "Computer"},
+		{Character: "手机", Meaning: "Mobile phone"},
+	}
+	if err := m.saveMarkedDeck(); err != nil {
+		t.Fatal(err)
+	}
+
+	// Start marked practice
+	m.startMarkedPractice()
+	if m.State != StateQuiz {
+		t.Fatalf("expected StateQuiz, got %d", m.State)
+	}
+	if len(m.ActiveCards) != 2 {
+		t.Fatalf("expected 2 active cards, got %d", len(m.ActiveCards))
+	}
+
+	// Question 1: Answer and unmark
+	ref1 := m.ActiveCards[0]
+	card1 := m.Decks[ref1.Filename].Cards[ref1.OrigIdx]
+
+	correctKey := HummingbirdKeys[m.CorrectIndex]
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(correctKey)})
+	m = updatedM.(Model)
+
+	// Unmark card 1
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'u'}})
+	m = updatedM.(Model)
+	if m.isCardMarked(card1) {
+		t.Fatalf("expected card 1 to be unmarked")
+	}
+	if len(m.MarkedCards) != 1 {
+		t.Fatalf("expected 1 marked card remaining, got %d", len(m.MarkedCards))
+	}
+
+	// Advance to Question 2
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+	if m.CurrentIndex != 1 {
+		t.Fatalf("expected CurrentIndex 1, got %d", m.CurrentIndex)
+	}
+
+	// Question 2: Answer, but leave it marked
+	correctKey2 := HummingbirdKeys[m.CorrectIndex]
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(correctKey2)})
+	m = updatedM.(Model)
+
+	// Advance past Question 2 -> Quiz complete
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+	if m.CurrentIndex < len(m.ActiveCards) {
+		t.Fatalf("expected quiz complete")
+	}
+
+	completeView := m.View()
+	if !strings.Contains(completeView, "Quiz complete!") {
+		t.Errorf("expected 'Quiz complete!', got:\n%s", completeView)
+	}
+	if !strings.Contains(completeView, "[r] Retry quiz") {
+		t.Errorf("expected '[r] Retry quiz', got:\n%s", completeView)
+	}
+
+	// Press 'r' to loop through remaining marked cards
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'r'}})
+	m = updatedM.(Model)
+
+	// Now only 1 card should be in the active quiz!
+	if len(m.ActiveCards) != 1 {
+		t.Fatalf("expected 1 card remaining in looped quiz, got %d", len(m.ActiveCards))
+	}
+	if m.CurrentIndex != 0 {
+		t.Fatalf("expected CurrentIndex 0 in restarted quiz, got %d", m.CurrentIndex)
+	}
+
+	// Answer the remaining card and unmark it
+	correctKey3 := HummingbirdKeys[m.CorrectIndex]
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(correctKey3)})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'u'}})
+	m = updatedM.(Model)
+
+	if len(m.MarkedCards) != 0 {
+		t.Fatalf("expected 0 marked cards remaining, got %d", len(m.MarkedCards))
+	}
+
+	// Advance
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+
+	// Press 'r' when 0 marked cards left
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'r'}})
+	m = updatedM.(Model)
+	if m.State != StateModeSelect {
+		t.Fatalf("expected return to StateModeSelect when no marked cards left, got %d", m.State)
+	}
+}
+
+func TestMarkedCardsInReviewMode(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+	m.SelectedDir = "Mandarin"
+	m.SelectedFiles["tech.yaml"] = true
+	if err := m.LoadSelectedDecks(); err != nil {
+		t.Fatal(err)
+	}
+	m.SetupReview()
+	m.State = StateReview
+
+	ref := m.ActiveCards[0]
+	card := m.Decks[ref.Filename].Cards[ref.OrigIdx]
+
+	// Toggle mark in review mode with 'm'
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'m'}})
+	m = updatedM.(Model)
+	if !m.isCardMarked(card) {
+		t.Fatalf("expected card to be marked in review mode")
+	}
+	view := m.View()
+	if !strings.Contains(view, "★ MARKED") {
+		t.Errorf("expected review view to show '★ MARKED', got:\n%s", view)
+	}
+
+	// Toggle unmark with 'u'
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'u'}})
+	m = updatedM.(Model)
+	if m.isCardMarked(card) {
+		t.Fatalf("expected card to be unmarked in review mode")
+	}
+}
+
+func TestMarkedCardsDistractorSupplement(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+
+	// Mark only 1 card
+	m.MarkedCards = []deck.Flashcard{
+		{Character: "电脑", Pinyin: "diànnǎo", Meaning: "Computer"},
+	}
+	if err := m.saveMarkedDeck(); err != nil {
+		t.Fatal(err)
+	}
+
+	// Start marked practice
+	m.startMarkedPractice()
+	if m.State != StateQuiz {
+		t.Fatalf("expected StateQuiz, got %d", m.State)
+	}
+	// Because other decks exist in setupTestDecks (tech.yaml with 手机, basics.yaml with Bonjour),
+	// distractors should be supplemented so QuizOptions has more than 1 option.
+	if len(m.QuizOptions) <= 1 {
+		t.Fatalf("expected QuizOptions to have supplemented distractors, got %d options: %v", len(m.QuizOptions), m.QuizOptions)
+	}
+}
+
+func TestMarkedCardsPersistenceAcrossRestarts(t *testing.T) {
+	decksDir := setupTestDecks(t)
+
+	// Session 1: mark a card and quit
+	m1 := New(decksDir)
+	m1.markCard(deck.Flashcard{Character: "测试", Pinyin: "cèshì", Meaning: "Test"})
+
+	// Session 2: start new instance with same decksDir
+	m2 := New(decksDir)
+	if len(m2.MarkedCards) != 1 {
+		t.Fatalf("expected 1 marked card in new session, got %d", len(m2.MarkedCards))
+	}
+	if m2.MarkedCards[0].Character != "测试" {
+		t.Errorf("expected character '测试', got %s", m2.MarkedCards[0].Character)
+	}
+
+	// Unmark and verify disk file is cleaned up
+	m2.unmarkCard(m2.MarkedCards[0])
+	if len(m2.MarkedCards) != 0 {
+		t.Fatalf("expected 0 marked cards, got %d", len(m2.MarkedCards))
+	}
+
+	// Session 3: verify 0 marked cards loaded
+	m3 := New(decksDir)
+	if len(m3.MarkedCards) != 0 {
+		t.Fatalf("expected 0 marked cards in session 3, got %d", len(m3.MarkedCards))
+	}
+}
+
+func TestMarkedCardsDistractorsSameLanguage(t *testing.T) {
+	tempDir := t.TempDir()
+	mandarinDir := filepath.Join(tempDir, "Mandarin")
+	arabicDir := filepath.Join(tempDir, "Arabic")
+	if err := os.Mkdir(mandarinDir, 0755); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.Mkdir(arabicDir, 0755); err != nil {
+		t.Fatal(err)
+	}
+
+	mandarinDeck := deck.Deck{
+		Cards: []deck.Flashcard{
+			{Character: "电脑", Pinyin: "diànnǎo", Meaning: "Computer"},
+			{Character: "手机", Pinyin: "shǒujī", Meaning: "Mobile phone"},
+			{Character: "书", Pinyin: "shū", Meaning: "Book"},
+			{Character: "水", Pinyin: "shuǐ", Meaning: "Water"},
+			{Character: "茶", Pinyin: "chá", Meaning: "Tea"},
+			{Character: "猫", Pinyin: "māo", Meaning: "Cat"},
+			{Character: "狗", Pinyin: "gǒu", Meaning: "Dog"},
+		},
+	}
+	if err := deck.SaveDeck(filepath.Join(mandarinDir, "vocab.yaml"), mandarinDeck); err != nil {
+		t.Fatal(err)
+	}
+
+	arabicDeck := deck.Deck{
+		Cards: []deck.Flashcard{
+			{Character: "مَرْحَبًا", Pronunciation: "marḥaban", Meaning: "Hello"},
+			{Character: "شُكْرًا", Pronunciation: "shukran", Meaning: "Thank you"},
+			{Character: "كِتَاب", Pronunciation: "kitāb", Meaning: "Book"},
+		},
+	}
+	if err := deck.SaveDeck(filepath.Join(arabicDir, "basics.yaml"), arabicDeck); err != nil {
+		t.Fatal(err)
+	}
+
+	// Case 1: Mark only Mandarin cards (2 cards)
+	m := New(tempDir)
+	m.MarkedCards = []deck.Flashcard{
+		{Character: "电脑", Pinyin: "diànnǎo", Meaning: "Computer", Language: "Mandarin", Deck: "Mandarin/vocab.yaml"},
+		{Character: "手机", Pinyin: "shǒujī", Meaning: "Mobile phone", Language: "Mandarin", Deck: "Mandarin/vocab.yaml"},
+	}
+	if err := m.saveMarkedDeck(); err != nil {
+		t.Fatal(err)
+	}
+
+	m.startMarkedPractice()
+	if m.State != StateQuiz {
+		t.Fatalf("expected StateQuiz, got %d", m.State)
+	}
+
+	// Verify that ALL options for the Mandarin question are Mandarin (contain Pinyin or Mandarin words, NO Arabic)
+	if len(m.QuizOptions) < 2 {
+		t.Fatalf("expected at least 2 options, got %d", len(m.QuizOptions))
+	}
+	for _, opt := range m.QuizOptions {
+		if strings.Contains(opt, "marḥaban") || strings.Contains(opt, "shukran") || strings.Contains(opt, "kitāb") {
+			t.Errorf("found Arabic distractor in Mandarin quiz option: %s", opt)
+		}
+	}
+
+	// Case 2: Mixed marked cards (2 Mandarin + 2 Arabic)
+	mMixed := New(tempDir)
+	mMixed.MarkedCards = []deck.Flashcard{
+		{Character: "电脑", Pinyin: "diànnǎo", Meaning: "Computer", Language: "Mandarin"},
+		{Character: "手机", Pinyin: "shǒujī", Meaning: "Mobile phone", Language: "Mandarin"},
+		{Character: "مَرْحَبًا", Pronunciation: "marḥaban", Meaning: "Hello", Language: "Arabic"},
+		{Character: "شُكْرًا", Pronunciation: "shukran", Meaning: "Thank you", Language: "Arabic"},
+	}
+	if err := mMixed.saveMarkedDeck(); err != nil {
+		t.Fatal(err)
+	}
+	mMixed.startMarkedPractice()
+
+	// Check each question in the mixed quiz
+	for i := 0; i < len(mMixed.ActiveCards); i++ {
+		mMixed.CurrentIndex = i
+		mMixed.GenerateQuizOptions()
+		ref := mMixed.ActiveCards[i]
+		target := mMixed.Decks[ref.Filename].Cards[ref.OrigIdx]
+		targetLang := mMixed.DetectCardLanguage(target)
+
+		if targetLang == "Mandarin" {
+			for _, opt := range mMixed.QuizOptions {
+				if strings.Contains(opt, "marḥaban") || strings.Contains(opt, "shukran") || strings.Contains(opt, "kitāb") {
+					t.Errorf("Mandarin question %s received Arabic distractor: %s", target.Character, opt)
+				}
+			}
+		} else if targetLang == "Arabic" {
+			for _, opt := range mMixed.QuizOptions {
+				if strings.Contains(opt, "diànnǎo") || strings.Contains(opt, "shǒujī") || strings.Contains(opt, "Computer") {
+					t.Errorf("Arabic question %s received Mandarin distractor: %s", target.Character, opt)
+				}
+			}
+		}
+	}
+}
+
+func TestWorkspaceMarkedDeck(t *testing.T) {
+	if _, err := os.Stat(filepath.Join("..", "..", "decks", "marked.yaml")); os.IsNotExist(err) {
+		t.Skip("decks/marked.yaml not present")
+	}
+
+	m := New(filepath.Join("..", "..", "decks"))
+	if len(m.MarkedCards) == 0 {
+		t.Skip("no marked cards in workspace decks/marked.yaml")
+	}
+
+	m.startMarkedPractice()
+	if m.State != StateQuiz {
+		t.Fatalf("expected StateQuiz, got %d", m.State)
+	}
+
+	for i := 0; i < len(m.ActiveCards); i++ {
+		m.CurrentIndex = i
+		m.GenerateQuizOptions()
+		ref := m.ActiveCards[i]
+		target := m.Decks[ref.Filename].Cards[ref.OrigIdx]
+		targetLang := m.DetectCardLanguage(target)
+
+		if targetLang == "Mandarin" {
+			for _, opt := range m.QuizOptions {
+				// Arabic transliterations / words must never appear
+				if strings.Contains(opt, "marḥaban") || strings.Contains(opt, "shukran") || strings.Contains(opt, "Hello") && !strings.Contains(opt, "nǐ") {
+					t.Errorf("Mandarin question '%s' received non-Mandarin distractor: %s", target.Character, opt)
+				}
+			}
+		}
+	}
+}
+

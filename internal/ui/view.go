@@ -63,12 +63,30 @@ func (m Model) viewModeSelect() string {
 		}
 		content += fmt.Sprintf("%s%s %s\n", CursorStyle.Render(cursor), keyBadge, label)
 	}
+	markedCount := len(m.MarkedCards)
+	if markedCount > 0 {
+		var cardWord string
+		if markedCount == 1 {
+			cardWord = "1 card"
+		} else {
+			cardWord = fmt.Sprintf("%d cards", markedCount)
+		}
+		content += "\n" + fmt.Sprintf("  %s %s\n",
+			KeyStyle.Render("[m]"),
+			MarkedStarStyle.Render(fmt.Sprintf("★ Practice Marked Cards (%s)", cardWord)),
+		)
+	}
+
+	if m.StatusMessage != "" {
+		content += "\n" + ExplanationStyle.Render(m.StatusMessage) + "\n"
+	}
+
 	content += "\n" + HintStyle.Render("(Press a/s/d to select, Enter to confirm, q to quit)")
 	return content
 }
 
 func (m Model) viewDirSelect() string {
-	if len(m.Dirs) == 0 {
+	if len(m.Dirs) == 0 && m.SelectedDir != "" {
 		return fmt.Sprintf("No directories found in %s/%s.\n\n%s", m.BaseDir, m.SelectedDir, HintStyle.Render("(Press Esc to return, q to quit)"))
 	}
 
@@ -109,6 +127,33 @@ func (m Model) viewDirSelect() string {
 		}
 	}
 
+	if m.SelectedDir == "" {
+		cursor := "  "
+		if m.DirCursor == len(m.Dirs) {
+			cursor = "> "
+		}
+		count := len(m.MarkedCards)
+		var countStr string
+		if count == 1 {
+			countStr = HintStyle.Render(" (1 card)")
+		} else {
+			countStr = HintStyle.Render(fmt.Sprintf(" (%d cards)", count))
+		}
+		label := "Marked Cards"
+		if count > 0 {
+			label = MarkedStarStyle.Render("★ ") + label
+		}
+		if m.DirCursor == len(m.Dirs) {
+			label = CursorStyle.Render(label)
+		}
+		keyBadge := KeyStyle.Render("[m]") + " "
+		content += fmt.Sprintf("\n%s%s%s%s\n", CursorStyle.Render(cursor), keyBadge, label, countStr)
+	}
+
+	if m.StatusMessage != "" {
+		content += "\n" + ExplanationStyle.Render(m.StatusMessage) + "\n"
+	}
+
 	selectedCount := m.countSelectedDecks()
 	if selectedCount > 0 {
 		var deckWord string
@@ -120,7 +165,7 @@ func (m Model) viewDirSelect() string {
 		content += "\n" + CorrectStyle.Render(fmt.Sprintf("%s selected across folders  •  [Tab] Start Practice", deckWord)) + "\n"
 		content += "\n" + HintStyle.Render("(Press key to select, Tab to start, Esc to go back, q to quit)")
 	} else {
-		content += "\n" + HintStyle.Render("(Press key to select, Esc to go back, q to quit)")
+		content += "\n" + HintStyle.Render("(Press key to select, [m] Marked Cards, Esc to go back, q to quit)")
 	}
 	return content
 }
@@ -188,12 +233,17 @@ func (m Model) viewReview() string {
 		displayName = ref.Filename
 	}
 
-	content := HintStyle.Render(fmt.Sprintf("Card %d of %d  •  %s", m.CurrentIndex+1, len(m.ActiveCards), displayName)) + "\n\n"
+	header := fmt.Sprintf("Card %d of %d  •  %s", m.CurrentIndex+1, len(m.ActiveCards), displayName)
+	if m.isCardMarked(card) {
+		header += "  " + MarkedBadgeStyle.Render("★ MARKED")
+	}
+
+	content := HintStyle.Render(header) + "\n\n"
 	content += CharStyle.Render(card.Character) + "\n\n"
 
 	if !m.ShowAnswer {
 		content += HintStyle.Render("[ Spacebar to reveal ]") + "\n"
-		content += "\n" + HintStyle.Render("(Press 'q' to quit)")
+		content += "\n" + HintStyle.Render("([m] Toggle Mark  •  Press 'q' to quit)")
 		return content
 	}
 
@@ -214,17 +264,18 @@ func (m Model) viewReview() string {
 	content += fmt.Sprintf("[%s] Good      [%s] Easy   [%s] Perfect\n",
 		KeyStyle.Render("h"), KeyStyle.Render("j"), KeyStyle.Render("k"))
 
-	content += "\n" + HintStyle.Render("[e] Toggle Explanation  •  [q] Quit")
+	content += "\n" + HintStyle.Render("[e] Toggle Explanation  •  [m] Toggle Mark  •  [q] Quit")
 	return content
 }
 
 func (m Model) viewQuiz() string {
 	if m.CurrentIndex >= len(m.ActiveCards) {
-		return fmt.Sprintf("Quiz complete!\n\n%s", HintStyle.Render("[Enter] Main Menu  •  [q] Quit"))
+		return fmt.Sprintf("Quiz complete!\n\n%s", HintStyle.Render("[r] Retry quiz  •  [Enter] Main Menu  •  [q] Quit"))
 	}
 
 	ref := m.ActiveCards[m.CurrentIndex]
 	card := m.Decks[ref.Filename].Cards[ref.OrigIdx]
+	isMarked := m.isCardMarked(card)
 
 	header := fmt.Sprintf("Quiz: Question %d of %d", m.CurrentIndex+1, len(m.ActiveCards))
 	if m.ShowFeedback {
@@ -233,6 +284,9 @@ func (m Model) viewQuiz() string {
 			displayName = ref.Filename
 		}
 		header += fmt.Sprintf("  •  %s", displayName)
+	}
+	if isMarked {
+		header += "  " + MarkedBadgeStyle.Render("★ MARKED")
 	}
 
 	content := HintStyle.Render(header) + "\n\n"
@@ -250,15 +304,21 @@ func (m Model) viewQuiz() string {
 			if card.Explanation != "" {
 				content += ExplanationStyle.Render(card.Explanation) + "\n\n"
 			}
-			content += HintStyle.Render("[ Spacebar to continue ]")
 		} else {
 			content += ErrorStyle.Render("Incorrect!") + "\n\n"
 			content += fmt.Sprintf("The correct answer was: %s\n\n", CorrectStyle.Render(m.QuizOptions[m.CorrectIndex]))
 			if card.Explanation != "" {
 				content += ExplanationStyle.Render(card.Explanation) + "\n\n"
 			}
-			content += HintStyle.Render("[ Spacebar to continue ]")
 		}
+
+		var markHint string
+		if isMarked {
+			markHint = fmt.Sprintf("[%s] Unmark  •  ", KeyStyle.Render("m/u"))
+		} else {
+			markHint = fmt.Sprintf("[%s] Mark card  •  ", KeyStyle.Render("m"))
+		}
+		content += HintStyle.Render(fmt.Sprintf("[ %sSpacebar to continue ]", markHint))
 		return content
 	}
 
@@ -270,7 +330,14 @@ func (m Model) viewQuiz() string {
 			content += "\n"
 		}
 	}
-	content += "\n" + HintStyle.Render("(Press key to select, q to quit)")
+
+	var markHint string
+	if isMarked {
+		markHint = fmt.Sprintf("[%s] Unmark card  •  ", KeyStyle.Render("m"))
+	} else {
+		markHint = fmt.Sprintf("[%s] Mark card  •  ", KeyStyle.Render("m"))
+	}
+	content += "\n" + HintStyle.Render(fmt.Sprintf("(%sPress key to select, q to quit)", markHint))
 	return content
 }
 

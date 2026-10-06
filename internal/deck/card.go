@@ -13,6 +13,8 @@ type Flashcard struct {
 	Ease          float64 `yaml:"ease,omitempty"`
 	Reps          int     `yaml:"reps,omitempty"`
 	NextReview    string  `yaml:"next_review,omitempty"`
+	Language      string  `yaml:"language,omitempty"`
+	Deck          string  `yaml:"deck,omitempty"`
 }
 
 // Deck represents a collection of flashcards stored in a YAML deck file.
