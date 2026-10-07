@@ -1,3 +1,4 @@
+// Package sm2 implements the SuperMemo-2 (SM-2) spaced repetition scheduling algorithm.
 package sm2
 
 import (

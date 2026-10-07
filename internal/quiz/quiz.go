@@ -1,3 +1,4 @@
+// Package quiz provides multiple-choice option and distractor generation for flashcards.
 package quiz
 
 import (
@@ -9,6 +10,9 @@ import (
 // GenerateOptions generates multiple-choice options for a given target card using a pool of all available cards.
 // It returns the shuffled slice of options and the index of the correct answer within that slice.
 func GenerateOptions(targetCard deck.Flashcard, allCards []deck.Flashcard, maxDistractors int) ([]string, int) {
+	if maxDistractors < 0 {
+		maxDistractors = 0
+	}
 	correctOption := targetCard.FormatQuizOption()
 
 	uniquePool := make(map[string]bool)

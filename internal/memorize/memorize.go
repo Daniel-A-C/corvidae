@@ -1,3 +1,4 @@
+// Package memorize provides word-by-word active recall memorization text processing, distractor generation, and portion selection.
 package memorize
 
 import (
@@ -10,6 +11,13 @@ import (
 	"strings"
 
 	"gopkg.in/yaml.v3"
+)
+
+var (
+	reVerseNumber = regexp.MustCompile(`\b(\d+)\b`)
+	reVersePrefix = regexp.MustCompile(`(\b\d+\s+)`)
+	reCleanWord   = regexp.MustCompile(`^[¡¿"']+|[.,;:!?"']+$`)
+	rePunctAffix  = regexp.MustCompile(`^([¡¿"']*)(.*?)([.,;:!?"']*)$`)
 )
 
 // WordItem represents an individual word in a memorization text with its options.
@@ -58,8 +66,6 @@ func (t *Text) GetSections() []Section {
 		return nil
 	}
 
-	reVerse := regexp.MustCompile(`\b(\d+)\b`)
-
 	type marker struct {
 		startIdx int
 		number   string
@@ -68,8 +74,8 @@ func (t *Text) GetSections() []Section {
 	var markers []marker
 
 	for i, w := range t.Words {
-		if reVerse.MatchString(w.Prefix) {
-			m := reVerse.FindStringSubmatch(w.Prefix)
+		if reVerseNumber.MatchString(w.Prefix) {
+			m := reVerseNumber.FindStringSubmatch(w.Prefix)
 			num := m[1]
 			markers = append(markers, marker{
 				startIdx: i,
@@ -296,8 +302,12 @@ func LoadText(filePath string) (*Text, error) {
 	return &t, nil
 }
 
-// SaveText serializes a Text struct and writes it to disk.
+// SaveText serializes a Text struct and writes it to disk, creating parent directories if needed.
 func SaveText(filePath string, t *Text) error {
+	dir := filepath.Dir(filePath)
+	if err := os.MkdirAll(dir, 0755); err != nil {
+		return err
+	}
 	data, err := yaml.Marshal(t)
 	if err != nil {
 		return err
@@ -323,14 +333,13 @@ func GenerateFromPlainText(raw string, defaultTitle string) (*Text, error) {
 	}
 	var verses []parsedVerse
 
-	reVerse := regexp.MustCompile(`(\b\d+\s+)`)
 	for _, line := range lines {
 		line = strings.TrimSpace(line)
 		if line == "" {
 			continue
 		}
-		parts := reVerse.Split(line, -1)
-		matches := reVerse.FindAllString(line, -1)
+		parts := reVersePrefix.Split(line, -1)
+		matches := reVersePrefix.FindAllString(line, -1)
 
 		if len(matches) > 0 {
 			for i, m := range matches {
@@ -353,11 +362,10 @@ func GenerateFromPlainText(raw string, defaultTitle string) (*Text, error) {
 	}
 
 	// Extract unique vocabulary
-	reClean := regexp.MustCompile(`^[¡¿"']+|[.,;:!?"']+$`)
 	var allWords []string
 	for _, v := range verses {
 		for _, w := range strings.Fields(v.text) {
-			c := strings.ToLower(reClean.ReplaceAllString(w, ""))
+			c := strings.ToLower(reCleanWord.ReplaceAllString(w, ""))
 			if c != "" {
 				allWords = append(allWords, c)
 			}
@@ -411,8 +419,7 @@ func GenerateFromPlainText(raw string, defaultTitle string) (*Text, error) {
 }
 
 func generateFallbackDistractors(target string, vocab []string) []string {
-	rePunct := regexp.MustCompile(`^([¡¿"']*)(.*?)([.,;:!?"']*)$`)
-	m := rePunct.FindStringSubmatch(target)
+	m := rePunctAffix.FindStringSubmatch(target)
 	leading := ""
 	core := target
 	trailing := ""

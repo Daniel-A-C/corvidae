@@ -684,4 +684,27 @@ func TestDeckSelectedYamlPersistence(t *testing.T) {
 	}
 }
 
+func TestSaveDeckNestedDirectory(t *testing.T) {
+	tempDir := t.TempDir()
+	nestedPath := filepath.Join(tempDir, "nested", "subfolder", "deck.yaml")
+
+	d := Deck{
+		Cards: []Flashcard{
+			{Character: "你好", Meaning: "Hello"},
+		},
+	}
+
+	if err := SaveDeck(nestedPath, d); err != nil {
+		t.Fatalf("expected SaveDeck to create nested directories, got error: %v", err)
+	}
+
+	loaded, err := LoadDeck(nestedPath)
+	if err != nil {
+		t.Fatalf("failed to load saved deck from nested path: %v", err)
+	}
+	if len(loaded.Cards) != 1 || loaded.Cards[0].Character != "你好" {
+		t.Fatalf("unexpected deck content: %+v", loaded)
+	}
+}
+
 

@@ -4,9 +4,10 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"path/filepath"
 
-	tea "github.com/charmbracelet/bubbletea"
 	"flashcards/internal/ui"
+	tea "github.com/charmbracelet/bubbletea"
 )
 
 func main() {
@@ -23,7 +24,7 @@ func main() {
 	flag.StringVar(&readingDir, "r", "readingTranslationTexts", "path to the reading translation texts directory (shorthand)")
 
 	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, "Usage: %s [options]\n\nOptions:\n", os.Args[0])
+		fmt.Fprintf(os.Stderr, "Usage: %s [options]\n\nOptions:\n", filepath.Base(os.Args[0]))
 		flag.PrintDefaults()
 	}
 	flag.Parse()

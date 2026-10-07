@@ -1,3 +1,4 @@
+// Package ui implements the terminal user interface for Corvidae using Bubble Tea and Lip Gloss.
 package ui
 
 import (
@@ -162,15 +163,16 @@ func NewWithOptions(baseDir, textsDir string, readingDir ...string) Model {
 // MarkWordAsFlashcard adds a vocabulary word from reading mode to the Marked Cards deck.
 func (m *Model) MarkWordAsFlashcard(w reading.WordTranslation) bool {
 	card := deck.Flashcard{
-		Character:   w.Target,
-		Pinyin:      w.Pinyin,
-		Meaning:     w.Meaning,
-		Explanation: w.Explanation,
-		Language:    w.Language,
-		Interval:    1,
-		Ease:        2.5,
-		Reps:        0,
-		NextReview:  time.Now().Format("2006-01-02"),
+		Character:     w.Target,
+		Pinyin:        w.Pinyin,
+		Pronunciation: w.Pronunciation,
+		Meaning:       w.Meaning,
+		Explanation:   w.Explanation,
+		Language:      w.Language,
+		Interval:      1,
+		Ease:          2.5,
+		Reps:          0,
+		NextReview:    time.Now().Format("2006-01-02"),
 	}
 	for _, c := range m.MarkedCards {
 		if SameCard(c, card) {

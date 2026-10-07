@@ -1,3 +1,4 @@
+// Package deck provides flashcard and deck data models and disk persistence.
 package deck
 
 import "fmt"

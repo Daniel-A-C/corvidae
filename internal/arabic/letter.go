@@ -1,3 +1,4 @@
+// Package arabic provides linguistic models, character data, and interactive drills for learning the Arabic alphabet.
 package arabic
 
 // PositionalForms contains the 4 cursive shapes for an Arabic letter.

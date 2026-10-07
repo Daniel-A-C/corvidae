@@ -108,8 +108,12 @@ func LoadDeck(filePath string) (Deck, error) {
 	return deck, err
 }
 
-// SaveDeck serializes and writes a Deck to disk.
+// SaveDeck serializes and writes a Deck to disk, creating parent directories if needed.
 func SaveDeck(filePath string, d Deck) error {
+	dir := filepath.Dir(filePath)
+	if err := os.MkdirAll(dir, 0755); err != nil {
+		return err
+	}
 	data, err := yaml.Marshal(d)
 	if err != nil {
 		return err
