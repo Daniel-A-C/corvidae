@@ -183,8 +183,8 @@ func (m Model) viewDirSelect() string {
 		} else {
 			deckWord = fmt.Sprintf("%d decks", selectedCount)
 		}
-		content += "\n" + CorrectStyle.Render(fmt.Sprintf("%s selected across folders  •  [Tab] Start Practice", deckWord)) + "\n"
-		content += "\n" + HintStyle.Render("(Press key to select, Tab to start, Esc to go back, q to quit)")
+		content += "\n" + CorrectStyle.Render(fmt.Sprintf("%s selected across folders  •  [Tab] Start Practice  •  [u] Deselect All", deckWord)) + "\n"
+		content += "\n" + HintStyle.Render("(Press key to select, Tab to start, [u] Deselect all, Esc to go back, q to quit)")
 	} else {
 		content += "\n" + HintStyle.Render("(Press key to select, [m] Marked Cards, Esc to go back, q to quit)")
 	}
@@ -235,7 +235,23 @@ func (m Model) viewDeckSelect() string {
 			content += "\n"
 		}
 	}
-	content += "\n" + HintStyle.Render("(Press key to toggle, Enter to confirm, Esc to go back, q to quit)")
+
+	if m.StatusMessage != "" {
+		content += "\n" + ExplanationStyle.Render(m.StatusMessage) + "\n"
+	}
+
+	if selectedCount > 0 {
+		var deckWord string
+		if selectedCount == 1 {
+			deckWord = "1 deck"
+		} else {
+			deckWord = fmt.Sprintf("%d decks", selectedCount)
+		}
+		content += "\n" + CorrectStyle.Render(fmt.Sprintf("%s selected across folders  •  [Enter] Start Practice  •  [u] Deselect All", deckWord)) + "\n"
+		content += "\n" + HintStyle.Render("(Press key to toggle, [u] Deselect all, Enter to confirm, Esc to go back, q to quit)")
+	} else {
+		content += "\n" + HintStyle.Render("(Press key to toggle, Enter to confirm, Esc to go back, q to quit)")
+	}
 	return content
 }
 

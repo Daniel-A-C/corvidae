@@ -63,7 +63,7 @@ cards:
 
 For languages requiring phonetic transliterations (such as Arabic), you can use the `pronunciation` field. For Latin-alphabet languages (such as Spanish, French, or Polish), `character`, `meaning`, and `explanation` are sufficient.
 
-> **Note:** The app will automatically inject tracking fields (`ease`, `interval`, `reps`, `next_review`) into the YAML file as you study to persist your progress.
+> **Note:** The app will automatically inject tracking fields (`ease`, `interval`, `reps`, `next_review`) into the YAML file as you study to persist your progress. Deck selections are also persisted in the YAML (`selected: true`) so your active decks remain selected across app restarts.
 
 ## Usage & Controls
 
@@ -71,12 +71,13 @@ When you launch Corvidae, you will be guided through a selection workflow:
 
 1. **Practice Mode**: Choose between SM-2 Spaced Repetition or Multiple Choice Quiz.
 2. **Directory / Language Selection**: Navigate folders and subdirectories (e.g. `Mandarin/Balatro`, `Mandarin/Disney`, `Spanish`).
-3. **Deck Selection**: Pick one or more decks. Decks selected across different folders and subfolders remain selected.
+3. **Deck Selection**: Pick one or more decks. Decks selected across different folders and subfolders remain selected and persist between app launches.
 
 - `j` / `k` or Arrow Keys: Navigate menus.
 - `Spacebar`: Toggle deck selections on/off.
+- `u` or `Ctrl+D`: Deselect all selected decks across all folders.
 - `Enter`: Confirm selection, enter folder, or start practice.
-- `Tab`: Start practice immediately from directory navigation when decks are selected.
+- `Tab`: Start practice immediately from directory navigation or deck selection when decks are selected.
 - `Esc` or `b`: Go up a level / back to the previous menu.
 - `q`: Quit the app at any time.
 

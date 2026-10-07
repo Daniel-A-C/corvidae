@@ -3,6 +3,7 @@ package deck
 import (
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 )
 
@@ -614,4 +615,73 @@ func TestGetAllDeckFiles(t *testing.T) {
 		t.Errorf("expected count 2 for Sub1, got %d", count)
 	}
 }
+
+func TestDeckSelectedYamlPersistence(t *testing.T) {
+	tempDir := t.TempDir()
+	deckPath := filepath.Join(tempDir, "test_deck.yaml")
+
+	d := Deck{
+		Selected: true,
+		Cards: []Flashcard{
+			{Character: "你好", Meaning: "Hello"},
+		},
+	}
+
+	if err := SaveDeck(deckPath, d); err != nil {
+		t.Fatalf("failed to save deck: %v", err)
+	}
+
+	content, err := os.ReadFile(deckPath)
+	if err != nil {
+		t.Fatalf("failed to read deck file: %v", err)
+	}
+	if !strings.Contains(string(content), "selected: true") {
+		t.Errorf("expected file to contain 'selected: true', got:\n%s", string(content))
+	}
+
+	loaded, err := LoadDeck(deckPath)
+	if err != nil {
+		t.Fatalf("failed to load deck: %v", err)
+	}
+	if !loaded.Selected || !loaded.IsSelected() {
+		t.Errorf("expected loaded deck to be selected")
+	}
+
+	// Update to false and save
+	loaded.Selected = false
+	if err := SaveDeck(deckPath, loaded); err != nil {
+		t.Fatalf("failed to save deck: %v", err)
+	}
+
+	content2, err := os.ReadFile(deckPath)
+	if err != nil {
+		t.Fatalf("failed to read deck file: %v", err)
+	}
+	if strings.Contains(string(content2), "selected:") {
+		t.Errorf("expected file to omit 'selected:' when false, got:\n%s", string(content2))
+	}
+
+	loaded2, err := LoadDeck(deckPath)
+	if err != nil {
+		t.Fatalf("failed to load deck: %v", err)
+	}
+	if loaded2.Selected || loaded2.IsSelected() {
+		t.Errorf("expected loaded deck to be unselected")
+	}
+
+	// Test QuizSelected fallback
+	quizDeckPath := filepath.Join(tempDir, "quiz_selected.yaml")
+	quizYaml := "quiz_selected: true\ncards:\n  - character: 测试\n    meaning: Test\n"
+	if err := os.WriteFile(quizDeckPath, []byte(quizYaml), 0644); err != nil {
+		t.Fatalf("failed to write quiz yaml: %v", err)
+	}
+	loadedQuiz, err := LoadDeck(quizDeckPath)
+	if err != nil {
+		t.Fatalf("failed to load quiz deck: %v", err)
+	}
+	if !loadedQuiz.IsSelected() {
+		t.Errorf("expected IsSelected() to be true for quiz_selected: true")
+	}
+}
+
 

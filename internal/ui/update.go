@@ -193,6 +193,11 @@ func (m Model) updateDirSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 		m.StatusMessage = ""
 	}
 
+	if (msg.String() == "u" || msg.String() == "U" || msg.String() == "ctrl+d" || msg.String() == "ctrl+u") && m.hasAnySelectedDeck() {
+		m.DeselectAll()
+		return m, nil
+	}
+
 	if msg.String() == "m" {
 		return m.startMarkedPractice()
 	}
@@ -270,6 +275,15 @@ func (m Model) selectDirectory(idx int) (tea.Model, tea.Cmd) {
 }
 
 func (m Model) updateDeckSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	if m.StatusMessage != "" {
+		m.StatusMessage = ""
+	}
+
+	if (msg.String() == "u" || msg.String() == "U" || msg.String() == "ctrl+d" || msg.String() == "ctrl+u") && m.hasAnySelectedDeck() {
+		m.DeselectAll()
+		return m, nil
+	}
+
 	idx := KeyToIndex(msg.String())
 	if idx >= 0 && idx < len(m.DeckFiles) {
 		m.Cursor = idx
@@ -294,6 +308,10 @@ func (m Model) updateDeckSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	case "j":
 		if m.Cursor < len(m.DeckFiles)-1 {
 			m.Cursor++
+		}
+	case "tab":
+		if m.hasAnySelectedDeck() {
+			return m.startPractice()
 		}
 	case "esc", "b":
 		return m.goUpLevel()
