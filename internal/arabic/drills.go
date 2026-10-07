@@ -69,7 +69,11 @@ func GeneratePositionalFormQuestions(count int) []DrillQuestion {
 				if len(opts) >= 4 {
 					break
 				}
-				cf := GetLetterByID(cid).Forms.FormAt(targetPos)
+				cl := GetLetterByID(cid)
+				if cl == nil {
+					continue
+				}
+				cf := cl.Forms.FormAt(targetPos)
 				if !seen[cf] {
 					opts = append(opts, cf)
 					seen[cf] = true
@@ -147,6 +151,9 @@ func GeneratePositionalFormQuestions(count int) []DrillQuestion {
 			// Distractors preferentially from confusables
 			for _, cid := range letter.Confusable {
 				cl := GetLetterByID(cid)
+				if cl == nil {
+					continue
+				}
 				cName := fmt.Sprintf("%s (%s)", cl.EnglishName, cl.ArabicName)
 				if !seen[cName] {
 					opts = append(opts, cName)
@@ -206,6 +213,9 @@ func GenerateLetterSoundQuestions(count int) []DrillQuestion {
 
 			for _, cid := range letter.Confusable {
 				cl := GetLetterByID(cid)
+				if cl == nil {
+					continue
+				}
 				cOpt := fmt.Sprintf("%s /%s/ (%s)", cl.EnglishName, cl.Translit, cl.ArabicName)
 				if !seen[cOpt] {
 					opts = append(opts, cOpt)
@@ -249,7 +259,11 @@ func GenerateLetterSoundQuestions(count int) []DrillQuestion {
 			seen[correctOpt] = true
 
 			for _, cid := range letter.Confusable {
-				cf := GetLetterByID(cid).Forms.Isolated
+				cl := GetLetterByID(cid)
+				if cl == nil {
+					continue
+				}
+				cf := cl.Forms.Isolated
 				if !seen[cf] {
 					opts = append(opts, cf)
 					seen[cf] = true
@@ -465,7 +479,7 @@ func GenerateConfusableQuestions(count int) []DrillQuestion {
 
 // GenerateStageQuestions creates a drill targeting only the letters within a specific learning stage.
 func GenerateStageQuestions(stage Stage, count int) []DrillQuestion {
-	if len(stage.LetterIDs) == 0 {
+	if stage.Number == 8 {
 		// Stage 8: Auxiliary items
 		var questions []DrillQuestion
 		for i := 0; i < count; i++ {
@@ -513,6 +527,9 @@ func GenerateStageQuestions(stage Stage, count int) []DrillQuestion {
 		if l != nil {
 			stageLetters = append(stageLetters, *l)
 		}
+	}
+	if len(stageLetters) == 0 {
+		return nil
 	}
 
 	var questions []DrillQuestion

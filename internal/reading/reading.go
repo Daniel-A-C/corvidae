@@ -1,3 +1,4 @@
+// Package reading provides Diglot Weave immersion reading, progressive vocabulary substitution, grammar discussions, and mastery tracking.
 package reading
 
 import (
@@ -11,6 +12,8 @@ import (
 
 	"gopkg.in/yaml.v3"
 )
+
+var reSentenceSplit = regexp.MustCompile(`[^.!?—\n]+[.!?—\n]+`)
 
 // WordTranslation represents the translation and grammatical info for a word or phrase.
 type WordTranslation struct {
@@ -259,14 +262,13 @@ func SplitIntoSentences(text string) []string {
 	paras := strings.Split(text, "\n\n")
 
 	var result []string
-	reSentence := regexp.MustCompile(`[^.!?—\n]+[.!?—\n]+`)
 
 	for _, p := range paras {
 		p = strings.TrimSpace(p)
 		if p == "" {
 			continue
 		}
-		matches := reSentence.FindAllString(p, -1)
+		matches := reSentenceSplit.FindAllString(p, -1)
 		if len(matches) == 0 {
 			result = append(result, p)
 		} else {

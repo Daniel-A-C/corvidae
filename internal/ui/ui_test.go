@@ -2292,6 +2292,33 @@ func TestTabKeyInDeckSelect(t *testing.T) {
 	}
 }
 
+func TestMarkWordAsFlashcardWithPronunciation(t *testing.T) {
+	tempDir := t.TempDir()
+	m := New(tempDir)
+
+	w := reading.WordTranslation{
+		Target:        "مَرْحَبًا",
+		Pronunciation: "marḥaban",
+		Meaning:       "Hello",
+		Language:      "Arabic",
+	}
+
+	added := m.MarkWordAsFlashcard(w)
+	if !added {
+		t.Fatalf("expected card to be added")
+	}
+	if len(m.MarkedCards) != 1 {
+		t.Fatalf("expected 1 marked card, got %d", len(m.MarkedCards))
+	}
+	card := m.MarkedCards[0]
+	if card.Pronunciation != "marḥaban" {
+		t.Fatalf("expected pronunciation 'marḥaban', got %q", card.Pronunciation)
+	}
+	if card.Character != "مَرْحَبًا" || card.Meaning != "Hello" {
+		t.Fatalf("unexpected card values: %+v", card)
+	}
+}
+
 
 
 

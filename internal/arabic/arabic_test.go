@@ -183,3 +183,35 @@ func TestDrillGenerators(t *testing.T) {
 		}
 	})
 }
+
+func TestLettersConfusablesValid(t *testing.T) {
+	for _, l := range Letters {
+		for _, cid := range l.Confusable {
+			cl := GetLetterByID(cid)
+			if cl == nil {
+				t.Errorf("letter %d (%s) references invalid confusable ID %d", l.ID, l.EnglishName, cid)
+			}
+		}
+	}
+}
+
+func TestNilSafety(t *testing.T) {
+	if l := GetLetterByID(0); l != nil {
+		t.Errorf("expected GetLetterByID(0) to be nil, got %+v", l)
+	}
+	if l := GetLetterByID(99); l != nil {
+		t.Errorf("expected GetLetterByID(99) to be nil, got %+v", l)
+	}
+
+	emptyStage := Stage{Number: 99, Name: "Empty", LetterIDs: []int{}}
+	qs := GenerateStageQuestions(emptyStage, 5)
+	if qs != nil {
+		t.Errorf("expected nil questions for empty stage, got %v", qs)
+	}
+
+	invalidStage := Stage{Number: 100, Name: "Invalid", LetterIDs: []int{999}}
+	qsInvalid := GenerateStageQuestions(invalidStage, 5)
+	if qsInvalid != nil {
+		t.Errorf("expected nil questions for invalid stage, got %v", qsInvalid)
+	}
+}
