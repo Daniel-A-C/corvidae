@@ -2001,5 +2001,297 @@ func TestReadingDiscussionBoxAndAdvance(t *testing.T) {
 	}
 }
 
+func TestPersistedSelectedDecksAcrossRestarts(t *testing.T) {
+	tempDir := t.TempDir()
+	mandarinBalatroDir := filepath.Join(tempDir, "Mandarin", "Balatro")
+	mandarinBasicsDir := filepath.Join(tempDir, "Mandarin", "Basics")
+	spanishDir := filepath.Join(tempDir, "Spanish")
+
+	for _, d := range []string{mandarinBalatroDir, mandarinBasicsDir, spanishDir} {
+		if err := os.MkdirAll(d, 0755); err != nil {
+			t.Fatal(err)
+		}
+	}
+
+	deckBalatro := deck.Deck{Cards: []deck.Flashcard{{Character: "小丑", Meaning: "Joker"}}}
+	deckBasics := deck.Deck{Cards: []deck.Flashcard{{Character: "你好", Meaning: "Hello"}}}
+	deckSpanish := deck.Deck{Cards: []deck.Flashcard{{Character: "Hola", Meaning: "Hello"}}}
+
+	balatroPath := filepath.Join(mandarinBalatroDir, "balatro1.yaml")
+	basicsPath := filepath.Join(mandarinBasicsDir, "basics.yaml")
+	spanishPath := filepath.Join(spanishDir, "travel.yaml")
+
+	if err := deck.SaveDeck(balatroPath, deckBalatro); err != nil {
+		t.Fatal(err)
+	}
+	if err := deck.SaveDeck(basicsPath, deckBasics); err != nil {
+		t.Fatal(err)
+	}
+	if err := deck.SaveDeck(spanishPath, deckSpanish); err != nil {
+		t.Fatal(err)
+	}
+
+	// 1. Launch app, choose Quiz Mode ('s')
+	m := New(tempDir)
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'s'}})
+	m = updatedM.(Model)
+	if m.State != StateDirSelect || m.Mode != ModeQuiz {
+		t.Fatalf("expected StateDirSelect in ModeQuiz, got state %d, mode %d", m.State, m.Mode)
+	}
+
+	// Enter Mandarin (index 0)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	// Enter Balatro (index 0)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	if m.State != StateDeckSelect {
+		t.Fatalf("expected StateDeckSelect in Balatro, got %d", m.State)
+	}
+
+	// Toggle balatro1.yaml using Space
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+	if !m.isDeckSelected("balatro1.yaml") {
+		t.Fatalf("expected balatro1.yaml to be selected")
+	}
+
+	// Verify balatro1.yaml on disk has selected: true
+	loadedBalatro, err := deck.LoadDeck(balatroPath)
+	if err != nil {
+		t.Fatalf("failed to load balatro deck: %v", err)
+	}
+	if !loadedBalatro.IsSelected() {
+		t.Fatalf("expected balatro1.yaml on disk to have selected: true")
+	}
+
+	// Go back up to Mandarin, then up to root
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+
+	// Move to Spanish (index 1) and enter
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'j'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	if m.State != StateDeckSelect || m.SelectedDir != "Spanish" {
+		t.Fatalf("expected StateDeckSelect in Spanish, got state %d, dir %q", m.State, m.SelectedDir)
+	}
+
+	// Toggle Spanish travel.yaml using Space
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+	if m.countSelectedDecks() != 2 {
+		t.Fatalf("expected 2 decks selected, got %d", m.countSelectedDecks())
+	}
+
+	// Verify Spanish travel.yaml on disk has selected: true
+	loadedSpanish, err := deck.LoadDeck(spanishPath)
+	if err != nil {
+		t.Fatalf("failed to load spanish deck: %v", err)
+	}
+	if !loadedSpanish.IsSelected() {
+		t.Fatalf("expected travel.yaml on disk to have selected: true")
+	}
+
+	// Verify basics.yaml on disk is NOT selected
+	loadedBasics, err := deck.LoadDeck(basicsPath)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if loadedBasics.IsSelected() {
+		t.Fatalf("basics.yaml should not be selected on disk")
+	}
+
+	// 2. Simulate closing and reopening the app
+	m2 := New(tempDir)
+	if m2.countSelectedDecks() != 2 {
+		t.Fatalf("expected 2 persisted decks on reopen, got %d", m2.countSelectedDecks())
+	}
+	if !m2.hasAnySelectedDeck() {
+		t.Fatalf("expected hasAnySelectedDeck to be true on reopen")
+	}
+
+	// Choose Quiz mode in m2
+	updatedM2, _ := m2.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'s'}})
+	m2 = updatedM2.(Model)
+	if m2.State != StateDirSelect {
+		t.Fatalf("expected StateDirSelect, got %d", m2.State)
+	}
+
+	// In DirSelect, verify view shows count and [u] Deselect All
+	viewDir := m2.View()
+	if !strings.Contains(viewDir, "2 decks selected across folders") {
+		t.Errorf("expected view to contain '2 decks selected across folders', got:\n%s", viewDir)
+	}
+	if !strings.Contains(viewDir, "[u] Deselect All") && !strings.Contains(viewDir, "[u] Deselect all") {
+		t.Errorf("expected view to contain '[u] Deselect All', got:\n%s", viewDir)
+	}
+
+	// Start practice immediately via Tab
+	updatedM2, _ = m2.Update(tea.KeyMsg{Type: tea.KeyTab})
+	m2 = updatedM2.(Model)
+	if m2.State != StateQuiz {
+		t.Fatalf("expected StateQuiz, got %d", m2.State)
+	}
+	if len(m2.Decks) != 2 {
+		t.Fatalf("expected 2 decks loaded in session, got %d", len(m2.Decks))
+	}
+	if len(m2.ActiveCards) != 2 {
+		t.Fatalf("expected 2 active cards in session, got %d", len(m2.ActiveCards))
+	}
+}
+
+func TestDeselectAllInDeckSelect(t *testing.T) {
+	tempDir := t.TempDir()
+	mandarinDir := filepath.Join(tempDir, "Mandarin")
+	if err := os.MkdirAll(mandarinDir, 0755); err != nil {
+		t.Fatal(err)
+	}
+
+	d1Path := filepath.Join(mandarinDir, "deck1.yaml")
+	d2Path := filepath.Join(mandarinDir, "deck2.yaml")
+	_ = deck.SaveDeck(d1Path, deck.Deck{Cards: []deck.Flashcard{{Character: "A", Meaning: "a"}}})
+	_ = deck.SaveDeck(d2Path, deck.Deck{Cards: []deck.Flashcard{{Character: "B", Meaning: "b"}}})
+
+	m := New(tempDir)
+	// Go to Quiz mode -> enter Mandarin
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'s'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	if m.State != StateDeckSelect {
+		t.Fatalf("expected StateDeckSelect, got %d", m.State)
+	}
+
+	// Select both deck1 and deck2 using Space
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'j'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+
+	if m.countSelectedDecks() != 2 {
+		t.Fatalf("expected 2 decks selected, got %d", m.countSelectedDecks())
+	}
+
+	// Verify view shows [u] Deselect All
+	view := m.View()
+	if !strings.Contains(view, "[u] Deselect All") && !strings.Contains(view, "[u] Deselect all") {
+		t.Errorf("expected view to contain '[u] Deselect All', got:\n%s", view)
+	}
+
+	// Press 'u' to deselect all
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'u'}})
+	m = updatedM.(Model)
+
+	if m.countSelectedDecks() != 0 {
+		t.Fatalf("expected 0 decks selected after pressing 'u', got %d", m.countSelectedDecks())
+	}
+	if m.hasAnySelectedDeck() {
+		t.Fatalf("expected hasAnySelectedDeck to be false")
+	}
+	if m.StatusMessage != "All decks deselected" {
+		t.Errorf("expected status message 'All decks deselected', got %q", m.StatusMessage)
+	}
+
+	// View should render status message
+	viewAfter := m.View()
+	if !strings.Contains(viewAfter, "All decks deselected") {
+		t.Errorf("expected view to show 'All decks deselected', got:\n%s", viewAfter)
+	}
+
+	// Verify files on disk have selected: false / omitted
+	loaded1, _ := deck.LoadDeck(d1Path)
+	loaded2, _ := deck.LoadDeck(d2Path)
+	if loaded1.IsSelected() || loaded2.IsSelected() {
+		t.Fatalf("expected disk files to have selected removed")
+	}
+
+	// On reopen, 0 decks selected
+	mReopen := New(tempDir)
+	if mReopen.countSelectedDecks() != 0 {
+		t.Fatalf("expected 0 selected decks on reopen, got %d", mReopen.countSelectedDecks())
+	}
+
+	// Status message clears on next key
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'j'}})
+	m = updatedM.(Model)
+	if m.StatusMessage != "" {
+		t.Errorf("expected status message to be cleared, got %q", m.StatusMessage)
+	}
+}
+
+func TestDeselectAllInDirSelect(t *testing.T) {
+	tempDir := t.TempDir()
+	mandarinDir := filepath.Join(tempDir, "Mandarin")
+	frenchDir := filepath.Join(tempDir, "French")
+	_ = os.MkdirAll(mandarinDir, 0755)
+	_ = os.MkdirAll(frenchDir, 0755)
+
+	d1Path := filepath.Join(mandarinDir, "deck1.yaml")
+	_ = deck.SaveDeck(d1Path, deck.Deck{Selected: true, Cards: []deck.Flashcard{{Character: "A", Meaning: "a"}}})
+
+	m := New(tempDir)
+	if m.countSelectedDecks() != 1 {
+		t.Fatalf("expected 1 persisted deck, got %d", m.countSelectedDecks())
+	}
+
+	// Enter Quiz Mode -> DirSelect
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'s'}})
+	m = updatedM.(Model)
+	if m.State != StateDirSelect {
+		t.Fatalf("expected StateDirSelect, got %d", m.State)
+	}
+
+	// Press ctrl+d to deselect all from directory select screen
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyCtrlD})
+	m = updatedM.(Model)
+
+	if m.countSelectedDecks() != 0 {
+		t.Fatalf("expected 0 decks selected, got %d", m.countSelectedDecks())
+	}
+	if m.StatusMessage != "All decks deselected" {
+		t.Errorf("expected status message 'All decks deselected', got %q", m.StatusMessage)
+	}
+
+	loaded1, _ := deck.LoadDeck(d1Path)
+	if loaded1.IsSelected() {
+		t.Fatalf("expected deck1.yaml on disk to have selected cleared")
+	}
+}
+
+func TestTabKeyInDeckSelect(t *testing.T) {
+	tempDir := t.TempDir()
+	mandarinDir := filepath.Join(tempDir, "Mandarin")
+	_ = os.MkdirAll(mandarinDir, 0755)
+	d1Path := filepath.Join(mandarinDir, "deck1.yaml")
+	_ = deck.SaveDeck(d1Path, deck.Deck{Cards: []deck.Flashcard{{Character: "A", Meaning: "a"}}})
+
+	m := New(tempDir)
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'s'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	// Toggle deck1 with Space
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+
+	// Press Tab in DeckSelect to start practice
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyTab})
+	m = updatedM.(Model)
+
+	if m.State != StateQuiz {
+		t.Fatalf("expected StateQuiz after Tab, got %d", m.State)
+	}
+}
+
+
 
 

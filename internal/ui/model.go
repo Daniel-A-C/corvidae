@@ -155,6 +155,7 @@ func NewWithOptions(baseDir, textsDir string, readingDir ...string) Model {
 		Err:             err,
 	}
 	m.LoadMarkedDeck()
+	m.LoadPersistedSelectedDecks()
 	return m
 }
 
@@ -250,18 +251,119 @@ func (m Model) countSelectedDecks() int {
 	return count
 }
 
-// toggleDeck toggles the selection status of a deck file within the current directory.
+// toggleDeck toggles the selection status of a deck file within the current directory and persists it.
 func (m *Model) toggleDeck(file string) {
 	relPath := file
 	if m.SelectedDir != "" && !strings.HasPrefix(file, m.SelectedDir) {
 		relPath = filepath.Join(m.SelectedDir, file)
 	}
-	if m.isDeckSelected(file) {
+	wasSelected := m.isDeckSelected(file)
+	newSelected := !wasSelected
+	if wasSelected {
 		delete(m.SelectedFiles, relPath)
 		delete(m.SelectedFiles, file)
 	} else {
 		m.SelectedFiles[relPath] = true
 	}
+	m.saveDeckSelection(relPath, file, newSelected)
+}
+
+// LoadPersistedSelectedDecks scans deck files in BaseDir and marks any with selected: true in SelectedFiles.
+func (m *Model) LoadPersistedSelectedDecks() {
+	if m.SelectedFiles == nil {
+		m.SelectedFiles = make(map[string]bool)
+	}
+	if m.BaseDir == "" {
+		return
+	}
+	allFiles, err := deck.GetAllDeckFiles(m.BaseDir, "")
+	if err != nil {
+		return
+	}
+	for _, rel := range allFiles {
+		if filepath.Base(rel) == "marked.yaml" {
+			continue
+		}
+		fullPath := filepath.Join(m.BaseDir, rel)
+		d, err := deck.LoadDeck(fullPath)
+		if err != nil {
+			continue
+		}
+		if d.IsSelected() {
+			m.SelectedFiles[rel] = true
+		}
+	}
+}
+
+func (m Model) resolveDeckPath(relPath, file string) string {
+	candidates := []string{
+		relPath,
+		filepath.Join(m.BaseDir, relPath),
+		file,
+		filepath.Join(m.BaseDir, file),
+	}
+	if m.SelectedDir != "" {
+		candidates = append(candidates, filepath.Join(m.BaseDir, m.SelectedDir, file))
+		candidates = append(candidates, filepath.Join(m.BaseDir, m.SelectedDir, relPath))
+	}
+	for _, c := range candidates {
+		if c == "" {
+			continue
+		}
+		if _, err := os.Stat(c); err == nil {
+			return c
+		}
+	}
+	return ""
+}
+
+func (m *Model) saveDeckSelection(relPath, file string, selected bool) {
+	fullPath := m.resolveDeckPath(relPath, file)
+	if fullPath == "" {
+		return
+	}
+	d, err := deck.LoadDeck(fullPath)
+	if err != nil {
+		return
+	}
+	d.Selected = selected
+	d.QuizSelected = false
+	_ = deck.SaveDeck(fullPath, d)
+
+	if m.Decks != nil {
+		if cur, ok := m.Decks[fullPath]; ok {
+			cur.Selected = selected
+			cur.QuizSelected = false
+			m.Decks[fullPath] = cur
+		}
+	}
+}
+
+// DeselectAll unselects all currently selected decks across all folders and updates the persisted YAML files.
+func (m *Model) DeselectAll() {
+	for key, isSelected := range m.SelectedFiles {
+		if !isSelected {
+			continue
+		}
+		fullPath := m.resolveDeckPath(key, key)
+		if fullPath != "" {
+			d, err := deck.LoadDeck(fullPath)
+			if err == nil && d.IsSelected() {
+				d.Selected = false
+				d.QuizSelected = false
+				_ = deck.SaveDeck(fullPath, d)
+			}
+			if m.Decks != nil {
+				if cur, ok := m.Decks[fullPath]; ok {
+					cur.Selected = false
+					cur.QuizSelected = false
+					m.Decks[fullPath] = cur
+				}
+			}
+		}
+	}
+	m.SelectedFiles = make(map[string]bool)
+	m.StatusMessage = "All decks deselected"
 }
 
 // SetupReview prepares cards scheduled for today or unreviewed cards.

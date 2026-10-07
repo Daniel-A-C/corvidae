@@ -19,7 +19,14 @@ type Flashcard struct {
 
 // Deck represents a collection of flashcards stored in a YAML deck file.
 type Deck struct {
-	Cards []Flashcard `yaml:"cards"`
+	Selected     bool        `yaml:"selected,omitempty"`
+	QuizSelected bool        `yaml:"quiz_selected,omitempty"`
+	Cards        []Flashcard `yaml:"cards"`
+}
+
+// IsSelected reports whether the deck has been marked as selected in YAML.
+func (d Deck) IsSelected() bool {
+	return d.Selected || d.QuizSelected
 }
 
 // CardRef maps an active card back to its originating deck file and card index.
