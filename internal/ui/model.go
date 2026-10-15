@@ -2,6 +2,7 @@
 package ui
 
 import (
+	"fmt"
 	"math/rand"
 	"os"
 	"path/filepath"
@@ -251,6 +252,118 @@ func (m Model) countSelectedDecks() int {
 		}
 	}
 	return count
+}
+
+// countSelectedDecksInDir returns the number of selected decks and total decks in the given directory path.
+// The dirRelPath is relative to m.BaseDir (e.g. "Mandarin" or "Mandarin/Disney").
+func (m Model) countSelectedDecksInDir(dirRelPath string) (selectedCount, totalCount int) {
+	files, err := deck.GetAllDeckFiles(m.BaseDir, dirRelPath)
+	if err != nil {
+		return 0, 0
+	}
+	var validFiles []string
+	for _, f := range files {
+		if filepath.Base(f) != "marked.yaml" {
+			validFiles = append(validFiles, f)
+		}
+	}
+	totalCount = len(validFiles)
+	for _, f := range validFiles {
+		deckRelPath := f
+		if dirRelPath != "" {
+			deckRelPath = filepath.Join(dirRelPath, f)
+		}
+		if m.isDeckPathSelected(deckRelPath, f) {
+			selectedCount++
+		}
+	}
+	return selectedCount, totalCount
+}
+
+// isDeckPathSelected reports whether a deck path is selected in SelectedFiles.
+func (m Model) isDeckPathSelected(deckRelPath, f string) bool {
+	if m.SelectedFiles[deckRelPath] || m.SelectedFiles[f] {
+		return true
+	}
+	if filepath.IsAbs(deckRelPath) {
+		rel, err := filepath.Rel(m.BaseDir, deckRelPath)
+		if err == nil && m.SelectedFiles[rel] {
+			return true
+		}
+	} else {
+		full := filepath.Join(m.BaseDir, deckRelPath)
+		if m.SelectedFiles[full] {
+			return true
+		}
+	}
+	return false
+}
+
+// toggleDirectorySelection toggles the selection status of all decks within the directory at index idx in m.Dirs.
+func (m Model) toggleDirectorySelection(idx int) (tea.Model, tea.Cmd) {
+	if idx < 0 || idx >= len(m.Dirs) {
+		return m, nil
+	}
+	m.DirCursor = idx
+	dirName := m.Dirs[idx]
+	var targetDir string
+	if m.SelectedDir == "" {
+		targetDir = dirName
+	} else {
+		targetDir = filepath.Join(m.SelectedDir, dirName)
+	}
+	return m.toggleDirectorySelectionByPath(targetDir)
+}
+
+// toggleDirectorySelectionByPath toggles the selection status of all decks in targetDir.
+// If all decks are currently selected, it unselects them all. Otherwise, it selects all of them.
+func (m Model) toggleDirectorySelectionByPath(targetDir string) (tea.Model, tea.Cmd) {
+	selectedCount, totalCount := m.countSelectedDecksInDir(targetDir)
+	if totalCount == 0 {
+		dirName := filepath.Base(targetDir)
+		if targetDir == "" {
+			dirName = "current"
+		}
+		m.StatusMessage = fmt.Sprintf("No decks found in %s", dirName)
+		return m, nil
+	}
+
+	selectAll := selectedCount < totalCount
+
+	deckFiles, err := deck.GetAllDeckFiles(m.BaseDir, targetDir)
+	if err != nil {
+		m.Err = err
+		return m, nil
+	}
+
+	for _, rel := range deckFiles {
+		if filepath.Base(rel) == "marked.yaml" {
+			continue
+		}
+		deckRelPath := rel
+		if targetDir != "" {
+			deckRelPath = filepath.Join(targetDir, rel)
+		}
+		if selectAll {
+			m.SelectedFiles[deckRelPath] = true
+		} else {
+			delete(m.SelectedFiles, deckRelPath)
+			delete(m.SelectedFiles, rel)
+		}
+		m.saveDeckSelection(deckRelPath, rel, selectAll)
+	}
+
+	dirName := filepath.Base(targetDir)
+	if targetDir == "" {
+		dirName = "all"
+	}
+	if selectAll {
+		m.StatusMessage = fmt.Sprintf("Selected entire folder %s (%d decks)", dirName, totalCount)
+	} else {
+		m.StatusMessage = fmt.Sprintf("Deselected folder %s", dirName)
+	}
+
+	return m, nil
 }
 
 // toggleDeck toggles the selection status of a deck file within the current directory and persists it.

@@ -68,6 +68,14 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m.updateReadingComplete(msg)
 		}
 
+	case tea.MouseMsg:
+		switch m.State {
+		case StateDirSelect:
+			return m.updateDirSelectMouse(msg)
+		case StateDeckSelect:
+			return m.updateDeckSelectMouse(msg)
+		}
+
 	case tea.WindowSizeMsg:
 		m.Width = msg.Width
 		m.Height = msg.Height
@@ -193,6 +201,17 @@ func (m Model) updateDirSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 		m.StatusMessage = ""
 	}
 
+	// Shift + button/key toggles selection of the entire folder
+	shiftIdx := ShiftKeyToIndex(msg.String())
+	if shiftIdx >= 0 && shiftIdx < len(m.Dirs) {
+		return m.toggleDirectorySelection(shiftIdx)
+	}
+	if msg.String() == "shift+enter" || msg.String() == "shift+space" {
+		if m.DirCursor >= 0 && m.DirCursor < len(m.Dirs) {
+			return m.toggleDirectorySelection(m.DirCursor)
+		}
+	}
+
 	if (msg.String() == "u" || msg.String() == "U" || msg.String() == "ctrl+d" || msg.String() == "ctrl+u") && m.hasAnySelectedDeck() {
 		m.DeselectAll()
 		return m, nil
@@ -279,6 +298,10 @@ func (m Model) updateDeckSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 		m.StatusMessage = ""
 	}
 
+	if msg.String() == "shift+enter" || msg.String() == "shift+space" {
+		return m.toggleDirectorySelectionByPath(m.SelectedDir)
+	}
+
 	if (msg.String() == "u" || msg.String() == "U" || msg.String() == "ctrl+d" || msg.String() == "ctrl+u") && m.hasAnySelectedDeck() {
 		m.DeselectAll()
 		return m, nil
@@ -329,6 +352,91 @@ func (m Model) updateDeckSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 		}
 	}
 	return m, nil
+}
+
+func (m Model) updateDirSelectMouse(msg tea.MouseMsg) (tea.Model, tea.Cmd) {
+	if msg.Button != tea.MouseButtonLeft && msg.Type != tea.MouseLeft {
+		return m, nil
+	}
+	if msg.Action != tea.MouseActionPress && msg.Action != 0 {
+		return m, nil
+	}
+
+	idx := m.mouseYToDirIndex(msg.Y)
+	if idx >= 0 && idx < len(m.Dirs) {
+		if msg.Shift {
+			return m.toggleDirectorySelection(idx)
+		}
+		return m.selectDirectory(idx)
+	}
+	return m, nil
+}
+
+func (m Model) updateDeckSelectMouse(msg tea.MouseMsg) (tea.Model, tea.Cmd) {
+	if msg.Button != tea.MouseButtonLeft && msg.Type != tea.MouseLeft {
+		return m, nil
+	}
+	if msg.Action != tea.MouseActionPress && msg.Action != 0 {
+		return m, nil
+	}
+
+	idx := m.mouseYToDeckIndex(msg.Y)
+	if idx >= 0 && idx < len(m.DeckFiles) {
+		m.Cursor = idx
+		if msg.Shift {
+			return m.toggleDirectorySelectionByPath(m.SelectedDir)
+		}
+		file := m.DeckFiles[idx]
+		m.toggleDeck(file)
+		return m, nil
+	}
+	return m, nil
+}
+
+func (m Model) mouseYToDirIndex(y int) int {
+	content := m.viewDirSelect()
+	contentLines := strings.Count(content, "\n") + 1
+	topOffset := 0
+	if m.Height > contentLines {
+		topOffset = (m.Height - contentLines) / 2
+	}
+	relLine := y - topOffset - 2
+	if relLine < 0 {
+		return -1
+	}
+	group := relLine / 6
+	offset := relLine % 6
+	if offset >= 5 {
+		return -1
+	}
+	idx := group*5 + offset
+	if idx >= 0 && idx < len(m.Dirs) {
+		return idx
+	}
+	return -1
+}
+
+func (m Model) mouseYToDeckIndex(y int) int {
+	content := m.viewDeckSelect()
+	contentLines := strings.Count(content, "\n") + 1
+	topOffset := 0
+	if m.Height > contentLines {
+		topOffset = (m.Height - contentLines) / 2
+	}
+	relLine := y - topOffset - 2
+	if relLine < 0 {
+		return -1
+	}
+	group := relLine / 6
+	offset := relLine % 6
+	if offset >= 5 {
+		return -1
+	}
+	idx := group*5 + offset
+	if idx >= 0 && idx < len(m.DeckFiles) {
+		return idx
+	}
+	return -1
 }
 
 func (m Model) goUpLevel() (tea.Model, tea.Cmd) {

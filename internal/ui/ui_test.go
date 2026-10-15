@@ -2319,6 +2319,280 @@ func TestMarkWordAsFlashcardWithPronunciation(t *testing.T) {
 	}
 }
 
+func setupQuizMultiDeckTestDir(t *testing.T) string {
+	t.Helper()
+	tempDir := t.TempDir()
 
+	subBalatro := filepath.Join(tempDir, "Mandarin", "Balatro")
+	subDisney := filepath.Join(tempDir, "Mandarin", "Disney")
+	subSpanish := filepath.Join(tempDir, "Spanish")
 
+	if err := os.MkdirAll(subBalatro, 0755); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.MkdirAll(subDisney, 0755); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.MkdirAll(subSpanish, 0755); err != nil {
+		t.Fatal(err)
+	}
 
+	deckA := deck.Deck{Cards: []deck.Flashcard{{Character: "同花", Meaning: "Flush"}}}
+	deckB1 := deck.Deck{Cards: []deck.Flashcard{{Character: "灰姑娘", Meaning: "Cinderella"}}}
+	deckB2 := deck.Deck{Cards: []deck.Flashcard{{Character: "木兰", Meaning: "Mulan"}}}
+	deckC := deck.Deck{Cards: []deck.Flashcard{{Character: "Hola", Meaning: "Hello"}}}
+
+	if err := deck.SaveDeck(filepath.Join(subBalatro, "balatro1.yaml"), deckA); err != nil {
+		t.Fatal(err)
+	}
+	if err := deck.SaveDeck(filepath.Join(subDisney, "cinderella.yaml"), deckB1); err != nil {
+		t.Fatal(err)
+	}
+	if err := deck.SaveDeck(filepath.Join(subDisney, "mulan.yaml"), deckB2); err != nil {
+		t.Fatal(err)
+	}
+	if err := deck.SaveDeck(filepath.Join(subSpanish, "basics.yaml"), deckC); err != nil {
+		t.Fatal(err)
+	}
+
+	return tempDir
+}
+
+func TestQuizShiftFolderSelection(t *testing.T) {
+	decksDir := setupQuizMultiDeckTestDir(t)
+	m := New(decksDir)
+
+	// Select Quiz mode ('s')
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'s'}})
+	m = updatedM.(Model)
+	if m.State != StateDirSelect || m.Mode != ModeQuiz {
+		t.Fatalf("expected StateDirSelect in ModeQuiz, got state %d, mode %d", m.State, m.Mode)
+	}
+
+	// Root dirs: Mandarin (index 0, key 'a'), Spanish (index 1, key 's')
+	if len(m.Dirs) != 2 || m.Dirs[0] != "Mandarin" || m.Dirs[1] != "Spanish" {
+		t.Fatalf("expected [Mandarin, Spanish], got %v", m.Dirs)
+	}
+
+	// Press Shift+A to select the entire Mandarin folder
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'A'}})
+	m = updatedM.(Model)
+
+	// Mandarin has 3 decks (1 in Balatro, 2 in Disney)
+	if m.countSelectedDecks() != 3 {
+		t.Fatalf("expected 3 decks selected after Shift+A on Mandarin, got %d", m.countSelectedDecks())
+	}
+
+	view := m.View()
+	if !strings.Contains(view, "[✓ all]") {
+		t.Fatalf("expected view to contain '[✓ all]' indicator for Mandarin, got:\n%s", view)
+	}
+
+	// Press Shift+A again to toggle off / deselect the entire Mandarin folder
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'A'}})
+	m = updatedM.(Model)
+
+	if m.countSelectedDecks() != 0 {
+		t.Fatalf("expected 0 decks selected after toggling Shift+A, got %d", m.countSelectedDecks())
+	}
+
+	view = m.View()
+	if strings.Contains(view, "[✓ all]") {
+		t.Fatalf("expected view NOT to contain '[✓ all]' after deselecting, got:\n%s", view)
+	}
+}
+
+func TestQuizSubfolderShiftSelectAndSubsetIndicator(t *testing.T) {
+	decksDir := setupQuizMultiDeckTestDir(t)
+	m := New(decksDir)
+
+	// Select Quiz mode ('s')
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'s'}})
+	m = updatedM.(Model)
+
+	// Open Mandarin by pressing 'a' (regular key)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'a'}})
+	m = updatedM.(Model)
+	if m.State != StateDirSelect || m.SelectedDir != "Mandarin" {
+		t.Fatalf("expected StateDirSelect at Mandarin, got state %d, dir %q", m.State, m.SelectedDir)
+	}
+
+	// Subfolders: Balatro (index 0, key 'a'), Disney (index 1, key 's')
+	if len(m.Dirs) != 2 || m.Dirs[0] != "Balatro" || m.Dirs[1] != "Disney" {
+		t.Fatalf("expected [Balatro, Disney], got %v", m.Dirs)
+	}
+
+	// Press Shift+S to select the entire Disney folder (2 decks)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'S'}})
+	m = updatedM.(Model)
+
+	if m.countSelectedDecks() != 2 {
+		t.Fatalf("expected 2 decks selected after Shift+S on Disney, got %d", m.countSelectedDecks())
+	}
+
+	view := m.View()
+	if !strings.Contains(view, "[✓ all]") {
+		t.Fatalf("expected Disney to show '[✓ all]', got:\n%s", view)
+	}
+
+	// Go back up to root (Esc)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.SelectedDir != "" {
+		t.Fatalf("expected root dir, got %q", m.SelectedDir)
+	}
+
+	// At root, Mandarin has 2 of 3 decks selected -> subset indicator "[2/3 selected]"
+	rootView := m.View()
+	if !strings.Contains(rootView, "[2/3 selected]") {
+		t.Fatalf("expected root view to show '[2/3 selected]' for Mandarin, got:\n%s", rootView)
+	}
+	if strings.Contains(rootView, "[✓ all]") {
+		t.Fatalf("expected root view NOT to show '[✓ all]' for Mandarin, got:\n%s", rootView)
+	}
+}
+
+func TestQuizManualDeckSelectAndSubfolderIndicator(t *testing.T) {
+	decksDir := setupQuizMultiDeckTestDir(t)
+	m := New(decksDir)
+
+	// Enter Quiz Mode
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'s'}})
+	m = updatedM.(Model)
+
+	// Open Mandarin ('a')
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'a'}})
+	m = updatedM.(Model)
+
+	// Open Disney ('s')
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'s'}})
+	m = updatedM.(Model)
+	if m.State != StateDeckSelect || m.SelectedDir != filepath.Join("Mandarin", "Disney") {
+		t.Fatalf("expected StateDeckSelect in Mandarin/Disney, got %d, dir %q", m.State, m.SelectedDir)
+	}
+
+	// Disney has 2 decks: cinderella.yaml, mulan.yaml. Toggle cinderella.yaml with Space
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+	if !m.isDeckSelected("cinderella.yaml") {
+		t.Fatalf("expected cinderella.yaml to be selected")
+	}
+	if m.countSelectedDecks() != 1 {
+		t.Fatalf("expected 1 deck selected, got %d", m.countSelectedDecks())
+	}
+
+	// Go back up to Mandarin (Esc)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.State != StateDirSelect || m.SelectedDir != "Mandarin" {
+		t.Fatalf("expected StateDirSelect in Mandarin, got %d, dir %q", m.State, m.SelectedDir)
+	}
+
+	// View Mandarin subfolders: Disney has 1 of 2 decks selected -> subset indicator "[1/2 selected]"
+	mandarinView := m.View()
+	if !strings.Contains(mandarinView, "[1/2 selected]") {
+		t.Fatalf("expected Disney to show '[1/2 selected]' subset indicator, got:\n%s", mandarinView)
+	}
+	if strings.Contains(mandarinView, "[✓ all]") {
+		t.Fatalf("expected Disney NOT to show '[✓ all]', got:\n%s", mandarinView)
+	}
+
+	// Go back up to root (Esc)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.SelectedDir != "" {
+		t.Fatalf("expected root, got %q", m.SelectedDir)
+	}
+
+	// At root, Mandarin has 1 of 3 decks selected -> subset indicator "[1/3 selected]"
+	rootView := m.View()
+	if !strings.Contains(rootView, "[1/3 selected]") {
+		t.Fatalf("expected root to show '[1/3 selected]' for Mandarin, got:\n%s", rootView)
+	}
+}
+
+func TestShiftEnterAndShiftSpaceFolderSelect(t *testing.T) {
+	decksDir := setupQuizMultiDeckTestDir(t)
+	m := New(decksDir)
+
+	// Enter Quiz Mode
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'s'}})
+	m = updatedM.(Model)
+
+	// Move cursor to Spanish (index 1) with 'j'
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'j'}})
+	m = updatedM.(Model)
+	if m.DirCursor != 1 {
+		t.Fatalf("expected DirCursor to be 1, got %d", m.DirCursor)
+	}
+
+	// Press shift+enter
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune("shift+enter")})
+	m = updatedM.(Model)
+
+	if !m.isDeckSelected("Spanish/basics.yaml") {
+		t.Fatalf("expected Spanish/basics.yaml to be selected via shift+enter")
+	}
+
+	view := m.View()
+	if !strings.Contains(view, "[✓ all]") {
+		t.Fatalf("expected Spanish to show '[✓ all]', got:\n%s", view)
+	}
+
+	// Press shift+space on Spanish to deselect it
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune("shift+space")})
+	m = updatedM.(Model)
+
+	if m.countSelectedDecks() != 0 {
+		t.Fatalf("expected 0 decks selected after shift+space toggle, got %d", m.countSelectedDecks())
+	}
+}
+
+func TestQuizMouseClickFolderSelect(t *testing.T) {
+	decksDir := setupQuizMultiDeckTestDir(t)
+	m := New(decksDir)
+
+	// Enter Quiz Mode
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'s'}})
+	m = updatedM.(Model)
+
+	// Simulate Shift+Click on item 0 (Mandarin): Y=2 is line 2 (first directory item)
+	mouseShiftClick := tea.MouseMsg{
+		X:      10,
+		Y:      2,
+		Shift:  true,
+		Action: tea.MouseActionPress,
+		Button: tea.MouseButtonLeft,
+	}
+
+	updatedM, _ = m.Update(mouseShiftClick)
+	m = updatedM.(Model)
+
+	if m.countSelectedDecks() != 3 {
+		t.Fatalf("expected 3 decks selected via mouse Shift+Click, got %d", m.countSelectedDecks())
+	}
+
+	view := m.View()
+	if !strings.Contains(view, "[✓ all]") {
+		t.Fatalf("expected Mandarin to show '[✓ all]' after Shift+Click, got:\n%s", view)
+	}
+
+	// Deselect all
+	m.DeselectAll()
+
+	// Simulate regular Click (without Shift) on item 0 (Mandarin) -> should open Mandarin
+	mouseNormalClick := tea.MouseMsg{
+		X:      10,
+		Y:      2,
+		Shift:  false,
+		Action: tea.MouseActionPress,
+		Button: tea.MouseButtonLeft,
+	}
+
+	updatedM, _ = m.Update(mouseNormalClick)
+	m = updatedM.(Model)
+
+	if m.State != StateDirSelect || m.SelectedDir != "Mandarin" {
+		t.Fatalf("expected to enter Mandarin via regular mouse click, got state %d, dir %q", m.State, m.SelectedDir)
+	}
+}

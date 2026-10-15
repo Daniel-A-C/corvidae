@@ -138,11 +138,21 @@ func (m Model) viewDirSelect() string {
 			countStr = HintStyle.Render(fmt.Sprintf(" (%d decks)", count))
 		}
 
+		selectedCount, totalDecks := m.countSelectedDecksInDir(dirRelPath)
+		var indicator string
+		if totalDecks > 0 {
+			if selectedCount == totalDecks {
+				indicator = "  " + FolderSelectedStyle.Render("[✓ all]")
+			} else if selectedCount > 0 {
+				indicator = "  " + FolderSubsetStyle.Render(fmt.Sprintf("[%d/%d selected]", selectedCount, totalDecks))
+			}
+		}
+
 		if m.DirCursor == i {
 			cursor = "> "
 			label = CursorStyle.Render(label)
 		}
-		content += fmt.Sprintf("%s%s%s%s\n", CursorStyle.Render(cursor), keyBadge, label, countStr)
+		content += fmt.Sprintf("%s%s%s%s%s\n", CursorStyle.Render(cursor), keyBadge, label, countStr, indicator)
 		if (i+1)%5 == 0 && i < len(m.Dirs)-1 {
 			content += "\n"
 		}
@@ -184,9 +194,9 @@ func (m Model) viewDirSelect() string {
 			deckWord = fmt.Sprintf("%d decks", selectedCount)
 		}
 		content += "\n" + CorrectStyle.Render(fmt.Sprintf("%s selected across folders  •  [Tab] Start Practice  •  [u] Deselect All", deckWord)) + "\n"
-		content += "\n" + HintStyle.Render("(Press key to select, Tab to start, [u] Deselect all, Esc to go back, q to quit)")
+		content += "\n" + HintStyle.Render("(Press key to open, Shift+key to select folder, Tab to start, [u] Deselect all, Esc to go back, q to quit)")
 	} else {
-		content += "\n" + HintStyle.Render("(Press key to select, [m] Marked Cards, Esc to go back, q to quit)")
+		content += "\n" + HintStyle.Render("(Press key to open, Shift+key to select folder, [m] Marked Cards, Esc to go back, q to quit)")
 	}
 	return content
 }

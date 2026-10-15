@@ -1,6 +1,9 @@
 package ui
 
-import "strings"
+import (
+	"strings"
+	"unicode"
+)
 
 // HummingbirdKeys defines the 30-key Hummingbird layout organized in groups of 5:
 // 1. Home row left hand: a, s, d, f, g
@@ -31,6 +34,32 @@ func KeyToIndex(key string) int {
 	for i, k := range HummingbirdKeys {
 		if k == normalized {
 			return i
+		}
+	}
+	return -1
+}
+
+// ShiftKeyToIndex returns the 0-based item index corresponding to the given shifted key,
+// or -1 if the key is not a shifted Hummingbird key.
+func ShiftKeyToIndex(key string) int {
+	if strings.HasPrefix(key, "shift+") {
+		rest := strings.TrimPrefix(key, "shift+")
+		return KeyToIndex(rest)
+	}
+	runes := []rune(key)
+	if len(runes) == 1 {
+		if unicode.IsUpper(runes[0]) {
+			return KeyToIndex(strings.ToLower(key))
+		}
+		switch key {
+		case ":":
+			return KeyToIndex(";")
+		case "<":
+			return KeyToIndex(",")
+		case ">":
+			return KeyToIndex(".")
+		case "?":
+			return KeyToIndex("/")
 		}
 	}
 	return -1

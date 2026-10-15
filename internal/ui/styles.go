@@ -15,6 +15,10 @@ var (
 	CorrectStyle       = lipgloss.NewStyle().Foreground(lipgloss.Color("#50FA7B")).Bold(true)
 	LogoStyle          = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#BD93F9")).Width(60).Align(lipgloss.Left)
 
+	// Folder selection styles
+	FolderSelectedStyle = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#50FA7B"))
+	FolderSubsetStyle   = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FFB86C"))
+
 	// Arabic Academy styles
 	ArabicHeaderStyle       = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FFB86C"))
 	ArabicSubHeaderStyle    = lipgloss.NewStyle().Foreground(lipgloss.Color("#8BE9FD")).Italic(true)

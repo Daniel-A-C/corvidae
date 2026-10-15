@@ -29,7 +29,7 @@ func main() {
 	}
 	flag.Parse()
 
-	p := tea.NewProgram(ui.NewWithOptions(decksDir, textsDir, readingDir))
+	p := tea.NewProgram(ui.NewWithOptions(decksDir, textsDir, readingDir), tea.WithMouseCellMotion())
 	if _, err := p.Run(); err != nil {
 		fmt.Fprintf(os.Stderr, "Error running Corvidae: %v\n", err)
 		os.Exit(1)
