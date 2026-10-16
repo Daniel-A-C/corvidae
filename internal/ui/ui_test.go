@@ -2596,3 +2596,131 @@ func TestQuizMouseClickFolderSelect(t *testing.T) {
 		t.Fatalf("expected to enter Mandarin via regular mouse click, got state %d, dir %q", m.State, m.SelectedDir)
 	}
 }
+
+func TestQuizQuitToMainMenuThenExit(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+	m.Mode = ModeQuiz
+	m.SelectedDir = "Mandarin"
+	m.SelectedFiles["tech.yaml"] = true
+	if err := m.LoadSelectedDecks(); err != nil {
+		t.Fatal(err)
+	}
+	m.SetupQuiz()
+	m.State = StateQuiz
+
+	// 1. While on an active question, pressing 'q' should quit to StateModeSelect, not quit app
+	updatedM, cmd := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'q'}})
+	if cmd != nil {
+		t.Fatalf("expected nil cmd when 'q' is pressed in quiz mode, got %v", cmd)
+	}
+	mState := updatedM.(Model)
+	if mState.State != StateModeSelect {
+		t.Fatalf("expected StateModeSelect after pressing 'q' in quiz mode, got %d", mState.State)
+	}
+
+	// 2. Now from StateModeSelect, pressing 'q' should quit the application
+	_, cmdQuit := mState.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'q'}})
+	if cmdQuit == nil {
+		t.Fatalf("expected tea.Quit when 'q' is pressed from main menu, got nil")
+	}
+}
+
+func TestQuizQuitToMainMenuDuringFeedback(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+	m.Mode = ModeQuiz
+	m.SelectedDir = "Mandarin"
+	m.SelectedFiles["tech.yaml"] = true
+	if err := m.LoadSelectedDecks(); err != nil {
+		t.Fatal(err)
+	}
+	m.SetupQuiz()
+	m.State = StateQuiz
+
+	// Answer question to trigger feedback
+	correctKey := HummingbirdKeys[m.CorrectIndex]
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(correctKey)})
+	m = updatedM.(Model)
+	if !m.ShowFeedback {
+		t.Fatalf("expected feedback to be shown")
+	}
+
+	// Pressing 'q' during feedback should quit to StateModeSelect
+	updatedM, cmd := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'q'}})
+	if cmd != nil {
+		t.Fatalf("expected nil cmd when 'q' is pressed during quiz feedback, got %v", cmd)
+	}
+	mState := updatedM.(Model)
+	if mState.State != StateModeSelect {
+		t.Fatalf("expected StateModeSelect, got %d", mState.State)
+	}
+	if mState.ShowFeedback {
+		t.Fatalf("expected ShowFeedback to be false after quitting to main menu")
+	}
+
+	// Pressing 'q' from StateModeSelect quits app
+	_, cmdQuit := mState.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'q'}})
+	if cmdQuit == nil {
+		t.Fatalf("expected tea.Quit from main menu")
+	}
+}
+
+func TestQuizQuitToMainMenuWhenComplete(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+	m.Mode = ModeQuiz
+	m.SelectedDir = "Mandarin"
+	m.SelectedFiles["tech.yaml"] = true
+	if err := m.LoadSelectedDecks(); err != nil {
+		t.Fatal(err)
+	}
+	m.SetupQuiz()
+	m.State = StateQuiz
+	m.CurrentIndex = len(m.ActiveCards) // quiz complete
+
+	view := m.View()
+	if !strings.Contains(view, "[Enter / q] Main Menu") {
+		t.Fatalf("expected '[Enter / q] Main Menu' in quiz complete view, got:\n%s", view)
+	}
+
+	// Pressing 'q' when complete returns to StateModeSelect
+	updatedM, cmd := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'q'}})
+	if cmd != nil {
+		t.Fatalf("expected nil cmd when 'q' pressed on quiz complete, got %v", cmd)
+	}
+	mState := updatedM.(Model)
+	if mState.State != StateModeSelect {
+		t.Fatalf("expected StateModeSelect, got %d", mState.State)
+	}
+
+	// Pressing 'q' from StateModeSelect quits app
+	_, cmdQuit := mState.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'q'}})
+	if cmdQuit == nil {
+		t.Fatalf("expected tea.Quit from main menu")
+	}
+}
+
+func TestQuizEscToMainMenu(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+	m.Mode = ModeQuiz
+	m.SelectedDir = "Mandarin"
+	m.SelectedFiles["tech.yaml"] = true
+	if err := m.LoadSelectedDecks(); err != nil {
+		t.Fatal(err)
+	}
+	m.SetupQuiz()
+	m.State = StateQuiz
+
+	// Pressing 'esc' returns to StateModeSelect
+	updatedM, cmd := m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	if cmd != nil {
+		t.Fatalf("expected nil cmd when 'esc' pressed in quiz, got %v", cmd)
+	}
+	mState := updatedM.(Model)
+	if mState.State != StateModeSelect {
+		t.Fatalf("expected StateModeSelect after pressing Esc in quiz, got %d", mState.State)
+	}
+}
+

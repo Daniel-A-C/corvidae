@@ -317,7 +317,7 @@ func (m Model) viewReview() string {
 
 func (m Model) viewQuiz() string {
 	if m.CurrentIndex >= len(m.ActiveCards) {
-		return fmt.Sprintf("Quiz complete!\n\n%s", HintStyle.Render("[r] Retry quiz  •  [Enter] Main Menu  •  [q] Quit"))
+		return fmt.Sprintf("Quiz complete!\n\n%s", HintStyle.Render("[r] Retry quiz  •  [Enter / q] Main Menu"))
 	}
 
 	ref := m.ActiveCards[m.CurrentIndex]
@@ -384,7 +384,7 @@ func (m Model) viewQuiz() string {
 	} else {
 		markHint = fmt.Sprintf("[%s] Mark card  •  ", KeyStyle.Render("m"))
 	}
-	content += "\n" + HintStyle.Render(fmt.Sprintf("(%sPress key to select, q to quit)", markHint))
+	content += "\n" + HintStyle.Render(fmt.Sprintf("(%sPress key to select, q to quit to menu)", markHint))
 	return content
 }
 

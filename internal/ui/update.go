@@ -23,7 +23,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		if msg.String() == "ctrl+c" {
 			return m, tea.Quit
 		}
-		if msg.String() == "q" && !m.isSelectionKey("q") {
+		if msg.String() == "q" && !m.isSelectionKey("q") && m.State != StateQuiz {
 			return m, tea.Quit
 		}
 
@@ -97,6 +97,9 @@ func (m Model) isSelectionKey(key string) bool {
 	case StateDeckSelect:
 		return idx < len(m.DeckFiles)
 	case StateQuiz:
+		if key == "q" {
+			return false
+		}
 		return !m.ShowFeedback && idx < len(m.QuizOptions)
 	case StateArabicMenu:
 		return idx < 7
@@ -595,6 +598,12 @@ func (m Model) updateReview(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 }
 
 func (m Model) updateQuiz(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	if msg.String() == "q" || msg.String() == "esc" {
+		m.ShowFeedback = false
+		m.State = StateModeSelect
+		return m, nil
+	}
+
 	if m.CurrentIndex >= len(m.ActiveCards) {
 		switch msg.String() {
 		case "r":
