@@ -1,0 +1,97 @@
+cards:
+    - character: 那时
+      pinyin: nà shí
+      meaning: At that time / Back then
+      explanation: 那 (that) + 时 (time 日+寸). Specific temporal recollection by the eyewitness author.
+      interval: 1
+      ease: 2.5
+    - character: 约
+      pinyin: yuē
+      meaning: Approximately / About
+      explanation: '纟 (silk thread) + 勺 (ladle). Adverb indicating approximation: ''about the tenth hour''.'
+      interval: 1
+      ease: 2.5
+    - character: 申正
+      pinyin: shēn zhèng
+      meaning: The tenth hour (approx. 4:00 PM)
+      explanation: '申 (the 9th earthly branch: 3:00-5:00 PM) + 正 (exact middle = 4:00 PM). Traditional Chinese timekeeping for the Roman 10th hour.'
+      interval: 1
+      ease: 2.5
+    - character: 西门彼得
+      pinyin: Xī mén Bǐ dé
+      meaning: Simon Peter
+      explanation: '西门 (Hebrew Shimon: ''hearing'') + 彼得 (Greek Petros: ''rock / stone''). The prominent leader among the twelve.'
+      interval: 1
+      ease: 2.5
+    - character: 兄弟
+      pinyin: xiōng dì
+      meaning: Brother
+      explanation: 兄 (elder brother) + 弟 (younger brother). Kinship term for brothers in a family.
+      interval: 1
+      ease: 2.5
+    - character: 安得烈
+      pinyin: Ān dé liè
+      meaning: Andrew
+      explanation: Transliteration of Greek Andreas ('manly / courageous'). Peter's brother, who immediately brought others to Jesus.
+      interval: 1
+      ease: 2.5
+    - character: 找着
+      pinyin: zhǎo zháo
+      meaning: To find / Locate successfully
+      explanation: 找 (search with hands 扌) + 着 (successful result marker). Actively seeking and finding his brother Simon.
+      interval: 1
+      ease: 2.5
+    - character: 哥哥
+      pinyin: gē ge
+      meaning: Older brother
+      explanation: 'Reduplicated colloquial term for elder brother: Andrew went first to find Simon.'
+      interval: 1
+      ease: 2.5
+    - character: 遇见
+      pinyin: yù jiàn
+      meaning: To meet / Find / Encounter
+      explanation: '遇 (encounter 辶) + 见 (see). Exultant exclamation: ''We have found the Messiah!'' (我们遇见弥赛亚了).'
+      interval: 1
+      ease: 2.5
+    - character: 弥赛亚
+      pinyin: Mí sài yà
+      meaning: The Messiah
+      explanation: Transliteration of Hebrew Mashiach ('the Anointed One'). The long-awaited Davidic King.
+      interval: 1
+      ease: 2.5
+    - character: 领
+      pinyin: lǐng
+      meaning: To lead / Bring along
+      explanation: 领 (neck / guide 页+令). Andrew took Simon by the hand and brought him to Jesus.
+      interval: 1
+      ease: 2.5
+    - character: 矶法
+      pinyin: Jī fǎ
+      meaning: Cephas
+      explanation: Transliteration of Aramaic Kepha ('rock'). The prophetic new name Jesus bestowed upon Simon.
+      interval: 1
+      ease: 2.5
+    - character: 称为
+      pinyin: chēng wéi
+      meaning: To be called / Named
+      explanation: '称 (name / declare 禾) + 为 (as). Giving an honorable new title and calling: ''You shall be called Cephas''.'
+      interval: 1
+      ease: 2.5
+    - character: 约拿
+      pinyin: Yuē ná
+      meaning: Jonah (John's father's name)
+      explanation: Transliteration of Hebrew Yonah ('dove'). In Matthew 16:17, Simon is called Bar-Jonah ('son of Jonah').
+      interval: 1
+      ease: 2.5
+    - character: 马太
+      pinyin: Mǎ tài
+      meaning: Matthew
+      explanation: Transliteration of Hebrew Mattityahu ('gift of Yahweh'). Cross-reference in footnote (马太16：17).
+      interval: 1
+      ease: 2.5
+    - character: 听见
+      pinyin: tīng jiàn
+      meaning: To hear / Listen and perceive
+      explanation: '听 (listen 口+斤) + 见 (perceive / see). Resultative verb: ''heard his words'' (听见他的话).'
+      interval: 1
+      ease: 2.5

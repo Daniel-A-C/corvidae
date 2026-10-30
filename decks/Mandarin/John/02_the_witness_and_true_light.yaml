@@ -1,0 +1,109 @@
+cards:
+    - character: 一个
+      pinyin: yí gè
+      meaning: A / One / An individual
+      explanation: '一 (one) + 个 (universal classifier). Introduces a historical human individual: ''There was a man'' (有一个人).'
+      interval: 1
+      ease: 2.5
+    - character: 从
+      pinyin: cóng
+      meaning: From
+      explanation: 'Depicts one person following another. Preposition indicating origin or source: ''sent from God'' (从神那里).'
+      interval: 1
+      ease: 2.5
+    - character: 那里
+      pinyin: nà lǐ
+      meaning: There / That place
+      explanation: 那 (that) + 里 (inside / place). Refers back to God's presence as the origin of John's mission (神那里).
+      interval: 1
+      ease: 2.5
+    - character: 差来
+      pinyin: chāi lái
+      meaning: Sent / Dispatched
+      explanation: 差 (to send on an official mission) + 来 (to come). Indicates a divine commission and prophetic dispatch.
+      interval: 1
+      ease: 2.5
+    - character: 名叫
+      pinyin: míng jiào
+      meaning: Named / Called
+      explanation: 名 (name - 口 mouth + 夕 dusk) + 叫 (to call). Standard formal expression for introducing someone's proper name.
+      interval: 1
+      ease: 2.5
+    - character: 约翰
+      pinyin: Yuē hàn
+      meaning: John (John the Baptist)
+      explanation: Transliteration of Hebrew Yochanan ('Yahweh is gracious'). Here refers to John the Baptist, the forerunner of Christ.
+      interval: 1
+      ease: 2.5
+    - character: 来
+      pinyin: lái
+      meaning: To come / Arrive
+      explanation: Pictograph of ripening grain coming from heaven. Denotes John arriving into the historical scene.
+      interval: 1
+      ease: 2.5
+    - character: 为要
+      pinyin: wèi yào
+      meaning: In order to / For the purpose of
+      explanation: '为 (for) + 要 (to want / intend). Purpose conjunction: ''came in order to bear witness'' (为要作见证).'
+      interval: 1
+      ease: 2.5
+    - character: 作见证
+      pinyin: zuò jiàn zhèng
+      meaning: To bear witness / Testify
+      explanation: '作 (to make/do) + 见证 (testimony - 见 see + 证 verify). The central motif of John''s Gospel: legally validating divine truth.'
+      interval: 1
+      ease: 2.5
+    - character: 叫
+      pinyin: jiào
+      meaning: To cause / Enable / Call
+      explanation: '口 (mouth) radical. Causative verb expressing ultimate aim: ''that all might believe through him'' (叫众人...可以信).'
+      interval: 1
+      ease: 2.5
+    - character: 众人
+      pinyin: zhòng rén
+      meaning: Everyone / The multitude / All people
+      explanation: 众 (three 人 people stacked together = crowd) + 人 (people). The universal audience intended to hear the gospel witness.
+      interval: 1
+      ease: 2.5
+    - character: 因
+      pinyin: yīn
+      meaning: Because of / Through / By reason of
+      explanation: '囗 (enclosure) + 大. Preposition of agency/instrument: through John''s testimony, people could believe.'
+      interval: 1
+      ease: 2.5
+    - character: 可以
+      pinyin: kě yǐ
+      meaning: Can / May / Be able to
+      explanation: 可 (able) + 以 (by means of). Expresses capability and opportunity granted by God's grace.
+      interval: 1
+      ease: 2.5
+    - character: 信
+      pinyin: xìn
+      meaning: To believe / Trust / Have faith in
+      explanation: '亻 (person) + 言 (word). A person standing by their word. Translates Greek pisteuo: saving personal trust in Christ.'
+      interval: 1
+      ease: 2.5
+    - character: 乃是
+      pinyin: nǎi shì
+      meaning: But rather / Instead / Is indeed
+      explanation: '乃 (particle of transition) + 是 (is). Used to clarify John''s identity: ''He was not that Light, but was sent to witness''.'
+      interval: 1
+      ease: 2.5
+    - character: 真光
+      pinyin: zhēn guāng
+      meaning: True Light
+      explanation: '真 (true / genuine) + 光 (light). Translates Greek to phos to alēthinon: the original, genuine, uncreated light of God.'
+      interval: 1
+      ease: 2.5
+    - character: 照亮
+      pinyin: zhào liàng
+      meaning: To enlighten / Illuminate
+      explanation: 照 (to shine) + 亮 (bright). To flood with light; giving moral and spiritual enlightenment to human hearts.
+      interval: 1
+      ease: 2.5
+    - character: 一切
+      pinyin: yí qiè
+      meaning: All / Every / Everything
+      explanation: 一 (one) + 切 (cut / close). Meaning 'every single one without exception' (照亮一切生在世上的人).
+      interval: 1
+      ease: 2.5

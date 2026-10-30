@@ -555,6 +555,77 @@ func TestConversationDecks(t *testing.T) {
 	}
 }
 
+func TestJohnChapter1Decks(t *testing.T) {
+	decksPath := filepath.Join("..", "..", "decks", "Mandarin", "John")
+	if _, err := os.Stat(decksPath); os.IsNotExist(err) {
+		t.Skip("John directory not present")
+	}
+
+	expectedDecks := []string{
+		"01_the_word_and_light.yaml",
+		"02_the_witness_and_true_light.yaml",
+		"03_children_of_god.yaml",
+		"04_the_word_made_flesh.yaml",
+		"05_grace_upon_grace.yaml",
+		"06_voice_in_the_wilderness.yaml",
+		"07_water_baptism.yaml",
+		"08_the_lamb_of_god.yaml",
+		"09_first_disciples_come_and_see.yaml",
+		"10_finding_the_messiah.yaml",
+		"11_philip_calls_nathanael.yaml",
+		"12_under_the_fig_tree_and_son_of_man.yaml",
+	}
+
+	files, err := GetAllDeckFiles(decksPath, "")
+	if err != nil {
+		t.Fatalf("failed to get deck files in %s: %v", decksPath, err)
+	}
+	if len(files) != len(expectedDecks) {
+		t.Fatalf("expected %d deck files, got %d", len(expectedDecks), len(files))
+	}
+
+	totalCards := 0
+	for _, file := range expectedDecks {
+		fullPath := filepath.Join(decksPath, file)
+		d, err := LoadDeck(fullPath)
+		if err != nil {
+			t.Fatalf("failed to load %s: %v", file, err)
+		}
+		if len(d.Cards) == 0 {
+			t.Errorf("expected %s to have cards, got 0", file)
+		}
+		totalCards += len(d.Cards)
+
+		seen := make(map[string]bool)
+		for i, card := range d.Cards {
+			if card.Character == "" {
+				t.Errorf("%s: card %d missing character", file, i)
+			}
+			if card.Pinyin == "" {
+				t.Errorf("%s: card %d (%s) missing pinyin", file, i, card.Character)
+			}
+			if card.Meaning == "" {
+				t.Errorf("%s: card %d (%s) missing meaning", file, i, card.Character)
+			}
+			if card.Explanation == "" {
+				t.Errorf("%s: card %d (%s) missing explanation", file, i, card.Character)
+			}
+			if card.Interval != 1 {
+				t.Errorf("%s: card %d (%s) expected interval 1, got %d", file, i, card.Character, card.Interval)
+			}
+			if card.Ease != 2.5 {
+				t.Errorf("%s: card %d (%s) expected ease 2.5, got %f", file, i, card.Character, card.Ease)
+			}
+			if seen[card.Character] {
+				t.Errorf("%s: duplicate character found: %s", file, card.Character)
+			}
+			seen[card.Character] = true
+		}
+	}
+	if totalCards != 232 {
+		t.Errorf("expected 232 total cards, got %d", totalCards)
+	}
+}
 
 func TestGetAllDeckFiles(t *testing.T) {
 	tempDir := t.TempDir()

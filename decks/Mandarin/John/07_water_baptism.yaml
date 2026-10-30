@@ -1,0 +1,175 @@
+cards:
+    - character: 主
+      pinyin: zhǔ
+      meaning: The Lord / Master
+      explanation: Pictograph of an oil lamp with flame atop a stand. Signifies Yahweh God, whose arrival John prepares.
+      interval: 1
+      ease: 2.5
+    - character: 道路
+      pinyin: dào lù
+      meaning: Way / Path / Road
+      explanation: 道 (path / way) + 路 (road 足+各). Highway of the heart prepared for God's redemption.
+      interval: 1
+      ease: 2.5
+    - character: 以赛亚
+      pinyin: Yǐ sài yà
+      meaning: Isaiah
+      explanation: Transliteration of Hebrew Yeshayahu ('Yahweh is salvation'). John quotes Isaiah 40:3 to describe his humble identity as a mere voice.
+      interval: 1
+      ease: 2.5
+    - character: 你
+      pinyin: nǐ
+      meaning: You (singular)
+      explanation: '亻 (person) + 尔. Second-person singular pronoun: ''Who are you?'' (你是谁？).'
+      interval: 1
+      ease: 2.5
+    - character: 对
+      pinyin: duì
+      meaning: To / Toward (addressing someone)
+      explanation: '又 (hand) + 寸 (measure). Preposition introducing the recipient of speech: ''said to him'' (对他说).'
+      interval: 1
+      ease: 2.5
+    - character: 并
+      pinyin: bìng
+      meaning: And / (with negative) At all
+      explanation: 'Two people standing together. Emphatic conjunction with negative: ''and did not at all conceal'' (并不隐瞒).'
+      interval: 1
+      ease: 2.5
+    - character: 呢
+      pinyin: ne
+      meaning: Modal question particle
+      explanation: '口 (mouth) + 尼. Softening modal particle in questions: ''Who are you then?'' (这样，你是谁呢？).'
+      interval: 1
+      ease: 2.5
+    - character: 吗
+      pinyin: ma
+      meaning: Question particle (yes/no)
+      explanation: '口 (mouth) + 马 (phonetic). Particle forming yes/no interrogatives: ''Are you Elijah?'' (是以利亚吗？).'
+      interval: 1
+      ease: 2.5
+    - character: 于是
+      pinyin: yú shì
+      meaning: Thereupon / Then / So
+      explanation: '于 (at / in) + 是 (this). Consequential conjunction: ''Then they said...'' (于是他们说).'
+      interval: 1
+      ease: 2.5
+    - character: 声
+      pinyin: shēng
+      meaning: Voice / Sound / Cry
+      explanation: Chime instrument pictograph. Voice of one crying in the wilderness (有人声喊着说).
+      interval: 1
+      ease: 2.5
+    - character: 那些
+      pinyin: nà xiē
+      meaning: Those / Those people
+      explanation: '那 (that) + 些 (plural marker: 此 + 二). ''Those people were sent from the Pharisees'' (那些人是法利赛人差来的).'
+      interval: 1
+      ease: 2.5
+    - character: 法利赛人
+      pinyin: Fǎ lì sài rén
+      meaning: Pharisees
+      explanation: Transliteration of Hebrew Perushim ('separated ones'). The prominent Jewish religious party devoted to strict observance of oral and written law.
+      interval: 1
+      ease: 2.5
+    - character: 既
+      pinyin: jì
+      meaning: Since / Now that
+      explanation: 'Conjunction introducing established premise: ''Since you are not the Christ, nor Elijah, nor the Prophet...'''
+      interval: 1
+      ease: 2.5
+    - character: 甚么
+      pinyin: shén me
+      meaning: What / Why (with 为)
+      explanation: 甚 (extreme) + 么. Combined with 为 (for) to form 为甚么 ('why / for what reason').
+      interval: 1
+      ease: 2.5
+    - character: 施洗
+      pinyin: shī xǐ
+      meaning: To baptize / Administer baptism
+      explanation: 施 (bestow / apply 方) + 洗 (wash / cleanse 氵+先). The rite of immersion in water signifying repentance and cleansing.
+      interval: 1
+      ease: 2.5
+    - character: 水
+      pinyin: shuǐ
+      meaning: Water
+      explanation: Pictograph of flowing stream. Represents the physical, preparatory medium of John's baptism, pointing forward to the Spirit.
+      interval: 1
+      ease: 2.5
+    - character: 但
+      pinyin: dàn
+      meaning: But / However
+      explanation: 亻 (person) + 旦 (sunrise). Adversative conjunction introducing the One of infinitely greater majesty.
+      interval: 1
+      ease: 2.5
+    - character: 一位
+      pinyin: yí wèi
+      meaning: One person (reverent / polite)
+      explanation: 一 (one) + 位 (polite classifier for honorable people). Reverent reference to the unidentified Messiah standing among them.
+      interval: 1
+      ease: 2.5
+    - character: 站
+      pinyin: zhàn
+      meaning: To stand
+      explanation: 立 (stand erect) + 占. Describes the Messiah quietly present and standing among the crowd.
+      interval: 1
+      ease: 2.5
+    - character: 解
+      pinyin: jiě
+      meaning: To untie / Loosen / Unbind
+      explanation: 角 (horn) + 刀 (knife) + 牛 (ox). Untying knots or straps; releasing a binding.
+      interval: 1
+      ease: 2.5
+    - character: 鞋带
+      pinyin: xié dài
+      meaning: Sandal strap / Thong of sandal
+      explanation: 鞋 (leather shoe 革+圭) + 带 (strap / belt). Untying a master's dusty sandals was a menial duty beneath even Jewish servants.
+      interval: 1
+      ease: 2.5
+    - character: 配
+      pinyin: pèi
+      meaning: Worthy / Deserving / Fit
+      explanation: 酉 (wine vessel) + 己. Denotes matching, qualification, or fitness (不配 = unworthy, unfit).
+      interval: 1
+      ease: 2.5
+    - character: 约但河
+      pinyin: Yuē dàn Hé
+      meaning: Jordan River
+      explanation: 'Transliteration of the Jordan River (Yarden: ''descender''). River marking Israel''s border, where John performed baptisms.'
+      interval: 1
+      ease: 2.5
+    - character: 外
+      pinyin: wài
+      meaning: Outside / Beyond (east of)
+      explanation: 夕 (evening) + 卜. Here 'beyond the Jordan' (trans-Jordan territory).
+      interval: 1
+      ease: 2.5
+    - character: 伯大尼
+      pinyin: Bó dà ní
+      meaning: Bethany (across the Jordan)
+      explanation: Transliteration of Bethany ('house of affliction / figs'), a location east of the Jordan distinct from the Bethany near Jerusalem.
+      interval: 1
+      ease: 2.5
+    - character: 古卷
+      pinyin: gǔ juàn
+      meaning: Ancient manuscript / Early codex
+      explanation: 古 (ancient) + 卷 (scroll / volume). Refers to textual variants in early Greek biblical manuscripts cited in translation notes.
+      interval: 1
+      ease: 2.5
+    - character: 伯大巴喇
+      pinyin: Bó dà bā lǎ
+      meaning: Bethabara
+      explanation: Transliteration of Hebrew Bet Avara ('house of the crossing / ford'), an alternative ancient manuscript reading for Bethany beyond Jordan.
+      interval: 1
+      ease: 2.5
+    - character: 用
+      pinyin: yòng
+      meaning: With / By means of / To use
+      explanation: 'Pictograph of a divination crack or tool. Instrumental preposition: ''baptize with water'' (用水施洗).'
+      interval: 1
+      ease: 2.5
+    - character: 给
+      pinyin: gěi
+      meaning: To / For (beneficiary)
+      explanation: '纟 (silk) + 合. Preposition marking beneficiary: ''untying sandals for Him'' (我给他解鞋带也不配).'
+      interval: 1
+      ease: 2.5

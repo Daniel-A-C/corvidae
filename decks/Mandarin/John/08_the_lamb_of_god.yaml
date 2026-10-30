@@ -1,0 +1,121 @@
+cards:
+    - character: 次日
+      pinyin: cì rì
+      meaning: The next day
+      explanation: 次 (next / sequence 冫+欠) + 日 (day). Marks day two in the sequential week of testimony opening John's Gospel.
+      interval: 1
+      ease: 2.5
+    - character: 看哪
+      pinyin: kàn na
+      meaning: Behold! / Look!
+      explanation: '看 (look 目 under hand 手) + 哪 (exclamatory particle). Translates Greek ide: a dramatic call to fix eyes upon the Savior.'
+      interval: 1
+      ease: 2.5
+    - character: 羔羊
+      pinyin: gāo yáng
+      meaning: Lamb (sacrificial lamb)
+      explanation: 羔 (young lamb 羊 + 灬 fire) + 羊 (sheep). The Passover and Isaiah 53 sacrifice of substitution bearing the penalty for sin.
+      interval: 1
+      ease: 2.5
+    - character: 除去
+      pinyin: chú qù
+      meaning: To take away / Remove
+      explanation: '除 (eliminate / remove 阝) + 去 (go / depart). Translates Greek airōn: to lift up, bear away, and cancel the guilt of sin.'
+      interval: 1
+      ease: 2.5
+    - character: 背负
+      pinyin: bēi fù
+      meaning: To bear upon oneself / Carry a burden
+      explanation: '背 (back) + 负 (carry on back ⺈+贝). Traditional Chinese alternative translation: carrying the heavy weight of human sin upon Himself.'
+      interval: 1
+      ease: 2.5
+    - character: 罪孽
+      pinyin: zuì niè
+      meaning: Sin / Iniquity / Guilt
+      explanation: 罪 (transgression 罒+非) + 孽 (evil consequence / guilt). The universal offense of humanity against a holy God.
+      interval: 1
+      ease: 2.5
+    - character: 先前
+      pinyin: xiān qián
+      meaning: Previously / Beforehand
+      explanation: 先 (prior) + 前 (in front / past). Describes John's perspective before God confirmed Jesus's identity by the heavenly sign.
+      interval: 1
+      ease: 2.5
+    - character: 如今
+      pinyin: rú jīn
+      meaning: Now / At present
+      explanation: 如 (as / according to) + 今 (present / now). Emphasizes the present dawn of fulfillment and revelation.
+      interval: 1
+      ease: 2.5
+    - character: 显明
+      pinyin: xiǎn míng
+      meaning: To manifest / Reveal clearly
+      explanation: '显 (conspicuous / display 日+业) + 明 (bright 日+月). The purpose of John''s ministry: to make Christ visibly known to Israel.'
+      interval: 1
+      ease: 2.5
+    - character: 以色列人
+      pinyin: Yǐ sè liè rén
+      meaning: The Israelites / People of Israel
+      explanation: '以色列 (Israel: ''he strives with God'') + 人 (people). The covenant nation to whom the Messiah was first promised and revealed.'
+      interval: 1
+      ease: 2.5
+    - character: 圣灵
+      pinyin: shèng líng
+      meaning: The Holy Spirit
+      explanation: 圣 (holy / sacred 耳+口+王) + 灵 (spirit / divine essence 雨+口口口+巫). The Third Person of the Trinity descending upon Jesus at His baptism.
+      interval: 1
+      ease: 2.5
+    - character: 仿佛
+      pinyin: fǎng fú
+      meaning: As if / Resembling / Like
+      explanation: 仿 (imitate 亻+方) + 佛 (likeness 亻+弗). Indicates the visible, physical manifestation resembling a dove.
+      interval: 1
+      ease: 2.5
+    - character: 鸽子
+      pinyin: gē zi
+      meaning: Dove / Pigeon
+      explanation: 鸽 (dove 合+鸟) + 子 (suffix). Symbol of purity, gentleness, peace, and the new creation.
+      interval: 1
+      ease: 2.5
+    - character: 天
+      pinyin: tiān
+      meaning: Heaven / The Sky
+      explanation: 大 (great man) under horizontal line 一. Represents heaven, the abode of God from which the Spirit descended.
+      interval: 1
+      ease: 2.5
+    - character: 降下
+      pinyin: jiàng xià
+      meaning: To descend / Come down
+      explanation: 降 (step down 阝+夅) + 下 (down). The supernatural descent of the Holy Spirit to remain upon Christ.
+      interval: 1
+      ease: 2.5
+    - character: 只是
+      pinyin: zhǐ shì
+      meaning: Only / Except that / But
+      explanation: '只 (only) + 是 (is). Connective explaining the exception: John did not know Him until God spoke the sign.'
+      interval: 1
+      ease: 2.5
+    - character: 身上
+      pinyin: shēn shang
+      meaning: Upon Him / On the body
+      explanation: 身 (body / person) + 上 (upon). The Spirit did not just touch Jesus momentarily, but rested and remained on Him.
+      interval: 1
+      ease: 2.5
+    - character: 证明
+      pinyin: zhèng míng
+      meaning: To testify / Prove / Confirm
+      explanation: '证 (evidence 讠+正) + 明 (clear). John giving authoritative, conclusive witness: ''I have seen and have borne witness''.'
+      interval: 1
+      ease: 2.5
+    - character: 儿子
+      pinyin: ér zi
+      meaning: Son
+      explanation: '儿 (son) + 子 (noun suffix). In v. 34: ''the Son of God'' (神的儿子), John''s climactic confession of Christ''s divine Sonship.'
+      interval: 1
+      ease: 2.5
+    - character: 或译
+      pinyin: huò yì
+      meaning: Or translated as (textual note)
+      explanation: 或 (or / alternative 戈+口+一) + 译 (translate 讠+泽). Standard footnote marker in the Chinese Union Version (e.g. 或译：背负).
+      interval: 1
+      ease: 2.5

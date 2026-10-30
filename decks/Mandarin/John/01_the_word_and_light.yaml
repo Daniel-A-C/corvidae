@@ -1,0 +1,158 @@
+selected: true
+cards:
+    - character: 太初
+      pinyin: tài chū
+      meaning: In the beginning / Primordial beginning
+      explanation: '太 (tài: greatest / primordial) + 初 (chū: beginning / start). Refers to eternity past before creation, echoing Genesis 1:1 (起初) but carrying the philosophical weight of absolute eternal origin.'
+      interval: 1
+      ease: 2.5
+    - character: 有
+      pinyin: yǒu
+      meaning: To exist / There was / To have
+      explanation: Radical 月. Signifies existence and presence. In John 1:1, '太初有道' (In the beginning was the Word), affirming the eternal pre-existence of the Logos before time began.
+      interval: 1
+      ease: 2.5
+    - character: 道
+      pinyin: dào
+      meaning: The Word / Logos / The Way
+      explanation: 辶 (movement) + 首 (head / chief). Translates the Greek 'Logos' (divine expression, eternal reason). In Chinese philosophy, 道 is the transcendent source and order of all things, here personalized as Jesus Christ.
+      interval: 1
+      ease: 2.5
+    - character: 与
+      pinyin: yǔ
+      meaning: With / And
+      explanation: Preposition expressing intimate communion and accompaniment (e.g. 与神同在 = with God). Points to the co-eternal, face-to-face fellowship of the Word with God the Father.
+      interval: 1
+      ease: 2.5
+    - character: 神
+      pinyin: shén
+      meaning: God / Deity
+      explanation: 礻 (altar / divine revelation) + 申 (lightning / stretching forth). The supreme Creator God in Chinese Christian scripture.
+      interval: 1
+      ease: 2.5
+    - character: 同在
+      pinyin: tóng zài
+      meaning: To be with / Together with / Abide with
+      explanation: 同 (together / unified) + 在 (to be / exist). Conveys personal mutual presence and eternal union between the Father and the Son.
+      interval: 1
+      ease: 2.5
+    - character: 就是
+      pinyin: jiù shì
+      meaning: Is exactly / Namely / That is
+      explanation: '就 (at once / precisely) + 是 (to be). Used for emphatic identification: ''the Word was God'' (道就是神), asserting full divine nature.'
+      interval: 1
+      ease: 2.5
+    - character: 这
+      pinyin: zhè
+      meaning: This
+      explanation: '辶 (walk) + 文 (writing). Demonstrative pronoun: ''This Word'' (这道) in verse 2, re-emphasizing His eternal identity with God.'
+      interval: 1
+      ease: 2.5
+    - character: 万物
+      pinyin: wàn wù
+      meaning: All things / All creation
+      explanation: 万 (ten thousand / myriad) + 物 (things / created entities). Chinese idiom for the entirety of the created cosmos.
+      interval: 1
+      ease: 2.5
+    - character: 藉着
+      pinyin: jiè zhe
+      meaning: Through / By means of
+      explanation: 藉 (rely upon / by means of) + 着 (aspect marker). Expresses Christ's role as the active divine Agent through whom all creation was made.
+      interval: 1
+      ease: 2.5
+    - character: 造
+      pinyin: zào
+      meaning: To create / Make
+      explanation: '辶 (motion) + 告 (speak / declare). To fashion or create through the spoken word of God (Genesis 1: ''And God said...'').'
+      interval: 1
+      ease: 2.5
+    - character: 凡
+      pinyin: fán
+      meaning: All / Every / Whatever
+      explanation: Radical 几. Denotes universality without exception (凡被造的 = whatever has been made / anything that was created).
+      interval: 1
+      ease: 2.5
+    - character: 被
+      pinyin: bèi
+      meaning: Passive voice marker (by / is [done])
+      explanation: 衤 (clothing) + 皮 (skin). Grammatical marker creating the passive voice (被造 = made / created).
+      interval: 1
+      ease: 2.5
+    - character: 没有
+      pinyin: méi yǒu
+      meaning: There is not / Without
+      explanation: '没 (not / lack) + 有 (exist / have). Absolute negation of existence in verse 3: not a single thing was made apart from Him.'
+      interval: 1
+      ease: 2.5
+    - character: 一样
+      pinyin: yí yàng
+      meaning: A single thing / One kind (not even one)
+      explanation: 一 (one) + 样 (pattern / kind). In verse 3 (没有一样不是), it forms a double negative emphasizing total comprehensiveness.
+      interval: 1
+      ease: 2.5
+    - character: 不是
+      pinyin: bú shì
+      meaning: Is not / Not to be
+      explanation: 不 (negative particle) + 是 (to be). Used in the double negative construction '没有一样不是' (there was not one that was not).
+      interval: 1
+      ease: 2.5
+    - character: 生命
+      pinyin: shēng mìng
+      meaning: Life
+      explanation: 生 (birth / living) + 命 (fate / decree / breath of life). Translates Greek Zoe (spiritual and eternal life). Christ is the wellspring of all life.
+      interval: 1
+      ease: 2.5
+    - character: 里头
+      pinyin: lǐ tou
+      meaning: Inside / Within
+      explanation: 里 (inside / village) + 头 (head / noun suffix). Meaning 'within Him' (在他里头) — life is inherent in Christ's very being.
+      interval: 1
+      ease: 2.5
+    - character: 人
+      pinyin: rén
+      meaning: Man / Mankind / People
+      explanation: Pictograph of a person standing upright. Refers to all humanity whose light and moral illumination comes from Christ.
+      interval: 1
+      ease: 2.5
+    - character: 光
+      pinyin: guāng
+      meaning: Light
+      explanation: Depicts a person carrying a flame overhead. Symbolizes truth, divine holiness, wisdom, and revelation dispelling moral blindness.
+      interval: 1
+      ease: 2.5
+    - character: 照
+      pinyin: zhào
+      meaning: To shine / Illuminate
+      explanation: 日 (sun) + 召 + 灬 (fire). To radiate, beam down, or illuminate dark places (光照在黑暗里).
+      interval: 1
+      ease: 2.5
+    - character: 黑暗
+      pinyin: hēi àn
+      meaning: Darkness
+      explanation: 黑 (black / soot) + 暗 (dim / hidden - 日 sun + 音 sound). Represents spiritual ignorance, moral corruption, and separation from God.
+      interval: 1
+      ease: 2.5
+    - character: 却
+      pinyin: què
+      meaning: Yet / But / However
+      explanation: '卩 (kneeling person). Adversative connective denoting contrast: the light shines, ''yet'' the darkness did not receive it.'
+      interval: 1
+      ease: 2.5
+    - character: 接受
+      pinyin: jiē shòu
+      meaning: To receive / Accept / Overcome
+      explanation: 接 (receive with hands 扌) + 受 (accept / endure). Translates Greek katelaben (neither received nor mastered/overcame the light).
+      interval: 1
+      ease: 2.5
+    - character: 他
+      pinyin: tā
+      meaning: He / Him
+      explanation: 亻 (person) + 也. Third-person personal pronoun referring to the eternal Word, the Son of God (e.g. 生命在他里头).
+      interval: 1
+      ease: 2.5
+    - character: 不
+      pinyin: bù
+      meaning: Not / Negative particle
+      explanation: 'Basic negation particle: ''the darkness did not receive it'' (黑暗却不接受光).'
+      interval: 1
+      ease: 2.5

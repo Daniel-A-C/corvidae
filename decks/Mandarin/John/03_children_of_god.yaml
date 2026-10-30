@@ -1,0 +1,109 @@
+cards:
+    - character: 世上
+      pinyin: shì shàng
+      meaning: In the world / On earth
+      explanation: 世 (generation / world) + 上 (on / above). The earthly sphere of human life and mortal history.
+      interval: 1
+      ease: 2.5
+    - character: 世界
+      pinyin: shì jiè
+      meaning: The world / Cosmos
+      explanation: '世 (time / generation) + 界 (boundary / realm). Translates Greek kosmos: created order that tragically failed to recognize its Maker.'
+      interval: 1
+      ease: 2.5
+    - character: 认识
+      pinyin: rèn shi
+      meaning: To recognize / Acknowledge / Know
+      explanation: 认 (recognize 讠+刃) + 识 (know 讠+只). Experiential, relational knowing; the world 'did not know/acknowledge Him'.
+      interval: 1
+      ease: 2.5
+    - character: 到
+      pinyin: dào
+      meaning: To arrive at / Reach
+      explanation: '至 (arrive) + 刂 (knife). Spatial motion: ''He came to His own domain'' (他到自己的地方来).'
+      interval: 1
+      ease: 2.5
+    - character: 自己
+      pinyin: zì jǐ
+      meaning: Oneself / One's own
+      explanation: '自 (nose / self) + 己 (boundary). In v. 11: 自己的地方 (His own home/domain) and 自己的人 (His own people).'
+      interval: 1
+      ease: 2.5
+    - character: 地方
+      pinyin: dì fang
+      meaning: Place / Homeland / Domain
+      explanation: '地 (earth) + 方 (region). Here translates Greek ta idia: Christ''s rightful inheritance and personal domain.'
+      interval: 1
+      ease: 2.5
+    - character: 倒
+      pinyin: dào
+      meaning: On the contrary / Contrary to expectation
+      explanation: '亻 (person) + 到 (arrive). Expresses tragic irony: He came to His own people, yet they ''contrary to all expectation'' rejected Him.'
+      interval: 1
+      ease: 2.5
+    - character: 接待
+      pinyin: jiē dài
+      meaning: To receive / Welcome / Embrace
+      explanation: 接 (welcome with hands) + 待 (treat / entertain). To receive Christ into one's heart with faith and loyalty.
+      interval: 1
+      ease: 2.5
+    - character: 名
+      pinyin: míng
+      meaning: Name
+      explanation: '夕 (evening) + 口 (mouth: calling one''s identity in the dark). In Scripture, God''s ''name'' signifies His full person, character, and authority.'
+      interval: 1
+      ease: 2.5
+    - character: 赐
+      pinyin: cì
+      meaning: To grant / Bestow / Give graciously
+      explanation: 贝 (cowrie shell / wealth) + 易 (exchange). A gracious gift bestowed by a sovereign King upon His subjects.
+      interval: 1
+      ease: 2.5
+    - character: 权柄
+      pinyin: quán bǐng
+      meaning: Authority / Right / Power
+      explanation: '权 (scale weight / sovereign power) + 柄 (handle). Translates Greek exousia: the conferred legal right and privilege to become God''s children.'
+      interval: 1
+      ease: 2.5
+    - character: 儿女
+      pinyin: ér nǚ
+      meaning: Children (sons and daughters)
+      explanation: 儿 (son) + 女 (daughter). Indicates believers being adopted into the household of God as His beloved offspring.
+      interval: 1
+      ease: 2.5
+    - character: 这等人
+      pinyin: zhè děng rén
+      meaning: Such people / These people
+      explanation: 这 (this) + 等 (class / kind) + 人 (people). Referring to those born of God rather than human descent.
+      interval: 1
+      ease: 2.5
+    - character: 血气
+      pinyin: xuè qì
+      meaning: Blood / Natural biological descent
+      explanation: 血 (blood in vessel) + 气 (vital breath). Biological ancestry; spiritual rebirth cannot be inherited through physical lineage.
+      interval: 1
+      ease: 2.5
+    - character: 情欲
+      pinyin: qíng yù
+      meaning: Carnal desire / Will of the flesh
+      explanation: 情 (emotion / feeling) + 欲 (desire / craving). Translates the 'will of the flesh' — human sensual impulse.
+      interval: 1
+      ease: 2.5
+    - character: 人意
+      pinyin: rén yì
+      meaning: Human will / Will of man
+      explanation: 人 (human) + 意 (intent / will - 音 sound + 心 heart). Human decision and effort alone cannot produce salvation; it is purely from God.
+      interval: 1
+      ease: 2.5
+    - character: 也
+      pinyin: yě
+      meaning: Also / Too
+      explanation: 'Adverb meaning ''also'': ''and the world was made through Him'' (世界也是藉着他造的).'
+      interval: 1
+      ease: 2.5
+    - character: 他们
+      pinyin: tā men
+      meaning: They / Them
+      explanation: 他 (he) + 们 (plural marker). Refers to all who believe on His name (他就赐他们权柄).
+      interval: 1
+      ease: 2.5

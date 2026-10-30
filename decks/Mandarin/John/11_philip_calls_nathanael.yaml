@@ -1,0 +1,103 @@
+cards:
+    - character: 又次日
+      pinyin: yòu cì rì
+      meaning: Yet the next day / The following day
+      explanation: 又 (again / furthermore 又) + 次日 (next day). Marks day four of Jesus calling disciples in Galilee.
+      interval: 1
+      ease: 2.5
+    - character: 想要
+      pinyin: xiǎng yào
+      meaning: To intend to / Desire to
+      explanation: '想 (think / intend 心+相) + 要 (want). Expresses purposeful decision: Jesus set out for Galilee.'
+      interval: 1
+      ease: 2.5
+    - character: 往
+      pinyin: wǎng
+      meaning: Toward / Heading to
+      explanation: 彳 (step) + 主. Directional preposition meaning 'towards' (往加利利去 = go towards Galilee).
+      interval: 1
+      ease: 2.5
+    - character: 加利利
+      pinyin: Jiā lì lì
+      meaning: Galilee
+      explanation: Transliteration of Hebrew Galil ('district / circle'). The northern hill country where Jesus spent most of His earthly ministry.
+      interval: 1
+      ease: 2.5
+    - character: 去
+      pinyin: qù
+      meaning: To go / Depart
+      explanation: 土 over 厶 (person walking away from an enclosure). Movement away from the Jordan towards Galilee.
+      interval: 1
+      ease: 2.5
+    - character: 腓力
+      pinyin: Féi lì
+      meaning: Philip
+      explanation: Transliteration of Greek Philippos ('lover of horses'). One of the first disciples called by Jesus with 'Follow me'.
+      interval: 1
+      ease: 2.5
+    - character: 吧
+      pinyin: ba
+      meaning: Particle expressing invitation / gentle command
+      explanation: '口 (mouth) + 巴. Gentle imperative particle: ''Come, follow Me!'' (来跟从我吧).'
+      interval: 1
+      ease: 2.5
+    - character: 伯赛大
+      pinyin: Bó sài dà
+      meaning: Bethsaida
+      explanation: Transliteration of Aramaic Bet Tsaida ('house of fishing'). Lakeside village on the Sea of Galilee.
+      interval: 1
+      ease: 2.5
+    - character: 同城
+      pinyin: tóng chéng
+      meaning: Of the same town / City fellows
+      explanation: 同 (same) + 城 (city / fortified town 土+成). Philip shared his hometown with Andrew and Peter.
+      interval: 1
+      ease: 2.5
+    - character: 拿但业
+      pinyin: Ná dàn yè
+      meaning: Nathanael
+      explanation: Transliteration of Hebrew Netan'el ('God has given'). Often identified as the apostle Bartholomew.
+      interval: 1
+      ease: 2.5
+    - character: 所写
+      pinyin: suǒ xiě
+      meaning: What was written
+      explanation: 所 (nominalizing particle) + 写 (write). Referring to the Torah scriptures penned by Moses.
+      interval: 1
+      ease: 2.5
+    - character: 众
+      pinyin: zhòng
+      meaning: All / The many
+      explanation: Three people together. Meaning the entire chorus of Old Testament prophets (众先知).
+      interval: 1
+      ease: 2.5
+    - character: 所记
+      pinyin: suǒ jì
+      meaning: What was recorded
+      explanation: 所 (that which) + 记 (record). What all the prophets foretold and inscribed in the sacred scrolls.
+      interval: 1
+      ease: 2.5
+    - character: 约瑟
+      pinyin: Yuē sè
+      meaning: Joseph
+      explanation: Transliteration of Hebrew Yosef ('may Yahweh add'). The legal adoptive father of Jesus.
+      interval: 1
+      ease: 2.5
+    - character: 拿撒勒
+      pinyin: Ná sā lè
+      meaning: Nazareth
+      explanation: Transliteration of Nazareth, the obscure village in lower Galilee where Jesus was raised.
+      interval: 1
+      ease: 2.5
+    - character: 还能
+      pinyin: hái néng
+      meaning: Can still / Could possibly
+      explanation: '还 (still) + 能 (can). Expresses Nathanael''s initial regional skepticism: ''Can anything good come out of Nazareth?'''
+      interval: 1
+      ease: 2.5
+    - character: 好的
+      pinyin: hǎo de
+      meaning: Good thing / Anything good
+      explanation: 好 (good 女+子) + 的. Nathanael doubting that the Messiah could emerge from an unmentioned village.
+      interval: 1
+      ease: 2.5

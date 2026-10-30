@@ -1,0 +1,109 @@
+cards:
+    - character: 记
+      pinyin: jì
+      meaning: To record / Write down
+      explanation: 讠 (speech) + 己 (self). To chronicle or write down for posterity (记在下面 = recorded below).
+      interval: 1
+      ease: 2.5
+    - character: 下面
+      pinyin: xià miàn
+      meaning: Below / Following
+      explanation: 下 (under / below) + 面 (face / surface). Textual marker directing the reader to the following historical narrative.
+      interval: 1
+      ease: 2.5
+    - character: 犹太人
+      pinyin: Yóu tài rén
+      meaning: The Jews / Jewish religious leaders
+      explanation: 犹太 (Judea / Judah) + 人 (people). In John's Gospel, often refers specifically to the religious authorities and Sanhedrin leaders in Jerusalem.
+      interval: 1
+      ease: 2.5
+    - character: 耶路撒冷
+      pinyin: Yē lù sā lěng
+      meaning: Jerusalem
+      explanation: Transliteration of Hebrew Yerushalayim ('foundation of peace'), the holy capital of Israel and center of the Temple.
+      interval: 1
+      ease: 2.5
+    - character: 祭司
+      pinyin: jì sī
+      meaning: Priest
+      explanation: 祭 (sacrifice on altar 示) + 司 (oversee / manage). An ordained minister of the Temple responsible for sacrifices.
+      interval: 1
+      ease: 2.5
+    - character: 利未人
+      pinyin: Lì wèi rén
+      meaning: Levites
+      explanation: 利未 (Levi - 'joined') + 人 (person). The tribe set apart to assist priests in Temple liturgy, music, and guard duty.
+      interval: 1
+      ease: 2.5
+    - character: 问
+      pinyin: wèn
+      meaning: To ask / Inquire
+      explanation: '门 (gate) + 口 (mouth: asking a question at the gate). Investigating John''s credentials and mission.'
+      interval: 1
+      ease: 2.5
+    - character: 谁
+      pinyin: shéi
+      meaning: Who
+      explanation: '讠 (speech) + 隹 (short-tailed bird). Interrogative pronoun: ''Who are you?'' (你是谁？).'
+      interval: 1
+      ease: 2.5
+    - character: 明说
+      pinyin: míng shuō
+      meaning: To state clearly / Confess openly
+      explanation: 明 (bright / open) + 说 (to say). To testify candidly and truthfully without equivocation.
+      interval: 1
+      ease: 2.5
+    - character: 隐瞒
+      pinyin: yǐn mán
+      meaning: To conceal / Hide / Withhold
+      explanation: 隐 (hidden / secret 阝) + 瞒 (deceive / conceal 目). John did not hide the truth or seek self-aggrandizement.
+      interval: 1
+      ease: 2.5
+    - character: 基督
+      pinyin: Jī dū
+      meaning: Christ / The Messiah
+      explanation: Chinese transliteration of Greek Christos ('the Anointed One'). John explicitly denies being the promised King.
+      interval: 1
+      ease: 2.5
+    - character: 以利亚
+      pinyin: Yǐ lì yà
+      meaning: Elijah
+      explanation: Transliteration of Hebrew Eliyahu ('My God is Yahweh'). Jews expected Elijah to return bodily before Messiah (Malachi 4:5).
+      interval: 1
+      ease: 2.5
+    - character: 先知
+      pinyin: xiān zhī
+      meaning: Prophet
+      explanation: 先 (prior / ahead) + 知 (to know). Here '那先知' refers specifically to the Prophet promised by Moses in Deuteronomy 18:15.
+      interval: 1
+      ease: 2.5
+    - character: 回答
+      pinyin: huí dá
+      meaning: To answer / Reply
+      explanation: 回 (turn back) + 答 (respond / answer 竹). Giving a direct reply to the delegation.
+      interval: 1
+      ease: 2.5
+    - character: 到底
+      pinyin: dào dǐ
+      meaning: In the end / Exactly / After all
+      explanation: '到 (reach) + 底 (bottom). Interrogative modifier indicating pressing urgency: ''Who on earth are you?'''
+      interval: 1
+      ease: 2.5
+    - character: 回复
+      pinyin: huí fù
+      meaning: To report back / Give an answer
+      explanation: 回 (return) + 复 (repeat / resume). To deliver an official reply to the superiors who dispatched the delegation.
+      interval: 1
+      ease: 2.5
+    - character: 旷野
+      pinyin: kuàng yě
+      meaning: Wilderness / Desert
+      explanation: 旷 (vast / desolate 日+广) + 野 (open country 里+予). The arid wilderness of Judea where John preached repentance.
+      interval: 1
+      ease: 2.5
+    - character: 修直
+      pinyin: xiū zhí
+      meaning: To make straight / Level the path
+      explanation: 修 (repair / cultivate 亻+攵+彡) + 直 (straight 十+目). Preparing an unimpeded royal road for the coming Lord.
+      interval: 1
+      ease: 2.5

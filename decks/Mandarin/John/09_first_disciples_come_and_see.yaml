@@ -1,0 +1,97 @@
+cards:
+    - character: 再次日
+      pinyin: zài cì rì
+      meaning: Again the next day
+      explanation: 再 (again) + 次日 (the following day). Marks the third consecutive day in the opening week sequence of John 1.
+      interval: 1
+      ease: 2.5
+    - character: 同
+      pinyin: tóng
+      meaning: Together with / And
+      explanation: 'Preposition expressing companionship: John standing together with two of his disciples.'
+      interval: 1
+      ease: 2.5
+    - character: 两个
+      pinyin: liǎng gè
+      meaning: Two (persons/things)
+      explanation: '两 (pair / two) + 个 (classifier). The two disciples: Andrew and likely John the author.'
+      interval: 1
+      ease: 2.5
+    - character: 门徒
+      pinyin: mén tú
+      meaning: Disciple / Follower
+      explanation: 门 (gate / school) + 徒 (follower / pupil 彳+走). A devoted learner apprenticed to a spiritual master.
+      interval: 1
+      ease: 2.5
+    - character: 行走
+      pinyin: xíng zǒu
+      meaning: To walk / Walk by
+      explanation: 行 (step) + 走 (walk). Describing Jesus walking past as John pointed Him out.
+      interval: 1
+      ease: 2.5
+    - character: 话
+      pinyin: huà
+      meaning: Words / Speech
+      explanation: 讠 (speech) + 舌 (tongue). John's testimony heard by his disciples.
+      interval: 1
+      ease: 2.5
+    - character: 跟从
+      pinyin: gēn cóng
+      meaning: To follow (as a disciple)
+      explanation: '跟 (heel 足+艮) + 从 (two people walking together). The biblical act of decisive discipleship: leaving all to follow Jesus.'
+      interval: 1
+      ease: 2.5
+    - character: 转过身
+      pinyin: zhuǎn guò shēn
+      meaning: To turn around
+      explanation: 转 (turn 车+专) + 过 (pass) + 身 (body). Jesus turning to face and welcome those following Him.
+      interval: 1
+      ease: 2.5
+    - character: 跟着
+      pinyin: gēn zhe
+      meaning: Following behind
+      explanation: 跟 (follow) + 着 (continuous aspect). Physically walking behind Jesus on the road.
+      interval: 1
+      ease: 2.5
+    - character: 拉比
+      pinyin: lā bǐ
+      meaning: Rabbi (Teacher)
+      explanation: Transliteration of Hebrew Rabbi ('my master / my great one'). Title of deep respect for a Torah teacher.
+      interval: 1
+      ease: 2.5
+    - character: 哪里
+      pinyin: nǎ lǐ
+      meaning: Where
+      explanation: 哪 (which / where 口+那) + 里 (place). Asking where Jesus was staying (在哪里住？).
+      interval: 1
+      ease: 2.5
+    - character: 翻出来
+      pinyin: fān chū lái
+      meaning: Translated as / Means
+      explanation: 翻 (turn over / translate 釆+羽) + 出来 (come out). Explanatory phrase translating Hebrew/Aramaic into common terms.
+      interval: 1
+      ease: 2.5
+    - character: 夫子
+      pinyin: fū zǐ
+      meaning: Master / Teacher
+      explanation: 夫 (honored man) + 子 (sage / master). Classical Chinese title for an esteemed philosopher or teacher (e.g. 孔夫子 Confucius).
+      interval: 1
+      ease: 2.5
+    - character: 一天
+      pinyin: yì tiān
+      meaning: One day / That day
+      explanation: 一 (one) + 天 (day). Referring to the memorable day they spent in Christ's company.
+      interval: 1
+      ease: 2.5
+    - character: 便
+      pinyin: biàn
+      meaning: Then / Thereupon / Promptly
+      explanation: '亻 (person) + 更 (change). Adverb indicating prompt action: ''they immediately stayed with Him''.'
+      interval: 1
+      ease: 2.5
+    - character: 同住
+      pinyin: tóng zhù
+      meaning: To stay with / Abide together
+      explanation: 同 (together) + 住 (live / dwell). Remaining in fellowship and conversation with Jesus throughout the day.
+      interval: 1
+      ease: 2.5
