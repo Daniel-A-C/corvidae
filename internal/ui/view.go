@@ -913,29 +913,46 @@ func (m Model) viewMemorize() string {
 		currentInPortion+1, totalPortionWords, pct, accStr, m.MemorizeStreak, len(m.MemorizeCurrentOptions))) + "\n")
 	b.WriteString(MemorizeProgressStyle.Render("["+bar+"]") + "\n\n")
 
-	// Build rolling text window (last ~25 words)
+	// Build rolling text window (last ~30 words) in a fixed-size card box
+	maxContentLines := 4
+	boxWidth := 66
+	padX := 2
+	padY := 1
+	boxHeight := maxContentLines + (padY * 2) // 6 inner height: 4 content + 2 vertical pad
+
 	startIdx := 0
-	if m.MemorizeCurrentIndex > 25 {
-		startIdx = m.MemorizeCurrentIndex - 25
+	if m.MemorizeCurrentIndex > 30 {
+		startIdx = m.MemorizeCurrentIndex - 30
 	}
 	var passage strings.Builder
-	if startIdx > 0 {
-		passage.WriteString("... ")
-	}
 	for i := startIdx; i < m.MemorizeCurrentIndex; i++ {
 		item := m.MemorizeActiveText.Words[i]
-		if item.Prefix != "" {
-			passage.WriteString(item.Prefix)
-		} else if i > startIdx {
+		pfx := item.Prefix
+		pfx = strings.ReplaceAll(pfx, "\n", " ")
+		pfx = strings.TrimSpace(pfx)
+		if pfx != "" {
+			if passage.Len() > 0 {
+				passage.WriteString(" ")
+			}
+			passage.WriteString(pfx)
+		}
+		if passage.Len() > 0 {
 			passage.WriteString(" ")
 		}
 		passage.WriteString(item.Word)
 	}
 
 	activeItem := m.MemorizeActiveText.Words[m.MemorizeCurrentIndex]
-	if activeItem.Prefix != "" {
-		passage.WriteString(activeItem.Prefix)
-	} else if m.MemorizeCurrentIndex > 0 {
+	activePfx := activeItem.Prefix
+	activePfx = strings.ReplaceAll(activePfx, "\n", " ")
+	activePfx = strings.TrimSpace(activePfx)
+	if activePfx != "" {
+		if passage.Len() > 0 {
+			passage.WriteString(" ")
+		}
+		passage.WriteString(activePfx)
+	}
+	if passage.Len() > 0 {
 		passage.WriteString(" ")
 	}
 	passage.WriteString("[TARGET_BLANK]")
@@ -949,11 +966,31 @@ func (m Model) viewMemorize() string {
 	cardBox := lipgloss.NewStyle().
 		Border(lipgloss.RoundedBorder()).
 		BorderForeground(lipgloss.Color("#BD93F9")).
-		Padding(1, 2).
-		Width(66).
+		Padding(padY, padX).
+		Width(boxWidth).
+		Height(boxHeight).
 		Align(lipgloss.Left)
 
-	b.WriteString(cardBox.Render(renderedPassage) + "\n\n")
+	renderedBox := cardBox.Render(renderedPassage)
+	lines := strings.Split(renderedBox, "\n")
+
+	targetTotal := maxContentLines + (padY * 2) + 2 // 8 lines
+	if len(lines) > targetTotal {
+		topBorder := lines[0]
+		topPad := lines[1]
+		botPad := lines[len(lines)-2]
+		botBorder := lines[len(lines)-1]
+
+		contentLines := lines[2 : len(lines)-2]
+		keptContent := contentLines[len(contentLines)-maxContentLines:]
+
+		result := []string{topBorder, topPad}
+		result = append(result, keptContent...)
+		result = append(result, botPad, botBorder)
+		renderedBox = strings.Join(result, "\n")
+	}
+
+	b.WriteString(renderedBox + "\n\n")
 
 	if m.MemorizeShowFeedback {
 		wrongWord := ""
@@ -962,7 +999,8 @@ func (m Model) viewMemorize() string {
 		}
 		b.WriteString(MemorizeWrongStyle.Render(fmt.Sprintf("✗ Incorrect: \"%s\"", wrongWord)) + "\n")
 		b.WriteString(MemorizeSuccessStyle.Render(fmt.Sprintf("✓ The correct word was: \"%s\"", activeItem.Word)) + "\n\n")
-		b.WriteString(HintStyle.Render("[ Spacebar / Enter to continue  •  [r] Retry this word  •  [o] Options ]"))
+		b.WriteString(HintStyle.Render("[ Spacebar / Enter to continue  •  [r] Retry this word  •  [o] Options ]") + "\n")
+		b.WriteString("\n\n\n\n") // Pad so feedback matches the height of options mode
 		return b.String()
 	}
 
@@ -973,6 +1011,9 @@ func (m Model) viewMemorize() string {
 		numBadge := HintStyle.Render(fmt.Sprintf("(%d)", i+1))
 		optRender := MemorizeCompleted.Render(opt)
 		b.WriteString(fmt.Sprintf("  %s %s  %s\n", keyBadge, numBadge, optRender))
+	}
+	for i := len(m.MemorizeCurrentOptions); i < 5; i++ {
+		b.WriteString("\n")
 	}
 
 	var keyList []string

@@ -8,6 +8,7 @@ import (
 	"testing"
 
 	tea "github.com/charmbracelet/bubbletea"
+	"github.com/charmbracelet/lipgloss"
 	"flashcards/internal/deck"
 	"flashcards/internal/reading"
 )
@@ -1953,6 +1954,69 @@ func TestMemorizePracticeWithTwoOptions(t *testing.T) {
 	}
 	if m.MemorizeMistakes != 1 {
 		t.Errorf("expected 1 mistake, got %d", m.MemorizeMistakes)
+	}
+}
+
+func TestMemorizeBoxFixedDimensionsAndOptionsStability(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	textsDir := filepath.Join("..", "..", "memorizationTexts")
+
+	m := NewWithOptions(decksDir, textsDir)
+	// 'f' -> Enter -> Enter into StateMemorize
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'f'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	if m.State != StateMemorize {
+		t.Fatalf("expected StateMemorize, got %d", m.State)
+	}
+
+	expectedBoxHeight := 8
+	expectedBoxWidth := 68
+	expectedPromptRow := 13
+
+	for _, idx := range []int{0, 1, 2, 5, 10, 15, 20, 25, 30, 40, 60} {
+		m.MemorizeCurrentIndex = idx
+		m.SetupMemorizeWord()
+		view := m.viewMemorize()
+		lines := strings.Split(view, "\n")
+
+		boxStartRow := -1
+		boxEndRow := -1
+		promptRow := -1
+
+		for r, l := range lines {
+			if strings.Contains(l, "╭") {
+				boxStartRow = r
+			}
+			if strings.Contains(l, "╰") {
+				boxEndRow = r
+			}
+			if strings.Contains(l, "Choose the next word") {
+				promptRow = r
+			}
+		}
+
+		if boxStartRow == -1 || boxEndRow == -1 {
+			t.Fatalf("word %d: could not locate box borders in view", idx)
+		}
+
+		boxHeight := boxEndRow - boxStartRow + 1
+		if boxHeight != expectedBoxHeight {
+			t.Errorf("word %d: expected box height %d, got %d", idx, expectedBoxHeight, boxHeight)
+		}
+
+		topBorderWidth := lipgloss.Width(lines[boxStartRow])
+		if topBorderWidth != expectedBoxWidth {
+			t.Errorf("word %d: expected box width %d, got %d", idx, expectedBoxWidth, topBorderWidth)
+		}
+
+		if promptRow != expectedPromptRow {
+			t.Errorf("word %d: expected options prompt at row %d, got %d (options pushed vertically)", idx, expectedPromptRow, promptRow)
+		}
 	}
 }
 
