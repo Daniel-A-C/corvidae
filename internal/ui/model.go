@@ -66,10 +66,14 @@ type Model struct {
 	ShowExplanation bool
 
 	// Quiz state
-	QuizOptions  []string
-	CorrectIndex int
-	ShowFeedback bool
-	IsCorrect    bool
+	QuizOptions    []string
+	CorrectIndex   int
+	ShowFeedback   bool
+	IsCorrect      bool
+	QuizCorrect    int
+	QuizStreak     int
+	QuizPrevStreak int
+	QuizBestStreak int
 
 	// Arabic Academy state
 	ArabicMenuCursor    int
@@ -108,6 +112,7 @@ type Model struct {
 	MemorizeSelectedOption int
 	MemorizeMistakes       int
 	MemorizeStreak         int
+	MemorizePrevStreak     int
 	MemorizeBestStreak     int
 	MemorizeShowFeedback   bool
 	MemorizeIsCorrect      bool
@@ -518,6 +523,10 @@ func (m *Model) SetupQuiz() {
 	m.CurrentIndex = 0
 	m.ShowFeedback = false
 	m.IsCorrect = false
+	m.QuizCorrect = 0
+	m.QuizStreak = 0
+	m.QuizPrevStreak = 0
+	m.QuizBestStreak = 0
 	m.GenerateQuizOptions()
 }
 

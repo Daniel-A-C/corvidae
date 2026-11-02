@@ -49,6 +49,7 @@ var (
 	MemorizeSuccessStyle  = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#50FA7B"))
 	MemorizeWrongStyle    = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FF5555"))
 	MemorizeProgressStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("#50FA7B")).Bold(true)
+	QuizProgressStyle     = lipgloss.NewStyle().Foreground(lipgloss.Color("#50FA7B")).Bold(true)
 
 	// Learn by Reading styles
 	ReadingHeaderStyle         = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#BD93F9"))

@@ -2955,3 +2955,170 @@ func TestQuizEscToMainMenu(t *testing.T) {
 	}
 }
 
+func TestMemorizeMisclickIKnewItButton(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	textsDir := filepath.Join("..", "..", "memorizationTexts")
+
+	m := NewWithOptions(decksDir, textsDir)
+	// Press 'f', then Enter (select text), then Enter (start portion)
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'f'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	if m.State != StateMemorize {
+		t.Fatalf("expected StateMemorize, got %d", m.State)
+	}
+
+	// 1. Submit the CORRECT answer for word 0
+	correctKey := IndexToKey(m.MemorizeCorrectIndex)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(correctKey)})
+	m = updatedM.(Model)
+
+	if m.MemorizeCurrentIndex != 1 || m.MemorizeStreak != 1 || m.MemorizeMistakes != 0 {
+		t.Fatalf("expected index 1, streak 1, mistakes 0, got idx=%d, streak=%d, mistakes=%d",
+			m.MemorizeCurrentIndex, m.MemorizeStreak, m.MemorizeMistakes)
+	}
+
+	// 2. Submit an INCORRECT answer for word 1 (misclick)
+	wrongIdx := (m.MemorizeCorrectIndex + 1) % len(m.MemorizeCurrentOptions)
+	wrongKey := IndexToKey(wrongIdx)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(wrongKey)})
+	m = updatedM.(Model)
+
+	if !m.MemorizeShowFeedback {
+		t.Fatalf("expected MemorizeShowFeedback to be true")
+	}
+	if m.MemorizeMistakes != 1 {
+		t.Fatalf("expected mistakes to be 1, got %d", m.MemorizeMistakes)
+	}
+	if m.MemorizeStreak != 0 {
+		t.Fatalf("expected streak to be reset to 0, got %d", m.MemorizeStreak)
+	}
+
+	// View should contain the button
+	feedbackView := m.View()
+	if !strings.Contains(feedbackView, "I knew it") {
+		t.Errorf("expected feedback view to contain 'I knew it', got:\n%s", feedbackView)
+	}
+
+	// 3. Press 'k' indicating "I knew it (wrong button)"
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'k'}})
+	m = updatedM.(Model)
+
+	if m.MemorizeShowFeedback {
+		t.Errorf("expected feedback dismissed after pressing 'k'")
+	}
+	if m.MemorizeMistakes != 0 {
+		t.Errorf("expected mistakes to be reverted to 0, got %d", m.MemorizeMistakes)
+	}
+	if m.MemorizeStreak != 2 {
+		t.Errorf("expected streak to be restored and incremented to 2, got %d", m.MemorizeStreak)
+	}
+	if m.MemorizeCurrentIndex != 2 {
+		t.Errorf("expected index to advance to 2, got %d", m.MemorizeCurrentIndex)
+	}
+}
+
+func TestQuizProgressBarAndAccuracy(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+	m.Mode = ModeQuiz
+	m.SelectedDir = "Mandarin"
+	m.SelectedFiles["tech.yaml"] = true
+	if err := m.LoadSelectedDecks(); err != nil {
+		t.Fatal(err)
+	}
+	m.SetupQuiz()
+	m.State = StateQuiz
+
+	// Check progress bar and accuracy in initial view
+	view := m.View()
+	if !strings.Contains(view, "Quiz: Question 1 of") {
+		t.Errorf("expected question header, got:\n%s", view)
+	}
+	if !strings.Contains(view, "Accuracy: 100%") {
+		t.Errorf("expected 100%% accuracy initially, got:\n%s", view)
+	}
+	if !strings.Contains(view, "[░░") && !strings.Contains(view, "[██") {
+		t.Errorf("expected progress bar in quiz view, got:\n%s", view)
+	}
+
+	// Answer question 1 correctly
+	correctKey := HummingbirdKeys[m.CorrectIndex]
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(correctKey)})
+	m = updatedM.(Model)
+
+	if !m.IsCorrect || !m.ShowFeedback {
+		t.Fatalf("expected correct feedback")
+	}
+	if m.QuizCorrect != 1 {
+		t.Fatalf("expected QuizCorrect to be 1, got %d", m.QuizCorrect)
+	}
+	feedbackView := m.View()
+	if !strings.Contains(feedbackView, "Accuracy: 100.0%") {
+		t.Errorf("expected 100.0%% accuracy during correct feedback, got:\n%s", feedbackView)
+	}
+	// Correct feedback should NOT show the misclick button
+	if strings.Contains(feedbackView, "I knew it") {
+		t.Errorf("expected correct feedback to NOT show 'I knew it', got:\n%s", feedbackView)
+	}
+
+	// Advance to question 2
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+
+	if m.CurrentIndex != 1 {
+		t.Fatalf("expected CurrentIndex 1, got %d", m.CurrentIndex)
+	}
+
+	// Answer question 2 incorrectly
+	wrongIdx := (m.CorrectIndex + 1) % len(m.QuizOptions)
+	wrongKey := HummingbirdKeys[wrongIdx]
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(wrongKey)})
+	m = updatedM.(Model)
+
+	if m.IsCorrect || !m.ShowFeedback {
+		t.Fatalf("expected incorrect feedback")
+	}
+	if m.QuizCorrect != 1 {
+		t.Fatalf("expected QuizCorrect to still be 1, got %d", m.QuizCorrect)
+	}
+
+	feedbackView2 := m.View()
+	if !strings.Contains(feedbackView2, "Accuracy: 50.0%") {
+		t.Errorf("expected 50.0%% accuracy during incorrect feedback, got:\n%s", feedbackView2)
+	}
+	if !strings.Contains(feedbackView2, "I knew it") {
+		t.Errorf("expected incorrect feedback to show 'I knew it', got:\n%s", feedbackView2)
+	}
+
+	// Press 'k' to indicate "I knew it (wrong button)"
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'k'}})
+	m = updatedM.(Model)
+
+	if !m.IsCorrect {
+		t.Errorf("expected IsCorrect to be changed to true")
+	}
+	if m.QuizCorrect != 2 {
+		t.Errorf("expected QuizCorrect to be updated to 2, got %d", m.QuizCorrect)
+	}
+	if m.CurrentIndex != 2 {
+		t.Errorf("expected CurrentIndex to advance to 2, got %d", m.CurrentIndex)
+	}
+
+	// Quiz should now be complete (tech.yaml has 2 cards)
+	completeView := m.View()
+	if !strings.Contains(completeView, "Quiz complete!") {
+		t.Errorf("expected 'Quiz complete!', got:\n%s", completeView)
+	}
+	if !strings.Contains(completeView, "Score: 2 of 2") {
+		t.Errorf("expected score 2 of 2, got:\n%s", completeView)
+	}
+	if !strings.Contains(completeView, "Accuracy: 100.0%") {
+		t.Errorf("expected 100.0%% accuracy on complete, got:\n%s", completeView)
+	}
+}
+

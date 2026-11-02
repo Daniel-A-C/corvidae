@@ -630,6 +630,19 @@ func (m Model) updateQuiz(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 		case "u":
 			m.unmarkCurrentCard()
 			return m, nil
+		case "k", "K", "w", "W":
+			if !m.IsCorrect {
+				m.QuizCorrect++
+				m.QuizStreak = m.QuizPrevStreak + 1
+				if m.QuizStreak > m.QuizBestStreak {
+					m.QuizBestStreak = m.QuizStreak
+				}
+				m.IsCorrect = true
+				m.ShowFeedback = false
+				m.CurrentIndex++
+				m.GenerateQuizOptions()
+				return m, nil
+			}
 		case " ", "enter":
 			m.ShowFeedback = false
 			m.CurrentIndex++
@@ -649,9 +662,33 @@ func (m Model) updateQuiz(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	}
 
 	choiceIdx := KeyToIndex(msg.String())
+	if choiceIdx == -1 {
+		switch msg.String() {
+		case "1":
+			choiceIdx = 0
+		case "2":
+			choiceIdx = 1
+		case "3":
+			choiceIdx = 2
+		case "4":
+			choiceIdx = 3
+		case "5":
+			choiceIdx = 4
+		}
+	}
 	if choiceIdx != -1 && choiceIdx < len(m.QuizOptions) {
 		m.ShowFeedback = true
 		m.IsCorrect = (choiceIdx == m.CorrectIndex)
+		if m.IsCorrect {
+			m.QuizCorrect++
+			m.QuizStreak++
+			if m.QuizStreak > m.QuizBestStreak {
+				m.QuizBestStreak = m.QuizStreak
+			}
+		} else {
+			m.QuizPrevStreak = m.QuizStreak
+			m.QuizStreak = 0
+		}
 	}
 
 	return m, nil
@@ -1026,6 +1063,25 @@ func (m Model) updateMemorize(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 			}
 			m.SetupMemorizeWord()
 			return m, nil
+		case "k", "K", "w", "W":
+			if m.MemorizeMistakes > 0 {
+				m.MemorizeMistakes--
+			}
+			m.MemorizeStreak = m.MemorizePrevStreak + 1
+			if m.MemorizeStreak > m.MemorizeBestStreak {
+				m.MemorizeBestStreak = m.MemorizeStreak
+			}
+			m.MemorizeShowFeedback = false
+			m.MemorizeCurrentIndex++
+			if m.MemorizeCurrentIndex >= m.PortionEndWordIdx {
+				return m.finishPortion()
+			}
+			m.SetupMemorizeWord()
+			if m.MemorizeCurrentIndex%5 == 0 && m.MemorizeActiveText.FilePath != "" {
+				m.MemorizeActiveText.Progress = m.MemorizeCurrentIndex
+				_ = memorize.SaveText(m.MemorizeActiveText.FilePath, m.MemorizeActiveText)
+			}
+			return m, nil
 		case "r":
 			m.MemorizeShowFeedback = false
 			m.SetupMemorizeWord()
@@ -1077,6 +1133,7 @@ func (m Model) updateMemorize(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 		}
 
 		// Wrong choice
+		m.MemorizePrevStreak = m.MemorizeStreak
 		m.MemorizeStreak = 0
 		m.MemorizeMistakes++
 		m.MemorizeSelectedOption = choiceIdx
@@ -1094,6 +1151,7 @@ func (m Model) updateMemorize(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 		m.MemorizeCurrentIndex = m.PortionStartWordIdx
 		m.MemorizeMistakes = 0
 		m.MemorizeStreak = 0
+		m.MemorizePrevStreak = 0
 		m.SetupMemorizeWord()
 	case "esc", "b":
 		m.State = StateMemorizePortionSelect

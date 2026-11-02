@@ -317,14 +317,48 @@ func (m Model) viewReview() string {
 
 func (m Model) viewQuiz() string {
 	if m.CurrentIndex >= len(m.ActiveCards) {
-		return fmt.Sprintf("Quiz complete!\n\n%s", HintStyle.Render("[r] Retry quiz  •  [Enter / q] Main Menu"))
+		totalCards := len(m.ActiveCards)
+		accStr := "100%"
+		if totalCards > 0 {
+			accStr = fmt.Sprintf("%.1f%%", float64(m.QuizCorrect)/float64(totalCards)*100)
+		}
+		bar := strings.Repeat("█", 26)
+		progressBar := QuizProgressStyle.Render("[" + bar + "]")
+		summary := fmt.Sprintf("Score: %d of %d  •  Accuracy: %s", m.QuizCorrect, totalCards, accStr)
+		return fmt.Sprintf("Quiz complete!\n\n%s\n%s\n\n%s", progressBar, HintStyle.Render(summary), HintStyle.Render("[r] Retry quiz  •  [Enter / q] Main Menu"))
 	}
 
 	ref := m.ActiveCards[m.CurrentIndex]
 	card := m.Decks[ref.Filename].Cards[ref.OrigIdx]
 	isMarked := m.isCardMarked(card)
 
-	header := fmt.Sprintf("Quiz: Question %d of %d", m.CurrentIndex+1, len(m.ActiveCards))
+	totalCards := len(m.ActiveCards)
+	current := m.CurrentIndex
+	pct := 0.0
+	if totalCards > 0 {
+		pct = float64(current) / float64(totalCards) * 100
+	}
+
+	answered := current
+	if m.ShowFeedback {
+		answered = current + 1
+	}
+	accStr := "100%"
+	if answered > 0 {
+		accStr = fmt.Sprintf("%.1f%%", float64(m.QuizCorrect)/float64(answered)*100)
+	}
+
+	barLen := 26
+	filled := 0
+	if totalCards > 0 {
+		filled = int(float64(barLen) * float64(current) / float64(totalCards))
+	}
+	if filled > barLen {
+		filled = barLen
+	}
+	bar := strings.Repeat("█", filled) + strings.Repeat("░", barLen-filled)
+
+	header := fmt.Sprintf("Quiz: Question %d of %d (%.1f%%)  •  Accuracy: %s", m.CurrentIndex+1, totalCards, pct, accStr)
 	if m.ShowFeedback {
 		displayName, err := filepath.Rel(m.BaseDir, ref.Filename)
 		if err != nil {
@@ -336,7 +370,8 @@ func (m Model) viewQuiz() string {
 		header += "  " + MarkedBadgeStyle.Render("★ MARKED")
 	}
 
-	content := HintStyle.Render(header) + "\n\n"
+	content := HintStyle.Render(header) + "\n"
+	content += QuizProgressStyle.Render("["+bar+"]") + "\n\n"
 	content += CharStyle.Render(card.Character) + "\n\n"
 
 	if m.ShowFeedback {
@@ -365,7 +400,12 @@ func (m Model) viewQuiz() string {
 		} else {
 			markHint = fmt.Sprintf("[%s] Mark card  •  ", KeyStyle.Render("m"))
 		}
-		content += HintStyle.Render(fmt.Sprintf("[ %sSpacebar to continue ]", markHint))
+		if !m.IsCorrect {
+			overrideHint := fmt.Sprintf("[%s] I knew it (wrong button)  •  ", KeyStyle.Render("k"))
+			content += HintStyle.Render(fmt.Sprintf("[ %s%sSpacebar to continue ]", markHint, overrideHint))
+		} else {
+			content += HintStyle.Render(fmt.Sprintf("[ %sSpacebar to continue ]", markHint))
+		}
 		return content
 	}
 
@@ -999,7 +1039,7 @@ func (m Model) viewMemorize() string {
 		}
 		b.WriteString(MemorizeWrongStyle.Render(fmt.Sprintf("✗ Incorrect: \"%s\"", wrongWord)) + "\n")
 		b.WriteString(MemorizeSuccessStyle.Render(fmt.Sprintf("✓ The correct word was: \"%s\"", activeItem.Word)) + "\n\n")
-		b.WriteString(HintStyle.Render("[ Spacebar / Enter to continue  •  [r] Retry this word  •  [o] Options ]") + "\n")
+		b.WriteString(HintStyle.Render(fmt.Sprintf("[ Spacebar / Enter to continue  •  [%s] I knew it (wrong button)  •  [r] Retry this word  •  [o] Options ]", KeyStyle.Render("k"))) + "\n")
 		b.WriteString("\n\n\n\n") // Pad so feedback matches the height of options mode
 		return b.String()
 	}
