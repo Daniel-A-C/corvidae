@@ -769,7 +769,7 @@ func (m Model) viewMemorizeSelectText() string {
 		content += fmt.Sprintf("%s%s%s%s\n", CursorStyle.Render(cursor), keyBadge, label, infoStr)
 	}
 
-	content += "\n" + HintStyle.Render("(Press key or Enter to select text, Esc to return, q to quit)")
+	content += "\n" + HintStyle.Render(fmt.Sprintf("(Press key or Enter to select text  •  [o / 2-5] Options: %d  •  Esc to return  •  q to quit)", m.MemorizeOptionCount))
 	return content
 }
 
@@ -801,8 +801,8 @@ func (m Model) viewMemorizePortionSelect() string {
 	if totalWords > 0 {
 		pctRange = float64(portionWords) / float64(totalWords) * 100
 	}
-	summary := fmt.Sprintf("Selected: %s  •  %d sections  •  %d of %d words (%.1f%%)",
-		rangeLabel, numSections, portionWords, totalWords, pctRange)
+	summary := fmt.Sprintf("Selected: %s  •  %d sections  •  %d of %d words (%.1f%%)  •  Options: %d",
+		rangeLabel, numSections, portionWords, totalWords, pctRange, m.MemorizeOptionCount)
 	b.WriteString(MemorizeSubStyle.Render(summary) + "\n\n")
 
 	// Selector rows with indicators
@@ -865,7 +865,7 @@ func (m Model) viewMemorizePortionSelect() string {
 	}
 
 	b.WriteString("\n" + HintStyle.Render("[Tab / ↑↓] Switch Start/End  •  [←→ / hl] Shift  •  [x] Expand  •  [n] Advance") + "\n")
-	b.WriteString(HintStyle.Render("[a] Select All  •  [Enter / Space] Practice Portion  •  [Esc] Back"))
+	b.WriteString(HintStyle.Render(fmt.Sprintf("[o / 2-5] Options: %d  •  [a] Select All  •  [Enter / Space] Practice Portion  •  [Esc] Back", m.MemorizeOptionCount)))
 	return b.String()
 }
 
@@ -909,8 +909,8 @@ func (m Model) viewMemorize() string {
 
 	var b strings.Builder
 	b.WriteString(MemorizeHeaderStyle.Render(fmt.Sprintf("★ %s%s ★", m.MemorizeActiveText.Title, portionTitle)) + "\n")
-	b.WriteString(HintStyle.Render(fmt.Sprintf("Portion Word %d of %d (%.1f%%)  •  Accuracy: %s  •  Streak: %d",
-		currentInPortion+1, totalPortionWords, pct, accStr, m.MemorizeStreak)) + "\n")
+	b.WriteString(HintStyle.Render(fmt.Sprintf("Portion Word %d of %d (%.1f%%)  •  Accuracy: %s  •  Streak: %d  •  Options: %d",
+		currentInPortion+1, totalPortionWords, pct, accStr, m.MemorizeStreak, len(m.MemorizeCurrentOptions))) + "\n")
 	b.WriteString(MemorizeProgressStyle.Render("["+bar+"]") + "\n\n")
 
 	// Build rolling text window (last ~25 words)
@@ -962,11 +962,11 @@ func (m Model) viewMemorize() string {
 		}
 		b.WriteString(MemorizeWrongStyle.Render(fmt.Sprintf("✗ Incorrect: \"%s\"", wrongWord)) + "\n")
 		b.WriteString(MemorizeSuccessStyle.Render(fmt.Sprintf("✓ The correct word was: \"%s\"", activeItem.Word)) + "\n\n")
-		b.WriteString(HintStyle.Render("[ Spacebar / Enter to continue  •  [r] Retry this word ]"))
+		b.WriteString(HintStyle.Render("[ Spacebar / Enter to continue  •  [r] Retry this word  •  [o] Options ]"))
 		return b.String()
 	}
 
-	b.WriteString("Choose the next word:\n\n")
+	b.WriteString(fmt.Sprintf("Choose the next word (%d options):\n\n", len(m.MemorizeCurrentOptions)))
 	for i, opt := range m.MemorizeCurrentOptions {
 		key := IndexToKey(i)
 		keyBadge := KeyStyle.Render(fmt.Sprintf("[%s]", key))
@@ -975,7 +975,15 @@ func (m Model) viewMemorize() string {
 		b.WriteString(fmt.Sprintf("  %s %s  %s\n", keyBadge, numBadge, optRender))
 	}
 
-	b.WriteString("\n" + HintStyle.Render("(Press key [a/s/d/f/g] or [1-5] to select  •  [r] Restart  •  [Esc] Back  •  [q] Quit)"))
+	var keyList []string
+	for i := 0; i < len(m.MemorizeCurrentOptions); i++ {
+		keyList = append(keyList, IndexToKey(i))
+	}
+	keyStr := strings.Join(keyList, "/")
+	numStr := fmt.Sprintf("1-%d", len(m.MemorizeCurrentOptions))
+
+	b.WriteString("\n" + HintStyle.Render(fmt.Sprintf("(Press key [%s] or [%s] to select  •  [o] Options (%d)  •  [r] Restart  •  [Esc] Back  •  [q] Quit)",
+		keyStr, numStr, len(m.MemorizeCurrentOptions))))
 	return b.String()
 }
 
@@ -999,9 +1007,10 @@ func (m Model) viewMemorizeComplete() string {
 	b.WriteString(fmt.Sprintf("Total Words:    %d\n", totalWords))
 	b.WriteString(fmt.Sprintf("First-Try Acc:  %.1f%%\n", acc))
 	b.WriteString(fmt.Sprintf("Mistakes:       %d\n", m.MemorizeMistakes))
-	b.WriteString(fmt.Sprintf("Best Streak:    %d words\n\n", m.MemorizeBestStreak))
+	b.WriteString(fmt.Sprintf("Best Streak:    %d words\n", m.MemorizeBestStreak))
+	b.WriteString(fmt.Sprintf("Options:        %d\n\n", m.MemorizeOptionCount))
 
-	b.WriteString(HintStyle.Render("[r] Memorize again  •  [Enter] Select another text  •  [q] Quit"))
+	b.WriteString(HintStyle.Render(fmt.Sprintf("[o / 2-5] Options: %d  •  [r] Memorize again  •  [Enter] Select another text  •  [q] Quit", m.MemorizeOptionCount)))
 
 	cardBox := lipgloss.NewStyle().
 		Border(lipgloss.RoundedBorder()).

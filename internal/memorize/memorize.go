@@ -29,14 +29,15 @@ type WordItem struct {
 
 // Text represents a full text to be memorized, with metadata and items.
 type Text struct {
-	Title       string     `yaml:"title" json:"title"`
-	Language    string     `yaml:"language,omitempty" json:"language,omitempty"`
-	Description string     `yaml:"description,omitempty" json:"description,omitempty"`
-	Progress    int        `yaml:"progress,omitempty" json:"progress,omitempty"`
-	BestStreak  int        `yaml:"best_streak,omitempty" json:"best_streak,omitempty"`
-	Mistakes    int        `yaml:"mistakes,omitempty" json:"mistakes,omitempty"`
-	Words       []WordItem `yaml:"words" json:"words"`
-	FilePath    string     `yaml:"-" json:"-"`
+	Title        string     `yaml:"title" json:"title"`
+	Language     string     `yaml:"language,omitempty" json:"language,omitempty"`
+	Description  string     `yaml:"description,omitempty" json:"description,omitempty"`
+	Progress     int        `yaml:"progress,omitempty" json:"progress,omitempty"`
+	BestStreak   int        `yaml:"best_streak,omitempty" json:"best_streak,omitempty"`
+	Mistakes     int        `yaml:"mistakes,omitempty" json:"mistakes,omitempty"`
+	OptionsCount int        `yaml:"options_count,omitempty" json:"options_count,omitempty"`
+	Words        []WordItem `yaml:"words" json:"words"`
+	FilePath     string     `yaml:"-" json:"-"`
 }
 
 // TextHeader provides summary information for listing available memorization texts.
@@ -495,34 +496,61 @@ func contains(slice []string, s string) bool {
 
 // ShuffleOptions prepares a randomized slice of options for the given item,
 // and returns the shuffled options along with the 0-based index of the correct option.
-func ShuffleOptions(item WordItem) ([]string, int) {
-	opts := make([]string, len(item.Options))
-	copy(opts, item.Options)
+// An optional count parameter specifies the desired number of options (typically 2 to 5).
+// When omitted or <= 0, it defaults to len(item.Options) (or 5 if item.Options is empty).
+func ShuffleOptions(item WordItem, count ...int) ([]string, int) {
+	desired := len(item.Options)
+	if len(count) > 0 && count[0] > 0 {
+		desired = count[0]
+		if desired < 2 {
+			desired = 2
+		}
+		if desired > 5 {
+			desired = 5
+		}
+	} else if desired <= 0 {
+		desired = 5
+	}
 
-	// Ensure target word is in options
-	found := false
-	for _, o := range opts {
-		if o == item.Word {
-			found = true
-			break
+	target := item.Word
+
+	// Collect unique distractors that are not equal to the target word
+	var distractors []string
+	seen := make(map[string]bool)
+	for _, o := range item.Options {
+		if o != target && !seen[o] {
+			seen[o] = true
+			distractors = append(distractors, o)
 		}
 	}
-	if !found {
-		if len(opts) == 0 {
-			opts = []string{item.Word}
-		} else {
-			opts[0] = item.Word
-		}
+
+	// Shuffle distractors to get a random subset
+	rand.Shuffle(len(distractors), func(i, j int) { distractors[i], distractors[j] = distractors[j], distractors[i] })
+
+	numDistractors := desired - 1
+	if numDistractors > len(distractors) {
+		numDistractors = len(distractors)
+	}
+
+	var opts []string
+	opts = append(opts, target)
+	if numDistractors > 0 {
+		opts = append(opts, distractors[:numDistractors]...)
 	}
 
 	rand.Shuffle(len(opts), func(i, j int) { opts[i], opts[j] = opts[j], opts[i] })
 
 	correctIdx := 0
 	for i, o := range opts {
-		if o == item.Word {
+		if o == target {
 			correctIdx = i
 			break
 		}
 	}
 	return opts, correctIdx
+}
+
+// ShuffleOptionsWithCount prepares a randomized slice with a specific number of options for the given item.
+func ShuffleOptionsWithCount(item WordItem, count int) ([]string, int) {
+	return ShuffleOptions(item, count)
 }

@@ -1789,6 +1789,173 @@ func TestMemorizeBackEscNavigation(t *testing.T) {
 	}
 }
 
+func TestMemorizeOptionCountSetting(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	textsDir := filepath.Join("..", "..", "memorizationTexts")
+
+	m := NewWithOptions(decksDir, textsDir)
+	if m.MemorizeOptionCount != 5 {
+		t.Fatalf("expected default MemorizeOptionCount to be 5, got %d", m.MemorizeOptionCount)
+	}
+
+	// 1. In StateMemorizeSelectText:
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'f'}})
+	m = updatedM.(Model)
+	if m.State != StateMemorizeSelectText {
+		t.Fatalf("expected StateMemorizeSelectText, got %d", m.State)
+	}
+
+	// Press 'o' to cycle: 5 -> 2
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'o'}})
+	m = updatedM.(Model)
+	if m.MemorizeOptionCount != 2 {
+		t.Errorf("expected MemorizeOptionCount to cycle to 2, got %d", m.MemorizeOptionCount)
+	}
+
+	// Press '4' to set directly to 4
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'4'}})
+	m = updatedM.(Model)
+	if m.MemorizeOptionCount != 4 {
+		t.Errorf("expected MemorizeOptionCount to be set to 4, got %d", m.MemorizeOptionCount)
+	}
+
+	// Check view rendered in SelectText contains options info
+	viewText := m.View()
+	if !strings.Contains(viewText, "Options: 4") {
+		t.Errorf("expected SelectText view to contain 'Options: 4', got: %s", viewText)
+	}
+
+	// 2. In StateMemorizePortionSelect:
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	if m.State != StateMemorizePortionSelect {
+		t.Fatalf("expected StateMemorizePortionSelect, got %d", m.State)
+	}
+	if m.MemorizeOptionCount != 4 {
+		t.Errorf("expected MemorizeOptionCount to stay 4 in PortionSelect, got %d", m.MemorizeOptionCount)
+	}
+
+	// Press 'o' to cycle: 4 -> 5
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'o'}})
+	m = updatedM.(Model)
+	if m.MemorizeOptionCount != 5 {
+		t.Errorf("expected MemorizeOptionCount to cycle to 5, got %d", m.MemorizeOptionCount)
+	}
+
+	// Press '3' to set directly to 3
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'3'}})
+	m = updatedM.(Model)
+	if m.MemorizeOptionCount != 3 {
+		t.Errorf("expected MemorizeOptionCount to be set to 3, got %d", m.MemorizeOptionCount)
+	}
+
+	portionView := m.View()
+	if !strings.Contains(portionView, "Options: 3") {
+		t.Errorf("expected PortionSelect view to contain 'Options: 3', got: %s", portionView)
+	}
+
+	// 3. Enter StateMemorize:
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	if m.State != StateMemorize {
+		t.Fatalf("expected StateMemorize, got %d", m.State)
+	}
+	if len(m.MemorizeCurrentOptions) != 3 {
+		t.Fatalf("expected 3 options in Memorize mode, got %d", len(m.MemorizeCurrentOptions))
+	}
+
+	// Verify view rendering in Memorize mode
+	memView := m.View()
+	if !strings.Contains(memView, "Options: 3") {
+		t.Errorf("expected Memorize view to display 'Options: 3', got: %s", memView)
+	}
+	if !strings.Contains(memView, "(Press key [a/s/d] or [1-3] to select") {
+		t.Errorf("expected hint to show [a/s/d] and [1-3], got: %s", memView)
+	}
+
+	// Cycle options in active Memorize mode with 'o': 3 -> 4
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'o'}})
+	m = updatedM.(Model)
+	if m.MemorizeOptionCount != 4 || len(m.MemorizeCurrentOptions) != 4 {
+		t.Errorf("expected 4 options after cycling with 'o', got count %d, len %d", m.MemorizeOptionCount, len(m.MemorizeCurrentOptions))
+	}
+	memView4 := m.View()
+	if !strings.Contains(memView4, "(Press key [a/s/d/f] or [1-4] to select") {
+		t.Errorf("expected hint to show [a/s/d/f] and [1-4], got: %s", memView4)
+	}
+
+	// Cycle again: 4 -> 5
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'o'}})
+	m = updatedM.(Model)
+	if m.MemorizeOptionCount != 5 || len(m.MemorizeCurrentOptions) != 5 {
+		t.Errorf("expected 5 options after cycling with 'o', got count %d, len %d", m.MemorizeOptionCount, len(m.MemorizeCurrentOptions))
+	}
+
+	// Cycle again: 5 -> 2
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'o'}})
+	m = updatedM.(Model)
+	if m.MemorizeOptionCount != 2 || len(m.MemorizeCurrentOptions) != 2 {
+		t.Errorf("expected 2 options after cycling with 'o', got count %d, len %d", m.MemorizeOptionCount, len(m.MemorizeCurrentOptions))
+	}
+	memView2 := m.View()
+	if !strings.Contains(memView2, "(Press key [a/s] or [1-2] to select") {
+		t.Errorf("expected hint to show [a/s] and [1-2], got: %s", memView2)
+	}
+}
+
+func TestMemorizePracticeWithTwoOptions(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	textsDir := filepath.Join("..", "..", "memorizationTexts")
+
+	m := NewWithOptions(decksDir, textsDir)
+	m.SetMemorizeOptionCount(2)
+
+	// 'f' -> Enter -> Enter
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'f'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	if m.State != StateMemorize {
+		t.Fatalf("expected StateMemorize, got %d", m.State)
+	}
+	if len(m.MemorizeCurrentOptions) != 2 {
+		t.Fatalf("expected 2 options, got %d", len(m.MemorizeCurrentOptions))
+	}
+
+	// Keys '3', '4', '5' should be ignored and not trigger feedback or advance
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'3'}})
+	m = updatedM.(Model)
+	if m.MemorizeCurrentIndex != 0 || m.MemorizeShowFeedback {
+		t.Errorf("expected key '3' to be ignored when only 2 options exist")
+	}
+
+	// Submit correct answer
+	correctKey := IndexToKey(m.MemorizeCorrectIndex)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(correctKey)})
+	m = updatedM.(Model)
+	if m.MemorizeCurrentIndex != 1 {
+		t.Errorf("expected index 1 after correct answer, got %d", m.MemorizeCurrentIndex)
+	}
+	if m.MemorizeStreak != 1 {
+		t.Errorf("expected streak 1, got %d", m.MemorizeStreak)
+	}
+
+	// Submit incorrect answer (other index in 2 options)
+	wrongIdx := 1 - m.MemorizeCorrectIndex
+	wrongKey := IndexToKey(wrongIdx)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(wrongKey)})
+	m = updatedM.(Model)
+	if !m.MemorizeShowFeedback {
+		t.Errorf("expected feedback on wrong answer")
+	}
+	if m.MemorizeMistakes != 1 {
+		t.Errorf("expected 1 mistake, got %d", m.MemorizeMistakes)
+	}
+}
+
 func TestReadingModeSelectAndNavigate(t *testing.T) {
 	decksDir := setupTestDecks(t)
 	textsDir := filepath.Join("..", "..", "memorizationTexts")

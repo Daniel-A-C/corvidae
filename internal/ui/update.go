@@ -841,6 +841,15 @@ func (m Model) updateMemorizeSelectText(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 		return m, nil
 	}
 
+	switch msg.String() {
+	case "o", "O":
+		m.CycleMemorizeOptionCount()
+		return m, nil
+	case "2", "3", "4", "5":
+		m.SetMemorizeOptionCount(int(msg.String()[0] - '0'))
+		return m, nil
+	}
+
 	idx := KeyToIndex(msg.String())
 	if idx >= 0 && idx < len(m.MemorizeTexts) {
 		m.MemorizeCursor = idx
@@ -978,6 +987,14 @@ func (m Model) updateMemorizePortionSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) 
 		m.PortionStartSection = 0
 		m.PortionEndSection = numSecs - 1
 
+	case "o", "O":
+		m.CycleMemorizeOptionCount()
+		return m, nil
+
+	case "2", "3", "4", "5":
+		m.SetMemorizeOptionCount(int(msg.String()[0] - '0'))
+		return m, nil
+
 	case "1":
 		// Collapse to single section
 		m.PortionEndSection = m.PortionStartSection
@@ -1010,6 +1027,11 @@ func (m Model) updateMemorize(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 			m.SetupMemorizeWord()
 			return m, nil
 		case "r":
+			m.MemorizeShowFeedback = false
+			m.SetupMemorizeWord()
+			return m, nil
+		case "o", "O":
+			m.CycleMemorizeOptionCount()
 			m.MemorizeShowFeedback = false
 			m.SetupMemorizeWord()
 			return m, nil
@@ -1064,6 +1086,10 @@ func (m Model) updateMemorize(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	}
 
 	switch msg.String() {
+	case "o", "O":
+		m.CycleMemorizeOptionCount()
+		m.SetupMemorizeWord()
+		return m, nil
 	case "r":
 		m.MemorizeCurrentIndex = m.PortionStartWordIdx
 		m.MemorizeMistakes = 0
@@ -1107,6 +1133,12 @@ func (m Model) finishPortion() (tea.Model, tea.Cmd) {
 
 func (m Model) updateMemorizeComplete(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	switch msg.String() {
+	case "o", "O":
+		m.CycleMemorizeOptionCount()
+		return m, nil
+	case "2", "3", "4", "5":
+		m.SetMemorizeOptionCount(int(msg.String()[0] - '0'))
+		return m, nil
 	case "r":
 		m.MemorizeCurrentIndex = m.PortionStartWordIdx
 		m.MemorizeMistakes = 0

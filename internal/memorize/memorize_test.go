@@ -52,6 +52,47 @@ func TestShuffleOptions(t *testing.T) {
 	if shuffled[correctIdx] != "Pablo," {
 		t.Errorf("expected shuffled[%d] to be 'Pablo,', got '%s'", correctIdx, shuffled[correctIdx])
 	}
+
+	// Test specific counts from 2 to 5
+	for count := 2; count <= 5; count++ {
+		opts, idx := ShuffleOptions(item, count)
+		if len(opts) != count {
+			t.Errorf("expected %d options for count %d, got %d", count, count, len(opts))
+		}
+		if idx < 0 || idx >= count {
+			t.Errorf("invalid idx %d for count %d", idx, count)
+		}
+		if opts[idx] != "Pablo," {
+			t.Errorf("expected opts[%d] to be 'Pablo,', got '%s'", idx, opts[idx])
+		}
+		// Ensure unique options
+		seen := make(map[string]bool)
+		for _, o := range opts {
+			if seen[o] {
+				t.Errorf("duplicate option '%s' found for count %d", o, count)
+			}
+			seen[o] = true
+		}
+	}
+
+	// Test ShuffleOptionsWithCount
+	opts3, idx3 := ShuffleOptionsWithCount(item, 3)
+	if len(opts3) != 3 {
+		t.Errorf("expected 3 options from ShuffleOptionsWithCount, got %d", len(opts3))
+	}
+	if opts3[idx3] != "Pablo," {
+		t.Errorf("expected correct option to be 'Pablo,', got '%s'", opts3[idx3])
+	}
+
+	// Test clamping below 2 and above 5
+	optsLow, _ := ShuffleOptions(item, 1)
+	if len(optsLow) != 2 {
+		t.Errorf("expected clamped to 2 options for count 1, got %d", len(optsLow))
+	}
+	optsHigh, _ := ShuffleOptions(item, 10)
+	if len(optsHigh) != 5 {
+		t.Errorf("expected clamped to 5 options for count 10, got %d", len(optsHigh))
+	}
 }
 
 func TestListTextsAndAutoGenerate(t *testing.T) {

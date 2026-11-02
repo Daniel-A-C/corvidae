@@ -64,6 +64,7 @@ Corvidae can be pointed to custom directories from anywhere:
 | `--decks` | `-d` | `decks` | Path to flashcard decks directory |
 | `--texts` | `-t` | `memorizationTexts` | Path to memorization texts directory |
 | `--reading` | `-r` | `readingTranslationTexts` | Path to reading translation texts directory |
+| `--options` | `-o` | `5` | Number of choices in Memorize by Options mode (2–5) |
 | `--help` | `-h` | — | Show command-line help and usage |
 
 Example:
@@ -178,9 +179,17 @@ Memorize complete texts (scripture, poetry, speeches, prose) word-by-word throug
    - Use `[←→ / hl]` to adjust the focused boundary.
    - Hotkeys: `[` / `]` adjust Start; `{` / `}` (or `-` / `+`) adjust End.
    - Quick Actions: `[x]` expands portion (+1 verse); `[n]` advances to the next continuous portion chunk.
-2. **Word-by-Word Flow:** Each word presents 5 plausible options. Select using home row `[a, s, d, f, g]` or `[1-5]`.
-3. **Streak & Mistake Feedback:** Correct answers advance instantly for fluid recitation; mistakes are highlighted with corrective feedback.
-4. **Auto-Generation:** Place any raw `.txt` file in `memorizationTexts/`; Corvidae automatically parses verses, generates plausible distractors, and creates a companion `.yaml` file.
+2. **Configurable Option Count (2 to 5 Choices):** Adjust how many choices appear for each word:
+   - Press `[o]` to cycle options (`5 ➔ 2 ➔ 3 ➔ 4 ➔ 5`) in text selection, portion selection, or mid-practice.
+   - Press `[2-5]` to set the option count directly on the selection screens.
+   - Set on startup via `-o <2-5>` or `--options <2-5>`.
+3. **Adaptive Word-by-Word Flow:** Each word presents 2 to 5 plausible options based on your setting. Select using home row keys or numbers:
+   - 2 options: `[a, s]` or `[1, 2]`
+   - 3 options: `[a, s, d]` or `[1-3]`
+   - 4 options: `[a, s, d, f]` or `[1-4]`
+   - 5 options: `[a, s, d, f, g]` or `[1-5]`
+4. **Streak & Mistake Feedback:** Correct answers advance instantly for fluid recitation; mistakes are highlighted with corrective feedback.
+5. **Auto-Generation:** Place any raw `.txt` file in `memorizationTexts/`; Corvidae automatically parses verses, generates plausible distractors, and creates a companion `.yaml` file.
 
 Example `memorizationTexts/filemon.yaml`:
 ```yaml

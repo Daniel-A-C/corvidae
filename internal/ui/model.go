@@ -101,6 +101,7 @@ type Model struct {
 	PortionStartWordIdx    int
 	PortionEndWordIdx      int
 	PortionCompletedMsg    string
+	MemorizeOptionCount    int // Number of options per word: 2 to 5 (default 5)
 	MemorizeCurrentIndex   int
 	MemorizeCurrentOptions []string
 	MemorizeCorrectIndex   int
@@ -146,15 +147,16 @@ func NewWithOptions(baseDir, textsDir string, readingDir ...string) Model {
 	prog, _ := reading.LoadProgress(filepath.Join(rd, "reading_progress.yaml"))
 
 	m := Model{
-		BaseDir:         baseDir,
-		TextsDir:        textsDir,
-		ReadingDir:      rd,
-		ReadingProgress: prog,
-		State:           StateModeSelect,
-		Mode:            ModeReview,
-		Dirs:            dirs,
-		SelectedFiles:   make(map[string]bool),
-		Err:             err,
+		BaseDir:             baseDir,
+		TextsDir:            textsDir,
+		ReadingDir:          rd,
+		ReadingProgress:     prog,
+		State:               StateModeSelect,
+		Mode:                ModeReview,
+		Dirs:                dirs,
+		SelectedFiles:       make(map[string]bool),
+		MemorizeOptionCount: 5,
+		Err:                 err,
 	}
 	m.LoadMarkedDeck()
 	m.LoadPersistedSelectedDecks()
@@ -588,14 +590,41 @@ func (m *Model) SetupArabicDrill(dType arabic.DrillType, stageIdx int) {
 	}
 }
 
+// SetMemorizeOptionCount sets the number of options (2 to 5) shown in Memorize mode.
+func (m *Model) SetMemorizeOptionCount(count int) {
+	if count < 2 {
+		count = 2
+	} else if count > 5 {
+		count = 5
+	}
+	m.MemorizeOptionCount = count
+	if m.MemorizeActiveText != nil {
+		m.MemorizeActiveText.OptionsCount = count
+	}
+}
+
+// CycleMemorizeOptionCount cycles the number of options through 2 -> 3 -> 4 -> 5 -> 2.
+func (m *Model) CycleMemorizeOptionCount() {
+	next := m.MemorizeOptionCount + 1
+	if next > 5 || next < 2 {
+		next = 2
+	}
+	m.SetMemorizeOptionCount(next)
+}
+
 // SetupMemorizeWord configures options for the active word in Memorize mode.
 func (m *Model) SetupMemorizeWord() {
 	if m.MemorizeActiveText == nil || m.MemorizeCurrentIndex >= len(m.MemorizeActiveText.Words) {
 		m.State = StateMemorizeComplete
 		return
 	}
+	optCount := m.MemorizeOptionCount
+	if optCount < 2 || optCount > 5 {
+		optCount = 5
+		m.MemorizeOptionCount = 5
+	}
 	item := m.MemorizeActiveText.Words[m.MemorizeCurrentIndex]
-	m.MemorizeCurrentOptions, m.MemorizeCorrectIndex = memorize.ShuffleOptions(item)
+	m.MemorizeCurrentOptions, m.MemorizeCorrectIndex = memorize.ShuffleOptions(item, optCount)
 	m.MemorizeShowFeedback = false
 	m.MemorizeSelectedOption = -1
 	m.MemorizeIsCorrect = false
@@ -608,6 +637,9 @@ func (m *Model) SelectMemorizeText(filePath string) error {
 		return err
 	}
 	m.MemorizeActiveText = loaded
+	if loaded.OptionsCount >= 2 && loaded.OptionsCount <= 5 {
+		m.MemorizeOptionCount = loaded.OptionsCount
+	}
 	m.MemorizeSections = loaded.GetSections()
 	m.PortionStartSection = 0
 	if len(m.MemorizeSections) > 0 {
