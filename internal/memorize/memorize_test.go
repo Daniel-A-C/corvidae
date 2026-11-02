@@ -157,3 +157,60 @@ func TestGetSections(t *testing.T) {
 	}
 }
 
+func TestLoadAllMemorizationTexts(t *testing.T) {
+	textsDir := filepath.Join("..", "..", "memorizationTexts")
+	headers, err := ListTexts(textsDir)
+	if err != nil {
+		t.Fatalf("ListTexts failed: %v", err)
+	}
+
+	expectedTitles := map[string]bool{
+		"Epístola a Filemón": true,
+		"Galatians 1":        true,
+		"Galatians 2":        true,
+		"Galatians 3":        true,
+		"Galatians 4":        true,
+		"Galatians 5":        true,
+		"Galatians 6":        true,
+		"Obadiah":            true,
+	}
+
+	for _, h := range headers {
+		delete(expectedTitles, h.Title)
+		loaded, err := LoadText(h.FullPath)
+		if err != nil {
+			t.Errorf("failed to load %s: %v", h.FullPath, err)
+			continue
+		}
+		if len(loaded.Words) == 0 {
+			t.Errorf("%s has 0 words", h.Title)
+		}
+		for i, w := range loaded.Words {
+			if len(w.Options) != 5 {
+				t.Errorf("%s word %d (%s) has %d options, expected 5", h.Title, i, w.Word, len(w.Options))
+				break
+			}
+			found := false
+			for _, opt := range w.Options {
+				if opt == w.Word {
+					found = true
+					break
+				}
+			}
+			if !found {
+				t.Errorf("%s word %d (%s) target not found in options %v", h.Title, i, w.Word, w.Options)
+				break
+			}
+		}
+		sections := loaded.GetSections()
+		if len(sections) == 0 {
+			t.Errorf("%s has 0 sections", h.Title)
+		}
+	}
+
+	if len(expectedTitles) > 0 {
+		t.Errorf("missing expected titles: %v", expectedTitles)
+	}
+}
+
+

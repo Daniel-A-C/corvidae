@@ -1,0 +1,3087 @@
+title: Galatians 5
+language: English
+description: Galatians Chapter 5 (ESV)
+words:
+    - word: For
+      options:
+        - For
+        - Again
+        - From
+        - Well
+        - Stand
+    - word: freedom
+      options:
+        - freedom
+        - these
+        - slavery
+        - anger
+        - jealousy
+    - word: Christ
+      options:
+        - Christ
+        - Preach
+        - Envy
+        - This
+        - Love
+    - word: has
+      options:
+        - has
+        - there
+        - stand
+        - led
+        - firm
+    - word: set
+      options:
+        - set
+        - but
+        - this
+        - i
+        - would
+    - word: us
+      options:
+        - us
+        - well
+        - one
+        - have
+        - you
+    - word: free;
+      options:
+        - free;
+        - out;
+        - under;
+        - bite;
+        - in;
+    - word: stand
+      options:
+        - stand
+        - works
+        - man
+        - like
+        - orgies
+    - word: firm
+      options:
+        - firm
+        - envy
+        - grace
+        - fruit
+        - belong
+    - word: therefore,
+      options:
+        - therefore,
+        - obligated,
+        - whoever,
+        - dissensions,
+        - working,
+    - word: and
+      options:
+        - and
+        - lord
+        - being
+        - step
+        - in
+    - word: do
+      options:
+        - do
+        - only
+        - now
+        - is
+        - am
+    - word: not
+      options:
+        - not
+        - watch
+        - doing
+        - use
+        - flesh
+    - word: submit
+      options:
+        - submit
+        - there
+        - envy
+        - keep
+        - every
+    - word: again
+      options:
+        - again
+        - led
+        - fruit
+        - under
+        - spirit
+    - word: to
+      options:
+        - to
+        - you
+        - an
+        - such
+        - be
+    - word: a
+      options:
+        - a
+        - are
+        - not
+        - why
+        - as
+    - word: yoke
+      options:
+        - yoke
+        - him
+        - such
+        - joy
+        - away
+    - word: of
+      options:
+        - of
+        - its
+        - each
+        - joy
+        - god
+    - word: slavery.
+      options:
+        - slavery.
+        - little.
+        - serve.
+        - neighbor.
+        - conceited.
+    - word: 'Look:'
+      options:
+        - 'Look:'
+        - 'Envy:'
+        - 'Away:'
+        - 'Not:'
+        - 'Say:'
+      prefix: |4+
+
+    - word: I,
+      options:
+        - I,
+        - As,
+        - But,
+        - Out,
+        - The,
+    - word: Paul,
+      options:
+        - Paul,
+        - Look,
+        - Leaven,
+        - Man,
+        - Counts,
+    - word: say
+      options:
+        - say
+        - yoke
+        - watch
+        - look
+        - a
+    - word: to
+      options:
+        - to
+        - if
+        - lord
+        - been
+        - man
+    - word: you
+      options:
+        - you
+        - well
+        - not
+        - him
+        - again
+    - word: that
+      options:
+        - that
+        - we
+        - do
+        - one
+        - as
+    - word: if
+      options:
+        - if
+        - this
+        - man
+        - as
+        - him
+    - word: you
+      options:
+        - you
+        - word
+        - he
+        - away
+        - nor
+    - word: accept
+      options:
+        - accept
+        - again
+        - watch
+        - testify
+        - that
+    - word: circumcision,
+      options:
+        - circumcision,
+        - persuasion,
+        - persecuted,
+        - faithfulness,
+        - opportunity,
+    - word: Christ
+      options:
+        - Christ
+        - Wait
+        - Well
+        - Being
+        - Freedom
+    - word: will
+      options:
+        - will
+        - such
+        - faith
+        - hope
+        - away
+    - word: be
+      options:
+        - be
+        - away
+        - keep
+        - i
+        - free
+    - word: of
+      options:
+        - of
+        - love
+        - live
+        - has
+        - in
+    - word: "no"
+      options:
+        - "no"
+        - word
+        - bear
+        - also
+        - fits
+    - word: advantage
+      options:
+        - advantage
+        - patience
+        - working
+        - obeying
+        - idolatry
+    - word: to
+      options:
+        - to
+        - now
+        - are
+        - a
+        - that
+    - word: you.
+      options:
+        - you.
+        - god.
+        - fruit.
+        - an.
+        - walk.
+    - word: I
+      options:
+        - I
+        - Set
+        - Say
+        - By
+        - Is
+    - word: testify
+      options:
+        - testify
+        - devour
+        - obligated
+        - truth
+        - inherit
+    - word: again
+      options:
+        - again
+        - watch
+        - against
+        - its
+        - gratify
+    - word: to
+      options:
+        - to
+        - its
+        - now
+        - warn
+        - has
+    - word: every
+      options:
+        - every
+        - man
+        - those
+        - but
+        - being
+    - word: man
+      options:
+        - man
+        - other
+        - keep
+        - stand
+        - "no"
+    - word: who
+      options:
+        - who
+        - shall
+        - wish
+        - envy
+        - only
+    - word: accepts
+      options:
+        - accepts
+        - gratify
+        - those
+        - troubling
+        - serve
+    - word: circumcision
+      options:
+        - circumcision
+        - opportunity
+        - gentleness
+        - persuasion
+        - immorality
+    - word: that
+      options:
+        - that
+        - one
+        - but
+        - lord
+        - called
+    - word: he
+      options:
+        - he
+        - set
+        - been
+        - look
+        - a
+    - word: is
+      options:
+        - is
+        - now
+        - walk
+        - its
+        - that
+    - word: obligated
+      options:
+        - obligated
+        - slavery
+        - offense
+        - goodness
+        - leavens
+    - word: to
+      options:
+        - to
+        - joy
+        - will
+        - from
+        - away
+    - word: keep
+      options:
+        - keep
+        - works
+        - preach
+        - whole
+        - doing
+    - word: the
+      options:
+        - the
+        - case
+        - firm
+        - envy
+        - peace
+    - word: whole
+      options:
+        - whole
+        - envying
+        - little
+        - envy
+        - take
+    - word: law.
+      options:
+        - law.
+        - been.
+        - he.
+        - that.
+        - walk.
+    - word: You
+      options:
+        - You
+        - Paul
+        - Live
+        - Fruit
+        - Doing
+    - word: are
+      options:
+        - are
+        - fruit
+        - love
+        - we
+        - led
+    - word: severed
+      options:
+        - severed
+        - passions
+        - impurity
+        - envying
+        - preach
+    - word: from
+      options:
+        - from
+        - little
+        - view
+        - warned
+        - preach
+    - word: Christ,
+      options:
+        - Christ,
+        - Become,
+        - Shall,
+        - Walk,
+        - Patience,
+    - word: you
+      options:
+        - you
+        - that
+        - grace
+        - other
+        - those
+    - word: who
+      options:
+        - who
+        - case
+        - would
+        - stand
+        - that
+    - word: would
+      options:
+        - would
+        - eagerly
+        - submit
+        - step
+        - those
+    - word: be
+      options:
+        - be
+        - step
+        - free
+        - that
+        - as
+    - word: justified
+      options:
+        - justified
+        - working
+        - whoever
+        - kingdom
+        - passions
+    - word: by
+      options:
+        - by
+        - not
+        - out
+        - man
+        - yoke
+    - word: the
+      options:
+        - the
+        - away
+        - has
+        - love
+        - are
+    - word: law;
+      options:
+        - law;
+        - be;
+        - cross;
+        - look;
+        - your;
+    - word: you
+      options:
+        - you
+        - man
+        - yoke
+        - fruit
+        - but
+    - word: have
+      options:
+        - have
+        - has
+        - shall
+        - you
+        - live
+    - word: fallen
+      options:
+        - fallen
+        - penalty
+        - removed
+        - were
+        - view
+    - word: away
+      options:
+        - away
+        - preach
+        - law
+        - watch
+        - under
+    - word: from
+      options:
+        - from
+        - am
+        - nor
+        - those
+        - an
+    - word: grace.
+      options:
+        - grace.
+        - want.
+        - with.
+        - stand.
+        - accept.
+    - word: For
+      options:
+        - For
+        - Being
+        - Are
+        - Keep
+        - Be
+    - word: through
+      options:
+        - through
+        - freedom
+        - enmity
+        - other
+        - orgies
+    - word: the
+      options:
+        - the
+        - set
+        - still
+        - of
+        - calls
+    - word: Spirit,
+      options:
+        - Spirit,
+        - Anything,
+        - Kingdom,
+        - Running,
+        - Envy,
+    - word: by
+      options:
+        - by
+        - away
+        - am
+        - word
+        - man
+    - word: faith,
+      options:
+        - faith,
+        - been,
+        - every,
+        - fallen,
+        - set,
+    - word: we
+      options:
+        - we
+        - wish
+        - keep
+        - is
+        - the
+    - word: ourselves
+      options:
+        - ourselves
+        - eagerly
+        - neighbor
+        - consumed
+        - crucified
+    - word: eagerly
+      options:
+        - eagerly
+        - submit
+        - jesus
+        - watch
+        - severed
+    - word: wait
+      options:
+        - wait
+        - its
+        - flesh
+        - peace
+        - anger
+    - word: for
+      options:
+        - for
+        - from
+        - if
+        - by
+        - to
+    - word: the
+      options:
+        - the
+        - "no"
+        - there
+        - jesus
+        - this
+    - word: hope
+      options:
+        - hope
+        - want
+        - step
+        - now
+        - only
+    - word: of
+      options:
+        - of
+        - have
+        - will
+        - with
+        - say
+    - word: righteousness.
+      options:
+        - righteousness.
+        - opportunity.
+        - self-control.
+        - dissensions.
+        - circumcision.
+    - word: For
+      options:
+        - For
+        - Man
+        - Want
+        - Firm
+        - As
+    - word: in
+      options:
+        - in
+        - from
+        - firm
+        - to
+        - let
+    - word: Christ
+      options:
+        - Christ
+        - Leaven
+        - Counts
+        - Devour
+        - Cross
+    - word: Jesus
+      options:
+        - Jesus
+        - Take
+        - Envy
+        - Fits
+        - Severed
+    - word: neither
+      options:
+        - neither
+        - fulfilled
+        - called
+        - before
+        - watch
+    - word: circumcision
+      options:
+        - circumcision
+        - drunkenness
+        - confidence
+        - faithfulness
+        - emasculate
+    - word: nor
+      options:
+        - nor
+        - doing
+        - lord
+        - paul
+        - wish
+    - word: uncircumcision
+      options:
+        - uncircumcision
+        - faithfulness
+        - self-control
+        - righteousness
+        - circumcision
+    - word: counts
+      options:
+        - counts
+        - those
+        - still
+        - passions
+        - consumed
+    - word: for
+      options:
+        - for
+        - look
+        - let
+        - warn
+        - from
+    - word: anything,
+      options:
+        - anything,
+        - envying,
+        - opposed,
+        - themselves,
+        - brothers,
+    - word: but
+      options:
+        - but
+        - why
+        - as
+        - case
+        - man
+    - word: only
+      options:
+        - only
+        - joy
+        - grace
+        - out
+        - warn
+    - word: faith
+      options:
+        - faith
+        - out
+        - serve
+        - for
+        - removed
+    - word: working
+      options:
+        - working
+        - before
+        - belong
+        - divisions
+        - ourselves
+    - word: through
+      options:
+        - through
+        - inherit
+        - opposed
+        - grace
+        - fulfilled
+    - word: love.
+      options:
+        - love.
+        - before.
+        - strife.
+        - counts.
+        - again.
+    - word: You
+      options:
+        - You
+        - Whole
+        - Only
+        - I
+        - Law
+      prefix: |4+
+
+    - word: were
+      options:
+        - were
+        - say
+        - with
+        - free
+        - in
+    - word: running
+      options:
+        - running
+        - offense
+        - orgies
+        - fallen
+        - penalty
+    - word: well.
+      options:
+        - well.
+        - out.
+        - little.
+        - from.
+        - am.
+    - word: Who
+      options:
+        - Who
+        - Be
+        - Out
+        - Flesh
+        - Jesus
+    - word: hindered
+      options:
+        - hindered
+        - working
+        - unsettle
+        - obligated
+        - opposed
+    - word: you
+      options:
+        - you
+        - have
+        - again
+        - for
+        - say
+    - word: from
+      options:
+        - from
+        - walk
+        - law
+        - not
+        - like
+    - word: obeying
+      options:
+        - obeying
+        - preach
+        - severed
+        - fallen
+        - idolatry
+    - word: the
+      options:
+        - the
+        - with
+        - one
+        - calls
+        - those
+    - word: truth?
+      options:
+        - truth?
+        - led?
+        - lord?
+        - now?
+        - with?
+    - word: This
+      options:
+        - This
+        - Not
+        - Bite
+        - Law
+        - Wait
+    - word: persuasion
+      options:
+        - persuasion
+        - goodness
+        - divisions
+        - anything
+        - brothers
+    - word: is
+      options:
+        - is
+        - with
+        - one
+        - in
+        - joy
+    - word: not
+      options:
+        - not
+        - step
+        - away
+        - if
+        - an
+    - word: from
+      options:
+        - from
+        - fits
+        - that
+        - been
+        - view
+    - word: him
+      options:
+        - him
+        - works
+        - are
+        - anger
+        - now
+    - word: who
+      options:
+        - who
+        - am
+        - take
+        - you
+        - case
+    - word: calls
+      options:
+        - calls
+        - but
+        - leavens
+        - leaven
+        - obeying
+    - word: you.
+      options:
+        - you.
+        - lump.
+        - anger.
+        - out.
+        - again.
+    - word: A
+      options:
+        - A
+        - The
+        - As
+        - Are
+        - Law
+    - word: little
+      options:
+        - little
+        - impurity
+        - from
+        - brothers
+        - calls
+    - word: leaven
+      options:
+        - leaven
+        - with
+        - sorcery
+        - envying
+        - before
+    - word: leavens
+      options:
+        - leavens
+        - yourself
+        - fallen
+        - sorcery
+        - kingdom
+    - word: the
+      options:
+        - the
+        - well
+        - is
+        - cross
+        - out
+    - word: whole
+      options:
+        - whole
+        - sorcery
+        - opposed
+        - leavens
+        - whoever
+    - word: lump.
+      options:
+        - lump.
+        - us.
+        - your.
+        - now.
+        - orgies.
+    - word: I
+      options:
+        - I
+        - Out
+        - Is
+        - If
+        - For
+    - word: have
+      options:
+        - have
+        - yoke
+        - of
+        - these
+        - your
+    - word: confidence
+      options:
+        - confidence
+        - justified
+        - brothers
+        - advantage
+        - neighbor
+    - word: in
+      options:
+        - in
+        - one
+        - not
+        - law
+        - love
+    - word: the
+      options:
+        - the
+        - doing
+        - anger
+        - such
+        - hope
+    - word: Lord
+      options:
+        - Lord
+        - There
+        - God
+        - Step
+        - With
+    - word: that
+      options:
+        - that
+        - every
+        - bite
+        - orgies
+        - with
+    - word: you
+      options:
+        - you
+        - doing
+        - grace
+        - every
+        - want
+    - word: will
+      options:
+        - will
+        - him
+        - calls
+        - anger
+        - counts
+    - word: take
+      options:
+        - take
+        - in
+        - those
+        - is
+        - us
+    - word: "no"
+      options:
+        - "no"
+        - has
+        - paul
+        - want
+        - this
+    - word: other
+      options:
+        - other
+        - view
+        - devour
+        - word
+        - out
+    - word: view,
+      options:
+        - view,
+        - were,
+        - yoke,
+        - lump,
+        - bite,
+    - word: and
+      options:
+        - and
+        - other
+        - god
+        - step
+        - now
+    - word: the
+      options:
+        - the
+        - an
+        - other
+        - been
+        - free
+    - word: one
+      options:
+        - one
+        - who
+        - god
+        - only
+        - us
+    - word: who
+      options:
+        - who
+        - faith
+        - your
+        - are
+        - bear
+    - word: is
+      options:
+        - is
+        - as
+        - are
+        - led
+        - only
+    - word: troubling
+      options:
+        - troubling
+        - sorcery
+        - against
+        - anything
+        - drunkenness
+    - word: you
+      options:
+        - you
+        - not
+        - whole
+        - want
+        - such
+    - word: will
+      options:
+        - will
+        - we
+        - your
+        - man
+        - again
+    - word: bear
+      options:
+        - bear
+        - do
+        - like
+        - keep
+        - truth
+    - word: the
+      options:
+        - the
+        - and
+        - "no"
+        - envy
+        - away
+    - word: penalty,
+      options:
+        - penalty,
+        - spirit,
+        - cross,
+        - passions,
+        - desires,
+    - word: whoever
+      options:
+        - whoever
+        - eagerly
+        - under
+        - therefore
+        - yourself
+    - word: he
+      options:
+        - he
+        - set
+        - by
+        - use
+        - firm
+    - word: is.
+      options:
+        - is.
+        - we.
+        - as.
+        - man.
+        - each.
+    - word: But
+      options:
+        - But
+        - Your
+        - There
+        - Calls
+        - Lump
+    - word: if
+      options:
+        - if
+        - you
+        - but
+        - us
+        - envy
+    - word: I,
+      options:
+        - I,
+        - Led,
+        - Of,
+        - One,
+        - And,
+    - word: brothers,
+      options:
+        - brothers,
+        - belong,
+        - fallen,
+        - leaven,
+        - removed,
+    - word: still
+      options:
+        - still
+        - bear
+        - flesh
+        - freedom
+        - will
+    - word: preach
+      options:
+        - preach
+        - shall
+        - kindness
+        - become
+        - enmity
+    - word: circumcision,
+      options:
+        - circumcision,
+        - dissensions,
+        - faithfulness,
+        - gentleness,
+        - righteousness,
+    - word: why
+      options:
+        - why
+        - been
+        - i
+        - are
+        - for
+    - word: am
+      options:
+        - am
+        - us
+        - away
+        - in
+        - with
+    - word: I
+      options:
+        - I
+        - Man
+        - By
+        - Its
+        - As
+    - word: still
+      options:
+        - still
+        - warn
+        - christ
+        - leavens
+        - under
+    - word: being
+      options:
+        - being
+        - wait
+        - use
+        - its
+        - under
+    - word: persecuted?
+      options:
+        - persecuted?
+        - anything?
+        - rivalries?
+        - conceited?
+        - divisions?
+    - word: In
+      options:
+        - In
+        - With
+        - Nor
+        - Like
+        - I
+    - word: that
+      options:
+        - that
+        - submit
+        - do
+        - to
+        - live
+    - word: case
+      options:
+        - case
+        - out
+        - warn
+        - anger
+        - truth
+    - word: the
+      options:
+        - the
+        - being
+        - take
+        - love
+        - shall
+    - word: offense
+      options:
+        - offense
+        - gratify
+        - slavery
+        - consumed
+        - neighbor
+    - word: of
+      options:
+        - of
+        - such
+        - case
+        - that
+        - look
+    - word: the
+      options:
+        - the
+        - flesh
+        - lump
+        - want
+        - peace
+    - word: cross
+      options:
+        - cross
+        - this
+        - god
+        - those
+        - like
+    - word: has
+      options:
+        - has
+        - the
+        - truth
+        - also
+        - such
+    - word: been
+      options:
+        - been
+        - free
+        - sexual
+        - led
+        - that
+    - word: removed.
+      options:
+        - removed.
+        - yourself.
+        - little.
+        - neighbor.
+        - peace.
+    - word: I
+      options:
+        - I
+        - Nor
+        - Who
+        - Us
+        - But
+    - word: wish
+      options:
+        - wish
+        - each
+        - well
+        - truth
+        - been
+    - word: those
+      options:
+        - those
+        - its
+        - obeying
+        - still
+        - another
+    - word: who
+      options:
+        - who
+        - be
+        - us
+        - are
+        - is
+    - word: unsettle
+      options:
+        - unsettle
+        - kingdom
+        - goodness
+        - neighbor
+        - sensuality
+    - word: you
+      options:
+        - you
+        - be
+        - its
+        - cross
+        - led
+    - word: would
+      options:
+        - would
+        - obeying
+        - let
+        - joy
+        - running
+    - word: emasculate
+      options:
+        - emasculate
+        - provoking
+        - self-control
+        - sensuality
+        - brothers
+    - word: themselves!
+      options:
+        - themselves!
+        - conceited!
+        - hindered!
+        - dissensions!
+        - therefore!
+    - word: For
+      options:
+        - For
+        - Word
+        - Also
+        - Works
+        - Lord
+      prefix: |4+
+
+    - word: you
+      options:
+        - you
+        - use
+        - for
+        - view
+        - the
+    - word: were
+      options:
+        - were
+        - enmity
+        - also
+        - would
+        - be
+    - word: called
+      options:
+        - called
+        - this
+        - serve
+        - evident
+        - still
+    - word: to
+      options:
+        - to
+        - is
+        - has
+        - word
+        - nor
+    - word: freedom,
+      options:
+        - freedom,
+        - peace,
+        - grace,
+        - divisions,
+        - stand,
+    - word: brothers.
+      options:
+        - brothers.
+        - freedom.
+        - before.
+        - accept.
+        - goodness.
+    - word: Only
+      options:
+        - Only
+        - Stand
+        - But
+        - Christ
+        - Will
+    - word: do
+      options:
+        - do
+        - to
+        - be
+        - live
+        - yoke
+    - word: not
+      options:
+        - not
+        - well
+        - will
+        - from
+        - again
+    - word: use
+      options:
+        - use
+        - flesh
+        - peace
+        - one
+        - firm
+    - word: your
+      options:
+        - your
+        - take
+        - every
+        - shall
+        - flesh
+    - word: freedom
+      options:
+        - freedom
+        - there
+        - penalty
+        - fallen
+        - crucified
+    - word: as
+      options:
+        - as
+        - well
+        - led
+        - of
+        - from
+    - word: an
+      options:
+        - an
+        - him
+        - lump
+        - keep
+        - one
+    - word: opportunity
+      options:
+        - opportunity
+        - righteousness
+        - advantage
+        - immorality
+        - dissensions
+    - word: for
+      options:
+        - for
+        - only
+        - flesh
+        - warn
+        - as
+    - word: the
+      options:
+        - the
+        - as
+        - use
+        - if
+        - but
+    - word: flesh,
+      options:
+        - flesh,
+        - fits,
+        - law,
+        - paul,
+        - free,
+    - word: but
+      options:
+        - but
+        - out
+        - wait
+        - would
+        - a
+    - word: through
+      options:
+        - through
+        - eagerly
+        - running
+        - against
+        - submit
+    - word: love
+      options:
+        - love
+        - jesus
+        - calls
+        - and
+        - belong
+    - word: serve
+      options:
+        - serve
+        - preach
+        - has
+        - those
+        - again
+    - word: one
+      options:
+        - one
+        - for
+        - from
+        - god
+        - works
+    - word: another.
+      options:
+        - another.
+        - watch.
+        - penalty.
+        - accepts.
+        - running.
+    - word: For
+      options:
+        - For
+        - Now
+        - Use
+        - I
+        - Flesh
+    - word: the
+      options:
+        - the
+        - led
+        - he
+        - why
+        - now
+    - word: whole
+      options:
+        - whole
+        - lord
+        - being
+        - but
+        - eagerly
+    - word: law
+      options:
+        - law
+        - be
+        - has
+        - him
+        - in
+    - word: is
+      options:
+        - is
+        - set
+        - god
+        - that
+        - have
+    - word: fulfilled
+      options:
+        - fulfilled
+        - obligated
+        - patience
+        - passions
+        - conceited
+    - word: in
+      options:
+        - in
+        - if
+        - take
+        - like
+        - walk
+    - word: one
+      options:
+        - one
+        - wait
+        - have
+        - jesus
+        - let
+    - word: 'word:'
+      options:
+        - 'word:'
+        - 'those:'
+        - 'spirit:'
+        - 'and:'
+        - 'why:'
+    - word: “You
+      options:
+        - “You
+        - “Have
+        - “Paul
+        - “Him
+        - “Its
+    - word: shall
+      options:
+        - shall
+        - other
+        - also
+        - christ
+        - whole
+    - word: love
+      options:
+        - love
+        - an
+        - wish
+        - such
+        - counts
+    - word: your
+      options:
+        - your
+        - are
+        - has
+        - such
+        - not
+    - word: neighbor
+      options:
+        - neighbor
+        - impurity
+        - conceited
+        - yourself
+        - penalty
+    - word: as
+      options:
+        - as
+        - step
+        - also
+        - its
+        - warn
+    - word: yourself.”
+      options:
+        - yourself.”
+        - running.”
+        - unsettle.”
+        - become.”
+        - belong.”
+    - word: But
+      options:
+        - But
+        - A
+        - An
+        - Take
+        - Keep
+    - word: if
+      options:
+        - if
+        - want
+        - fits
+        - from
+        - use
+    - word: you
+      options:
+        - you
+        - those
+        - from
+        - view
+        - we
+    - word: bite
+      options:
+        - bite
+        - say
+        - each
+        - spirit
+        - with
+    - word: and
+      options:
+        - and
+        - is
+        - by
+        - walk
+        - free
+    - word: devour
+      options:
+        - devour
+        - working
+        - would
+        - only
+        - preach
+    - word: one
+      options:
+        - one
+        - but
+        - calls
+        - are
+        - with
+    - word: another,
+      options:
+        - another,
+        - works,
+        - submit,
+        - patience,
+        - enmity,
+    - word: watch
+      options:
+        - watch
+        - serve
+        - there
+        - fallen
+        - things
+    - word: out
+      options:
+        - out
+        - why
+        - calls
+        - that
+        - in
+    - word: that
+      options:
+        - that
+        - bite
+        - nor
+        - now
+        - watch
+    - word: you
+      options:
+        - you
+        - out
+        - your
+        - its
+        - been
+    - word: are
+      options:
+        - are
+        - lump
+        - set
+        - still
+        - have
+    - word: not
+      options:
+        - not
+        - case
+        - would
+        - were
+        - works
+    - word: consumed
+      options:
+        - consumed
+        - removed
+        - freedom
+        - desires
+        - persecuted
+    - word: by
+      options:
+        - by
+        - word
+        - do
+        - the
+        - want
+    - word: one
+      options:
+        - one
+        - other
+        - still
+        - being
+        - you
+    - word: another.
+      options:
+        - another.
+        - running.
+        - watch.
+        - neither.
+        - obligated.
+    - word: But
+      options:
+        - But
+        - Out
+        - Fits
+        - Now
+        - Case
+      prefix: |4+
+
+    - word: I
+      options:
+        - I
+        - The
+        - But
+        - As
+        - A
+    - word: say,
+      options:
+        - say,
+        - firm,
+        - your,
+        - as,
+        - let,
+    - word: walk
+      options:
+        - walk
+        - also
+        - spirit
+        - say
+        - whole
+    - word: by
+      options:
+        - by
+        - one
+        - away
+        - do
+        - have
+    - word: the
+      options:
+        - the
+        - have
+        - those
+        - peace
+        - of
+    - word: Spirit,
+      options:
+        - Spirit,
+        - That,
+        - Impurity,
+        - Keep,
+        - Calls,
+    - word: and
+      options:
+        - and
+        - walk
+        - be
+        - only
+        - yoke
+    - word: you
+      options:
+        - you
+        - peace
+        - again
+        - only
+        - as
+    - word: will
+      options:
+        - will
+        - lump
+        - its
+        - envy
+        - "no"
+    - word: not
+      options:
+        - not
+        - but
+        - bite
+        - and
+        - truth
+    - word: gratify
+      options:
+        - gratify
+        - doing
+        - those
+        - advantage
+        - counts
+    - word: the
+      options:
+        - the
+        - case
+        - god
+        - use
+        - paul
+    - word: desires
+      options:
+        - desires
+        - running
+        - testify
+        - rivalries
+        - there
+    - word: of
+      options:
+        - of
+        - to
+        - that
+        - your
+        - be
+    - word: the
+      options:
+        - the
+        - set
+        - works
+        - hope
+        - law
+    - word: flesh.
+      options:
+        - flesh.
+        - counts.
+        - penalty.
+        - truth.
+        - walk.
+    - word: For
+      options:
+        - For
+        - Say
+        - Us
+        - In
+        - Led
+    - word: the
+      options:
+        - the
+        - step
+        - who
+        - of
+        - to
+    - word: desires
+      options:
+        - desires
+        - counts
+        - being
+        - there
+        - against
+    - word: of
+      options:
+        - of
+        - look
+        - wait
+        - your
+        - is
+    - word: the
+      options:
+        - the
+        - each
+        - law
+        - and
+        - you
+    - word: flesh
+      options:
+        - flesh
+        - works
+        - another
+        - keep
+        - belong
+    - word: are
+      options:
+        - are
+        - if
+        - each
+        - will
+        - fits
+    - word: against
+      options:
+        - against
+        - brothers
+        - doing
+        - things
+        - hindered
+    - word: the
+      options:
+        - the
+        - be
+        - keep
+        - whole
+        - law
+    - word: Spirit,
+      options:
+        - Spirit,
+        - Called,
+        - Counts,
+        - Also,
+        - Step,
+    - word: and
+      options:
+        - and
+        - under
+        - by
+        - look
+        - such
+    - word: the
+      options:
+        - the
+        - for
+        - anger
+        - every
+        - "no"
+    - word: desires
+      options:
+        - desires
+        - inherit
+        - divisions
+        - accepts
+        - become
+    - word: of
+      options:
+        - of
+        - wait
+        - firm
+        - are
+        - yoke
+    - word: the
+      options:
+        - the
+        - cross
+        - fruit
+        - grace
+        - free
+    - word: Spirit
+      options:
+        - Spirit
+        - Submit
+        - Other
+        - Bite
+        - Also
+    - word: are
+      options:
+        - are
+        - why
+        - envy
+        - view
+        - take
+    - word: against
+      options:
+        - against
+        - whole
+        - leavens
+        - therefore
+        - brothers
+    - word: the
+      options:
+        - the
+        - is
+        - would
+        - with
+        - anger
+    - word: flesh,
+      options:
+        - flesh,
+        - peace,
+        - gratify,
+        - firm,
+        - obeying,
+    - word: for
+      options:
+        - for
+        - have
+        - serve
+        - still
+        - out
+    - word: these
+      options:
+        - these
+        - removed
+        - were
+        - enmity
+        - law
+    - word: are
+      options:
+        - are
+        - serve
+        - bite
+        - for
+        - as
+    - word: opposed
+      options:
+        - opposed
+        - conceited
+        - ourselves
+        - hindered
+        - eagerly
+    - word: to
+      options:
+        - to
+        - only
+        - am
+        - this
+        - love
+    - word: each
+      options:
+        - each
+        - christ
+        - that
+        - who
+        - law
+    - word: other,
+      options:
+        - other,
+        - still,
+        - that,
+        - view,
+        - obeying,
+    - word: to
+      options:
+        - to
+        - yoke
+        - one
+        - us
+        - word
+    - word: keep
+      options:
+        - keep
+        - fallen
+        - not
+        - whole
+        - we
+    - word: you
+      options:
+        - you
+        - man
+        - such
+        - to
+        - jesus
+    - word: from
+      options:
+        - from
+        - doing
+        - "no"
+        - before
+        - peace
+    - word: doing
+      options:
+        - doing
+        - before
+        - take
+        - hope
+        - being
+    - word: the
+      options:
+        - the
+        - you
+        - being
+        - say
+        - bite
+    - word: things
+      options:
+        - things
+        - against
+        - freedom
+        - each
+        - well
+    - word: you
+      options:
+        - you
+        - yoke
+        - set
+        - keep
+        - view
+    - word: want
+      options:
+        - want
+        - wish
+        - grace
+        - we
+        - well
+    - word: to
+      options:
+        - to
+        - a
+        - joy
+        - that
+        - out
+    - word: do.
+      options:
+        - do.
+        - want.
+        - in.
+        - by.
+        - if.
+    - word: But
+      options:
+        - But
+        - Also
+        - Live
+        - Why
+        - Grace
+    - word: if
+      options:
+        - if
+        - wait
+        - i
+        - have
+        - out
+    - word: you
+      options:
+        - you
+        - joy
+        - view
+        - firm
+        - to
+    - word: are
+      options:
+        - are
+        - have
+        - fits
+        - let
+        - serve
+    - word: led
+      options:
+        - led
+        - whole
+        - there
+        - us
+        - also
+    - word: by
+      options:
+        - by
+        - word
+        - joy
+        - look
+        - like
+    - word: the
+      options:
+        - the
+        - out
+        - faith
+        - word
+        - works
+    - word: Spirit,
+      options:
+        - Spirit,
+        - Through,
+        - Idolatry,
+        - Called,
+        - Bear,
+    - word: you
+      options:
+        - you
+        - every
+        - do
+        - watch
+        - under
+    - word: are
+      options:
+        - are
+        - firm
+        - "no"
+        - the
+        - away
+    - word: not
+      options:
+        - not
+        - that
+        - nor
+        - with
+        - is
+    - word: under
+      options:
+        - under
+        - have
+        - before
+        - the
+        - wait
+    - word: the
+      options:
+        - the
+        - view
+        - set
+        - watch
+        - free
+    - word: law.
+      options:
+        - law.
+        - away.
+        - do.
+        - paul.
+        - being.
+    - word: Now
+      options:
+        - Now
+        - Of
+        - Each
+        - Led
+        - Like
+    - word: the
+      options:
+        - the
+        - peace
+        - every
+        - if
+        - not
+    - word: works
+      options:
+        - works
+        - freedom
+        - firm
+        - lord
+        - little
+    - word: of
+      options:
+        - of
+        - led
+        - man
+        - lump
+        - now
+    - word: the
+      options:
+        - the
+        - bear
+        - there
+        - also
+        - watch
+    - word: flesh
+      options:
+        - flesh
+        - also
+        - through
+        - another
+        - the
+    - word: are
+      options:
+        - are
+        - he
+        - to
+        - one
+        - say
+    - word: 'evident:'
+      options:
+        - 'evident:'
+        - 'sorcery:'
+        - 'those:'
+        - 'brothers:'
+        - 'another:'
+    - word: sexual
+      options:
+        - sexual
+        - fits
+        - belong
+        - yourself
+        - kindness
+    - word: immorality,
+      options:
+        - immorality,
+        - provoking,
+        - persecuted,
+        - kindness,
+        - ourselves,
+    - word: impurity,
+      options:
+        - impurity,
+        - ourselves,
+        - goodness,
+        - freedom,
+        - before,
+    - word: sensuality,
+      options:
+        - sensuality,
+        - anything,
+        - neighbor,
+        - consumed,
+        - rivalries,
+    - word: idolatry,
+      options:
+        - idolatry,
+        - sensuality,
+        - another,
+        - eagerly,
+        - accepts,
+    - word: sorcery,
+      options:
+        - sorcery,
+        - flesh,
+        - kindness,
+        - would,
+        - conceited,
+    - word: enmity,
+      options:
+        - enmity,
+        - things,
+        - bite,
+        - works,
+        - sexual,
+    - word: strife,
+      options:
+        - strife,
+        - inherit,
+        - anger,
+        - removed,
+        - word,
+    - word: jealousy,
+      options:
+        - jealousy,
+        - sorcery,
+        - freedom,
+        - passions,
+        - belong,
+    - word: fits
+      options:
+        - fits
+        - accept
+        - wish
+        - jesus
+        - of
+    - word: of
+      options:
+        - of
+        - not
+        - your
+        - bear
+        - warn
+    - word: anger,
+      options:
+        - anger,
+        - bite,
+        - who,
+        - calls,
+        - fits,
+    - word: rivalries,
+      options:
+        - rivalries,
+        - persuasion,
+        - freedom,
+        - opposed,
+        - crucified,
+    - word: dissensions,
+      options:
+        - dissensions,
+        - themselves,
+        - drunkenness,
+        - ourselves,
+        - therefore,
+    - word: divisions,
+      options:
+        - divisions,
+        - opposed,
+        - consumed,
+        - ourselves,
+        - through,
+    - word: envy,
+      options:
+        - envy,
+        - have,
+        - love,
+        - submit,
+        - has,
+    - word: drunkenness,
+      options:
+        - drunkenness,
+        - dissensions,
+        - opportunity,
+        - crucified,
+        - confidence,
+    - word: orgies,
+      options:
+        - orgies,
+        - offense,
+        - anger,
+        - whole,
+        - view,
+    - word: and
+      options:
+        - and
+        - flesh
+        - joy
+        - serve
+        - set
+    - word: things
+      options:
+        - things
+        - grace
+        - sexual
+        - kingdom
+        - other
+    - word: like
+      options:
+        - like
+        - not
+        - that
+        - under
+        - shall
+    - word: these.
+      options:
+        - these.
+        - enmity.
+        - led.
+        - belong.
+        - are.
+    - word: I
+      options:
+        - I
+        - Joy
+        - Set
+        - One
+        - Us
+    - word: warn
+      options:
+        - warn
+        - view
+        - cross
+        - in
+        - doing
+    - word: you,
+      options:
+        - you,
+        - of,
+        - faith,
+        - are,
+        - firm,
+    - word: as
+      options:
+        - as
+        - will
+        - let
+        - the
+        - step
+    - word: I
+      options:
+        - I
+        - And
+        - Law
+        - Him
+        - Am
+    - word: warned
+      options:
+        - warned
+        - like
+        - kindness
+        - this
+        - warn
+    - word: you
+      options:
+        - you
+        - there
+        - but
+        - still
+        - has
+    - word: before,
+      options:
+        - before,
+        - peace,
+        - penalty,
+        - working,
+        - jealousy,
+    - word: that
+      options:
+        - that
+        - are
+        - is
+        - man
+        - paul
+    - word: those
+      options:
+        - those
+        - been
+        - the
+        - with
+        - set
+    - word: who
+      options:
+        - who
+        - has
+        - view
+        - the
+        - like
+    - word: do
+      options:
+        - do
+        - joy
+        - your
+        - such
+        - an
+    - word: such
+      options:
+        - such
+        - if
+        - lord
+        - jesus
+        - belong
+    - word: things
+      options:
+        - things
+        - accept
+        - leaven
+        - enmity
+        - each
+    - word: will
+      options:
+        - will
+        - envy
+        - set
+        - say
+        - us
+    - word: not
+      options:
+        - not
+        - are
+        - as
+        - other
+        - truth
+    - word: inherit
+      options:
+        - inherit
+        - orgies
+        - another
+        - every
+        - hindered
+    - word: the
+      options:
+        - the
+        - now
+        - such
+        - bear
+        - not
+    - word: kingdom
+      options:
+        - kingdom
+        - faith
+        - fruit
+        - unsettle
+        - running
+    - word: of
+      options:
+        - of
+        - man
+        - keep
+        - hope
+        - this
+    - word: God.
+      options:
+        - God.
+        - Do.
+        - Whole.
+        - The.
+        - Has.
+    - word: But
+      options:
+        - But
+        - Shall
+        - Led
+        - Lord
+        - Bite
+    - word: the
+      options:
+        - the
+        - nor
+        - he
+        - flesh
+        - god
+    - word: fruit
+      options:
+        - fruit
+        - lump
+        - envy
+        - let
+        - why
+    - word: of
+      options:
+        - of
+        - i
+        - by
+        - view
+        - live
+    - word: the
+      options:
+        - the
+        - paul
+        - led
+        - cross
+        - flesh
+    - word: Spirit
+      options:
+        - Spirit
+        - Whole
+        - Under
+        - Unsettle
+        - Still
+    - word: is
+      options:
+        - is
+        - not
+        - this
+        - in
+        - him
+    - word: love,
+      options:
+        - love,
+        - yoke,
+        - fruit,
+        - look,
+        - out,
+    - word: joy,
+      options:
+        - joy,
+        - cross,
+        - a,
+        - other,
+        - now,
+    - word: peace,
+      options:
+        - peace,
+        - under,
+        - desires,
+        - let,
+        - enmity,
+    - word: patience,
+      options:
+        - patience,
+        - accepts,
+        - anything,
+        - kingdom,
+        - christ,
+    - word: kindness,
+      options:
+        - kindness,
+        - working,
+        - eagerly,
+        - removed,
+        - obeying,
+    - word: goodness,
+      options:
+        - goodness,
+        - accept,
+        - another,
+        - themselves,
+        - freedom,
+    - word: faithfulness,
+      options:
+        - faithfulness,
+        - drunkenness,
+        - dissensions,
+        - themselves,
+        - circumcision,
+    - word: gentleness,
+      options:
+        - gentleness,
+        - ourselves,
+        - advantage,
+        - patience,
+        - persecuted,
+    - word: self-control;
+      options:
+        - self-control;
+        - themselves;
+        - immorality;
+        - faithfulness;
+        - persuasion;
+    - word: against
+      options:
+        - against
+        - passions
+        - doing
+        - neither
+        - stand
+    - word: such
+      options:
+        - such
+        - every
+        - leaven
+        - live
+        - say
+    - word: things
+      options:
+        - things
+        - working
+        - called
+        - bear
+        - grace
+    - word: there
+      options:
+        - there
+        - lump
+        - another
+        - anger
+        - still
+    - word: is
+      options:
+        - is
+        - led
+        - man
+        - god
+        - lord
+    - word: "no"
+      options:
+        - "no"
+        - of
+        - well
+        - wish
+        - hope
+    - word: law.
+      options:
+        - law.
+        - no.
+        - under.
+        - you.
+        - now.
+    - word: And
+      options:
+        - And
+        - With
+        - Your
+        - Step
+        - Are
+    - word: those
+      options:
+        - those
+        - neither
+        - shall
+        - enmity
+        - christ
+    - word: who
+      options:
+        - who
+        - wait
+        - envy
+        - away
+        - be
+    - word: belong
+      options:
+        - belong
+        - take
+        - fits
+        - submit
+        - kingdom
+    - word: to
+      options:
+        - to
+        - nor
+        - say
+        - led
+        - is
+    - word: Christ
+      options:
+        - Christ
+        - Goodness
+        - Well
+        - Cross
+        - Away
+    - word: Jesus
+      options:
+        - Jesus
+        - Love
+        - Walk
+        - Faith
+        - Whoever
+    - word: have
+      options:
+        - have
+        - envy
+        - him
+        - out
+        - whole
+    - word: crucified
+      options:
+        - crucified
+        - neighbor
+        - against
+        - persecuted
+        - rivalries
+    - word: the
+      options:
+        - the
+        - wish
+        - watch
+        - there
+        - only
+    - word: flesh
+      options:
+        - flesh
+        - sexual
+        - serve
+        - eagerly
+        - cross
+    - word: with
+      options:
+        - with
+        - say
+        - stand
+        - little
+        - grace
+    - word: its
+      options:
+        - its
+        - have
+        - calls
+        - the
+        - firm
+    - word: passions
+      options:
+        - passions
+        - persuasion
+        - sorcery
+        - desires
+        - evident
+    - word: and
+      options:
+        - and
+        - bite
+        - grace
+        - still
+        - the
+    - word: desires.
+      options:
+        - desires.
+        - neighbor.
+        - whoever.
+        - unsettle.
+        - advantage.
+    - word: If
+      options:
+        - If
+        - Each
+        - With
+        - The
+        - You
+      prefix: |4+
+
+    - word: we
+      options:
+        - we
+        - love
+        - well
+        - also
+        - want
+    - word: live
+      options:
+        - live
+        - works
+        - still
+        - only
+        - bear
+    - word: by
+      options:
+        - by
+        - is
+        - wait
+        - look
+        - i
+    - word: the
+      options:
+        - the
+        - shall
+        - one
+        - look
+        - and
+    - word: Spirit,
+      options:
+        - Spirit,
+        - Freedom,
+        - Accepts,
+        - Stand,
+        - Unsettle,
+    - word: let
+      options:
+        - let
+        - doing
+        - nor
+        - jesus
+        - has
+    - word: us
+      options:
+        - us
+        - joy
+        - is
+        - lord
+        - live
+    - word: also
+      options:
+        - also
+        - fruit
+        - word
+        - wait
+        - bear
+    - word: keep
+      options:
+        - keep
+        - before
+        - word
+        - warn
+        - has
+    - word: in
+      options:
+        - in
+        - are
+        - such
+        - god
+        - led
+    - word: step
+      options:
+        - step
+        - let
+        - now
+        - view
+        - has
+    - word: with
+      options:
+        - with
+        - nor
+        - away
+        - been
+        - are
+    - word: the
+      options:
+        - the
+        - free
+        - look
+        - warn
+        - step
+    - word: Spirit.
+      options:
+        - Spirit.
+        - Like.
+        - Accepts.
+        - Warn.
+        - Opposed.
+    - word: Let
+      options:
+        - Let
+        - If
+        - Being
+        - Has
+        - Law
+    - word: us
+      options:
+        - us
+        - out
+        - he
+        - firm
+        - yoke
+    - word: not
+      options:
+        - not
+        - were
+        - jesus
+        - look
+        - do
+    - word: become
+      options:
+        - become
+        - running
+        - truth
+        - warn
+        - eagerly
+    - word: conceited,
+      options:
+        - conceited,
+        - unsettle,
+        - severed,
+        - therefore,
+        - neither,
+    - word: provoking
+      options:
+        - provoking
+        - obligated
+        - evident
+        - patience
+        - goodness
+    - word: one
+      options:
+        - one
+        - to
+        - shall
+        - you
+        - also
+    - word: another,
+      options:
+        - another,
+        - obligated,
+        - truth,
+        - severed,
+        - eagerly,
+    - word: envying
+      options:
+        - envying
+        - anything
+        - crucified
+        - little
+        - conceited
+    - word: one
+      options:
+        - one
+        - shall
+        - we
+        - stand
+        - you
+    - word: another.
+      options:
+        - another.
+        - christ.
+        - shall.
+        - inherit.
+        - severed.

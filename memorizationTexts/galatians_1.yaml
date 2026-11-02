@@ -1,0 +1,3355 @@
+title: Galatians 1
+language: English
+description: Galatians Chapter 1 (ESV)
+words:
+    - word: Paul,
+      options:
+        - Paul,
+        - They,
+        - Let,
+        - His,
+        - Faith,
+    - word: an
+      options:
+        - an
+        - only
+        - and
+        - saw
+        - once
+    - word: apostle—not
+      options:
+        - apostle—not
+        - gospel—
+        - and
+        - deserting
+        - people
+    - word: from
+      options:
+        - from
+        - as
+        - three
+        - are
+        - person
+    - word: men
+      options:
+        - men
+        - none
+        - grace
+        - did
+        - son
+    - word: nor
+      options:
+        - nor
+        - again
+        - say
+        - days
+        - none
+    - word: through
+      options:
+        - through
+        - preaching
+        - unknown
+        - himself
+        - pleased
+    - word: man,
+      options:
+        - man,
+        - jesus,
+        - still,
+        - they,
+        - want,
+    - word: but
+      options:
+        - but
+        - one
+        - only
+        - other
+        - or
+    - word: through
+      options:
+        - through
+        - apart
+        - writing
+        - order
+        - pleased
+    - word: Jesus
+      options:
+        - Jesus
+        - Son
+        - Own
+        - Fifteen
+        - Trying
+    - word: Christ
+      options:
+        - Christ
+        - Deliver
+        - Away
+        - Lie!)
+        - Those
+    - word: and
+      options:
+        - and
+        - our
+        - that
+        - the
+        - grace
+    - word: God
+      options:
+        - God
+        - Own
+        - Me
+        - It
+        - Many
+    - word: the
+      options:
+        - the
+        - used
+        - born
+        - would
+        - god
+    - word: Father,
+      options:
+        - Father,
+        - Sins,
+        - That,
+        - Days,
+        - Amen,
+    - word: who
+      options:
+        - who
+        - gave
+        - were
+        - that
+        - how
+    - word: raised
+      options:
+        - raised
+        - none
+        - will
+        - three
+        - other
+    - word: him
+      options:
+        - him
+        - whom
+        - man
+        - faith
+        - want
+    - word: from
+      options:
+        - from
+        - among
+        - are
+        - my
+        - those
+    - word: the
+      options:
+        - the
+        - order
+        - saw
+        - nor
+        - for
+    - word: dead—
+      options:
+        - dead—
+        - those
+        - forever
+        - judea
+        - preaching
+    - word: and
+      options:
+        - and
+        - god
+        - who
+        - (in
+        - one
+    - word: all
+      options:
+        - all
+        - were
+        - want
+        - went
+        - who
+    - word: the
+      options:
+        - the
+        - syria
+        - say
+        - any
+        - among
+    - word: brothers
+      options:
+        - brothers
+        - contrary
+        - consult
+        - received
+        - fathers
+    - word: who
+      options:
+        - who
+        - tried
+        - only
+        - not
+        - him
+    - word: are
+      options:
+        - are
+        - he
+        - from
+        - say
+        - whom
+    - word: with
+      options:
+        - with
+        - they
+        - sins
+        - from
+        - age
+    - word: me,
+      options:
+        - me,
+        - any,
+        - what,
+        - want,
+        - they,
+    - word: To
+      options:
+        - To
+        - Were
+        - His
+        - Saw
+        - Not
+      prefix: |4+
+
+    - word: the
+      options:
+        - the
+        - only
+        - a
+        - one
+        - were
+    - word: churches
+      options:
+        - churches
+        - gospel—
+        - cilicia
+        - fathers
+        - quickly
+    - word: of
+      options:
+        - of
+        - our
+        - away
+        - how
+        - a
+    - word: 'Galatia:'
+      options:
+        - 'Galatia:'
+        - 'Cilicia:'
+        - 'Church:'
+        - 'Again:'
+        - 'Grace:'
+    - word: Grace
+      options:
+        - Grace
+        - Should
+        - Who
+        - Fathers
+        - Will
+      prefix: |4+
+
+    - word: to
+      options:
+        - to
+        - who
+        - him
+        - set
+        - how
+    - word: you
+      options:
+        - you
+        - nor
+        - are
+        - let
+        - son
+    - word: and
+      options:
+        - and
+        - his
+        - order
+        - visit
+        - tried
+    - word: peace
+      options:
+        - peace
+        - then
+        - none
+        - have
+        - one
+    - word: from
+      options:
+        - from
+        - life
+        - james
+        - went
+        - when
+    - word: God
+      options:
+        - God
+        - To
+        - That
+        - Still
+        - The
+    - word: our
+      options:
+        - our
+        - apart
+        - age
+        - own
+        - used
+    - word: Father
+      options:
+        - Father
+        - Brother
+        - Evil
+        - Lord
+        - After
+    - word: and
+      options:
+        - and
+        - tried
+        - born
+        - nor
+        - visit
+    - word: the
+      options:
+        - the
+        - those
+        - were
+        - lord
+        - say
+    - word: Lord
+      options:
+        - Lord
+        - How
+        - Do
+        - Syria
+        - Would
+    - word: Jesus
+      options:
+        - Jesus
+        - Man
+        - Were
+        - Not
+        - Raised
+    - word: Christ,
+      options:
+        - Christ,
+        - Whom,
+        - Those,
+        - Arabia,
+        - Remained,
+    - word: who
+      options:
+        - who
+        - some
+        - judea
+        - still
+        - did
+    - word: gave
+      options:
+        - gave
+        - ever
+        - his
+        - then
+        - men
+    - word: himself
+      options:
+        - himself
+        - churches
+        - persecute
+        - visit
+        - grace
+    - word: for
+      options:
+        - for
+        - faith
+        - go
+        - even
+        - those
+    - word: our
+      options:
+        - our
+        - some
+        - god
+        - order
+        - any
+    - word: sins
+      options:
+        - sins
+        - once
+        - is
+        - (in
+        - to
+    - word: to
+      options:
+        - to
+        - he
+        - with
+        - and
+        - whom
+    - word: deliver
+      options:
+        - deliver
+        - zealous
+        - apart
+        - grace
+        - regions
+    - word: us
+      options:
+        - us
+        - into
+        - me
+        - who
+        - days
+    - word: from
+      options:
+        - from
+        - son
+        - age
+        - know
+        - are
+    - word: the
+      options:
+        - the
+        - one
+        - tried
+        - apart
+        - only
+    - word: present
+      options:
+        - present
+        - preach
+        - taught
+        - preaching
+        - fathers
+    - word: evil
+      options:
+        - evil
+        - it
+        - visit
+        - do
+        - be
+    - word: age,
+      options:
+        - age,
+        - to,
+        - all,
+        - have,
+        - sins,
+    - word: according
+      options:
+        - according
+        - revelation
+        - judaism
+        - forever
+        - received
+    - word: to
+      options:
+        - to
+        - go
+        - the
+        - we
+        - set
+    - word: the
+      options:
+        - the
+        - men
+        - by
+        - he
+        - am
+    - word: will
+      options:
+        - will
+        - from
+        - man's
+        - life
+        - there
+    - word: of
+      options:
+        - of
+        - was
+        - if
+        - but
+        - up
+    - word: our
+      options:
+        - our
+        - be
+        - syria
+        - was
+        - (in
+    - word: God
+      options:
+        - God
+        - Or
+        - Angel
+        - Faith
+        - Are
+    - word: and
+      options:
+        - and
+        - set
+        - some
+        - many
+        - go
+    - word: Father,
+      options:
+        - Father,
+        - Brother,
+        - Three,
+        - Tried,
+        - Quickly,
+    - word: to
+      options:
+        - to
+        - for
+        - let
+        - were
+        - nor
+    - word: whom
+      options:
+        - whom
+        - be
+        - the
+        - cephas
+        - amen
+    - word: be
+      options:
+        - be
+        - know
+        - gave
+        - away
+        - how
+    - word: the
+      options:
+        - the
+        - born
+        - we
+        - three
+        - say
+    - word: glory
+      options:
+        - glory
+        - what
+        - syria
+        - again
+        - god
+    - word: forever
+      options:
+        - forever
+        - preaching
+        - turning
+        - would
+        - angel
+    - word: and
+      options:
+        - and
+        - was
+        - god
+        - sins
+        - life
+    - word: ever.
+      options:
+        - ever.
+        - whom.
+        - people.
+        - even.
+        - after.
+    - word: Amen.
+      options:
+        - Amen.
+        - Go.
+        - Lie!).
+        - Called.
+        - If.
+    - word: I
+      options:
+        - I
+        - As
+        - If
+        - Is
+        - We
+      prefix: |4+
+
+    - word: am
+      options:
+        - am
+        - me
+        - by
+        - will
+        - my
+    - word: astonished
+      options:
+        - astonished
+        - deserting
+        - advancing
+        - violently
+        - glorified
+    - word: that
+      options:
+        - that
+        - he
+        - am
+        - were
+        - are
+    - word: you
+      options:
+        - you
+        - or
+        - us
+        - still
+        - so
+    - word: are
+      options:
+        - are
+        - saw
+        - they
+        - my
+        - many
+    - word: so
+      options:
+        - so
+        - am
+        - when
+        - as
+        - by
+    - word: quickly
+      options:
+        - quickly
+        - after
+        - glorified
+        - seeking
+        - returned
+    - word: deserting
+      options:
+        - deserting
+        - deliver
+        - persecuted
+        - traditions
+        - advancing
+    - word: him
+      options:
+        - him
+        - evil
+        - to
+        - do
+        - said
+    - word: who
+      options:
+        - who
+        - years
+        - from
+        - used
+        - of
+    - word: called
+      options:
+        - called
+        - life
+        - present
+        - brother
+        - into
+    - word: you
+      options:
+        - you
+        - would
+        - even
+        - ever
+        - angel
+    - word: in
+      options:
+        - in
+        - went
+        - if
+        - we
+        - so
+    - word: the
+      options:
+        - the
+        - do
+        - me
+        - as
+        - by
+    - word: grace
+      options:
+        - grace
+        - many
+        - saw
+        - our
+        - who
+    - word: of
+      options:
+        - of
+        - into
+        - he
+        - know
+        - set
+    - word: Christ
+      options:
+        - Christ
+        - Should
+        - Went
+        - Received
+        - Preach
+    - word: and
+      options:
+        - and
+        - is
+        - of
+        - lord
+        - me
+    - word: are
+      options:
+        - are
+        - syria
+        - into
+        - peace
+        - once
+    - word: turning
+      options:
+        - turning
+        - gentiles
+        - deserting
+        - angel
+        - christ
+    - word: to
+      options:
+        - to
+        - paul
+        - then
+        - sins
+        - so
+    - word: a
+      options:
+        - a
+        - for
+        - his
+        - but
+        - do
+    - word: different
+      options:
+        - different
+        - deliver
+        - gentiles
+        - fathers
+        - approval
+    - word: gospel—
+      options:
+        - gospel—
+        - destroy
+        - zealous
+        - returned
+        - remained
+    - word: not
+      options:
+        - not
+        - if
+        - or
+        - apart
+        - in
+    - word: that
+      options:
+        - that
+        - there
+        - among
+        - faith
+        - with
+    - word: there
+      options:
+        - there
+        - went
+        - arabia
+        - but
+        - him
+    - word: is
+      options:
+        - is
+        - whom
+        - we
+        - from
+        - one
+    - word: another
+      options:
+        - another
+        - servant
+        - peace
+        - forever
+        - james
+    - word: one,
+      options:
+        - one,
+        - had,
+        - you,
+        - grace,
+        - an,
+    - word: but
+      options:
+        - but
+        - of
+        - when
+        - sins
+        - and
+    - word: there
+      options:
+        - there
+        - lord's
+        - when
+        - hearing
+        - cilicia
+    - word: are
+      options:
+        - are
+        - none
+        - days
+        - for
+        - gave
+    - word: some
+      options:
+        - some
+        - used
+        - how
+        - do
+        - grace
+    - word: who
+      options:
+        - who
+        - but
+        - would
+        - know
+        - am
+    - word: trouble
+      options:
+        - trouble
+        - gentiles
+        - lord's
+        - judea
+        - please
+    - word: you
+      options:
+        - you
+        - some
+        - said
+        - other
+        - what
+    - word: and
+      options:
+        - and
+        - the
+        - grace
+        - days
+        - will
+    - word: want
+      options:
+        - want
+        - after
+        - you
+        - james
+        - he
+    - word: to
+      options:
+        - to
+        - want
+        - so
+        - away
+        - life
+    - word: distort
+      options:
+        - distort
+        - heard
+        - faith
+        - people
+        - cilicia
+    - word: the
+      options:
+        - the
+        - into
+        - by
+        - man
+        - will
+    - word: gospel
+      options:
+        - gospel
+        - present
+        - unknown
+        - through
+        - angel
+    - word: of
+      options:
+        - of
+        - sins
+        - saw
+        - know
+        - a
+    - word: Christ.
+      options:
+        - Christ.
+        - Even.
+        - Tried.
+        - Judea.
+        - Visit.
+    - word: But
+      options:
+        - But
+        - As
+        - Know
+        - Whom
+        - Of
+    - word: even
+      options:
+        - even
+        - none
+        - not
+        - now
+        - it
+    - word: if
+      options:
+        - if
+        - god
+        - of
+        - it
+        - he
+    - word: we
+      options:
+        - we
+        - of
+        - his
+        - if
+        - used
+    - word: or
+      options:
+        - or
+        - not
+        - (in
+        - with
+        - and
+    - word: an
+      options:
+        - an
+        - once
+        - by
+        - you
+        - away
+    - word: angel
+      options:
+        - angel
+        - man
+        - another
+        - his
+        - father
+    - word: from
+      options:
+        - from
+        - son
+        - me
+        - know
+        - by
+    - word: heaven
+      options:
+        - heaven
+        - gentiles
+        - received
+        - man's
+        - jesus
+    - word: should
+      options:
+        - should
+        - through
+        - himself
+        - trying
+        - contrary
+    - word: preach
+      options:
+        - preach
+        - because
+        - from
+        - contrary
+        - another
+    - word: to
+      options:
+        - to
+        - had
+        - away
+        - how
+        - but
+    - word: you
+      options:
+        - you
+        - or
+        - age
+        - would
+        - say
+    - word: a
+      options:
+        - a
+        - (in
+        - i
+        - him
+        - so
+    - word: gospel
+      options:
+        - gospel
+        - called
+        - grace
+        - three
+        - preach
+    - word: contrary
+      options:
+        - contrary
+        - heaven
+        - father
+        - pleased
+        - deserting
+    - word: to
+      options:
+        - to
+        - son
+        - ever
+        - the
+        - away
+    - word: the
+      options:
+        - the
+        - is
+        - angel
+        - grace
+        - used
+    - word: one
+      options:
+        - one
+        - born
+        - any
+        - days
+        - or
+    - word: we
+      options:
+        - we
+        - the
+        - son
+        - used
+        - sins
+    - word: preached
+      options:
+        - preached
+        - deserting
+        - before
+        - except
+        - brother
+    - word: to
+      options:
+        - to
+        - ever
+        - say
+        - do
+        - an
+    - word: you,
+      options:
+        - you,
+        - even,
+        - saw,
+        - syria,
+        - if,
+    - word: let
+      options:
+        - let
+        - among
+        - visit
+        - and
+        - us
+    - word: him
+      options:
+        - him
+        - our
+        - again
+        - years
+        - am
+    - word: be
+      options:
+        - be
+        - so
+        - his
+        - a
+        - do
+    - word: accursed.
+      options:
+        - accursed.
+        - received.
+        - writing.
+        - brothers.
+        - seeking.
+    - word: As
+      options:
+        - As
+        - Of
+        - Had
+        - If
+        - Even
+    - word: we
+      options:
+        - we
+        - want
+        - from
+        - a
+        - not
+    - word: have
+      options:
+        - have
+        - (in
+        - man
+        - grace
+        - with
+    - word: said
+      options:
+        - said
+        - father
+        - were
+        - then
+        - will
+    - word: before,
+      options:
+        - before,
+        - lie!),
+        - will,
+        - order,
+        - deliver,
+    - word: so
+      options:
+        - so
+        - know
+        - of
+        - with
+        - by
+    - word: now
+      options:
+        - now
+        - will
+        - paul
+        - jesus
+        - apart
+    - word: I
+      options:
+        - I
+        - All
+        - Son
+        - For
+        - A
+    - word: say
+      options:
+        - say
+        - were
+        - in
+        - to
+        - up
+    - word: 'again:'
+      options:
+        - 'again:'
+        - 'quickly:'
+        - 'regions:'
+        - 'those:'
+        - 'would:'
+    - word: If
+      options:
+        - If
+        - And
+        - Life
+        - In
+        - Own
+    - word: anyone
+      options:
+        - anyone
+        - gave
+        - dead—
+        - still
+        - gentiles
+    - word: is
+      options:
+        - is
+        - born
+        - want
+        - now
+        - be
+    - word: preaching
+      options:
+        - preaching
+        - through
+        - pleased
+        - revelation
+        - galatia
+    - word: to
+      options:
+        - to
+        - only
+        - he
+        - even
+        - so
+    - word: you
+      options:
+        - you
+        - we
+        - now
+        - tried
+        - among
+    - word: a
+      options:
+        - a
+        - be
+        - how
+        - god
+        - son
+    - word: gospel
+      options:
+        - gospel
+        - heaven
+        - judaism
+        - heard
+        - damascus
+    - word: contrary
+      options:
+        - contrary
+        - regions
+        - taught
+        - churches
+        - persecute
+    - word: to
+      options:
+        - to
+        - do
+        - some
+        - none
+        - we
+    - word: the
+      options:
+        - the
+        - you
+        - own
+        - whom
+        - do
+    - word: one
+      options:
+        - one
+        - again
+        - ever
+        - it
+        - own
+    - word: you
+      options:
+        - you
+        - how
+        - amen
+        - one
+        - the
+    - word: received,
+      options:
+        - received,
+        - receive,
+        - trouble,
+        - glorified,
+        - himself,
+    - word: let
+      options:
+        - let
+        - peace
+        - have
+        - he
+        - go
+    - word: him
+      options:
+        - him
+        - are
+        - who
+        - but
+        - sins
+    - word: be
+      options:
+        - be
+        - the
+        - born
+        - into
+        - nor
+    - word: accursed.
+      options:
+        - accursed.
+        - galatia.
+        - preached.
+        - another.
+        - lord's.
+    - word: For
+      options:
+        - For
+        - Know
+        - (in
+        - Some
+        - By
+      prefix: |4+
+
+    - word: am
+      options:
+        - am
+        - how
+        - my
+        - said
+        - if
+    - word: I
+      options:
+        - I
+        - Are
+        - God
+        - By
+        - Nor
+    - word: now
+      options:
+        - now
+        - how
+        - our
+        - an
+        - one
+    - word: seeking
+      options:
+        - seeking
+        - father
+        - extremely
+        - visit
+        - trying
+    - word: the
+      options:
+        - the
+        - or
+        - some
+        - there
+        - after
+    - word: approval
+      options:
+        - approval
+        - trouble
+        - galatia
+        - church
+        - glorified
+    - word: of
+      options:
+        - of
+        - that
+        - then
+        - into
+        - man
+    - word: man,
+      options:
+        - man,
+        - whom,
+        - born,
+        - would,
+        - want,
+    - word: or
+      options:
+        - or
+        - how
+        - what
+        - be
+        - and
+    - word: of
+      options:
+        - of
+        - amen
+        - did
+        - when
+        - will
+    - word: God?
+      options:
+        - God?
+        - Life?
+        - An?
+        - Heard?
+        - Apart?
+    - word: Or
+      options:
+        - Or
+        - To
+        - My
+        - Be
+        - And
+    - word: am
+      options:
+        - am
+        - to
+        - want
+        - a
+        - went
+    - word: I
+      options:
+        - I
+        - Was
+        - Not
+        - Let
+        - Or
+    - word: trying
+      options:
+        - trying
+        - peace
+        - once
+        - life
+        - seeking
+    - word: to
+      options:
+        - to
+        - (in
+        - but
+        - am
+        - with
+    - word: please
+      options:
+        - please
+        - apostles
+        - judaism
+        - even
+        - ever
+    - word: man?
+      options:
+        - man?
+        - god?
+        - when?
+        - our?
+        - after?
+    - word: If
+      options:
+        - If
+        - Sins
+        - Up
+        - Whom
+        - Man
+    - word: I
+      options:
+        - I
+        - Age
+        - Up
+        - Him
+        - Man
+    - word: were
+      options:
+        - were
+        - might
+        - (in
+        - he
+        - except
+    - word: still
+      options:
+        - still
+        - know
+        - gave
+        - cilicia
+        - how
+    - word: trying
+      options:
+        - trying
+        - regions
+        - apostles
+        - former
+        - apart
+    - word: to
+      options:
+        - to
+        - sins
+        - we
+        - life
+        - go
+    - word: please
+      options:
+        - please
+        - taught
+        - tried
+        - used
+        - gentiles
+    - word: man,
+      options:
+        - man,
+        - even,
+        - once,
+        - as,
+        - for,
+    - word: I
+      options:
+        - I
+        - Who
+        - Own
+        - If
+        - A
+    - word: would
+      options:
+        - would
+        - amen
+        - you
+        - sins
+        - servant
+    - word: not
+      options:
+        - not
+        - glory
+        - did
+        - sins
+        - gave
+    - word: be
+      options:
+        - be
+        - life
+        - who
+        - but
+        - lord
+    - word: a
+      options:
+        - a
+        - so
+        - the
+        - god
+        - (in
+    - word: servant
+      options:
+        - servant
+        - violently
+        - reveal
+        - apostles
+        - tried
+    - word: of
+      options:
+        - of
+        - were
+        - then
+        - he
+        - me
+    - word: Christ.
+      options:
+        - Christ.
+        - Should.
+        - Only.
+        - Lord's.
+        - Because.
+    - word: For
+      options:
+        - For
+        - After
+        - Still
+        - What
+        - Who
+      prefix: |4+
+
+    - word: I
+      options:
+        - I
+        - Son
+        - Me
+        - Men
+        - Let
+    - word: would
+      options:
+        - would
+        - from
+        - apart
+        - one
+        - because
+    - word: have
+      options:
+        - have
+        - it
+        - other
+        - people
+        - reveal
+    - word: you
+      options:
+        - you
+        - still
+        - man's
+        - men
+        - life
+    - word: know,
+      options:
+        - know,
+        - church,
+        - him,
+        - arabia,
+        - amen,
+    - word: brothers,
+      options:
+        - brothers,
+        - approval,
+        - gospel—,
+        - anyone,
+        - different,
+    - word: that
+      options:
+        - that
+        - trying
+        - he
+        - any
+        - cephas
+    - word: the
+      options:
+        - the
+        - do
+        - set
+        - grace
+        - used
+    - word: gospel
+      options:
+        - gospel
+        - cilicia
+        - former
+        - christ
+        - only
+    - word: that
+      options:
+        - that
+        - nor
+        - before
+        - was
+        - when
+    - word: was
+      options:
+        - was
+        - were
+        - do
+        - who
+        - man
+    - word: preached
+      options:
+        - preached
+        - quickly
+        - before
+        - fifteen
+        - another
+    - word: by
+      options:
+        - by
+        - with
+        - (in
+        - life
+        - and
+    - word: me
+      options:
+        - me
+        - it
+        - by
+        - am
+        - they
+    - word: is
+      options:
+        - is
+        - were
+        - sins
+        - days
+        - do
+    - word: not
+      options:
+        - not
+        - his
+        - other
+        - did
+        - let
+    - word: man's
+      options:
+        - man's
+        - sins
+        - evil
+        - (in
+        - life
+    - word: gospel.
+      options:
+        - gospel.
+        - were.
+        - dead—.
+        - received.
+        - please.
+    - word: For
+      options:
+        - For
+        - Life
+        - Sins
+        - Peace
+        - Up
+    - word: I
+      options:
+        - I
+        - My
+        - As
+        - It
+        - By
+    - word: did
+      options:
+        - did
+        - nor
+        - with
+        - we
+        - say
+    - word: not
+      options:
+        - not
+        - god
+        - some
+        - we
+        - whom
+    - word: receive
+      options:
+        - receive
+        - visit
+        - different
+        - glory
+        - regions
+    - word: it
+      options:
+        - it
+        - who
+        - am
+        - want
+        - sins
+    - word: from
+      options:
+        - from
+        - cephas
+        - is
+        - son
+        - were
+    - word: any
+      options:
+        - any
+        - peace
+        - am
+        - god
+        - all
+    - word: man,
+      options:
+        - man,
+        - son,
+        - will,
+        - lord,
+        - did,
+    - word: nor
+      options:
+        - nor
+        - ever
+        - age
+        - from
+        - i
+    - word: was
+      options:
+        - was
+        - all
+        - glory
+        - we
+        - even
+    - word: I
+      options:
+        - I
+        - Own
+        - How
+        - Men
+        - Of
+    - word: taught
+      options:
+        - taught
+        - brothers
+        - even
+        - said
+        - sins
+    - word: it,
+      options:
+        - it,
+        - want,
+        - went,
+        - many,
+        - know,
+    - word: but
+      options:
+        - but
+        - will
+        - years
+        - be
+        - went
+    - word: I
+      options:
+        - I
+        - But
+        - Who
+        - Own
+        - Go
+    - word: received
+      options:
+        - received
+        - please
+        - himself
+        - anyone
+        - reveal
+    - word: it
+      options:
+        - it
+        - who
+        - man
+        - used
+        - ever
+    - word: through
+      options:
+        - through
+        - zealous
+        - beyond
+        - person
+        - because
+    - word: a
+      options:
+        - a
+        - the
+        - us
+        - son
+        - age
+    - word: revelation
+      options:
+        - revelation
+        - violently
+        - persecuted
+        - advancing
+        - according
+    - word: of
+      options:
+        - of
+        - said
+        - know
+        - were
+        - have
+    - word: Jesus
+      options:
+        - Jesus
+        - Receive
+        - The
+        - Angel
+        - Among
+    - word: Christ.
+      options:
+        - Christ.
+        - Person.
+        - Preach.
+        - Syria.
+        - Ever.
+    - word: For
+      options:
+        - For
+        - Know
+        - Lie!)
+        - Have
+        - Any
+    - word: you
+      options:
+        - you
+        - paul
+        - were
+        - it
+        - saw
+    - word: have
+      options:
+        - have
+        - not
+        - up
+        - all
+        - still
+    - word: heard
+      options:
+        - heard
+        - visit
+        - many
+        - now
+        - pleased
+    - word: of
+      options:
+        - of
+        - used
+        - go
+        - so
+        - me
+    - word: my
+      options:
+        - my
+        - me
+        - amen
+        - have
+        - many
+    - word: former
+      options:
+        - former
+        - contrary
+        - through
+        - gentiles
+        - churches
+    - word: life
+      options:
+        - life
+        - one
+        - from
+        - if
+        - jesus
+    - word: in
+      options:
+        - in
+        - what
+        - evil
+        - him
+        - an
+    - word: Judaism,
+      options:
+        - Judaism,
+        - Advancing,
+        - Apart,
+        - Brother,
+        - Should,
+    - word: how
+      options:
+        - how
+        - lord
+        - years
+        - still
+        - apart
+    - word: I
+      options:
+        - I
+        - Set
+        - In
+        - Go
+        - My
+    - word: persecuted
+      options:
+        - persecuted
+        - glorified
+        - immediately
+        - accursed
+        - apostles
+    - word: the
+      options:
+        - the
+        - still
+        - amen
+        - us
+        - heard
+    - word: church
+      options:
+        - church
+        - father
+        - remained
+        - glory
+        - away
+    - word: of
+      options:
+        - of
+        - i
+        - god
+        - as
+        - age
+    - word: God
+      options:
+        - God
+        - Know
+        - Say
+        - Born
+        - Is
+    - word: violently
+      options:
+        - violently
+        - persecuted
+        - accursed
+        - zealous
+        - contrary
+    - word: and
+      options:
+        - and
+        - one
+        - we
+        - man
+        - have
+    - word: tried
+      options:
+        - tried
+        - angel
+        - judaism
+        - before
+        - none
+    - word: to
+      options:
+        - to
+        - (in
+        - him
+        - evil
+        - all
+    - word: destroy
+      options:
+        - destroy
+        - gospel
+        - received
+        - other
+        - after
+    - word: it.
+      options:
+        - it.
+        - he.
+        - will.
+        - gave.
+        - born.
+    - word: And
+      options:
+        - And
+        - Those
+        - James
+        - Did
+        - Life
+    - word: I
+      options:
+        - I
+        - How
+        - It
+        - In
+        - Let
+    - word: was
+      options:
+        - was
+        - will
+        - age
+        - men
+        - syria
+    - word: advancing
+      options:
+        - advancing
+        - approval
+        - judaism
+        - servant
+        - preached
+    - word: in
+      options:
+        - in
+        - (in
+        - for
+        - be
+        - days
+    - word: Judaism
+      options:
+        - Judaism
+        - Apostles
+        - Through
+        - Would
+        - Reveal
+    - word: beyond
+      options:
+        - beyond
+        - that
+        - once
+        - when
+        - taught
+    - word: many
+      options:
+        - many
+        - but
+        - there
+        - except
+        - jesus
+    - word: of
+      options:
+        - of
+        - or
+        - do
+        - it
+        - if
+    - word: my
+      options:
+        - my
+        - with
+        - his
+        - have
+        - us
+    - word: own
+      options:
+        - own
+        - gave
+        - some
+        - my
+        - are
+    - word: age
+      options:
+        - age
+        - do
+        - was
+        - all
+        - had
+    - word: among
+      options:
+        - among
+        - faith
+        - are
+        - writing
+        - the
+    - word: my
+      options:
+        - my
+        - was
+        - son
+        - evil
+        - we
+    - word: people,
+      options:
+        - people,
+        - might,
+        - present,
+        - paul,
+        - please,
+    - word: so
+      options:
+        - so
+        - i
+        - age
+        - some
+        - an
+    - word: extremely
+      options:
+        - extremely
+        - immediately
+        - regions
+        - violently
+        - present
+    - word: zealous
+      options:
+        - zealous
+        - trouble
+        - order
+        - except
+        - again
+    - word: was
+      options:
+        - was
+        - again
+        - men
+        - my
+        - they
+    - word: I
+      options:
+        - I
+        - It
+        - Who
+        - Not
+        - A
+    - word: for
+      options:
+        - for
+        - only
+        - by
+        - with
+        - those
+    - word: the
+      options:
+        - the
+        - gave
+        - used
+        - by
+        - he
+    - word: traditions
+      options:
+        - traditions
+        - preaching
+        - approval
+        - preached
+        - extremely
+    - word: of
+      options:
+        - of
+        - if
+        - you
+        - any
+        - to
+    - word: my
+      options:
+        - my
+        - amen
+        - to
+        - it
+        - but
+    - word: fathers.
+      options:
+        - fathers.
+        - trying.
+        - years.
+        - himself.
+        - because.
+    - word: But
+      options:
+        - But
+        - Or
+        - Said
+        - Is
+        - Son
+    - word: when
+      options:
+        - when
+        - syria
+        - go
+        - cephas
+        - might
+    - word: he
+      options:
+        - he
+        - want
+        - it
+        - only
+        - if
+    - word: who
+      options:
+        - who
+        - now
+        - one
+        - know
+        - were
+    - word: had
+      options:
+        - had
+        - us
+        - set
+        - up
+        - jesus
+    - word: set
+      options:
+        - set
+        - and
+        - paul
+        - might
+        - they
+    - word: me
+      options:
+        - me
+        - the
+        - by
+        - am
+        - used
+    - word: apart
+      options:
+        - apart
+        - heaven
+        - born
+        - three
+        - regions
+    - word: before
+      options:
+        - before
+        - once
+        - judea
+        - born
+        - beyond
+    - word: I
+      options:
+        - I
+        - Be
+        - Set
+        - Nor
+        - Is
+    - word: was
+      options:
+        - was
+        - ever
+        - up
+        - if
+        - or
+    - word: born,
+      options:
+        - born,
+        - other,
+        - set,
+        - own,
+        - did,
+    - word: and
+      options:
+        - and
+        - we
+        - nor
+        - god
+        - as
+    - word: who
+      options:
+        - who
+        - we
+        - lord
+        - our
+        - some
+    - word: called
+      options:
+        - called
+        - raised
+        - lie!)
+        - will
+        - pleased
+    - word: me
+      options:
+        - me
+        - any
+        - so
+        - or
+        - know
+    - word: by
+      options:
+        - by
+        - what
+        - one
+        - they
+        - sins
+    - word: his
+      options:
+        - his
+        - god
+        - when
+        - visit
+        - me
+    - word: grace,
+      options:
+        - grace,
+        - had,
+        - pleased,
+        - god,
+        - should,
+    - word: was
+      options:
+        - was
+        - used
+        - an
+        - have
+        - three
+    - word: pleased
+      options:
+        - pleased
+        - through
+        - another
+        - visit
+        - apostles
+    - word: to
+      options:
+        - to
+        - set
+        - what
+        - my
+        - many
+    - word: reveal
+      options:
+        - reveal
+        - once
+        - lord
+        - heard
+        - again
+    - word: his
+      options:
+        - his
+        - other
+        - after
+        - let
+        - my
+    - word: Son
+      options:
+        - Son
+        - God
+        - If
+        - Faith
+        - Even
+    - word: to
+      options:
+        - to
+        - life
+        - lord
+        - so
+        - up
+    - word: me,
+      options:
+        - me,
+        - go,
+        - us,
+        - one,
+        - by,
+    - word: in
+      options:
+        - in
+        - some
+        - evil
+        - days
+        - will
+    - word: order
+      options:
+        - order
+        - after
+        - none
+        - cilicia
+        - seeking
+    - word: that
+      options:
+        - that
+        - glory
+        - cephas
+        - father
+        - want
+    - word: I
+      options:
+        - I
+        - Do
+        - For
+        - We
+        - Is
+    - word: might
+      options:
+        - might
+        - when
+        - among
+        - faith
+        - his
+    - word: preach
+      options:
+        - preach
+        - lord
+        - said
+        - raised
+        - trouble
+    - word: him
+      options:
+        - him
+        - do
+        - my
+        - men
+        - again
+    - word: among
+      options:
+        - among
+        - pleased
+        - then
+        - god
+        - people
+    - word: the
+      options:
+        - the
+        - only
+        - three
+        - and
+        - years
+    - word: Gentiles,
+      options:
+        - Gentiles,
+        - Remained,
+        - Beyond,
+        - Returned,
+        - Persecuted,
+    - word: I
+      options:
+        - I
+        - As
+        - We
+        - The
+        - If
+    - word: did
+      options:
+        - did
+        - apart
+        - only
+        - there
+        - man's
+    - word: not
+      options:
+        - not
+        - it
+        - with
+        - away
+        - is
+    - word: immediately
+      options:
+        - immediately
+        - violently
+        - extremely
+        - according
+        - preaching
+    - word: consult
+      options:
+        - consult
+        - approval
+        - angel
+        - persecute
+        - dead—
+    - word: with
+      options:
+        - with
+        - by
+        - there
+        - taught
+        - might
+    - word: anyone;
+      options:
+        - anyone;
+        - consult;
+        - servant;
+        - quickly;
+        - know;
+    - word: nor
+      options:
+        - nor
+        - evil
+        - three
+        - you
+        - men
+    - word: did
+      options:
+        - did
+        - syria
+        - am
+        - still
+        - from
+    - word: I
+      options:
+        - I
+        - Did
+        - How
+        - Do
+        - Am
+    - word: go
+      options:
+        - go
+        - (in
+        - men
+        - not
+        - amen
+    - word: up
+      options:
+        - up
+        - are
+        - want
+        - once
+        - be
+    - word: to
+      options:
+        - to
+        - as
+        - (in
+        - his
+        - set
+    - word: Jerusalem
+      options:
+        - Jerusalem
+        - Regions
+        - Deliver
+        - Traditions
+        - Advancing
+    - word: to
+      options:
+        - to
+        - nor
+        - set
+        - an
+        - said
+    - word: those
+      options:
+        - those
+        - gave
+        - visit
+        - but
+        - grace
+    - word: who
+      options:
+        - who
+        - how
+        - syria
+        - nor
+        - and
+    - word: were
+      options:
+        - were
+        - raised
+        - into
+        - away
+        - jesus
+    - word: apostles
+      options:
+        - apostles
+        - contrary
+        - persecuted
+        - former
+        - forever
+    - word: before
+      options:
+        - before
+        - there
+        - galatia
+        - dead—
+        - were
+    - word: me,
+      options:
+        - me,
+        - own,
+        - want,
+        - they,
+        - if,
+    - word: but
+      options:
+        - but
+        - heard
+        - gave
+        - judea
+        - had
+    - word: I
+      options:
+        - I
+        - Saw
+        - By
+        - He
+        - (in
+    - word: went
+      options:
+        - went
+        - do
+        - except
+        - paul
+        - of
+    - word: away
+      options:
+        - away
+        - who
+        - own
+        - syria
+        - would
+    - word: into
+      options:
+        - into
+        - reveal
+        - my
+        - evil
+        - peace
+    - word: Arabia,
+      options:
+        - Arabia,
+        - Years,
+        - Man's,
+        - Brother,
+        - There,
+    - word: and
+      options:
+        - and
+        - a
+        - into
+        - they
+        - have
+    - word: returned
+      options:
+        - returned
+        - gospel
+        - christ
+        - reveal
+        - heaven
+    - word: again
+      options:
+        - again
+        - galatia
+        - himself
+        - hearing
+        - christ
+    - word: to
+      options:
+        - to
+        - or
+        - is
+        - what
+        - how
+    - word: Damascus.
+      options:
+        - Damascus.
+        - Preach.
+        - Deserting.
+        - Jerusalem.
+        - Former.
+    - word: Then
+      options:
+        - Then
+        - So
+        - Once
+        - There
+        - Lie!)
+      prefix: |4+
+
+    - word: after
+      options:
+        - after
+        - glory
+        - those
+        - one
+        - unknown
+    - word: three
+      options:
+        - three
+        - how
+        - have
+        - those
+        - brother
+    - word: years
+      options:
+        - years
+        - trying
+        - heard
+        - judea
+        - once
+    - word: I
+      options:
+        - I
+        - And
+        - Son
+        - Let
+        - Me
+    - word: went
+      options:
+        - went
+        - once
+        - heard
+        - three
+        - please
+    - word: up
+      options:
+        - up
+        - set
+        - but
+        - son
+        - from
+    - word: to
+      options:
+        - to
+        - it
+        - all
+        - the
+        - us
+    - word: Jerusalem
+      options:
+        - Jerusalem
+        - Destroy
+        - Distort
+        - Through
+        - Another
+    - word: to
+      options:
+        - to
+        - whom
+        - said
+        - up
+        - life
+    - word: visit
+      options:
+        - visit
+        - away
+        - before
+        - you
+        - hearing
+    - word: Cephas
+      options:
+        - Cephas
+        - Paul
+        - Received
+        - Want
+        - Before
+    - word: and
+      options:
+        - and
+        - so
+        - grace
+        - he
+        - away
+    - word: remained
+      options:
+        - remained
+        - heaven
+        - advancing
+        - himself
+        - beyond
+    - word: with
+      options:
+        - with
+        - did
+        - life
+        - only
+        - again
+    - word: him
+      options:
+        - him
+        - not
+        - you
+        - used
+        - lie!)
+    - word: fifteen
+      options:
+        - fifteen
+        - accursed
+        - glory
+        - dead—
+        - damascus
+    - word: days.
+      options:
+        - days.
+        - set.
+        - heard.
+        - god.
+        - into.
+    - word: But
+      options:
+        - But
+        - When
+        - Judea
+        - Faith
+        - Am
+    - word: I
+      options:
+        - I
+        - And
+        - Who
+        - Of
+        - If
+    - word: saw
+      options:
+        - saw
+        - had
+        - set
+        - syria
+        - or
+    - word: none
+      options:
+        - none
+        - whom
+        - for
+        - faith
+        - man's
+    - word: of
+      options:
+        - of
+        - or
+        - by
+        - the
+        - it
+    - word: the
+      options:
+        - the
+        - set
+        - or
+        - gave
+        - all
+    - word: other
+      options:
+        - other
+        - was
+        - any
+        - among
+        - distort
+    - word: apostles
+      options:
+        - apostles
+        - judaism
+        - contrary
+        - extremely
+        - present
+    - word: except
+      options:
+        - except
+        - preach
+        - visit
+        - among
+        - from
+    - word: James
+      options:
+        - James
+        - Used
+        - From
+        - Judea
+        - Would
+    - word: the
+      options:
+        - the
+        - so
+        - amen
+        - james
+        - apart
+    - word: Lord's
+      options:
+        - Lord's
+        - Tried
+        - Order
+        - Arabia
+        - Himself
+    - word: brother.
+      options:
+        - brother.
+        - brothers.
+        - those.
+        - please.
+        - churches.
+    - word: (In
+      options:
+        - (In
+        - Our
+        - Would
+        - Order
+        - By
+    - word: what
+      options:
+        - what
+        - faith
+        - still
+        - you
+        - whom
+    - word: I
+      options:
+        - I
+        - Go
+        - An
+        - Do
+        - To
+    - word: am
+      options:
+        - am
+        - if
+        - that
+        - even
+        - as
+    - word: writing
+      options:
+        - writing
+        - pleased
+        - through
+        - heaven
+        - angel
+    - word: to
+      options:
+        - to
+        - us
+        - me
+        - with
+        - son
+    - word: you,
+      options:
+        - you,
+        - us,
+        - faith,
+        - heard,
+        - again,
+    - word: before
+      options:
+        - before
+        - turning
+        - man's
+        - consult
+        - among
+    - word: God,
+      options:
+        - God,
+        - Not,
+        - Into,
+        - We,
+        - But,
+    - word: I
+      options:
+        - I
+        - Saw
+        - Is
+        - We
+        - Nor
+    - word: do
+      options:
+        - do
+        - in
+        - went
+        - up
+        - he
+    - word: not
+      options:
+        - not
+        - my
+        - if
+        - there
+        - any
+    - word: lie!)
+      options:
+        - lie!)
+        - brother
+        - god
+        - man
+        - called
+    - word: Then
+      options:
+        - Then
+        - Faith
+        - For
+        - Sins
+        - Lord's
+    - word: I
+      options:
+        - I
+        - The
+        - My
+        - God
+        - An
+    - word: went
+      options:
+        - went
+        - there
+        - christ
+        - any
+        - person
+    - word: into
+      options:
+        - into
+        - or
+        - you
+        - visit
+        - am
+    - word: the
+      options:
+        - the
+        - how
+        - none
+        - own
+        - faith
+    - word: regions
+      options:
+        - regions
+        - extremely
+        - hearing
+        - preach
+        - present
+    - word: of
+      options:
+        - of
+        - how
+        - go
+        - went
+        - are
+    - word: Syria
+      options:
+        - Syria
+        - Away
+        - Distort
+        - Galatia
+        - Turning
+    - word: and
+      options:
+        - and
+        - angel
+        - those
+        - with
+        - order
+    - word: Cilicia.
+      options:
+        - Cilicia.
+        - Damascus.
+        - Turning.
+        - Trouble.
+        - Remained.
+    - word: And
+      options:
+        - And
+        - As
+        - (in
+        - Into
+        - Was
+    - word: I
+      options:
+        - I
+        - Set
+        - Who
+        - Or
+        - His
+    - word: was
+      options:
+        - was
+        - one
+        - born
+        - son
+        - ever
+    - word: still
+      options:
+        - still
+        - then
+        - any
+        - three
+        - arabia
+    - word: unknown
+      options:
+        - unknown
+        - jesus
+        - accursed
+        - heard
+        - might
+    - word: in
+      options:
+        - in
+        - evil
+        - was
+        - ever
+        - when
+    - word: person
+      options:
+        - person
+        - some
+        - because
+        - church
+        - even
+    - word: to
+      options:
+        - to
+        - a
+        - go
+        - of
+        - went
+    - word: the
+      options:
+        - the
+        - own
+        - they
+        - son
+        - any
+    - word: churches
+      options:
+        - churches
+        - church
+        - gospel
+        - brother
+        - hearing
+    - word: of
+      options:
+        - of
+        - us
+        - once
+        - said
+        - he
+    - word: Judea
+      options:
+        - Judea
+        - Apart
+        - Said
+        - Then
+        - Used
+    - word: that
+      options:
+        - that
+        - gave
+        - it
+        - him
+        - church
+    - word: are
+      options:
+        - are
+        - tried
+        - own
+        - am
+        - sins
+    - word: in
+      options:
+        - in
+        - life
+        - was
+        - as
+        - one
+    - word: Christ.
+      options:
+        - Christ.
+        - Grace.
+        - Himself.
+        - Receive.
+        - Faith.
+    - word: They
+      options:
+        - They
+        - One
+        - The
+        - Before
+        - Lie!)
+    - word: only
+      options:
+        - only
+        - or
+        - into
+        - syria
+        - in
+    - word: were
+      options:
+        - were
+        - three
+        - with
+        - called
+        - cephas
+    - word: hearing
+      options:
+        - hearing
+        - another
+        - before
+        - anyone
+        - former
+    - word: it
+      options:
+        - it
+        - my
+        - one
+        - of
+        - god
+    - word: said,
+      options:
+        - said,
+        - those,
+        - person,
+        - that,
+        - say,
+    - word: “He
+      options:
+        - “He
+        - “Saw
+        - “But
+        - “God
+        - “For
+    - word: who
+      options:
+        - who
+        - an
+        - among
+        - grace
+        - go
+    - word: used
+      options:
+        - used
+        - reveal
+        - as
+        - cephas
+        - there
+    - word: to
+      options:
+        - to
+        - used
+        - gave
+        - own
+        - now
+    - word: persecute
+      options:
+        - persecute
+        - gospel—
+        - receive
+        - through
+        - destroy
+    - word: us
+      options:
+        - us
+        - but
+        - set
+        - life
+        - many
+    - word: is
+      options:
+        - is
+        - then
+        - want
+        - so
+        - life
+    - word: now
+      options:
+        - now
+        - still
+        - then
+        - paul
+        - all
+    - word: preaching
+      options:
+        - preaching
+        - churches
+        - cilicia
+        - violently
+        - trouble
+    - word: the
+      options:
+        - the
+        - us
+        - had
+        - used
+        - all
+    - word: faith
+      options:
+        - faith
+        - should
+        - had
+        - evil
+        - god
+    - word: he
+      options:
+        - he
+        - some
+        - did
+        - not
+        - gave
+    - word: once
+      options:
+        - once
+        - tried
+        - all
+        - us
+        - let
+    - word: tried
+      options:
+        - tried
+        - still
+        - beyond
+        - angel
+        - glory
+    - word: to
+      options:
+        - to
+        - let
+        - god
+        - went
+        - age
+    - word: destroy.”
+      options:
+        - destroy.”
+        - heaven.”
+        - regions.”
+        - still.”
+        - because.”
+    - word: And
+      options:
+        - And
+        - Might
+        - Apart
+        - Jesus
+        - Are
+    - word: they
+      options:
+        - they
+        - for
+        - many
+        - people
+        - years
+    - word: glorified
+      options:
+        - glorified
+        - violently
+        - brothers
+        - astonished
+        - hearing
+    - word: God
+      options:
+        - God
+        - Whom
+        - For
+        - Might
+        - Faith
+    - word: because
+      options:
+        - because
+        - heaven
+        - approval
+        - among
+        - faith
+    - word: of
+      options:
+        - of
+        - had
+        - sins
+        - was
+        - they
+    - word: me.
+      options:
+        - me.
+        - did.
+        - i.
+        - have.
+        - evil.

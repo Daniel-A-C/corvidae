@@ -1,0 +1,4317 @@
+title: Obadiah
+language: English
+description: The Book of Obadiah (ESV)
+progress: 5
+words:
+    - word: The
+      options:
+        - The
+        - Among
+        - "No"
+        - Zion
+        - Say
+    - word: vision
+      options:
+        - vision
+        - over
+        - behold
+        - never
+        - says
+    - word: of
+      options:
+        - of
+        - set
+        - all
+        - my
+        - says
+    - word: Obadiah.
+      options:
+        - Obadiah.
+        - Though.
+        - Steal.
+        - Among.
+        - Gilead.
+    - word: Thus
+      options:
+        - Thus
+        - Up
+        - Allies
+        - Steal
+        - Deeds
+      prefix: |4+
+    - word: says
+      options:
+        - says
+        - who
+        - mighty
+        - their
+        - every
+    - word: the
+      options:
+        - the
+        - shall
+        - gate
+        - of
+        - up
+    - word: Lord
+      options:
+        - Lord
+        - Clefts
+        - Mount
+        - Edom
+        - You
+    - word: God
+      options:
+        - God
+        - Out
+        - Nest
+        - Rock
+        - That
+    - word: concerning
+      options:
+        - concerning
+        - sepharad
+        - distress
+        - survivors
+        - zarephath
+    - word: 'Edom:'
+      options:
+        - 'Edom:'
+        - 'Behold:'
+        - 'Grape:'
+        - 'Lord''s:'
+        - 'Over:'
+    - word: We
+      options:
+        - We
+        - Down
+        - Out
+        - "Off"
+        - Had
+      prefix: |4+
+    - word: have
+      options:
+        - have
+        - make
+        - zion
+        - their
+        - you
+    - word: heard
+      options:
+        - heard
+        - aloof
+        - sent
+        - driven
+        - kingdom
+    - word: a
+      options:
+        - a
+        - say
+        - o
+        - cut
+        - you
+    - word: report
+      options:
+        - report
+        - steal
+        - gate
+        - forever
+        - night—
+    - word: from
+      options:
+        - from
+        - gates
+        - has
+        - aloft
+        - you
+    - word: the
+      options:
+        - the
+        - they
+        - his
+        - esau
+        - one
+    - word: Lord,
+      options:
+        - Lord,
+        - Shame,
+        - Aloft,
+        - Teman,
+        - Say,
+    - word: and
+      options:
+        - and
+        - heart
+        - there
+        - they
+        - gloat
+      prefix: |4+
+    - word: a
+      options:
+        - a
+        - cut
+        - not
+        - men
+        - man
+    - word: messenger
+      options:
+        - messenger
+        - gleanings
+        - saviors
+        - plunderers
+        - distress
+    - word: has
+      options:
+        - has
+        - peace
+        - so
+        - stand
+        - fire
+    - word: been
+      options:
+        - been
+        - allies
+        - clefts
+        - for
+        - down
+    - word: sent
+      options:
+        - sent
+        - lofty
+        - rule
+        - esau
+        - thus
+    - word: among
+      options:
+        - among
+        - like
+        - there
+        - utterly
+        - border
+    - word: the
+      options:
+        - the
+        - men
+        - has
+        - negeb
+        - own
+    - word: 'nations:'
+      options:
+        - 'nations:'
+        - 'brother:'
+        - 'consume:'
+        - 'steal:'
+        - 'ephraim:'
+    - word: “Rise
+      options:
+        - “Rise
+        - “Hand
+        - “Out
+        - “Edom
+        - “Over
+      prefix: |4+
+    - word: up!
+      options:
+        - up!
+        - far!
+        - all!
+        - own!
+        - me!
+    - word: Let
+      options:
+        - Let
+        - How
+        - "Off"
+        - My
+        - Mount
+    - word: us
+      options:
+        - us
+        - "off"
+        - day
+        - so
+        - be
+    - word: rise
+      options:
+        - rise
+        - house
+        - judah
+        - one
+        - jacob
+    - word: against
+      options:
+        - against
+        - distress
+        - there
+        - prevailed
+        - nations
+    - word: her
+      options:
+        - her
+        - lord
+        - rule
+        - us
+        - it
+    - word: for
+      options:
+        - for
+        - negeb
+        - lofty
+        - go
+        - aloft
+    - word: battle!”
+      options:
+        - battle!”
+        - rejoice!”
+        - small!”
+        - sepharad!”
+        - rise!”
+    - word: Behold,
+      options:
+        - Behold,
+        - Lofty,
+        - Spoken,
+        - Like,
+        - Them,
+      prefix: |4+
+    - word: I
+      options:
+        - I
+        - You
+        - In
+        - Be
+        - Out
+    - word: will
+      options:
+        - will
+        - "no"
+        - of
+        - his
+        - eagle
+    - word: make
+      options:
+        - make
+        - though
+        - been
+        - bring
+        - holy
+    - word: you
+      options:
+        - you
+        - who
+        - holy
+        - pride
+        - wise
+    - word: small
+      options:
+        - small
+        - god
+        - thus
+        - like
+        - near
+    - word: among
+      options:
+        - among
+        - came
+        - rise
+        - though
+        - against
+    - word: the
+      options:
+        - the
+        - "off"
+        - among
+        - me
+        - heard
+    - word: nations;
+      options:
+        - nations;
+        - border;
+        - dwelling;
+        - jacob;
+        - strangers;
+    - word: you
+      options:
+        - you
+        - lord
+        - us
+        - for
+        - that
+      prefix: |4+
+    - word: shall
+      options:
+        - shall
+        - lord's
+        - host
+        - her
+        - house
+    - word: be
+      options:
+        - be
+        - says
+        - set
+        - my
+        - for
+    - word: utterly
+      options:
+        - utterly
+        - calamity
+        - survivor
+        - clefts
+        - stubble
+    - word: despised.
+      options:
+        - despised.
+        - thieves.
+        - sought.
+        - entered.
+        - though.
+    - word: The
+      options:
+        - The
+        - Fire
+        - Far
+        - Us
+        - Were
+      prefix: |4+
+    - word: pride
+      options:
+        - pride
+        - all
+        - for
+        - cover
+        - has
+    - word: of
+      options:
+        - of
+        - her
+        - is
+        - a
+        - rule
+    - word: your
+      options:
+        - your
+        - mighty
+        - in
+        - "off"
+        - to
+    - word: heart
+      options:
+        - heart
+        - lord
+        - wealth
+        - return
+        - for
+    - word: has
+      options:
+        - has
+        - and
+        - done
+        - nest
+        - go
+    - word: deceived
+      options:
+        - deceived
+        - behold
+        - border
+        - allies
+        - distress
+    - word: you,
+      options:
+        - you,
+        - live,
+        - pride,
+        - stood,
+        - it,
+    - word: you
+      options:
+        - you
+        - stood
+        - esau
+        - we
+        - my
+      prefix: |4+
+    - word: who
+      options:
+        - who
+        - us
+        - came
+        - be
+        - gates
+    - word: live
+      options:
+        - live
+        - people
+        - steal
+        - would
+        - all
+    - word: in
+      options:
+        - in
+        - this
+        - wise
+        - are
+        - we
+    - word: the
+      options:
+        - the
+        - wise
+        - if
+        - this
+        - at
+    - word: clefts
+      options:
+        - clefts
+        - bread
+        - esau
+        - gilead
+        - battle
+    - word: of
+      options:
+        - of
+        - were
+        - eat
+        - head
+        - but
+    - word: the
+      options:
+        - the
+        - bring
+        - soar
+        - over
+        - judah
+    - word: rock,
+      options:
+        - rock,
+        - all,
+        - heart,
+        - who,
+        - clefts,
+    - word: in
+      options:
+        - in
+        - go
+        - like
+        - ruin
+        - were
+      prefix: |4+
+    - word: your
+      options:
+        - your
+        - boast
+        - peace
+        - set
+        - ruin
+    - word: lofty
+      options:
+        - lofty
+        - done
+        - down
+        - because
+        - men
+    - word: dwelling,
+      options:
+        - dwelling,
+        - return,
+        - swallow,
+        - gatherers,
+        - vision,
+    - word: who
+      options:
+        - who
+        - "no"
+        - were
+        - of
+        - day
+      prefix: |4+
+    - word: say
+      options:
+        - say
+        - at
+        - cast
+        - lots
+        - land
+    - word: in
+      options:
+        - in
+        - me
+        - live
+        - a
+        - were
+    - word: your
+      options:
+        - your
+        - gate
+        - among
+        - rule
+        - negeb
+    - word: heart,
+      options:
+        - heart,
+        - that,
+        - stars,
+        - judah,
+        - border,
+    - word: “Who
+      options:
+        - “Who
+        - “Drink
+        - “Cast
+        - “Own
+        - “Stood
+      prefix: |4+
+    - word: will
+      options:
+        - will
+        - for
+        - been
+        - with
+        - not
+    - word: bring
+      options:
+        - bring
+        - though
+        - loot
+        - obadiah
+        - against
+    - word: me
+      options:
+        - me
+        - say
+        - this
+        - for
+        - nest
+    - word: down
+      options:
+        - down
+        - is
+        - eagle
+        - her
+        - behold
+    - word: to
+      options:
+        - to
+        - rise
+        - make
+        - all
+        - them
+    - word: the
+      options:
+        - the
+        - wise
+        - those
+        - day
+        - stars
+    - word: ground?”
+      options:
+        - ground?”
+        - lots?”
+        - allies?”
+        - ephraim?”
+        - shame?”
+    - word: Though
+      options:
+        - Though
+        - Bring
+        - Your
+        - Disaster
+        - People
+      prefix: |4+
+    - word: you
+      options:
+        - you
+        - fire
+        - loot
+        - us
+        - that
+    - word: soar
+      options:
+        - soar
+        - jacob
+        - mighty
+        - report
+        - my
+    - word: aloft
+      options:
+        - aloft
+        - battle
+        - land
+        - your
+        - border
+    - word: like
+      options:
+        - like
+        - have
+        - out
+        - bring
+        - cut
+    - word: the
+      options:
+        - the
+        - with
+        - to
+        - i
+        - soar
+    - word: eagle,
+      options:
+        - eagle,
+        - cast,
+        - samaria,
+        - them,
+        - bread,
+    - word: though
+      options:
+        - though
+        - trap
+        - rule
+        - against
+        - battle
+      prefix: |4+
+    - word: your
+      options:
+        - your
+        - teman
+        - day
+        - have
+        - own
+    - word: nest
+      options:
+        - nest
+        - clefts
+        - shall
+        - and
+        - head
+    - word: is
+      options:
+        - is
+        - rise
+        - that
+        - from
+        - they
+    - word: set
+      options:
+        - set
+        - small
+        - loot
+        - rule
+        - gates
+    - word: among
+      options:
+        - among
+        - been
+        - nest
+        - men
+        - drink
+    - word: the
+      options:
+        - the
+        - out
+        - teman
+        - that
+        - them
+    - word: stars,
+      options:
+        - stars,
+        - thus,
+        - sent,
+        - land,
+        - heard,
+    - word: from
+      options:
+        - from
+        - heard
+        - spoken
+        - bread
+        - escape
+      prefix: |4+
+    - word: there
+      options:
+        - there
+        - aloof
+        - jacob
+        - "off"
+        - had
+    - word: I
+      options:
+        - I
+        - Day
+        - In
+        - You
+        - To
+    - word: will
+      options:
+        - will
+        - stand
+        - rule
+        - by
+        - how
+    - word: bring
+      options:
+        - bring
+        - there
+        - jacob
+        - carried
+        - will
+    - word: you
+      options:
+        - you
+        - there
+        - as
+        - from
+        - out
+    - word: down,
+      options:
+        - down,
+        - wealth,
+        - are,
+        - have,
+        - their,
+    - word: declares
+      options:
+        - declares
+        - beneath
+        - stubble
+        - clefts
+        - return
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - say
+        - that
+        - men
+        - but
+    - word: Lord.
+      options:
+        - Lord.
+        - Of.
+        - Soar.
+        - It.
+        - Peace.
+    - word: If
+      options:
+        - If
+        - Rock
+        - Hand
+        - Zion
+        - Soar
+      prefix: |4+
+    - word: thieves
+      options:
+        - thieves
+        - there
+        - pillaged
+        - survivor
+        - though
+    - word: came
+      options:
+        - came
+        - behold
+        - eagle
+        - will
+        - as
+    - word: to
+      options:
+        - to
+        - set
+        - eat
+        - make
+        - out
+    - word: you,
+      options:
+        - you,
+        - aloof,
+        - shall,
+        - host,
+        - let,
+    - word: if
+      options:
+        - if
+        - been
+        - so
+        - has
+        - that
+      prefix: |4+
+    - word: plunderers
+      options:
+        - plunderers
+        - pillaged
+        - jerusalem
+        - strangers
+        - slaughter
+    - word: came
+      options:
+        - came
+        - how
+        - negeb
+        - go
+        - at
+    - word: by
+      options:
+        - by
+        - thus
+        - hand
+        - has
+        - came
+    - word: night—
+      options:
+        - night—
+        - jerusalem
+        - canaanites
+        - utterly
+        - gilead
+    - word: how
+      options:
+        - how
+        - we
+        - like
+        - eat
+        - burn
+      prefix: |4+
+    - word: you
+      options:
+        - you
+        - rock
+        - stand
+        - sent
+        - ruin
+    - word: have
+      options:
+        - have
+        - stars
+        - had
+        - that
+        - god
+    - word: been
+      options:
+        - been
+        - steal
+        - fire
+        - own
+        - head
+    - word: destroyed!—
+      options:
+        - destroyed!—
+        - possessions
+        - understanding
+        - continually
+        - philistines
+    - word: would
+      options:
+        - would
+        - enough
+        - peace
+        - clefts
+        - lots
+      prefix: |4+
+    - word: they
+      options:
+        - they
+        - us
+        - peace
+        - ruin
+        - my
+    - word: not
+      options:
+        - not
+        - your
+        - my
+        - eagle
+        - ruin
+    - word: steal
+      options:
+        - steal
+        - heart
+        - they
+        - cities
+        - holy
+    - word: only
+      options:
+        - only
+        - enough
+        - her
+        - behold
+        - let
+    - word: enough
+      options:
+        - enough
+        - saviors
+        - survivor
+        - spoken
+        - rise
+    - word: for
+      options:
+        - for
+        - gloat
+        - his
+        - will
+        - pride
+    - word: themselves?
+      options:
+        - themselves?
+        - philistines?
+        - concerning?
+        - benjamin?
+        - calamity?
+    - word: If
+      options:
+        - If
+        - Done
+        - But
+        - Is
+        - Her
+      prefix: |4+
+    - word: grape
+      options:
+        - grape
+        - eat
+        - stubble
+        - far
+        - utterly
+    - word: gatherers
+      options:
+        - gatherers
+        - saviors
+        - dismayed
+        - possess
+        - distress
+    - word: came
+      options:
+        - came
+        - host
+        - live
+        - ruin
+        - behold
+    - word: to
+      options:
+        - to
+        - will
+        - rock
+        - do
+        - set
+    - word: you,
+      options:
+        - you,
+        - drunk,
+        - your,
+        - judah,
+        - her,
+    - word: would
+      options:
+        - would
+        - consume
+        - set
+        - cities
+        - live
+      prefix: |4+
+    - word: they
+      options:
+        - they
+        - who
+        - it
+        - nest
+        - judah
+    - word: not
+      options:
+        - not
+        - god
+        - for
+        - who
+        - were
+    - word: leave
+      options:
+        - leave
+        - you
+        - make
+        - flame
+        - her
+    - word: gleanings?
+      options:
+        - gleanings?
+        - treasures?
+        - distress?
+        - strangers?
+        - rejoice?
+    - word: How
+      options:
+        - How
+        - Esau
+        - You
+        - Grape
+        - Me
+      prefix: |4+
+    - word: Esau
+      options:
+        - Esau
+        - Bread
+        - Nest
+        - Mighty
+        - Pride
+    - word: has
+      options:
+        - has
+        - have
+        - one
+        - stars
+        - every
+    - word: been
+      options:
+        - been
+        - deeds
+        - would
+        - rock
+        - cities
+    - word: pillaged,
+      options:
+        - pillaged,
+        - against,
+        - rejoice,
+        - you—,
+        - sought,
+    - word: his
+      options:
+        - his
+        - live
+        - down
+        - the
+        - god
+      prefix: |4+
+    - word: treasures
+      options:
+        - treasures
+        - ephraim
+        - against
+        - disaster
+        - because
+    - word: sought
+      options:
+        - sought
+        - grape
+        - lofty
+        - rock
+        - swallow
+    - word: out!
+      options:
+        - out!
+        - pride!
+        - and!
+        - jacob!
+        - do!
+    - word: All
+      options:
+        - All
+        - Negeb
+        - Mount
+        - Out
+        - Lofty
+      prefix: |4+
+    - word: your
+      options:
+        - your
+        - grape
+        - men
+        - report
+        - behold
+    - word: allies
+      options:
+        - allies
+        - stand
+        - holy
+        - their
+        - heart
+    - word: have
+      options:
+        - have
+        - my
+        - steal
+        - heart
+        - never
+    - word: driven
+      options:
+        - driven
+        - teman
+        - upon
+        - violence
+        - came
+    - word: you
+      options:
+        - you
+        - would
+        - fire
+        - up
+        - sent
+    - word: to
+      options:
+        - to
+        - trap
+        - over
+        - have
+        - do
+    - word: your
+      options:
+        - your
+        - "no"
+        - live
+        - battle
+        - negeb
+    - word: border;
+      options:
+        - border;
+        - lord's;
+        - mighty;
+        - cast;
+        - grape;
+    - word: those
+      options:
+        - those
+        - there
+        - mount
+        - enough
+        - from
+      prefix: |4+
+    - word: at
+      options:
+        - at
+        - ruin
+        - like
+        - to
+        - burn
+    - word: peace
+      options:
+        - peace
+        - bring
+        - heard
+        - soar
+        - men
+    - word: with
+      options:
+        - with
+        - as
+        - up
+        - enough
+        - do
+    - word: you
+      options:
+        - you
+        - lots
+        - but
+        - to
+        - lord
+    - word: have
+      options:
+        - have
+        - your
+        - that
+        - deeds
+        - gates
+    - word: deceived
+      options:
+        - deceived
+        - kingdom
+        - messenger
+        - violence
+        - against
+    - word: you;
+      options:
+        - you;
+        - this;
+        - trap;
+        - aloof;
+        - lots;
+    - word: they
+      options:
+        - they
+        - my
+        - mighty
+        - cast
+        - would
+      prefix: |4+
+    - word: have
+      options:
+        - have
+        - if
+        - sent
+        - jacob
+        - edom
+    - word: prevailed
+      options:
+        - prevailed
+        - beneath
+        - utterly
+        - entered
+        - stubble
+    - word: against
+      options:
+        - against
+        - gleanings
+        - shephelah
+        - ephraim
+        - nations
+    - word: you;
+      options:
+        - you;
+        - they;
+        - lofty;
+        - from;
+        - flame;
+    - word: those
+      options:
+        - those
+        - nations
+        - one
+        - possess
+        - mighty
+      prefix: |4+
+    - word: who
+      options:
+        - who
+        - rock
+        - and
+        - edom
+        - as
+    - word: eat
+      options:
+        - eat
+        - trap
+        - own
+        - at
+        - steal
+    - word: your
+      options:
+        - your
+        - they
+        - go
+        - heart
+        - shall
+    - word: bread
+      options:
+        - bread
+        - against
+        - this
+        - own
+        - joseph
+    - word: have
+      options:
+        - have
+        - and
+        - negeb
+        - up
+        - if
+    - word: set
+      options:
+        - set
+        - i
+        - enter
+        - do
+        - they
+    - word: a
+      options:
+        - a
+        - my
+        - me
+        - not
+        - but
+    - word: trap
+      options:
+        - trap
+        - says
+        - joseph
+        - return
+        - stood
+    - word: beneath
+      options:
+        - beneath
+        - enough
+        - heart
+        - return
+        - mighty
+    - word: you—
+      options:
+        - you—
+        - eagle
+        - loot
+        - sepharad
+        - enough
+    - word: you
+      options:
+        - you
+        - stood
+        - judah
+        - us
+        - holy
+      prefix: |4+
+    - word: have
+      options:
+        - have
+        - there
+        - near
+        - gates
+        - out
+    - word: "no"
+      options:
+        - "no"
+        - for
+        - hand
+        - this
+        - o
+    - word: understanding.
+      options:
+        - understanding.
+        - possessions.
+        - continually.
+        - destroyed!—.
+        - philistines.
+    - word: Will
+      options:
+        - Will
+        - Done
+        - Rock
+        - God
+        - Teman
+      prefix: |4+
+    - word: I
+      options:
+        - I
+        - All
+        - Go
+        - His
+        - To
+    - word: not
+      options:
+        - not
+        - me
+        - lofty
+        - jacob
+        - they
+    - word: "on"
+      options:
+        - "on"
+        - "no"
+        - day
+        - been
+        - like
+    - word: that
+      options:
+        - that
+        - not
+        - lord's
+        - jacob
+        - been
+    - word: day,
+      options:
+        - day,
+        - has,
+        - o,
+        - trap,
+        - nest,
+    - word: declares
+      options:
+        - declares
+        - sought
+        - entered
+        - allies
+        - destroy
+    - word: the
+      options:
+        - the
+        - up
+        - in
+        - say
+        - hand
+    - word: Lord,
+      options:
+        - Lord,
+        - Deeds,
+        - Border,
+        - Pride,
+        - Esau,
+    - word: destroy
+      options:
+        - destroy
+        - flame
+        - mountain
+        - judah
+        - calamity
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - your
+        - far
+        - in
+        - negeb
+    - word: wise
+      options:
+        - wise
+        - small
+        - me
+        - flame
+        - near
+    - word: men
+      options:
+        - men
+        - burn
+        - been
+        - hand
+        - heart
+    - word: out
+      options:
+        - out
+        - burn
+        - upon
+        - set
+        - have
+    - word: of
+      options:
+        - of
+        - you
+        - live
+        - from
+        - in
+    - word: Edom,
+      options:
+        - Edom,
+        - Battle,
+        - We,
+        - You,
+        - Gilead,
+    - word: and
+      options:
+        - and
+        - loot
+        - never
+        - enter
+        - own
+      prefix: |4+
+    - word: understanding
+      options:
+        - understanding
+        - continually
+        - possessions
+        - philistines
+        - destroyed!—
+    - word: out
+      options:
+        - out
+        - small
+        - would
+        - but
+        - sent
+    - word: of
+      options:
+        - of
+        - are
+        - edom
+        - with
+        - had
+    - word: Mount
+      options:
+        - Mount
+        - Only
+        - And
+        - Far
+        - Thieves
+    - word: Esau?
+      options:
+        - Esau?
+        - Done?
+        - Israel?
+        - Men?
+        - They?
+    - word: And
+      options:
+        - And
+        - Came
+        - Heard
+        - "No"
+        - Gate
+      prefix: |4+
+    - word: your
+      options:
+        - your
+        - me
+        - though
+        - deeds
+        - small
+    - word: mighty
+      options:
+        - mighty
+        - rejoice
+        - that
+        - samaria
+        - aloof
+    - word: men
+      options:
+        - men
+        - upon
+        - for
+        - day
+        - to
+    - word: shall
+      options:
+        - shall
+        - report
+        - driven
+        - gates
+        - cast
+    - word: be
+      options:
+        - be
+        - this
+        - says
+        - with
+        - my
+    - word: dismayed,
+      options:
+        - dismayed,
+        - strangers,
+        - benjamin,
+        - beneath,
+        - pillaged,
+    - word: O
+      options:
+        - O
+        - Man
+        - So
+        - Far
+        - Eat
+    - word: Teman,
+      options:
+        - Teman,
+        - God,
+        - The,
+        - Cover,
+        - Near,
+    - word: so
+      options:
+        - so
+        - host
+        - to
+        - has
+        - at
+      prefix: |4+
+    - word: that
+      options:
+        - that
+        - head
+        - and
+        - say
+        - lord's
+    - word: every
+      options:
+        - every
+        - their
+        - says
+        - thus
+        - destroy
+    - word: man
+      options:
+        - man
+        - they
+        - rock
+        - drunk
+        - hand
+    - word: from
+      options:
+        - from
+        - near
+        - shall
+        - drunk
+        - among
+    - word: Mount
+      options:
+        - Mount
+        - Peace
+        - Joseph
+        - Down
+        - Wise
+    - word: Esau
+      options:
+        - Esau
+        - Lots
+        - Heard
+        - The
+        - Nest
+    - word: will
+      options:
+        - will
+        - been
+        - every
+        - by
+        - bread
+    - word: be
+      options:
+        - be
+        - all
+        - them
+        - like
+        - my
+    - word: cut
+      options:
+        - cut
+        - every
+        - is
+        - over
+        - had
+    - word: "off"
+      options:
+        - "off"
+        - flame
+        - heard
+        - lofty
+        - ruin
+    - word: by
+      options:
+        - by
+        - "on"
+        - god
+        - one
+        - says
+    - word: slaughter.
+      options:
+        - slaughter.
+        - concerning.
+        - crossroads.
+        - nations.
+        - obadiah.
+    - word: Because
+      options:
+        - Because
+        - Never
+        - Boast
+        - Night—
+        - Negeb
+      prefix: |4+
+    - word: of
+      options:
+        - of
+        - so
+        - if
+        - rise
+        - how
+    - word: the
+      options:
+        - the
+        - flame
+        - be
+        - esau
+        - with
+    - word: violence
+      options:
+        - violence
+        - misfortune
+        - jerusalem
+        - distress
+        - concerning
+    - word: done
+      options:
+        - done
+        - shall
+        - ground
+        - lord's
+        - vision
+    - word: to
+      options:
+        - to
+        - trap
+        - they
+        - upon
+        - of
+    - word: your
+      options:
+        - your
+        - escape
+        - me
+        - eat
+        - house
+    - word: brother
+      options:
+        - brother
+        - would
+        - you—
+        - lord's
+        - heart
+    - word: Jacob,
+      options:
+        - Jacob,
+        - Flame,
+        - Escape,
+        - Entered,
+        - And,
+    - word: shame
+      options:
+        - shame
+        - clefts
+        - sent
+        - thieves
+        - from
+      prefix: |4+
+    - word: shall
+      options:
+        - shall
+        - god
+        - eat
+        - stubble
+        - there
+    - word: cover
+      options:
+        - cover
+        - cast
+        - one
+        - lord's
+        - stubble
+    - word: you,
+      options:
+        - you,
+        - holy,
+        - grape,
+        - teman,
+        - wise,
+    - word: and
+      options:
+        - and
+        - "off"
+        - mount
+        - her
+        - negeb
+      prefix: |4+
+    - word: you
+      options:
+        - you
+        - out
+        - thus
+        - has
+        - her
+    - word: shall
+      options:
+        - shall
+        - though
+        - fire
+        - heart
+        - lots
+    - word: be
+      options:
+        - be
+        - gate
+        - burn
+        - to
+        - been
+    - word: cut
+      options:
+        - cut
+        - shall
+        - cover
+        - make
+        - judah
+    - word: "off"
+      options:
+        - "off"
+        - sent
+        - stand
+        - judah
+        - hand
+    - word: forever.
+      options:
+        - forever.
+        - return.
+        - against.
+        - gates.
+        - utterly.
+    - word: "On"
+      options:
+        - "On"
+        - Sent
+        - To
+        - Your
+        - Like
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - to
+        - shall
+        - zion
+        - stand
+    - word: day
+      options:
+        - day
+        - boast
+        - stood
+        - mount
+        - thus
+    - word: that
+      options:
+        - that
+        - gloat
+        - hand
+        - as
+        - head
+    - word: you
+      options:
+        - you
+        - loot
+        - house
+        - has
+        - we
+    - word: stood
+      options:
+        - stood
+        - cut
+        - border
+        - like
+        - live
+    - word: aloof,
+      options:
+        - aloof,
+        - those,
+        - all,
+        - gates,
+        - clefts,
+    - word: "on"
+      options:
+        - "on"
+        - that
+        - only
+        - rise
+        - man
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - will
+        - stand
+        - house
+        - there
+    - word: day
+      options:
+        - day
+        - zion
+        - gloat
+        - not
+        - rise
+    - word: that
+      options:
+        - that
+        - enough
+        - out
+        - your
+        - aloft
+    - word: strangers
+      options:
+        - strangers
+        - jerusalem
+        - gatherers
+        - deceived
+        - forever
+    - word: carried
+      options:
+        - carried
+        - saviors
+        - israel
+        - violence
+        - shall
+    - word: "off"
+      options:
+        - "off"
+        - from
+        - drink
+        - nest
+        - his
+    - word: his
+      options:
+        - his
+        - for
+        - house
+        - god
+        - to
+    - word: wealth
+      options:
+        - wealth
+        - return
+        - small
+        - pillaged
+        - stood
+    - word: and
+      options:
+        - and
+        - day
+        - you
+        - i
+        - us
+      prefix: |4+
+    - word: foreigners
+      options:
+        - foreigners
+        - calamity
+        - philistines
+        - disaster
+        - plunderers
+    - word: entered
+      options:
+        - entered
+        - violence
+        - leave
+        - saviors
+        - though
+    - word: his
+      options:
+        - his
+        - over
+        - us
+        - says
+        - jacob
+    - word: gates
+      options:
+        - gates
+        - eagle
+        - steal
+        - with
+        - joseph
+    - word: and
+      options:
+        - and
+        - man
+        - rock
+        - negeb
+        - there
+      prefix: |4+
+    - word: cast
+      options:
+        - cast
+        - spoken
+        - battle
+        - there
+        - do
+    - word: lots
+      options:
+        - lots
+        - upon
+        - says
+        - cover
+        - who
+    - word: for
+      options:
+        - for
+        - burn
+        - zion
+        - me
+        - every
+    - word: Jerusalem,
+      options:
+        - Jerusalem,
+        - Philistines,
+        - Foreigners,
+        - Kingdom,
+        - Benjamin,
+    - word: you
+      options:
+        - you
+        - they
+        - teman
+        - her
+        - aloft
+      prefix: |4+
+    - word: were
+      options:
+        - were
+        - set
+        - you—
+        - you
+        - bread
+    - word: like
+      options:
+        - like
+        - one
+        - your
+        - mighty
+        - stars
+    - word: one
+      options:
+        - one
+        - how
+        - bread
+        - live
+        - those
+    - word: of
+      options:
+        - of
+        - thus
+        - them
+        - land
+        - burn
+    - word: them.
+      options:
+        - them.
+        - had.
+        - every.
+        - stars.
+        - fire.
+    - word: But
+      options:
+        - But
+        - We
+        - Stand
+        - Flame
+        - Her
+      prefix: |4+
+    - word: do
+      options:
+        - do
+        - hand
+        - his
+        - rock
+        - how
+    - word: not
+      options:
+        - not
+        - only
+        - every
+        - hand
+        - cast
+    - word: gloat
+      options:
+        - gloat
+        - head
+        - sent
+        - from
+        - them
+    - word: over
+      options:
+        - over
+        - up
+        - drunk
+        - soar
+        - battle
+    - word: the
+      options:
+        - the
+        - there
+        - us
+        - gate
+        - leave
+    - word: day
+      options:
+        - day
+        - gates
+        - them
+        - for
+        - negeb
+    - word: of
+      options:
+        - of
+        - a
+        - them
+        - edom
+        - cast
+    - word: your
+      options:
+        - your
+        - cities
+        - in
+        - loot
+        - lord's
+    - word: brother
+      options:
+        - brother
+        - messenger
+        - pillaged
+        - dwelling
+        - driven
+    - word: in
+      options:
+        - in
+        - head
+        - live
+        - rise
+        - that
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - i
+        - this
+        - let
+        - those
+    - word: day
+      options:
+        - day
+        - zion
+        - far
+        - those
+        - from
+    - word: of
+      options:
+        - of
+        - cast
+        - "on"
+        - me
+        - my
+    - word: his
+      options:
+        - his
+        - gloat
+        - at
+        - o
+        - pride
+    - word: misfortune;
+      options:
+        - misfortune;
+        - shephelah;
+        - jerusalem;
+        - gatherers;
+        - crossroads;
+    - word: do
+      options:
+        - do
+        - go
+        - but
+        - edom
+        - how
+      prefix: |4+
+    - word: not
+      options:
+        - not
+        - says
+        - "on"
+        - a
+        - lots
+    - word: rejoice
+      options:
+        - rejoice
+        - allies
+        - deeds
+        - you—
+        - grape
+    - word: over
+      options:
+        - over
+        - not
+        - return
+        - own
+        - and
+    - word: the
+      options:
+        - the
+        - "on"
+        - like
+        - been
+        - "no"
+    - word: people
+      options:
+        - people
+        - been
+        - spoken
+        - leave
+        - stand
+    - word: of
+      options:
+        - of
+        - your
+        - rock
+        - out
+        - i
+    - word: Judah
+      options:
+        - Judah
+        - Lots
+        - Gloat
+        - Rejoice
+        - Fire
+    - word: in
+      options:
+        - in
+        - land
+        - how
+        - upon
+        - like
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - drunk
+        - teman
+        - hand
+        - eagle
+    - word: day
+      options:
+        - day
+        - says
+        - that
+        - lofty
+        - judah
+    - word: of
+      options:
+        - of
+        - only
+        - over
+        - my
+        - near
+    - word: their
+      options:
+        - their
+        - who
+        - rule
+        - how
+        - holy
+    - word: ruin;
+      options:
+        - ruin;
+        - his;
+        - eat;
+        - esau;
+        - as;
+    - word: do
+      options:
+        - do
+        - live
+        - have
+        - fire
+        - make
+      prefix: |4+
+    - word: not
+      options:
+        - not
+        - us
+        - "on"
+        - men
+        - zion
+    - word: boast
+      options:
+        - boast
+        - trap
+        - forever
+        - shame
+        - mount
+    - word: in
+      options:
+        - in
+        - rule
+        - of
+        - cast
+        - fire
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - were
+        - gate
+        - live
+        - his
+    - word: day
+      options:
+        - day
+        - of
+        - rock
+        - say
+        - for
+    - word: of
+      options:
+        - of
+        - upon
+        - one
+        - have
+        - has
+    - word: distress.
+      options:
+        - distress.
+        - lord's.
+        - stubble.
+        - because.
+        - mountain.
+    - word: Do
+      options:
+        - Do
+        - Rock
+        - Not
+        - Men
+        - Rise
+      prefix: |4+
+    - word: not
+      options:
+        - not
+        - would
+        - of
+        - ruin
+        - stood
+    - word: enter
+      options:
+        - enter
+        - hand
+        - negeb
+        - flame
+        - forever
+    - word: the
+      options:
+        - the
+        - over
+        - like
+        - heart
+        - flame
+    - word: gate
+      options:
+        - gate
+        - her
+        - wise
+        - you
+        - far
+    - word: of
+      options:
+        - of
+        - rise
+        - if
+        - hand
+        - host
+    - word: my
+      options:
+        - my
+        - god
+        - of
+        - lord
+        - so
+    - word: people
+      options:
+        - people
+        - that
+        - they
+        - drunk
+        - survivor
+    - word: in
+      options:
+        - in
+        - say
+        - "on"
+        - who
+        - fire
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - have
+        - judah
+        - it
+        - zion
+    - word: day
+      options:
+        - day
+        - god
+        - his
+        - those
+        - lofty
+    - word: of
+      options:
+        - of
+        - nest
+        - me
+        - let
+        - my
+    - word: their
+      options:
+        - their
+        - heart
+        - beneath
+        - shall
+        - there
+    - word: calamity;
+      options:
+        - calamity;
+        - obadiah;
+        - dismayed;
+        - though;
+        - crossroads;
+    - word: do
+      options:
+        - do
+        - the
+        - fire
+        - you
+        - esau
+      prefix: |4+
+    - word: not
+      options:
+        - not
+        - holy
+        - have
+        - o
+        - enter
+    - word: gloat
+      options:
+        - gloat
+        - shall
+        - rule
+        - down
+        - let
+    - word: over
+      options:
+        - over
+        - lord's
+        - his
+        - far
+        - eagle
+    - word: his
+      options:
+        - his
+        - every
+        - in
+        - gates
+        - been
+    - word: disaster
+      options:
+        - disaster
+        - brother
+        - vision
+        - wealth
+        - violence
+    - word: in
+      options:
+        - in
+        - this
+        - rule
+        - land
+        - head
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - burn
+        - soar
+        - drunk
+        - my
+    - word: day
+      options:
+        - day
+        - bread
+        - drunk
+        - negeb
+        - gate
+    - word: of
+      options:
+        - of
+        - out
+        - who
+        - had
+        - cut
+    - word: his
+      options:
+        - his
+        - by
+        - small
+        - heart
+        - grape
+    - word: calamity;
+      options:
+        - calamity;
+        - against;
+        - border;
+        - despised;
+        - mountain;
+    - word: do
+      options:
+        - do
+        - "off"
+        - say
+        - make
+        - were
+      prefix: |4+
+    - word: not
+      options:
+        - not
+        - and
+        - holy
+        - if
+        - heart
+    - word: loot
+      options:
+        - loot
+        - lofty
+        - head
+        - their
+        - says
+    - word: his
+      options:
+        - his
+        - ruin
+        - but
+        - rock
+        - set
+    - word: wealth
+      options:
+        - wealth
+        - bring
+        - edom
+        - with
+        - enough
+    - word: in
+      options:
+        - in
+        - i
+        - own
+        - but
+        - edom
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - peace
+        - live
+        - gates
+        - over
+    - word: day
+      options:
+        - day
+        - every
+        - bread
+        - gates
+        - "off"
+    - word: of
+      options:
+        - of
+        - them
+        - all
+        - by
+        - are
+    - word: his
+      options:
+        - his
+        - aloft
+        - it
+        - say
+        - lofty
+    - word: calamity.
+      options:
+        - calamity.
+        - plunderers.
+        - sought.
+        - nations.
+        - messenger.
+    - word: Do
+      options:
+        - Do
+        - Let
+        - To
+        - "On"
+        - Is
+      prefix: |4+
+    - word: not
+      options:
+        - not
+        - you
+        - say
+        - enter
+        - go
+    - word: stand
+      options:
+        - stand
+        - "off"
+        - stars
+        - gates
+        - bring
+    - word: at
+      options:
+        - at
+        - loot
+        - cut
+        - has
+        - day
+    - word: the
+      options:
+        - the
+        - esau
+        - you
+        - been
+        - bring
+    - word: crossroads
+      options:
+        - crossroads
+        - slaughter
+        - prevailed
+        - sepharad
+        - gatherers
+    - word: to
+      options:
+        - to
+        - if
+        - fire
+        - will
+        - make
+      prefix: |4+
+    - word: cut
+      options:
+        - cut
+        - done
+        - judah
+        - do
+        - fire
+    - word: "off"
+      options:
+        - "off"
+        - down
+        - we
+        - how
+        - wise
+    - word: his
+      options:
+        - his
+        - nest
+        - say
+        - boast
+        - so
+    - word: fugitives;
+      options:
+        - fugitives;
+        - samaria;
+        - slaughter;
+        - calamity;
+        - night—;
+    - word: do
+      options:
+        - do
+        - land
+        - done
+        - rise
+        - this
+      prefix: |4+
+    - word: not
+      options:
+        - not
+        - every
+        - so
+        - cover
+        - there
+    - word: hand
+      options:
+        - hand
+        - allies
+        - joseph
+        - small
+        - soar
+    - word: over
+      options:
+        - over
+        - this
+        - escape
+        - stars
+        - at
+    - word: his
+      options:
+        - his
+        - cover
+        - "on"
+        - lofty
+        - rock
+    - word: survivors
+      options:
+        - survivors
+        - jerusalem
+        - survivor
+        - fugitives
+        - deceived
+    - word: in
+      options:
+        - in
+        - i
+        - out
+        - me
+        - only
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - edom
+        - esau
+        - "no"
+        - are
+    - word: day
+      options:
+        - day
+        - say
+        - burn
+        - me
+        - those
+    - word: of
+      options:
+        - of
+        - only
+        - rise
+        - are
+        - lots
+    - word: distress.
+      options:
+        - distress.
+        - slaughter.
+        - survivors.
+        - disaster.
+        - misfortune.
+    - word: For
+      options:
+        - For
+        - In
+        - "Off"
+        - Enter
+        - At
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - soar
+        - shall
+        - are
+        - set
+    - word: day
+      options:
+        - day
+        - man
+        - had
+        - done
+        - steal
+    - word: of
+      options:
+        - of
+        - from
+        - you
+        - that
+        - sent
+    - word: the
+      options:
+        - the
+        - his
+        - day
+        - never
+        - heard
+    - word: Lord
+      options:
+        - Lord
+        - Mount
+        - Sought
+        - Who
+        - Spoken
+    - word: is
+      options:
+        - is
+        - rise
+        - say
+        - as
+        - they
+    - word: near
+      options:
+        - near
+        - are
+        - aloof
+        - drink
+        - it
+    - word: upon
+      options:
+        - upon
+        - that
+        - go
+        - day
+        - teman
+    - word: all
+      options:
+        - all
+        - small
+        - hand
+        - and
+        - "no"
+    - word: the
+      options:
+        - the
+        - had
+        - you
+        - leave
+        - me
+    - word: nations.
+      options:
+        - nations.
+        - aloof.
+        - mount.
+        - stubble.
+        - allies.
+    - word: As
+      options:
+        - As
+        - Were
+        - Near
+        - And
+        - Hand
+      prefix: |4+
+    - word: you
+      options:
+        - you
+        - this
+        - in
+        - lots
+        - it
+    - word: have
+      options:
+        - have
+        - as
+        - gloat
+        - but
+        - eagle
+    - word: done,
+      options:
+        - done,
+        - soar,
+        - off,
+        - eagle,
+        - came,
+    - word: it
+      options:
+        - it
+        - set
+        - by
+        - trap
+        - go
+    - word: shall
+      options:
+        - shall
+        - stars
+        - carried
+        - negeb
+        - stand
+    - word: be
+      options:
+        - be
+        - loot
+        - sent
+        - they
+        - rock
+    - word: done
+      options:
+        - done
+        - own
+        - sent
+        - drunk
+        - one
+    - word: to
+      options:
+        - to
+        - nest
+        - from
+        - upon
+        - them
+    - word: you;
+      options:
+        - you;
+        - gloat;
+        - bread;
+        - host;
+        - fire;
+    - word: your
+      options:
+        - your
+        - bring
+        - and
+        - never
+        - own
+      prefix: |4+
+    - word: deeds
+      options:
+        - deeds
+        - men
+        - return
+        - had
+        - peace
+    - word: shall
+      options:
+        - shall
+        - lots
+        - lord
+        - shame
+        - among
+    - word: return
+      options:
+        - return
+        - heart
+        - enough
+        - zion
+        - against
+    - word: "on"
+      options:
+        - "on"
+        - day
+        - land
+        - were
+        - rule
+    - word: your
+      options:
+        - your
+        - of
+        - down
+        - those
+        - wise
+    - word: own
+      options:
+        - own
+        - never
+        - only
+        - all
+        - us
+    - word: head.
+      options:
+        - head.
+        - lord.
+        - were.
+        - border.
+        - would.
+    - word: For
+      options:
+        - For
+        - Us
+        - Aloft
+        - Upon
+        - Eagle
+      prefix: |4+
+    - word: as
+      options:
+        - as
+        - us
+        - will
+        - men
+        - nest
+    - word: you
+      options:
+        - you
+        - for
+        - how
+        - have
+        - us
+    - word: have
+      options:
+        - have
+        - will
+        - esau
+        - you
+        - steal
+    - word: drunk
+      options:
+        - drunk
+        - gilead
+        - head
+        - stand
+        - came
+    - word: "on"
+      options:
+        - "on"
+        - rock
+        - only
+        - edom
+        - will
+    - word: my
+      options:
+        - my
+        - it
+        - one
+        - a
+        - rule
+    - word: holy
+      options:
+        - holy
+        - mighty
+        - driven
+        - enough
+        - heard
+    - word: mountain,
+      options:
+        - mountain,
+        - gilead,
+        - mighty,
+        - shephelah,
+        - cities,
+    - word: so
+      options:
+        - so
+        - rock
+        - were
+        - like
+        - thus
+      prefix: |4+
+    - word: all
+      options:
+        - all
+        - day
+        - soar
+        - o
+        - leave
+    - word: the
+      options:
+        - the
+        - never
+        - upon
+        - done
+        - stood
+    - word: nations
+      options:
+        - nations
+        - survivor
+        - teman
+        - allies
+        - gatherers
+    - word: shall
+      options:
+        - shall
+        - her
+        - people
+        - drink
+        - aloft
+    - word: drink
+      options:
+        - drink
+        - hand
+        - head
+        - who
+        - had
+    - word: continually;
+      options:
+        - continually;
+        - gatherers;
+        - crossroads;
+        - misfortune;
+        - shephelah;
+    - word: they
+      options:
+        - they
+        - lord's
+        - israel
+        - loot
+        - near
+      prefix: |4+
+    - word: shall
+      options:
+        - shall
+        - bring
+        - heart
+        - clefts
+        - battle
+    - word: drink
+      options:
+        - drink
+        - battle
+        - her
+        - mighty
+        - hand
+    - word: and
+      options:
+        - and
+        - how
+        - heart
+        - them
+        - bring
+    - word: swallow,
+      options:
+        - swallow,
+        - beneath,
+        - dwelling,
+        - jacob,
+        - would,
+    - word: and
+      options:
+        - and
+        - lofty
+        - this
+        - "on"
+        - have
+      prefix: |4+
+    - word: shall
+      options:
+        - shall
+        - stand
+        - but
+        - land
+        - heard
+    - word: be
+      options:
+        - be
+        - "no"
+        - who
+        - rock
+        - own
+    - word: as
+      options:
+        - as
+        - this
+        - is
+        - make
+        - they
+    - word: though
+      options:
+        - though
+        - people
+        - enough
+        - shall
+        - sepharad
+    - word: they
+      options:
+        - they
+        - grape
+        - peace
+        - me
+        - never
+    - word: had
+      options:
+        - had
+        - teman
+        - cut
+        - sent
+        - eagle
+    - word: never
+      options:
+        - never
+        - people
+        - says
+        - wealth
+        - joseph
+    - word: been.
+      options:
+        - been.
+        - teman.
+        - by.
+        - heart.
+        - those.
+    - word: But
+      options:
+        - But
+        - Rule
+        - My
+        - Teman
+        - We
+      prefix: |4+
+    - word: in
+      options:
+        - in
+        - rule
+        - only
+        - is
+        - holy
+    - word: Mount
+      options:
+        - Mount
+        - Judah
+        - Thieves
+        - Wise
+        - Them
+    - word: Zion
+      options:
+        - Zion
+        - Eat
+        - Men
+        - In
+        - Heard
+    - word: there
+      options:
+        - there
+        - vision
+        - day
+        - mount
+        - one
+    - word: shall
+      options:
+        - shall
+        - holy
+        - sought
+        - soar
+        - hand
+    - word: be
+      options:
+        - be
+        - so
+        - rock
+        - soar
+        - i
+    - word: those
+      options:
+        - those
+        - driven
+        - out
+        - had
+        - they
+    - word: who
+      options:
+        - who
+        - we
+        - god
+        - cover
+        - judah
+    - word: escape,
+      options:
+        - escape,
+        - there,
+        - wise,
+        - aloof,
+        - aloft,
+    - word: and
+      options:
+        - and
+        - jacob
+        - make
+        - shame
+        - to
+      prefix: |4+
+    - word: it
+      options:
+        - it
+        - down
+        - as
+        - been
+        - land
+    - word: shall
+      options:
+        - shall
+        - judah
+        - negeb
+        - cities
+        - wealth
+    - word: be
+      options:
+        - be
+        - is
+        - by
+        - edom
+        - wise
+    - word: holy,
+      options:
+        - holy,
+        - his,
+        - report,
+        - gate,
+        - their,
+    - word: and
+      options:
+        - and
+        - would
+        - steal
+        - small
+        - so
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - set
+        - down
+        - up
+        - is
+    - word: house
+      options:
+        - house
+        - man
+        - are
+        - cast
+        - been
+    - word: of
+      options:
+        - of
+        - been
+        - they
+        - so
+        - in
+    - word: Jacob
+      options:
+        - Jacob
+        - Edom
+        - Enter
+        - Host
+        - Exiles
+    - word: shall
+      options:
+        - shall
+        - say
+        - been
+        - they
+        - forever
+    - word: possess
+      options:
+        - possess
+        - messenger
+        - lord's
+        - every
+        - allies
+    - word: their
+      options:
+        - their
+        - saviors
+        - one
+        - there
+        - bread
+    - word: own
+      options:
+        - own
+        - soar
+        - gates
+        - her
+        - thus
+    - word: possessions.
+      options:
+        - possessions.
+        - gatherers.
+        - canaanites.
+        - concerning.
+        - destroyed!—.
+    - word: The
+      options:
+        - The
+        - Eagle
+        - "Off"
+        - Their
+        - Trap
+      prefix: |4+
+    - word: house
+      options:
+        - house
+        - report
+        - who
+        - carried
+        - saviors
+    - word: of
+      options:
+        - of
+        - "on"
+        - them
+        - you
+        - over
+    - word: Jacob
+      options:
+        - Jacob
+        - Gate
+        - Has
+        - Small
+        - Done
+    - word: shall
+      options:
+        - shall
+        - have
+        - and
+        - beneath
+        - but
+    - word: be
+      options:
+        - be
+        - day
+        - us
+        - who
+        - of
+    - word: a
+      options:
+        - a
+        - his
+        - men
+        - me
+        - her
+    - word: fire,
+      options:
+        - fire,
+        - shame,
+        - spoken,
+        - they,
+        - jacob,
+    - word: and
+      options:
+        - and
+        - bread
+        - your
+        - as
+        - gates
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - in
+        - trap
+        - stood
+        - men
+    - word: house
+      options:
+        - house
+        - vision
+        - fire
+        - border
+        - stubble
+    - word: of
+      options:
+        - of
+        - with
+        - who
+        - head
+        - live
+    - word: Joseph
+      options:
+        - Joseph
+        - Though
+        - Cities
+        - Ruin
+        - Enter
+    - word: a
+      options:
+        - a
+        - "no"
+        - eat
+        - but
+        - all
+    - word: flame,
+      options:
+        - flame,
+        - negeb,
+        - them,
+        - return,
+        - there,
+    - word: and
+      options:
+        - and
+        - burn
+        - so
+        - they
+        - esau
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - over
+        - at
+        - lofty
+        - not
+    - word: house
+      options:
+        - house
+        - carried
+        - you
+        - zion
+        - flame
+    - word: of
+      options:
+        - of
+        - from
+        - over
+        - her
+        - let
+    - word: Esau
+      options:
+        - Esau
+        - Drunk
+        - Day
+        - Loot
+        - Set
+    - word: stubble;
+      options:
+        - stubble;
+        - declares;
+        - cities;
+        - never;
+        - violence;
+    - word: they
+      options:
+        - they
+        - day
+        - every
+        - but
+        - battle
+      prefix: |4+
+    - word: shall
+      options:
+        - shall
+        - return
+        - behold
+        - enter
+        - far
+    - word: burn
+      options:
+        - burn
+        - "off"
+        - as
+        - at
+        - rule
+    - word: them
+      options:
+        - them
+        - men
+        - all
+        - israel
+        - out
+    - word: and
+      options:
+        - and
+        - they
+        - cut
+        - deeds
+        - your
+    - word: consume
+      options:
+        - consume
+        - every
+        - deeds
+        - sepharad
+        - benjamin
+    - word: them,
+      options:
+        - them,
+        - zion,
+        - joseph,
+        - if,
+        - mount,
+    - word: and
+      options:
+        - and
+        - nest
+        - far
+        - to
+        - mount
+      prefix: |4+
+    - word: there
+      options:
+        - there
+        - nations
+        - will
+        - not
+        - nest
+    - word: shall
+      options:
+        - shall
+        - head
+        - who
+        - how
+        - your
+    - word: be
+      options:
+        - be
+        - day
+        - live
+        - says
+        - not
+    - word: "no"
+      options:
+        - "no"
+        - been
+        - edom
+        - the
+        - cast
+    - word: survivor
+      options:
+        - survivor
+        - brother
+        - concerning
+        - prevailed
+        - gilead
+    - word: for
+      options:
+        - for
+        - were
+        - say
+        - stand
+        - his
+    - word: the
+      options:
+        - the
+        - us
+        - his
+        - at
+        - head
+    - word: house
+      options:
+        - house
+        - bring
+        - are
+        - stars
+        - vision
+    - word: of
+      options:
+        - of
+        - zion
+        - trap
+        - say
+        - sent
+    - word: Esau,
+      options:
+        - Esau,
+        - Men,
+        - Near,
+        - Drink,
+        - Stood,
+    - word: for
+      options:
+        - for
+        - the
+        - jacob
+        - stars
+        - lord
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - small
+        - say
+        - jacob
+        - far
+    - word: Lord
+      options:
+        - Lord
+        - There
+        - Your
+        - Them
+        - Loot
+    - word: has
+      options:
+        - has
+        - at
+        - says
+        - thus
+        - have
+    - word: spoken.
+      options:
+        - spoken.
+        - eagle.
+        - obadiah.
+        - report.
+        - exiles.
+    - word: Those
+      options:
+        - Those
+        - Cast
+        - Nations
+        - Soar
+        - House
+      prefix: |4+
+    - word: of
+      options:
+        - of
+        - down
+        - trap
+        - that
+        - who
+    - word: the
+      options:
+        - the
+        - bread
+        - who
+        - not
+        - aloof
+    - word: Negeb
+      options:
+        - Negeb
+        - Ruin
+        - Bread
+        - Teman
+        - Lofty
+    - word: shall
+      options:
+        - shall
+        - have
+        - lord's
+        - brother
+        - who
+    - word: possess
+      options:
+        - possess
+        - jerusalem
+        - deeds
+        - violence
+        - steal
+    - word: Mount
+      options:
+        - Mount
+        - Stood
+        - Have
+        - Teman
+        - Clefts
+    - word: Esau,
+      options:
+        - Esau,
+        - Of,
+        - Joseph,
+        - Wealth,
+        - God,
+    - word: and
+      options:
+        - and
+        - is
+        - hand
+        - never
+        - me
+      prefix: |4+
+    - word: those
+      options:
+        - those
+        - for
+        - mount
+        - rejoice
+        - wealth
+    - word: of
+      options:
+        - of
+        - over
+        - as
+        - and
+        - with
+    - word: the
+      options:
+        - the
+        - land
+        - only
+        - jacob
+        - lofty
+    - word: Shephelah
+      options:
+        - Shephelah
+        - Possessions
+        - Despised
+        - Rejoice
+        - Stubble
+    - word: shall
+      options:
+        - shall
+        - utterly
+        - their
+        - enough
+        - grape
+    - word: possess
+      options:
+        - possess
+        - messenger
+        - pride
+        - strangers
+        - eagle
+    - word: the
+      options:
+        - the
+        - over
+        - upon
+        - sent
+        - are
+    - word: land
+      options:
+        - land
+        - vision
+        - far
+        - nest
+        - host
+    - word: of
+      options:
+        - of
+        - "on"
+        - ruin
+        - and
+        - wise
+    - word: the
+      options:
+        - the
+        - "no"
+        - small
+        - has
+        - grape
+    - word: Philistines;
+      options:
+        - Philistines;
+        - Shephelah;
+        - Strangers;
+        - Concerning;
+        - Understanding;
+    - word: they
+      options:
+        - they
+        - drunk
+        - them
+        - heart
+        - but
+      prefix: |4+
+    - word: shall
+      options:
+        - shall
+        - rule
+        - kingdom
+        - wealth
+        - samaria
+    - word: possess
+      options:
+        - possess
+        - ephraim
+        - prevailed
+        - people
+        - nations
+    - word: the
+      options:
+        - the
+        - bring
+        - edom
+        - came
+        - judah
+    - word: land
+      options:
+        - land
+        - gate
+        - among
+        - border
+        - how
+    - word: of
+      options:
+        - of
+        - if
+        - do
+        - hand
+        - had
+    - word: Ephraim
+      options:
+        - Ephraim
+        - Prevailed
+        - Cover
+        - Gatherers
+        - Brother
+    - word: and
+      options:
+        - and
+        - among
+        - from
+        - says
+        - house
+    - word: the
+      options:
+        - the
+        - pride
+        - shame
+        - fire
+        - o
+    - word: land
+      options:
+        - land
+        - men
+        - over
+        - live
+        - rise
+    - word: of
+      options:
+        - of
+        - it
+        - ruin
+        - upon
+        - men
+    - word: Samaria,
+      options:
+        - Samaria,
+        - Jacob,
+        - Flame,
+        - Distress,
+        - Enough,
+    - word: and
+      options:
+        - and
+        - teman
+        - let
+        - you
+        - drink
+      prefix: |4+
+    - word: Benjamin
+      options:
+        - Benjamin
+        - Prevailed
+        - Swallow
+        - Report
+        - Enough
+    - word: shall
+      options:
+        - shall
+        - because
+        - nest
+        - zion
+        - out
+    - word: possess
+      options:
+        - possess
+        - kingdom
+        - those
+        - behold
+        - shall
+    - word: Gilead.
+      options:
+        - Gilead.
+        - Wealth.
+        - Escape.
+        - Because.
+        - Dwelling.
+    - word: The
+      options:
+        - The
+        - "On"
+        - Ruin
+        - Lord
+        - Deeds
+      prefix: |4+
+    - word: exiles
+      options:
+        - exiles
+        - shame
+        - host
+        - clefts
+        - hand
+    - word: of
+      options:
+        - of
+        - i
+        - live
+        - who
+        - host
+    - word: this
+      options:
+        - this
+        - driven
+        - rule
+        - were
+        - grape
+    - word: host
+      options:
+        - host
+        - flame
+        - heart
+        - eagle
+        - "no"
+    - word: of
+      options:
+        - of
+        - let
+        - holy
+        - at
+        - lots
+    - word: the
+      options:
+        - the
+        - trap
+        - of
+        - o
+        - aloft
+    - word: people
+      options:
+        - people
+        - shall
+        - loot
+        - host
+        - fire
+    - word: of
+      options:
+        - of
+        - done
+        - trap
+        - but
+        - rise
+    - word: Israel
+      options:
+        - Israel
+        - Mighty
+        - Every
+        - Stand
+        - Carried
+    - word: shall
+      options:
+        - shall
+        - say
+        - for
+        - zion
+        - teman
+      prefix: |4+
+    - word: possess
+      options:
+        - possess
+        - obadiah
+        - enter
+        - aloft
+        - survivor
+    - word: the
+      options:
+        - the
+        - has
+        - us
+        - out
+        - rock
+    - word: land
+      options:
+        - land
+        - say
+        - never
+        - you—
+        - had
+    - word: of
+      options:
+        - of
+        - day
+        - from
+        - head
+        - been
+    - word: the
+      options:
+        - the
+        - not
+        - have
+        - at
+        - upon
+    - word: Canaanites
+      options:
+        - Canaanites
+        - Dwelling
+        - Slaughter
+        - Disaster
+        - Survivor
+    - word: as
+      options:
+        - as
+        - you
+        - sent
+        - zion
+        - my
+    - word: far
+      options:
+        - far
+        - of
+        - is
+        - steal
+        - who
+    - word: as
+      options:
+        - as
+        - who
+        - they
+        - been
+        - say
+    - word: Zarephath,
+      options:
+        - Zarephath,
+        - Because,
+        - Forever,
+        - Beneath,
+        - Gleanings,
+    - word: and
+      options:
+        - and
+        - aloft
+        - heard
+        - are
+        - this
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - who
+        - make
+        - grape
+        - up
+    - word: exiles
+      options:
+        - exiles
+        - shall
+        - border
+        - possess
+        - driven
+    - word: of
+      options:
+        - of
+        - land
+        - so
+        - and
+        - ruin
+    - word: Jerusalem
+      options:
+        - Jerusalem
+        - Despised
+        - Utterly
+        - Because
+        - Violence
+    - word: who
+      options:
+        - who
+        - says
+        - at
+        - they
+        - set
+    - word: are
+      options:
+        - are
+        - among
+        - shame
+        - say
+        - trap
+    - word: in
+      options:
+        - in
+        - god
+        - this
+        - thus
+        - wise
+    - word: Sepharad
+      options:
+        - Sepharad
+        - Ground
+        - You—
+        - Survivor
+        - Misfortune
+    - word: shall
+      options:
+        - shall
+        - behold
+        - with
+        - make
+        - zion
+      prefix: |4+
+    - word: possess
+      options:
+        - possess
+        - ephraim
+        - dwelling
+        - return
+        - cover
+    - word: the
+      options:
+        - the
+        - so
+        - their
+        - from
+        - rock
+    - word: cities
+      options:
+        - cities
+        - mount
+        - though
+        - wealth
+        - their
+    - word: of
+      options:
+        - of
+        - them
+        - be
+        - up
+        - from
+    - word: the
+      options:
+        - the
+        - but
+        - flame
+        - to
+        - who
+    - word: Negeb.
+      options:
+        - Negeb.
+        - Them.
+        - Every.
+        - Vision.
+        - Enough.
+    - word: Saviors
+      options:
+        - Saviors
+        - Clefts
+        - Beneath
+        - Survivor
+        - Though
+      prefix: |4+
+    - word: shall
+      options:
+        - shall
+        - because
+        - spoken
+        - upon
+        - obadiah
+    - word: go
+      options:
+        - go
+        - rock
+        - from
+        - only
+        - trap
+    - word: up
+      options:
+        - up
+        - only
+        - your
+        - like
+        - and
+    - word: to
+      options:
+        - to
+        - her
+        - your
+        - my
+        - at
+    - word: Mount
+      options:
+        - Mount
+        - Though
+        - Set
+        - Spoken
+        - Israel
+    - word: Zion
+      options:
+        - Zion
+        - Their
+        - Man
+        - "On"
+        - "Off"
+    - word: to
+      options:
+        - to
+        - been
+        - thus
+        - how
+        - one
+      prefix: |4+
+    - word: rule
+      options:
+        - rule
+        - ground
+        - rise
+        - my
+        - gates
+    - word: Mount
+      options:
+        - Mount
+        - Battle
+        - You—
+        - Upon
+        - Edom
+    - word: Esau,
+      options:
+        - Esau,
+        - Gilead,
+        - Cut,
+        - Nest,
+        - Far,
+    - word: and
+      options:
+        - and
+        - to
+        - over
+        - would
+        - leave
+      prefix: |4+
+    - word: the
+      options:
+        - the
+        - only
+        - has
+        - head
+        - out
+    - word: kingdom
+      options:
+        - kingdom
+        - night—
+        - shame
+        - lord's
+        - negeb
+    - word: shall
+      options:
+        - shall
+        - driven
+        - far
+        - flame
+        - man
+    - word: be
+      options:
+        - be
+        - do
+        - this
+        - make
+        - trap
+    - word: the
+      options:
+        - the
+        - they
+        - rise
+        - every
+        - there
+    - word: Lord's.
+      options:
+        - Lord's.
+        - Came.
+        - Swallow.
+        - With.
+        - Despised.
