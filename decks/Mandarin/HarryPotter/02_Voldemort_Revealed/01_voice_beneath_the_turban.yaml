@@ -1,0 +1,229 @@
+cards:
+    - character: 说谎
+      pinyin: shuō huǎng
+      meaning: To tell a lie / To lie
+      explanation: 说 (speak 讠+兑) + 谎 (lie 讠+荒). Voldemort immediately senses Harry's deception and hisses 'He is lying... He is lying...' (他在说谎).
+      interval: 1
+      ease: 2.5
+    - character: 回到
+      pinyin: huí dào
+      meaning: To return to / To come back to
+      explanation: '回 (return / circle 囗+口) + 到 (arrive at). Quirrell orders Harry: ''Potter, come back here!'' (回到这儿来).'
+      interval: 1
+      ease: 2.5
+    - character: 喊道
+      pinyin: hǎn dào
+      meaning: Shouted / Cried out
+      explanation: 喊 (shout 口+咸) + 道 (say / speak, narrative quotative suffix). Quirrell shouts at Harry to come back and tell the truth (奇洛喊道).
+      interval: 1
+      ease: 2.5
+    - character: 实话
+      pinyin: shí huà
+      meaning: The truth / Honest words
+      explanation: 实 (real / true 宀+头) + 话 (speech / words 讠+舌). Quirrell demands that Harry tell him the truth (把实话告诉我) about what he saw.
+      interval: 1
+      ease: 2.5
+    - character: 谈
+      pinyin: tán
+      meaning: To talk / To speak / To converse
+      explanation: '讠 (speech) + 炎 (flames, phonetic). Voldemort demands: ''Let me speak to him... face to face...'' (让我来跟他谈……面对面地谈).'
+      interval: 1
+      ease: 2.5
+    - character: 面对面
+      pinyin: miàn duì miàn
+      meaning: Face to face
+      explanation: 面 (face) + 对 (facing / opposite) + 面 (face). Dramatic irony as Voldemort literally shares the back of Quirrell's head and demands to speak to Harry face-to-face.
+      interval: 1
+      ease: 2.5
+    - character: 体力
+      pinyin: tǐ lì
+      meaning: Physical strength / Stamina
+      explanation: 体 (body 亻+本) + 力 (strength). Quirrell protests that his Master's physical strength has not yet recovered (你的体力还没有恢复啊).
+      interval: 1
+      ease: 2.5
+    - character: 恢复
+      pinyin: huī fù
+      meaning: To recover / To restore / To regain
+      explanation: 恢 (extensive / restore 忄+灰) + 复 (return / again). Quirrell warns Voldemort that he has not yet recovered his strength (体力还没有恢复).
+      interval: 1
+      ease: 2.5
+    - character: 点
+      pinyin: diǎn
+      meaning: A little / A bit (measure word); dot / point
+      explanation: 占 (occupy) + 灬 (fire dots). In 这点力气 (this small bit of strength), Voldemort insists he has enough strength for this.
+      interval: 1
+      ease: 2.5
+    - character: 力气
+      pinyin: lì qi
+      meaning: Physical strength / Effort / Energy
+      explanation: '力 (power / muscle) + 气 (vital breath / energy). Voldemort replies: ''I have strength enough... for this...'' (这点力气……我还是有的).'
+      interval: 1
+      ease: 2.5
+    - character: 仿佛
+      pinyin: fǎng fú
+      meaning: As if / Seemingly / Like
+      explanation: 仿 (imitate 亻+方) + 佛 (resemble 亻+弗). Harry feels as if (仿佛) Devil's Snare has pinned him to the spot.
+      interval: 1
+      ease: 2.5
+    - character: 魔鬼网
+      pinyin: mó guǐ wǎng
+      meaning: Devil's Snare
+      explanation: 魔鬼 (devil) + 网 (net / web). The constricting magical plant Harry and his friends encountered earlier; Harry feels as if pinned by Devil's Snare (被魔鬼网牢牢缠住了).
+      interval: 1
+      ease: 2.5
+    - character: 牢牢
+      pinyin: láo láo
+      meaning: Firmly / Tightly / Securely
+      explanation: Reduplication of 牢 (pen for cattle 宀+牛 -> firm / prison). Describes being tightly bound and immobilized (牢牢缠住了).
+      interval: 1
+      ease: 2.5
+    - character: 浑身上下
+      pinyin: hún shēn shàng xià
+      meaning: From head to toe / All over the body
+      explanation: 浑身 (whole body) + 上下 (top to bottom). Harry is paralyzed from head to toe (浑身上下丝毫动弹不得).
+      interval: 1
+      ease: 2.5
+    - character: 丝毫
+      pinyin: sī háo
+      meaning: The slightest bit / In the least (used with negatives)
+      explanation: 丝 (silk thread) + 毫 (fine hair). Two microscopic units combined to mean 'not the slightest bit' (丝毫动弹不得).
+      interval: 1
+      ease: 2.5
+    - character: 动弹不得
+      pinyin: dòng tan bù dé
+      meaning: Unable to move an inch / Completely paralyzed
+      explanation: '动弹 (dòng tan: move / stir) + 不得 (cannot). Harry stands frozen in horror, completely unable to move (丝毫动弹不得) as Quirrell unwraps his turban.'
+      interval: 1
+      ease: 2.5
+    - character: 呆呆地
+      pinyin: dāi dāi de
+      meaning: Blankly / Stupefied / Rooted to the spot
+      explanation: 呆呆 (petrified / dazed 口+木) + 地 (adverbial particle). Harry stands transfixed in shock (呆呆地站在那里) watching Quirrell unwrap his turban.
+      interval: 1
+      ease: 2.5
+    - character: 看
+      pinyin: kàn
+      meaning: To watch / To look at / To see
+      explanation: 手 (hand) over 目 (eye), shading the eyes to look. With progressive 着 (看着), Harry watches helplessly as Quirrell unwraps the turban.
+      interval: 1
+      ease: 2.5
+    - character: 举起
+      pinyin: jǔ qǐ
+      meaning: To raise / To lift up
+      explanation: 举 (lift with both hands) + 起 (up). Quirrell raises his hands (举起手) to untie and unwrap his turban.
+      interval: 1
+      ease: 2.5
+    - character: 解
+      pinyin: jiě
+      meaning: To untie / To unwrap / To loosen
+      explanation: 角 (horn) + 刀 (knife) + 牛 (ox). Quirrell unwraps and takes off the turban from his head (解下他头上的围巾).
+      interval: 1
+      ease: 2.5
+    - character: 落
+      pinyin: luò
+      meaning: To fall / To drop down
+      explanation: 艹 (grass/leaves) + 洛 (water, phonetic). The heavy turban falls away (大围巾落了下来), exposing Quirrell's head.
+      interval: 1
+      ease: 2.5
+    - character: 下来
+      pinyin: xià lái
+      meaning: Down (directional complement indicating downward motion)
+      explanation: 下 (down) + 来 (come). Combines with 落 in 落了下来 (fell down) as the turban drops from Quirrell's head.
+      interval: 1
+      ease: 2.5
+    - character: 裸露
+      pinyin: luǒ lù
+      meaning: Bare / Exposed / Uncovered
+      explanation: 裸 (naked / bare 衤+果) + 露 (exposed / uncovered 雨+路). Describes Quirrell's bare, unwrapped head (裸露的脑袋) after the turban falls.
+      interval: 1
+      ease: 2.5
+    - character: 小
+      pinyin: xiǎo
+      meaning: Small / Tiny
+      explanation: Three small dots/strokes dividing something tiny. Quirrell's bare head looks strangely small (小得出奇) without the bulky turban.
+      interval: 1
+      ease: 2.5
+    - character: 出奇
+      pinyin: chū qí
+      meaning: Unusually / Extraordinarily / To a strange degree
+      explanation: '出 (surpass / go beyond) + 奇 (unusual). Used after 得 as an intensifying complement: Quirrell''s head looks extraordinarily small (小得出奇).'
+      interval: 1
+      ease: 2.5
+    - character: 原地
+      pinyin: yuán dì
+      meaning: In place / On the spot
+      explanation: '原 (original) + 地 (dì: place / ground). Quirrell slowly turns around on the spot (原地转过身去) to reveal the back of his head.'
+      interval: 1
+      ease: 2.5
+    - character: 转过身
+      pinyin: zhuǎn guò shēn
+      meaning: To turn around
+      explanation: '转 (zhuǎn: turn 车+专) + 过 (across / over) + 身 (body). Quirrell slowly turns his body around (原地转过身去) so Voldemort''s face confronts Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 放声尖叫
+      pinyin: fàng shēng jiān jiào
+      meaning: To scream at the top of one's lungs / To shriek
+      explanation: 放声 (release one's voice) + 尖叫 (scream sharply). Harry wants to scream aloud (想放声尖叫) at the horrific sight, but no sound comes out.
+      interval: 1
+      ease: 2.5
+    - character: 一点儿
+      pinyin: yī diǎn ér
+      meaning: Even a little bit / The slightest (with negative)
+      explanation: 一 (one) + 点 (dot / bit) + 儿 (diminutive erhua suffix). Harry cannot make even the slightest sound (发不出一点儿声音).
+      interval: 1
+      ease: 2.5
+    - character: 原本
+      pinyin: yuán běn
+      meaning: Originally / Where there should have been
+      explanation: 原 (origin / source) + 本 (root / foundation). In 在原本该是奇洛后脑勺的地方 (where the back of Quirrell's head should originally have been).
+      interval: 1
+      ease: 2.5
+    - character: 该
+      pinyin: gāi
+      meaning: Should / Ought to
+      explanation: '讠 (speech) + 亥 (phonetic). Indicates expectation: where the back of Quirrell''s head ought to be (原本该是奇洛后脑勺的地方).'
+      interval: 1
+      ease: 2.5
+    - character: 后脑勺
+      pinyin: hòu nǎo sháo
+      meaning: Back of the head
+      explanation: 后 (back) + 脑 (brain / head) + 勺 (ladle / rounded scoop shape). The rounded back of Quirrell's skull where Voldemort's face is embedded.
+      interval: 1
+      ease: 2.5
+    - character: 地方
+      pinyin: dì fang
+      meaning: Place / Spot / Part
+      explanation: 地 (earth / ground) + 方 (region / spot). Refers to the spot on the back of Quirrell's head (奇洛后脑勺的地方) where Voldemort's face grows.
+      interval: 1
+      ease: 2.5
+    - character: 长
+      pinyin: zhǎng
+      meaning: 'To grow (polyphone: zhǎng to grow; cháng long)'
+      explanation: 'Here read zhǎng (verb): growing on the back of Quirrell''s head is a face (长着一张脸).'
+      interval: 1
+      ease: 2.5
+    - character: 张
+      pinyin: zhāng
+      meaning: Measure word for faces and flat surfaces; to stretch
+      explanation: '弓 (bow) + 长 (long). Measure word used for faces, mouths, paper, and tables: 一张脸 (a face).'
+      interval: 1
+      ease: 2.5
+    - character: 从来
+      pinyin: cóng lái
+      meaning: 'Ever / Always (with negative: never)'
+      explanation: '从 (from) + 来 (come / until now). With 没有, means ''never in his life'': Harry had never seen such a terrifying face (从来没有看见过).'
+      interval: 1
+      ease: 2.5
+    - character: 狰狞恐怖
+      pinyin: zhēng níng kǒng bù
+      meaning: Hideous and terrifying / Ferocious and ghastly
+      explanation: 狰狞 (fierce-looking / grotesque 犭+争, 犭+宁) + 恐怖 (terrifying / horrible). Describes Voldemort's monstrous face embedded on Quirrell's head.
+      interval: 1
+      ease: 2.5
+    - character: 颜色
+      pinyin: yán sè
+      meaning: Color
+      explanation: 颜 (face / brow / color 页) + 色 (color / look). The color of Voldemort's face (那张脸的颜色) is chalk-white.
+      interval: 1
+      ease: 2.5

@@ -1,0 +1,259 @@
+cards:
+    - character: 病床
+      pinyin: bìng chuáng
+      meaning: Hospital bed / Sickbed
+      explanation: '病 (bìng: illness / sickness, 疒 sickness radical) + 床 (chuáng: bed). The hospital wing bed where Harry recovers after facing Quirrell.'
+      interval: 1
+      ease: 2.5
+    - character: 桌子
+      pinyin: zhuō zi
+      meaning: Table / Desk
+      explanation: '桌 (zhuō: table, 木 wood radical) + 子 (zi: noun suffix). The bedside table piled high with gifts and sweets.'
+      interval: 1
+      ease: 2.5
+    - character: 堆
+      pinyin: duī
+      meaning: To pile up / Heap / Pile
+      explanation: 土 (earth) + 隹 (short-tailed bird). Piled up like a small mountain on Harry's bedside table.
+      interval: 1
+      ease: 2.5
+    - character: 座
+      pinyin: zuò
+      meaning: Measure word for mountains, buildings, or large solid objects
+      explanation: 广 (shelter / building) + 坐 (sit). Classifier used for the 'small mountain' (一座小山) of sweets beside Harry's bed.
+      interval: 1
+      ease: 2.5
+    - character: 小山
+      pinyin: xiǎo shān
+      meaning: Small mountain / Hill / Mound
+      explanation: '小 (xiǎo: small) + 山 (shān: mountain). Metaphor for the towering heap of candy and gifts on Harry''s table.'
+      interval: 1
+      ease: 2.5
+    - character: 糖果
+      pinyin: táng guǒ
+      meaning: Candy / Sweets
+      explanation: '糖 (táng: sugar / candy, 米 grain radical) + 果 (guǒ: fruit). Half a candy shop seems to have been moved beside Harry''s bed.'
+      interval: 1
+      ease: 2.5
+    - character: 店
+      pinyin: diàn
+      meaning: Shop / Store
+      explanation: 广 (shelter / building) + 占 (occupy / phonetic). In 糖果店 (sweet shop), describing the mountain of treats sent to Harry.
+      interval: 1
+      ease: 2.5
+    - character: 搬
+      pinyin: bān
+      meaning: To move / Transport / Relocate
+      explanation: 扌 (hand) + 般 (sort / carry). It looked as though half a candy shop had been moved (被搬到这里) to the hospital wing.
+      interval: 1
+      ease: 2.5
+    - character: 这里
+      pinyin: zhè lǐ
+      meaning: Here / This place
+      explanation: '这 (zhè: this) + 里 (lǐ: inside / place). Refers to the hospital wing where Harry''s gifts have been brought.'
+      interval: 1
+      ease: 2.5
+    - character: 崇拜者
+      pinyin: chóng bài zhě
+      meaning: Admirer / Worshipper
+      explanation: '崇 (chóng: lofty / revere) + 拜 (bài: bow / worship) + 者 (zhě: one who). Dumbledore tells Harry the gifts are from his friends and admirers.'
+      interval: 1
+      ease: 2.5
+    - character: 送给
+      pinyin: sòng gěi
+      meaning: To give to / Present to
+      explanation: '送 (sòng: send / give, 辶 movement) + 给 (gěi: to / for). Gifts sent to Harry by his friends and admirers.'
+      interval: 1
+      ease: 2.5
+    - character: 礼物
+      pinyin: lǐ wù
+      meaning: Gift / Present
+      explanation: '礼 (lǐ: rite / courtesy / gift, 礻 altar) + 物 (wù: thing / object). Tokens of appreciation piled by Harry''s bedside.'
+      interval: 1
+      ease: 2.5
+    - character: 笑吟吟
+      pinyin: xiào yín yín
+      meaning: Smilingly / Beaming
+      explanation: '笑 (xiào: smile / laugh) + 吟吟 (yín yín: softly humming / gentle expression). Describes Dumbledore''s warm, beaming manner as he speaks to Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 地下
+      pinyin: dì xià
+      meaning: Underground
+      explanation: '地 (dì: ground / earth) + 下 (xià: underneath / below). Refers to the underground chambers (地下教室) where Harry confronted Quirrell.'
+      interval: 1
+      ease: 2.5
+    - character: 发生
+      pinyin: fā shēng
+      meaning: To happen / Occur / Take place
+      explanation: '发 (fā: issue / put forth) + 生 (shēng: arise / come into being). What happened between Harry and Professor Quirrell in the underground chambers.'
+      interval: 1
+      ease: 2.5
+    - character: 完完全全
+      pinyin: wán wán quán quán
+      meaning: Completely / Entirely / Utterly
+      explanation: 'Reduplication of 完全 (wán quán: complete / whole) for emphasis. Dumbledore jokes that what happened was a ''complete secret.'''
+      interval: 1
+      ease: 2.5
+    - character: 秘密
+      pinyin: mì mì
+      meaning: Secret
+      explanation: '秘 (mì: mysterious / secret, 禾 grain + 必 must) + 密 (mì: dense / covert, 宀 roof + 必 + 山). Dumbledore wryly notes that what happened is a complete secret, so naturally the whole school knows.'
+      interval: 1
+      ease: 2.5
+    - character: 不胫而走
+      pinyin: bù jìng ér zǒu
+      meaning: To spread like wildfire / Travel fast without legs
+      explanation: '不 (without) + 胫 (jìng: lower leg / shin) + 而 (yet) + 走 (run / travel). Idiom describing how secrets spread rapidly without needing legs.'
+      interval: 1
+      ease: 2.5
+    - character: 全校
+      pinyin: quán xiào
+      meaning: The whole school
+      explanation: '全 (quán: whole / entire) + 校 (xiào: school). Every teacher and student at Hogwarts already knows what happened.'
+      interval: 1
+      ease: 2.5
+    - character: 师生
+      pinyin: shī shēng
+      meaning: Teachers and students
+      explanation: '师 (shī: teacher / master) + 生 (shēng: student / pupil). Compound referring to the entire faculty and student body of Hogwarts.'
+      interval: 1
+      ease: 2.5
+    - character: 自然
+      pinyin: zì rán
+      meaning: Naturally / Of course / Nature
+      explanation: '自 (zì: self) + 然 (rán: so / thus). Because secrets always spread, the whole school naturally knows everything.'
+      interval: 1
+      ease: 2.5
+    - character: 全都
+      pinyin: quán dōu
+      meaning: All / Entirely / Without exception
+      explanation: '全 (quán: all / complete) + 都 (dōu: all / both). Emphasizes that everyone in the school knows the story.'
+      interval: 1
+      ease: 2.5
+    - character: 据我所知
+      pinyin: jù wǒ suǒ zhī
+      meaning: As far as I know / To my knowledge
+      explanation: '据 (jù: according to) + 我 (wǒ: I) + 所 (suǒ: that which) + 知 (zhī: know). Fixed phrase Dumbledore uses before mentioning Fred and George''s prank gift.'
+      interval: 1
+      ease: 2.5
+    - character: 弗雷德
+      pinyin: Fú léi dé
+      meaning: Fred (Weasley)
+      explanation: 'Transliteration of Fred: 弗 (fú) + 雷 (léi: thunder) + 德 (dé: virtue). One of Ron''s twin brothers who tried to send Harry a toilet seat.'
+      interval: 1
+      ease: 2.5
+    - character: 乔治
+      pinyin: Qiáo zhì
+      meaning: George (Weasley)
+      explanation: 'Transliteration of George: 乔 (qiáo: tall) + 治 (zhì: govern). Fred''s twin brother who joined in sending the toilet seat.'
+      interval: 1
+      ease: 2.5
+    - character: 韦斯莱
+      pinyin: Wéi sī lái
+      meaning: Weasley
+      explanation: 'Transliteration of Weasley: 韦 (wéi) + 斯 (sī) + 莱 (lái). Surname of Ron, Fred, and George''s wizarding family.'
+      interval: 1
+      ease: 2.5
+    - character: 本来
+      pinyin: běn lái
+      meaning: Originally / At first
+      explanation: '本 (běn: root / origin) + 来 (lái: come). Fred and George originally intended to send Harry a toilet seat.'
+      interval: 1
+      ease: 2.5
+    - character: 马桶圈
+      pinyin: mǎ tǒng quān
+      meaning: Toilet seat
+      explanation: '马桶 (mǎ tǒng: toilet bowl, lit. horse bucket) + 圈 (quān: ring / circle). The gag gift Fred and George tried to send Harry in the hospital wing.'
+      interval: 1
+      ease: 2.5
+    - character: 无疑
+      pinyin: wú yí
+      meaning: No doubt / Undoubtedly
+      explanation: '无 (wú: without) + 疑 (yí: doubt). Dumbledore remarks that the twins no doubt wanted to amuse Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 逗
+      pinyin: dòu
+      meaning: To tease / Amuse / Play with
+      explanation: 辶 (movement) + 豆 (bean / phonetic). In 逗个乐子, meaning to crack a joke or amuse someone.
+      interval: 1
+      ease: 2.5
+    - character: 乐子
+      pinyin: lè zi
+      meaning: Fun / Amusement / Laugh
+      explanation: '乐 (lè: joy / laugh) + 子 (zi: noun suffix). Fred and George wanted to give Harry a laugh (逗个乐子) with the toilet seat.'
+      interval: 1
+      ease: 2.5
+    - character: 卫生
+      pinyin: wèi shēng
+      meaning: Hygienic / Sanitary / Hygiene
+      explanation: '卫 (wèi: guard / protect) + 生 (shēng: life / health). Madam Pomfrey felt a toilet seat was not very hygienic.'
+      interval: 1
+      ease: 2.5
+    - character: 没收
+      pinyin: mò shōu
+      meaning: To confiscate / Impound
+      explanation: '没 (mò: sink / confiscate) + 收 (shōu: collect / take in). Madam Pomfrey confiscated the toilet seat for being unhygienic.'
+      interval: 1
+      ease: 2.5
+    - character: 多久
+      pinyin: duō jiǔ
+      meaning: How long (time)
+      explanation: '多 (duō: how / much) + 久 (jiǔ: long time). Harry asks Dumbledore how long he has been in the hospital wing.'
+      interval: 1
+      ease: 2.5
+    - character: 罗恩·韦斯莱
+      pinyin: Luó ēn · Wéi sī lái
+      meaning: Ron Weasley
+      explanation: 'Transliteration of Ron Weasley: 罗恩 (Luó ēn: Ron) + 韦斯莱 (Wéi sī lái: Weasley). Harry''s best friend, who has been terribly worried during Harry''s three days unconscious.'
+      interval: 1
+      ease: 2.5
+    - character: 若是
+      pinyin: ruò shì
+      meaning: If / Supposing that
+      explanation: '若 (ruò: if / seem) + 是 (shì: be). Conjunction used by Dumbledore: if Ron and Hermione know Harry has woken up, they will be relieved.'
+      interval: 1
+      ease: 2.5
+    - character: 醒
+      pinyin: xǐng
+      meaning: To wake up / Regain consciousness
+      explanation: 酉 (fermented spirits / wine jar) + 星 (star, phonetic) — originally sobering up from drink. Refers to Harry waking after three days.
+      interval: 1
+      ease: 2.5
+    - character: 松了口气
+      pinyin: sōng le kǒu qì
+      meaning: Breathed a sigh of relief
+      explanation: '松 (sōng: loosen / relax) + 了 (le) + 口 (kǒu: mouthful) + 气 (qì: breath). Ron and Hermione will be greatly relieved to learn Harry is awake.'
+      interval: 1
+      ease: 2.5
+    - character: 担心
+      pinyin: dān xīn
+      meaning: To worry / Feel anxious
+      explanation: '担 (dān: carry on shoulder / bear) + 心 (xīn: heart). Ron and Hermione have been extremely worried about Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 极了
+      pinyin: jí le
+      meaning: Extremely / Exceedingly
+      explanation: '极 (jí: ridgepole / extreme) + 了 (le: intensifying particle). Post-verbal degree complement in 担心极了 (worried sick / extremely worried).'
+      interval: 1
+      ease: 2.5
+    - character: 看来
+      pinyin: kàn lái
+      meaning: It seems / It appears
+      explanation: '看 (kàn: look) + 来 (lái: come). Discourse marker used by Dumbledore when he sees Harry cannot be distracted from asking about the Stone.'
+      interval: 1
+      ease: 2.5
+    - character: 法子
+      pinyin: fǎ zi
+      meaning: Way / Method
+      explanation: '法 (fǎ: law / method) + 子 (zi: noun suffix). Colloquial word for method: 没法子 (no way) to distract Harry''s attention.'
+      interval: 1
+      ease: 2.5
+    - character: 分散
+      pinyin: fēn sàn
+      meaning: To distract / Divert / Disperse
+      explanation: '分 (fēn: divide) + 散 (sàn: scatter). In 分散你的注意力, meaning to divert or distract Harry''s attention from the Stone.'
+      interval: 1
+      ease: 2.5

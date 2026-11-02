@@ -1,0 +1,229 @@
+cards:
+    - character: 宁死不屈
+      pinyin: nìng sǐ bù qū
+      meaning: Rather die than submit / Unyielding to the death
+      explanation: '宁 (nìng: would rather) + 死 (die) + 不 (not) + 屈 (bend / submit). Idiom describing James Potter''s defiant last stand against Voldemort.'
+      interval: 1
+      ease: 2.5
+    - character: 搏斗
+      pinyin: bó dòu
+      meaning: To fight / To wrestle / To struggle
+      explanation: '搏 (扌 hand + 尃 spread: fight hand-to-hand) + 斗 (fight / contend). Refers to James Potter fighting fiercely against Voldemort (勇敢地跟我搏斗).'
+      interval: 1
+      ease: 2.5
+    - character: 母亲
+      pinyin: mǔ qīn
+      meaning: Mother
+      explanation: 母 (mother) + 亲 (parent / relative). Refers to Lily Potter, whom Voldemort says did not have to die (你母亲其实不用死的).
+      interval: 1
+      ease: 2.5
+    - character: 不用
+      pinyin: bù yòng
+      meaning: Need not / Does not have to
+      explanation: '不 (not) + 用 (use / need). Expresses lack of necessity: Voldemort says Harry''s mother did not need to die (不用死的).'
+      interval: 1
+      ease: 2.5
+    - character: 拼
+      pinyin: pīn
+      meaning: To risk / To go all out / To piece together
+      explanation: 扌 (hand) + 并 (combine). In '拼着命' (risking her life), describes Lily putting her life on the line to protect Harry.
+      interval: 1
+      ease: 2.5
+    - character: 命
+      pinyin: mìng
+      meaning: Life / Fate / Command
+      explanation: 亼 (gather) + 口 (mouth) + 卩 (kneeling figure). Refers to physical life in '拼着命' (risking her life to protect Harry).
+      interval: 1
+      ease: 2.5
+    - character: 保护
+      pinyin: bǎo hù
+      meaning: To protect / To shield
+      explanation: '保 (亻 person + 呆 child: guard / keep safe) + 护 (扌 hand + 户 door: shield / defend). Lily gave her life to protect Harry (她拼着命要保护你).'
+      interval: 1
+      ease: 2.5
+    - character: 白白
+      pinyin: bái bái
+      meaning: In vain / For nothing
+      explanation: Reduplication of 白 (white / blank / empty). Voldemort tells Harry not to let his mother die for him in vain (别让你母亲白白为你丧命).
+      interval: 1
+      ease: 2.5
+    - character: 丧命
+      pinyin: sàng mìng
+      meaning: To lose one's life / To perish
+      explanation: 丧 (lose / mourning) + 命 (life). Means to die or lose one's life; Voldemort refers to Lily losing her life for Harry.
+      interval: 1
+      ease: 2.5
+    - character: 休想
+      pinyin: xiū xiǎng
+      meaning: Don't even think about it! / Never!
+      explanation: '休 (亻 person resting by 木 tree: cease / don''t) + 想 (think). Harry''s defiant shout refusing to hand over the Philosopher''s Stone.'
+      interval: 1
+      ease: 2.5
+    - character: 冲向
+      pinyin: chōng xiàng
+      meaning: To rush toward / To charge at
+      explanation: '冲 (冫 ice/water + 中 center: rush / dash) + 向 (toward). Harry makes a desperate dash toward the door with the black flames (猛地冲向那扇燃着黑色火焰的门).'
+      interval: 1
+      ease: 2.5
+    - character: 扇
+      pinyin: shàn
+      meaning: Measure word for doors and windows / Fan
+      explanation: '户 (door) + 羽 (feathers/wings). Classifier for doors: ''那扇燃着黑色火焰的门'' (that door burning with black flames).'
+      interval: 1
+      ease: 2.5
+    - character: 燃
+      pinyin: rán
+      meaning: To burn / To ignite
+      explanation: 火 (fire) + 然 (so / burn). Used in '燃着黑色火焰的门' (the door burning with black flames).
+      interval: 1
+      ease: 2.5
+    - character: 黑色
+      pinyin: hēi sè
+      meaning: Black (color)
+      explanation: 黑 (black / soot) + 色 (color). Refers to the black flames (黑色火焰) guarding the exit doorway.
+      interval: 1
+      ease: 2.5
+    - character: 火焰
+      pinyin: huǒ yàn
+      meaning: Flame / Blaze
+      explanation: '火 (fire) + 焰 (火 fire + 臽 pit: leaping flame). The magical black flames blocking the chamber door (黑色火焰).'
+      interval: 1
+      ease: 2.5
+    - character: 门
+      pinyin: mén
+      meaning: Door / Gate
+      explanation: Pictograph of a double-leaf gate. The chamber door wreathed in black fire through which Quirrell entered.
+      interval: 1
+      ease: 2.5
+    - character: 尖叫
+      pinyin: jiān jiào
+      meaning: To shriek / To scream
+      explanation: '尖 (小 small on 大 large: sharp / high-pitched) + 叫 (口 mouth: cry out). Voldemort shrieks ''Seize him!'' (伏地魔尖叫起来).'
+      interval: 1
+      ease: 2.5
+    - character: 抓住
+      pinyin: zhuā zhù
+      meaning: To grab hold of / To seize
+      explanation: '抓 (扌 hand + 爪 claw: grab) + 住 (resultative complement: firmly / fast). Voldemort orders Quirrell to seize Harry (抓住他), and Quirrell grabs his wrist.'
+      interval: 1
+      ease: 2.5
+    - character: 紧接着
+      pinyin: jǐn jiē zhe
+      meaning: Immediately afterward / Right after
+      explanation: 紧 (tight / close) + 接 (connect / follow) + 着 (aspect particle). Marks immediate sequence as Quirrell grabs Harry's wrist right after Voldemort's scream.
+      interval: 1
+      ease: 2.5
+    - character: 感到
+      pinyin: gǎn dào
+      meaning: To feel / To sense
+      explanation: 感 (feel / sense) + 到 (attain / perceive). Harry feels Quirrell's hand clutching his wrist tightly (哈利就感到奇洛用手紧紧抓住了他的手腕).
+      interval: 1
+      ease: 2.5
+    - character: 紧紧
+      pinyin: jǐn jǐn
+      meaning: Tightly / Closely
+      explanation: Reduplication of 紧 (tight / taut, 糸 silk). Describes Quirrell gripping Harry's wrist tightly (紧紧抓住了他的手腕).
+      interval: 1
+      ease: 2.5
+    - character: 手腕
+      pinyin: shǒu wàn
+      meaning: Wrist
+      explanation: '手 (hand) + 腕 (月 flesh + 宛 bend/curve: wrist joint). Quirrell grabs Harry''s wrist, triggering searing pain in both of them.'
+      interval: 1
+      ease: 2.5
+    - character: 顿时
+      pinyin: dùn shí
+      meaning: Immediately / At once / Suddenly
+      explanation: '顿 (pause / sudden) + 时 (time / moment). Expresses instantaneous reaction: the moment Quirrell touches him, Harry''s scar erupts in pain.'
+      interval: 1
+      ease: 2.5
+    - character: 额头
+      pinyin: é tóu
+      meaning: Forehead / Brow
+      explanation: 额 (客 guest + 页 head) + 头 (head). The location of Harry's lightning-bolt scar (哈利额头上的伤疤).
+      interval: 1
+      ease: 2.5
+    - character: 伤疤
+      pinyin: shāng bā
+      meaning: Scar
+      explanation: '伤 (亻 person + 伤 wound) + 疤 (疒 sickness/skin + 巴 cling: scar). Harry''s forehead scar burns with piercing pain upon contact with Quirrell.'
+      interval: 1
+      ease: 2.5
+    - character: 钻心
+      pinyin: zuān xīn
+      meaning: Piercing to the heart / Excruciating
+      explanation: '钻 (钅 metal + 占 occupy: bore / drill) + 心 (heart). Literally ''drilling into the heart'', describing the agonizing pain in Harry''s scar (钻心地疼痛起来).'
+      interval: 1
+      ease: 2.5
+    - character: 疼痛
+      pinyin: téng tòng
+      meaning: Pain / Ache / To hurt
+      explanation: 疼 (疒 illness + 冬 winter) + 痛 (疒 illness + 甬 path). Intense physical pain shooting through Harry's scar.
+      interval: 1
+      ease: 2.5
+    - character: 裂
+      pinyin: liè
+      meaning: To split / To crack open
+      explanation: 列 (arrange / sever) + 衣 (garment). Harry feels as though his head is about to split in two (脑袋仿佛要裂成两半).
+      interval: 1
+      ease: 2.5
+    - character: 半
+      pinyin: bàn
+      meaning: Half
+      explanation: Pictograph of dividing something in two (八 divide + 牛 ox). Used in '裂成两半' (split into two halves).
+      interval: 1
+      ease: 2.5
+    - character: 大声
+      pinyin: dà shēng
+      meaning: Loudly / At the top of one's voice
+      explanation: 大 (big / loud) + 声 (sound / voice). Harry yells loudly in agony as he struggles (他大声喊叫).
+      interval: 1
+      ease: 2.5
+    - character: 喊叫
+      pinyin: hǎn jiào
+      meaning: To shout / To cry out / To yell
+      explanation: '喊 (口 mouth + 咸 all: shout) + 叫 (口 mouth: cry). Harry screams at the top of his lungs while struggling against Quirrell''s grip.'
+      interval: 1
+      ease: 2.5
+    - character: 挣扎
+      pinyin: zhēng zhá
+      meaning: To struggle / To writhe
+      explanation: '挣 (扌 hand + 争 contend) + 扎 (扌 hand + 乚: struggle free). Harry struggles with all his might (拼命挣扎) before Quirrell suddenly lets go.'
+      interval: 1
+      ease: 2.5
+    - character: 随后
+      pinyin: suí hòu
+      meaning: Soon after / Following that / Then
+      explanation: '随 (阝 mound + 有 + 辶: follow) + 后 (after). Marks the next moment when Harry realizes Quirrell has released his grip.'
+      interval: 1
+      ease: 2.5
+    - character: 减轻
+      pinyin: jiǎn qīng
+      meaning: To lessen / To ease / To alleviate
+      explanation: 减 (冫 ice/water + 咸 reduce) + 轻 (车 cart + 巠 light). Once Quirrell lets go, the pain in Harry's forehead subsides (疼痛也减轻了).
+      interval: 1
+      ease: 2.5
+    - character: 茫然四顾
+      pinyin: máng rán sì gù
+      meaning: To look around blankly / Dazedly looking in all directions
+      explanation: '茫然 (艹 grass + 氵 water + 亡 lost: dazed / at a loss) + 四顾 (look in all four directions). Harry looks around in a daze after the blinding pain eases.'
+      interval: 1
+      ease: 2.5
+    - character: 痛苦
+      pinyin: tòng kǔ
+      meaning: Painful / In agony / Suffering
+      explanation: '痛 (ache / pain) + 苦 (艹 grass + 古 old: bitter / suffering). Quirrell hunches over in agony (痛苦地弓着身子) as his fingers blister.'
+      interval: 1
+      ease: 2.5
+    - character: 弓
+      pinyin: gōng
+      meaning: To arch / To bend / Bow
+      explanation: Pictograph of an arched bow. Used as a verb in '弓着身子' (hunching/arching his body in pain).
+      interval: 1
+      ease: 2.5
+    - character: 身子
+      pinyin: shēn zi
+      meaning: Body / Torso
+      explanation: 身 (body / torso) + 子 (noun suffix). Quirrell bends his body in pain (痛苦地弓着身子) while staring at his blistering fingers.
+      interval: 1
+      ease: 2.5

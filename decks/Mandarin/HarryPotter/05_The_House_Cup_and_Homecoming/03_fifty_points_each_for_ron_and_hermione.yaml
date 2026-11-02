@@ -1,0 +1,247 @@
+cards:
+    - character: 通红
+      pinyin: tōng hóng
+      meaning: Bright red / Scarlet all over
+      explanation: 通 (through / completely) + 红 (纟 silk + 工 = red). Ron's face turns completely bright red like a sunburned radish.
+      interval: 1
+      ease: 2.5
+    - character: 活像
+      pinyin: huó xiàng
+      meaning: To look just like / Be the spitting image of
+      explanation: 活 (alive / vividly) + 像 (resemble / image). Ron's flushed face looks just like a sun-dried radish.
+      interval: 1
+      ease: 2.5
+    - character: 太阳
+      pinyin: tài yáng
+      meaning: The sun
+      explanation: 太 (greatest) + 阳 (阝 mound + 日 sun = bright / sun). Used in the simile comparing blushing Ron to a sunburned radish.
+      interval: 1
+      ease: 2.5
+    - character: 晒
+      pinyin: shài
+      meaning: To shine upon / Bask in the sun / Sun-dry
+      explanation: 日 (sun) + 西 (west). 被太阳晒干 describes a radish scorched/dried by the sun.
+      interval: 1
+      ease: 2.5
+    - character: 红萝卜
+      pinyin: hóng luó bo
+      meaning: Radish / Red carrot
+      explanation: 红 (red) + 萝卜 (radish/turnip, 艹 grass radical). Humorous comparison for Ron's fiercely blushing face.
+      interval: 1
+      ease: 2.5
+    - character: 赢
+      pinyin: yíng
+      meaning: To win / Beat
+      explanation: Contains 亡, 口, 月, 贝 (shell/money), 凡. Ron won (下赢了) the best game of chess Hogwarts had seen in many years.
+      interval: 1
+      ease: 2.5
+    - character: 盘
+      pinyin: pán
+      meaning: Measure word for games of chess / Board / Plate
+      explanation: 舟 (boat) + 皿 (dish/vessel). Used as a classifier in 一盘棋 (a game of chess).
+      interval: 1
+      ease: 2.5
+    - character: 棋
+      pinyin: qí
+      meaning: Chess / Board game
+      explanation: 木 (wood, as chess pieces/boards are wooden) + 其 (phonetic). Refers to McGonagall's giant wizard chess game.
+      interval: 1
+      ease: 2.5
+    - character: 为此
+      pinyin: wèi cǐ
+      meaning: For this / On account of this
+      explanation: 为 (for / because of) + 此 (this). Dumbledore announces that for this achievement, he awards Gryffindor points.
+      interval: 1
+      ease: 2.5
+    - character: 奖励
+      pinyin: jiǎng lì
+      meaning: To award / Reward
+      explanation: 奖 (commend / prize) + 励 (力 strength = encourage). Dumbledore awards fifty points each to Ron and Hermione, sixty to Harry, and ten to Neville.
+      interval: 1
+      ease: 2.5
+    - character: 五十分
+      pinyin: wǔ shí fēn
+      meaning: Fifty points
+      explanation: 五十 (fifty) + 分 (points). The amount awarded first to Ron and then to Hermione.
+      interval: 1
+      ease: 2.5
+    - character: 施
+      pinyin: shī
+      meaning: To cast (a spell) / Apply / Bestow
+      explanation: 方 (banner/direction) + 也. Used in 施了魔法 (enchanted / under a spell) and 施了全身束缚咒 (put under the Full Body-Bind).
+      interval: 1
+      ease: 2.5
+    - character: 魔法
+      pinyin: mó fǎ
+      meaning: Magic / Witchcraft
+      explanation: 魔 (麻 + 鬼 ghost/demon = magic) + 法 (method / art). The enchanted ceiling (施了魔法的天花板) of the Great Hall.
+      interval: 1
+      ease: 2.5
+    - character: 掀翻
+      pinyin: xiān fān
+      meaning: To blow off / Flip over / Overturn
+      explanation: 掀 (扌 hand + 欣 = lift / tear off) + 翻 (turn over). Gryffindor cheers nearly lift the enchanted ceiling right off.
+      interval: 1
+      ease: 2.5
+    - character: 星星
+      pinyin: xīng xīng
+      meaning: Stars
+      explanation: Reduplication of 星 (日 sun/celestial body + 生 = star). The stars on the enchanted ceiling seem to quiver from the roaring cheers.
+      interval: 1
+      ease: 2.5
+    - character: 震
+      pinyin: zhèn
+      meaning: To shake / Quake / Shock
+      explanation: 雨 (rain/thundercloud) + 辰 (phonetic). The stars overhead seem shaken (被震得) into a slight tremor by the noise.
+      interval: 1
+      ease: 2.5
+    - character: 微微
+      pinyin: wēi wēi
+      meaning: Slightly / Faintly
+      explanation: Reduplication of 微 (彳 step + subtle/tiny). The stars on the ceiling quiver slightly (微微颤抖) from the uproar.
+      interval: 1
+      ease: 2.5
+    - character: 珀西
+      pinyin: Pò xī
+      meaning: Percy (Weasley)
+      explanation: Phonetic transliteration of Percy, Ron's older brother and Gryffindor prefect, proudly bragging to the other prefects.
+      interval: 1
+      ease: 2.5
+    - character: 级长
+      pinyin: jí zhǎng
+      meaning: Prefect / Class monitor
+      explanation: '级 (纟 silk threads in order = grade / rank) + 长 (zhǎng: chief / head). Translates Hogwarts ''prefect''.'
+      interval: 1
+      ease: 2.5
+    - character: 弟弟
+      pinyin: dì di
+      meaning: Younger brother
+      explanation: Reduplication of 弟 (bowstring wrapped around a stake in order = younger brother). Percy boasts loudly that Ron is his youngest brother.
+      interval: 1
+      ease: 2.5
+    - character: 最小
+      pinyin: zuì xiǎo
+      meaning: Youngest / Smallest
+      explanation: 最 (most) + 小 (small / young). Percy exclaims that Ron is his youngest brother (我最小的弟弟).
+      interval: 1
+      ease: 2.5
+    - character: 麦格教授
+      pinyin: Mài gé jiào shòu
+      meaning: Professor McGonagall
+      explanation: '麦格 (transliteration of McGonagall) + 教授 (professor: 教 teach + 授 impart). Transfiguration professor who created the giant chess set.'
+      interval: 1
+      ease: 2.5
+    - character: 棋盘阵
+      pinyin: qí pán zhèn
+      meaning: Chessboard formation / Giant chess array
+      explanation: 棋盘 (chessboard) + 阵 (阝 + 车 chariot = battle array / formation). Professor McGonagall's enchanted giant chessboard challenge.
+      interval: 1
+      ease: 2.5
+    - character: 好不容易
+      pinyin: hǎo bù róng yì
+      meaning: With great difficulty / Only after a long struggle
+      explanation: 好 (very) + 不容易 (not easy). Idiomatic expression meaning it was only with great difficulty that silence fell again.
+      interval: 1
+      ease: 2.5
+    - character: 赫敏·格兰杰
+      pinyin: Hè mǐn · Gé lán jié
+      meaning: Hermione Granger
+      explanation: Phonetic transliteration of Hermione Granger, awarded fifty points for her cool logic in the face of fire.
+      interval: 1
+      ease: 2.5
+    - character: 烈火
+      pinyin: liè huǒ
+      meaning: Raging fire / Fierce flames
+      explanation: 烈 (列 + 灬 fire = fierce / blazing) + 火 (fire). Refers to Snape's enchanted wall of flames that Hermione solved with logic.
+      interval: 1
+      ease: 2.5
+    - character: 逻辑推理
+      pinyin: luó jí tuī lǐ
+      meaning: Logical reasoning / Deduction
+      explanation: '逻辑 (loanword: logic) + 推理 (push/deduce principles = reasoning). Hermione''s cool logical deduction in solving the potion riddle.'
+      interval: 1
+      ease: 2.5
+    - character: 埋
+      pinyin: mái
+      meaning: To bury / Hide
+      explanation: 土 (earth) + 里 (inside). Hermione buries (埋) her face in the crook of her arm, overcome with emotion.
+      interval: 1
+      ease: 2.5
+    - character: 臂弯
+      pinyin: bì wān
+      meaning: Crook of the arm
+      explanation: 臂 (辟 + 月 flesh = arm) + 弯 (curved / bend). Hermione hides her face in her arms as she likely bursts into tears.
+      interval: 1
+      ease: 2.5
+    - character: 偷偷
+      pinyin: tōu tōu
+      meaning: Secretly / Quietly / On the sly
+      explanation: Reduplication of 偷 (亻 person + 俞 = steal / stealthily). Harry strongly suspects Hermione is secretly crying into her arms.
+      interval: 1
+      ease: 2.5
+    - character: 周围
+      pinyin: zhōu wéi
+      meaning: Around / Surrounding
+      explanation: 周 (circumference / all around) + 围 (囗 enclosure + 韦 = surround). The Gryffindors all around them go wild with joy.
+      interval: 1
+      ease: 2.5
+    - character: 欣喜若狂
+      pinyin: xīn xǐ ruò kuáng
+      meaning: Wild with joy / Ecstatic / Overjoyed
+      explanation: 欣喜 (joyful / delighted) + 若 (like / as if) + 狂 (mad / wild). Gryffindors are beside themselves with joy as they jump up a hundred points.
+      interval: 1
+      ease: 2.5
+    - character: 跳上跳下
+      pinyin: tiào shàng tiào xià
+      meaning: Jumping up and down
+      explanation: 跳 (⻊ foot + 兆 = jump) + 上 (up) + 跳下 (jump down). Ecstatic Gryffindors jump up and down beside the table.
+      interval: 1
+      ease: 2.5
+    - character: 整整
+      pinyin: zhěng zhěng
+      meaning: A full / Whole / Exactly
+      explanation: Reduplication of 整 (束 + 攵 + 正 = whole / complete). Emphasizes that Gryffindor has risen by a full hundred points.
+      interval: 1
+      ease: 2.5
+    - character: 上升
+      pinyin: shàng shēng
+      meaning: To rise / Go up / Climb
+      explanation: 上 (up) + 升 (measure / ascend). Gryffindor's score climbs by a full hundred points.
+      interval: 1
+      ease: 2.5
+    - character: 一百分
+      pinyin: yī bǎi fēn
+      meaning: One hundred points
+      explanation: 一百 (one hundred) + 分 (points). The combined total of Ron's and Hermione's fifty-point awards.
+      interval: 1
+      ease: 2.5
+    - character: 寂静
+      pinyin: jì jìng
+      meaning: Dead silent / Still / Quiet
+      explanation: 寂 (宀 roof + 叔 = solitary / silent) + 静 (quiet / still). The Great Hall becomes extraordinarily hushed when Dumbledore calls Harry's name.
+      interval: 1
+      ease: 2.5
+    - character: 大无畏
+      pinyin: dà wú wèi
+      meaning: Utterly fearless / Dauntless / Intrepid
+      explanation: 大 (great) + 无 (without) + 畏 (fear). Translates 'pure nerve'—Harry's fearless courage in facing Voldemort.
+      interval: 1
+      ease: 2.5
+    - character: 胆量
+      pinyin: dǎn liàng
+      meaning: Nerve / Pluck / Courage / Guts
+      explanation: 胆 (月 flesh/gallbladder, traditional seat of courage) + 量 (capacity / measure). Refers to Harry's nerve and the courage needed to face enemies.
+      interval: 1
+      ease: 2.5
+    - character: 过人
+      pinyin: guò rén
+      meaning: Surpassing others / Extraordinary / Outstanding
+      explanation: 过 (pass / surpass) + 人 (others / people). Describes Harry's extraordinary, outstanding courage (过人的勇气).
+      interval: 1
+      ease: 2.5
+    - character: 还要
+      pinyin: hái yào
+      meaning: Also want to / Still / In addition
+      explanation: '还 (hái: still / also / in addition) + 要 (want / will). Dumbledore announces he will additionally award Gryffindor sixty points.'
+      interval: 1
+      ease: 2.5

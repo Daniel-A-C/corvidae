@@ -1,0 +1,235 @@
+cards:
+    - character: 血
+      pinyin: xuè
+      meaning: Blood
+      explanation: 皿 (vessel) with a drop inside representing sacrificial blood in a chalice. Refers to the unicorn's blood (独角兽的血) that sustained Voldemort.
+      interval: 1
+      ease: 2.5
+    - character: 使
+      pinyin: shǐ
+      meaning: To make / To cause / To enable
+      explanation: '亻 (person) + 吏 (official). Causative verb: unicorn blood has made him recover some strength (使我恢复了一些体力).'
+      interval: 1
+      ease: 2.5
+    - character: 饮
+      pinyin: yǐn
+      meaning: To drink (literary)
+      explanation: '饣 (food/drink) + 欠 (open mouth / yawn). Literary verb for drinking: Harry saw Quirrell drinking unicorn blood for Voldemort (为我饮血) in the Forbidden Forest.'
+      interval: 1
+      ease: 2.5
+    - character: 一旦
+      pinyin: yī dàn
+      meaning: Once / As soon as
+      explanation: '一 (one) + 旦 (dawn / day). Conditional conjunction: ''Once I have the Elixir of Life...'' (一旦我弄到了长生不老药).'
+      interval: 1
+      ease: 2.5
+    - character: 长生不老药
+      pinyin: cháng shēng bù lǎo yào
+      meaning: Elixir of Life
+      explanation: '长生 (cháng shēng: long/eternal life) + 不老 (never grow old) + 药 (medicine / potion 艹+约). The Elixir of Life produced by the Philosopher''s Stone.'
+      interval: 1
+      ease: 2.5
+    - character: 能够
+      pinyin: néng gòu
+      meaning: To be able to / Can
+      explanation: 能 (able / capability) + 够 (enough / reach). Voldemort declares he will be able to create a body of his own (我就能够重新创造一个我自己的身体).
+      interval: 1
+      ease: 2.5
+    - character: 重新
+      pinyin: chóng xīn
+      meaning: Anew / Again / Afresh
+      explanation: '重 (chóng: repeat / again) + 新 (new). Voldemort plans to create a body of his own anew (重新创造一个我自己的身体).'
+      interval: 1
+      ease: 2.5
+    - character: 创造
+      pinyin: chuàng zào
+      meaning: To create / To fashion / To produce
+      explanation: 创 (initiate / create 仓+刂) + 造 (make / build 辶+告). Voldemort vows to create a new body of his own (重新创造一个我自己的身体).
+      interval: 1
+      ease: 2.5
+    - character: 交给
+      pinyin: jiāo gěi
+      meaning: To hand over to / To give to
+      explanation: 交 (hand over / exchange) + 给 (give to). Voldemort asks Harry why he doesn't hand over the Stone in his pocket (把你口袋里的魔法石交给我).
+      interval: 1
+      ease: 2.5
+    - character: 原来
+      pinyin: yuán lái
+      meaning: It turns out that / So (indicating sudden realization)
+      explanation: '原 (origin) + 来 (come). Expresses Harry''s sudden shock upon realizing Voldemort knows he has the Stone: ''So he knew!'' (原来他知道！).'
+      interval: 1
+      ease: 2.5
+    - character: 知觉
+      pinyin: zhī jué
+      meaning: Feeling / Sensation / Consciousness
+      explanation: 知 (know / perceive) + 觉 (feel / sense). Feeling suddenly returns to Harry's legs (哈利的腿突然又有了知觉) after Voldemort's demand.
+      interval: 1
+      ease: 2.5
+    - character: 踉跄
+      pinyin: liàng qiàng
+      meaning: To stagger / To stumble / To reel
+      explanation: Both characters carry the 足 (⻊foot) radical + 良/仓 phonetics. Harry stumbles backward (他踉跄着后退) as feeling returns to his legs.
+      interval: 1
+      ease: 2.5
+    - character: 别
+      pinyin: bié
+      meaning: Don't (imperative negative); other
+      explanation: '另 (separate) + 刂 (knife). Imperative ''don''t'' in Voldemort''s taunt: ''Don''t be a fool'' (别犯傻了).'
+      interval: 1
+      ease: 2.5
+    - character: 犯傻
+      pinyin: fàn shǎ
+      meaning: To act foolishly / To play the fool
+      explanation: '犯 (commit / err 犭+卩) + 傻 (foolish 亻+囟+夂). Colloquial verb-object phrase: ''Don''t be a fool'' (别犯傻了).'
+      interval: 1
+      ease: 2.5
+    - character: 恶狠狠
+      pinyin: è hěn hěn
+      meaning: Fiercely / Ferociously / Menacingly
+      explanation: 恶 (fierce / evil) + 狠狠 (ruthlessly / fiercely 犭+艮). Voldemort snarls menacingly (恶狠狠地说) as he tells Harry to join him.
+      interval: 1
+      ease: 2.5
+    - character: 最好
+      pinyin: zuì hǎo
+      meaning: Had better / Best
+      explanation: '最 (most 曰+取) + 好 (good). Advises or warns: ''Better save your own life and join me...'' (最好保住你自己的小命).'
+      interval: 1
+      ease: 2.5
+    - character: 小命
+      pinyin: xiǎo mìng
+      meaning: One's (puny) life (colloquial/belittling)
+      explanation: '小 (little) + 命 (life). Dismissive, threatening way to refer to someone''s life: ''save your own life'' (保住你自己的小命).'
+      interval: 1
+      ease: 2.5
+    - character: 投靠
+      pinyin: tóu kào
+      meaning: To go over to / To pledge allegiance to / Join
+      explanation: 投 (cast oneself / go to 扌+殳) + 靠 (lean on / depend on 告+非). Voldemort urges Harry to join his side (投靠我吧).
+      interval: 1
+      ease: 2.5
+    - character: 不然
+      pinyin: bù rán
+      meaning: Otherwise / Or else
+      explanation: '不 (not) + 然 (so / thus). Threatening conjunction: ''or you''ll meet the same end as your parents...'' (不然你就会和你父母的下场一样).'
+      interval: 1
+      ease: 2.5
+    - character: 父母
+      pinyin: fù mǔ
+      meaning: Parents / Father and mother
+      explanation: 父 (father) + 母 (mother). Voldemort taunts Harry with the fate of his parents James and Lily (和你父母的下场一样).
+      interval: 1
+      ease: 2.5
+    - character: 下场
+      pinyin: xià chǎng
+      meaning: End / Fate / Bad outcome
+      explanation: '下 (exit / end) + 场 (stage / arena). Originally exiting the stage; means a (usually grim) fate or end: 和你父母的下场一样 (meet the same end as your parents).'
+      interval: 1
+      ease: 2.5
+    - character: 临死
+      pinyin: lín sǐ
+      meaning: On the verge of death / Before dying
+      explanation: 临 (just before / facing) + 死 (death 歹+匕). Voldemort falsely claims Harry's parents begged for mercy right before dying (他们临死前).
+      interval: 1
+      ease: 2.5
+    - character: 苦苦
+      pinyin: kǔ kǔ
+      meaning: Bitterly / Desperately / Piteously
+      explanation: 'Reduplication of 苦 (bitter 艹+古). Modifies 哀求: Voldemort claims Harry''s parents begged desperately (苦苦地哀求) for mercy.'
+      interval: 1
+      ease: 2.5
+    - character: 哀求
+      pinyin: āi qiú
+      meaning: To implore / To beg piteously / To entreat
+      explanation: 哀 (grief / sorrow 衣+口) + 求 (beg / seek). Voldemort lies that Lily and James begged him for mercy (苦苦地哀求我饶命).
+      interval: 1
+      ease: 2.5
+    - character: 饶命
+      pinyin: ráo mìng
+      meaning: To spare a life / Mercy
+      explanation: 饶 (spare / forgive 饣+尧) + 命 (life). Verb-object compound meaning to spare someone's life (哀求我饶命 = begged me for mercy).
+      interval: 1
+      ease: 2.5
+    - character: 猛地
+      pinyin: měng de
+      meaning: Suddenly / Abruptly / Fiercely
+      explanation: 猛 (fierce / sudden 犭+孟) + 地 (adverbial particle). Harry shouts 'LIAR!' suddenly (哈利猛地喊道) in outrage at Voldemort's slander.
+      interval: 1
+      ease: 2.5
+    - character: 逼近
+      pinyin: bī jìn
+      meaning: To close in on / To advance upon / To press near
+      explanation: 逼 (press close / compel 辶+畐) + 近 (near 辶+斤). Quirrell walks backward toward Harry, closing in on him (奇洛后退着朝他逼近) so Voldemort can keep looking at him.
+      interval: 1
+      ease: 2.5
+    - character: 仍然
+      pinyin: réng rán
+      meaning: Still / Yet / Continuing to
+      explanation: 仍 (still 亻+乃) + 然 (so). Quirrell backs toward Harry so that Voldemort can still stare at him (使伏地魔仍然能盯着他).
+      interval: 1
+      ease: 2.5
+    - character: 邪恶
+      pinyin: xié è
+      meaning: Evil / Wicked / Sinister
+      explanation: 邪 (evil / crooked 牙+阝) + 恶 (wicked / bad 亚+心). Describes Voldemort's evil face (那张邪恶的脸上) breaking into a grin.
+      interval: 1
+      ease: 2.5
+    - character: 狞笑
+      pinyin: níng xiào
+      meaning: Ferocious grin / Hideous leer / Savage smile
+      explanation: 狞 (ferocious / hideous 犭+宁) + 笑 (smile / laugh). The evil face is now smiling savagely (露出了狞笑) as Voldemort mocks Lily's sacrifice.
+      interval: 1
+      ease: 2.5
+    - character: 多么
+      pinyin: duō me
+      meaning: How / What (exclamatory)
+      explanation: 多 (many / much) + 么 (interrogative/exclamatory suffix). Used in Voldemort's mocking exclamation '多么感人啊' (How touching).
+      interval: 1
+      ease: 2.5
+    - character: 感人
+      pinyin: gǎn rén
+      meaning: Touching / Moving
+      explanation: '感 (to move / feel: 咸 all + 心 heart) + 人 (person). Voldemort sarcastically calls Harry''s parents'' sacrifice ''touching'' (多么感人啊).'
+      interval: 1
+      ease: 2.5
+    - character: 嘶哑
+      pinyin: sī yǎ
+      meaning: Hoarse / Raspy
+      explanation: '嘶 (口 mouth + 斯 this: neigh / hiss) + 哑 (口 mouth + 亚 second: mute / hoarse). Describes Voldemort''s raspy, hissing voice (嘶哑的声音).'
+      interval: 1
+      ease: 2.5
+    - character: 一向
+      pinyin: yī xiàng
+      meaning: Always / All along
+      explanation: '一 (one / throughout) + 向 (direction / towards). Expresses a consistent attitude over time: Voldemort claims he has always admired bravery (我一向都很敬佩勇气).'
+      interval: 1
+      ease: 2.5
+    - character: 敬佩
+      pinyin: jìng pèi
+      meaning: To admire / To respect
+      explanation: '敬 (respect / revere) + 佩 (亻 person + 凡 all + 巾 cloth: wear at the waist / admire). Voldemort claims to admire courage before recounting James and Lily''s deaths.'
+      interval: 1
+      ease: 2.5
+    - character: 孩子
+      pinyin: hái zi
+      meaning: Child / Boy
+      explanation: 孩 (子 child + 亥 boar/phonetic) + 子 (noun suffix). Voldemort addresses Harry patronizingly as 'child' (是的，孩子) while telling him how his parents died.
+      interval: 1
+      ease: 2.5
+    - character: 勇敢
+      pinyin: yǒng gǎn
+      meaning: Brave / Courageous
+      explanation: 勇 (strength 力 + 甬涌 gush) + 敢 (dare). Describes Harry's parents standing up to Voldemort bravely (你父母当年都很勇敢).
+      interval: 1
+      ease: 2.5
+    - character: 动手
+      pinyin: dòng shǒu
+      meaning: To start / To strike / To lay hands on
+      explanation: '动 (move / act) + 手 (hand). Literally ''to move one''s hand'', used here for attacking or striking first: ''我先动手杀你的父亲'' (I killed your father first).'
+      interval: 1
+      ease: 2.5
+    - character: 杀
+      pinyin: shā
+      meaning: To kill / To murder
+      explanation: 乂 (cross/shears) + 朩 (wood/tree). Voldemort coldly recounts killing Harry's father (杀你的父亲).
+      interval: 1
+      ease: 2.5

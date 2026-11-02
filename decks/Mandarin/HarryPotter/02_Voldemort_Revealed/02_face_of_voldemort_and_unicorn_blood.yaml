@@ -1,0 +1,235 @@
+cards:
+    - character: 粉笔
+      pinyin: fěn bǐ
+      meaning: Chalk
+      explanation: 粉 (powder 米+分) + 笔 (writing implement 竹+毛). Voldemort's face is as white as chalk (像粉笔一样白).
+      interval: 1
+      ease: 2.5
+    - character: 一样
+      pinyin: yī yàng
+      meaning: Same / Equally / Like (in 像……一样)
+      explanation: 一 (one) + 样 (appearance / kind). Forms the comparison frame 像粉笔一样白 (as white as chalk).
+      interval: 1
+      ease: 2.5
+    - character: 白
+      pinyin: bái
+      meaning: White / Pale
+      explanation: Pictograph of a bright ray or white seed. Describes the chalk-white pallor of Voldemort's face (像粉笔一样白).
+      interval: 1
+      ease: 2.5
+    - character: 红通通
+      pinyin: hóng tōng tōng
+      meaning: Glowing red / Bright red
+      explanation: 红 (red) + 通通 (vivid reduplicated suffix). Describes Voldemort's glaring crimson eyes (红通通的眼睛放出光来).
+      interval: 1
+      ease: 2.5
+    - character: 放出
+      pinyin: fàng chū
+      meaning: To emit / To give off / To shoot forth
+      explanation: 放 (release) + 出 (out). Voldemort's glaring red eyes emit a sinister gleam (红通通的眼睛放出光来).
+      interval: 1
+      ease: 2.5
+    - character: 光
+      pinyin: guāng
+      meaning: Light / Gleam / Glare
+      explanation: Depicts fire above a kneeling figure. In 放出光来, referring to the fierce glare shining from Voldemort's red eyes.
+      interval: 1
+      ease: 2.5
+    - character: 下面
+      pinyin: xià miàn
+      meaning: Below / Underneath
+      explanation: 下 (under / below) + 面 (surface / side). Underneath the glaring red eyes (下面是) are two snake-like slit nostrils.
+      interval: 1
+      ease: 2.5
+    - character: 两
+      pinyin: liǎng
+      meaning: Two (used before measure words)
+      explanation: Pictograph of a balanced pair. Used before the measure word 道 for Voldemort's two slit nostrils (两道像蛇一般细长的鼻孔).
+      interval: 1
+      ease: 2.5
+    - character: 道
+      pinyin: dào
+      meaning: Streak / Slit / Line (measure word for long narrow things); way
+      explanation: '辶 (walk) + 首 (head). Used here as a measure word for narrow slits or lines: two snake-like slit nostrils (两道像蛇一般细长的鼻孔).'
+      interval: 1
+      ease: 2.5
+    - character: 蛇
+      pinyin: shé
+      meaning: Snake / Serpent
+      explanation: 虫 (reptile / creature) + 它 (ancient pictograph of a cobra). Voldemort's nostrils are slits like a snake's (像蛇一般细长).
+      interval: 1
+      ease: 2.5
+    - character: 一般
+      pinyin: yī bān
+      meaning: Like / Same as / Just like
+      explanation: 一 (one) + 般 (sort / kind). Used in 像蛇一般 (just like a snake) to describe Voldemort's slit nostrils.
+      interval: 1
+      ease: 2.5
+    - character: 细长
+      pinyin: xì cháng
+      meaning: Thin and long / Narrow Slit-like
+      explanation: '细 (thin / fine 纟+田) + 长 (cháng: long). Describes Voldemort''s narrow, slit-like nostrils (细长的鼻孔).'
+      interval: 1
+      ease: 2.5
+    - character: 鼻孔
+      pinyin: bí kǒng
+      meaning: Nostrils
+      explanation: 鼻 (nose 自+畀) + 孔 (hole / aperture 子+乚). Voldemort's snake-like slit nostrils (两道像蛇一般细长的鼻孔).
+      interval: 1
+      ease: 2.5
+    - character: 哈利·波特
+      pinyin: Hā lì · Bō tè
+      meaning: Harry Potter
+      explanation: Standard Mandarin transliteration of Harry (哈利 Hā lì) + middle dot (·) + Potter (波特 Bō tè), whispered chillingly by Voldemort.
+      interval: 1
+      ease: 2.5
+    - character: 耳语
+      pinyin: ěr yǔ
+      meaning: Whisper / To whisper
+      explanation: 耳 (ear) + 语 (speech 讠+吾). Literally 'ear-speech'; Voldemort speaks Harry's name in a chilling whisper (耳语般地说).
+      interval: 1
+      ease: 2.5
+    - character: 般
+      pinyin: bān
+      meaning: Like / Sort / Manner
+      explanation: '舟 (boat) + 殳 (pole). Suffix after a noun meaning ''-like'': 耳语般地说 (said in a whisper-like manner).'
+      interval: 1
+      ease: 2.5
+    - character: 往
+      pinyin: wǎng
+      meaning: Toward / In the direction of
+      explanation: 彳 (step) + 主 (phonetic). Directional preposition in 往后退 (step backward / retreat toward the back).
+      interval: 1
+      ease: 2.5
+    - character: 后退
+      pinyin: hòu tuì
+      meaning: To step back / To retreat / To recoil
+      explanation: 后 (back / behind) + 退 (retreat 辶+艮). Harry tries to back away (想往后退) from Voldemort's face.
+      interval: 1
+      ease: 2.5
+    - character: 双腿
+      pinyin: shuāng tuǐ
+      meaning: Both legs
+      explanation: 双 (pair 又+又) + 腿 (leg 月+退). Harry's two legs (他的双腿) refuse to obey him in terror.
+      interval: 1
+      ease: 2.5
+    - character: 不听使唤
+      pinyin: bù tīng shǐ huan
+      meaning: Not obeying orders / Refusing to move (of limbs)
+      explanation: '不听 (not listen/obey) + 使唤 (command / order about). Idiomatic phrase for limbs going numb or refusing to respond: 他的双腿不听使唤.'
+      interval: 1
+      ease: 2.5
+    - character: 变成
+      pinyin: biàn chéng
+      meaning: To become / To turn into / Reduced to
+      explanation: '变 (change) + 成 (become). Voldemort bitterly tells Harry: ''See what I have become?'' (你看看我变成了什么样子).'
+      interval: 1
+      ease: 2.5
+    - character: 样子
+      pinyin: yàng zi
+      meaning: Appearance / Shape / State
+      explanation: 样 (pattern / appearance 木+羊) + 子 (noun suffix). Refers to the wretched state Voldemort has been reduced to (变成了什么样子).
+      interval: 1
+      ease: 2.5
+    - character: 剩下
+      pinyin: shèng xià
+      meaning: To be left over / To remain
+      explanation: 剩 (leftover / remain 乘+刂) + 下 (down / remaining). Voldemort laments that only shadow and vapor remain of him (只剩下了影子和蒸气).
+      interval: 1
+      ease: 2.5
+    - character: 影子
+      pinyin: yǐng zi
+      meaning: Shadow / Phantom
+      explanation: 影 (shadow 景+彡) + 子 (noun suffix). Voldemort describes his disembodied existence as mere 'shadow and vapor' (影子和蒸气).
+      interval: 1
+      ease: 2.5
+    - character: 蒸气
+      pinyin: zhēng qì
+      meaning: Vapor / Steam
+      explanation: 蒸 (rise like steam 艹+丞+灬) + 气 (gas / vapor). Translates 'mere shadow and vapor' (影子和蒸气) in Voldemort's speech.
+      interval: 1
+      ease: 2.5
+    - character: 别人
+      pinyin: bié rén
+      meaning: Other people / Someone else
+      explanation: 别 (other / another) + 人 (person). Voldemort has form only when sharing someone else's body (和别人共用一具躯体).
+      interval: 1
+      ease: 2.5
+    - character: 共用
+      pinyin: gòng yòng
+      meaning: To share / To use jointly
+      explanation: 共 (together / common) + 用 (use). Voldemort can only take form when sharing a body with another (和别人共用一具躯体).
+      interval: 1
+      ease: 2.5
+    - character: 具
+      pinyin: jù
+      meaning: Measure word for bodies, corpses, or appliances; tool
+      explanation: '目 (shell/vessel) + 八 (two hands). Used as a formal measure word for a physical body: 一具躯体 (a body).'
+      interval: 1
+      ease: 2.5
+    - character: 躯体
+      pinyin: qū tǐ
+      meaning: Physical body / Mortal frame
+      explanation: '躯 (human body 身+区) + 体 (body 亻+本). Literary term for a physical vessel: Voldemort must share a physical body (一具躯体) to have form.'
+      interval: 1
+      ease: 2.5
+    - character: 拥有
+      pinyin: yōng yǒu
+      meaning: To possess / To have / To own
+      explanation: 拥 (embrace / hold 扌+雍) + 有 (have). Voldemort has a physical form (拥有形体) only when inhabiting another's body.
+      interval: 1
+      ease: 2.5
+    - character: 形体
+      pinyin: xíng tǐ
+      meaning: Physical form / Bodily shape
+      explanation: 形 (shape / form 开+彡) + 体 (body). Translates 'form' in 'I have form only when I can share another's body' (才能拥有形体).
+      interval: 1
+      ease: 2.5
+    - character: 总
+      pinyin: zǒng
+      meaning: Always / Inevitably
+      explanation: 丷 + 口 + 夊 + 心 (gather all threads together). In 不过总有一些人 (but there are always some people) willing to let Voldemort into their hearts.
+      interval: 1
+      ease: 2.5
+    - character: 一些
+      pinyin: yī xiē
+      meaning: Some / A few
+      explanation: 一 (one) + 些 (some 二+此). Refers to those susceptible people (一些人) willing to let Voldemort possess them.
+      interval: 1
+      ease: 2.5
+    - character: 愿意
+      pinyin: yuàn yì
+      meaning: To be willing / Ready to
+      explanation: 愿 (wish / willing 原+心) + 意 (intent / thought 音+心). Voldemort boasts that there are always people willing (愿意) to let him into their hearts and minds.
+      interval: 1
+      ease: 2.5
+    - character: 进入
+      pinyin: jìn rù
+      meaning: To enter / To go into
+      explanation: 进 (advance / enter) + 入 (enter). Voldemort speaks of people willing to let him enter their hearts and minds (进入他们的心灵和头脑).
+      interval: 1
+      ease: 2.5
+    - character: 心灵
+      pinyin: xīn líng
+      meaning: Heart / Soul / Spirit
+      explanation: 心 (heart / mind) + 灵 (spirit / soul 彐+火). Together with 头脑, translates 'into their hearts and minds' (他们的心灵和头脑).
+      interval: 1
+      ease: 2.5
+    - character: 头脑
+      pinyin: tóu nǎo
+      meaning: Mind / Brain / Head
+      explanation: 头 (head) + 脑 (brain 月+㐫). Paired with 心灵 to translate 'their hearts and minds' (心灵和头脑).
+      interval: 1
+      ease: 2.5
+    - character: 星期
+      pinyin: xīng qī
+      meaning: Week
+      explanation: 星 (star 日+生) + 期 (period of time 其+月). In 在过去的几个星期里 (over the past few weeks), when unicorn blood strengthened Voldemort.
+      interval: 1
+      ease: 2.5
+    - character: 独角兽
+      pinyin: dú jiǎo shòu
+      meaning: Unicorn
+      explanation: 独 (single 犭+虫) + 角 (horn) + 兽 (beast). Literally 'single-horned beast'; unicorn blood (独角兽的血) strengthened Voldemort in the Forbidden Forest.
+      interval: 1
+      ease: 2.5

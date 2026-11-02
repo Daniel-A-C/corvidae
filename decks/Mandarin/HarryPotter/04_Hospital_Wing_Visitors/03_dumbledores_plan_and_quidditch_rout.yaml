@@ -1,0 +1,229 @@
+cards:
+    - character: 教
+      pinyin: jiāo
+      meaning: To teach / To instruct
+      explanation: '孝 (filial/phonetic) + 攵 (tap/instruct). Read jiāo here: Dumbledore subtly taught (教给我们) them useful things.'
+      interval: 1
+      ease: 2.5
+    - character: 懂得
+      pinyin: dǒng de
+      meaning: To understand / To grasp / To know how
+      explanation: 懂 (understand 忄+董) + 得 (complement particle). Harry realizes it was no accident Dumbledore let him understand how the Mirror worked.
+      interval: 1
+      ease: 2.5
+    - character: 绝不
+      pinyin: jué bù
+      meaning: By no means / Definitely not / Never
+      explanation: '绝 (cut off 纟+色 = absolutely) + 不 (not). Emphatic negation: it was definitely not by chance.'
+      interval: 1
+      ease: 2.5
+    - character: 偶然
+      pinyin: ǒu rán
+      meaning: Accidental / By chance / Coincidental
+      explanation: 偶 (pair / chance 亻+禺) + 然 (so / thus). Dumbledore showing Harry the Mirror's secret was no mere coincidence.
+      interval: 1
+      ease: 2.5
+    - character: 有权
+      pinyin: yǒu quán
+      meaning: To have the right
+      explanation: 有 (have) + 权 (right / authority 木+又). Dumbledore felt Harry had the right to face Voldemort if he could.
+      interval: 1
+      ease: 2.5
+    - character: 面对
+      pinyin: miàn duì
+      meaning: To face / To confront
+      explanation: 面 (face) + 对 (confront / towards). Harry says Dumbledore thought he had the right to face Voldemort.
+      interval: 1
+      ease: 2.5
+    - character: 不同凡响
+      pinyin: bù tóng fán xiǎng
+      meaning: Extraordinary / Out of the ordinary / Remarkable
+      explanation: 不同 (different from) + 凡 (ordinary) + 响 (sound/echo). Idiom used by Ron to praise Dumbledore's extraordinary greatness.
+      interval: 1
+      ease: 2.5
+    - character: 骄傲
+      pinyin: jiāo ào
+      meaning: Proud / With pride
+      explanation: 骄 (spirited horse / proud 马+乔) + 傲 (lofty / proud 亻+敖). Ron speaks proudly of Dumbledore's brilliance.
+      interval: 1
+      ease: 2.5
+    - character: 明天
+      pinyin: míng tiān
+      meaning: Tomorrow
+      explanation: '明 (bright / next: 日 sun + 月 moon) + 天 (day). Ron tells Harry he must come to the end-of-year feast tomorrow.'
+      interval: 1
+      ease: 2.5
+    - character: 参加
+      pinyin: cān jiā
+      meaning: To attend / To participate in / To join
+      explanation: 参 (take part in) + 加 (add / join). Attending the end-of-year feast in the Great Hall.
+      interval: 1
+      ease: 2.5
+    - character: 年终
+      pinyin: nián zhōng
+      meaning: End-of-year / Year-end
+      explanation: 年 (year) + 终 (end 纟+冬). Refers to the Hogwarts End-of-Term Feast (年终宴会).
+      interval: 1
+      ease: 2.5
+    - character: 宴会
+      pinyin: yàn huì
+      meaning: Feast / Banquet
+      explanation: 宴 (banquet / feast 宀+日+女) + 会 (gathering). The grand Hogwarts feast celebrating the end of the school year.
+      interval: 1
+      ease: 2.5
+    - character: 分数
+      pinyin: fēn shù
+      meaning: Points / Scores
+      explanation: 分 (points / divide) + 数 (number / count). The House Cup points, which have already been tallied up.
+      interval: 1
+      ease: 2.5
+    - character: 算
+      pinyin: suàn
+      meaning: To calculate / To count / To tally
+      explanation: ⺮ (bamboo counting rods) + 目 (eye) + 廾 (two hands). Used in 算出来了 (tallied/worked out) regarding the House points.
+      interval: 1
+      ease: 2.5
+    - character: 斯莱特林
+      pinyin: Sī lái tè lín
+      meaning: Slytherin
+      explanation: Transliteration of Slytherin (斯 sī + 莱 lái + 特 tè + 林 lín). The Hogwarts house currently in first place before Dumbledore's last-minute points.
+      interval: 1
+      ease: 2.5
+    - character: 名
+      pinyin: míng
+      meaning: Place / Rank (classifier for rankings)
+      explanation: 夕 (evening) + 口 (mouth). Used in 第一名 (first place) as Ron reports that Slytherin has won first place.
+      interval: 1
+      ease: 2.5
+    - character: 拉文克劳
+      pinyin: Lā wén kè láo
+      meaning: Ravenclaw
+      explanation: Transliteration of Ravenclaw (拉 lā + 文 wén + 克 kè + 劳 láo). The Hogwarts house that flattened Gryffindor in the final Quidditch match without Harry.
+      interval: 1
+      ease: 2.5
+    - character: 落花流水
+      pinyin: luò huā liú shuǐ
+      meaning: Utterly routed / Beaten hollow / Smashed to pieces
+      explanation: 落花 (fallen blossoms) + 流水 (flowing water). Idiom describing how Ravenclaw thoroughly trounced Gryffindor at Quidditch in Harry's absence.
+      interval: 1
+      ease: 2.5
+    - character: 挺
+      pinyin: tǐng
+      meaning: Quite / Pretty / Rather
+      explanation: 扌 (hand) + 廷 (court / phonetic). Colloquial degree adverb in 挺好吃的 (the food at the feast will still be pretty good).
+      interval: 1
+      ease: 2.5
+    - character: 好吃
+      pinyin: hǎo chī
+      meaning: Delicious / Tasty / Good to eat
+      explanation: 好 (good / pleasant) + 吃 (eat). Ron consoles himself that the feast food is still quite delicious despite losing.
+      interval: 1
+      ease: 2.5
+    - character: 闯
+      pinyin: chuǎng
+      meaning: To barge in / To rush in / To charge
+      explanation: 门 (gate) + 马 (horse charging through a doorway). Madam Pomfrey barges in to shoo Ron and Hermione out.
+      interval: 1
+      ease: 2.5
+    - character: 待
+      pinyin: dāi
+      meaning: To stay / To spend time
+      explanation: '彳 (step) + 寺 (temple). Read dāi colloquially when meaning ''to stay'': Madam Pomfrey notes they have stayed (待了) nearly fifteen minutes.'
+      interval: 1
+      ease: 2.5
+    - character: 将近
+      pinyin: jiāng jìn
+      meaning: Nearly / Almost / Close to
+      explanation: 将 (about to / nearly) + 近 (near / close). Madam Pomfrey points out their five-minute visit has lasted nearly fifteen minutes.
+      interval: 1
+      ease: 2.5
+    - character: 十五
+      pinyin: shí wǔ
+      meaning: Fifteen
+      explanation: 十 (ten) + 五 (five). Fifteen minutes (十五分钟), three times the five minutes Madam Pomfrey originally allowed.
+      interval: 1
+      ease: 2.5
+    - character: 钟
+      pinyin: zhōng
+      meaning: Bell / Clock / Time (in 分钟 minute)
+      explanation: 钅 (metal bell) + 中 (phonetic). Used in 分钟 (minute) as Madam Pomfrey times the visitors.
+      interval: 1
+      ease: 2.5
+    - character: 坚决
+      pinyin: jiān jué
+      meaning: Firmly / Resolutely / Determined
+      explanation: 坚 (solid / firm 土) + 决 (decide / breach 冫+夬). Madam Pomfrey firmly orders Ron and Hermione out of the ward.
+      interval: 1
+      ease: 2.5
+    - character: 踏踏实实
+      pinyin: tà tà shí shí
+      meaning: Soundly / Peacefully / Free from anxiety
+      explanation: Reduplication of 踏实 (secure / grounded / sound). After learning the truth and seeing his friends, Harry sleeps soundly through the night.
+      interval: 1
+      ease: 2.5
+    - character: 觉
+      pinyin: jiào
+      meaning: Sleep / Nap (classifier for a stretch of sleep)
+      explanation: 见 (see) under 冖. Read jiào in 一觉睡到天亮 (slept straight through in one unbroken sleep until dawn).
+      interval: 1
+      ease: 2.5
+    - character: 睡
+      pinyin: shuì
+      meaning: To sleep
+      explanation: '目 (eye) + 垂 (droop: drooping eyelids). Harry sleeps soundly all the way until morning.'
+      interval: 1
+      ease: 2.5
+    - character: 天亮
+      pinyin: tiān liàng
+      meaning: Dawn / Daybreak / Daylight
+      explanation: 天 (sky / day) + 亮 (bright / light). Harry sleeps straight through until daybreak.
+      interval: 1
+      ease: 2.5
+    - character: 元气
+      pinyin: yuán qì
+      meaning: Vitality / Vigour / Strength
+      explanation: 元 (primordial / original) + 气 (vital energy / breath). Traditional term for life force; Harry feels his strength is nearly fully restored.
+      interval: 1
+      ease: 2.5
+    - character: 差不多
+      pinyin: chà bu duō
+      meaning: Almost / Nearly / Pretty much
+      explanation: 差 (differ / lack) + 不多 (not much). Indicates Harry's vitality is almost completely recovered the next morning.
+      interval: 1
+      ease: 2.5
+    - character: 整理
+      pinyin: zhěng lǐ
+      meaning: To tidy up / To arrange / To sort out
+      explanation: 整 (in order / whole) + 理 (put in order / polish jade 王+里). Madam Pomfrey tidies Harry's huge pile of sweet boxes; later Hagrid uses it for putting together the photo album.
+      interval: 1
+      ease: 2.5
+    - character: 一大堆
+      pinyin: yī dà duī
+      meaning: A big pile / A huge heap
+      explanation: 一 (one) + 大 (big) + 堆 (heap / pile of earth 土+隹). Refers to the mountain of gift-wrapped sweet boxes by Harry's bed.
+      interval: 1
+      ease: 2.5
+    - character: 糖果盒
+      pinyin: táng guǒ hé
+      meaning: Sweet boxes / Candy boxes
+      explanation: 糖 (sugar / candy 米+唐) + 果 (fruit) + 盒 (box 合+皿). The boxes of wizarding sweets sent by Harry's admirers.
+      interval: 1
+      ease: 2.5
+    - character: 可不可以
+      pinyin: kě bù kě yǐ
+      meaning: May I / Is it alright if
+      explanation: A-not-A question form of 可以 (may / can). Harry politely asks Madam Pomfrey if he may attend the feast.
+      interval: 1
+      ease: 2.5
+    - character: 允许
+      pinyin: yǔn xǔ
+      meaning: To allow / To permit / To grant permission
+      explanation: 允 (consent / allow) + 许 (permit 讠+午). Dumbledore has given permission for Harry to attend the feast.
+      interval: 1
+      ease: 2.5
+    - character: 不以为然
+      pinyin: bù yǐ wéi rán
+      meaning: Disapprovingly / Not thinking it right
+      explanation: 不 (not) + 以为 (consider to be) + 然 (right / so). Madam Pomfrey disapproves of Dumbledore letting Harry go to a noisy feast.
+      interval: 1
+      ease: 2.5

@@ -1,0 +1,229 @@
+cards:
+    - character: 认识
+      pinyin: rèn shi
+      meaning: To realize / To recognize / To know
+      explanation: 认 (recognize 讠+刃) + 识 (know 讠+只). Used with 到 (认识到 = realize) as Madam Pomfrey thinks Dumbledore fails to realize how risky feasts are.
+      interval: 1
+      ease: 2.5
+    - character: 具有
+      pinyin: jù yǒu
+      meaning: To possess / To have / To carry
+      explanation: 具 (possess / tool) + 有 (have). Formal verb used in Madam Pomfrey's clinical view that feasts 'carry' (具有) potential danger.
+      interval: 1
+      ease: 2.5
+    - character: 潜在
+      pinyin: qián zài
+      meaning: Potential / Latent / Underlying
+      explanation: 潜 (submerge / hide underwater 氵+替) + 在 (exist). Describes the 'potential' dangers Madam Pomfrey imagines at a school feast.
+      interval: 1
+      ease: 2.5
+    - character: 危险
+      pinyin: wēi xiǎn
+      meaning: Danger / Risk / Peril
+      explanation: 危 (precarious / person on a cliff) + 险 (steep precipice 阝+佥). Madam Pomfrey considers even a feast full of hidden medical hazards.
+      interval: 1
+      ease: 2.5
+    - character: 有人
+      pinyin: yǒu rén
+      meaning: Someone / A visitor
+      explanation: 有 (there is) + 人 (person). Madam Pomfrey announces that yet another visitor has come to see Harry.
+      interval: 1
+      ease: 2.5
+    - character: 来看
+      pinyin: lái kàn
+      meaning: To come see / To visit
+      explanation: 来 (come) + 看 (see / visit). Used in 来看你了 (has come to visit you in the hospital wing).
+      interval: 1
+      ease: 2.5
+    - character: 话音未落
+      pinyin: huà yīn wèi luò
+      meaning: Before the words had even faded / Hardly had one finished speaking
+      explanation: 话音 (sound of speech) + 未 (not yet) + 落 (fallen). Idiom showing Hagrid squeezing through the door the very instant Harry asks who it is.
+      interval: 1
+      ease: 2.5
+    - character: 海格
+      pinyin: Hǎi gé
+      meaning: Hagrid (Rubeus Hagrid)
+      explanation: Transliteration of Hagrid (海 sea + 格 pattern/standard). Hogwarts Keeper of Keys and Grounds and Harry's devoted friend.
+      interval: 1
+      ease: 2.5
+    - character: 侧
+      pinyin: cè
+      meaning: To turn sideways / Side
+      explanation: 亻 (person) + 则 (rule / phonetic). Hagrid has to turn his massive body sideways (侧着身子) to squeeze through indoor doorways.
+      interval: 1
+      ease: 2.5
+    - character: 钻
+      pinyin: zuān
+      meaning: To squeeze through / To duck into / To bore
+      explanation: 钅 (metal awl) + 占 (phonetic). Vividly describes huge Hagrid squeezing (钻进门来) through the hospital wing doorway.
+      interval: 1
+      ease: 2.5
+    - character: 进门
+      pinyin: jìn mén
+      meaning: To enter the door / To come inside
+      explanation: 进 (enter 辶+井) + 门 (door). Hagrid ducks and squeezes in through the door.
+      interval: 1
+      ease: 2.5
+    - character: 每次
+      pinyin: měi cì
+      meaning: Every time / Each time
+      explanation: 每 (every) + 次 (time / occasion). Every time Hagrid enters a room indoors, he looks impossibly huge.
+      interval: 1
+      ease: 2.5
+    - character: 房门
+      pinyin: fáng mén
+      meaning: Room door / Doorway
+      explanation: 房 (room 户+方) + 门 (door). Refers to indoor doorways, which always make Hagrid look like a giant.
+      interval: 1
+      ease: 2.5
+    - character: 庞然大物
+      pinyin: páng rán dà wù
+      meaning: Colossus / Giant / Huge creature
+      explanation: 庞然 (huge in appearance) + 大物 (big thing). Idiom describing how enormous Hagrid looks whenever he is inside a normal room.
+      interval: 1
+      ease: 2.5
+    - character: 身旁
+      pinyin: shēn páng
+      meaning: Beside / At one's side
+      explanation: 身 (body / person) + 旁 (side). Hagrid sits down right beside Harry's hospital bed.
+      interval: 1
+      ease: 2.5
+    - character: 坐下
+      pinyin: zuò xià
+      meaning: To sit down
+      explanation: '坐 (sit: two people 两人 on the earth 土) + 下 (down). Hagrid sits down next to Harry before bursting into tears.'
+      interval: 1
+      ease: 2.5
+    - character: 一眼
+      pinyin: yī yǎn
+      meaning: A glance / One look
+      explanation: 一 (one) + 眼 (eye). Hagrid takes one look (看了一眼) at Harry in his hospital bed and bursts into tears of guilt.
+      interval: 1
+      ease: 2.5
+    - character: 伤心
+      pinyin: shāng xīn
+      meaning: Heartbroken / Sad / Grieved
+      explanation: 伤 (wound / hurt) + 心 (heart). Hagrid weeps brokenheartedly, blaming himself for Harry's near-death experience.
+      interval: 1
+      ease: 2.5
+    - character: 怪
+      pinyin: guài
+      meaning: To blame
+      explanation: 忄 (heart) + 圣 (phonetic). Used verbally in 都怪我 (It's all my fault / Blame me) as Hagrid berates himself.
+      interval: 1
+      ease: 2.5
+    - character: 笨蛋
+      pinyin: bèn dàn
+      meaning: Fool / Idiot / Blockhead
+      explanation: 笨 (stupid / clumsy 竹+本) + 蛋 (egg / colloquial person suffix). Hagrid calls himself a Ruddy Fool for letting slip how to get past Fluffy.
+      interval: 1
+      ease: 2.5
+    - character: 捂
+      pinyin: wǔ
+      meaning: To cover / To muffle with one's hands
+      explanation: 扌 (hand) + 吾 (phonetic). Hagrid buries/covers his face in his hands (用手捂着脸) while sobbing.
+      interval: 1
+      ease: 2.5
+    - character: 哭泣
+      pinyin: kū qì
+      meaning: To weep / To sob
+      explanation: 哭 (cry aloud 吅+犬) + 泣 (weep tears 氵+立). Hagrid weeps bitterly over having been tricked by Quirrell.
+      interval: 1
+      ease: 2.5
+    - character: 恶棍
+      pinyin: è gùn
+      meaning: Villain / Scoundrel / Evil wretch
+      explanation: 恶 (evil) + 棍 (rod / ruffian 木+昆). Hagrid's term for Quirrell/Voldemort, the villain who tricked him at the pub.
+      interval: 1
+      ease: 2.5
+    - character: 通过
+      pinyin: tōng guò
+      meaning: To get past / To pass through
+      explanation: 通 (pass through 辶+甬) + 过 (cross / pass). Refers to getting past Fluffy the three-headed dog.
+      interval: 1
+      ease: 2.5
+    - character: 路威
+      pinyin: Lù wēi
+      meaning: Fluffy
+      explanation: Transliteration/adaptation for Hagrid's giant three-headed dog (路 road + 威 mighty), guarding the trapdoor.
+      interval: 1
+      ease: 2.5
+    - character: 差点
+      pinyin: chà diǎn
+      meaning: Nearly / Almost
+      explanation: 差 (fall short by) + 点 (a little bit). Hagrid sobs that Harry nearly (差点) died because of his loose tongue.
+      interval: 1
+      ease: 2.5
+    - character: 没命
+      pinyin: méi mìng
+      meaning: To lose one's life / To die
+      explanation: 没 (not have / lose) + 命 (life). Colloquial expression (差点就没命了 = you could've died!).
+      interval: 1
+      ease: 2.5
+    - character: 火龙蛋
+      pinyin: huǒ lóng dàn
+      meaning: Dragon egg
+      explanation: 火龙 (fire-dragon) + 蛋 (egg). The Norwegian Ridgeback egg (Norbert) that Quirrell used to bribe and loosen Hagrid's tongue.
+      interval: 1
+      ease: 2.5
+    - character: 喝酒
+      pinyin: hē jiǔ
+      meaning: To drink alcohol
+      explanation: 喝 (drink 口+曷) + 酒 (alcohol 氵+酉). Hagrid vows never to drink again after getting drunk with the hooded stranger at the Hog's Head.
+      interval: 1
+      ease: 2.5
+    - character: 一辈子
+      pinyin: yī bèi zi
+      meaning: All one's life / For a lifetime
+      explanation: 一 (one) + 辈 (generation / lifetime 非+车) + 子 (noun suffix). Hagrid says he deserves to be turned out to live as a Muggle for the rest of his life.
+      interval: 1
+      ease: 2.5
+    - character: 麻瓜
+      pinyin: má guā
+      meaning: Muggle
+      explanation: 麻 (hemp) + 瓜 (melon). Standard Chinese rendering of 'Muggle' (non-magical person), blending phonetic similarity with a folksy sense of someone clueless.
+      interval: 1
+      ease: 2.5
+    - character: 因
+      pinyin: yīn
+      meaning: Because of / From
+      explanation: 囗 (enclosure) + 大 (person). Preposition in 因悲哀和悔恨而颤抖 (shaking with grief and remorse).
+      interval: 1
+      ease: 2.5
+    - character: 悲哀
+      pinyin: bēi āi
+      meaning: Grief / Sorrow
+      explanation: 悲 (sorrow 非+心) + 哀 (mourning 衣+口). Deep grief shaking Hagrid as he looks at Harry.
+      interval: 1
+      ease: 2.5
+    - character: 悔恨
+      pinyin: huǐ hèn
+      meaning: Remorse / Bitter regret
+      explanation: 悔 (regret / repent 忄+每) + 恨 (hate / regret 忄+艮). Intense self-reproach and remorse over betraying Fluffy's secret.
+      interval: 1
+      ease: 2.5
+    - character: 渗
+      pinyin: shèn
+      meaning: To seep / To soak / To trickle into
+      explanation: 氵 (water) + 参 (phonetic). Great tears seep (渗进) into Hagrid's tangled beard.
+      interval: 1
+      ease: 2.5
+    - character: 胡须
+      pinyin: hú xū
+      meaning: Beard / Facial hair
+      explanation: 胡 (beard / northern) + 须 (facial hair 彡+页). Hagrid's thick beard into which his huge tears trickle.
+      interval: 1
+      ease: 2.5
+    - character: 打听
+      pinyin: dǎ tīng
+      meaning: To inquire about / To pry / To find out
+      explanation: 打 (do / engage in) + 听 (listen). Harry comforts Hagrid that Voldemort would have found out (打听到) a way past Fluffy regardless.
+      interval: 1
+      ease: 2.5
+    - character: 即使
+      pinyin: jí shǐ
+      meaning: Even if / Even though
+      explanation: 即 (even / approach) + 使 (suppose / let). Concessive conjunction (即使你不告诉他 = even if you hadn't told him).
+      interval: 1
+      ease: 2.5

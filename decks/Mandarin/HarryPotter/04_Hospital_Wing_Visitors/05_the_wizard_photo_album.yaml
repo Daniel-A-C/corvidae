@@ -1,0 +1,235 @@
+cards:
+    - character: 抽抽噎噎
+      pinyin: chōu chōu yē yē
+      meaning: Sobbing and sniffling / Blubbering
+      explanation: 'Reduplication of 抽噎 (sniffle and choke with sobs: 抽 draw breath + 噎 choke in throat). Describes Hagrid''s heavy, gasping sobs.'
+      interval: 1
+      ease: 2.5
+    - character: 名字
+      pinyin: míng zì
+      meaning: Name
+      explanation: 名 (name 夕+口) + 字 (character / courtesy name 宀+子). Hagrid begs Harry not to speak Voldemort's name aloud.
+      interval: 1
+      ease: 2.5
+    - character: 吼
+      pinyin: hǒu
+      meaning: To roar / To bellow / To shout
+      explanation: 口 (mouth) + 孔 (phonetic). Harry bellows 'VOLDEMORT!' aloud to shock Hagrid out of his weeping.
+      interval: 1
+      ease: 2.5
+    - character: 惊慌失措
+      pinyin: jīng huāng shī cuò
+      meaning: Panicked and at a loss / Frightened out of one's wits
+      explanation: 惊慌 (alarmed and panicked) + 失措 (lose one's composure/bearing). Idiom describing Hagrid's horrified shock when Harry yells Voldemort's name.
+      interval: 1
+      ease: 2.5
+    - character: 停止
+      pinyin: tíng zhǐ
+      meaning: To stop / To cease
+      explanation: 停 (halt 亻+亭) + 止 (stop / foot). Harry stops shouting once he sees Hagrid shocked into silence.
+      interval: 1
+      ease: 2.5
+    - character: 相遇
+      pinyin: xiāng yù
+      meaning: To meet / To encounter each other
+      explanation: 相 (mutually) + 遇 (meet 辶+禺). Harry reminds Hagrid that he has met Voldemort face-to-face.
+      interval: 1
+      ease: 2.5
+    - character: 当面
+      pinyin: dāng miàn
+      meaning: To someone's face / In person
+      explanation: 当 (facing / in the presence of) + 面 (face). Harry says he calls Voldemort by his name right to his face.
+      interval: 1
+      ease: 2.5
+    - character: 快活
+      pinyin: kuài huo
+      meaning: Cheerful / Happy / Cheered up
+      explanation: 快 (happy / brisk) + 活 (lively). Harry begs Hagrid to cheer up (快活一些吧) since the Stone is safe.
+      interval: 1
+      ease: 2.5
+    - character: 作恶
+      pinyin: zuò è
+      meaning: To do evil / To commit atrocities
+      explanation: 作 (do / make) + 恶 (evil). Voldemort can no longer use the Philosopher's Stone to do evil.
+      interval: 1
+      ease: 2.5
+    - character: 巧克力蛙
+      pinyin: qiǎo kè lì wā
+      meaning: Chocolate Frog
+      explanation: 巧克力 (chocolate, phonetic loan) + 蛙 (frog 虫+圭). Iconic wizarding confection; Harry offers one to Hagrid from his pile.
+      interval: 1
+      ease: 2.5
+    - character: 手背
+      pinyin: shǒu bèi
+      meaning: Back of the hand
+      explanation: 手 (hand) + 背 (back). Hagrid wipes his nose with the back of his great hand.
+      interval: 1
+      ease: 2.5
+    - character: 鼻子
+      pinyin: bí zi
+      meaning: Nose
+      explanation: '鼻 (nose: 自 self/nose + 畀 phonetic) + 子 (noun suffix). Hagrid wipes his nose after crying.'
+      interval: 1
+      ease: 2.5
+    - character: 倒
+      pinyin: dào
+      meaning: Actually / Come to think of it (conversational adverb)
+      explanation: 亻 (person) + 到 (arrive). Used in 这倒提醒了我 ('That reminds me, actually'), marking a sudden shift in thought.
+      interval: 1
+      ease: 2.5
+    - character: 提醒
+      pinyin: tí xǐng
+      meaning: To remind
+      explanation: 提 (bring up 扌+是) + 醒 (awaken 酉+星). Mention of the Chocolate Frogs reminds Hagrid of the gift he brought for Harry.
+      interval: 1
+      ease: 2.5
+    - character: 带来
+      pinyin: dài lái
+      meaning: To bring
+      explanation: 带 (carry / bring) + 来 (come / directional). Hagrid says he has brought Harry a present too.
+      interval: 1
+      ease: 2.5
+    - character: 白鼬
+      pinyin: bái yòu
+      meaning: Stoat / Ermine
+      explanation: 白 (white) + 鼬 (weasel/stoat 鼠+由). Harry jokes anxiously whether the gift is another stoat sandwich (白鼬三明治).
+      interval: 1
+      ease: 2.5
+    - character: 三明治
+      pinyin: sān míng zhì
+      meaning: Sandwich
+      explanation: Phonetic loan for 'sandwich' (三 three + 明 bright + 治 rule). Refers to Hagrid's infamous stoat sandwiches.
+      interval: 1
+      ease: 2.5
+    - character: 勉强
+      pinyin: miǎn qiǎng
+      meaning: Faintly / With an effort / Reluctantly
+      explanation: 勉 (exert oneself) + 强 (force / strive, read qiǎng). Hagrid manages a weak chuckle at Harry's joke after his crying fit.
+      interval: 1
+      ease: 2.5
+    - character: 声
+      pinyin: shēng
+      meaning: Sound / Voice
+      explanation: 士 + 尸 + 殳 (striking a chime). Used in 笑出了声 (chuckled aloud).
+      interval: 1
+      ease: 2.5
+    - character: 昨天
+      pinyin: zuó tiān
+      meaning: Yesterday
+      explanation: 昨 (yesterday 日+乍) + 天 (day). Hagrid explains that Dumbledore gave him yesterday off to put the album together.
+      interval: 1
+      ease: 2.5
+    - character: 假
+      pinyin: jià
+      meaning: Leave of absence / Holiday / Day off
+      explanation: '亻 (person) + 叚 (phonetic). Read jià when meaning holiday/leave: 放了我一天假 (gave me a day off yesterday).'
+      interval: 1
+      ease: 2.5
+    - character: 开除
+      pinyin: kāi chú
+      meaning: To expel / To fire / To dismiss
+      explanation: 开 (open / send away) + 除 (remove 阝+余). Hagrid remarks that Dumbledore ought to have sacked him instead of giving him a day off.
+      interval: 1
+      ease: 2.5
+    - character: 行
+      pinyin: xíng
+      meaning: Alright / Anyway / Enough of that
+      explanation: 彳 + 亍 (crossroads). Used in 行了，这个给你 ('Anyway, here you go') as Hagrid hands Harry the photo album.
+      interval: 1
+      ease: 2.5
+    - character: 本
+      pinyin: běn
+      meaning: Measure word for books and albums
+      explanation: 木 (tree) with a stroke at the root. Classifier in 一本精美的皮封面的书 (a handsome leather-covered book).
+      interval: 1
+      ease: 2.5
+    - character: 精美
+      pinyin: jīng měi
+      meaning: Handsome / Exquisite / Finely made
+      explanation: 精 (refined / choice 米+青) + 美 (beautiful 羊+大). Describes the handsome leather-bound photo album Hagrid made for Harry.
+      interval: 1
+      ease: 2.5
+    - character: 皮
+      pinyin: pí
+      meaning: Leather / Skin / Hide
+      explanation: Pictograph of a hand stripping a hide. Refers to the leather cover (皮封面) of the photo album.
+      interval: 1
+      ease: 2.5
+    - character: 封面
+      pinyin: fēng miàn
+      meaning: Cover (of a book or album)
+      explanation: 封 (seal / envelope) + 面 (surface / face). The leather cover of the wizard photo album.
+      interval: 1
+      ease: 2.5
+    - character: 书
+      pinyin: shū
+      meaning: Book / Album
+      explanation: Pictograph of a brush writing. Describes the album before Harry opens it to discover it is filled with moving photographs.
+      interval: 1
+      ease: 2.5
+    - character: 好奇
+      pinyin: hào qí
+      meaning: Curious / Inquisitive
+      explanation: 好 (fond of, read hào) + 奇 (unusual / strange). Harry curiously opens the handsome leather-bound book.
+      interval: 1
+      ease: 2.5
+    - character: 打开
+      pinyin: dǎ kāi
+      meaning: To open / To unfold
+      explanation: 打 (do / strike) + 开 (open). Harry opens the album to find his parents smiling at him from every page.
+      interval: 1
+      ease: 2.5
+    - character: 满
+      pinyin: mǎn
+      meaning: Full of / Filled with
+      explanation: 氵 (water) + 艹 + 两 (phonetic). Used as a resultative complement in 贴满了 (pasted full of wizard photographs).
+      interval: 1
+      ease: 2.5
+    - character: 照片
+      pinyin: zhào piàn
+      meaning: Photograph / Picture
+      explanation: 照 (shine / reflect / photograph) + 片 (flat slice / print). Moving wizarding photographs of Lily and James Potter.
+      interval: 1
+      ease: 2.5
+    - character: 页
+      pinyin: yè
+      meaning: Page / Leaf
+      explanation: Pictograph of a head (top sheet). In 每一页上 (on every single page), Harry's parents smile and wave at him.
+      interval: 1
+      ease: 2.5
+    - character: 微笑
+      pinyin: wēi xiào
+      meaning: To smile / Smile
+      explanation: 微 (slight / gentle) + 笑 (laugh / smile 竹+夭). Harry's parents smile warmly at him from the moving photos.
+      interval: 1
+      ease: 2.5
+    - character: 挥手
+      pinyin: huī shǒu
+      meaning: To wave one's hand
+      explanation: 挥 (wave / brandish 扌+军) + 手 (hand). In wizarding photos, Harry's parents wave up at him from every page.
+      interval: 1
+      ease: 2.5
+    - character: 老
+      pinyin: lǎo
+      meaning: Old / Former / Long-standing
+      explanation: 耂 + 匕. Prefix in 老同学 (old school friends) of James and Lily Potter.
+      interval: 1
+      ease: 2.5
+    - character: 同学
+      pinyin: tóng xué
+      meaning: Schoolmate / Classmate
+      explanation: 同 (same / together) + 学 (study / school). Hagrid sent owls to all of Harry's parents' old schoolmates asking for photos.
+      interval: 1
+      ease: 2.5
+    - character: 送
+      pinyin: sòng
+      meaning: To send / To deliver / To give
+      explanation: 辶 (walk) + 关 (phonetic). Used in 送信 (deliver letters) as Hagrid sent owls to collect photos for Harry.
+      interval: 1
+      ease: 2.5
+    - character: 全
+      pinyin: quán
+      meaning: Completely / All / Fully
+      explanation: '入 (enter) + 王 (jade: intact/whole). Even though Harry is too choked up to speak, Hagrid understands completely (全明白了).'
+      interval: 1
+      ease: 2.5

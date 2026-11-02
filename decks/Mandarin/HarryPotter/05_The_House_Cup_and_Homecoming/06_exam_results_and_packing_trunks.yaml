@@ -1,0 +1,253 @@
+cards:
+    - character: 魔药学
+      pinyin: mó yào xué
+      meaning: Potions (school subject)
+      explanation: '魔 (mó: magic) + 药 (yào: potion / medicine) + 学 (xué: study / -ology). The Hogwarts subject taught by Snape where Neville struggled.'
+      interval: 1
+      ease: 2.5
+    - character: 丢失
+      pinyin: diū shī
+      meaning: To lose
+      explanation: '丢 (diū: lose / cast aside) + 失 (shī: lose / miss). Refers to the marks Neville lost (丢失的分数) in Potions.'
+      interval: 1
+      ease: 2.5
+    - character: 高尔
+      pinyin: Gāo ěr
+      meaning: Goyle (Gregory Goyle)
+      explanation: Phonetic transliteration of Goyle (高 gāo + 尔 ěr), Draco Malfoy's hulking Slytherin crony who narrowly avoids expulsion by passing his exams.
+      interval: 1
+      ease: 2.5
+    - character: 笨
+      pinyin: bèn
+      meaning: Stupid / Clumsy / Slow-witted
+      explanation: 竹 (bamboo) + 本 (root / base, referring to the coarse inner stem of bamboo). Describes Goyle as being as stupid as he was mean (笨得像头猪).
+      interval: 1
+      ease: 2.5
+    - character: 猪
+      pinyin: zhū
+      meaning: Pig / Hog
+      explanation: '犭 (beast radical) + 者 (zhě: phonetic). Used in the simile ''笨得像头猪'' (as stupid as a pig) describing Goyle.'
+      interval: 1
+      ease: 2.5
+    - character: 自私
+      pinyin: zì sī
+      meaning: Selfish / Self-centered
+      explanation: '自 (zì: self) + 私 (sī: private / personal, 禾 grain + 厶). Paired with 刻薄 to describe Goyle''s mean, selfish nature.'
+      interval: 1
+      ease: 2.5
+    - character: 刻薄
+      pinyin: kè bó
+      meaning: Mean / Spiteful / Harsh / Unkind
+      explanation: '刻 (kè: carve / cutting, 刂 knife) + 薄 (bó: thin / ungenerous). Describes Goyle''s mean-spirited character alongside his stupidity.'
+      interval: 1
+      ease: 2.5
+    - character: 竟然
+      pinyin: jìng rán
+      meaning: Unexpectedly / To one's surprise / Actually
+      explanation: '竟 (jìng: finish / unexpectedly) + 然 (rán: so / thus). Expresses disbelief that even Goyle actually passed his exams.'
+      interval: 1
+      ease: 2.5
+    - character: 美中不足
+      pinyin: měi zhōng bù zú
+      meaning: A blemish in an otherwise perfect thing / A fly in the ointment
+      explanation: 'Four-character idiom: 美中 (amidst perfection/beauty) + 不足 (a deficiency/shortcoming). Goyle not being expelled is the one small blemish in their triumph.'
+      interval: 1
+      ease: 2.5
+    - character: 正如
+      pinyin: zhèng rú
+      meaning: Just as / Exactly like
+      explanation: '正 (zhèng: precisely / just) + 如 (rú: as / like). Introduces Ron''s philosophical observation: ''正如罗恩所说'' (just as Ron said).'
+      interval: 1
+      ease: 2.5
+    - character: 所
+      pinyin: suǒ
+      meaning: Particle before a verb nominalizing the action (that which)
+      explanation: '户 (door) + 斤 (axe). Forms a relative nominal clause with a verb: ''罗恩所说'' (that which Ron said / what Ron said).'
+      interval: 1
+      ease: 2.5
+    - character: 样样
+      pinyin: yàng yàng
+      meaning: Everything / Every single thing / All kinds
+      explanation: 'Reduplication of 样 (yàng: kind / sort, 木 tree + 羊 sheep). In life, you can''t have everything (样样) go your way.'
+      interval: 1
+      ease: 2.5
+    - character: 顺心
+      pinyin: shùn xīn
+      meaning: Satisfactory / Going one's way / Pleasing
+      explanation: '顺 (shùn: smooth / along with, 川 stream + 页 head) + 心 (xīn: heart). Literally ''smooth to the heart''; Ron notes you can''t have everything in life go your way (样样顺心).'
+      interval: 1
+      ease: 2.5
+    - character: 衣柜
+      pinyin: yī guì
+      meaning: Wardrobe / Closet
+      explanation: '衣 (yī: clothing) + 柜 (guì: cabinet / cupboard, 木 wood + 巨). Suddenly their wardrobes were empty as everyone packed for summer.'
+      interval: 1
+      ease: 2.5
+    - character: 装
+      pinyin: zhuāng
+      meaning: To pack / To load / To put into
+      explanation: '壮 (zhuàng: phonetic) + 衣 (yī: clothing). Used for packing belongings into trunks (装到了行李箱里) and later for a cage holding an owl (装着猫头鹰).'
+      interval: 1
+      ease: 2.5
+    - character: 行李箱
+      pinyin: xíng li xiāng
+      meaning: Suitcase / Trunk / Luggage
+      explanation: '行李 (xíng li: luggage / traveling gear) + 箱 (xiāng: box / chest / trunk, 竹 bamboo + 相). The students'' school trunks packed for the journey home.'
+      interval: 1
+      ease: 2.5
+    - character: 蟾蜍
+      pinyin: chán chú
+      meaning: Toad
+      explanation: Both characters carry the 虫 (insect/amphibian) radical + 詹/余 phonetics. Neville's runaway pet toad Trevor is finally found hiding in a corner of the lavatory.
+      interval: 1
+      ease: 2.5
+    - character: 盥洗室
+      pinyin: guàn xǐ shì
+      meaning: Lavatory / Washroom / Bathroom
+      explanation: '盥 (guàn: wash hands in a basin, 臼 hands + 水 water + 皿 basin) + 洗 (xǐ: wash) + 室 (shì: room). The washroom where Neville''s toad was found hiding.'
+      interval: 1
+      ease: 2.5
+    - character: 角落
+      pinyin: jiǎo luò
+      meaning: Corner / Nook
+      explanation: '角 (jiǎo: horn / angle / corner) + 落 (luò: fall / settlement / spot). Neville''s toad Trevor was discovered lurking in a corner of the toilet.'
+      interval: 1
+      ease: 2.5
+    - character: 通知
+      pinyin: tōng zhī
+      meaning: Notice / Notification / To notify
+      explanation: '通 (tōng: pass through / communicate) + 知 (zhī: know). Official written notes handed out to all students before leaving for the summer holidays.'
+      interval: 1
+      ease: 2.5
+    - character: 警告
+      pinyin: jǐng gào
+      meaning: To warn / Warning
+      explanation: '警 (jǐng: alert / warn, 敬 respect + 言 words) + 告 (gào: tell / announce). The notes warn students not to use magic over the holidays.'
+      interval: 1
+      ease: 2.5
+    - character: 放假
+      pinyin: fàng jià
+      meaning: To be on holiday / To have a vacation
+      explanation: '放 (fàng: release / let go) + 假 (jià: holiday / leave, fourth tone). Refers to the school summer vacation period (放假期间).'
+      interval: 1
+      ease: 2.5
+    - character: 期间
+      pinyin: qī jiān
+      meaning: Period of time / During / In the course of
+      explanation: '期 (qī: period / phase) + 间 (jiān: interval / space between). Used in ''放假期间'' (during the holiday period).'
+      interval: 1
+      ease: 2.5
+    - character: 不许
+      pinyin: bù xǔ
+      meaning: Not allowed / Must not / Forbid
+      explanation: '不 (bù: not) + 许 (xǔ: permit / allow, 讠 speech + 午). Expresses strict prohibition: underage wizards are forbidden to use magic at home.'
+      interval: 1
+      ease: 2.5
+    - character: 发给
+      pinyin: fā gěi
+      meaning: To hand out to / To distribute to / To issue to
+      explanation: '发 (fā: send out / distribute) + 给 (gěi: to / give). Fred Weasley wishes the school had forgotten to hand out (发给) the no-magic notices.'
+      interval: 1
+      ease: 2.5
+    - character: 遗憾
+      pinyin: yí hàn
+      meaning: Regretful / Regret / Pity
+      explanation: '遗 (yí: leave behind) + 憾 (hàn: regret, 忄 heart + 感 feel). Fred Weasley remarks regretfully (遗憾地说) that they were given the underage magic restriction notice.'
+      interval: 1
+      ease: 2.5
+    - character: 负责
+      pinyin: fù zé
+      meaning: To be in charge of / To be responsible for
+      explanation: '负 (fù: bear / carry on back) + 责 (zé: duty / responsibility). Hagrid is in charge of leading the students to the fleet of boats across the lake.'
+      interval: 1
+      ease: 2.5
+    - character: 带领
+      pinyin: dài lǐng
+      meaning: To lead / To guide
+      explanation: '带 (dài: lead / bring along) + 领 (lǐng: neck / lead). Hagrid leads (带领) the students down to the boats crossing the lake.'
+      interval: 1
+      ease: 2.5
+    - character: 登
+      pinyin: dēng
+      meaning: To board / To ascend / To mount
+      explanation: 癶 (footsteps) + 豆 (ritual vessel). Combined with 上 as 登上 (board / get onto), describing the students boarding the fleet of boats.
+      interval: 1
+      ease: 2.5
+    - character: 渡过
+      pinyin: dù guò
+      meaning: To cross over (water) / To ferry across
+      explanation: '渡 (dù: ferry across water, 氵 water + 度) + 过 (guò: cross / pass). Describes the fleet of boats crossing the Hogwarts lake.'
+      interval: 1
+      ease: 2.5
+    - character: 湖面
+      pinyin: hú miàn
+      meaning: Lake surface
+      explanation: '湖 (hú: lake, 氵 water + 胡) + 面 (miàn: face / surface). The surface of the Black Lake that the students cross by boat.'
+      interval: 1
+      ease: 2.5
+    - character: 船队
+      pinyin: chuán duì
+      meaning: Fleet of boats
+      explanation: '船 (chuán: boat, 舟 boat radical) + 队 (duì: team / fleet / squadron). The fleet of little boats that carries first-years across the lake.'
+      interval: 1
+      ease: 2.5
+    - character: 霍格沃茨特快列车
+      pinyin: Huò gé wò cí tè kuài liè chē
+      meaning: Hogwarts Express
+      explanation: '霍格沃茨 (Huò gé wò cí: Hogwarts) + 特快 (tè kuài: express) + 列车 (liè chē: train). The scarlet steam train carrying students between Hogwarts and London.'
+      interval: 1
+      ease: 2.5
+    - character: 一路
+      pinyin: yī lù
+      meaning: All the way / Throughout the journey
+      explanation: '一 (yī: whole / all) + 路 (lù: road / journey). Describes the friends chatting and laughing all the way home on the train.'
+      interval: 1
+      ease: 2.5
+    - character: 谈笑风生
+      pinyin: tán xiào fēng shēng
+      meaning: Talking and laughing cheerfully / Chatting merrily
+      explanation: 'Four-character idiom: 谈笑 (talking and laughing) + 风生 (generating a lively breeze of wit and humor). Captures the joyful mood aboard the Hogwarts Express.'
+      interval: 1
+      ease: 2.5
+    - character: 乡村
+      pinyin: xiāng cūn
+      meaning: Countryside / Rural area
+      explanation: '乡 (xiāng: country / home village) + 村 (cūn: village, 木 tree + 寸). As the train heads south, the countryside outside the window grows greener and tidier.'
+      interval: 1
+      ease: 2.5
+    - character: 青翠
+      pinyin: qīng cuì
+      meaning: Verdant / Lush green / Fresh and green
+      explanation: '青 (qīng: lush green) + 翠 (cuì: emerald / kingfisher green, 羽 feathers + 卒). Describes the lush green summer countryside passing outside the train window.'
+      interval: 1
+      ease: 2.5
+    - character: 整洁
+      pinyin: zhěng jié
+      meaning: Neat and tidy / Trim / Orderly
+      explanation: '整 (zhěng: orderly / whole) + 洁 (jié: clean / pure, 氵 water + 吉). Contrasts the neat, cultivated Muggle farmland with the wild Scottish highlands.'
+      interval: 1
+      ease: 2.5
+    - character: 列车
+      pinyin: liè chē
+      meaning: Train
+      explanation: '列 (liè: row / series / line up) + 车 (chē: vehicle / car): a connected line of rail cars. Refers to the Hogwarts Express speeding past Muggle towns.'
+      interval: 1
+      ease: 2.5
+    - character: 驶过
+      pinyin: shǐ guò
+      meaning: To drive past / To speed past / To roll past
+      explanation: '驶 (shǐ: drive / sail swiftly, 马 horse + 史) + 过 (guò: pass by). Describes the train hurtling past Muggle towns on its way to London.'
+      interval: 1
+      ease: 2.5
+    - character: 城镇
+      pinyin: chéng zhèn
+      meaning: Towns and cities / Towns
+      explanation: '城 (chéng: city / town wall, 土 earth + 成) + 镇 (zhèn: town / garrison, 钅 metal + 真). The Muggle towns the Hogwarts Express passes as it nears London.'
+      interval: 1
+      ease: 2.5
+    - character: 脱掉
+      pinyin: tuō diào
+      meaning: To take off (clothing) / To strip off
+      explanation: '脱 (tuō: peel / take off, 月 flesh + 兑) + 掉 (diào: drop / completion particle). The students take off their wizard robes before arriving in London.'
+      interval: 1
+      ease: 2.5

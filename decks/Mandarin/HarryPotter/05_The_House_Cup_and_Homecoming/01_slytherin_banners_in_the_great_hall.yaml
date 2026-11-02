@@ -1,0 +1,247 @@
+cards:
+    - character: 晚上
+      pinyin: wǎn shang
+      meaning: Evening / Night
+      explanation: 晚 (evening 日+免) + 上 (time suffix). That evening (那天晚上), Harry walks down to the End-of-Term Feast.
+      interval: 1
+      ease: 2.5
+    - character: 独自
+      pinyin: dú zì
+      meaning: Alone / By oneself
+      explanation: 独 (alone / solitary 犭+虫) + 自 (self). Harry goes down to the End-of-Term Feast alone after Madam Pomfrey fusses over him.
+      interval: 1
+      ease: 2.5
+    - character: 下楼
+      pinyin: xià lóu
+      meaning: To go downstairs
+      explanation: 下 (down / descend) + 楼 (building / floor). Harry goes downstairs alone in the evening to attend the end-of-year feast.
+      interval: 1
+      ease: 2.5
+    - character: 大惊小怪
+      pinyin: dà jīng xiǎo guài
+      meaning: To make a fuss / Make a big deal out of nothing
+      explanation: 大惊 (greatly startled) + 小怪 (minor oddity). Idiom describing Madam Pomfrey fussing over Harry and insisting on one last checkup.
+      interval: 1
+      ease: 2.5
+    - character: 拦住
+      pinyin: lán zhù
+      meaning: To stop / Block / Hold back
+      explanation: 拦 (扌 hand + 栏 barrier = obstruct) + 住 (firmly / stop). Madam Pomfrey stops Harry on his way out for a final physical check.
+      interval: 1
+      ease: 2.5
+    - character: 检查
+      pinyin: jiǎn chá
+      meaning: To examine / Check / Inspect
+      explanation: 检 (check / restrain) + 查 (investigate / examine). Madam Pomfrey insists on examining Harry one more time before letting him go.
+      interval: 1
+      ease: 2.5
+    - character: 礼堂
+      pinyin: lǐ táng
+      meaning: Great Hall / Auditorium / Assembly hall
+      explanation: 礼 (ceremony / rite) + 堂 (main hall). The Great Hall of Hogwarts, already packed with students when Harry arrives.
+      interval: 1
+      ease: 2.5
+    - character: 坐
+      pinyin: zuò
+      meaning: To sit
+      explanation: 两个人 (two people) on 土 (earth/ground). Used in 坐满了人 (sat full of people / packed with people) in the Great Hall.
+      interval: 1
+      ease: 2.5
+    - character: 代表
+      pinyin: dài biǎo
+      meaning: To represent / On behalf of / Representative
+      explanation: 代 (substitute / stand for) + 表 (surface / express). The Great Hall is decked out in green and silver representing Slytherin.
+      interval: 1
+      ease: 2.5
+    - character: 绿色
+      pinyin: lǜ sè
+      meaning: Green (color)
+      explanation: 绿 (纟 silk + 录 record = green) + 色 (color). One of Slytherin House's signature colors draping the Great Hall.
+      interval: 1
+      ease: 2.5
+    - character: 银色
+      pinyin: yín sè
+      meaning: Silver (color)
+      explanation: 银 (钅 metal + 艮 phonetic = silver) + 色 (color). Paired with green to represent Slytherin's apparent House Cup victory.
+      interval: 1
+      ease: 2.5
+    - character: 装饰一新
+      pinyin: zhuāng shì yī xīn
+      meaning: Decked out anew / Freshly decorated
+      explanation: 装饰 (decorate / adorn) + 一新 (completely new). The Great Hall is freshly decorated in Slytherin colors for the feast.
+      interval: 1
+      ease: 2.5
+    - character: 以
+      pinyin: yǐ
+      meaning: In order to / So as to / By means of
+      explanation: Classical/literary preposition and conjunction; here 以庆祝 means 'in order to celebrate' Slytherin's seven-year streak.
+      interval: 1
+      ease: 2.5
+    - character: 庆祝
+      pinyin: qìng zhù
+      meaning: To celebrate
+      explanation: 庆 (celebrate / congratulate) + 祝 (礻 altar + 兄 elder brother invoking prayer = wish / bless). Celebrating winning the House Cup.
+      interval: 1
+      ease: 2.5
+    - character: 连续
+      pinyin: lián xù
+      meaning: Consecutively / In a row / Continuous
+      explanation: 连 (link / join in succession) + 续 (纟 silk thread prolonged = continue). Slytherin had won the House Cup for seven consecutive years.
+      interval: 1
+      ease: 2.5
+    - character: 七年
+      pinyin: qī nián
+      meaning: Seven years
+      explanation: 七 (seven) + 年 (year). The length of Slytherin's unbroken streak as House Cup champions.
+      interval: 1
+      ease: 2.5
+    - character: 主宾席
+      pinyin: zhǔ bīn xí
+      meaning: High Table / Head table for hosts and guests of honor
+      explanation: 主 (host) + 宾 (guest) + 席 (mat / banquet seat). The staff High Table at the front of the Great Hall.
+      interval: 1
+      ease: 2.5
+    - character: 墙上
+      pinyin: qiáng shàng
+      meaning: On the wall
+      explanation: 墙 (土 earth/wall + 啬 = wall) + 上 (on / upon). Behind the High Table, a giant Slytherin banner hangs on the wall.
+      interval: 1
+      ease: 2.5
+    - character: 挂
+      pinyin: guà
+      meaning: To hang / Suspend
+      explanation: 扌 (hand) + 圭 (jade tablet). A huge banner painted with the Slytherin serpent hangs on the wall behind the High Table.
+      interval: 1
+      ease: 2.5
+    - character: 绘
+      pinyin: huì
+      meaning: To paint / Draw / Depict
+      explanation: 纟 (silk / embroidery threads) + 会 (gather). Depicting the Slytherin serpent painted on the giant banner (绘着).
+      interval: 1
+      ease: 2.5
+    - character: 巨大
+      pinyin: jù dà
+      meaning: Huge / Enormous / Gigantic
+      explanation: 巨 (carpenter's square / immense) + 大 (big). Describes both the huge Slytherin banner and McGonagall's giant chessboard.
+      interval: 1
+      ease: 2.5
+    - character: 横幅
+      pinyin: héng fú
+      meaning: Banner / Streamer
+      explanation: 横 (horizontal / across) + 幅 (巾 cloth strip / width). The huge banner displaying the Slytherin serpent above the High Table.
+      interval: 1
+      ease: 2.5
+    - character: 进去
+      pinyin: jìn qù
+      meaning: To go in / Enter
+      explanation: 进 (辶 walk + 井 = advance / enter) + 去 (go). As soon as Harry walks in (走进去), the Great Hall falls dead silent.
+      interval: 1
+      ease: 2.5
+    - character: 鸦雀无声
+      pinyin: yā què wú shēng
+      meaning: Dead silent / Not a peep (lit. neither crow nor sparrow makes a sound)
+      explanation: 鸦 (crow) + 雀 (sparrow) + 无声 (no sound). Four-character idiom describing the sudden hush when Harry steps into the hall.
+      interval: 1
+      ease: 2.5
+    - character: 每个
+      pinyin: měi gè
+      meaning: Every / Each
+      explanation: 每 (every) + 个 (general measure word). After the sudden silence, everyone (每个人) abruptly starts talking loudly at once.
+      interval: 1
+      ease: 2.5
+    - character: 高声
+      pinyin: gāo shēng
+      meaning: Loudly / In a loud voice
+      explanation: 高 (high / loud) + 声 (voice / sound). Everyone bursts into loud chatter, and later Harry, Ron, and Hermione cheer out loud.
+      interval: 1
+      ease: 2.5
+    - character: 旁
+      pinyin: páng
+      meaning: Beside / Side / By
+      explanation: 方 (direction/side) phonetic component. Harry walks over beside (旁) the Gryffindor table to take his seat.
+      interval: 1
+      ease: 2.5
+    - character: 中间
+      pinyin: zhōng jiān
+      meaning: Between / In the middle / Among
+      explanation: 中 (center / middle) + 间 (门 gate + 日 sun = space between). Harry sits down between Ron and Hermione at the Gryffindor table.
+      interval: 1
+      ease: 2.5
+    - character: 人们
+      pinyin: rén men
+      meaning: People
+      explanation: 人 (person) + 们 (plural suffix for people). Harry tries to ignore the fact that people are standing up to stare at him.
+      interval: 1
+      ease: 2.5
+    - character: 幸好
+      pinyin: xìng hǎo
+      meaning: Fortunately / Luckily
+      explanation: 幸 (good fortune) + 好 (good / well). Fortunately, Dumbledore arrives moments later and the hall settles down.
+      interval: 1
+      ease: 2.5
+    - character: 嘈杂
+      pinyin: cáo zá
+      meaning: Noisy / Clamorous / Din
+      explanation: 嘈 (口 mouth + 曹 = noise / hubbub) + 杂 (mixed / chaotic). The noisy chatter in the Great Hall subsides as Dumbledore arrives.
+      interval: 1
+      ease: 2.5
+    - character: 平息
+      pinyin: píng xī
+      meaning: To subside / Die down / Calm down
+      explanation: 平 (level / calm) + 息 (breath / cease). The din in the Great Hall gradually dies down for Dumbledore's speech.
+      interval: 1
+      ease: 2.5
+    - character: 兴高采烈
+      pinyin: xìng gāo cǎi liè
+      meaning: In high spirits / Jubilant / Beaming with joy
+      explanation: 兴高 (spirits high) + 采烈 (expression glowing/ardent). Dumbledore speaks cheerfully to open the end-of-year banquet.
+      interval: 1
+      ease: 2.5
+    - character: 尽情
+      pinyin: jǐn qíng
+      meaning: To one's heart's content / Fully
+      explanation: 尽 (exhaust / to the utmost) + 情 (feelings / inclination). Enjoying the delicious feast to their hearts' content.
+      interval: 1
+      ease: 2.5
+    - character: 美味佳肴
+      pinyin: měi wèi jiā yáo
+      meaning: Delicious food / Delicacies / Fine dishes
+      explanation: 美味 (delicious flavor) + 佳肴 (fine cooked meat/dishes, 月 flesh radical in 肴). The sumptuous banquet spread at Hogwarts.
+      interval: 1
+      ease: 2.5
+    - character: 麻烦
+      pinyin: má fán
+      meaning: To trouble (someone) / Troublesome / Bother
+      explanation: 麻 (hemp / tangled) + 烦 (火 fire + 页 head = feverish/vexed). Dumbledore politely says he must trouble everyone to listen to him first.
+      interval: 1
+      ease: 2.5
+    - character: 听听
+      pinyin: tīng tīng
+      meaning: To listen (for a bit)
+      explanation: 'Reduplication of 听 (口 mouth + 斤 = listen), softening the verb: ''have a listen'' to an old man''s wheezes.'
+      interval: 1
+      ease: 2.5
+    - character: 老头子
+      pinyin: lǎo tóu zi
+      meaning: Old man / Old fellow (colloquial/humorous)
+      explanation: 老 (old) + 头 (head) + 子 (noun suffix). Dumbledore humorously refers to himself as an old man giving his end-of-year speech.
+      interval: 1
+      ease: 2.5
+    - character: 陈词滥调
+      pinyin: chén cí làn diào
+      meaning: Clichés / Platitudes / Empty wheezes
+      explanation: 陈词 (stale words) + 滥调 (overused tunes). Translates Dumbledore's self-deprecating 'an old man's wheezing waffle'.
+      interval: 1
+      ease: 2.5
+    - character: 精彩
+      pinyin: jīng cǎi
+      meaning: Wonderful / Brilliant / Splendid
+      explanation: 精 (refined / essence) + 彩 (colorful / applause). Describes both the wonderful year at Hogwarts and Ron's brilliant game of chess.
+      interval: 1
+      ease: 2.5
+    - character: 小脑瓜
+      pinyin: xiǎo nǎo guā
+      meaning: Little heads / Brains (affectionate colloquial)
+      explanation: 小 (little) + 脑 (brain) + 瓜 (melon, figuratively head). Dumbledore jokes that their little heads are fuller than before.
+      interval: 1
+      ease: 2.5

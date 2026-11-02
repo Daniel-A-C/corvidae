@@ -1,0 +1,332 @@
+selected: true
+cards:
+    - character: 和
+      pinyin: hé
+      meaning: And / With
+      explanation: 禾 (grain) + 口 (mouth). Conjunction joining 你和斯内普 (you and Snape) when Harry brings up seeing them in the Forbidden Forest.
+      interval: 1
+      ease: 2.5
+    - character: 禁林
+      pinyin: jìn lín
+      meaning: Forbidden Forest
+      explanation: '禁 (forbid / prohibit: 林 + 示) + 林 (forest / woods). The dark forest on the Hogwarts grounds where Harry overheard Snape confronting Quirrell.'
+      interval: 1
+      ease: 2.5
+    - character: 冒冒失失
+      pinyin: mào mào shī shī
+      meaning: Blurting out / Rashly / Boldly
+      explanation: 'Reduplication of 冒失 (mào shi: rash / abrupt). Describes Harry blurting out his remark about the Forbidden Forest to distract Quirrell.'
+      interval: 1
+      ease: 2.5
+    - character: 没错
+      pinyin: méi cuò
+      meaning: That's right / Quite right / Correct
+      explanation: '没 (not) + 错 (wrong / mistaken: 钅 + 昔). Quirrell casually confirms Harry''s observation about Snape confronting him in the forest.'
+      interval: 1
+      ease: 2.5
+    - character: 懒洋洋
+      pinyin: lǎn yáng yáng
+      meaning: Lazily / Languidly / Idly
+      explanation: '懒 (lazy: 忄 + 赖) + 洋洋 (abundant / casual suffix). ABB-pattern adjective describing Quirrell''s unconcerned, drawling tone as he walks behind the Mirror.'
+      interval: 1
+      ease: 2.5
+    - character: 一边
+      pinyin: yī biān
+      meaning: At the same time / While (doing something)
+      explanation: '一 (one) + 边 (side). Indicates simultaneous action: Quirrell speaks idly while walking behind the Mirror to inspect its back.'
+      interval: 1
+      ease: 2.5
+    - character: 后面
+      pinyin: hòu miàn
+      meaning: Behind / The back / Rear
+      explanation: 后 (back / behind) + 面 (side / surface). Quirrell walks around to the back of the mirror (镜子后面) to see if the Stone is hidden there.
+      interval: 1
+      ease: 2.5
+    - character: 盯
+      pinyin: dīng
+      meaning: To stare at / To keep a close watch on
+      explanation: 目 (eye) + 丁 (nail). To fix one's eyes on; in 盯上我了 (had his eye on me) and 盯着镜子 (staring at the mirror).
+      interval: 1
+      ease: 2.5
+    - character: 究竟
+      pinyin: jiū jìng
+      meaning: Actually / After all / Just (in questions)
+      explanation: '究 (investigate thoroughly: 穴 + 九) + 竟 (finish / ultimately). Used in questions for emphasis: Snape wanted to know just how far Quirrell had gotten.'
+      interval: 1
+      ease: 2.5
+    - character: 进行
+      pinyin: jìn xíng
+      meaning: To proceed / To progress / To carry on
+      explanation: 进 (advance) + 行 (go / carry out). Refers to how far Quirrell's plot to steal the Stone had progressed (进行到了什么地步).
+      interval: 1
+      ease: 2.5
+    - character: 地步
+      pinyin: dì bù
+      meaning: Degree / Stage / Extent
+      explanation: 地 (ground / place) + 步 (step). Note pronunciation dì bù (not neutral de); refers to the stage or point Quirrell's plan had reached.
+      interval: 1
+      ease: 2.5
+    - character: 吓唬
+      pinyin: xià hu
+      meaning: To frighten / To intimidate / To scare
+      explanation: '吓 (scare: 口 + 下) + 唬 (intimidate / roar: 口 + 虎 tiger). Quirrell says Snape tried to intimidate him in the Forbidden Forest.'
+      interval: 1
+      ease: 2.5
+    - character: 哪里
+      pinyin: nǎ lǐ
+      meaning: How could / Where (rhetorical negation)
+      explanation: '哪 (where / which) + 里 (inside). Used rhetorically here to mean ''how could he possibly'': 他哪里吓得住我 (how could he possibly intimidate me).'
+      interval: 1
+      ease: 2.5
+    - character: 吓
+      pinyin: xià
+      meaning: To scare / To frighten / To cow
+      explanation: 口 (mouth) + 下 (down). Pronounced xià in 吓得住我 (able to cow or intimidate me).
+      interval: 1
+      ease: 2.5
+    - character: 住
+      pinyin: zhù
+      meaning: Firmly / Able to hold or control (resultative complement)
+      explanation: '亻 (person) + 主 (master / stay). Resultative complement indicating holding fast or overpowering: 吓得住 (able to cow / keep in check by frightening).'
+      interval: 1
+      ease: 2.5
+    - character: 伏地魔
+      pinyin: Fú dì mó
+      meaning: Voldemort
+      explanation: 伏 (crouch / subdue) + 地 (earth) + 魔 (demon). Official Chinese translation of Voldemort, Quirrell's dark master.
+      interval: 1
+      ease: 2.5
+    - character: 靠山
+      pinyin: kào shān
+      meaning: Backer / Patron / Strong support
+      explanation: 靠 (lean on / rely on) + 山 (mountain). Metaphor of a mountain to lean against; Quirrell boasts he has Voldemort as his powerful backer.
+      interval: 1
+      ease: 2.5
+    - character: 贪婪
+      pinyin: tān lán
+      meaning: Greedily / Avaricious / Covetous
+      explanation: '贪 (covet / greedy: 今 + 贝 shell/money) + 婪 (covet: 林 + 女). Quirrell stares greedily into the Mirror of Erised.'
+      interval: 1
+      ease: 2.5
+    - character: 里面
+      pinyin: lǐ miàn
+      meaning: Inside / Interior
+      explanation: 里 (inside) + 面 (surface / side). Quirrell peers into the inside of the mirror (盯着镜子里面), where he sees a vision of the Stone.
+      interval: 1
+      ease: 2.5
+    - character: 正在
+      pinyin: zhèng zài
+      meaning: In the process of / Right now (progressive aspect marker)
+      explanation: '正 (just / right) + 在 (at / in). Marks an ongoing action: in his vision, Quirrell sees himself in the act of presenting the Stone to his master.'
+      interval: 1
+      ease: 2.5
+    - character: 它
+      pinyin: tā
+      meaning: It
+      explanation: 宀 (roof) + 匕. Third-person inanimate pronoun referring to the Philosopher's Stone (魔法石).
+      interval: 1
+      ease: 2.5
+    - character: 献给
+      pinyin: xiàn gěi
+      meaning: To present to / To offer up to / To dedicate to
+      explanation: '献 (offer / present respectfully: 南 + 犬) + 给 (give to). Quirrell sees himself respectfully offering the Stone to his master Voldemort.'
+      interval: 1
+      ease: 2.5
+    - character: 主人
+      pinyin: zhǔ rén
+      meaning: Master / Lord / Owner
+      explanation: 主 (master / lord) + 人 (person). Quirrell's term for Lord Voldemort, whom he serves.
+      interval: 1
+      ease: 2.5
+    - character: 藏
+      pinyin: cáng
+      meaning: To hide / To conceal
+      explanation: '艹 (grass) + 臧 (good / store). Pronounced cáng (verb: to hide); Quirrell wonders aloud where the Stone is actually hidden.'
+      interval: 1
+      ease: 2.5
+    - character: 哪儿
+      pinyin: nǎ ér
+      meaning: Where
+      explanation: '哪 (which / where) + 儿 (erhua locative suffix). Interrogative place pronoun: 可是它藏在哪儿呢 (but where is it hidden?).'
+      interval: 1
+      ease: 2.5
+    - character: 拼命
+      pinyin: pīn mìng
+      meaning: Desperately / With all one's might
+      explanation: '拼 (risk / stake: 扌 + 并) + 命 (life). Literally ''risking one''s life''; Harry struggles desperately to break free of the ropes.'
+      interval: 1
+      ease: 2.5
+    - character: 挣脱
+      pinyin: zhēng tuō
+      meaning: To break free from / To struggle loose
+      explanation: '挣 (struggle: 扌 + 争) + 脱 (cast off / escape: 月 + 兑). Harry tries with all his might to struggle free from the enchanted ropes.'
+      interval: 1
+      ease: 2.5
+    - character: 束缚
+      pinyin: shù fù
+      meaning: To bind / To tie / Fetters
+      explanation: '束 (tie / bundle) + 缚 (bind fast: 纟 silk/rope + 尃). Refers to the conjured ropes binding and restraining Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 那些
+      pinyin: nà xiē
+      meaning: Those
+      explanation: 那 (that) + 些 (plural quantifier). Demonstrative determiner in 束缚他的那些绳索 (those ropes binding him).
+      interval: 1
+      ease: 2.5
+    - character: 却
+      pinyin: què
+      meaning: But / Yet / However
+      explanation: '去 + 卩. Adverb of contrast: Harry struggles desperately to break free, yet (却) the ropes only wind tighter.'
+      interval: 1
+      ease: 2.5
+    - character: 被
+      pinyin: bèi
+      meaning: By (passive voice marker)
+      explanation: 衤 (clothing / cover) + 皮 (skin). Marks passive voice in 却被越缠越紧 (yet he was bound tighter and tighter by them).
+      interval: 1
+      ease: 2.5
+    - character: 越
+      pinyin: yuè
+      meaning: The more... (in 越……越……)
+      explanation: 走 (walk / run) + 戉 (halberd). Correlative adverb in 越缠越紧 (the more they wound, the tighter they got).
+      interval: 1
+      ease: 2.5
+    - character: 缠
+      pinyin: chán
+      meaning: To wind around / To entangle / To coil
+      explanation: 纟 (silk / thread) + 廛 (phonetic). Describes the ropes coiling and winding around Harry.
+      interval: 1
+      ease: 2.5
+    - character: 紧
+      pinyin: jǐn
+      meaning: Tight / Closely / Taut
+      explanation: 臤 + 糸 (silk thread pulled taut). In 越缠越紧, the ropes bind Harry tighter and tighter as he struggles.
+      interval: 1
+      ease: 2.5
+    - character: 必须
+      pinyin: bì xū
+      meaning: Must / Have to
+      explanation: '必 (certainly / must) + 须 (must / await). Expresses urgent necessity: Harry must stop Quirrell from focusing all his attention on the Mirror.'
+      interval: 1
+      ease: 2.5
+    - character: 全部
+      pinyin: quán bù
+      meaning: All / Entire / Whole
+      explanation: '全 (whole / complete) + 部 (part / section). Modifying 注意力: Quirrell''s entire attention.'
+      interval: 1
+      ease: 2.5
+    - character: 总是
+      pinyin: zǒng shì
+      meaning: Always
+      explanation: 总 (always / overall) + 是 (be). Harry claims to Quirrell that Snape always seemed to hate him so much.
+      interval: 1
+      ease: 2.5
+    - character: 显得
+      pinyin: xiǎn de
+      meaning: To seem / To appear / To look
+      explanation: '显 (manifest / show) + 得 (de: stative complement particle). Describes outward appearance: Snape always appeared to hate Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 那么
+      pinyin: nà me
+      meaning: So / To such a degree / Like that
+      explanation: '那 (that) + 么 (suffix). Degree adverb before a psychological verb: 那么恨我 (hated me so much).'
+      interval: 1
+      ease: 2.5
+    - character: 恨
+      pinyin: hèn
+      meaning: To hate / To resent
+      explanation: 忄 (heart) + 艮 (stubborn / hard). Deep resentment or hatred; used repeatedly as Quirrell explains why Snape hated Harry and James Potter.
+      interval: 1
+      ease: 2.5
+    - character: 哦
+      pinyin: ò
+      meaning: Oh (interjection of acknowledgment or realization)
+      explanation: 口 (mouth) + 我 (phonetic). Sentence-initial interjection (ò) as Quirrell casually acknowledges that Snape really does hate Harry.
+      interval: 1
+      ease: 2.5
+    - character: 漫不经心
+      pinyin: màn bù jīng xīn
+      meaning: Casually / Carelessly / Offhandedly
+      explanation: 'Idiom: 漫 (heedless / casual) + 不 (not) + 经心 (pass through the mind / care). Quirrell replies offhandedly while preoccupied with the Mirror.'
+      interval: 1
+      ease: 2.5
+    - character: 天哪
+      pinyin: tiān na
+      meaning: Good heavens! / My goodness!
+      explanation: '天 (heaven / sky) + 哪 (na: exclamatory modal particle). Mild exclamation as Quirrell remarks that of course Snape hates Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 啦
+      pinyin: la
+      meaning: Modal particle (fusion of 了 + 啊)
+      explanation: '口 (mouth) + 拉 (phonetic). Exclamatory sentence-final particle conveying obviousness: 他当然恨你啦 (of course he hates you!).'
+      interval: 1
+      ease: 2.5
+    - character: 当年
+      pinyin: dāng nián
+      meaning: Back in those years / In those days
+      explanation: 当 (that very) + 年 (year). Refers back to the years when Snape and Harry's father were students together at Hogwarts.
+      interval: 1
+      ease: 2.5
+    - character: 父亲
+      pinyin: fù qīn
+      meaning: Father
+      explanation: 父 (father) + 亲 (parent / relative). Refers to Harry's father, James Potter, who attended Hogwarts with Snape.
+      interval: 1
+      ease: 2.5
+    - character: 一起
+      pinyin: yī qǐ
+      meaning: Together / In the same place
+      explanation: '一 (one) + 起 (rise / group). Indicates doing something together: Snape and Harry''s father studied at Hogwarts together.'
+      interval: 1
+      ease: 2.5
+    - character: 霍格沃茨
+      pinyin: Huò gé wò cí
+      meaning: Hogwarts
+      explanation: Official Chinese transliteration of Hogwarts (霍 huò + 格 gé + 沃 wò + 茨 cí), the school of witchcraft and wizardry.
+      interval: 1
+      ease: 2.5
+    - character: 念书
+      pinyin: niàn shū
+      meaning: To study / To attend school
+      explanation: '念 (read aloud / study: 今 + 心) + 书 (books). Verb-object compound meaning to go to school or study; Snape and James were schoolmates at Hogwarts.'
+      interval: 1
+      ease: 2.5
+    - character: 他们
+      pinyin: tā men
+      meaning: They / Them
+      explanation: 他 (he) + 们 (plural suffix for people). Refers to Snape and James Potter in 他们俩 (the two of them).
+      interval: 1
+      ease: 2.5
+    - character: 俩
+      pinyin: liǎ
+      meaning: Two / Both (of people)
+      explanation: 亻 (person) + 两 (two). Colloquial fusion of 两个 (two people); 他们俩 means 'the two of them' (Snape and James Potter).
+      interval: 1
+      ease: 2.5
+    - character: 互相
+      pinyin: hù xiāng
+      meaning: Mutually / Each other
+      explanation: '互 (mutual / interlocking) + 相 (each other). Adverb indicating reciprocal action: 互相仇恨 (hated each other).'
+      interval: 1
+      ease: 2.5
+    - character: 仇恨
+      pinyin: chóu hèn
+      meaning: To hate / Hatred / Enmity
+      explanation: '仇 (enemy / feud: 亻 + 九) + 恨 (hate: 忄 + 艮). Intense mutual loathing between Snape and James Potter.'
+      interval: 1
+      ease: 2.5
+    - character: 不共戴天
+      pinyin: bù gòng dài tiān
+      meaning: Cannot live under the same sky / Sworn enemies / Bitterly loathing each other
+      explanation: 'Classical four-character idiom: 不 (not) + 共 (together) + 戴 (bear above one''s head) + 天 (sky). Hyperbolic description of the bitter rivalry between Snape and James Potter.'
+      interval: 1
+      ease: 2.5
+    - character: 可
+      pinyin: kě
+      meaning: Truly / Indeed (emphatic adverb) / Can
+      explanation: '丁 + 口 (mouth). Emphatic adverb strengthening the negation: ''he certainly never wished you dead'' (他可从来不希望你死掉).'
+      interval: 1
+      ease: 2.5

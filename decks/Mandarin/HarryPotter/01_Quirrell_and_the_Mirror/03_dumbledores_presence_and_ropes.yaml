@@ -1,0 +1,332 @@
+selected: true
+cards:
+    - character: 上
+      pinyin: shàng
+      meaning: On / Upon
+      explanation: 'Postposition after a noun indicating surface location: "从飞天扫帚上" (from on the flying broomstick).'
+      interval: 1
+      ease: 2.5
+    - character: 摔下去
+      pinyin: shuāi xià qù
+      meaning: To fall down / To throw off
+      explanation: 摔 (扌 hand + 率 = fall/fling down) + 下去 (downward away from speaker). Describes knocking Harry off his broom to the ground.
+      interval: 1
+      ease: 2.5
+    - character: 如果
+      pinyin: rú guǒ
+      meaning: If / In case
+      explanation: '如 (女 + 口 = if/like) + 果 (木 + 田 = fruit/result). Conditional conjunction: "如果不是斯内普..." (If it hadn''t been for Snape...).'
+      interval: 1
+      ease: 2.5
+    - character: 一直
+      pinyin: yī zhí
+      meaning: Continuously / All along / Nonstop
+      explanation: '一 (one/straight) + 直 (straight/continuous). Indicates uninterrupted action: "一直在旁边念一个破解咒" (was muttering a countercurse nonstop nearby).'
+      interval: 1
+      ease: 2.5
+    - character: 旁边
+      pinyin: páng biān
+      meaning: Beside / Nearby / On the side
+      explanation: 旁 (side/beside) + 边 (辶 + 力 = edge/side). Refers to Snape sitting nearby in the stands.
+      interval: 1
+      ease: 2.5
+    - character: 念
+      pinyin: niàn
+      meaning: To mutter / To chant / To recite
+      explanation: '今 (now/present) + 心 (heart/mind). To recite or chant incantations aloud: "念一个破解咒" (muttering a countercurse).'
+      interval: 1
+      ease: 2.5
+    - character: 破解咒
+      pinyin: pò jiě zhòu
+      meaning: Countercurse / Counter-jinx
+      explanation: 破解 (break and untie/neutralize) + 咒 (口 + 口 + 几 = incantation/curse). The countercurse Snape was muttering to save Harry.
+      interval: 1
+      ease: 2.5
+    - character: 保住
+      pinyin: bǎo zhù
+      meaning: To save / To preserve / To keep safe
+      explanation: '保 (亻 + 呆 = protect/keep) + 住 (resultative complement of firmness). Means to successfully keep/save: "保住你的性命" (save your life).'
+      interval: 1
+      ease: 2.5
+    - character: 性命
+      pinyin: xìng mìng
+      meaning: Life (one's mortal life)
+      explanation: '性 (忄 heart + 生 life = nature/life) + 命 (mouth + order = life/fate). Specifically refers to physical survival: "保住你的性命" (save your life).'
+      interval: 1
+      ease: 2.5
+    - character: 早就
+      pinyin: zǎo jiù
+      meaning: Long ago / Already (much earlier)
+      explanation: 早 (日 sun over 十 = early) + 就 (already/then). Emphasizes that something would have happened much sooner under counterfactual conditions.
+      interval: 1
+      ease: 2.5
+    - character: 摔
+      pinyin: shuāi
+      meaning: To fall / To dash / To throw down
+      explanation: 扌 (hand) + 率 (phonetic). Combined with 死 as "把你摔死了" (dashed you to your death).
+      interval: 1
+      ease: 2.5
+    - character: 死
+      pinyin: sǐ
+      meaning: To die / To death (resultative complement)
+      explanation: 歹 (bad/bones) + 匕 (spoon/fallen person). Resultative complement in "摔死了" (dashed to death).
+      interval: 1
+      ease: 2.5
+    - character: 救
+      pinyin: jiù
+      meaning: To save / To rescue
+      explanation: '求 (seek, phonetic) + 攵 (action). Harry asks in disbelief: "斯内普想救我？" ("Snape was trying to save me?").'
+      interval: 1
+      ease: 2.5
+    - character: 当然
+      pinyin: dāng rán
+      meaning: Of course / Naturally
+      explanation: '当 (should/ought) + 然 (so/like this). Quirrell confirms coldly: "当然是这样" ("Of course that''s how it was").'
+      interval: 1
+      ease: 2.5
+    - character: 这样
+      pinyin: zhè yàng
+      meaning: Like this / So / This way
+      explanation: '这 (this) + 样 (木 tree + 羊 = manner/appearance). Demonstrative of manner or state: "当然是这样" (Of course it was so).'
+      interval: 1
+      ease: 2.5
+    - character: 冷冷
+      pinyin: lěng lěng
+      meaning: Coldly / Icy
+      explanation: 'Reduplication of 冷 (冫 ice + 令 = cold). Intensifies the detached, sinister tone: "奇洛冷冷地说" (Quirrell said coldly).'
+      interval: 1
+      ease: 2.5
+    - character: 为什么
+      pinyin: wèi shén me
+      meaning: Why / For what reason
+      explanation: '为 (for) + 什么 (what). Interrogative adverb: "你说他为什么要给你们的第二次比赛当裁判？" (Why do you think he wanted to referee your second match?).'
+      interval: 1
+      ease: 2.5
+    - character: 给
+      pinyin: gěi
+      meaning: For / To
+      explanation: '纟 (silk) + 合 (join). Preposition introducing the beneficiary or target of an action: "给你们的第二次比赛当裁判" (referee for your second match).'
+      interval: 1
+      ease: 2.5
+    - character: 你们
+      pinyin: nǐ men
+      meaning: You (plural)
+      explanation: 你 (you) + 们 (plural suffix). Refers to Harry and his teammates/schoolmates.
+      interval: 1
+      ease: 2.5
+    - character: 第二
+      pinyin: dì èr
+      meaning: Second (2nd)
+      explanation: '第 (⺮ bamboo = ordinal prefix) + 二 (two). Ordinal number: "第二次比赛" (the second match).'
+      interval: 1
+      ease: 2.5
+    - character: 当
+      pinyin: dāng
+      meaning: To serve as / To act as / To be
+      explanation: '小 + 彐. Read dāng (first tone), meaning to take on a role or office: "当裁判" (serve as referee).'
+      interval: 1
+      ease: 2.5
+    - character: 裁判
+      pinyin: cái pàn
+      meaning: Referee / Judge / Umpire
+      explanation: 裁 (衣 clothes + 戈 cut = judge/decide) + 判 (半 half + 刀 knife = divide/judge). Noun for a sports referee.
+      interval: 1
+      ease: 2.5
+    - character: 确保
+      pinyin: què bǎo
+      meaning: To ensure / To make sure
+      explanation: 确 (certain/firm) + 保 (protect/guarantee). Snape refereed to "确保我不再害你" (make sure I didn't try to harm you again).
+      interval: 1
+      ease: 2.5
+    - character: 不再
+      pinyin: bù zài
+      meaning: No longer / Not again
+      explanation: '不 (not) + 再 (again). Negates future repetition: "确保我不再害你" (ensure I wouldn''t harm you again).'
+      interval: 1
+      ease: 2.5
+    - character: 害
+      pinyin: hài
+      meaning: To harm / To hurt / To injure
+      explanation: '宀 (roof) + 丰 + 口. Transitive verb meaning to do harm to someone: "不再害你".'
+      interval: 1
+      ease: 2.5
+    - character: 真是
+      pinyin: zhēn shì
+      meaning: Really is / Truly / What a...
+      explanation: '真 (truly/really) + 是 (is). Expresses mockery or exasperation: "真是可笑" (Truly laughable / Ridiculous).'
+      interval: 1
+      ease: 2.5
+    - character: 可笑
+      pinyin: kě xiào
+      meaning: Laughable / Ridiculous / Absurd
+      explanation: 可 (worthy of / -able) + 笑 (laugh). Quirrell scoffs at Snape's efforts as "真是可笑" (truly laughable).
+      interval: 1
+      ease: 2.5
+    - character: 犯不着
+      pinyin: fàn bù zháo
+      meaning: Not worth it / Have no need to
+      explanation: '犯 (犭 + 卩 = offend/go to the trouble) + 不着 (bù zháo: not worth / not reach). Colloquial idiom meaning "there was no need to bother".'
+      interval: 1
+      ease: 2.5
+    - character: 费
+      pinyin: fèi
+      meaning: To expend / To spend / To waste
+      explanation: '弗 (not, phonetic) + 贝 (shell/money). Means to expend effort or trouble: "费这番心思" (go to all this trouble).'
+      interval: 1
+      ease: 2.5
+    - character: 番
+      pinyin: fān
+      meaning: Measure word for effort, thoughts, or actions
+      explanation: '采 + 田. Classifier used with abstract nouns of effort, speech, or thought: "这番心思" (this amount of trouble/thought).'
+      interval: 1
+      ease: 2.5
+    - character: 心思
+      pinyin: xīn sī
+      meaning: Thought / Effort / Mental energy
+      explanation: 心 (heart/mind) + 思 (田 + 心 = think/ponder). In "费这番心思", means taking such pains or mental effort.
+      interval: 1
+      ease: 2.5
+    - character: 邓布利多
+      pinyin: Dèng bù lì duō
+      meaning: Dumbledore (Albus Dumbledore)
+      explanation: 邓 (surname Deng) + 布 (cloth) + 利 (sharp) + 多 (many). Official Mandarin transliteration of Albus Dumbledore.
+      interval: 1
+      ease: 2.5
+    - character: 在场
+      pinyin: zài chǎng
+      meaning: To be present / On the scene
+      explanation: 在 (be at) + 场 (土 earth + 扬 = field/scene/venue). Quirrell admits he couldn't do anything with Dumbledore present at the match ("有邓布利多在场").
+      interval: 1
+      ease: 2.5
+    - character: 什么
+      pinyin: shén me
+      meaning: What / Anything (with 也/都)
+      explanation: 什 (亻 + 十) + 么. Paired with 也 in "我什么也做不成的" to mean "I couldn't accomplish anything at all".
+      interval: 1
+      ease: 2.5
+    - character: 做
+      pinyin: zuò
+      meaning: To do / To make
+      explanation: '亻 (person) + 故 (cause/old). Basic verb of action: "做不成" (unable to pull off / accomplish).'
+      interval: 1
+      ease: 2.5
+    - character: 成
+      pinyin: chéng
+      meaning: To succeed / To accomplish (resultative complement)
+      explanation: 戈 (halberd) + 丁. Used as a potential complement in "做不成" (cannot succeed in doing).
+      interval: 1
+      ease: 2.5
+    - character: 其他
+      pinyin: qí tā
+      meaning: Other / The other
+      explanation: '其 (that/those) + 他 (other). Modifier meaning "other": "其他老师" (the other teachers).'
+      interval: 1
+      ease: 2.5
+    - character: 老师
+      pinyin: lǎo shī
+      meaning: Teacher
+      explanation: 老 (old/venerable) + 师 (master/teacher). Refers to the other Hogwarts teachers ("其他老师").
+      interval: 1
+      ease: 2.5
+    - character: 都
+      pinyin: dōu
+      meaning: All / Both
+      explanation: '者 + 阝 (city). Inclusive adverb quantifying the subject: "其他老师都以为..." (All the other teachers thought...).'
+      interval: 1
+      ease: 2.5
+    - character: 阻止
+      pinyin: zǔ zhǐ
+      meaning: To stop / To prevent / To block
+      explanation: 阻 (阝 mound + 且 = obstruct/hinder) + 止 (foot/stop). The other teachers thought Snape was trying to stop Gryffindor from winning.
+      interval: 1
+      ease: 2.5
+    - character: 格兰芬多
+      pinyin: Gé lán fēn duō
+      meaning: Gryffindor
+      explanation: 格 (standard) + 兰 (orchid) + 芬 (fragrant) + 多 (many). Official Mandarin transliteration of Gryffindor House.
+      interval: 1
+      ease: 2.5
+    - character: 队
+      pinyin: duì
+      meaning: Team / Squad
+      explanation: '阝 (mound/array) + 人 (person). Suffix denoting a sports team: "格兰芬多队" (the Gryffindor team).'
+      interval: 1
+      ease: 2.5
+    - character: 获胜
+      pinyin: huò shèng
+      meaning: To win / To triumph / To be victorious
+      explanation: '获 (艹 + 犭 + 犬 = capture/obtain) + 胜 (月 + 生 = victory/prevail). Means to win a match: "阻止格兰芬多队获胜".'
+      interval: 1
+      ease: 2.5
+    - character: 弄
+      pinyin: nòng
+      meaning: To make / To cause to become / To handle
+      explanation: 王 (jade) + 廾 (two hands playing with jade). Causative verb in "弄得自己很不受人欢迎" (made himself very unpopular).
+      interval: 1
+      ease: 2.5
+    - character: 自己
+      pinyin: zì jǐ
+      meaning: Oneself / Himself
+      explanation: 自 (nose = self) + 己 (self). Reflexive pronoun referring back to Snape.
+      interval: 1
+      ease: 2.5
+    - character: 受
+      pinyin: shòu
+      meaning: To receive / To be subjected to
+      explanation: 爫 (claw/hand above) + 冖 + 又 (hand below). Passive/receptive verb in "不受人欢迎" (not welcomed by people / unpopular).
+      interval: 1
+      ease: 2.5
+    - character: 人
+      pinyin: rén
+      meaning: People / Others
+      explanation: 'Pictograph of a standing person. Here means people in general: "不受人欢迎" (unpopular with people).'
+      interval: 1
+      ease: 2.5
+    - character: 欢迎
+      pinyin: huān yíng
+      meaning: To welcome / Popular (受...欢迎)
+      explanation: 欢 (又 + 欠 = joyous) + 迎 (辶 + 卬 = greet/welcome). In "不受人欢迎", means unpopular or disliked.
+      interval: 1
+      ease: 2.5
+    - character: 不过
+      pinyin: bù guò
+      meaning: However / But / Only
+      explanation: 不 (not) + 过 (pass/exceed). Conversational conjunction shifting the topic back to Quirrell's deadly intent.
+      interval: 1
+      ease: 2.5
+    - character: 浪费
+      pinyin: làng fèi
+      meaning: To waste / To squander
+      explanation: 浪 (氵 water + 良 = unrestrained wave) + 费 (贝 money = spend/squander). Snape's efforts were all "浪费时间" (a waste of time).
+      interval: 1
+      ease: 2.5
+    - character: 时间
+      pinyin: shí jiān
+      meaning: Time
+      explanation: '时 (日 sun + 寸 = time/season) + 间 (门 gate + 日 sun = interval/space). Object of 浪费: "浪费时间" (wasting time).'
+      interval: 1
+      ease: 2.5
+    - character: 不管
+      pinyin: bù guǎn
+      meaning: No matter (what/how) / Regardless of
+      explanation: 不 (not) + 管 (⺮ bamboo + 官 = manage/care about). Paired with a question word ("不管怎么说" = no matter what / in any case).
+      interval: 1
+      ease: 2.5
+    - character: 怎么
+      pinyin: zěn me
+      meaning: How / What
+      explanation: 怎 (乍 + 心 = how/why) + 么 (suffix). Used in the fixed discourse phrase "不管怎么说" (no matter how you put it / after all).
+      interval: 1
+      ease: 2.5
+    - character: 今晚
+      pinyin: jīn wǎn
+      meaning: Tonight / This evening
+      explanation: '今 (now/today) + 晚 (日 sun + 免 = evening/late). Quirrell declares: "我今晚一定要把你干掉" (I am going to finish you off tonight).'
+      interval: 1
+      ease: 2.5
+    - character: 一定
+      pinyin: yī dìng
+      meaning: Definitely / Certainly / Must
+      explanation: '一 (one) + 定 (宀 roof + 正 = settled/fixed). Expresses firm determination: "今晚一定要把你干掉" (definitely going to kill you tonight).'
+      interval: 1
+      ease: 2.5

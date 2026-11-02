@@ -1,0 +1,253 @@
+cards:
+    - character: 好处
+      pinyin: hǎo chu
+      meaning: Benefit / Good / Advantage
+      explanation: '好 (hǎo: good) + 处 (chù: point / aspect). In 最没有好处的东西, meaning the things that are worst (least beneficial) for them.'
+      interval: 1
+      ease: 2.5
+    - character: 一时间
+      pinyin: yī shí jiān
+      meaning: For a moment / For a while
+      explanation: '一 (yī: one) + 时间 (shí jiān: time). Harry lies there, for a moment not knowing what to say to Dumbledore''s profound remark.'
+      interval: 1
+      ease: 2.5
+    - character: 愉快
+      pinyin: yú kuài
+      meaning: Cheerful / Happy / Pleasant
+      explanation: '愉 (yú: cheerful, 忄 heart) + 快 (kuài: pleased / brisk, 忄 heart). Dumbledore hums cheerfully to himself.'
+      interval: 1
+      ease: 2.5
+    - character: 哼
+      pinyin: hēng
+      meaning: To hum / Croon / Snort
+      explanation: '口 (mouth) + 亨 (hēng: phonetic). Dumbledore cheerfully hums a little tune (哼着小曲).'
+      interval: 1
+      ease: 2.5
+    - character: 小曲
+      pinyin: xiǎo qǔ
+      meaning: Little tune / Ditty
+      explanation: '小 (xiǎo: small / little) + 曲 (qǔ: tune / melody). The little melody Dumbledore hums while smiling at the ceiling.'
+      interval: 1
+      ease: 2.5
+    - character: 天花板
+      pinyin: tiān huā bǎn
+      meaning: Ceiling
+      explanation: '天花 (tiān huā: ornamental ceiling panels / sky-flowers) + 板 (bǎn: board / plank). Dumbledore gazes smilingly up at the hospital wing ceiling.'
+      interval: 1
+      ease: 2.5
+    - character: 尽管
+      pinyin: jǐn guǎn
+      meaning: Even though / Although / Despite
+      explanation: '尽 (jǐn: to the utmost limit) + 管 (guǎn: manage / care). Concessive conjunction: ''Even though the Stone is gone, Voldemort...'''
+      interval: 1
+      ease: 2.5
+    - character: 神秘人
+      pinyin: shén mì rén
+      meaning: You-Know-Who / The Mysterious Person
+      explanation: '神秘 (shén mì: mysterious) + 人 (rén: person). Chinese translation of ''You-Know-Who,'' which Harry catches himself using for Voldemort.'
+      interval: 1
+      ease: 2.5
+    - character: 叫
+      pinyin: jiào
+      meaning: To call / Name / Shout
+      explanation: '口 (mouth) + 丩 (phonetic). Dumbledore urges Harry: ''Call him Voldemort'' (就叫他伏地魔吧).'
+      interval: 1
+      ease: 2.5
+    - character: 事物
+      pinyin: shì wù
+      meaning: Things / Objects / Phenomena
+      explanation: '事 (shì: affair / matter) + 物 (wù: thing / entity). ''Always use the proper name for things'' (对事物永远使用正确的称呼).'
+      interval: 1
+      ease: 2.5
+    - character: 永远
+      pinyin: yǒng yuǎn
+      meaning: Always / Forever
+      explanation: '永 (yǒng: eternally flowing water) + 远 (yuǎn: far / distant). Always use the proper name for things.'
+      interval: 1
+      ease: 2.5
+    - character: 使用
+      pinyin: shǐ yòng
+      meaning: To use / Employ
+      explanation: '使 (shǐ: cause / use) + 用 (yòng: use). Using the proper name for things rather than euphemisms.'
+      interval: 1
+      ease: 2.5
+    - character: 正确
+      pinyin: zhèng què
+      meaning: Proper / Correct / Right
+      explanation: '正 (zhèng: straight / right) + 确 (què: solid / true, 石 stone + 角). Using the proper/correct name (正确的称呼).'
+      interval: 1
+      ease: 2.5
+    - character: 称呼
+      pinyin: chēng hu
+      meaning: Name / Term of address / To call
+      explanation: '称 (chēng: call / weigh) + 呼 (hū: call out, 口 mouth). The name or title by which something is called.'
+      interval: 1
+      ease: 2.5
+    - character: 名称
+      pinyin: míng chēng
+      meaning: Name / Designation
+      explanation: '名 (míng: name) + 称 (chēng: title / designation). ''Fear of a name'' (对一个名称的恐惧) increases fear of the thing itself.'
+      interval: 1
+      ease: 2.5
+    - character: 强化
+      pinyin: qiáng huà
+      meaning: To strengthen / Intensify / Reinforce
+      explanation: '强 (qiáng: strong, 弓 bow + 虽) + 化 (huà: transform / -ize). Fear of a name intensifies (强化) fear of the thing itself.'
+      interval: 1
+      ease: 2.5
+    - character: 这个
+      pinyin: zhè gè
+      meaning: This / This one
+      explanation: '这 (zhè: this) + 个 (gè: general classifier). Points to ''this thing itself'' (这个事物本身).'
+      interval: 1
+      ease: 2.5
+    - character: 本身
+      pinyin: běn shēn
+      meaning: Itself / In itself
+      explanation: '本 (běn: root / original) + 身 (shēn: body / self). Fear of a name increases fear of the thing itself (事物本身).'
+      interval: 1
+      ease: 2.5
+    - character: 企图
+      pinyin: qǐ tú
+      meaning: To attempt / Try / Scheme
+      explanation: '企 (qǐ: stand on tiptoe in expectation, 人 + 止 foot) + 图 (tú: plan / scheme). Harry asks if Voldemort will attempt to return by other means.'
+      interval: 1
+      ease: 2.5
+    - character: 别的
+      pinyin: bié de
+      meaning: Other / Another
+      explanation: '别 (bié: separate / other) + 的 (de: attributive particle). In 别的办法 (other ways/means) for Voldemort to return to power.'
+      interval: 1
+      ease: 2.5
+    - character: 东山再起
+      pinyin: dōng shān zài qǐ
+      meaning: To stage a comeback / Return to power
+      explanation: '东山 (Dōng shān: Eastern Mountain, where Eastern Jin statesman Xie An lived as a hermit) + 再起 (zài qǐ: rise again). Idiom for returning to power after defeat.'
+      interval: 1
+      ease: 2.5
+    - character: 意思
+      pinyin: yì si
+      meaning: Meaning / Idea
+      explanation: '意 (yì: thought / meaning, 音 sound + 心 heart) + 思 (sī: think, 田 + 心). In 我的意思是 (''I mean''), Harry clarifies that Voldemort hasn''t vanished.'
+      interval: 1
+      ease: 2.5
+    - character: 消失
+      pinyin: xiāo shī
+      meaning: To disappear / Vanish
+      explanation: '消 (xiāo: melt / dissolve, 氵 water) + 失 (shī: lose). Voldemort is not truly gone or vanished.'
+      interval: 1
+      ease: 2.5
+    - character: 躲
+      pinyin: duǒ
+      meaning: To hide / Take cover
+      explanation: 身 (body) + 朵 (flower/branch, phonetic) — concealing one's body. Voldemort is still hiding somewhere.
+      interval: 1
+      ease: 2.5
+    - character: 物色
+      pinyin: wù sè
+      meaning: To look for / Seek out / Scout for
+      explanation: '物 (wù: animal / thing) + 色 (sè: color / appearance) — originally selecting livestock by coat color, now looking for a suitable person or host.'
+      interval: 1
+      ease: 2.5
+    - character: 分享
+      pinyin: fēn xiǎng
+      meaning: To share
+      explanation: '分 (fēn: divide / distribute) + 享 (xiǎng: enjoy / partake). Voldemort is looking for another body willing to share itself with him.'
+      interval: 1
+      ease: 2.5
+    - character: 算是
+      pinyin: suàn shì
+      meaning: To count as / Be considered as
+      explanation: '算 (suàn: reckon / calculate, 竹 bamboo tally) + 是 (shì: be). Voldemort cannot be considered (不算是) truly alive.'
+      interval: 1
+      ease: 2.5
+    - character: 真正
+      pinyin: zhēn zhèng
+      meaning: Truly / Genuinely / Real
+      explanation: '真 (zhēn: true / genuine) + 正 (zhèng: upright / authentic). Because Voldemort is not truly alive (真正地活着), he cannot be killed.'
+      interval: 1
+      ease: 2.5
+    - character: 只顾
+      pinyin: zhǐ gù
+      meaning: To care only about / Be absorbed solely in
+      explanation: '只 (zhǐ: only) + 顾 (gù: look back / attend to). Voldemort cared only about slipping away himself, leaving Quirrell to die.'
+      interval: 1
+      ease: 2.5
+    - character: 溜走
+      pinyin: liū zǒu
+      meaning: To slip away / Sneak off
+      explanation: '溜 (liū: slide / slip away, 氵 water + 留) + 走 (zǒu: go / walk). Voldemort slipped away and abandoned Quirrell.'
+      interval: 1
+      ease: 2.5
+    - character: 完全
+      pinyin: wán quán
+      meaning: Completely / Totally / Entirely
+      explanation: '完 (wán: whole / finish) + 全 (quán: complete). Voldemort completely disregarded whether Quirrell lived or died.'
+      interval: 1
+      ease: 2.5
+    - character: 顾
+      pinyin: gù
+      meaning: To care for / Attend to / Look back at
+      explanation: 厄 (adversity / phonetic) + 页 (head) — turning one's head to look after something. In 完全不顾 (showing no regard at all for Quirrell).
+      interval: 1
+      ease: 2.5
+    - character: 死活
+      pinyin: sǐ huó
+      meaning: Life or death / Fate
+      explanation: '死 (sǐ: death) + 活 (huó: life). Antonym compound meaning someone''s life or death: Voldemort cared nothing for Quirrell''s fate (奇洛的死活).'
+      interval: 1
+      ease: 2.5
+    - character: 敌人
+      pinyin: dí rén
+      meaning: Enemy / Foe
+      explanation: '敌 (dí: opponent / match, 舌 + 攵 strike) + 人 (rén: person). Voldemort is ruthless to his enemies and followers alike.'
+      interval: 1
+      ease: 2.5
+    - character: 心狠手辣
+      pinyin: xīn hěn shǒu là
+      meaning: Cruel and ruthless / Callous and vicious
+      explanation: 心 (heart) + 狠 (fierce/ruthless) + 手 (hand) + 辣 (spicy/vicious). Idiom describing Voldemort's merciless cruelty toward his enemies.
+      interval: 1
+      ease: 2.5
+    - character: 追随者
+      pinyin: zhuī suí zhě
+      meaning: Follower / Adherent
+      explanation: '追随 (zhuī suí: to follow closely) + 者 (zhě: person suffix). Refers to Voldemort''s followers (Death Eaters/servants like Quirrell), whom he treats just as ruthlessly as his enemies.'
+      interval: 1
+      ease: 2.5
+    - character: 冷酷无情
+      pinyin: lěng kù wú qíng
+      meaning: Cold-blooded and merciless / Unfeeling
+      explanation: 冷酷 (cold and cruel) + 无情 (without emotion/mercy). Describes how Voldemort shows zero compassion even to his own followers.
+      interval: 1
+      ease: 2.5
+    - character: 只是
+      pinyin: zhǐ shì
+      meaning: Only / Merely / Simply
+      explanation: 只 (only) + 是 (is). Dumbledore telling Harry that he may have only delayed Voldemort's return to power.
+      interval: 1
+      ease: 2.5
+    - character: 耽搁
+      pinyin: dān ge
+      meaning: To delay / To hold up / To tarry
+      explanation: '耽 (ear + lingering: to delay) + 搁 (hand placing aside). Dumbledore explaining that Voldemort''s return to power has been delayed.'
+      interval: 1
+      ease: 2.5
+    - character: 马上
+      pinyin: mǎ shàng
+      meaning: Immediately / At once / Right away
+      explanation: 马 (horse) + 上 (upon — literally 'on horseback'). Prevents Voldemort from immediately regaining his strength.
+      interval: 1
+      ease: 2.5
+    - character: 将来
+      pinyin: jiāng lái
+      meaning: In the future / The future
+      explanation: 将 (will / about to) + 来 (come). Looking ahead to a future time when someone must be fully prepared to fight Voldemort.
+      interval: 1
+      ease: 2.5
+    - character: 做好
+      pinyin: zuò hǎo
+      meaning: To do well / To complete preparation
+      explanation: '做 (to do/make) + 好 (resultative complement: well/ready). Used in 做好充分准备 (to make full preparations).'
+      interval: 1
+      ease: 2.5

@@ -1,0 +1,253 @@
+cards:
+    - character: 丰富
+      pinyin: fēng fù
+      meaning: Rich / Enriched / Abundant
+      explanation: 丰 (abundant crops) + 富 (宀 roof + 畐 fullness = wealthy). Their minds have become richer with knowledge over the school year.
+      interval: 1
+      ease: 2.5
+    - character: 暑假
+      pinyin: shǔ jiǎ
+      meaning: Summer vacation / Summer holidays
+      explanation: 暑 (日 sun + 者 = summer heat) + 假 (holiday / leave). The whole summer holiday waiting ahead of the students.
+      interval: 1
+      ease: 2.5
+    - character: 下学期
+      pinyin: xià xué qī
+      meaning: Next semester / Next term
+      explanation: 下 (next) + 学期 (school term). Dumbledore jokes they have all summer to empty their heads before next term starts.
+      interval: 1
+      ease: 2.5
+    - character: 好好
+      pinyin: hǎo hǎo
+      meaning: Properly / Thoroughly / Well
+      explanation: 'Reduplication of 好 (good) used adverbially: to properly digest everything they learned.'
+      interval: 1
+      ease: 2.5
+    - character: 消化
+      pinyin: xiāo huà
+      meaning: To digest (food or knowledge)
+      explanation: 消 (氵 water + 肖 = dissolve / melt away) + 化 (transform). Used figuratively for digesting knowledge before the next term.
+      interval: 1
+      ease: 2.5
+    - character: 腾出
+      pinyin: téng chū
+      meaning: To clear out / Make room / Free up
+      explanation: 腾 (马 horse + 朕 = leap / vacate) + 出 (out). Clearing out space in their brains (腾出空来) for the coming year.
+      interval: 1
+      ease: 2.5
+    - character: 空
+      pinyin: kòng
+      meaning: Empty space / Room / Spare time
+      explanation: 穴 (cave/hole) + 工 (work). Pronounced kòng (fourth tone) meaning 'free space/room' in 腾出空来 (free up space).
+      interval: 1
+      ease: 2.5
+    - character: 首先
+      pinyin: shǒu xiān
+      meaning: First of all / Firstly
+      explanation: 首 (head / first) + 先 (before / first). First of all, before eating, Dumbledore proceeds with presenting the House Cup.
+      interval: 1
+      ease: 2.5
+    - character: 颁奖
+      pinyin: bān jiǎng
+      meaning: To award a prize / Present awards
+      explanation: 颁 (distribute / promulgate) + 奖 (prize / award). Presenting the trophy in the House Cup ceremony (颁奖仪式).
+      interval: 1
+      ease: 2.5
+    - character: 仪式
+      pinyin: yí shì
+      meaning: Ceremony / Ritual
+      explanation: 仪 (亻 person + 义 righteous = ceremony / bearing) + 式 (form / style). The House Cup award ceremony.
+      interval: 1
+      ease: 2.5
+    - character: 各
+      pinyin: gè
+      meaning: Each / Every / Various
+      explanation: 夂 (walk) + 口 (mouth). Refers to each of the four Hogwarts Houses (各学院) and their respective point totals.
+      interval: 1
+      ease: 2.5
+    - character: 学院
+      pinyin: xué yuàn
+      meaning: House (at Hogwarts) / College / Academy
+      explanation: 学 (study / learning) + 院 (courtyard / institution). Translates Hogwarts 'House' (Gryffindor, Hufflepuff, Ravenclaw, Slytherin).
+      interval: 1
+      ease: 2.5
+    - character: 具体
+      pinyin: jù tǐ
+      meaning: Specific / Concrete / Exact
+      explanation: 具 (implement / possess completely) + 体 (body / form). The exact, specific point standings (具体得分) of each House.
+      interval: 1
+      ease: 2.5
+    - character: 得分
+      pinyin: dé fēn
+      meaning: Score / Points scored
+      explanation: 得 (obtain / get) + 分 (points). The points accumulated by each House over the school year.
+      interval: 1
+      ease: 2.5
+    - character: 如下
+      pinyin: rú xià
+      meaning: As follows
+      explanation: 如 (like / as) + 下 (below). Formal phrase introducing the list of House point standings.
+      interval: 1
+      ease: 2.5
+    - character: 第四
+      pinyin: dì sì
+      meaning: Fourth
+      explanation: 第 (竹 bamboo prefix for ordinal numbers) + 四 (four). In fourth place (第四名), Gryffindor with 312 points.
+      interval: 1
+      ease: 2.5
+    - character: 分
+      pinyin: fēn
+      meaning: Point / Mark / Minute / To divide
+      explanation: 八 (eight / divide) + 刀 (knife). Measure word for points in the House Cup competition.
+      interval: 1
+      ease: 2.5
+    - character: 第三
+      pinyin: dì sān
+      meaning: Third
+      explanation: 第 (ordinal prefix) + 三 (three). In third place (第三名), Hufflepuff with 352 points.
+      interval: 1
+      ease: 2.5
+    - character: 赫奇帕奇
+      pinyin: Hè qí pà qí
+      meaning: Hufflepuff
+      explanation: Phonetic transliteration of Hufflepuff, one of the four Hogwarts Houses, initially in third place with 352 points.
+      interval: 1
+      ease: 2.5
+    - character: 餐桌
+      pinyin: cān zhuō
+      meaning: Dining table
+      explanation: 餐 (food / meal) + 桌 (table, 木 wood). A storm of cheering and stamping breaks out from the Slytherin dining table.
+      interval: 1
+      ease: 2.5
+    - character: 爆发
+      pinyin: bào fā
+      meaning: To erupt / Break out / Burst forth
+      explanation: 爆 (火 fire + 暴 violent = explode) + 发 (issue / burst forth). Thunderous cheers erupt from the Slytherin table.
+      interval: 1
+      ease: 2.5
+    - character: 雷鸣般
+      pinyin: léi míng bān
+      meaning: Thunderous / Like thunder
+      explanation: 雷 (thunder) + 鸣 (口 mouth + 鸟 bird = cry / sound) + 般 (like / sort). Describes the deafening, thunder-like cheers in the hall.
+      interval: 1
+      ease: 2.5
+    - character: 欢呼声
+      pinyin: huān hū shēng
+      meaning: Cheers / Shouts of joy
+      explanation: 欢 (joyous) + 呼 (shout / call out) + 声 (sound). The roaring cheers echoing from the House tables.
+      interval: 1
+      ease: 2.5
+    - character: 跺脚
+      pinyin: duò jiǎo
+      meaning: To stamp one's feet
+      explanation: 跺 (⻊ foot + 朵 = stamp) + 脚 (foot). Slytherin students cheer and stamp their feet upon hearing their 472-point total.
+      interval: 1
+      ease: 2.5
+    - character: 德拉科·马尔福
+      pinyin: Dé lā kē · Mǎ ěr fú
+      meaning: Draco Malfoy
+      explanation: Phonetic transliteration of Draco Malfoy, seen smugly banging his goblet on the Slytherin table.
+      interval: 1
+      ease: 2.5
+    - character: 高脚酒杯
+      pinyin: gāo jiǎo jiǔ bēi
+      meaning: Goblet / Stemmed wineglass
+      explanation: 高脚 (tall-legged/stemmed) + 酒杯 (wine cup). Draco Malfoy bangs his heavy metal goblet on the table in celebration.
+      interval: 1
+      ease: 2.5
+    - character: 敲打
+      pinyin: qiāo dǎ
+      meaning: To bang / Rap / Beat / Knock
+      explanation: 敲 (高 tall + 攴 tap = knock/strike) + 打 (hit). Malfoy bangs his goblet hard against the table.
+      interval: 1
+      ease: 2.5
+    - character: 恶心
+      pinyin: ě xīn
+      meaning: Sickening / Disgusting / Nauseating
+      explanation: '恶 (pronounced ě here: nauseated) + 心 (heart). Harry finds Malfoy''s gloating display utterly sickening.'
+      interval: 1
+      ease: 2.5
+    - character: 表现
+      pinyin: biǎo xiàn
+      meaning: Performance / To show / Display
+      explanation: 表 (surface / show) + 现 (appear / manifest). Dumbledore acknowledges Slytherin's fine performance (表现不错) before awarding last-minute points.
+      interval: 1
+      ease: 2.5
+    - character: 不错
+      pinyin: bù cuò
+      meaning: Not bad / Pretty good / Well done
+      explanation: 不 (not) + 错 (wrong / bad). Dumbledore remarks 'Well done, Slytherin' (表现不错), before adding recent events must be taken into account.
+      interval: 1
+      ease: 2.5
+    - character: 最近
+      pinyin: zuì jìn
+      meaning: Recently / Lately
+      explanation: 最 (most) + 近 (辶 walk + 斤 = near). Refers to the recent events beneath the trapdoor that Dumbledore now counts.
+      interval: 1
+      ease: 2.5
+    - character: 计算
+      pinyin: jì suàn
+      meaning: To count / Calculate / Reckon
+      explanation: 计 (讠 speech + 十 ten = count) + 算 (竹 bamboo tally = calculate). Recent events must be counted in (计算在内) and students calculate the tied score.
+      interval: 1
+      ease: 2.5
+    - character: 在内
+      pinyin: zài nèi
+      meaning: Included / Within
+      explanation: 在 (at / in) + 内 (inside / within). Used in 计算在内 (taken into account / included in the calculation).
+      interval: 1
+      ease: 2.5
+    - character: 安静
+      pinyin: ān jìng
+      meaning: Quiet / Silent / Calm
+      explanation: 安 (宀 roof + 女 woman = peaceful) + 静 (青 + 争 = still / quiet). The room falls very quiet as the Slytherins' smiles fade.
+      interval: 1
+      ease: 2.5
+    - character: 们
+      pinyin: men
+      meaning: Plural suffix for people
+      explanation: 亻 (person) + 门 (gate). Attached to 斯莱特林 (Slytherins) and 格兰芬多 (Gryffindors) to denote the students of those Houses.
+      interval: 1
+      ease: 2.5
+    - character: 收敛
+      pinyin: shōu liǎn
+      meaning: To restrain / Fade / Pull back (a smile or behavior)
+      explanation: 收 (gather in / draw back) + 敛 (gather / restrain). The Slytherins' smug smiles fade a little (收敛了一些).
+      interval: 1
+      ease: 2.5
+    - character: 呃
+      pinyin: è
+      meaning: Ahem / Er / Uh (interjection)
+      explanation: 口 (mouth) + 厄 (adversity). Vocal hesitation or throat-clearing sound as Dumbledore prepares to award last-minute points.
+      interval: 1
+      ease: 2.5
+    - character: 清
+      pinyin: qīng
+      meaning: To clear / Clean / Pure
+      explanation: 氵 (water) + 青 (blue-green/clear). In 清了清嗓子, Dumbledore clears his throat before announcing the final House points.
+      interval: 1
+      ease: 2.5
+    - character: 嗓子
+      pinyin: sǎng zi
+      meaning: Throat / Voice
+      explanation: 嗓 (口 mouth + 桑 mulberry = throat) + 子 (noun suffix). Dumbledore clears his throat, and later Gryffindors shout themselves hoarse.
+      interval: 1
+      ease: 2.5
+    - character: 分配
+      pinyin: fēn pèi
+      meaning: To distribute / Dish out / Allocate
+      explanation: 分 (divide) + 配 (酉 wine vessel + 己 = match / apportion). Dumbledore has a few last-minute points to dish out.
+      interval: 1
+      ease: 2.5
+    - character: 一下子
+      pinyin: yī xià zi
+      meaning: All at once / In an instant / Suddenly
+      explanation: 一 (one) + 下子 (stroke / moment). Ron's face flushes bright red all at once when his name is called first.
+      interval: 1
+      ease: 2.5
+    - character: 涨
+      pinyin: zhàng
+      meaning: To flush / Swell / Distend
+      explanation: '氵 (water) + 张 (stretch). Pronounced zhàng (fourth tone) when blood rushes to the face: 涨得通红 (flushed bright red).'
+      interval: 1
+      ease: 2.5

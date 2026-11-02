@@ -1,0 +1,259 @@
+cards:
+    - character: 咱们
+      pinyin: zán men
+      meaning: We / Us (inclusive)
+      explanation: '咱 (zán: we) + 们 (men: plural suffix). Inclusive ''we'' (including the listener): Dumbledore agrees, ''let''s talk about the Stone.'''
+      interval: 1
+      ease: 2.5
+    - character: 谈谈
+      pinyin: tán tán
+      meaning: To talk a bit / Discuss
+      explanation: 'Reduplication of 谈 (tán: talk / discuss, 讠 speech + 炎 flame). Softens the tone: ''let''s have a chat about the Philosopher''s Stone.'''
+      interval: 1
+      ease: 2.5
+    - character: 手里
+      pinyin: shǒu lǐ
+      meaning: In one's hand(s)
+      explanation: '手 (shǒu: hand) + 里 (lǐ: inside). Quirrell did not manage to take the Stone from Harry''s hands.'
+      interval: 1
+      ease: 2.5
+    - character: 夺走
+      pinyin: duó zǒu
+      meaning: To snatch away / Seize
+      explanation: '夺 (duó: seize / wrest, 大 big + 寸 inch/hand) + 走 (zǒu: away). Quirrell failed to wrest the Stone away from Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 及时
+      pinyin: jí shí
+      meaning: In time / Timely
+      explanation: '及 (jí: reach / catch up to) + 时 (shí: time). Dumbledore arrived just in time to stop Quirrell.'
+      interval: 1
+      ease: 2.5
+    - character: 句
+      pinyin: jù
+      meaning: Sentence / Measure word for spoken words
+      explanation: 勹 (wrap) + 口 (mouth). In 我必须说一句 (I must say a word / add one thing), praising Harry's bravery.
+      interval: 1
+      ease: 2.5
+    - character: 您
+      pinyin: nín
+      meaning: You (polite / respectful)
+      explanation: '你 (nǐ: you) + 心 (xīn: heart) — holding the addressee in one''s heart. Harry uses this respectful pronoun when speaking to Dumbledore.'
+      interval: 1
+      ease: 2.5
+    - character: 那儿
+      pinyin: nà ér
+      meaning: There / That place
+      explanation: '那 (nà: that) + 儿 (ér: retroflex locative suffix). Harry asks Dumbledore if he arrived down there in the chamber.'
+      interval: 1
+      ease: 2.5
+    - character: 收到
+      pinyin: shōu dào
+      meaning: To receive / Get
+      explanation: '收 (shōu: collect / accept) + 到 (dào: arrive / resultative complement). Harry asks if Dumbledore received the letter Hermione sent by owl.'
+      interval: 1
+      ease: 2.5
+    - character: 赫敏
+      pinyin: Hè mǐn
+      meaning: Hermione (Granger)
+      explanation: 'Transliteration of Hermione: 赫 (hè: bright / illustrious) + 敏 (mǐn: quick / clever). Harry''s friend who sent an owl to Dumbledore.'
+      interval: 1
+      ease: 2.5
+    - character: 派
+      pinyin: pài
+      meaning: To send / Dispatch
+      explanation: 氵 (water) + 派 (branching streams). Here used as a verb meaning to dispatch or send (派猫头鹰, sent an owl).
+      interval: 1
+      ease: 2.5
+    - character: 猫头鹰
+      pinyin: māo tóu yīng
+      meaning: Owl
+      explanation: '猫 (māo: cat) + 头 (tóu: head) + 鹰 (yīng: eagle / hawk) — literally ''cat-headed hawk.'' Wizards'' messenger bird.'
+      interval: 1
+      ease: 2.5
+    - character: 信
+      pinyin: xìn
+      meaning: Letter / Message / To believe
+      explanation: 亻 (person) + 言 (speech / word) — a person's reliable word, extended to a written message or letter sent by owl.
+      interval: 1
+      ease: 2.5
+    - character: 显然
+      pinyin: xiǎn rán
+      meaning: Obviously / Evidently / Clearly
+      explanation: '显 (xiǎn: manifest / visible under sun 日) + 然 (rán: so). Dumbledore says he and the owl obviously crossed paths in mid-air.'
+      interval: 1
+      ease: 2.5
+    - character: 空中
+      pinyin: kōng zhōng
+      meaning: In the air / In the sky
+      explanation: '空 (kōng: sky / empty space, 穴 cave/arch + 工 work) + 中 (zhōng: middle / in). Dumbledore and the owl passed each other in the air.'
+      interval: 1
+      ease: 2.5
+    - character: 错过
+      pinyin: cuò guò
+      meaning: To miss / Pass by each other
+      explanation: '错 (cuò: cross / miss) + 过 (guò: pass). Dumbledore and Hermione''s owl missed each other in flight.'
+      interval: 1
+      ease: 2.5
+    - character: 到达
+      pinyin: dào dá
+      meaning: To arrive / Reach
+      explanation: '到 (dào: arrive) + 达 (dá: reach / attain, 辶 movement). As soon as Dumbledore reached London, he realized he needed to return.'
+      interval: 1
+      ease: 2.5
+    - character: 刚刚
+      pinyin: gāng gāng
+      meaning: Just / Just now / A moment ago
+      explanation: 'Reduplication of 刚 (gāng: hard / just). Refers to the place (Hogwarts) Dumbledore had only just left.'
+      interval: 1
+      ease: 2.5
+    - character: 离开
+      pinyin: lí kāi
+      meaning: To leave / Depart from
+      explanation: '离 (lí: part from / leave) + 开 (kāi: away / open). Dumbledore realized he should return to the place he had just left.'
+      interval: 1
+      ease: 2.5
+    - character: 赶来
+      pinyin: gǎn lái
+      meaning: To hurry over / Rush here
+      explanation: '赶 (gǎn: hurry / rush, 走 walk/run + 旱 phonetic) + 来 (lái: come). Dumbledore hurried back just in time.'
+      interval: 1
+      ease: 2.5
+    - character: 恰
+      pinyin: qià
+      meaning: Just / Exactly / Precisely
+      explanation: 忄 (heart) + 合 (fit / join). In 恰是时候, meaning at the exact right moment.
+      interval: 1
+      ease: 2.5
+    - character: 正好
+      pinyin: zhèng hǎo
+      meaning: Just in time / Just right / Happen to
+      explanation: '正 (zhèng: upright / exact) + 好 (hǎo: good / fit). Dumbledore arrived at the exact moment to pull Quirrell off Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 拉开
+      pinyin: lā kāi
+      meaning: To pull apart / Pull off
+      explanation: '拉 (lā: pull, 扌 hand) + 开 (kāi: apart / open). Dumbledore pulled Quirrell off Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 晚
+      pinyin: wǎn
+      meaning: Late / Evening
+      explanation: 日 (sun) + 免 (avoid / phonetic) — when the sun draws away. Dumbledore feared he might already be too late (太晚了).
+      interval: 1
+      ease: 2.5
+    - character: 差一点儿
+      pinyin: chà yī diǎn ér
+      meaning: Almost / Nearly
+      explanation: '差 (chà: fall short by) + 一点儿 (yī diǎn ér: a little bit). Falling short by just a hair: ''it was almost too late.'''
+      interval: 1
+      ease: 2.5
+    - character: 来不及
+      pinyin: lái bù jí
+      meaning: Too late / Not enough time
+      explanation: '来 (lái: come) + 不 (bù: not) + 及 (jí: reach in time). Idiomatic verbal complement meaning there wasn''t enough time left.'
+      interval: 1
+      ease: 2.5
+    - character: 支撑
+      pinyin: zhī chēng
+      meaning: To hold out / Sustain / Prop up
+      explanation: '支 (zhī: support / branch) + 撑 (chēng: prop up / brace, 扌 hand). Harry says he couldn''t hold out much longer against Quirrell.'
+      interval: 1
+      ease: 2.5
+    - character: 很快
+      pinyin: hěn kuài
+      meaning: Very soon / Quickly
+      explanation: '很 (hěn: very) + 快 (kuài: fast / soon). Harry feared the Stone would very soon be snatched by Quirrell.'
+      interval: 1
+      ease: 2.5
+    - character: 抢
+      pinyin: qiǎng
+      meaning: To snatch / Grab / Rob
+      explanation: 扌 (hand) + 仓 (granary, phonetic). In 被他抢去了, meaning snatched away by Quirrell.
+      interval: 1
+      ease: 2.5
+    - character: 指
+      pinyin: zhǐ
+      meaning: To refer to / Point at / Finger
+      explanation: '扌 (hand) + 旨 (purpose / phonetic). Dumbledore clarifies: ''I am referring to (我指的是) you, not the Stone.'''
+      interval: 1
+      ease: 2.5
+    - character: 为了
+      pinyin: wèi le
+      meaning: In order to / For the sake of
+      explanation: '为 (wèi: for / sake of) + 了 (le). Preposition of purpose: Harry nearly lost his life in order to protect the Stone.'
+      interval: 1
+      ease: 2.5
+    - character: 丢
+      pinyin: diū
+      meaning: To lose / Throw away
+      explanation: 丿 (stroke) + 去 (go away) — something slipping away. In 丢了性命, meaning to lose one's life.
+      interval: 1
+      ease: 2.5
+    - character: 可怕
+      pinyin: kě pà
+      meaning: Terrible / Dreadful / Frightening
+      explanation: '可 (kě: worthy of / -able) + 怕 (pà: fear, 忄 heart + 白 phonetic). That terrible instant when Dumbledore feared Harry was dead.'
+      interval: 1
+      ease: 2.5
+    - character: 一瞬间
+      pinyin: yī shùn jiān
+      meaning: In an instant / A split second
+      explanation: '一 (yī: one) + 瞬 (shùn: blink of an eye, 目 eye) + 间 (jiān: space / moment). For one terrifying instant, Dumbledore thought Harry had died.'
+      interval: 1
+      ease: 2.5
+    - character: 吓坏
+      pinyin: xià huài
+      meaning: Terrified / Scared stiff
+      explanation: '吓 (xià: frighten, 口 mouth + 下) + 坏 (huài: badly / to an extreme degree). Dumbledore admits he was terrified for Harry''s life.'
+      interval: 1
+      ease: 2.5
+    - character: 至于
+      pinyin: zhì yú
+      meaning: As for / As to
+      explanation: '至 (zhì: arrive / reach) + 于 (yú: at / to). Topic-shifting conjunction: ''As for the Philosopher''s Stone, it has been destroyed.'''
+      interval: 1
+      ease: 2.5
+    - character: 嘛
+      pinyin: ma
+      meaning: Modal particle (marking a topic or pause, or indicating something is obvious)
+      explanation: '口 (mouth) + 麻 (má: phonetic). Used after 至于魔法石嘛 to pause and introduce the Stone''s fate casually.'
+      interval: 1
+      ease: 2.5
+    - character: 毁掉
+      pinyin: huǐ diào
+      meaning: To destroy / Ruin
+      explanation: '毁 (huǐ: destroy / smash, 臼 mortar + 土 earth + 殳 strike) + 掉 (diào: completion complement). The Philosopher''s Stone has been destroyed.'
+      interval: 1
+      ease: 2.5
+    - character: 不解
+      pinyin: bù jiě
+      meaning: Puzzled / Perplexed / Unable to understand
+      explanation: '不 (bù: not) + 解 (jiě: untie / understand, 角 horn + 刀 knife + 牛 ox). Harry asks in bewilderment how the Stone could be destroyed.'
+      interval: 1
+      ease: 2.5
+    - character: 尼可·勒梅
+      pinyin: Ní kě · Lè méi
+      meaning: Nicolas Flamel
+      explanation: 'Transliteration of Nicolas Flamel: 尼可 (Ní kě: Nicolas) + 勒梅 (Lè méi: Flamel). Dumbledore''s alchemist friend and maker of the Stone.'
+      interval: 1
+      ease: 2.5
+    - character: 尼可
+      pinyin: Ní kě
+      meaning: Nicolas (Flamel)
+      explanation: 尼 (ní) + 可 (kě). First name of Nicolas Flamel, whom Dumbledore refers to affectionately.
+      interval: 1
+      ease: 2.5
+    - character: 语气
+      pinyin: yǔ qì
+      meaning: Tone of voice / Manner of speaking
+      explanation: '语 (yǔ: speech / words) + 气 (qì: breath / spirit). Dumbledore''s tone of voice sounds pleased that Harry researched Flamel.'
+      interval: 1
+      ease: 2.5
+    - character: 搞
+      pinyin: gǎo
+      meaning: To do / Work out / Figure out
+      explanation: '扌 (hand) + 高 (gāo: tall, phonetic). Versatile colloquial verb; in 搞得很清楚, meaning figured the matter out thoroughly.'
+      interval: 1
+      ease: 2.5

@@ -1,0 +1,332 @@
+selected: true
+cards:
+    - character: 阻拦
+      pinyin: zǔ lán
+      meaning: To stop / To intercept / To bar the way
+      explanation: '阻 (obstruct / block: 阝 + 且) + 拦 (bar / hold back: 扌 + 兰). Snape rushed upstairs in an attempt to block Quirrell.'
+      interval: 1
+      ease: 2.5
+    - character: 不仅
+      pinyin: bù jǐn
+      meaning: Not only
+      explanation: '不 (not) + 仅 (merely / only: 亻 + 又). Correlative conjunction paired with 甚至 (not only did my troll fail to kill you, even the three-headed dog...).'
+      interval: 1
+      ease: 2.5
+    - character: 没有
+      pinyin: méi yǒu
+      meaning: Did not / Have not
+      explanation: '没 (not have / sink) + 有 (have). Negates past action: Quirrell''s troll did not beat Harry to death, nor did Fluffy bite off Snape''s leg.'
+      interval: 1
+      ease: 2.5
+    - character: 打死
+      pinyin: dǎ sǐ
+      meaning: To beat to death / To kill
+      explanation: 打 (hit / beat) + 死 (die / dead). Resultative compound; Quirrell complains that his troll failed to beat Harry to death.
+      interval: 1
+      ease: 2.5
+    - character: 甚至
+      pinyin: shèn zhì
+      meaning: Even / So much so that
+      explanation: '甚 (very / extreme) + 至 (reach / arrive). Emphasizes an extreme example: even the three-headed dog failed to bite Snape''s leg off.'
+      interval: 1
+      ease: 2.5
+    - character: 三
+      pinyin: sān
+      meaning: Three (3)
+      explanation: Three horizontal strokes. Used here in 三个脑袋的大狗 (the three-headed dog, Fluffy).
+      interval: 1
+      ease: 2.5
+    - character: 脑袋
+      pinyin: nǎo dài
+      meaning: Head / Brains
+      explanation: '脑 (brain / head: 月 flesh + 凶) + 袋 (bag / pouch). Colloquial word for head; Fluffy is the giant dog with three heads (三个脑袋).'
+      interval: 1
+      ease: 2.5
+    - character: 狗
+      pinyin: gǒu
+      meaning: Dog
+      explanation: 犭 (dog/beast radical) + 句 (hook/phonetic). Refers to Fluffy (路威), Hagrid's giant three-headed dog guarding the trapdoor.
+      interval: 1
+      ease: 2.5
+    - character: 腿
+      pinyin: tuǐ
+      meaning: Leg
+      explanation: 月 (flesh / body) + 退 (retreat / phonetic). Fluffy bit Snape on Halloween, though without biting his leg clean off.
+      interval: 1
+      ease: 2.5
+    - character: 咬
+      pinyin: yǎo
+      meaning: To bite
+      explanation: 口 (mouth) + 交 (cross / phonetic). Action of the mouth and teeth; Fluffy bit Snape's leg when Snape came up to the fourth floor.
+      interval: 1
+      ease: 2.5
+    - character: 断
+      pinyin: duàn
+      meaning: To sever / To break / Clean off
+      explanation: 米 + 斤 (axe cutting threads). Resultative complement in 咬断 (bite off / sever by biting).
+      interval: 1
+      ease: 2.5
+    - character: 好
+      pinyin: hǎo
+      meaning: Well / All right / Good
+      explanation: 女 (woman) + 子 (child). In 好了 (All right then / Now then), Quirrell dismisses the past and turns his attention back to the Mirror.
+      interval: 1
+      ease: 2.5
+    - character: 静静
+      pinyin: jìng jìng
+      meaning: Quietly / Still / Peacefully
+      explanation: 'Reduplication of 静 (quiet / still: 青 + 争). Quirrell tells the bound Harry to wait quietly (静静地等着吧).'
+      interval: 1
+      ease: 2.5
+    - character: 等
+      pinyin: děng
+      meaning: To wait
+      explanation: 竹 (bamboo) + 寺 (temple). Verb meaning to wait; Quirrell orders Harry to wait quietly while he examines the Mirror.
+      interval: 1
+      ease: 2.5
+    - character: 需要
+      pinyin: xū yào
+      meaning: To need / To require
+      explanation: '需 (need: 雨 + 而) + 要 (want / require). Quirrell says he needs to take a close look at this interesting mirror.'
+      interval: 1
+      ease: 2.5
+    - character: 仔细
+      pinyin: zǐ xì
+      meaning: Carefully / Closely / Attentively
+      explanation: '仔 (careful / young) + 细 (fine / detailed: 纟 + 田). Quirrell wants to examine the Mirror of Erised closely to figure out how to get the Stone.'
+      interval: 1
+      ease: 2.5
+    - character: 看看
+      pinyin: kàn kàn
+      meaning: To take a look / To examine
+      explanation: 'Reduplicated form of 看 (look). Softens or extends the action of looking: 仔细看看 (take a close look at).'
+      interval: 1
+      ease: 2.5
+    - character: 面
+      pinyin: miàn
+      meaning: Measure word for flat, smooth objects (mirrors, flags, walls)
+      explanation: 'Pictograph of a face/surface. Classifier used for mirrors: 这面有趣的镜子 (this interesting mirror).'
+      interval: 1
+      ease: 2.5
+    - character: 有趣
+      pinyin: yǒu qù
+      meaning: Interesting / Fascinating
+      explanation: '有 (have) + 趣 (interest / inclination: 走 + 取). Quirrell calls the Mirror of Erised ''this interesting mirror''.'
+      interval: 1
+      ease: 2.5
+    - character: 镜子
+      pinyin: jìng zi
+      meaning: Mirror
+      explanation: '镜 (mirror / lens: 钅 metal + 竟) + 子 (noun suffix). Refers to the Mirror of Erised standing behind Quirrell.'
+      interval: 1
+      ease: 2.5
+    - character: 直到
+      pinyin: zhí dào
+      meaning: Until / Right up to
+      explanation: 直 (straight / all the way) + 到 (arrive / until). Marks the point in time when Harry finally notices the Mirror behind Quirrell (直到这时……才).
+      interval: 1
+      ease: 2.5
+    - character: 这时
+      pinyin: zhè shí
+      meaning: At this moment / This time
+      explanation: 这 (this) + 时 (time). Combines with 直到 (until this moment) when Harry realizes what is standing behind Quirrell.
+      interval: 1
+      ease: 2.5
+    - character: 才
+      pinyin: cái
+      meaning: Only then / Just then
+      explanation: Adverb indicating that an action happened later than expected or only under certain conditions (直到这时，哈利才发现 = only then did Harry realize).
+      interval: 1
+      ease: 2.5
+    - character: 发现
+      pinyin: fā xiàn
+      meaning: To discover / To realize / To notice
+      explanation: 发 (send forth / open up) + 现 (appear / manifest). Harry only then notices that the object behind Quirrell is the Mirror of Erised.
+      interval: 1
+      ease: 2.5
+    - character: 身后
+      pinyin: shēn hòu
+      meaning: Behind one's body / Behind
+      explanation: 身 (body / person) + 后 (behind / back). Standing right behind Quirrell was the Mirror of Erised.
+      interval: 1
+      ease: 2.5
+    - character: 立
+      pinyin: lì
+      meaning: To stand / To stand upright
+      explanation: Pictograph of a person standing on the ground. In 身后立着的东西, describes the tall Mirror standing upright behind Quirrell.
+      interval: 1
+      ease: 2.5
+    - character: 东西
+      pinyin: dōng xi
+      meaning: Thing / Object
+      explanation: 东 (east) + 西 (west). Compound noun meaning 'thing' or 'object'; refers to the object standing behind Quirrell and Dumbledore's contrivance.
+      interval: 1
+      ease: 2.5
+    - character: 正是
+      pinyin: zhèng shì
+      meaning: Is none other than / Is precisely
+      explanation: 正 (precisely / right) + 是 (is). Emphatic copula identifying the object behind Quirrell as none other than the Mirror of Erised.
+      interval: 1
+      ease: 2.5
+    - character: 厄里斯魔镜
+      pinyin: È lǐ sī mó jìng
+      meaning: Mirror of Erised
+      explanation: 厄里斯 (transliteration of 'Erised', 'desire' spelled backward) + 魔镜 (magic mirror). The enchanted mirror in which Dumbledore hid the Philosopher's Stone.
+      interval: 1
+      ease: 2.5
+    - character: 找到
+      pinyin: zhǎo dào
+      meaning: To find / To locate
+      explanation: 找 (look for) + 到 (attain / resultative complement). Quirrell realizes the Mirror is the key to finding the Philosopher's Stone.
+      interval: 1
+      ease: 2.5
+    - character: 钥匙
+      pinyin: yào shi
+      meaning: Key
+      explanation: '钥 (key / lock: 钅 metal + 月) + 匙 (spoon / key: 是 + 匕). Used figuratively by Quirrell: the Mirror is the ''key'' to finding the Stone.'
+      interval: 1
+      ease: 2.5
+    - character: 喃喃
+      pinyin: nán nán
+      meaning: Murmuring / Muttering
+      explanation: 'Reduplication of 喃 (mutter: 口 mouth + 南 phonetic). Describes Quirrell muttering to himself as he taps around the Mirror''s frame.'
+      interval: 1
+      ease: 2.5
+    - character: 用
+      pinyin: yòng
+      meaning: With / Using / To use
+      explanation: 'Instrumental preposition or verb meaning ''with'' or ''to use'': 用手 (with his hand).'
+      interval: 1
+      ease: 2.5
+    - character: 手
+      pinyin: shǒu
+      meaning: Hand
+      explanation: Pictograph of a five-fingered hand. Quirrell taps around the frame of the Mirror with his hand.
+      interval: 1
+      ease: 2.5
+    - character: 沿着
+      pinyin: yán zhe
+      meaning: Along / Following
+      explanation: '沿 (follow a course / edge: 氵 + 铅-right) + 着 (continuous aspect). Preposition indicating motion along a path or edge (沿着四周的镜框 = along the frame all around).'
+      interval: 1
+      ease: 2.5
+    - character: 四周
+      pinyin: sì zhōu
+      meaning: All around / On all four sides
+      explanation: 四 (four) + 周 (periphery / circumference). Refers to the four sides or perimeter of the Mirror's frame.
+      interval: 1
+      ease: 2.5
+    - character: 镜框
+      pinyin: jìng kuàng
+      meaning: Mirror frame
+      explanation: '镜 (mirror) + 框 (frame: 木 wood + 匡). The ornate frame around the Mirror of Erised that Quirrell taps nervously.'
+      interval: 1
+      ease: 2.5
+    - character: 敲
+      pinyin: qiāo
+      meaning: To tap / To knock / To strike
+      explanation: 高 (tall / phonetic) + 攴 (tap / strike). Quirrell taps all around the mirror frame trying to figure out its secret.
+      interval: 1
+      ease: 2.5
+    - character: 遍
+      pinyin: biàn
+      meaning: Time (measure word for a complete course of action)
+      explanation: '辶 (walk) + 扁 (flat). Verbal classifier indicating an action done once all the way through: 敲了一遍 (tapped all the way around once).'
+      interval: 1
+      ease: 2.5
+    - character: 只有
+      pinyin: zhǐ yǒu
+      meaning: Only
+      explanation: 只 (only) + 有 (have / exist). Correlative with 才 (只有邓布利多才拿得出 = only Dumbledore could come up with such a thing).
+      interval: 1
+      ease: 2.5
+    - character: 拿
+      pinyin: ná
+      meaning: To take / To bring / To hold
+      explanation: 合 (join) + 手 (hand). In 拿得出 (able to produce / come up with), Quirrell grudgingly admires Dumbledore's ingenuity.
+      interval: 1
+      ease: 2.5
+    - character: 出
+      pinyin: chū
+      meaning: Out / Forth (directional complement)
+      explanation: Pictograph of a foot stepping out or a plant sprouting. In 拿得出, indicates producing or coming up with something.
+      interval: 1
+      ease: 2.5
+    - character: 过
+      pinyin: guò
+      meaning: To pass / However (in 不过)
+      explanation: '辶 (walk) + 寸 (inch). Here part of the conjunction 不过 (bù guò: however / but), as Quirrell notes Dumbledore is currently in London.'
+      interval: 1
+      ease: 2.5
+    - character: 此刻
+      pinyin: cǐ kè
+      meaning: At this moment / Right now
+      explanation: '此 (this) + 刻 (moment / quarter-hour: 亥 + 刂). Quirrell gloats that at this very moment Dumbledore is away in London.'
+      interval: 1
+      ease: 2.5
+    - character: 伦敦
+      pinyin: Lún dūn
+      meaning: London
+      explanation: Phonetic transliteration of London (伦 lún + 敦 dūn), where Dumbledore had been lured by a fake owl from the Ministry of Magic.
+      interval: 1
+      ease: 2.5
+    - character: 回来
+      pinyin: huí lái
+      meaning: To come back / To return
+      explanation: 回 (return / turn back) + 来 (come). Quirrell boasts that by the time Dumbledore returns from London, he will be long gone.
+      interval: 1
+      ease: 2.5
+    - character: 远走高飞
+      pinyin: yuǎn zǒu gāo fēi
+      meaning: To fly far and high / To be long gone / To make a clean getaway
+      explanation: 'Four-character idiom: 远走 (walk far away) + 高飞 (fly high). Quirrell boasts he will have escaped far away before Dumbledore returns.'
+      interval: 1
+      ease: 2.5
+    - character: 想到
+      pinyin: xiǎng dào
+      meaning: To think of / To call to mind
+      explanation: 想 (think) + 到 (attain / reach). Harry tries to think of a way to keep Quirrell distracted from the Mirror.
+      interval: 1
+      ease: 2.5
+    - character: 唯一
+      pinyin: wéi yī
+      meaning: Only / Sole / Unique
+      explanation: '唯 (only: 口 + 隹) + 一 (one). Modifying 办法: the sole method Harry can think of is to keep Quirrell talking.'
+      interval: 1
+      ease: 2.5
+    - character: 不停
+      pinyin: bù tíng
+      meaning: Nonstop / Ceaselessly / Continuously
+      explanation: '不 (not) + 停 (stop / halt: 亻 + 亭). Harry wants to keep Quirrell talking nonstop (不停地说话) so he cannot focus on the Mirror.'
+      interval: 1
+      ease: 2.5
+    - character: 说话
+      pinyin: shuō huà
+      meaning: To speak / To talk
+      explanation: 说 (speak) + 话 (words / speech). Verb-object compound; Harry keeps Quirrell talking to distract him.
+      interval: 1
+      ease: 2.5
+    - character: 注意力
+      pinyin: zhù yì lì
+      meaning: Attention / Focus
+      explanation: '注意 (pay attention: pour mind into) + 力 (power / faculty). Mental focus; Harry must stop Quirrell from focusing his attention on the Mirror.'
+      interval: 1
+      ease: 2.5
+    - character: 集中
+      pinyin: jí zhōng
+      meaning: To concentrate / To focus / To centralize
+      explanation: '集 (gather: 隹 bird on 木 tree) + 中 (center). In 把注意力集中到魔镜上, to focus one''s attention on the magic mirror.'
+      interval: 1
+      ease: 2.5
+    - character: 到
+      pinyin: dào
+      meaning: To / Onto / Until
+      explanation: '至 (arrive) + 刂 (knife). Complement marking the target of an action: 集中到魔镜上 (focus onto the magic mirror).'
+      interval: 1
+      ease: 2.5
+    - character: 魔镜
+      pinyin: mó jìng
+      meaning: Magic mirror
+      explanation: 魔 (magic / demon) + 镜 (mirror). Shortened reference to the Mirror of Erised (厄里斯魔镜).
+      interval: 1
+      ease: 2.5

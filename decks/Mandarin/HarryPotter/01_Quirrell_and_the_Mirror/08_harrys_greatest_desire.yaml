@@ -1,0 +1,332 @@
+selected: true
+cards:
+    - character: 突然
+      pinyin: tū rán
+      meaning: Suddenly / Abruptly
+      explanation: '突 (dash out: dog 犬 rushing from a cave 穴) + 然 (thus / adverbial suffix). Quirrell ''suddenly'' shuddered at the memory (奇洛突然颤抖了一下).'
+      interval: 1
+      ease: 2.5
+    - character: 颤抖
+      pinyin: chàn dǒu
+      meaning: To tremble / Shiver / Shudder
+      explanation: 颤 (quiver 亶+页) + 抖 (shake 扌+斗). Quirrell 'shuddered' suddenly when recalling Voldemort's severity (突然颤抖了一下).
+      interval: 1
+      ease: 2.5
+    - character: 一下
+      pinyin: yī xià
+      meaning: Once / A bit / Briefly (verbal measure)
+      explanation: '一 (one) + 下 (down / stroke). Verbal classifier indicating a brief single action: ''shuddered once / gave a shudder'' (颤抖了一下).'
+      interval: 1
+      ease: 2.5
+    - character: 从不
+      pinyin: cóng bù
+      meaning: Never
+      explanation: '从 (ever) + 不 (not). Concise literary form of 从来不: ''He never easily forgives my mistakes'' (他从不轻易原谅我的错误).'
+      interval: 1
+      ease: 2.5
+    - character: 轻易
+      pinyin: qīng yì
+      meaning: Easily / Lightly / Rashly
+      explanation: 轻 (lightweight 车+巠) + 易 (easy 日+勿). Voldemort does not 'easily' forgive mistakes (他从不轻易原谅我的错误).
+      interval: 1
+      ease: 2.5
+    - character: 原谅
+      pinyin: yuán liàng
+      meaning: To forgive / Pardon / Excuse
+      explanation: 原 (source / pardon 厂+白+小) + 谅 (forgive / understand 讠+京). Voldemort does not easily 'forgive' Quirrell's blunders (原谅我的错误).
+      interval: 1
+      ease: 2.5
+    - character: 没
+      pinyin: méi
+      meaning: Did not / Have not
+      explanation: '氵 (water) + 殳 (submerge). Negates past action or capability in 没能: ''when I failed to (was not able to) steal the Stone'' (当我没能把魔法石从古灵阁偷出来时).'
+      interval: 1
+      ease: 2.5
+    - character: 古灵阁
+      pinyin: Gǔ líng gé
+      meaning: Gringotts (Wizarding Bank)
+      explanation: 古 (ancient) + 灵 (spirit / clever) + 阁 (pavilion / chamber). Official Chinese translation of 'Gringotts' (从古灵阁偷出来).
+      interval: 1
+      ease: 2.5
+    - character: 偷
+      pinyin: tōu
+      meaning: To steal / Pilfer
+      explanation: 亻 (person) + 俞 (convey / consent). Quirrell failed to 'steal' the Philosopher's Stone from Gringotts (把魔法石从古灵阁偷出来).
+      interval: 1
+      ease: 2.5
+    - character: 出来
+      pinyin: chū lái
+      meaning: Out (directional complement)
+      explanation: '出 (exit / go out) + 来 (come toward speaker). Compound directional complement after 偷: ''steal out'' of Gringotts (偷出来).'
+      interval: 1
+      ease: 2.5
+    - character: 高兴
+      pinyin: gāo xìng
+      meaning: Happy / Pleased / Glad
+      explanation: 高 (high) + 兴 (flourish / mood). Voldemort was 'most displeased' (非常不高兴) when Quirrell failed at Gringotts.
+      interval: 1
+      ease: 2.5
+    - character: 惩罚
+      pinyin: chéng fá
+      meaning: To punish / Penalize
+      explanation: '惩 (chasten / warn 征+心) + 罚 (punish 罒+讠+刂: net, words, and knife). ''He punished me...'' (他惩罚了我) after the failed Gringotts break-in.'
+      interval: 1
+      ease: 2.5
+    - character: 并
+      pinyin: bìng
+      meaning: And / Furthermore / Moreover
+      explanation: 'Conjunction connecting sequential actions by the same subject: ''He punished me... and decided to watch me more closely'' (他惩罚了我……并决定从此更加密切地监视我).'
+      interval: 1
+      ease: 2.5
+    - character: 决定
+      pinyin: jué dìng
+      meaning: To decide / Resolve / Decision
+      explanation: 决 (breach a dike / decide 冫+夬) + 定 (fix / settle 宀+正). Voldemort 'decided' to keep a closer watch on Quirrell (决定从此更加密切地监视我).
+      interval: 1
+      ease: 2.5
+    - character: 从此
+      pinyin: cóng cǐ
+      meaning: From then on / Henceforth
+      explanation: '从 (from) + 此 (this). Marks the turning point when Voldemort possessed Quirrell: ''from this point on'' (从此更加密切地监视我).'
+      interval: 1
+      ease: 2.5
+    - character: 更加
+      pinyin: gèng jiā
+      meaning: Even more / Still more
+      explanation: '更 (more / further) + 加 (add / increase 力+口). Two-syllable comparative adverb: ''even more closely'' (更加密切地).'
+      interval: 1
+      ease: 2.5
+    - character: 密切
+      pinyin: mì qiè
+      meaning: Close / Intimate / Intent
+      explanation: 密 (dense / secret 宀+必+山) + 切 (close /切近). Describes keeping a 'close' watch on someone (更加密切地监视我).
+      interval: 1
+      ease: 2.5
+    - character: 监视
+      pinyin: jiān shì
+      meaning: To monitor / Keep watch over / Surveil
+      explanation: 监 (inspect from above / oversee) + 视 (look at 礻+见). Voldemort decided to 'keep a close watch on' Quirrell by sharing his body (密切地监视我).
+      interval: 1
+      ease: 2.5
+    - character: 声音
+      pinyin: shēng yīn
+      meaning: Voice / Sound
+      explanation: 声 (sound) + 音 (tone). Quirrell's 'voice' trailed off (奇洛的声音渐渐低得听不见了), and later he lowered his 'voice' to curse.
+      interval: 1
+      ease: 2.5
+    - character: 渐渐
+      pinyin: jiàn jiàn
+      meaning: Gradually / Little by little
+      explanation: 'Reduplication of 渐 (seep / gradually 氵+斩: water slowly cutting through). Quirrell''s voice ''gradually'' faded away (声音渐渐低得听不见了).'
+      interval: 1
+      ease: 2.5
+    - character: 低
+      pinyin: dī
+      meaning: Low / Soft (of voice) / To lower
+      explanation: 亻 (person) + 氐 (bottom / foundation). Describes a voice dropping 'low' until inaudible (渐渐低得听不见了).
+      interval: 1
+      ease: 2.5
+    - character: 听
+      pinyin: tīng
+      meaning: To listen / Hear
+      explanation: '口 (mouth) + 斤 (axe / phonetic). Combines with potential complement 不见 in 听不见: ''inaudible / cannot be heard'' (低得听不见了).'
+      interval: 1
+      ease: 2.5
+    - character: 见
+      pinyin: jiàn
+      meaning: To perceive / See (resultative complement)
+      explanation: 目 (eye) atop 儿 (legs). Sensory perception complement in 听不见 ('unable to hear') and 看见 ('saw').
+      interval: 1
+      ease: 2.5
+    - character: 想起
+      pinyin: xiǎng qǐ
+      meaning: To recall / Remember / Think of
+      explanation: 想 (think 相+心) + 起 (rise / upward complement). Harry 'remembered' his trip to Diagon Alley (哈利想起了他那次到对角巷去的情景).
+      interval: 1
+      ease: 2.5
+    - character: 对角巷
+      pinyin: Duì jiǎo xiàng
+      meaning: Diagon Alley
+      explanation: 对角 (diagonal / opposite corner) + 巷 (alley / lane). Clever Chinese translation of 'Diagon Alley' (到对角巷去的情景).
+      interval: 1
+      ease: 2.5
+    - character: 情景
+      pinyin: qíng jǐng
+      meaning: Scene / Sight / Circumstances
+      explanation: 情 (situation / feeling 忄+青) + 景 (view / scene 日+京). Harry recalled the 'scene' of his visit to Diagon Alley (到对角巷去的情景).
+      interval: 1
+      ease: 2.5
+    - character: 那天
+      pinyin: nà tiān
+      meaning: That day
+      explanation: '那 (that) + 天 (day). Refers back to Harry''s birthday trip to London: ''that day'' (他那天明明看见了奇洛).'
+      interval: 1
+      ease: 2.5
+    - character: 明明
+      pinyin: míng míng
+      meaning: Clearly / Obviously / Plainly
+      explanation: 'Reduplication of 明 (bright / clear 日+月). Emphasizes something that was right in front of one''s eyes: ''he had clearly seen Quirrell that day'' (他那天明明看见了奇洛).'
+      interval: 1
+      ease: 2.5
+    - character: 破釜酒吧
+      pinyin: Pò fǔ jiǔ bā
+      meaning: The Leaky Cauldron
+      explanation: 破 (broken / leaky) + 釜 (cauldron 父+金) + 酒吧 (pub / bar). Official translation of 'The Leaky Cauldron', where Harry shook Quirrell's hand (在破釜酒吧里握过手).
+      interval: 1
+      ease: 2.5
+    - character: 握
+      pinyin: wò
+      meaning: To shake (hands) / Grasp / Hold
+      explanation: '扌 (hand) + 屋 (house / room). Separable verb 握手 (''shake hands'') split by aspect marker 过: ''had shaken hands with him'' (握过手).'
+      interval: 1
+      ease: 2.5
+    - character: 压低
+      pinyin: yā dī
+      meaning: To lower / Keep down (one's voice)
+      explanation: '压 (press down 厂+土) + 低 (low). Resultative compound: Quirrell ''lowered'' his voice and cursed under his breath (奇洛压低了声音咒骂着).'
+      interval: 1
+      ease: 2.5
+    - character: 咒骂
+      pinyin: zhòu mà
+      meaning: To curse / Swear / Rail
+      explanation: 咒 (incantation / curse 口+口+几) + 骂 (scold / swear 口+口+马). Quirrell 'cursed' under his breath at the Mirror (压低了声音咒骂着).
+      interval: 1
+      ease: 2.5
+    - character: 明白
+      pinyin: míng bai
+      meaning: To understand / Figure out / Clear
+      explanation: '明 (bright 日+月) + 白 (white / plain). Quirrell mutters in frustration: ''I really don''t understand...'' (我真不明白).'
+      interval: 1
+      ease: 2.5
+    - character: 应该
+      pinyin: yīng gāi
+      meaning: Should / Ought to
+      explanation: "应 (ought / respond 广+\U0002D544) + 该 (should 讠+亥). Quirrell wonders whether he 'should' smash the Mirror (我是不是应该把镜子打破)."
+      interval: 1
+      ease: 2.5
+    - character: 打破
+      pinyin: dǎ pò
+      meaning: To break / Smash / Shatter
+      explanation: '打 (strike 扌+丁) + 破 (break / shatter 石+皮). Resultative verb: ''smash the mirror'' (把镜子打破).'
+      interval: 1
+      ease: 2.5
+    - character: 脑子
+      pinyin: nǎo zi
+      meaning: Brain / Mind / Head
+      explanation: 脑 (brain 月+亠+凶) + 子 (noun suffix). Harry's 'mind' was racing (哈利脑子里飞快地转动着).
+      interval: 1
+      ease: 2.5
+    - character: 飞快
+      pinyin: fēi kuài
+      meaning: Very fast / At lightning speed / Rapidly
+      explanation: 飞 (fly) + 快 (fast 忄+夬). Figuratively describes Harry's mind working 'furiously / at top speed' (脑子里飞快地转动着).
+      interval: 1
+      ease: 2.5
+    - character: 转动
+      pinyin: zhuǎn dòng
+      meaning: To turn / Spin / Work (of the mind)
+      explanation: 转 (turn / revolve 车+专, third tone zhuǎn) + 动 (move 云+力). Idiomatically describes thoughts 'turning / racing' in one's head (脑子里飞快地转动着).
+      interval: 1
+      ease: 2.5
+    - character: 此时此刻
+      pinyin: cǐ shí cǐ kè
+      meaning: At this very moment / Right now
+      explanation: '此 (this) + 时 (time / hour) + 此 (this) + 刻 (quarter-hour / moment). Emphatic temporal four-character phrase: ''At this very moment, my greatest desire...'' (此时此刻我心里最大的愿望).'
+      interval: 1
+      ease: 2.5
+    - character: 心里
+      pinyin: xīn lǐ
+      meaning: In the heart / In one's mind
+      explanation: '心 (heart / mind) + 里 (inside). Locative phrase: ''the greatest desire in my heart'' (我心里最大的愿望).'
+      interval: 1
+      ease: 2.5
+    - character: 最
+      pinyin: zuì
+      meaning: Most / -est (superlative adverb)
+      explanation: '日 + 取 (take first prize). Superlative prefix forming 最大: ''greatest'' desire (最大的愿望).'
+      interval: 1
+      ease: 2.5
+    - character: 愿望
+      pinyin: yuàn wàng
+      meaning: Desire / Wish / Aspiration
+      explanation: 愿 (wish / sincere desire 原+心) + 望 (hope / gaze afar). The deepest 'desire' shown by the Mirror of Erised (我心里最大的愿望).
+      interval: 1
+      ease: 2.5
+    - character: 赶
+      pinyin: gǎn
+      meaning: To hurry / Catch up / Beat someone to it
+      explanation: '走 (walk / run) + 旱 (dry / phonetic). In 赶在……之前, means ''to get ahead of / beat someone before'': ''find the Stone before Quirrell does'' (赶在奇洛之前找到魔法石).'
+      interval: 1
+      ease: 2.5
+    - character: 之前
+      pinyin: zhī qián
+      meaning: Before / Prior to
+      explanation: '之 (subordinating particle) + 前 (before / front). Temporal postposition: ''before Quirrell'' (在奇洛之前).'
+      interval: 1
+      ease: 2.5
+    - character: 所以
+      pinyin: suǒ yǐ
+      meaning: Therefore / So / Consequently
+      explanation: '所 (place / that which) + 以 (by means of). Logical conjunction introducing Harry''s deduction: ''So, if I look in the mirror...'' (所以，如果我对着魔镜照一照).'
+      interval: 1
+      ease: 2.5
+    - character: 照
+      pinyin: zhào
+      meaning: To look into (a mirror) / Shine / Reflect
+      explanation: '日 (sun) + 召 + 灬 (fire). Here used in 照一照 (take a look in a mirror): ''if I look in the Mirror'' (对着魔镜照一照).'
+      interval: 1
+      ease: 2.5
+    - character: 块
+      pinyin: kuài
+      meaning: Piece / Lump / Chunk (measure word)
+      explanation: '土 (earth / clod) + 夬 (part). Classifier for solid lumps like stones: ''that stone'' (那块石头).'
+      interval: 1
+      ease: 2.5
+    - character: 石头
+      pinyin: shí tou
+      meaning: Stone / Rock
+      explanation: 石 (rock under a cliff) + 头 (nominal suffix, neutral tone). Refers informally to the Philosopher's 'Stone' (找到了那块石头).
+      interval: 1
+      ease: 2.5
+    - character: 意味
+      pinyin: yì wèi
+      meaning: To mean / Signify / Imply
+      explanation: '意 (meaning / thought 音+心) + 味 (taste / flavor 口+未). Always with 着 as 意味着 (''means / signifies''): ''which means I''ll be able to see where it''s hidden!'' (这就意味着我能看到石头藏在哪儿).'
+      interval: 1
+      ease: 2.5
+    - character: 看到
+      pinyin: kàn dào
+      meaning: To see / Catch sight of
+      explanation: '看 (look 手+目) + 到 (reach / perceive). Resultative verb: ''see where the stone is hidden'' (看到石头藏在哪儿).'
+      interval: 1
+      ease: 2.5
+    - character: 怎样
+      pinyin: zěn yàng
+      meaning: How / In what way
+      explanation: '怎 (how 乍+心) + 样 (manner 木+羊). Interrogative adverb: ''How can I go look in the Mirror without Quirrell noticing?'' (我怎样才能……).'
+      interval: 1
+      ease: 2.5
+    - character: 情况
+      pinyin: qíng kuàng
+      meaning: Circumstance / Situation / Condition
+      explanation: '情 (state / reality 忄+青) + 况 (condition / state 冫+兄). In 在……的情况下 (''under the circumstances of...''): ''without being noticed by Quirrell'' (在不被奇洛发现的情况下).'
+      interval: 1
+      ease: 2.5
+    - character: 下
+      pinyin: xià
+      meaning: Under (conditions) / Below / Down
+      explanation: One stroke below a base line. Completes the circumposition 在……的情况下 ('under the condition of...').
+      interval: 1
+      ease: 2.5
+    - character: 过去
+      pinyin: guò qù
+      meaning: To go over / Pass over
+      explanation: '过 (cross / pass 辶+寸) + 去 (go away from current spot). Directional verb: ''go over and take a look in the Mirror'' (过去照一照魔镜).'
+      interval: 1
+      ease: 2.5
+    - character: 试
+      pinyin: shì
+      meaning: To try / Attempt / Test
+      explanation: '讠 (speech) + 式 (pattern / model). With 着 as 试着 (''trying to''): ''He tried edging quietly to the left'' (他试着悄悄向左边移动).'
+      interval: 1
+      ease: 2.5

@@ -1,0 +1,229 @@
+cards:
+    - character: 缠头巾
+      pinyin: chán tóu jīn
+      meaning: Turban / Headscarf
+      explanation: 缠 (wind around / wrap) + 头 (head) + 巾 (cloth). Quirrell's turban, beneath which Voldemort's face was concealed.
+      interval: 1
+      ease: 2.5
+    - character: 面孔
+      pinyin: miàn kǒng
+      meaning: Face / Visage / Countenance
+      explanation: 面 (face) + 孔 (opening / features). Refers to the terrifying face of Voldemort hidden underneath Quirrell's turban.
+      interval: 1
+      ease: 2.5
+    - character: 失声尖叫
+      pinyin: shī shēng jiān jiào
+      meaning: To cry out involuntarily / To shriek
+      explanation: 失声 (lose control of one's voice) + 尖叫 (scream / shriek). Hermione gasps and shrieks aloud when Harry describes Voldemort's face.
+      interval: 1
+      ease: 2.5
+    - character: 问道
+      pinyin: wèn dào
+      meaning: Asked
+      explanation: '问 (ask: 门 gate + 口 mouth) + 道 (say / speak). Ron asks whether the Philosopher''s Stone is truly gone and Flamel will die.'
+      interval: 1
+      ease: 2.5
+    - character: 勒梅
+      pinyin: Lè méi
+      meaning: Flamel (Nicolas Flamel)
+      explanation: 'Transliteration of Flamel: 勒 (bridle / rein) + 梅 (plum blossom). The ancient alchemist and creator of the Philosopher''s Stone.'
+      interval: 1
+      ease: 2.5
+    - character: 快要
+      pinyin: kuài yào
+      meaning: About to / Nearly / Soon
+      explanation: 快 (soon / fast) + 要 (going to). Used with 了 (快要死了) when Ron asks if Nicolas Flamel is about to die.
+      interval: 1
+      ease: 2.5
+    - character: 来着
+      pinyin: lái zhe
+      meaning: Modal particle recalling a recent past event
+      explanation: 来 (come) + 着 (particle). Used at the end of a question (他说什么来着？— What was it he said?) as Harry recalls Dumbledore's exact words.
+      interval: 1
+      ease: 2.5
+    - character: 神经兮兮
+      pinyin: shén jīng xī xī
+      meaning: Crackers / Eccentric / A bit mad
+      explanation: 神经 (nerves / mental) + 兮兮 (reduplicated suffix describing a state). Ron's colloquial translation of Dumbledore being 'a bit crackers'.
+      interval: 1
+      ease: 2.5
+    - character: 心目
+      pinyin: xīn mù
+      meaning: Mind's eye / Mental view
+      explanation: 心 (heart / mind) + 目 (eye). Used in 心目中 (in one's eyes / estimation), referring to Nicolas Flamel as Ron's admired hero.
+      interval: 1
+      ease: 2.5
+    - character: 中
+      pinyin: zhōng
+      meaning: In / Within / Among
+      explanation: Pictograph of a flagpole through the center. Postposition in 心目中 (in one's mind's eye).
+      interval: 1
+      ease: 2.5
+    - character: 英雄
+      pinyin: yīng xióng
+      meaning: Hero
+      explanation: 英 (outstanding flower / hero) + 雄 (male / grand / heroic). Ron is shocked that his hero acts so incomprehensibly.
+      interval: 1
+      ease: 2.5
+    - character: 变
+      pinyin: biàn
+      meaning: To become / To change
+      explanation: 亦 (phonetic) + 又 (hand). Used in 变得 (become) to describe how inscrutable Ron finds his hero.
+      interval: 1
+      ease: 2.5
+    - character: 不可理喻
+      pinyin: bù kě lǐ yù
+      meaning: Unreasonable / Incomprehensible / Beyond reason
+      explanation: 不可 (cannot) + 理 (reason) + 喻 (explain / understand). Idiom expressing Ron's shock at how unfathomably calm Flamel and Dumbledore are about death.
+      interval: 1
+      ease: 2.5
+    - character: 震惊
+      pinyin: zhèn jīng
+      meaning: Shocked / Astonished / Stunned
+      explanation: 震 (shake / thunderclap 雨+辰) + 惊 (startle 忄+京). Ron feels deeply shocked by such an attitude toward death.
+      interval: 1
+      ease: 2.5
+    - character: 噢
+      pinyin: ō
+      meaning: Oh
+      explanation: 口 (mouth) + 奥 (phonetic). Interjection as Hermione begins recounting how she turned back to get Ron and find Dumbledore.
+      interval: 1
+      ease: 2.5
+    - character: 顺利
+      pinyin: shùn lì
+      meaning: Smoothly / Without a hitch
+      explanation: 顺 (go with the current / smooth) + 利 (sharp / favorable). Hermione says she made it back through the purple flames smoothly.
+      interval: 1
+      ease: 2.5
+    - character: 返
+      pinyin: fǎn
+      meaning: To return / To go back
+      explanation: 辶 (walk) + 反 (reverse / turn back). Combines with 回去 in 返回去 (return back the way she came).
+      interval: 1
+      ease: 2.5
+    - character: 回去
+      pinyin: huí qù
+      meaning: To go back / To return
+      explanation: 回 (turn back / enclosure) + 去 (go). Directional complement indicating Hermione's return from the underground chambers.
+      interval: 1
+      ease: 2.5
+    - character: 唤醒
+      pinyin: huàn xǐng
+      meaning: To wake up / To rouse
+      explanation: 唤 (call out 口+奂) + 醒 (sober up / awaken 酉+星). Hermione had to rouse the unconscious Ron from the giant chessboard.
+      interval: 1
+      ease: 2.5
+    - character: 花
+      pinyin: huā
+      meaning: To spend / To expend (time or money)
+      explanation: 艹 (grass/plant) + 化 (change). Used verbally (花了一些时间) for how long it took Hermione to wake Ron up.
+      interval: 1
+      ease: 2.5
+    - character: 棚屋
+      pinyin: péng wū
+      meaning: Shed / Shack / Owlery loft
+      explanation: 棚 (canopy / shed 木+朋) + 屋 (house / room). Refers to the Owlery (猫头鹰棚屋) where they rushed to send an owl to Dumbledore.
+      interval: 1
+      ease: 2.5
+    - character: 同
+      pinyin: tóng
+      meaning: With
+      explanation: 冂 (enclosure) + 一 (one) + 口 (mouth). Preposition (想同邓布利多取得联系 = wanted to get in touch with Dumbledore).
+      interval: 1
+      ease: 2.5
+    - character: 取得
+      pinyin: qǔ dé
+      meaning: To obtain / To establish / To gain
+      explanation: 取 (take 又+耳) + 得 (obtain). Used in 取得联系 (establish contact / get in touch with Dumbledore).
+      interval: 1
+      ease: 2.5
+    - character: 联系
+      pinyin: lián xì
+      meaning: Contact / Connection / Touch
+      explanation: 联 (join / connect 耳+关) + 系 (tie / link). Hermione and Ron rushed to the Owlery to contact Dumbledore.
+      interval: 1
+      ease: 2.5
+    - character: 不料
+      pinyin: bù liào
+      meaning: Unexpectedly / Little did they think
+      explanation: 不 (not) + 料 (expect / anticipate). Conjunction introducing their surprise at running straight into Dumbledore in the Entrance Hall.
+      interval: 1
+      ease: 2.5
+    - character: 门厅
+      pinyin: mén tīng
+      meaning: Entrance hall / Foyer / Lobby
+      explanation: 门 (door / gate) + 厅 (hall 厂+丁). The Hogwarts Entrance Hall where Ron and Hermione bumped into Dumbledore.
+      interval: 1
+      ease: 2.5
+    - character: 碰上
+      pinyin: pèng shàng
+      meaning: To bump into / To run into / To meet by chance
+      explanation: 碰 (collide / bump 石+并) + 上 (upon / resultative complement). Running into Dumbledore right in the Entrance Hall.
+      interval: 1
+      ease: 2.5
+    - character: 盯住
+      pinyin: dīng zhù
+      meaning: To keep an eye on / To go after / To tail closely
+      explanation: '盯 (fix one''s eyes on 目+丁) + 住 (firmly). Translates Dumbledore''s line: ''Harry''s gone after him, hasn''t he?'''
+      interval: 1
+      ease: 2.5
+    - character: 赶紧
+      pinyin: gǎn jǐn
+      meaning: Hurriedly / Losing no time / Right away
+      explanation: 赶 (rush / hurry 走+干) + 紧 (tight / urgent). Dumbledore immediately hurried off toward the third-floor corridor.
+      interval: 1
+      ease: 2.5
+    - character: 奔
+      pinyin: bēn
+      meaning: To dash / To rush / To sprint
+      explanation: 大 (big) + 卉 (grasses). Used in 朝四楼奔去 as Dumbledore sprints up toward the forbidden corridor.
+      interval: 1
+      ease: 2.5
+    - character: 有意
+      pinyin: yǒu yì
+      meaning: Intentionally / On purpose / Deliberately
+      explanation: 有 (have) + 意 (intention / meaning). Ron wonders if Dumbledore meant for Harry to do all this on purpose.
+      interval: 1
+      ease: 2.5
+    - character: 忍
+      pinyin: rěn
+      meaning: To bear / To endure / To hold back
+      explanation: 刃 (blade) over 心 (heart). Used in 忍不住 (cannot help bursting out) as Hermione reacts in alarm to Ron's theory.
+      interval: 1
+      ease: 2.5
+    - character: 若有所思
+      pinyin: ruò yǒu suǒ sī
+      meaning: Thoughtfully / Pensive / As if lost in thought
+      explanation: 若 (as if) + 有所 (having something) + 思 (pondered). Idiom describing Harry's reflective demeanor as he considers Dumbledore's deeper motives.
+      interval: 1
+      ease: 2.5
+    - character: 机会
+      pinyin: jī huì
+      meaning: Chance / Opportunity
+      explanation: 机 (pivotal moment / opportunity) + 会 (meeting / occasion). Harry believes Dumbledore wanted to give him a chance to prove himself.
+      interval: 1
+      ease: 2.5
+    - character: 多多少少
+      pinyin: duō duō shǎo shǎo
+      meaning: More or less / To some extent
+      explanation: Reduplication of 多少 (many or few / somewhat). Harry remarks that Dumbledore more or less knows everything that goes on at Hogwarts.
+      interval: 1
+      ease: 2.5
+    - character: 打算
+      pinyin: dǎ suàn
+      meaning: To plan / To intend
+      explanation: 打 (do / make) + 算 (calculate / plan). Harry thinks Dumbledore was well aware of what they were planning to do.
+      interval: 1
+      ease: 2.5
+    - character: 反而
+      pinyin: fǎn ér
+      meaning: Instead / On the contrary
+      explanation: 反 (reverse / opposite) + 而 (and / yet). Instead of stopping them, Dumbledore subtly taught them useful things.
+      interval: 1
+      ease: 2.5
+    - character: 暗暗
+      pinyin: àn àn
+      meaning: Secretly / Quietly / Subtly
+      explanation: Reduplication of 暗 (dark / hidden 日+音). Dumbledore quietly and indirectly taught them what they needed to know.
+      interval: 1
+      ease: 2.5

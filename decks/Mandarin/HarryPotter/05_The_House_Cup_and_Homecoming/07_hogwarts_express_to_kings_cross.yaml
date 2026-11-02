@@ -1,0 +1,247 @@
+cards:
+    - character: 长袍
+      pinyin: cháng páo
+      meaning: Robe / Long gown
+      explanation: '长 (cháng: long, second tone) + 袍 (páo: robe / gown, 衤 clothing + 包 wrap). The wizard robes that students swap for Muggle jackets and coats.'
+      interval: 1
+      ease: 2.5
+    - character: 换上
+      pinyin: huàn shàng
+      meaning: To change into (clothes)
+      explanation: '换 (huàn: exchange / change, 扌 hand + 奂) + 上 (shàng: put on). The students change out of their wizard robes into Muggle jackets and coats.'
+      interval: 1
+      ease: 2.5
+    - character: 夹克衫
+      pinyin: jiā kè shān
+      meaning: Jacket
+      explanation: '夹克 (jiā kè: phonetic loan from English ''jacket'') + 衫 (shān: shirt / garment, 衤 clothing + 彡). Muggle jackets worn for the return to London.'
+      interval: 1
+      ease: 2.5
+    - character: 短上衣
+      pinyin: duǎn shàng yī
+      meaning: Short coat / Jacket
+      explanation: '短 (duǎn: short) + 上衣 (shàng yī: upper garment / coat). Translates ''jackets and coats'' as the students dress in Muggle clothes.'
+      interval: 1
+      ease: 2.5
+    - character: 停靠
+      pinyin: tíng kào
+      meaning: To pull in / To stop at (a station or dock) / To berth
+      explanation: '停 (tíng: stop / halt) + 靠 (kào: lean against / pull alongside). The Hogwarts Express finally pulls in and stops at Platform Nine and Three-Quarters.'
+      interval: 1
+      ease: 2.5
+    - character: 国王十字车站
+      pinyin: Guó wáng shí zì chē zhàn
+      meaning: King's Cross Station
+      explanation: '国王 (Guó wáng: King''s) + 十字 (shí zì: Cross, literally figure-ten) + 车站 (chē zhàn: station). The London railway terminus where Platform 9¾ is located.'
+      interval: 1
+      ease: 2.5
+    - character: 站台
+      pinyin: zhàn tái
+      meaning: Platform (at a railway station)
+      explanation: '站 (zhàn: station / stand) + 台 (tái: platform / stage). Refers to Platform Nine and Three-Quarters (9¾站台) at King''s Cross Station.'
+      interval: 1
+      ease: 2.5
+    - character: 干瘪
+      pinyin: gān biě
+      meaning: Wizened / Shrivelled / Dried up
+      explanation: '干 (gān: dry, first tone) + 瘪 (biě: shrivelled / sunken, 疒 sickness/lean body + 自 + 仑). Describes the wizened old guard stationed by the ticket barrier.'
+      interval: 1
+      ease: 2.5
+    - character: 警卫
+      pinyin: jǐng wèi
+      meaning: Guard / Security officer / Watchman
+      explanation: '警 (jǐng: alert / police) + 卫 (wèi: guard / defend). The wizened old guard who regulates students passing through the magical barrier.'
+      interval: 1
+      ease: 2.5
+    - character: 守
+      pinyin: shǒu
+      meaning: To guard / To watch over / To stand by
+      explanation: 宀 (roof) + 寸 (hand / law). The old guard stands watch (守在) at the dividing wall to let students through in twos and threes.
+      interval: 1
+      ease: 2.5
+    - character: 隔墙
+      pinyin: gé qiáng
+      meaning: Dividing wall / Partition / Barrier
+      explanation: '隔 (gé: separate / partition, 阝 mound + 鬲) + 墙 (qiáng: wall). The magical barrier between Platforms Nine and Ten at King''s Cross.'
+      interval: 1
+      ease: 2.5
+    - character: 处
+      pinyin: chù
+      meaning: Place / Spot / Point
+      explanation: '夂 + 卜. Read chù (fourth tone) as a noun meaning ''place'' or ''spot'': 守在隔墙处 (stationed at the dividing wall).'
+      interval: 1
+      ease: 2.5
+    - character: 同时
+      pinyin: tóng shí
+      meaning: At the same time / Simultaneously
+      explanation: '同 (tóng: same / together) + 时 (shí: time). Letting students out a few at a time prevents a huge crowd from bursting out of the solid wall simultaneously.'
+      interval: 1
+      ease: 2.5
+    - character: 坚固
+      pinyin: jiān gù
+      meaning: Solid / Sturdy / Firm
+      explanation: '坚 (jiān: hard / firm, 土 earth) + 固 (gù: solid / secure, 囗 enclosure + 古). Describes the solid brick wall (坚固的墙壁) that Muggles see.'
+      interval: 1
+      ease: 2.5
+    - character: 墙壁
+      pinyin: qiáng bì
+      meaning: Wall
+      explanation: '墙 (qiáng: wall, 土 earth) + 壁 (bì: wall / rampart, 土 earth + 辟). The solid station wall through which wizards pass back into the Muggle world.'
+      interval: 1
+      ease: 2.5
+    - character: 迸
+      pinyin: bèng
+      meaning: To burst forth / To spout / To pop out
+      explanation: '辶 (walk / movement) + 并 (bìng: combine / side by side). Combined with 出来 as 迸出来 (burst out), describing a crowd suddenly popping out of a solid brick wall.'
+      interval: 1
+      ease: 2.5
+    - character: 引起
+      pinyin: yǐn qǐ
+      meaning: To attract / To arouse / To cause
+      explanation: '引 (yǐn: draw / attract, 弓 bow + 丨 string) + 起 (qǐ: rise / start). Prevents attracting (引起) the unwanted attention of Muggles at the station.'
+      interval: 1
+      ease: 2.5
+    - character: 今年
+      pinyin: jīn nián
+      meaning: This year
+      explanation: '今 (jīn: now / present) + 年 (nián: year). Ron invites Harry and Hermione to come stay at his house this summer (今年暑假).'
+      interval: 1
+      ease: 2.5
+    - character: 家里
+      pinyin: jiā lǐ
+      meaning: Home / At home / In the house
+      explanation: '家 (jiā: home / family) + 里 (lǐ: inside). Ron warmly invites Harry and Hermione to come visit his home (来我们家里玩).'
+      interval: 1
+      ease: 2.5
+    - character: 玩
+      pinyin: wán
+      meaning: To play / To visit / To have fun / To hang out
+      explanation: '王 (jade radical) + 元 (yuán: phonetic). Idiomatically used in ''来我们家里玩'' to mean ''come visit / stay with us and have fun''.'
+      interval: 1
+      ease: 2.5
+    - character: 邀请
+      pinyin: yāo qǐng
+      meaning: To invite / Invitation
+      explanation: '邀 (yāo: intercept / invite, 辶 walk + 敫) + 请 (qǐng: request / invite, 讠 speech + 青). Ron promises to send an owl to invite them over the summer.'
+      interval: 1
+      ease: 2.5
+    - character: 谢谢
+      pinyin: xiè xie
+      meaning: Thank you / Thanks
+      explanation: 'Reduplication of 谢 (xiè: thank, 讠 speech + 射 project words). Harry gratefully thanks Ron, saying he really needs something to look forward to.'
+      interval: 1
+      ease: 2.5
+    - character: 盼头
+      pinyin: pàn tou
+      meaning: Something to look forward to / Hope / Good prospects
+      explanation: '盼 (pàn: long for / look forward to, 目 eye + 分) + 头 (tou: nominal suffix). Harry says he really needs something to look forward to (有个盼头) while enduring the Dursleys.'
+      interval: 1
+      ease: 2.5
+    - character: 走向
+      pinyin: zǒu xiàng
+      meaning: To walk toward / To head toward
+      explanation: '走 (zǒu: walk / go) + 向 (xiàng: toward). Harry, Ron, and Hermione walk toward the gateway leading back to the Muggle world.'
+      interval: 1
+      ease: 2.5
+    - character: 返回
+      pinyin: fǎn huí
+      meaning: To return to / To go back to
+      explanation: '返 (fǎn: return, 辶 walk + 反 reverse) + 回 (huí: circle back / return). Modifies 出口: the exit returning to the Muggle world (返回麻瓜世界的出口).'
+      interval: 1
+      ease: 2.5
+    - character: 出口
+      pinyin: chū kǒu
+      meaning: Exit / Way out
+      explanation: '出 (chū: go out) + 口 (kǒu: opening / doorway). The gateway leading out of Platform 9¾ back into the Muggle station.'
+      interval: 1
+      ease: 2.5
+    - character: 不断
+      pinyin: bù duàn
+      meaning: Constantly / Continuously / Unceasingly
+      explanation: '不 (bù: not) + 断 (duàn: break / sever / interrupt). Fellow students constantly (不断) jostle past them on the way out, calling goodbye to Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 身边
+      pinyin: shēn biān
+      meaning: By one's side / Past someone
+      explanation: '身 (shēn: body / self) + 边 (biān: side). Students crowd past right beside them (从他们身边挤过) as they head for the exit.'
+      interval: 1
+      ease: 2.5
+    - character: 其中
+      pinyin: qí zhōng
+      meaning: Among them / In it
+      explanation: '其 (qí: its / their / them) + 中 (zhōng: among / middle). Among the students jostling past (其中有些人), several call out farewells to Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 有些
+      pinyin: yǒu xiē
+      meaning: Some
+      explanation: '有 (yǒu: have / there are) + 些 (xiē: some / several). Used in ''其中有些人'' (some of the people among them) who shout goodbye to Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 拜拜
+      pinyin: bài bài
+      meaning: Bye-bye
+      explanation: Colloquial phonetic loan from English 'bye-bye'. Students call out '拜拜，哈利！' as they hurry past him at the station.
+      interval: 1
+      ease: 2.5
+    - character: 再见
+      pinyin: zài jiàn
+      meaning: Goodbye / See you again
+      explanation: '再 (zài: again) + 见 (jiàn: see / meet). Standard farewell (''See you again, Potter!'') called out by passing students.'
+      interval: 1
+      ease: 2.5
+    - character: 出名
+      pinyin: chū míng
+      meaning: Famous / Well-known
+      explanation: '出 (chū: put forth / acquire) + 名 (míng: name / fame). Ron grins and teases Harry: ''Still famous'' (还是这样出名).'
+      interval: 1
+      ease: 2.5
+    - character: 咧
+      pinyin: liě
+      meaning: To draw back the corners of the mouth / To grin
+      explanation: '口 (mouth) + 列 (liè: line up / pull apart). Read liě (third tone) in 咧嘴 (to part the lips in a wide grin) as Ron grins at Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 嘴
+      pinyin: zuǐ
+      meaning: Mouth / Lips
+      explanation: '口 (mouth) + 觜 (zuī: beak / horn). Used in 咧嘴朝他一笑 (grinned broadly at him).'
+      interval: 1
+      ease: 2.5
+    - character: 保证
+      pinyin: bǎo zhèng
+      meaning: To guarantee / To assure / To promise
+      explanation: '保 (bǎo: protect / guarantee) + 证 (zhèng: prove / testify, 讠 speech + 正). Harry assures Ron: ''Not where I''m going, I promise you'' (我向你保证).'
+      interval: 1
+      ease: 2.5
+    - character: 妈妈
+      pinyin: mā ma
+      meaning: Mom / Mother / Mum
+      explanation: '女 (woman) + 马 (mǎ: phonetic). Ginny Weasley excitedly calls out to her mother upon spotting Harry emerging from the barrier.'
+      interval: 1
+      ease: 2.5
+    - character: 哪
+      pinyin: na
+      meaning: Exclamatory final particle (variant of 啊 after -n)
+      explanation: '口 (mouth) + 那. Read neutral tone na here as the phonetic fusion of 啊 (a) after the final -n of 看 (kàn): ''快看哪！'' (Look!).'
+      interval: 1
+      ease: 2.5
+    - character: 金妮
+      pinyin: Jīn nī
+      meaning: Ginny (Ginny Weasley)
+      explanation: Phonetic transliteration of Ginny (金 jīn + 妮 nī, little girl), Ron's younger sister who is thrilled to catch sight of Harry Potter.
+      interval: 1
+      ease: 2.5
+    - character: 妹妹
+      pinyin: mèi mei
+      meaning: Younger sister
+      explanation: '女 (woman) + 未 (wèi: not yet grown). Identifies Ginny as Ron''s younger sister (罗恩的妹妹).'
+      interval: 1
+      ease: 2.5
+    - character: 尖声尖气
+      pinyin: jiān shēng jiān qì
+      meaning: In a shrill / squeaky / high-pitched voice
+      explanation: 'Four-character pattern: 尖 (jiān: sharp / shrill) + 声 (shēng: voice) + 尖 (shrill) + 气 (qì: tone/breath). Describes Ginny squealing excitedly as she points at Harry.'
+      interval: 1
+      ease: 2.5

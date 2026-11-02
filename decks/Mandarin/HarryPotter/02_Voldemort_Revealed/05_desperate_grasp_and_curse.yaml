@@ -1,0 +1,235 @@
+cards:
+    - character: 手指
+      pinyin: shǒu zhǐ
+      meaning: Finger
+      explanation: 手 (hand) + 指 (扌 hand + 旨 point). Quirrell stares in horror as blisters erupt across his fingers (看着自己的手指).
+      interval: 1
+      ease: 2.5
+    - character: 眼睁睁
+      pinyin: yǎn zhēng zhēng
+      meaning: Looking on helplessly / With wide-open eyes
+      explanation: 眼 (eye) + 睁睁 (wide-open eyes, 目 eye + 争). Conveys watching something shocking happen right before one's eyes without being able to stop it.
+      interval: 1
+      ease: 2.5
+    - character: 它们
+      pinyin: tā men
+      meaning: They / Them (non-human)
+      explanation: 它 (it, 宀 roof + 匕) + 们 (plural suffix). Refers to Quirrell's fingers blistering one by one (看见它们一个个地冒起了水泡).
+      interval: 1
+      ease: 2.5
+    - character: 一个个
+      pinyin: yī gè gè
+      meaning: One by one / One after another
+      explanation: 一 (one) + 个个 (reduplicated measure word). Describes blisters popping up one after another on Quirrell's fingers.
+      interval: 1
+      ease: 2.5
+    - character: 冒
+      pinyin: mào
+      meaning: To send out / To erupt / To bubble up
+      explanation: 曰 (hat/cover) + 目 (eye). Used in '冒起了水泡' (blisters erupting/breaking out on the skin).
+      interval: 1
+      ease: 2.5
+    - character: 水泡
+      pinyin: shuǐ pào
+      meaning: Blister / Bubble
+      explanation: '水 (water / fluid) + 泡 (氵 water + 包 wrap: bubble / blister). Raw blisters erupting on Quirrell''s skin wherever he touches Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 向前
+      pinyin: xiàng qián
+      meaning: Forward / Ahead
+      explanation: 向 (towards) + 前 (front / forward). Quirrell lunges forward (奇洛向前一扑) to tackle Harry to the ground.
+      interval: 1
+      ease: 2.5
+    - character: 扑
+      pinyin: pū
+      meaning: To pounce / To lunge / To throw oneself at
+      explanation: 扌 (hand) + 卜 (divination/phonetic). Quirrell lunges at Harry (向前一扑) at Voldemort's command.
+      interval: 1
+      ease: 2.5
+    - character: 撞
+      pinyin: zhuàng
+      meaning: To knock / To collide / To ram
+      explanation: 扌 (hand) + 童 (child/phonetic). Used in '把哈利撞翻在地' (knocking Harry over onto the ground).
+      interval: 1
+      ease: 2.5
+    - character: 翻
+      pinyin: fān
+      meaning: To turn over / To topple
+      explanation: 番 (turn/time) + 羽 (wings). Resultative complement in '撞翻' (knock over / bowl over).
+      interval: 1
+      ease: 2.5
+    - character: 骑
+      pinyin: qí
+      meaning: To straddle / To ride
+      explanation: 马 (horse) + 奇 (strange/phonetic). Quirrell straddles Harry on the floor (骑在他身上) to pin him down.
+      interval: 1
+      ease: 2.5
+    - character: 身上
+      pinyin: shēn shang
+      meaning: On the body / Upon someone
+      explanation: 身 (body) + 上 (on / upon). Quirrell straddles Harry's body (骑在他身上) and tries to strangle him.
+      interval: 1
+      ease: 2.5
+    - character: 掐
+      pinyin: qiā
+      meaning: To choke / To throttle / To pinch
+      explanation: 扌 (hand) + 臽 (pit/trap). Quirrell wraps both hands around Harry's neck to strangle him (用双手掐住哈利的脖子).
+      interval: 1
+      ease: 2.5
+    - character: 脖子
+      pinyin: bó zi
+      meaning: Neck / Throat
+      explanation: 脖 (月 flesh + 孛 phonetic) + 子 (noun suffix). Quirrell tries to choke Harry's neck (掐住哈利的脖子) before his hands burn.
+      interval: 1
+      ease: 2.5
+    - character: 一阵
+      pinyin: yī zhèn
+      meaning: A burst of / A wave of / A spell of
+      explanation: '一 (one) + 阵 (阝 mound + 车 chariot: battle array / wave). Classifier for sudden bouts of sensation: ''又是一阵剧痛'' (another wave of excruciating pain).'
+      interval: 1
+      ease: 2.5
+    - character: 剧痛
+      pinyin: jù tòng
+      meaning: Excruciating pain / Severe pain
+      explanation: '剧 (刂 knife + 居: severe / acute) + 痛 (pain). A wave of blinding pain shoots through Harry''s scar when Quirrell grabs his throat.'
+      interval: 1
+      ease: 2.5
+    - character: 眼前
+      pinyin: yǎn qián
+      meaning: Before one's eyes / Field of vision
+      explanation: 眼 (eye) + 前 (front). In '他眼前发黑' (his vision went black / he nearly blacked out from pain).
+      interval: 1
+      ease: 2.5
+    - character: 黑
+      pinyin: hēi
+      meaning: Black / Dark
+      explanation: Pictograph of soot around a chimney/fire (灬 fire). Used in '眼前发黑' (everything going black before his eyes).
+      interval: 1
+      ease: 2.5
+    - character: 号叫
+      pinyin: háo jiào
+      meaning: To howl / To wail
+      explanation: '号 (háo: howl / wail) + 叫 (cry out). Quirrell howls in agony (在痛苦地号叫) as Lily''s protection burns his hands.'
+      interval: 1
+      ease: 2.5
+    - character: 抓
+      pinyin: zhuā
+      meaning: To grab / To clutch / To hold onto
+      explanation: 扌 (hand) + 爪 (claw). In '抓不住他' (cannot hold onto him), Quirrell cries out that he cannot keep his grip on Harry.
+      interval: 1
+      ease: 2.5
+    - character: 虽然
+      pinyin: suī rán
+      meaning: Although / Even though
+      explanation: '虽 (口 + 虫: though) + 然 (so). Conjunction introducing a concession: although Quirrell still pins Harry with his knees, his hands let go.'
+      interval: 1
+      ease: 2.5
+    - character: 仍
+      pinyin: réng
+      meaning: Still / Yet
+      explanation: 亻 (person) + 乃 (thus). Quirrell still (仍) pins Harry to the floor with his knees even after releasing his throat.
+      interval: 1
+      ease: 2.5
+    - character: 膝盖
+      pinyin: xī gài
+      meaning: Knee / Kneecap
+      explanation: '膝 (月 flesh + 桼 lacquer/phonetic) + 盖 (艹 + 盍 cover: cap). Quirrell uses his knees (用膝盖) to pin Harry to the ground.'
+      interval: 1
+      ease: 2.5
+    - character: 压
+      pinyin: yā
+      meaning: To press down / To pin down
+      explanation: 厂 (cliff) + 土 (earth) + 丶. Quirrell pins Harry down on the floor with his knees (把哈利压在地上).
+      interval: 1
+      ease: 2.5
+    - character: 地上
+      pinyin: dì shang
+      meaning: On the ground / On the floor
+      explanation: '地 (dì: earth / ground) + 上 (on). Refers to the stone chamber floor where Quirrell pins Harry (压在地上).'
+      interval: 1
+      ease: 2.5
+    - character: 正
+      pinyin: zhèng
+      meaning: In the process of / Right now
+      explanation: '一 (one) + 止 (stop). Progressive adverb indicating ongoing action: Quirrell is right then staring bewilderedly at his palms (此刻他正困惑地盯着).'
+      interval: 1
+      ease: 2.5
+    - character: 困惑
+      pinyin: kùn huò
+      meaning: Bewildered / Perplexed / Baffled
+      explanation: '困 (囗 enclosure + 木 tree: trapped) + 惑 (或 + 心 heart: confused). Quirrell stares in bewilderment at his own burned palms (困惑地盯着自己的手掌).'
+      interval: 1
+      ease: 2.5
+    - character: 手掌
+      pinyin: shǒu zhǎng
+      meaning: Palm of the hand
+      explanation: '手 (hand) + 掌 (尚 + 手 hand: palm). Quirrell gazes at his palms (手掌), which look raw and burned by fire.'
+      interval: 1
+      ease: 2.5
+    - character: 可以
+      pinyin: kě yǐ
+      meaning: Can / Able to
+      explanation: '可 (able / may) + 以 (by means of). Expresses ability in perception: Harry can see (哈利可以看见) Quirrell''s palms shining red like burns.'
+      interval: 1
+      ease: 2.5
+    - character: 火
+      pinyin: huǒ
+      meaning: Fire
+      explanation: Pictograph of rising flames. Quirrell's hands look as though they have been burned by fire (像是被火烧伤了似的).
+      interval: 1
+      ease: 2.5
+    - character: 烧伤
+      pinyin: shāo shāng
+      meaning: To burn (injury) / Burn wound
+      explanation: '烧 (火 fire + 尧 high: burn) + 伤 (wound / injure). Quirrell''s hands suffer severe burn injuries from touching Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 似的
+      pinyin: shì de
+      meaning: As if / Like (comparison particle)
+      explanation: '似 (shì in 似的: resemble) + 的 (particle). Used with 像 in ''像是被火烧伤了似的'' (as though they had been burned by fire).'
+      interval: 1
+      ease: 2.5
+    - character: 红
+      pinyin: hóng
+      meaning: Red
+      explanation: 纟 (silk) + 工 (work/phonetic). Quirrell's blistered palms are raw and shining red (红得发亮).
+      interval: 1
+      ease: 2.5
+    - character: 发亮
+      pinyin: fā liàng
+      meaning: To shine / To gleam / Shiny
+      explanation: 发 (emit / become) + 亮 (bright / shiny). Describes the raw, glossy sheen of Quirrell's burned palms (红得发亮).
+      interval: 1
+      ease: 2.5
+    - character: 傻瓜
+      pinyin: shǎ guā
+      meaning: Fool / Idiot
+      explanation: '傻 (亻 person + 囟 + 夂: foolish) + 瓜 (melon / gourd). Voldemort snaps at Quirrell, calling him an idiot (那就把他干掉，傻瓜).'
+      interval: 1
+      ease: 2.5
+    - character: 快点
+      pinyin: kuài diǎn
+      meaning: Hurry up / Quickly
+      explanation: '快 (忄 heart + 夬: fast) + 点 (a bit). Voldemort screeches at Quirrell to hurry up and finish Harry off (快点行动).'
+      interval: 1
+      ease: 2.5
+    - character: 行动
+      pinyin: xíng dòng
+      meaning: To take action / To act / Action
+      explanation: '行 (walk / act) + 动 (move). Here means to act or get moving: ''快点行动！'' (Get on with it! / Act quickly!).'
+      interval: 1
+      ease: 2.5
+    - character: 准备
+      pinyin: zhǔn bèi
+      meaning: To prepare / To get ready to
+      explanation: '准 (冫 + 隹: allow / standard) + 备 (prepare). Quirrell raises his hand, preparing to cast a deadly curse (准备念一个致命的咒语).'
+      interval: 1
+      ease: 2.5
+    - character: 致命
+      pinyin: zhì mìng
+      meaning: Fatal / Deadly / Lethal
+      explanation: 致 (cause / deliver) + 命 (life). Literally 'costing one's life'; describes the deadly curse Quirrell is about to utter (致命的咒语).
+      interval: 1
+      ease: 2.5

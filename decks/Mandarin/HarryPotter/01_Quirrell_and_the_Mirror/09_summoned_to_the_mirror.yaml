@@ -1,0 +1,332 @@
+selected: true
+cards:
+    - character: 悄悄
+      pinyin: qiāo qiāo
+      meaning: Quietly / Secretly / Stealthily
+      explanation: Reduplication of 悄 (quiet / silent 忄+肖). Harry tried to move 'quietly / stealthily' toward the Mirror (悄悄向左边移动).
+      interval: 1
+      ease: 2.5
+    - character: 向
+      pinyin: xiàng
+      meaning: Toward / To / In the direction of
+      explanation: '丿 + 冂 + 口 (window facing a direction). Preposition of direction: ''toward the left'' (向左边移动).'
+      interval: 1
+      ease: 2.5
+    - character: 左边
+      pinyin: zuǒ biān
+      meaning: The left / Left side
+      explanation: 左 (left hand ナ+工) + 边 (side 辶+力). Harry edged toward 'the left side' (向左边移动) to get in front of the glass.
+      interval: 1
+      ease: 2.5
+    - character: 移动
+      pinyin: yí dòng
+      meaning: To move / Shift
+      explanation: 移 (shift grain seedlings 禾+多) + 动 (move 云+力). Harry tried to 'move / edge' quietly to the left (向左边移动).
+      interval: 1
+      ease: 2.5
+    - character: 趁
+      pinyin: chèn
+      meaning: While / Taking advantage of (an opportunity)
+      explanation: "走 (walk / run) + \U00031F00 (phonetic). Preposition of opportunistic timing: 'while Quirrell wasn't paying attention' (趁奇洛不注意)."
+      interval: 1
+      ease: 2.5
+    - character: 注意
+      pinyin: zhù yì
+      meaning: To pay attention / Notice / Heed
+      explanation: '注 (pour / focus 氵+主) + 意 (mind / thought 音+心). Literally ''pour one''s mind into'': hoping Quirrell wouldn''t ''notice'' (趁奇洛不注意).'
+      interval: 1
+      ease: 2.5
+    - character: 挪
+      pinyin: nuó
+      meaning: To shuffle / Edge / Shift slightly
+      explanation: '扌 (hand) + 那 (that / phonetic). Conveys slow, cramped shifting when tied up: ''inch / shuffle in front of the mirror'' (挪到镜子前面).'
+      interval: 1
+      ease: 2.5
+    - character: 前面
+      pinyin: qián miàn
+      meaning: In front / Ahead / Forefront
+      explanation: '前 (front) + 面 (face / side). Locative noun: ''in front of the mirror'' (镜子前面).'
+      interval: 1
+      ease: 2.5
+    - character: 缠住
+      pinyin: chán zhù
+      meaning: To bind fast / Wrap tightly around / Entangle
+      explanation: 缠 (wind / coil 纟+廛) + 住 (firmly / fast complement). The ropes 'bound tightly around' his ankles (缠住他脚脖子的绳索).
+      interval: 1
+      ease: 2.5
+    - character: 脚脖子
+      pinyin: jiǎo bó zi
+      meaning: Ankle
+      explanation: '脚 (foot 月+却) + 脖子 (neck 月+孛+子). Vivid colloquial term for ''ankle'' (literally ''foot-neck''): the ropes around his ''ankles'' (缠住他脚脖子的绳索).'
+      interval: 1
+      ease: 2.5
+    - character: 实在
+      pinyin: shí zài
+      meaning: Really / Indeed / Truly
+      explanation: '实 (solid / real 宀+头) + 在 (exist). Intensifying adverb before 太: the ropes were ''really too tight'' (实在太紧了).'
+      interval: 1
+      ease: 2.5
+    - character: 绊
+      pinyin: bàn
+      meaning: To trip / Stumble
+      explanation: '纟 (silk rope) + 半 (half). Notice the rope radical 纟: the tight ropes caused Harry to ''trip'' (他绊了一下).'
+      interval: 1
+      ease: 2.5
+    - character: 摔倒
+      pinyin: shuāi dǎo
+      meaning: To fall down / Tumble
+      explanation: '摔 (fall / fling 扌+率) + 倒 (topple / fall over 亻+到, third tone dǎo). Resultative compound: Harry tripped and ''fell over'' onto the ground (摔倒在地).'
+      interval: 1
+      ease: 2.5
+    - character: 理睬
+      pinyin: lǐ cǎi
+      meaning: To pay attention to / Take notice of / Acknowledge
+      explanation: '理 (manage / heed 王+里) + 睬 (take notice of 目+采). Usually used in the negative: Quirrell ''paid no attention to / ignored'' him (奇洛没有理睬他).'
+      interval: 1
+      ease: 2.5
+    - character: 自言自语
+      pinyin: zì yán zì yǔ
+      meaning: To talk to oneself / Mutter to oneself
+      explanation: '自 (self) + 言 (speak) + 自 (self) + 语 (talk). Four-character idiom: Quirrell kept ''talking to himself'' (还在那里自言自语).'
+      interval: 1
+      ease: 2.5
+    - character: 回
+      pinyin: huí
+      meaning: Matter / Occurrence (measure word in 怎么回事) / Return
+      explanation: 囗 within 囗 (revolving). In 怎么回事 ('what is going on / what's the matter'), 回 acts as a classifier for an affair or episode.
+      interval: 1
+      ease: 2.5
+    - character: 事
+      pinyin: shì
+      meaning: Matter / Affair / Thing
+      explanation: 'Hand holding a brush to record events. Combines in 怎么回事: ''What does this mirror do / How does it work?'' (这面镜子是怎么回事？).'
+      interval: 1
+      ease: 2.5
+    - character: 功能
+      pinyin: gōng néng
+      meaning: Function / Capability / Use
+      explanation: '功 (achievement / efficacy 工+力) + 能 (ability / power). Quirrell asks what ''function'' the Mirror has: ''How does it work?'' (它究竟有什么功能？).'
+      interval: 1
+      ease: 2.5
+    - character: 帮帮
+      pinyin: bāng bāng
+      meaning: Help (reduplicated for urgent plea)
+      explanation: 'Reduplication of 帮 (help / assist 邦+巾). Reduplicating the verb softens or makes an urgent plea: ''Help me, Master!'' (帮帮我吧，主人！).'
+      interval: 1
+      ease: 2.5
+    - character: 惊恐
+      pinyin: jīng kǒng
+      meaning: Terrified / Panicked / Horrified
+      explanation: 惊 (startled 忄+京) + 恐 (fearful 工+凡+心). To Harry's 'horror' (哈利惊恐地听见), a voice answered from inside Quirrell.
+      interval: 1
+      ease: 2.5
+    - character: 回答
+      pinyin: huí dá
+      meaning: To answer / Reply
+      explanation: 回 (return) + 答 (reply 竹+合). Harry heard a voice 'answering' Quirrell's plea (听见一个声音在回答).
+      interval: 1
+      ease: 2.5
+    - character: 好像
+      pinyin: hǎo xiàng
+      meaning: To seem / Be like / As though
+      explanation: 好 (very / quite) + 像 (resemble 亻+象). The voice 'seemed' to come from inside Quirrell's own body (那声音好像是从奇洛本人身体里发出来的).
+      interval: 1
+      ease: 2.5
+    - character: 本人
+      pinyin: běn rén
+      meaning: Oneself / In person
+      explanation: 本 (root / own 木+一) + 人 (person). Reflexive appositive emphasizing 'Quirrell himself' (奇洛本人身体里).
+      interval: 1
+      ease: 2.5
+    - character: 身体
+      pinyin: shēn tǐ
+      meaning: Body
+      explanation: 身 (torso / body) + 体 (body / form 亻+本). Voldemort's voice came out from inside Quirrell's own 'body' (从奇洛本人身体里发出来的).
+      interval: 1
+      ease: 2.5
+    - character: 发
+      pinyin: fā
+      meaning: To emit / Send out / Issue
+      explanation: 'First tone fā: to emit or produce (a sound). Used with directional complement 出来: ''emitted / coming out from'' his body (发出来的).'
+      interval: 1
+      ease: 2.5
+    - character: 利用
+      pinyin: lì yòng
+      meaning: To use / Make use of / Exploit
+      explanation: '利 (sharp / benefit 禾+刂) + 用 (use). Voldemort''s chilling raspy command: ''Use the boy... Use the boy...'' (利用那个男孩).'
+      interval: 1
+      ease: 2.5
+    - character: 男孩
+      pinyin: nán hái
+      meaning: Boy
+      explanation: '男 (male 田+力: strength in the field) + 孩 (child 子+亥). Refers to Harry: ''Use the boy...'' (利用那个男孩).'
+      interval: 1
+      ease: 2.5
+    - character: 转向
+      pinyin: zhuǎn xiàng
+      meaning: To turn toward / Face
+      explanation: 转 (turn 车+专, third tone zhuǎn) + 向 (toward). Quirrell 'turned toward' Harry (奇洛转向哈利).
+      interval: 1
+      ease: 2.5
+    - character: 来
+      pinyin: lái
+      meaning: To come
+      explanation: 'Verb of motion toward the speaker: ''Yes — Potter — come here'' (上这儿来).'
+      interval: 1
+      ease: 2.5
+    - character: 又
+      pinyin: yòu
+      meaning: Again / Once more
+      explanation: Depicts a right hand repeating an action. Quirrell clapped his hands 'again' (他又把双手一拍) and spoke 'again' (奇洛又说了一遍).
+      interval: 1
+      ease: 2.5
+    - character: 双手
+      pinyin: shuāng shǒu
+      meaning: Both hands
+      explanation: '双 (pair 又+又: two hands) + 手 (hand). Quirrell clapped ''both hands'' once (把双手一拍) to release Harry''s ropes.'
+      interval: 1
+      ease: 2.5
+    - character: 拍
+      pinyin: pāi
+      meaning: To clap / Slap / Pat
+      explanation: 扌 (hand) + 白 (white / phonetic). In 把双手一拍, 'clapped his hands once' to magically unbind the ropes.
+      interval: 1
+      ease: 2.5
+    - character: 捆绑
+      pinyin: kǔn bǎng
+      meaning: To tie up / Bind / Truss
+      explanation: 捆 (bind / bundle 扌+困) + 绑 (tie with rope 纟+邦). The ropes 'binding' Harry (那些捆绑哈利的绳索).
+      interval: 1
+      ease: 2.5
+    - character: 自动
+      pinyin: zì dòng
+      meaning: Automatically / Of one's own accord
+      explanation: 自 (self) + 动 (move). At Quirrell's clap, the ropes fell off 'automatically / of their own accord' (自动松开了).
+      interval: 1
+      ease: 2.5
+    - character: 松开
+      pinyin: sōng kāi
+      meaning: To loosen / Untie / Come undone
+      explanation: '松 (loose / pine tree 木+公) + 开 (open / apart). Resultative compound: the ropes ''came undone / fell loose'' (自动松开了).'
+      interval: 1
+      ease: 2.5
+    - character: 慢慢
+      pinyin: màn màn
+      meaning: Slowly
+      explanation: Reduplication of 慢 (slow 忄+曼). Harry got to his feet 'slowly' (哈利慢慢地站起身来).
+      interval: 1
+      ease: 2.5
+    - character: 站
+      pinyin: zhàn
+      meaning: To stand
+      explanation: 立 (stand) + 占 (occupy). Combines with 起身来 as 'stood up' (站起身来).
+      interval: 1
+      ease: 2.5
+    - character: 起身
+      pinyin: qǐ shēn
+      meaning: To get up / Rise to one's feet
+      explanation: '起 (rise 走+己) + 身 (body). Literally ''raise the body'': Harry slowly ''got to his feet'' (慢慢地站起身来).'
+      interval: 1
+      ease: 2.5
+    - character: 照镜子
+      pinyin: zhào jìng zi
+      meaning: To look in the mirror
+      explanation: '照 (reflect / look into) + 镜子 (mirror 钅+竟 + 子). Verb-object phrase expanded as 照一照镜子: ''Look in the mirror and tell me what you see'' (照一照镜子).'
+      interval: 1
+      ease: 2.5
+    - character: 情形
+      pinyin: qíng xíng
+      meaning: What is happening / Scene / Situation
+      explanation: 情 (condition 忄+青) + 形 (form / shape 开+彡). Quirrell orders Harry to describe 'what he sees' in the Mirror (把你看到的情形告诉我).
+      interval: 1
+      ease: 2.5
+    - character: 告诉
+      pinyin: gào su
+      meaning: To tell / Inform
+      explanation: 告 (report 牛+口) + 诉 (tell / recount 讠+斥). 'Tell me what you see' (把你看到的情形告诉我).
+      interval: 1
+      ease: 2.5
+    - character: 朝
+      pinyin: cháo
+      meaning: Toward / Facing
+      explanation: 'Preposition (read cháo, not zhāo) indicating movement toward a target: ''Harry walked toward him'' (哈利朝他走去).'
+      interval: 1
+      ease: 2.5
+    - character: 撒谎
+      pinyin: sā huǎng
+      meaning: To lie / Tell a lie
+      explanation: '撒 (cast / let out 扌+散, first tone sā) + 谎 (lie 讠+荒). Verb-object compound: ''I must lie to him'' (我必须对他撒谎).'
+      interval: 1
+      ease: 2.5
+    - character: 不顾一切
+      pinyin: bù gù yī qiè
+      meaning: Desperately / Recklessly / Regardless of everything
+      explanation: '不顾 (disregard / pay no heed to) + 一切 (everything). Idiom translating ''desperately'': Harry thought ''desperately'' (他不顾一切地想).'
+      interval: 1
+      ease: 2.5
+    - character: 先
+      pinyin: xiān
+      meaning: First / In advance
+      explanation: '儿 (legs) walking ahead of 土. Temporal adverb: ''I must first look in the mirror, and then...'' (我必须先照照镜子，然后……).'
+      interval: 1
+      ease: 2.5
+    - character: 照照
+      pinyin: zhào zhào
+      meaning: To take a look in (a mirror)
+      explanation: 'Reduplication of 照 (reflect / look in a mirror). Expresses a quick look: ''look in the mirror first'' (先照照镜子).'
+      interval: 1
+      ease: 2.5
+    - character: 然后
+      pinyin: rán hòu
+      meaning: Then / After that / Afterwards
+      explanation: '然 (so / thus) + 后 (after). Correlative conjunction pairing with 先 (''first... then...''): ''and then make up a lie'' (然后编出一套谎话).'
+      interval: 1
+      ease: 2.5
+    - character: 编
+      pinyin: biān
+      meaning: To weave / Fabricate / Make up
+      explanation: 纟 (silk thread) + 扁 (flat). Figuratively means to 'weave / make up' a story or lie (编出一套谎话).
+      interval: 1
+      ease: 2.5
+    - character: 谎话
+      pinyin: huǎng huà
+      meaning: Lie / Falsehood
+      explanation: 谎 (wild words / lie 讠+荒) + 话 (speech / words 讠+舌). Harry plans to make up 'a lie' (编出一套谎话来骗他).
+      interval: 1
+      ease: 2.5
+    - character: 骗
+      pinyin: piàn
+      meaning: To deceive / Fool / Trick
+      explanation: '马 (horse: jumping on a horse by stealth) + 扁 (phonetic). To ''fool / trick'' Quirrell with a lie (编出一套谎话来骗他).'
+      interval: 1
+      ease: 2.5
+    - character: 这么
+      pinyin: zhè me
+      meaning: So / Like this / In this way
+      explanation: '这 (this) + 么 (manner suffix). Demonstrative adverb modifying a verb: ''do it like this / that''s what I''ll do'' (就这么做).'
+      interval: 1
+      ease: 2.5
+    - character: 凑
+      pinyin: còu
+      meaning: To move close to / Lean in / Gather
+      explanation: 冫 + 奏 (present / advance). Quirrell 'moved close / closed in' right behind Harry (奇洛凑到他的身后).
+      interval: 1
+      ease: 2.5
+    - character: 闻
+      pinyin: wén
+      meaning: To smell / Scent / Hear
+      explanation: '门 (gate) + 耳 (ear). In modern Mandarin, means ''to smell'': Harry ''smelled'' a strange odor coming from Quirrell''s turban (哈利闻到一股奇怪的气味).'
+      interval: 1
+      ease: 2.5
+    - character: 股
+      pinyin: gǔ
+      meaning: Waft / Puff (measure word for smells, currents, or forces); thigh
+      explanation: '月 (flesh) + 殳 (strike). Used here as a measure word for a waft of smell: Harry smells a strange odor (一股奇怪的气味) coming from Quirrell''s turban.'
+      interval: 1
+      ease: 2.5
+    - character: 奇怪
+      pinyin: qí guài
+      meaning: Strange / Odd / Bizarre
+      explanation: 奇 (unusual / rare) + 怪 (weird / monster). Describes the strange smell emanating from Quirrell's turban (奇怪的气味), which masks Voldemort's presence with garlic.
+      interval: 1
+      ease: 2.5

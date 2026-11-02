@@ -1,0 +1,247 @@
+cards:
+    - character: 立刻
+      pinyin: lì kè
+      meaning: Immediately / At once / Instantly
+      explanation: 立 (stand / immediately) + 刻 (刂 knife = carve / quarter-hour / moment). In an instant, the green hangings turn scarlet and the silver turns gold.
+      interval: 1
+      ease: 2.5
+    - character: 悬垂
+      pinyin: xuán chuí
+      meaning: Overhanging / Hanging down / Draping
+      explanation: '悬 (xuán: suspend / hang in air) + 垂 (chuí: droop / hang down). Describes the green Slytherin banners hanging from the Great Hall ceiling before Dumbledore transforms them.'
+      interval: 1
+      ease: 2.5
+    - character: 彩带
+      pinyin: cǎi dài
+      meaning: Colored ribbon / Streamer / Banner
+      explanation: '彩 (cǎi: colorful / variegated) + 带 (dài: ribbon / belt / band). Refers to the decorative House banners and streamers draped across the Great Hall for the end-of-year feast.'
+      interval: 1
+      ease: 2.5
+    - character: 鲜红色
+      pinyin: xiān hóng sè
+      meaning: Scarlet / Bright red
+      explanation: '鲜 (xiān: bright / fresh) + 红 (hóng: red) + 色 (sè: color). The vivid scarlet color of Gryffindor House that replaces Slytherin green when Gryffindor wins the House Cup.'
+      interval: 1
+      ease: 2.5
+    - character: 隐去
+      pinyin: yǐn qù
+      meaning: To fade away / To vanish / To disappear
+      explanation: '隐 (yǐn: hide / conceal, 阝 mound + 急) + 去 (qù: go away). Describes the giant Slytherin serpent vanishing from the banner as the Gryffindor lion takes its place.'
+      interval: 1
+      ease: 2.5
+    - character: 取而代之
+      pinyin: qǔ ér dài zhī
+      meaning: To replace / To take someone or something's place
+      explanation: 'Four-character idiom: 取 (qǔ: take) + 而 (ér: and) + 代 (dài: replace / substitute) + 之 (zhī: it). Describes the towering Gryffindor lion replacing the vanished Slytherin serpent on the Great Hall banner.'
+      interval: 1
+      ease: 2.5
+    - character: 威风凛凛
+      pinyin: wēi fēng lǐn lǐn
+      meaning: Majestic / Awesome / Imposing
+      explanation: 'Idiom: 威风 (wēi fēng: might / imposing power) + 凛凛 (lǐn lǐn: awe-inspiring / stern). Describes the majestic, commanding appearance of the Gryffindor lion on the transformed banner.'
+      interval: 1
+      ease: 2.5
+    - character: 狮子
+      pinyin: shī zi
+      meaning: Lion
+      explanation: '狮 (shī: lion, 犭 beast radical + 师 teacher/master for sound) + 子 (zi: noun suffix). The proud emblem of Gryffindor House.'
+      interval: 1
+      ease: 2.5
+    - character: 强
+      pinyin: qiǎng
+      meaning: To force / To compel / Reluctantly
+      explanation: '弓 (bow) + 虽 (insect). Read qiǎng (third tone, as in 勉强) when meaning to force oneself against one''s will: Snape forces out (强挤出) an awkward smile while shaking Professor McGonagall''s hand.'
+      interval: 1
+      ease: 2.5
+    - character: 挤出
+      pinyin: jǐ chū
+      meaning: To squeeze out / To force out
+      explanation: '挤 (jǐ: squeeze / crowd, 扌 hand + 齐 even) + 出 (chū: out). Used figuratively as Snape forces out (强挤出) a stiff, awkward smile upon Gryffindor''s victory.'
+      interval: 1
+      ease: 2.5
+    - character: 尴尬
+      pinyin: gān gà
+      meaning: Awkward / Embarrassed / Ill at ease
+      explanation: 'Both characters share the尤 (yóu: lame / crooked) radical + 监/介 phonetics, depicting a twisted, uncomfortable posture. Describes Snape''s strained, awkward smile as he congratulates McGonagall.'
+      interval: 1
+      ease: 2.5
+    - character: 目光
+      pinyin: mù guāng
+      meaning: Gaze / Sight / Line of vision
+      explanation: '目 (mù: eye) + 光 (guāng: light / ray). Literally ''eye-light''; Snape''s gaze meets Harry''s, confirming his hostility toward Harry hasn''t changed a bit.'
+      interval: 1
+      ease: 2.5
+    - character: 态度
+      pinyin: tài dù
+      meaning: Attitude / Manner / Bearing
+      explanation: '态 (tài: manner / state, 能 ability + 心 heart) + 度 (dù: measure / bearing). Harry realizes from Snape''s glare that Snape''s attitude toward him has not changed at all.'
+      interval: 1
+      ease: 2.5
+    - character: 明年
+      pinyin: míng nián
+      meaning: Next year
+      explanation: '明 (míng: bright / next, 日 sun + 月 moon) + 年 (nián: year). Harry takes comfort knowing that life next school year at Hogwarts will return to normal.'
+      interval: 1
+      ease: 2.5
+    - character: 生活
+      pinyin: shēng huó
+      meaning: Life / Daily living
+      explanation: '生 (shēng: live / birth) + 活 (huó: alive / vivid, 氵 water + 舌 tongue). Refers to Harry''s everyday school life at Hogwarts returning to its usual state.'
+      interval: 1
+      ease: 2.5
+    - character: 将
+      pinyin: jiāng
+      meaning: Will / Shall / About to
+      explanation: 寸 (inch/hand) + 丬. Future tense auxiliary verb in '明年的生活又将恢复正常' (next year's life will return to normal again).
+      interval: 1
+      ease: 2.5
+    - character: 至少
+      pinyin: zhì shǎo
+      meaning: At least
+      explanation: '至 (zhì: arrive / extreme) + 少 (shǎo: few / little). Concessive adverb: life will return to normal—or at least as normal as Hogwarts ever gets.'
+      interval: 1
+      ease: 2.5
+    - character: 一贯
+      pinyin: yī guàn
+      meaning: Consistent / Usual / All along
+      explanation: '一 (yī: one / unbroken) + 贯 (guàn: pierce through / string of coins). Refers to Hogwarts''s customary, usual state of affairs (霍格沃茨一贯的状态).'
+      interval: 1
+      ease: 2.5
+    - character: 状态
+      pinyin: zhuàng tài
+      meaning: State / Condition / Status
+      explanation: '状 (zhuàng: form / shape, 丬 + 犬 dog) + 态 (tài: condition / state). Describes the usual state or condition of life at Hogwarts.'
+      interval: 1
+      ease: 2.5
+    - character: 一生
+      pinyin: yī shēng
+      meaning: All one's life / Lifetime
+      explanation: '一 (yī: one / whole) + 生 (shēng: life / lifetime). The House Cup victory celebration is the happiest night of Harry''s entire life (一生中最美好的夜晚).'
+      interval: 1
+      ease: 2.5
+    - character: 夜晚
+      pinyin: yè wǎn
+      meaning: Night / Evening
+      explanation: '夜 (yè: night) + 晚 (wǎn: evening / late, 日 sun + 免). Harry vows he will never forget this wonderful night.'
+      interval: 1
+      ease: 2.5
+    - character: 欢庆
+      pinyin: huān qìng
+      meaning: To celebrate joyously
+      explanation: '欢 (huān: joyous / cheerful) + 庆 (qìng: celebrate / congratulate). Refers to joyously celebrating Christmas (欢庆圣诞), which this night even surpasses.'
+      interval: 1
+      ease: 2.5
+    - character: 圣诞
+      pinyin: Shèng dàn
+      meaning: Christmas
+      explanation: '圣 (shèng: holy / sacred) + 诞 (dàn: birth, 讠 speech + 延 extend). Short for 圣诞节 (Christmas), literally ''Holy Birth''.'
+      interval: 1
+      ease: 2.5
+    - character: 或
+      pinyin: huò
+      meaning: Or / Perhaps
+      explanation: 戈 (halberd) + 口 (mouth/territory) + 一 (boundary). Conjunction meaning 'or' in '赢了魁地奇比赛、欢庆圣诞或打败巨怪'.
+      interval: 1
+      ease: 2.5
+    - character: 打败
+      pinyin: dǎ bài
+      meaning: To defeat / To beat / To vanquish
+      explanation: '打 (dǎ: strike / hit) + 败 (bài: defeat / fail, 贝 shell + 攵 strike). Refers to defeating the mountain troll (打败巨怪) earlier in the year.'
+      interval: 1
+      ease: 2.5
+    - character: 日子
+      pinyin: rì zi
+      meaning: Day / Days / Date / Life
+      explanation: '日 (rì: sun / day) + 子 (zi: noun suffix). Refers to the memorable days of winning Quidditch, celebrating Christmas, or knocking out the mountain troll.'
+      interval: 1
+      ease: 2.5
+    - character: 忘记
+      pinyin: wàng jì
+      meaning: To forget
+      explanation: '忘 (wàng: forget, 亡 lose + 心 heart) + 记 (jì: remember / record, 讠 words + 己 self). Harry knows he will never, ever forget this night.'
+      interval: 1
+      ease: 2.5
+    - character: 几乎
+      pinyin: jǐ hū
+      meaning: Almost / Nearly
+      explanation: '几 (jǐ: small table / nearly) + 乎 (hū: particle). Amid the celebration, Harry had almost forgotten (几乎忘了) that exam results were still to come.'
+      interval: 1
+      ease: 2.5
+    - character: 忘
+      pinyin: wàng
+      meaning: To forget
+      explanation: '亡 (wáng: perish / vanish) + 心 (xīn: heart / mind): when something vanishes from the mind, it is forgotten. Used in ''哈利几乎忘了考试成绩还没有公布''.'
+      interval: 1
+      ease: 2.5
+    - character: 考试
+      pinyin: kǎo shì
+      meaning: Exam / Examination / Test
+      explanation: '考 (kǎo: test / examine) + 试 (shì: try / test, 讠 speech + 式 style). Refers to the end-of-year Hogwarts examinations.'
+      interval: 1
+      ease: 2.5
+    - character: 成绩
+      pinyin: chéng jì
+      meaning: Result / Score / Grade / Achievement
+      explanation: '成 (chéng: accomplish) + 绩 (jì: spinning thread / achievement, 纟 silk + 责 duty). Refers to the students'' final exam grades (考试成绩).'
+      interval: 1
+      ease: 2.5
+    - character: 公布
+      pinyin: gōng bù
+      meaning: To announce / To publish / To make public
+      explanation: '公 (gōng: public / open) + 布 (bù:cloth / declare / spread). Refers to the official release of the exam results.'
+      interval: 1
+      ease: 2.5
+    - character: 到来
+      pinyin: dào lái
+      meaning: To arrive / Arrival / Coming
+      explanation: '到 (dào: arrive / reach) + 来 (lái: come). The day the exam results are announced finally arrives (那一天终于到来了).'
+      interval: 1
+      ease: 2.5
+    - character: 高
+      pinyin: gāo
+      meaning: High / Tall
+      explanation: Pictograph of a tall multi-story tower or pavilion. Harry and Ron both pass their exams with very high marks (很高的分数).
+      interval: 1
+      ease: 2.5
+    - character: 意外
+      pinyin: yì wài
+      meaning: Surprised / Unexpected / Accident
+      explanation: '意 (yì: expectation / thought) + 外 (wài: outside / beyond). Passing with high marks leaves Harry and Ron pleasantly surprised (感到十分意外).'
+      interval: 1
+      ease: 2.5
+    - character: 年级
+      pinyin: nián jí
+      meaning: Grade / Year (in school)
+      explanation: '年 (nián: year) + 级 (jí: level / rank, 纟 silk + 及 reach). Hermione naturally finishes first in the entire first-year class (全年级第一名).'
+      interval: 1
+      ease: 2.5
+    - character: 侥幸
+      pinyin: jiǎo xìng
+      meaning: By luck / By a narrow margin / Thankfully
+      explanation: '侥 (jiǎo: by mere luck, 亻 person + 尧) + 幸 (xìng: fortunate / lucky). Even Neville scrapes through by luck (侥幸过关了).'
+      interval: 1
+      ease: 2.5
+    - character: 过关
+      pinyin: guò guān
+      meaning: To pass a test / To get through a barrier
+      explanation: '过 (guò: pass / cross) + 关 (guān: mountain pass / checkpoint / barrier). Idiomatic for passing exams or clearing a hurdle; Neville manages to pass his first-year exams.'
+      interval: 1
+      ease: 2.5
+    - character: 草药学
+      pinyin: cǎo yào xué
+      meaning: Herbology
+      explanation: '草 (cǎo: grass / plant) + 药 (yào: medicine / herb) + 学 (xué: study / -ology). Neville''s strong grades in Herbology make up for his dismal Potions marks.'
+      interval: 1
+      ease: 2.5
+    - character: 大大
+      pinyin: dà dà
+      meaning: Greatly / Enormously
+      explanation: 'Reduplication of 大 (dà: big / great) used as an intensifying adverb: Neville''s good Herbology grade greatly (大大) compensates for his Potions score.'
+      interval: 1
+      ease: 2.5
+    - character: 弥补
+      pinyin: mí bǔ
+      meaning: To make up for / To compensate / To remedy
+      explanation: '弥 (mí: fill / mend, 弓 bow + 尔) + 补 (bǔ: patch / mend, 衤 clothing + 卜). Neville''s Herbology mark makes up for the points he lost in Potions.'
+      interval: 1
+      ease: 2.5

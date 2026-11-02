@@ -1,0 +1,235 @@
+cards:
+    - character: 咒语
+      pinyin: zhòu yǔ
+      meaning: Spell / Curse / Incantation
+      explanation: '咒 (口 mouths + 兄 priest: incantation) + 语 (讠 speech + 吾: words). The lethal curse Quirrell prepares to cast on Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 出于
+      pinyin: chū yú
+      meaning: Out of / Stemming from
+      explanation: '出 (come out) + 于 (from / in). Indicates motivation or source: ''出于本能'' (out of instinct).'
+      interval: 1
+      ease: 2.5
+    - character: 本能
+      pinyin: běn néng
+      meaning: Instinct
+      explanation: 本 (root / innate) + 能 (ability). Acting on pure instinct (出于本能), Harry reaches up and grabs Quirrell's face.
+      interval: 1
+      ease: 2.5
+    - character: 抬手
+      pinyin: tái shǒu
+      meaning: To raise one's hand
+      explanation: '抬 (扌 hand + 台 platform: lift / raise) + 手 (hand). Harry instinctively raises his hands to grab Quirrell''s face (猛地抬手抓向奇洛的脸).'
+      interval: 1
+      ease: 2.5
+    - character: 滚
+      pinyin: gǔn
+      meaning: To roll
+      explanation: 氵 (water) + 衮 (ceremonial robe/phonetic). Quirrell rolls off Harry (从哈利身上滚了下去) in agony after Harry touches his face.
+      interval: 1
+      ease: 2.5
+    - character: 下去
+      pinyin: xià qù
+      meaning: Down / Downward (directional complement)
+      explanation: 下 (down) + 去 (go away from speaker). Directional complement in '滚了下去' (rolled off and down onto the floor).
+      interval: 1
+      ease: 2.5
+    - character: 只要
+      pinyin: zhǐ yào
+      meaning: As long as / Provided that
+      explanation: '只 (only) + 要 (need / if). Introduces a sufficient condition: Harry realizes that as long as Quirrell touches his bare skin, Quirrell suffers agony.'
+      interval: 1
+      ease: 2.5
+    - character: 碰到
+      pinyin: pèng dào
+      meaning: To touch / To come into contact with
+      explanation: '碰 (石 stone + 并 combine: bump / touch) + 到 (reach). Whenever Quirrell touches Harry''s bare skin (碰到自己裸露在外的皮肤), he blisters and burns.'
+      interval: 1
+      ease: 2.5
+    - character: 在外
+      pinyin: zài wài
+      meaning: Outside / Exposed
+      explanation: 在 (at / in) + 外 (outside). Used in '裸露在外的皮肤' (bare skin exposed on the outside).
+      interval: 1
+      ease: 2.5
+    - character: 皮肤
+      pinyin: pí fū
+      meaning: Skin
+      explanation: '皮 (skin / hide) + 肤 (月 flesh + 夫 man: epidermis). Lily''s sacrificial love lives in Harry''s skin (皮肤), burning Quirrell on contact.'
+      interval: 1
+      ease: 2.5
+    - character: 剧痛难忍
+      pinyin: jù tòng nán rěn
+      meaning: Unbearably painful / Excruciating pain beyond endurance
+      explanation: '剧痛 (severe pain) + 难 (hard to) + 忍 (刃 blade over 心 heart: endure). Quirrell suffers unbearable agony whenever he touches Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 逃生
+      pinyin: táo shēng
+      meaning: To escape with one's life / To survive
+      explanation: '逃 (辶 walk + 兆 omen: flee) + 生 (life). Harry realizes his only chance to survive (哈利要逃生) is to keep holding onto Quirrell.'
+      interval: 1
+      ease: 2.5
+    - character: 死死
+      pinyin: sǐ sǐ
+      meaning: Tightly / To the death / Rigidly
+      explanation: 'Reduplication of 死 (die / to the death). Expresses extreme intensity: holding onto Quirrell for dear life (死死抓住奇洛).'
+      interval: 1
+      ease: 2.5
+    - character: 痛
+      pinyin: tòng
+      meaning: To hurt / Pain / Sorely
+      explanation: 疒 (sickness) + 甬 (path/phonetic). Used before 得 in '让奇洛痛得无法对自己施咒' (making Quirrell hurt so badly he cannot cast a spell).
+      interval: 1
+      ease: 2.5
+    - character: 施咒
+      pinyin: shī zhòu
+      meaning: To cast a spell / To put a curse on
+      explanation: '施 (方 + 也: carry out / cast) + 咒 (incantation / curse). Harry grabs Quirrell so the pain prevents him from casting a curse (无法对自己施咒).'
+      interval: 1
+      ease: 2.5
+    - character: 跳
+      pinyin: tiào
+      meaning: To jump / To leap
+      explanation: 足 (foot) + 兆 (omen/phonetic). Harry leaps to his feet (哈利跳了起来) to seize Quirrell's arm.
+      interval: 1
+      ease: 2.5
+    - character: 一把
+      pinyin: yī bǎ
+      meaning: With one grab / In a single grasp
+      explanation: '一 (one) + 把 (扌 hand + 巴: grasp / handful). Adverbial phrase in ''一把抓住'' (grabbing hold of with a sudden, firm grasp).'
+      interval: 1
+      ease: 2.5
+    - character: 手臂
+      pinyin: shǒu bì
+      meaning: Arm
+      explanation: '手 (hand) + 臂 (辟 + 月 flesh: arm). Harry grabs Quirrell''s arm (一把抓住奇洛的手臂) and refuses to let go.'
+      interval: 1
+      ease: 2.5
+    - character: 不肯
+      pinyin: bù kěn
+      meaning: To refuse to / Unwilling to
+      explanation: '不 (not) + 肯 (止 + 月: consent / be willing). In ''死也不肯撒手'' (refusing to let go even onto death).'
+      interval: 1
+      ease: 2.5
+    - character: 撒手
+      pinyin: sā shǒu
+      meaning: To let go / To release one's grip
+      explanation: '撒 (sā: let go / release, 扌 hand + 散 scatter) + 手 (hand). Harry clings to Quirrell and refuses to let go (死也不肯撒手).'
+      interval: 1
+      ease: 2.5
+    - character: 惨叫
+      pinyin: cǎn jiào
+      meaning: To scream in agony / To shriek
+      explanation: '惨 (忄 heart + 参: miserable / tragic) + 叫 (cry out). Quirrell screams in agony (奇洛惨叫着) as Harry clings to him.'
+      interval: 1
+      ease: 2.5
+    - character: 甩掉
+      pinyin: shuǎi diào
+      meaning: To shake off / To fling off
+      explanation: 甩 (fling / toss) + 掉 (drop / off). Quirrell desperately tries to shake Harry off (拼命想把哈利甩掉).
+      interval: 1
+      ease: 2.5
+    - character: 头痛
+      pinyin: tóu tòng
+      meaning: Headache / Pain in the head
+      explanation: 头 (head) + 痛 (pain). As Harry holds onto Quirrell, his own scar-induced headache grows more and more intense (哈利的头痛也越来越剧烈).
+      interval: 1
+      ease: 2.5
+    - character: 越来越
+      pinyin: yuè lái yuè
+      meaning: More and more
+      explanation: '越 (走 walk + 戉: exceed) + 来 (come) + 越. Correlative pattern expressing increasing degree over time (越来越剧烈 = more and more intense).'
+      interval: 1
+      ease: 2.5
+    - character: 剧烈
+      pinyin: jù liè
+      meaning: Intense / Violent / Acute
+      explanation: '剧 (severe / acute) + 烈 (列 + 灬 fire: fierce / intense). Describes the searing intensity of Harry''s headache (越来越剧烈).'
+      interval: 1
+      ease: 2.5
+    - character: 可怖
+      pinyin: kě bù
+      meaning: Horrible / Terrifying / Ghastly
+      explanation: '可 (able / worthy of) + 怖 (忄 heart + 布: fear / terror). Blinded by pain, Harry can only hear Quirrell''s ghastly screams (奇洛可怖的尖叫).'
+      interval: 1
+      ease: 2.5
+    - character: 咆哮
+      pinyin: páo xiào
+      meaning: To roar / To bellow
+      explanation: '咆 (口 mouth + 包 wrap: roar) + 哮 (口 mouth + 孝 filial: howl). Voldemort roars furiously (恶狠狠的咆哮) ordering Quirrell to kill Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 杀死
+      pinyin: shā sǐ
+      meaning: To kill / To slay
+      explanation: 杀 (kill) + 死 (die, resultative complement). Voldemort bellows 'Kill him! Kill him!' (杀死他！杀死他！).
+      interval: 1
+      ease: 2.5
+    - character: 另外
+      pinyin: lìng wài
+      meaning: In addition / Besides / Other
+      explanation: '另 (口 + 力: separate / other) + 外 (outside). Introduces the other voices (另外还有一些声音) Harry hears calling his name as Dumbledore arrives.'
+      interval: 1
+      ease: 2.5
+    - character: 喊
+      pinyin: hǎn
+      meaning: To shout / To call out
+      explanation: 口 (mouth) + 咸 (all/phonetic). Voices call out Harry's name (在喊着：“哈利！哈利！”) as he loses consciousness.
+      interval: 1
+      ease: 2.5
+    - character: 也许
+      pinyin: yě xǔ
+      meaning: Perhaps / Maybe
+      explanation: '也 (also) + 许 (讠 speech + 午: allow / perhaps). Harry wonders if the voices calling his name are maybe just a hallucination (这也许是他脑海里的幻觉).'
+      interval: 1
+      ease: 2.5
+    - character: 脑海
+      pinyin: nǎo hǎi
+      meaning: Mind / Brain (literally 'sea of the brain')
+      explanation: '脑 (月 flesh + 亠 + 凶: brain) + 海 (氵 water + 每: sea). Metaphor for the mind or consciousness (脑海里的幻觉 = a hallucination in his mind).'
+      interval: 1
+      ease: 2.5
+    - character: 幻觉
+      pinyin: huàn jué
+      meaning: Hallucination / Illusion
+      explanation: '幻 (幺丝 twisted thread: illusion / fantasy) + 觉 (perceive / sense). Harry thinks the voices calling his name might be a hallucination in his mind.'
+      interval: 1
+      ease: 2.5
+    - character: 完
+      pinyin: wán
+      meaning: Finished / Over / Doomed
+      explanation: 宀 (roof) + 元 (first/origin). In '一切都完了' (everything was over / all was lost), as Quirrell's arm wrenches free before Harry blacks out.
+      interval: 1
+      ease: 2.5
+    - character: 接着
+      pinyin: jiē zhe
+      meaning: Then / Immediately after / Next
+      explanation: '接 (扌 hand + 妾: connect / follow) + 着 (particle). Marks the transition as Harry sinks into darkness right after losing his grip.'
+      interval: 1
+      ease: 2.5
+    - character: 沉入
+      pinyin: chén rù
+      meaning: To sink into / To plunge into
+      explanation: '沉 (氵 water + 冗: sink) + 入 (enter). Harry sinks into total darkness (沉入了一片黑暗) as he passes out.'
+      interval: 1
+      ease: 2.5
+    - character: 片
+      pinyin: piàn
+      meaning: Expanse of / Stretch of / Slice
+      explanation: 'Pictograph of split wood. Measure word for an expanse of darkness or scenery: ''一片黑暗'' (a sheet/expanse of darkness).'
+      interval: 1
+      ease: 2.5
+    - character: 黑暗
+      pinyin: hēi àn
+      meaning: Darkness
+      explanation: '黑 (black) + 暗 (日 sun + 音 sound: dark / dim). Harry loses consciousness and falls into an expanse of darkness (一片黑暗).'
+      interval: 1
+      ease: 2.5
+    - character: 坠落
+      pinyin: zhuì luò
+      meaning: To fall / To plummet / To plunge
+      explanation: '坠 (队 + 土 earth: fall down) + 落 (艹 grass + 洛: drop / fall). Repeated three times (向下坠落……坠落……坠落……) as Harry faints.'
+      interval: 1
+      ease: 2.5

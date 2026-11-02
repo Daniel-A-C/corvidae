@@ -1,0 +1,332 @@
+selected: true
+cards:
+    - character: 是
+      pinyin: shì
+      meaning: To be / It is
+      explanation: '日 (sun) + 正 (correct/upright). Copula verb used for emphatic identification: "是奇洛" (It was Quirrell).'
+      interval: 1
+      ease: 2.5
+    - character: 奇洛
+      pinyin: Qí luò
+      meaning: Quirrell (Professor Quirrell)
+      explanation: '奇 (qí: strange / unusual) + 洛 (luò: river name, phonetic). Mandarin transliteration of Professor Quirinus Quirrell, revealed as the villain in front of the Mirror.'
+      interval: 1
+      ease: 2.5
+    - character: 你
+      pinyin: nǐ
+      meaning: You (singular)
+      explanation: '亻 (person) + 尔 (you / phonetic). Second-person singular pronoun, gasped in shock by Harry: "你！" ("You!").'
+      interval: 1
+      ease: 2.5
+    - character: 哈利
+      pinyin: Hā lì
+      meaning: Harry (Harry Potter)
+      explanation: '哈 (hā: breathe out / ha) + 利 (lì: sharp / benefit). Standard Mandarin transliteration of Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 惊愕
+      pinyin: jīng è
+      meaning: Stunned / Astounded / Shocked
+      explanation: 惊 (忄 heart + 京 capital = startled) + 愕 (忄 heart + 咢 = stunned). Describes Harry's utter shock upon seeing Quirrell instead of Snape.
+      interval: 1
+      ease: 2.5
+    - character: 得
+      pinyin: de
+      meaning: Structural particle (degree complement)
+      explanation: '彳 (step) + 旦 + 寸. Structural particle linking an adjective or verb to a complement of degree: "惊愕得喘不过气来" (so stunned that he couldn''t catch his breath).'
+      interval: 1
+      ease: 2.5
+    - character: 喘不过气来
+      pinyin: chuǎn bù guò qì lái
+      meaning: Out of breath / Gasping for breath
+      explanation: 喘 (口 mouth + 耑 = pant/gasp) + 不过 (unable to pass) + 气 (breath) + 来 (directional complement). Idiomatic phrase describing Harry gasping in disbelief.
+      interval: 1
+      ease: 2.5
+    - character: 笑
+      pinyin: xiào
+      meaning: To smile / To laugh
+      explanation: ⺮ (bamboo) + 夭 (bent). Quirrell smiles calmly ("奇洛笑了") now that his nervous facade is dropped.
+      interval: 1
+      ease: 2.5
+    - character: 了
+      pinyin: le
+      meaning: Aspect particle (completed action / change of state)
+      explanation: Pictograph of a swaddled child. Marks completed action ("奇洛笑了") or a new situation ("一点也不抽搐了").
+      interval: 1
+      ease: 2.5
+    - character: 现在
+      pinyin: xiàn zài
+      meaning: Now / At present
+      explanation: 现 (王 jade + 见 see/appear = manifest/present) + 在 (be at). Contrasts Quirrell's current composed demeanor with his earlier nervous act.
+      interval: 1
+      ease: 2.5
+    - character: 他
+      pinyin: tā
+      meaning: He / Him
+      explanation: 亻 (person) + 也 (also). Third-person masculine pronoun referring to Quirrell.
+      interval: 1
+      ease: 2.5
+    - character: 的
+      pinyin: de
+      meaning: Possessive / Attributive particle
+      explanation: 白 (white) + 勺 (ladle). Links possessor or modifier to a noun, as in "他的脸" (his face).
+      interval: 1
+      ease: 2.5
+    - character: 脸
+      pinyin: liǎn
+      meaning: Face
+      explanation: 月 (肉 flesh/body) + 佥 (all/together, phonetic). Refers to Quirrell's face ("他的脸"), which is no longer twitching.
+      interval: 1
+      ease: 2.5
+    - character: 一点
+      pinyin: yī diǎn
+      meaning: A bit / At all (with negation)
+      explanation: '一 (one) + 点 (drop/dot, 灬 fire radical). Used with 也/都 + 不 to mean "not at all": "一点也不抽搐了" (not twitching at all anymore).'
+      interval: 1
+      ease: 2.5
+    - character: 也
+      pinyin: yě
+      meaning: Also / Even (in negative constructions)
+      explanation: 'Classical particle extended to mean "also" or "even" in emphatic negation: "一点也不抽搐" (not even twitching a bit).'
+      interval: 1
+      ease: 2.5
+    - character: 不
+      pinyin: bù
+      meaning: Not / No
+      explanation: Standard negation adverb, used in "一点也不抽搐了" (not twitching at all).
+      interval: 1
+      ease: 2.5
+    - character: 抽搐
+      pinyin: chōu chù
+      meaning: To twitch / To spasm
+      explanation: 抽 (扌 hand + 由 = pull/jerk) + 搐 (疒 sickness + 畜 = spasm/convulse). Refers to Quirrell's fake nervous facial tic.
+      interval: 1
+      ease: 2.5
+    - character: 我
+      pinyin: wǒ
+      meaning: I / Me
+      explanation: '手 (hand) + 戈 (halberd). First-person singular pronoun: "是我" ("It is I / Me," said Quirrell).'
+      interval: 1
+      ease: 2.5
+    - character: 冷静
+      pinyin: lěng jìng
+      meaning: Calm / Cool-headed / Composed
+      explanation: 冷 (冫 ice + 令 = cold/cool) + 静 (青 + 争 = quiet/still). Quirrell speaks "冷静地" (calmly), shedding his timid persona.
+      interval: 1
+      ease: 2.5
+    - character: 地
+      pinyin: de
+      meaning: Adverbial particle (-ly)
+      explanation: '土 (earth) + 也. Turns an adjective into an adverbial modifier before a verb: "冷静地说" (said calmly).'
+      interval: 1
+      ease: 2.5
+    - character: 说
+      pinyin: shuō
+      meaning: To speak / To say
+      explanation: '讠 (speech) + 兑 (exchange). Basic verb of speaking: "他冷静地说" (he said calmly).'
+      interval: 1
+      ease: 2.5
+    - character: 刚才
+      pinyin: gāng cái
+      meaning: Just now / A moment ago
+      explanation: '刚 (刀 knife + 冈 = just/hard) + 才 (just/only then). Indicates the immediate past: "我刚才还在想" (I was just wondering).'
+      interval: 1
+      ease: 2.5
+    - character: 还
+      pinyin: hái
+      meaning: Still / Even / Yet
+      explanation: '辶 (walk) + 不. Adverb indicating continuation of a state or action: "我刚才还在想" (I was still/just thinking).'
+      interval: 1
+      ease: 2.5
+    - character: 在
+      pinyin: zài
+      meaning: In the process of (progressive marker) / At
+      explanation: 土 (earth) + 才. Before a verb, marks ongoing action ("还在想" = was thinking); before a place, means "at/in" ("在这儿" = here).
+      interval: 1
+      ease: 2.5
+    - character: 想
+      pinyin: xiǎng
+      meaning: To think / To wonder / To want
+      explanation: '相 (mutual/appearance) + 心 (heart/mind). Here means to ponder or wonder: "我刚才还在想" (I was just wondering).'
+      interval: 1
+      ease: 2.5
+    - character: 会
+      pinyin: huì
+      meaning: Will / Would / Likely to
+      explanation: '人 (person/gather) + 云 (cloud). Modal verb expressing future possibility: "我会不会在这儿遇见你" (whether I would meet you here).'
+      interval: 1
+      ease: 2.5
+    - character: 不会
+      pinyin: bù huì
+      meaning: Will not / Would not
+      explanation: 不 (not) + 会 (will/likely). Paired with 会 in the A-not-A question structure "会不会" (whether or not would).
+      interval: 1
+      ease: 2.5
+    - character: 这儿
+      pinyin: zhè ér
+      meaning: Here
+      explanation: '这 (this) + 儿 (erhua retroflex suffix). Colloquial Northern Mandarin for "here": "在这儿遇见你" (meet you here).'
+      interval: 1
+      ease: 2.5
+    - character: 遇见
+      pinyin: yù jiàn
+      meaning: To meet / To run into / To encounter
+      explanation: 遇 (辶 movement + 禺 = encounter/chance upon) + 见 (see/perceive). Quirrell remarks on wondering if he would meet Harry here.
+      interval: 1
+      ease: 2.5
+    - character: 波特
+      pinyin: Bō tè
+      meaning: Potter (Harry Potter)
+      explanation: 波 (氵 water + 皮 = wave) + 特 (牜 cow + 寺 = special). Mandarin transliteration of the surname Potter.
+      interval: 1
+      ease: 2.5
+    - character: 可是
+      pinyin: kě shì
+      meaning: But / However
+      explanation: '可 (can/may) + 是 (be/indeed). Conjunction introducing a bewildered objection from Harry: "可是我以为——斯内普——".'
+      interval: 1
+      ease: 2.5
+    - character: 以为
+      pinyin: yǐ wéi
+      meaning: To think (mistakenly) / To assume
+      explanation: '以 (take/use) + 为 (be/regard as). Specifically implies a belief that turns out to be false: "可是我以为——斯内普——" (But I thought—Snape—).'
+      interval: 1
+      ease: 2.5
+    - character: 斯内普
+      pinyin: Sī nèi pǔ
+      meaning: Snape (Severus Snape)
+      explanation: 斯 (this) + 内 (inside) + 普 (universal). Mandarin transliteration of Professor Severus Snape.
+      interval: 1
+      ease: 2.5
+    - character: 大笑
+      pinyin: dà xiào
+      meaning: To laugh loudly / To burst out laughing
+      explanation: 大 (big/loud) + 笑 (laugh). Quirrell laughs loudly ("奇洛大笑起来") at Harry's assumption that Snape was the culprit.
+      interval: 1
+      ease: 2.5
+    - character: 起来
+      pinyin: qǐ lái
+      meaning: To start doing (inchoative complement) / To get up
+      explanation: '起 (走 walk + 己 = rise/begin) + 来 (come). Attached to a verb to indicate the start of an action: "大笑起来" (began to laugh loudly).'
+      interval: 1
+      ease: 2.5
+    - character: 这
+      pinyin: zhè
+      meaning: This
+      explanation: '辶 (walk) + 文 (writing). Proximal demonstrative pronoun: "这笑声" (this laughter).'
+      interval: 1
+      ease: 2.5
+    - character: 笑声
+      pinyin: xiào shēng
+      meaning: Laughter / Sound of laughing
+      explanation: 笑 (laugh) + 声 (sound/voice). Refers to Quirrell's newly revealed cold laughter.
+      interval: 1
+      ease: 2.5
+    - character: 平常
+      pinyin: píng cháng
+      meaning: Usual / Ordinary / Normally
+      explanation: 平 (level/even) + 常 (constant/ordinary). Refers to Quirrell's usual high-pitched, trembling sound ("他平常那种尖厉刺耳的颤音").
+      interval: 1
+      ease: 2.5
+    - character: 那种
+      pinyin: nà zhǒng
+      meaning: That kind of / That sort of
+      explanation: '那 (that) + 种 (禾 grain + 中 = kind/type). Points to a specific category or manner: "他平常那种..." (that usual kind of...).'
+      interval: 1
+      ease: 2.5
+    - character: 尖厉
+      pinyin: jiān lì
+      meaning: Shrill / Sharp and piercing
+      explanation: 尖 (小 small + 大 big = sharp point) + 厉 (厂 cliff + 万 = severe/shrill). Describes a high-pitched, shrill voice.
+      interval: 1
+      ease: 2.5
+    - character: 刺耳
+      pinyin: cì ěr
+      meaning: Ear-piercing / Grating / Harsh
+      explanation: 刺 (朿 thorn + 刂 knife = stab/pierce) + 耳 (ear). Literally "piercing the ear," describing a harsh, unpleasant sound.
+      interval: 1
+      ease: 2.5
+    - character: 颤音
+      pinyin: chàn yīn
+      meaning: Tremolo / Quavering voice / Trembling sound
+      explanation: 颤 (页 head + 亶 = shiver/quaver) + 音 (sound/voice). Refers to Quirrell's customary trembling, wheezing voice.
+      interval: 1
+      ease: 2.5
+    - character: 而
+      pinyin: ér
+      meaning: Rather / But / And yet
+      explanation: Pictograph of whiskers. Conjunction used in "不是...而是..." (not A, but rather B) to contrast Quirrell's fake voice with his cold sneer.
+      interval: 1
+      ease: 2.5
+    - character: 一
+      pinyin: yī
+      meaning: One / A
+      explanation: 'Single horizontal stroke. Used with classifier 种 to mean "a kind of": "一种令人胆寒的冷笑".'
+      interval: 1
+      ease: 2.5
+    - character: 种
+      pinyin: zhǒng
+      meaning: Kind / Sort / Type
+      explanation: '禾 (grain) + 中 (middle, phonetic). Classifier for types or kinds of things: "一种令人胆寒的冷笑" (a chilling kind of sneer).'
+      interval: 1
+      ease: 2.5
+    - character: 令人胆寒
+      pinyin: lìng rén dǎn hán
+      meaning: Chilling / Terrifying / Making one's blood run cold
+      explanation: 令 (cause/make) + 人 (people) + 胆 (月 flesh + 旦 = gallbladder/courage) + 寒 (宀 roof + 冫 ice = cold). Four-character idiom literally meaning "making one's gallbladder cold with fear".
+      interval: 1
+      ease: 2.5
+    - character: 冷笑
+      pinyin: lěng xiào
+      meaning: Cold laugh / Sneer / Grim laugh
+      explanation: 冷 (cold) + 笑 (laugh). A cold, mocking laugh revealing Quirrell's true sinister nature.
+      interval: 1
+      ease: 2.5
+    - character: 啊
+      pinyin: a
+      meaning: Modal particle (affirmation / agreement)
+      explanation: '口 (mouth) + 阿 (phonetic). Softens or adds a conversational tone to an affirmation: "是啊" ("Yes indeed").'
+      interval: 1
+      ease: 2.5
+    - character: 看上去
+      pinyin: kàn shàng qù
+      meaning: To look like / To seem / By appearance
+      explanation: '看 (hand over eye = look) + 上去 (directional complement). Expresses how someone appears to observers: "斯内普看上去确实不像个好人".'
+      interval: 1
+      ease: 2.5
+    - character: 确实
+      pinyin: què shí
+      meaning: Indeed / Really / Truly
+      explanation: '确 (石 stone + 角 = solid/certain) + 实 (宀 roof + 头 = real/true). Confirms a fact: Snape indeed doesn''t look like a good person.'
+      interval: 1
+      ease: 2.5
+    - character: 像
+      pinyin: xiàng
+      meaning: To resemble / To be like
+      explanation: '亻 (person) + 象 (elephant/image). Indicates resemblance: "不像个好人" (doesn''t look like a good person) and "像一只巨型大蝙蝠" (like a giant overgrown bat).'
+      interval: 1
+      ease: 2.5
+    - character: 个
+      pinyin: gè
+      meaning: General measure word / Individual
+      explanation: '人 (person/bamboo top) + 丨 (vertical stroke). Default classifier: "不像个好人" (not like a good person).'
+      interval: 1
+      ease: 2.5
+    - character: 好人
+      pinyin: hǎo rén
+      meaning: Good person / Nice guy
+      explanation: 好 (女 woman + 子 child = good) + 人 (person). Quirrell mocks how Snape certainly doesn't look like a "good guy".
+      interval: 1
+      ease: 2.5
+    - character: 吗
+      pinyin: ma
+      meaning: Question particle (yes/no)
+      explanation: '口 (mouth) + 马 (horse, phonetic). Sentence-final particle forming a tag question: "是吗？" ("isn''t he?" / "right?").'
+      interval: 1
+      ease: 2.5
+    - character: 只
+      pinyin: zhī
+      meaning: Measure word for animals / birds
+      explanation: '口 + 八. Read zhī (first tone) as a classifier for animals: "一只巨型大蝙蝠" (a giant bat).'
+      interval: 1
+      ease: 2.5

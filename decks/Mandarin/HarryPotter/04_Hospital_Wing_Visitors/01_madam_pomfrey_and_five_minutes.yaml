@@ -1,0 +1,229 @@
+cards:
+    - character: 校医
+      pinyin: xiào yī
+      meaning: School doctor / Matron / School nurse
+      explanation: 校 (school) + 医 (doctor/medical). Title for Madam Pomfrey (`校医庞弗雷女士`), who runs the Hogwarts hospital wing.
+      interval: 1
+      ease: 2.5
+    - character: 善良
+      pinyin: shàn liáng
+      meaning: Kind-hearted / Good and honest
+      explanation: 善 (good/virtuous) + 良 (good/fine). Describes Madam Pomfrey as a nice, kind-hearted woman, though very strict.
+      interval: 1
+      ease: 2.5
+    - character: 女人
+      pinyin: nǚ rén
+      meaning: Woman
+      explanation: 女 (female/woman) + 人 (person). Madam Pomfrey is described as a kind-hearted woman (`善良的女人`), but very strict.
+      interval: 1
+      ease: 2.5
+    - character: 分钟
+      pinyin: fēn zhōng
+      meaning: Minute
+      explanation: 分 (minute / 1/60th division) + 钟 (clock/bell). Harry begs Madam Pomfrey for 'just five minutes' (`五分钟`) with his friends.
+      interval: 1
+      ease: 2.5
+    - character: 恳求
+      pinyin: kěn qiú
+      meaning: To plead / To implore / To beg earnestly
+      explanation: 恳 (earnest/sincere, 心 heart radical) + 求 (to beg/seek). Harry pleads (`恳求道`) with Madam Pomfrey to let Ron and Hermione visit.
+      interval: 1
+      ease: 2.5
+    - character: 绝对
+      pinyin: jué duì
+      meaning: Absolutely / Categorically
+      explanation: '绝 (cut off / absolute) + 对 (correct/opposite). Madam Pomfrey initially refuses: `绝对不行` (''Absolutely not'').'
+      interval: 1
+      ease: 2.5
+    - character: 不行
+      pinyin: bù xíng
+      meaning: No way / Out of the question / Won't do
+      explanation: '不 (not) + 行 (xíng: okay / permissible). Madam Pomfrey strictly denying visitors so Harry can rest.'
+      interval: 1
+      ease: 2.5
+    - character: 校长
+      pinyin: xiào zhǎng
+      meaning: Headmaster / Principal
+      explanation: '校 (school) + 长 (zhǎng: head/chief). Madam Pomfrey explains that Dumbledore was allowed in because he is the Headmaster.'
+      interval: 1
+      ease: 2.5
+    - character: 有所
+      pinyin: yǒu suǒ
+      meaning: Somewhat / To some extent (literary prefix before 2-syllable verb/adjective)
+      explanation: 有 (have) + 所 (that which). Used in the 4-character phrase `有所不同` (to be somewhat different).
+      interval: 1
+      ease: 2.5
+    - character: 不同
+      pinyin: bù tóng
+      meaning: Different / Not the same
+      explanation: 不 (not) + 同 (same). Being the Headmaster is naturally different (`自然有所不同`) from other visitors.
+      interval: 1
+      ease: 2.5
+    - character: 求求
+      pinyin: qiú qiú
+      meaning: Please! / I beg you! (reduplicated for pleading)
+      explanation: '求 (to beg/plead) reduplicated to soften a request: `求求您了` (''Oh, go on / Please, Madam Pomfrey...'').'
+      interval: 1
+      ease: 2.5
+    - character: 准
+      pinyin: zhǔn
+      meaning: To allow / To permit / To grant
+      explanation: '冫 (ice/water) + 隹 (short-tailed bird: level/standard/permit). Madam Pomfrey relents: `可是只准五分钟` (''five minutes ONLY'').'
+      interval: 1
+      ease: 2.5
+    - character: 于是
+      pinyin: yú shì
+      meaning: Thereupon / So / Consequently
+      explanation: 于 (at/from) + 是 (this). And so she let Ron and Hermione in (`于是她让罗恩和赫敏进来了`).
+      interval: 1
+      ease: 2.5
+    - character: 罗恩
+      pinyin: Luó ēn
+      meaning: Ron (Ron Weasley)
+      explanation: Phonetic transliteration of 'Ron'. Harry's best friend who rushes into the hospital wing with Hermione.
+      interval: 1
+      ease: 2.5
+    - character: 看样子
+      pinyin: kàn yàng zi
+      meaning: It looks like / By the look of it / Seemingly
+      explanation: 看 (look at) + 样子 (appearance/manner). Hermione looked ready (`看样子`) to fling her arms around Harry again.
+      interval: 1
+      ease: 2.5
+    - character: 双臂
+      pinyin: shuāng bì
+      meaning: Both arms
+      explanation: '双 (pair/both) + 臂 (月 flesh + 辟: arm). Hermione looked about to throw her arms (`伸开双臂`) around Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 搂抱
+      pinyin: lǒu bào
+      meaning: To hug / To embrace
+      explanation: '搂 (扌 hand + 娄: to pull into an embrace) + 抱 (扌 hand + 包: to hug). Hermione restrains herself from hugging Harry in front of Madam Pomfrey.'
+      interval: 1
+      ease: 2.5
+    - character: 克制
+      pinyin: kè zhì
+      meaning: To restrain / To control oneself / Self-restraint
+      explanation: 克 (overcome/subdue) + 制 (control/curb). Hermione stops herself (`克制住了自己`) from hugging Harry, much to his relief since his head still hurts.
+      interval: 1
+      ease: 2.5
+    - character: 疼
+      pinyin: téng
+      meaning: To ache / To hurt / Painful
+      explanation: 疒 (sickness radical) + 冬 (winter/phonetic). Harry is glad Hermione didn't hug him because his head was still very sore (`仍然很疼`).
+      interval: 1
+      ease: 2.5
+    - character: 整个
+      pinyin: zhěng gè
+      meaning: The whole / The entire
+      explanation: 整 (whole/complete) + 个 (general measure word). Ron tells Harry that the whole school (`整个学校`) is talking about what happened.
+      interval: 1
+      ease: 2.5
+    - character: 谈论
+      pinyin: tán lùn
+      meaning: To talk about / To discuss
+      explanation: '谈 (讠 speech + 炎: chat/talk) + 论 (讠 speech + 仑: discuss). Everyone at Hogwarts is talking about Harry''s confrontation in the dungeons.'
+      interval: 1
+      ease: 2.5
+    - character: 到底
+      pinyin: dào dǐ
+      meaning: Actually / On earth / In the end (in questions)
+      explanation: 到 (reach) + 底 (bottom). Ron asks Harry what on earth (`当时到底是怎么个情况`) really happened down there.
+      interval: 1
+      ease: 2.5
+    - character: 真实
+      pinyin: zhēn shí
+      meaning: True / Real / Authentic
+      explanation: 真 (true) + 实 (solid/real). Used in `真实的故事` (the true story of what happened), which was even stranger than the rumors.
+      interval: 1
+      ease: 2.5
+    - character: 故事
+      pinyin: gù shì
+      meaning: Story / Tale
+      explanation: 故 (past event) + 事 (matter/affair). The true story Harry tells Ron and Hermione.
+      interval: 1
+      ease: 2.5
+    - character: 比
+      pinyin: bǐ
+      meaning: Than (comparative preposition) / To compare
+      explanation: Two people side by side comparing height. Compares the true story (`真实的故事`) with the unfounded rumors (`没有根据的谣传`).
+      interval: 1
+      ease: 2.5
+    - character: 根据
+      pinyin: gēn jù
+      meaning: Basis / Grounds / Foundation
+      explanation: 根 (tree root) + 据 (rely on / evidence). In `没有根据的谣传`, it means 'unfounded / baseless' rumors.
+      interval: 1
+      ease: 2.5
+    - character: 谣传
+      pinyin: yáo chuán
+      meaning: Rumor / Hearsay
+      explanation: '谣 (讠 speech + 缶: ballad/rumor) + 传 (chuán: to spread/pass on). The wild rumors circulating around Hogwarts.'
+      interval: 1
+      ease: 2.5
+    - character: 离奇
+      pinyin: lí qí
+      meaning: Bizarre / Strange / Fantastic / Outlandish
+      explanation: 离 (depart from norm) + 奇 (strange/unusual). It is rare for the true story to be even more bizarre (`更加离奇`) and thrilling than the rumors.
+      interval: 1
+      ease: 2.5
+    - character: 惊心动魄
+      pinyin: jīng xīn dòng pò
+      meaning: Soul-stirring / Thrilling / Heart-stopping
+      explanation: 惊心 (startle the heart) + 动魄 (move the soul). Idiom describing how the true story of Harry's underground confrontation was even more thrilling than rumors.
+      interval: 1
+      ease: 2.5
+    - character: 这种
+      pinyin: zhè zhǒng
+      meaning: This kind of / Such
+      explanation: 这 (this) + 种 (kind / type). Refers to the rare situation where the truth is stranger and more thrilling than rumor.
+      interval: 1
+      ease: 2.5
+    - character: 罕见
+      pinyin: hǎn jiàn
+      meaning: Rare / Uncommon / Seldom seen
+      explanation: 罕 (net 罒 over dry 干 = scarce / rare) + 见 (see). Describes how extraordinarily rare it is for reality to outdo Hogwarts rumors.
+      interval: 1
+      ease: 2.5
+    - character: 原原本本
+      pinyin: yuán yuán běn běn
+      meaning: From beginning to end / In full detail
+      explanation: Reduplication of 原本 (original / firsthand). Harry recounts the entire story to Ron and Hermione in complete detail.
+      interval: 1
+      ease: 2.5
+    - character: 讲
+      pinyin: jiǎng
+      meaning: To tell / To speak / To explain
+      explanation: 讠 (speech) + 井 (well / phonetic). Used in 讲给他们听 as Harry tells Ron and Hermione everything about Quirrell, the Mirror, and Voldemort.
+      interval: 1
+      ease: 2.5
+    - character: 专心
+      pinyin: zhuān xīn
+      meaning: Attentively / Focused / Absorbed
+      explanation: 专 (focused / single-minded) + 心 (heart / mind). Ron and Hermione listen with rapt, undivided attention to Harry's account.
+      interval: 1
+      ease: 2.5
+    - character: 每
+      pinyin: měi
+      meaning: Every / Each
+      explanation: 丿 + 母 (mother). Used in 每到惊险的地方 (at every thrilling part) as Ron and Hermione react to Harry's story.
+      interval: 1
+      ease: 2.5
+    - character: 惊险
+      pinyin: jīng xiǎn
+      meaning: Thrilling and dangerous / Perilous
+      explanation: 惊 (startling / alarming) + 险 (precipice / danger). Refers to the perilous moments in Harry's underground adventure.
+      interval: 1
+      ease: 2.5
+    - character: 紧张
+      pinyin: jǐn zhāng
+      meaning: Nervous / Tense / Gripped with tension
+      explanation: 紧 (tight / taut silk) + 张 (draw a bow). Ron and Hermione are so tense listening to the story that they gasp.
+      interval: 1
+      ease: 2.5
+    - character: 倒抽冷气
+      pinyin: dào chōu lěng qì
+      meaning: To gasp / To draw a sharp breath in shock
+      explanation: 倒 (inward / backward) + 抽 (draw in) + 冷气 (cold air). Idiom for gasping in terror or suspense at the dangerous parts of Harry's tale.
+      interval: 1
+      ease: 2.5

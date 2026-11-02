@@ -1,0 +1,253 @@
+cards:
+    - character: 六十分
+      pinyin: liù shí fēn
+      meaning: Sixty points
+      explanation: 六十 (sixty) + 分 (points). The sixty points awarded to Harry, tying Gryffindor with Slytherin at 472.
+      interval: 1
+      ease: 2.5
+    - character: 喧闹声
+      pinyin: xuān nào shēng
+      meaning: Din / Uproar / Clamor
+      explanation: 喧 (口 mouth + 宣 = noisy) + 闹 (门 + 市 market = lively/boisterous) + 声 (sound). The deafening uproar that follows Harry's sixty points.
+      interval: 1
+      ease: 2.5
+    - character: 简直
+      pinyin: jiǎn zhí
+      meaning: Simply / Utterly / Virtually
+      explanation: '简 (bamboo slip / simple) + 直 (straight / directly). Emphasizes hyperbole: the din was simply deafening (简直震耳欲聋).'
+      interval: 1
+      ease: 2.5
+    - character: 震耳欲聋
+      pinyin: zhèn ěr yù lóng
+      meaning: Deafening (lit. shaking the ears till nearly deaf)
+      explanation: 震耳 (shake the ears) + 欲 (about to / almost) + 聋 (龙 dragon + 耳 ear = deaf). Idiom for the ear-splitting roar in the hall.
+      interval: 1
+      ease: 2.5
+    - character: 四百七十二分
+      pinyin: sì bǎi qī shí èr fēn
+      meaning: Four hundred and seventy-two points
+      explanation: 四百 (400) + 七十二 (72) + 分 (points). The exact score tying Gryffindor with Slytherin before Neville's points.
+      interval: 1
+      ease: 2.5
+    - character: 直逼
+      pinyin: zhí bī
+      meaning: To press close to / Close right in on
+      explanation: 直 (straight / directly) + 逼 (辶 + 畐 = press close / compel). Gryffindor is now right on the heels of the House Cup championship.
+      interval: 1
+      ease: 2.5
+    - character: 奖给
+      pinyin: jiǎng gěi
+      meaning: To award to
+      explanation: 奖 (award / prize) + 给 (give / to). Students wish Dumbledore had awarded Harry just one more point.
+      interval: 1
+      ease: 2.5
+    - character: 种类
+      pinyin: zhǒng lèi
+      meaning: Kinds / Types / Varieties
+      explanation: '种 (禾 grain + 重 = species/kind) + 类 (米 + 犬 = category/type). Dumbledore''s famous line: ''There are all kinds of courage'' (勇气有许多种类).'
+      interval: 1
+      ease: 2.5
+    - character: 超人
+      pinyin: chāo rén
+      meaning: Superhuman / Exceptional / Surpassing ordinary people
+      explanation: 超 (走 walk/run + 召 = surpass / transcend) + 人 (person). It takes a great deal of bravery (超人的胆量) to stand up to our enemies.
+      interval: 1
+      ease: 2.5
+    - character: 立场
+      pinyin: lì chǎng
+      meaning: Stand / Stance / Position
+      explanation: 立 (stand) + 场 (ground / field). Standing one's ground (坚持自己的立场) in front of one's friends.
+      interval: 1
+      ease: 2.5
+    - character: 同样
+      pinyin: tóng yàng
+      meaning: Equally / Just as much / Likewise
+      explanation: 同 (same) + 样 (manner / kind). Standing up to friends takes just as much (同样) courage as standing up to enemies.
+      interval: 1
+      ease: 2.5
+    - character: 因此
+      pinyin: yīn cǐ
+      meaning: Therefore / For this reason
+      explanation: 因 (cause / because of) + 此 (this). 'Therefore, I award ten points to Mr. Neville Longbottom.'
+      interval: 1
+      ease: 2.5
+    - character: 纳威·隆巴顿
+      pinyin: Nà wēi · Lóng bā dùn
+      meaning: Neville Longbottom
+      explanation: Phonetic transliteration of Neville Longbottom, whose ten points for standing up to his friends win Gryffindor the House Cup.
+      interval: 1
+      ease: 2.5
+    - character: 外面
+      pinyin: wài miàn
+      meaning: Outside
+      explanation: 外 (夕 + 卜 = outside) + 面 (side / surface). Anyone standing outside the Great Hall would have thought an explosion went off.
+      interval: 1
+      ease: 2.5
+    - character: 爆炸
+      pinyin: bào zhà
+      meaning: Explosion / To explode
+      explanation: 爆 (火 fire + 暴 = burst/explode) + 炸 (火 fire + 乍 = blast). The roar at the Gryffindor table sounds like an explosion.
+      interval: 1
+      ease: 2.5
+    - character: 一浪高过一浪
+      pinyin: yī làng gāo guò yī làng
+      meaning: Rising higher and higher like waves / Wave upon louder wave
+      explanation: 一浪 (one wave) + 高过 (higher than) + 一浪 (another wave). Idiomatic phrase describing cheers swelling louder and louder.
+      interval: 1
+      ease: 2.5
+    - character: 喝彩
+      pinyin: hè cǎi
+      meaning: To cheer / Acclaim
+      explanation: '喝 (pronounced hè in fourth tone: shout loudly) + 彩 (applause / prize). Harry, Ron, and Hermione stand up to cheer loudly for Neville.'
+      interval: 1
+      ease: 2.5
+    - character: 纳威
+      pinyin: Nà wēi
+      meaning: Neville
+      explanation: Phonetic transliteration of Neville, who turns white with shock before being buried under hugging classmates.
+      interval: 1
+      ease: 2.5
+    - character: 惊讶
+      pinyin: jīng yà
+      meaning: Amazed / Astonished / Shocked
+      explanation: 惊 (马 horse + 京 = startled) + 讶 (讠 speech + 牙 = surprised). Neville is so astonished he turns pale white.
+      interval: 1
+      ease: 2.5
+    - character: 脸色煞白
+      pinyin: liǎn sè shā bái
+      meaning: Deadly pale / White as a sheet
+      explanation: 脸色 (complexion / facial color) + 煞白 (ghastly/deadly white). Neville goes white with shock upon winning the Cup for Gryffindor.
+      interval: 1
+      ease: 2.5
+    - character: 挤
+      pinyin: jǐ
+      meaning: To crowd / Squeeze / Press
+      explanation: 扌 (hand) + 齐 (even / together). A crowd of students surges and squeezes forward (挤上来) to hug Neville.
+      interval: 1
+      ease: 2.5
+    - character: 上来
+      pinyin: shàng lái
+      meaning: To come up / Surge forward
+      explanation: 上 (up / forward) + 来 (come). Directional complement in 挤上来 (crowding up around Neville).
+      interval: 1
+      ease: 2.5
+    - character: 拥抱
+      pinyin: yōng bào
+      meaning: To hug / Embrace
+      explanation: 拥 (扌 hand + 用 = hold/gather) + 抱 (扌 hand + 包 wrap = embrace). The crowd surges forward to hug Neville.
+      interval: 1
+      ease: 2.5
+    - character: 人群
+      pinyin: rén qún
+      meaning: Crowd (of people)
+      explanation: 人 (person) + 群 (君 + 羊 flock = crowd / group). Neville is buried beneath the crowd of embracing classmates.
+      interval: 1
+      ease: 2.5
+    - character: 淹没
+      pinyin: yān mò
+      meaning: To submerge / Engulf / Swallow up
+      explanation: '淹 (氵 water + 奄 = submerge) + 没 (pronounced mò: sink / drown). Neville is engulfed by the crowd hugging him.'
+      interval: 1
+      ease: 2.5
+    - character: 欢呼
+      pinyin: huān hū
+      meaning: To cheer / Shout for joy
+      explanation: 欢 (joyous) + 呼 (口 mouth = shout / call). Harry cheers while nudging Ron to look at Malfoy.
+      interval: 1
+      ease: 2.5
+    - character: 胳膊肘
+      pinyin: gē bo zhǒu
+      meaning: Elbow
+      explanation: 胳膊 (arm, 月 flesh radicals) + 肘 (月 flesh + 寸 inch = elbow). Harry nudges Ron in the ribs with his elbow.
+      interval: 1
+      ease: 2.5
+    - character: 捅
+      pinyin: tǒng
+      meaning: To nudge / Poke / Jab
+      explanation: 扌 (hand) + 甬 (phonetic). Harry pokes/nudges (捅了捅) Ron with his elbow to point out Malfoy's stunned face.
+      interval: 1
+      ease: 2.5
+    - character: 指指
+      pinyin: zhǐ zhǐ
+      meaning: To point at
+      explanation: Reduplication of 指 (扌 hand + 旨 = finger / point). Harry points at Malfoy to show Ron his mortified reaction.
+      interval: 1
+      ease: 2.5
+    - character: 全身束缚咒
+      pinyin: quán shēn shù fù zhòu
+      meaning: Full Body-Bind Curse (Petrificus Totalus)
+      explanation: 全身 (whole body) + 束缚 (bind / tie up) + 咒 (incantation / curse). Malfoy looks as stunned and horrified as if hit by the Body-Bind Curse.
+      interval: 1
+      ease: 2.5
+    - character: 更
+      pinyin: gèng
+      meaning: Even more / More
+      explanation: 'Comparative adverb (pronounced gèng in fourth tone): Malfoy could not have looked more surprised or more horrified (更吃惊、更恐慌).'
+      interval: 1
+      ease: 2.5
+    - character: 恐慌
+      pinyin: kǒng huāng
+      meaning: Horrified / Panicked / Terrified
+      explanation: 恐 (巩 + 心 heart = fear) + 慌 (忄 heart + 荒 = flustered / panicked). Malfoy looks utterly stunned and horrified at losing the Cup.
+      interval: 1
+      ease: 2.5
+    - character: 不得不
+      pinyin: bù dé bù
+      meaning: Have no choice but to / Cannot help but / Must
+      explanation: Double negative pattern 不 (not) + 得 (can/obtain) + 不 (not). Dumbledore has to roar to make himself heard over the cheering.
+      interval: 1
+      ease: 2.5
+    - character: 吼叫
+      pinyin: hǒu jiào
+      meaning: To roar / Shout / Bellow
+      explanation: 吼 (口 mouth + 孔 = roar) + 叫 (口 mouth = shout). Dumbledore has to bellow loudly to be heard over the thunderous applause.
+      interval: 1
+      ease: 2.5
+    - character: 盖
+      pinyin: gài
+      meaning: To drown out / Surpass / Cover
+      explanation: 艹 + 盍 (cover / lid). Used in 盖过 (drown out / top) as Dumbledore shouts over the roaring cheers.
+      interval: 1
+      ease: 2.5
+    - character: 连
+      pinyin: lián
+      meaning: Even (inclusive particle)
+      explanation: 辶 (walk) + 车 (cart). Used with 就 (就连...也) meaning 'even Ravenclaw and Hufflepuff students were celebrating Slytherin's downfall'.
+      interval: 1
+      ease: 2.5
+    - character: 学生
+      pinyin: xué shēng
+      meaning: Student / Pupil
+      explanation: 学 (study / learn) + 生 (person / scholar). Even the students of Ravenclaw and Hufflepuff celebrate Slytherin's defeat.
+      interval: 1
+      ease: 2.5
+    - character: 惨败
+      pinyin: cǎn bài
+      meaning: Crushing defeat / Downfall / Rout
+      explanation: 惨 (忄 heart + 参 = miserable / tragic) + 败 (贝 + 攵 = defeat). Slytherin's sudden downfall after seven years as champions.
+      interval: 1
+      ease: 2.5
+    - character: 装饰
+      pinyin: zhuāng shì
+      meaning: Decoration / To decorate
+      explanation: 装 (壮 + 衣 clothing = dress up / outfit) + 饰 (饣 + 巾 cloth = adorn). Dumbledore announces a little change of decoration.
+      interval: 1
+      ease: 2.5
+    - character: 小小
+      pinyin: xiǎo xiǎo
+      meaning: Small / Slight / Little
+      explanation: 'Reduplication of 小 (small) adding a light, understated tone: ''a little change of decoration'' (小小的改变).'
+      interval: 1
+      ease: 2.5
+    - character: 改变
+      pinyin: gǎi biàn
+      meaning: Change / To alter / Transform
+      explanation: 改 (己 + 攵 tap = correct / alter) + 变 (transform / change). Dumbledore claps his hands to change the hall's banners.
+      interval: 1
+      ease: 2.5
+    - character: 拍手
+      pinyin: pāi shǒu
+      meaning: To clap one's hands
+      explanation: 拍 (扌 hand + 白 = clap / pat) + 手 (hand). Dumbledore claps his hands (拍了拍手) to magically transform the banners.
+      interval: 1
+      ease: 2.5

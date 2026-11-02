@@ -1,0 +1,338 @@
+selected: true
+cards:
+    - character: 干掉
+      pinyin: gàn diào
+      meaning: To kill / To bump off / To get rid of
+      explanation: 干 (do / work) + 掉 (drop / completion complement). Colloquial expression for killing or eliminating someone; Quirrell declares he will finish Harry off tonight.
+      interval: 1
+      ease: 2.5
+    - character: 啪
+      pinyin: pā
+      meaning: Snap / Pop / Crack (onomatopoeia)
+      explanation: 口 (mouth / sound) + 拍 (clap). Onomatopoeia for a sharp snapping or slapping sound, describing Quirrell snapping his fingers.
+      interval: 1
+      ease: 2.5
+    - character: 打
+      pinyin: dǎ
+      meaning: To strike / To make (a gesture or action)
+      explanation: 扌 (hand) + 丁 (nail). Versatile action verb with the hand; used here in 打响指 (to snap one's fingers).
+      interval: 1
+      ease: 2.5
+    - character: 响指
+      pinyin: xiǎng zhǐ
+      meaning: Snap of the fingers
+      explanation: '响 (loud sound: 口 + 向) + 指 (finger: 扌 + 旨). A finger snap; Quirrell snaps his fingers to conjure ropes out of thin air.'
+      interval: 1
+      ease: 2.5
+    - character: 说时迟那时快
+      pinyin: shuō shí chí nà shí kuài
+      meaning: Sooner than it takes to say it / In a flash
+      explanation: 'Idiom: literally ''slow to tell, fast at the time''. Classic storytelling phrase meaning in the blink of an eye, as ropes suddenly spring out to bind Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 只见
+      pinyin: zhǐ jiàn
+      meaning: Only to see / Right before one's eyes
+      explanation: '只 (only) + 见 (see / perceive). Narrative transition directing focus to a sudden visual event: ropes springing out of thin air.'
+      interval: 1
+      ease: 2.5
+    - character: 凭空
+      pinyin: píng kōng
+      meaning: Out of thin air / Groundlessly
+      explanation: 凭 (rely on) + 空 (empty sky / air). Happening without visible source or support; Quirrell conjures ropes out of thin air.
+      interval: 1
+      ease: 2.5
+    - character: 蹿
+      pinyin: cuān
+      meaning: To leap / To dart / To shoot forth
+      explanation: 足 (foot) + 窜 (flee / scurry). To spring or dart out swiftly; describes the conjured ropes shooting through the air toward Harry.
+      interval: 1
+      ease: 2.5
+    - character: 条
+      pinyin: tiáo
+      meaning: Measure word for long, slender objects
+      explanation: 夂 + 木 (tree branch). Classifier for long, flexible things such as ropes (几条绳索) or dogs (那条大狗).
+      interval: 1
+      ease: 2.5
+    - character: 绳索
+      pinyin: shéng suǒ
+      meaning: Ropes / Cords
+      explanation: 绳 (rope / cord, with 纟 silk/thread radical) + 索 (large rope / search). Heavy cords that spring out of thin air to tie Harry up.
+      interval: 1
+      ease: 2.5
+    - character: 捆
+      pinyin: kǔn
+      meaning: To tie up / To bind / To bundle
+      explanation: 扌 (hand) + 困 (surround / trap). To bind tightly with ropes; the conjured cords tie Harry fast.
+      interval: 1
+      ease: 2.5
+    - character: 结结实实
+      pinyin: jiē jiē shí shí
+      meaning: Tightly and securely / Solidly / Thoroughly
+      explanation: 'Reduplication of 结实 (jiē shi: sturdy / tight). Describes Harry being bound fast and securely by Quirrell''s ropes.'
+      interval: 1
+      ease: 2.5
+    - character: 太
+      pinyin: tài
+      meaning: Too / Excessively / Extremely
+      explanation: 大 (big) + dot. Adverb of degree meaning 'too much'; Quirrell tells Harry he is far too nosy (太爱管闲事了).
+      interval: 1
+      ease: 2.5
+    - character: 爱管闲事
+      pinyin: ài guǎn xián shì
+      meaning: Nosy / Meddlesome / Fond of meddling in others' business
+      explanation: 爱 (like to) + 管 (manage / meddle in) + 闲事 (other people's affairs). Quirrell accuses Harry of being too meddlesome to be allowed to live.
+      interval: 1
+      ease: 2.5
+    - character: 能
+      pinyin: néng
+      meaning: Can / To be able to / May
+      explanation: Modal verb expressing capability or permission; in 不能让你再活在世上, Quirrell says he cannot let Harry go on living.
+      interval: 1
+      ease: 2.5
+    - character: 让
+      pinyin: ràng
+      meaning: To let / To allow / To make
+      explanation: 讠 (speech) + 上. Causative verb meaning to allow or cause someone to do something (不能让你再活 = cannot let you live).
+      interval: 1
+      ease: 2.5
+    - character: 活
+      pinyin: huó
+      meaning: To live / Alive
+      explanation: 氵 (water) + 舌 (tongue). To be alive or survive; Quirrell says he cannot let Harry continue to live in the world.
+      interval: 1
+      ease: 2.5
+    - character: 世上
+      pinyin: shì shàng
+      meaning: In the world / On earth
+      explanation: 世 (world / generation) + 上 (upon / in). The world of the living; Quirrell tells Harry he cannot let him stay alive on earth.
+      interval: 1
+      ease: 2.5
+    - character: 万圣节前夕
+      pinyin: Wàn shèng jié qián xī
+      meaning: Halloween / All Hallows' Eve
+      explanation: '万圣节 (All Saints'' Day: ten thousand saints festival) + 前夕 (eve: before + evening). The night Quirrell let the troll in to go check the Stone''s protections.'
+      interval: 1
+      ease: 2.5
+    - character: 学校
+      pinyin: xué xiào
+      meaning: School
+      explanation: 学 (study / learn) + 校 (school / wooden enclosure). Refers to Hogwarts, where Harry was wandering around on Halloween.
+      interval: 1
+      ease: 2.5
+    - character: 里
+      pinyin: lǐ
+      meaning: Inside / Within
+      explanation: Locative postposition indicating 'inside'; in 在学校里 (inside the school).
+      interval: 1
+      ease: 2.5
+    - character: 转
+      pinyin: zhuàn
+      meaning: To wander around / To stroll / To turn in circles
+      explanation: 车 (cart) + 专 (spin). Pronounced zhuàn here (in 到处乱转), meaning to roam or wander around the school.
+      interval: 1
+      ease: 2.5
+    - character: 当时
+      pinyin: dāng shí
+      meaning: At that time / Right then
+      explanation: 当 (just at) + 时 (time). Refers back to Halloween night when Quirrell realized Harry had seen him heading to the third-floor corridor.
+      interval: 1
+      ease: 2.5
+    - character: 知道
+      pinyin: zhī dào
+      meaning: To know / To realize / To be aware of
+      explanation: '知 (know: 矢 arrow + 口 mouth) + 道 (way / principle). Quirrell says he knew right then that Harry had seen him.'
+      interval: 1
+      ease: 2.5
+    - character: 看见
+      pinyin: kàn jiàn
+      meaning: To see / To catch sight of
+      explanation: '看 (look: hand over eye) + 见 (perceive / result complement). Quirrell suspected Harry saw him going to inspect the Stone''s defenses.'
+      interval: 1
+      ease: 2.5
+    - character: 去
+      pinyin: qù
+      meaning: To go / In order to
+      explanation: '土 + 厶. Directional verb of movement away from the speaker: 去查看 (going to inspect).'
+      interval: 1
+      ease: 2.5
+    - character: 查看
+      pinyin: chá kàn
+      meaning: To inspect / To check / To examine
+      explanation: 查 (investigate / check) + 看 (look). Quirrell went to check out the mechanisms guarding the Philosopher's Stone.
+      interval: 1
+      ease: 2.5
+    - character: 魔法石
+      pinyin: mó fǎ shí
+      meaning: Philosopher's Stone / Sorcerer's Stone
+      explanation: '魔法 (magic: demon + law/method) + 石 (stone). The legendary alchemical stone guarded at Hogwarts and sought by Voldemort.'
+      interval: 1
+      ease: 2.5
+    - character: 机关
+      pinyin: jī guān
+      meaning: Mechanism / Trap / Protective device
+      explanation: '机 (machine / contrivance: 木 + 几) + 关 (bolt / barrier). The magical traps and defenses set up to guard the Philosopher''s Stone.'
+      interval: 1
+      ease: 2.5
+    - character: 那个
+      pinyin: nà gè
+      meaning: That / That one
+      explanation: 那 (that) + 个 (general classifier). Demonstrative phrase pointing to 'that troll' (那个巨怪) Quirrell let into the castle.
+      interval: 1
+      ease: 2.5
+    - character: 巨怪
+      pinyin: jù guài
+      meaning: Troll
+      explanation: '巨 (huge / gigantic) + 怪 (monster / strange creature: 忄 + 圣). Mountain troll that Quirrell let in on Halloween and placed in the outer chamber.'
+      interval: 1
+      ease: 2.5
+    - character: 进来
+      pinyin: jìn lái
+      meaning: To come in / Inward
+      explanation: 进 (enter / advance) + 来 (come toward speaker). Directional complement in 放那个巨怪进来的 (let that troll in).
+      interval: 1
+      ease: 2.5
+    - character: 对付
+      pinyin: duì fù
+      meaning: To deal with / To handle / To cope with
+      explanation: 对 (face / counter) + 付 (hand over / deal with). Quirrell boasts that he has a special knack for dealing with trolls.
+      interval: 1
+      ease: 2.5
+    - character: 套
+      pinyin: tào
+      meaning: Set / System / Knack (measure word)
+      explanation: 大 (big) + 乑 (long/wrap). Classifier for a complete set or method; 有一套特别的办法 means having a special way or knack.
+      interval: 1
+      ease: 2.5
+    - character: 特别
+      pinyin: tè bié
+      meaning: Special / Particular / Unusual
+      explanation: '特 (special / bull: 牛 + 寺) + 别 (distinct / separate). Describes Quirrell''s special gift for handling trolls.'
+      interval: 1
+      ease: 2.5
+    - character: 办法
+      pinyin: bàn fǎ
+      meaning: Way / Method / Means
+      explanation: 办 (handle / manage) + 法 (method / law). Used for Quirrell's special way with trolls and Harry's only way to stall Quirrell.
+      interval: 1
+      ease: 2.5
+    - character: 肯定
+      pinyin: kěn dìng
+      meaning: Certainly / Surely / Definitely
+      explanation: 肯 (willing / affirm) + 定 (fixed / settled). Quirrell remarks that Harry surely already saw how he dealt with the troll in the previous room.
+      interval: 1
+      ease: 2.5
+    - character: 已经
+      pinyin: yǐ jīng
+      meaning: Already
+      explanation: 已 (already / stop) + 经 (pass through / warp threads). Temporal adverb indicating a completed state or action.
+      interval: 1
+      ease: 2.5
+    - character: 教训
+      pinyin: jiào xùn
+      meaning: To teach someone a lesson / To discipline / Lesson
+      explanation: '教 (teach) + 训 (instruct / rebuke: 讠 + 川). Quirrell refers to knocking out the troll in the previous chamber as ''teaching that fellow a lesson''.'
+      interval: 1
+      ease: 2.5
+    - character: 那边
+      pinyin: nà biān
+      meaning: Over there / That side
+      explanation: 那 (that) + 边 (side / border). Points back to the adjacent chamber (那边房间里) where the unconscious troll lay.
+      interval: 1
+      ease: 2.5
+    - character: 房间
+      pinyin: fáng jiān
+      meaning: Room / Chamber
+      explanation: '房 (house / room: 户 door + 方) + 间 (space / room: 门 gate + 日). Refers to the chamber they had just passed through.'
+      interval: 1
+      ease: 2.5
+    - character: 家伙
+      pinyin: jiā huo
+      meaning: Fellow / Guy / Creature
+      explanation: 家 (household) + 伙 (companion / tool). Colloquial term for a person or creature; Quirrell calls the huge troll 'that fellow' (那个家伙).
+      interval: 1
+      ease: 2.5
+    - character: 吧
+      pinyin: ba
+      meaning: Modal particle indicating supposition or tag question
+      explanation: '口 (mouth) + 巴. Sentence-final particle asking for confirmation: ''you surely saw how I taught that fellow a lesson, right?'''
+      interval: 1
+      ease: 2.5
+    - character: 倒霉
+      pinyin: dǎo méi
+      meaning: Unlucky / Out of luck / Unfortunate
+      explanation: '倒 (fall / topple) + 霉 (mold / mildew: 雨 rain + 每). In 倒霉的是 (unfortunately / as bad luck would have it), Quirrell laments that Snape thwarted his Halloween plan.'
+      interval: 1
+      ease: 2.5
+    - character: 大家
+      pinyin: dà jiā
+      meaning: Everyone / All
+      explanation: 大 (big / great) + 家 (family / group). Collective pronoun referring to everyone else in the school rushing around looking for the troll.
+      interval: 1
+      ease: 2.5
+    - character: 匆匆忙忙
+      pinyin: cōng cōng máng máng
+      meaning: Hurriedly / In a great rush / Hastily
+      explanation: 'Reduplication of 匆忙 (cōng máng: hasty + busy). Describes everyone hurrying all over the castle to search for the troll.'
+      interval: 1
+      ease: 2.5
+    - character: 寻找
+      pinyin: xún zhǎo
+      meaning: To look for / To search for / To seek
+      explanation: '寻 (seek / search) + 找 (look for: 扌 + 戈). While everyone was busy searching for the troll, Snape headed straight to the third floor.'
+      interval: 1
+      ease: 2.5
+    - character: 时
+      pinyin: shí
+      meaning: When / Time
+      explanation: 日 (sun) + 寸 (inch). Temporal enclitic meaning 'when' or 'at the time that' (当……寻找巨怪时).
+      interval: 1
+      ease: 2.5
+    - character: 早已
+      pinyin: zǎo yǐ
+      meaning: Long since / Already long ago
+      explanation: 早 (early) + 已 (already). Indicates that Snape had already grown suspicious of Quirrell well before Halloween.
+      interval: 1
+      ease: 2.5
+    - character: 起
+      pinyin: qǐ
+      meaning: To rise / To develop / To conceive (a feeling)
+      explanation: 走 (walk) + 己 (self). Verb meaning to give rise to an emotion or attitude, as in 起了疑心 (became suspicious).
+      interval: 1
+      ease: 2.5
+    - character: 疑心
+      pinyin: yí xīn
+      meaning: Suspicion / Doubt
+      explanation: 疑 (doubt / suspect) + 心 (heart / mind). State of suspicion; Snape had already developed suspicions toward Quirrell.
+      interval: 1
+      ease: 2.5
+    - character: 直接
+      pinyin: zhí jiē
+      meaning: Directly / Straight
+      explanation: 直 (straight) + 接 (connect). Without detour; Snape went straight to the forbidden corridor instead of searching the dungeons.
+      interval: 1
+      ease: 2.5
+    - character: 赶到
+      pinyin: gǎn dào
+      meaning: To hurry to / To rush to
+      explanation: '赶 (hurry / rush: 走 + 干) + 到 (arrive at). Snape rushed straight to the forbidden floor to intercept Quirrell.'
+      interval: 1
+      ease: 2.5
+    - character: 四
+      pinyin: sì
+      meaning: Four (4)
+      explanation: Numeral four; in the Chinese translation, Hogwarts' British 'third floor' (above the ground floor) is rendered as 四楼 (fourth level/floor).
+      interval: 1
+      ease: 2.5
+    - character: 楼
+      pinyin: lóu
+      meaning: Floor / Story / Building
+      explanation: 木 (wood) + 娄. Story of a building; 四楼 refers to the forbidden corridor where Fluffy guarded the trapdoor.
+      interval: 1
+      ease: 2.5
+    - character: 试图
+      pinyin: shì tú
+      meaning: To attempt / To try
+      explanation: '试 (try / test: 讠 + 式) + 图 (plan / seek: 囗 + 冬). Formal verb meaning to attempt; Snape tried to head Quirrell off.'
+      interval: 1
+      ease: 2.5

@@ -1,0 +1,259 @@
+cards:
+    - character: 清楚
+      pinyin: qīng chǔ
+      meaning: Clear / Distinct
+      explanation: '清 (qīng: clear water, 氵 water + 青) + 楚 (chǔ: neat / clear, 林 trees + 疋). Harry had investigated and understood the whole affair clearly.'
+      interval: 1
+      ease: 2.5
+    - character: 一致
+      pinyin: yī zhì
+      meaning: Unanimously / In agreement / Consistent
+      explanation: '一 (yī: one / same) + 致 (zhì: reach / deliver). Flamel and Dumbledore agreed unanimously that destroying the Stone was best.'
+      interval: 1
+      ease: 2.5
+    - character: 认为
+      pinyin: rèn wéi
+      meaning: To think / Consider / Hold the view that
+      explanation: '认 (rèn: recognize) + 为 (wéi: take as / deem). Flamel and Dumbledore considered destroying the Stone the best course of action.'
+      interval: 1
+      ease: 2.5
+    - character: 那样
+      pinyin: nà yàng
+      meaning: Like that / In that case
+      explanation: '那 (nà: that) + 样 (yàng: manner / kind). In 那样一来 (if that''s the case), Harry realizes Flamel and his wife will die.'
+      interval: 1
+      ease: 2.5
+    - character: 一来
+      pinyin: yī lái
+      meaning: Once (something happens) / As a result
+      explanation: '一 (yī: once) + 来 (lái: come about). In 那样一来, meaning ''in that case'' or ''as a result of that.'''
+      interval: 1
+      ease: 2.5
+    - character: 妻子
+      pinyin: qī zi
+      meaning: Wife
+      explanation: '妻 (qī: wife, woman 女 holding a broom/hairpin) + 子 (zi: noun suffix). Refers to Nicolas Flamel''s wife, Perenelle.'
+      interval: 1
+      ease: 2.5
+    - character: 存
+      pinyin: cún
+      meaning: To store / Keep / Save
+      explanation: "子 (child) under \U00020087 (shelter/hand) — to preserve or keep in reserve. The Flamels have stored enough Elixir of Life to settle their affairs."
+      interval: 1
+      ease: 2.5
+    - character: 足够
+      pinyin: zú gòu
+      meaning: Enough / Sufficient
+      explanation: '足 (zú: foot / sufficient) + 够 (gòu: enough, 句 + 多). They have enough Elixir left to put their affairs in order.'
+      interval: 1
+      ease: 2.5
+    - character: 事情
+      pinyin: shì qíng
+      meaning: Affairs / Matters / Things
+      explanation: '事 (shì: matter / business) + 情 (qíng: situation / circumstances). Refers to the Flamels'' personal affairs before they die.'
+      interval: 1
+      ease: 2.5
+    - character: 料理妥当
+      pinyin: liào lǐ tuǒ dàng
+      meaning: To put in order / Arrange properly / Settle affairs
+      explanation: '料理 (liào lǐ: manage / arrange) + 妥当 (tuǒ dàng: proper / well-settled). Setting all their affairs in order before passing away.'
+      interval: 1
+      ease: 2.5
+    - character: 表情
+      pinyin: biǎo qíng
+      meaning: Facial expression / Look
+      explanation: '表 (biǎo: outer surface / show) + 情 (qíng: feeling / emotion). The stunned expression on Harry''s face when Dumbledore says the Flamels will die.'
+      interval: 1
+      ease: 2.5
+    - character: 年纪轻轻
+      pinyin: nián jì qīng qīng
+      meaning: So young / At a tender age
+      explanation: '年纪 (nián jì: age) + 轻轻 (qīng qīng: very light / young). To someone as young as Harry, welcoming death seems unimaginable.'
+      interval: 1
+      ease: 2.5
+    - character: 来说
+      pinyin: lái shuō
+      meaning: For / As far as ... is concerned
+      explanation: '来 (lái: come) + 说 (shuō: speak). Paired with 对...来说 (to/for someone), framing a perspective.'
+      interval: 1
+      ease: 2.5
+    - character: 些
+      pinyin: xiē
+      meaning: Some / A bit / Slightly
+      explanation: 此 (this) + 二 (two). In 有些不可思议, meaning 'somewhat' or 'a bit' inconceivable.
+      interval: 1
+      ease: 2.5
+    - character: 但是
+      pinyin: dàn shì
+      meaning: But / However
+      explanation: '但 (dàn: only / but, 亻 person + 旦 dawn) + 是 (shì: indeed / be). Contrasts Harry''s youthful view with the Flamels'' perspective.'
+      interval: 1
+      ease: 2.5
+    - character: 佩雷纳尔
+      pinyin: Pèi léi nà ěr
+      meaning: Perenelle (Flamel)
+      explanation: 'Transliteration of Perenelle: 佩 (pèi) + 雷 (léi) + 纳 (nà) + 尔 (ěr). Wife of Nicolas Flamel.'
+      interval: 1
+      ease: 2.5
+    - character: 死亡
+      pinyin: sǐ wáng
+      meaning: Death
+      explanation: '死 (sǐ: die, 歹 bare bones + 匕 fallen person) + 亡 (wáng: perish / cease). For Nicolas and Perenelle, death is like going to bed after a very long day.'
+      interval: 1
+      ease: 2.5
+    - character: 实际上
+      pinyin: shí jì shàng
+      meaning: In fact / Actually / In reality
+      explanation: '实 (shí: real / solid) + 际 (jì: border / circumstance) + 上 (shàng: on / in). Death is actually just like going to bed after a long day.'
+      interval: 1
+      ease: 2.5
+    - character: 经过
+      pinyin: jīng guò
+      meaning: After / To pass through / Undergo
+      explanation: '经 (jīng: warp threads / pass through, 纟 silk) + 过 (guò: pass). After passing through a very long day (经过漫长的一天之后).'
+      interval: 1
+      ease: 2.5
+    - character: 漫长
+      pinyin: màn cháng
+      meaning: Very long / Endless / Drawn-out
+      explanation: '漫 (màn: overflowing / boundless, 氵 water) + 长 (cháng: long). Metaphor for the Flamels'' centuries-long life as a ''very long day.'''
+      interval: 1
+      ease: 2.5
+    - character: 终于
+      pinyin: zhōng yú
+      meaning: Finally / At last
+      explanation: '终 (zhōng: end, 纟 silk knot) + 于 (yú: at). Finally going to bed to rest after a long day.'
+      interval: 1
+      ease: 2.5
+    - character: 床
+      pinyin: chuáng
+      meaning: Bed
+      explanation: 广 (shelter) + 木 (wood) — a wooden bed inside a room. In 上床休息 (go to bed and rest).
+      interval: 1
+      ease: 2.5
+    - character: 休息
+      pinyin: xiū xī
+      meaning: To rest / Take a break
+      explanation: '休 (xiū: person 亻 leaning against a tree 木 to rest) + 息 (xī: breathe, 自 nose + 心 heart). Going to bed to rest.'
+      interval: 1
+      ease: 2.5
+    - character: 而且
+      pinyin: ér qiě
+      meaning: Moreover / Furthermore / And besides
+      explanation: '而 (ér: and / yet) + 且 (qiě: moreover / also). Introduces Dumbledore''s famous reflection on death as the next great adventure.'
+      interval: 1
+      ease: 2.5
+    - character: 对于
+      pinyin: duì yú
+      meaning: For / Regarding / As for
+      explanation: '对 (duì: toward / facing) + 于 (yú: to / in). Preposition marking the person concerned: ''to the well-organized mind'' (对于头脑十分清醒的人来说).'
+      interval: 1
+      ease: 2.5
+    - character: 十分
+      pinyin: shí fēn
+      meaning: Fully / Very / Completely / Ten out of ten
+      explanation: '十 (shí: ten) + 分 (fēn: parts / tenths) — ten parts out of ten, meaning completely or extremely (十分清醒, well-organized / clear-headed).'
+      interval: 1
+      ease: 2.5
+    - character: 清醒
+      pinyin: qīng xǐng
+      meaning: Clear-headed / Sober / Lucid
+      explanation: '清 (qīng: clear / pure) + 醒 (xǐng: awake / sober). Translates ''well-organized'' in Dumbledore''s famous line: 头脑十分清醒的人 (to the well-organized mind).'
+      interval: 1
+      ease: 2.5
+    - character: 另
+      pinyin: lìng
+      meaning: Another / Other
+      explanation: 口 (mouth) + 力 (strength) — originally to divide or separate. In 另一场伟大的冒险 (another great adventure).
+      interval: 1
+      ease: 2.5
+    - character: 场
+      pinyin: chǎng
+      meaning: Measure word for events, adventures, or performances / Field
+      explanation: 土 (earth) + 昜 (phonetic) — a cleared ground or arena. Classifier for 'adventure' (一场伟大的冒险).
+      interval: 1
+      ease: 2.5
+    - character: 冒险
+      pinyin: mào xiǎn
+      meaning: Adventure / To take a risk
+      explanation: '冒 (mào: brave / push ahead) + 险 (xiǎn: danger / precipice, 阝 mound). ''Death is but the next great adventure'' (另一场伟大的冒险).'
+      interval: 1
+      ease: 2.5
+    - character: 美妙
+      pinyin: měi miào
+      meaning: Wonderful / Marvelous / Splendid
+      explanation: '美 (měi: beautiful / fine) + 妙 (miào: wonderful / subtle, 女 + 少). Dumbledore notes the Stone is really not such a wonderful thing.'
+      interval: 1
+      ease: 2.5
+    - character: 多少
+      pinyin: duō shao
+      meaning: How much / How many / Any amount of
+      explanation: '多 (duō: many / much) + 少 (shǎo: few / little). With the Stone, however much wealth (多少财富) you want to possess, you can have it.'
+      interval: 1
+      ease: 2.5
+    - character: 财富
+      pinyin: cái fù
+      meaning: Wealth / Riches
+      explanation: '财 (cái: money / wealth, 贝 shell/money + 才) + 富 (fù: abundant / rich, 宀 roof + 畐 full jar). Unlimited wealth promised by the Stone.'
+      interval: 1
+      ease: 2.5
+    - character: 获得
+      pinyin: huò dé
+      meaning: To obtain / Gain / Acquire
+      explanation: '获 (huò: capture / reap) + 得 (dé: get / obtain). Obtaining as long a lifespan as one desires.'
+      interval: 1
+      ease: 2.5
+    - character: 多
+      pinyin: duō
+      meaning: How (to what extent) / Many / Much
+      explanation: 夕 + 夕 (reduplicated evening/meat). Used before an adjective (多长寿命, how long a life) to mean 'however long.'
+      interval: 1
+      ease: 2.5
+    - character: 寿命
+      pinyin: shòu mìng
+      meaning: Lifespan / Longevity
+      explanation: '寿 (shòu: long life / longevity) + 命 (mìng: life / destiny). Unlimited life granted by the Philosopher''s Stone.'
+      interval: 1
+      ease: 2.5
+    - character: 如愿以偿
+      pinyin: rú yuàn yǐ cháng
+      meaning: To have one's wishes fulfilled / Get what one wished for
+      explanation: '如 (rú: accord with) + 愿 (yuàn: wish) + 以 (yǐ: thereby) + 偿 (cháng: fulfill / compensate). Idiom meaning to have all one''s desires granted.'
+      interval: 1
+      ease: 2.5
+    - character: 样
+      pinyin: yàng
+      meaning: Kind / Type / Sort
+      explanation: '木 (tree / wooden pattern) + 羊 (sheep, phonetic). Classifier in 这两样东西 (these two things: unlimited wealth and life).'
+      interval: 1
+      ease: 2.5
+    - character: 人类
+      pinyin: rén lèi
+      meaning: Humanity / Mankind / Human beings
+      explanation: '人 (rén: person / human) + 类 (lèi: kind / category). Dumbledore observes that humans always choose what is worst for them.'
+      interval: 1
+      ease: 2.5
+    - character: 问题
+      pinyin: wèn tí
+      meaning: Problem / Question / Issue
+      explanation: '问 (wèn: ask) + 题 (tí: topic / forehead). ''The trouble is'' (问题是) that humans have a knack for choosing what is worst for them.'
+      interval: 1
+      ease: 2.5
+    - character: 偏偏
+      pinyin: piān piān
+      meaning: Perversely / Just / Ironically (contrary to what should be)
+      explanation: 'Reduplication of 偏 (piān: slant / lean to one side, 亻 person + 扁). Expresses humans'' perverse tendency to choose what harms them most.'
+      interval: 1
+      ease: 2.5
+    - character: 喜欢
+      pinyin: xǐ huan
+      meaning: To like / Be fond of
+      explanation: '喜 (xǐ: joy / delight, drums and mouth) + 欢 (huān: joyous / pleased). Humans are fond of choosing the very things worst for them.'
+      interval: 1
+      ease: 2.5
+    - character: 选择
+      pinyin: xuǎn zé
+      meaning: To choose / Select / Choice
+      explanation: '选 (xuǎn: choose, 辶 + 先) + 择 (zé: pick out, 扌 hand). Choosing the things that do them the least good.'
+      interval: 1
+      ease: 2.5

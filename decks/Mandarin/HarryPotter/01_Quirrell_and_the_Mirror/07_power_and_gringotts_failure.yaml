@@ -1,0 +1,338 @@
+selected: true
+cards:
+    - character: 从来不
+      pinyin: cóng lái bù
+      meaning: Never / Have never
+      explanation: '从 (from) + 来 (come / ever since) + 不 (not). Categorical negation over all past time: Quirrell notes Dumbledore and Snape ''never'' wanted Harry dead (从来不希望你死掉).'
+      interval: 1
+      ease: 2.5
+    - character: 希望
+      pinyin: xī wàng
+      meaning: To hope / Wish / Desire
+      explanation: 希 (rare / hope 巾) + 望 (gaze afar towards the moon 亡+月+王). Quirrell remarks that Snape 'never wished' for Harry to die (从来不希望你死掉).
+      interval: 1
+      ease: 2.5
+    - character: 掉
+      pinyin: diào
+      meaning: To fall / Drop / (completion complement)
+      explanation: '扌 (hand) + 卓 (tall / eminent). Resultative verb complement indicating disposal or completion of a state: ''die off / end up dead'' (死掉).'
+      interval: 1
+      ease: 2.5
+    - character: 天
+      pinyin: tiān
+      meaning: Day / Sky / Heaven
+      explanation: '一 (above) + 大 (great person). Measure word for days: ''a few days ago'' (几天前) when Harry overheard Quirrell sobbing.'
+      interval: 1
+      ease: 2.5
+    - character: 前
+      pinyin: qián
+      meaning: Ago / Before / In front
+      explanation: '止 + 月 + 刂 (knife). Temporal marker meaning ''ago'': ''a few days ago'' (几天前).'
+      interval: 1
+      ease: 2.5
+    - character: 听见
+      pinyin: tīng jiàn
+      meaning: To hear
+      explanation: '听 (listen 口+斤) + 见 (perceive / see). Resultative verb of perception: Harry says ''a few days ago I heard you crying'' (我听见你在哭).'
+      interval: 1
+      ease: 2.5
+    - character: 哭
+      pinyin: kū
+      meaning: To cry / Weep / Sob
+      explanation: 口+口 (two mouths wailing) + 犬 (dog howling). Harry recalls hearing Quirrell 'crying' (在哭) in an empty classroom.
+      interval: 1
+      ease: 2.5
+    - character: 威胁
+      pinyin: wēi xié
+      meaning: To threaten / Menace / Intimidate
+      explanation: 威 (power / might 女+戌) + 胁 (ribs / coerce 月+办). Harry thought Snape was 'threatening' Quirrell (我以为斯内普在威胁你).
+      interval: 1
+      ease: 2.5
+    - character: 脸上
+      pinyin: liǎn shàng
+      meaning: On the face
+      explanation: '脸 (face / cheek 月+佥) + 上 (upon / on). Locative phrase: a spasm of fear flashed across ''Quirrell''s face'' (奇洛的脸上).'
+      interval: 1
+      ease: 2.5
+    - character: 第一
+      pinyin: dì yī
+      meaning: First / Primary
+      explanation: 第 (ordinal prefix 竹) + 一 (one). Combines with 次 for 'the first time' (第一次) fear showed on Quirrell's face.
+      interval: 1
+      ease: 2.5
+    - character: 闪
+      pinyin: shǎn
+      meaning: To flash / Sparkle / Dodge
+      explanation: 门 (doorway) + 人 (person darting through). Verb describing a brief spasm of terror 'flashing across' Quirrell's face (闪过一丝恐惧的震颤).
+      interval: 1
+      ease: 2.5
+    - character: 丝
+      pinyin: sī
+      meaning: Silk thread / A trace / A wisp
+      explanation: 'Two twisted silk cocoons (纟+纟). Measure word for a tiny trace or hint: ''a trace of fearful trembling'' (一丝恐惧的震颤).'
+      interval: 1
+      ease: 2.5
+    - character: 恐惧
+      pinyin: kǒng jù
+      meaning: Fear / Dread / Terror
+      explanation: 恐 (fear 工+凡+心) + 惧 (dread 忄+具). Both characters carry the heart radical; describes the 'terror' (恐惧) Quirrell feels toward Voldemort.
+      interval: 1
+      ease: 2.5
+    - character: 震颤
+      pinyin: zhèn chàn
+      meaning: Tremor / Shudder / Quiver
+      explanation: 震 (shake / thunder 雨+辰) + 颤 (shiver / tremble 亶+页). A 'shudder' of fear (恐惧的震颤) crossing Quirrell's face.
+      interval: 1
+      ease: 2.5
+    - character: 有的
+      pinyin: yǒu de
+      meaning: Some / (with 时候) Sometimes
+      explanation: 有 (have / exist) + 的 (nominalizer). Forms 有的时候 ('at some times / sometimes') as Quirrell confesses how hard it is to obey his master.
+      interval: 1
+      ease: 2.5
+    - character: 觉得
+      pinyin: jué de
+      meaning: To feel / Think / Find
+      explanation: 觉 (sense / feel 见) + 得 (particle). Quirrell admits he 'finds' it hard to follow his master's instructions (我觉得很难遵从我主人的指令).
+      interval: 1
+      ease: 2.5
+    - character: 难
+      pinyin: nán
+      meaning: Difficult / Hard
+      explanation: '又 (hand) + 隹 (short-tailed bird). Predicate adjective: ''very hard to obey'' (很难遵从).'
+      interval: 1
+      ease: 2.5
+    - character: 遵从
+      pinyin: zūn cóng
+      meaning: To obey / Comply with / Follow
+      explanation: 遵 (abide by / honour 辶+尊) + 从 (follow 人+人). To 'comply with' or obey his master's commands (遵从我主人的指令).
+      interval: 1
+      ease: 2.5
+    - character: 指令
+      pinyin: zhǐ lìng
+      meaning: Instructions / Orders / Directives
+      explanation: 指 (point / direct 扌+旨) + 令 (command / order). The Dark Lord's 'orders / instructions' (我主人的指令).
+      interval: 1
+      ease: 2.5
+    - character: 伟大
+      pinyin: wěi dà
+      meaning: Great / Mighty / Grand
+      explanation: 伟 (extraordinary / great 亻+韦) + 大 (great). Quirrell calls Voldemort 'a great wizard' (一个伟大的巫师).
+      interval: 1
+      ease: 2.5
+    - character: 巫师
+      pinyin: wū shī
+      meaning: Wizard / Sorcerer / Witch
+      explanation: 巫 (shaman / medium connecting heaven and earth 工+人+人) + 师 (master / adept). Standard translation for 'wizard' (伟大的巫师).
+      interval: 1
+      ease: 2.5
+    - character: 力量
+      pinyin: lì liàng
+      meaning: Strength / Power / Force
+      explanation: 力 (muscle / sinew) + 量 (measure / capacity). Quirrell contrasts Voldemort's greatness with his own weak 'strength' (我的力量这样薄弱).
+      interval: 1
+      ease: 2.5
+    - character: 薄弱
+      pinyin: bó ruò
+      meaning: Frail / Weak / Feeble
+      explanation: 薄 (thin / flimsy 艹+溥, read bó in compounds) + 弱 (weak / delicate 弓+弓). Quirrell laments that his own strength is 'so weak' (这样薄弱).
+      interval: 1
+      ease: 2.5
+    - character: 难道
+      pinyin: nán dào
+      meaning: Could it be that...? / Don't tell me...?
+      explanation: '难 (hard) + 道 (say). Rhetorical question marker expressing shock and disbelief: ''Could it be that you mean he was in the classroom with you?'' (难道你是说……).'
+      interval: 1
+      ease: 2.5
+    - character: 教室
+      pinyin: jiào shì
+      meaning: Classroom / Schoolroom
+      explanation: 教 (teach 孝+攵) + 室 (room 宀+至). The 'classroom' (教室里) where Harry heard Quirrell talking to Voldemort.
+      interval: 1
+      ease: 2.5
+    - character: 吃惊
+      pinyin: chī jīng
+      meaning: To be startled / Shocked / Amazed
+      explanation: 吃 (suffer / absorb 口+乞) + 惊 (startled 忄+京). Literally 'to take a fright'; Harry asks 'in shock' (吃惊地问).
+      interval: 1
+      ease: 2.5
+    - character: 问
+      pinyin: wèn
+      meaning: To ask / Inquire
+      explanation: 门 (gate) + 口 (mouth). Harry shockedly 'asked' (哈利吃惊地问) whether Voldemort had been in the classroom.
+      interval: 1
+      ease: 2.5
+    - character: 不论
+      pinyin: bù lùn
+      meaning: No matter / Regardless of
+      explanation: '不 (not) + 论 (discuss / consider 讠+仑). Conjunction introducing an unconditional clause: ''No matter where I go, he is with me'' (不论我走到哪儿，他都跟我在一起).'
+      interval: 1
+      ease: 2.5
+    - character: 走
+      pinyin: zǒu
+      meaning: To walk / Go
+      explanation: '土 + 止 (foot). Basic motion verb: ''no matter where I go / walk to'' (不论我走到哪儿).'
+      interval: 1
+      ease: 2.5
+    - character: 跟
+      pinyin: gēn
+      meaning: With / To follow
+      explanation: '足 (foot) + 艮 (steadfast). Preposition meaning ''with'': ''he is always with me'' (他都跟我在一起).'
+      interval: 1
+      ease: 2.5
+    - character: 平静
+      pinyin: píng jìng
+      meaning: Calm / Quiet / Composed
+      explanation: 平 (level / even) + 静 (still / quiet 青+争). Quirrell speaks 'calmly' (平静地说) about Voldemort's constant presence.
+      interval: 1
+      ease: 2.5
+    - character: 环游
+      pinyin: huán yóu
+      meaning: To travel around / Tour
+      explanation: 环 (ring / encircle 王+不) + 游 (travel / roam 氵+斿). Combines with 世界 for 'traveling around the world' (环游世界).
+      interval: 1
+      ease: 2.5
+    - character: 世界
+      pinyin: shì jiè
+      meaning: The world
+      explanation: 世 (generation / era) + 界 (boundary / realm 田+介). Quirrell met Voldemort while traveling around 'the world' (环游世界时遇到他的).
+      interval: 1
+      ease: 2.5
+    - character: 遇到
+      pinyin: yù dào
+      meaning: To meet / Encounter / Come across
+      explanation: 遇 (meet / chance upon 辶+禺) + 到 (arrive / attainment complement). Quirrell 'encountered' Voldemort during his travels (遇到他的).
+      interval: 1
+      ease: 2.5
+    - character: 还是
+      pinyin: hái shì
+      meaning: Still was / Was still / Or
+      explanation: '还 (still 辶+不) + 是 (to be). Expresses continuing state in the past: ''At the time I was still a foolish young man'' (我当时还是一个傻乎乎的小伙子).'
+      interval: 1
+      ease: 2.5
+    - character: 傻乎乎
+      pinyin: shǎ hū hū
+      meaning: Foolish / Naive / Silly
+      explanation: 傻 (foolish 亻+囟+夂) + 乎乎 (reduplicated adjectival suffix). Vividly describes young Quirrell as 'naive and foolish' (傻乎乎的小伙子).
+      interval: 1
+      ease: 2.5
+    - character: 小伙子
+      pinyin: xiǎo huǒ zi
+      meaning: Young man / Lad / Young fellow
+      explanation: 小 (young) + 伙 (companion / fellow 亻+火) + 子 (noun suffix). Colloquial term for a 'young man / lad' (傻乎乎的小伙子).
+      interval: 1
+      ease: 2.5
+    - character: 善恶是非
+      pinyin: shàn è shì fēi
+      meaning: Good and evil, right and wrong
+      explanation: '善 (good) + 恶 (evil) + 是 (right) + 非 (wrong). Four-character moral compound: Quirrell once held notions about ''good and evil, right and wrong'' (对善恶是非有着一套荒唐的想法).'
+      interval: 1
+      ease: 2.5
+    - character: 荒唐
+      pinyin: huāng táng
+      meaning: Absurd / Ridiculous / Preposterous
+      explanation: 荒 (wasteland / wild 艹+巟) + 唐 (exaggerated / empty 口+庚). Quirrell dismisses his former moral beliefs as 'ridiculous' ideas (荒唐的想法).
+      interval: 1
+      ease: 2.5
+    - character: 想法
+      pinyin: xiǎng fǎ
+      meaning: Idea / Notion / Way of thinking
+      explanation: 想 (think 相+心) + 法 (way / method 氵+去). Quirrell's old 'notions' about morality (荒唐的想法).
+      interval: 1
+      ease: 2.5
+    - character: 指出
+      pinyin: zhǐ chū
+      meaning: To point out / Indicate / Show
+      explanation: '指 (point 扌+旨) + 出 (out). Resultative compound: ''It was Voldemort who pointed out my error'' (是伏地魔指出了我的错误).'
+      interval: 1
+      ease: 2.5
+    - character: 错误
+      pinyin: cuò wù
+      meaning: Mistake / Error / Fault
+      explanation: 错 (wrong / blunder 钅+昔) + 误 (mistake /ge 讠+吴). Voldemort showed Quirrell his 'errors' and forgives no 'mistakes' (指出了我的错误 / 原谅我的错误).
+      interval: 1
+      ease: 2.5
+    - character: 权力
+      pinyin: quán lì
+      meaning: Power / Authority
+      explanation: '权 (authority / weighing scale 木+又) + 力 (strength / force). Voldemort''s core creed: ''There is no good and evil, there is only power'' (只有权力).'
+      interval: 1
+      ease: 2.5
+    - character: 还有
+      pinyin: hái yǒu
+      meaning: And also / In addition / There is also
+      explanation: '还 (still / also) + 有 (have / exist). Connects the second half of Voldemort''s maxim: ''only power, and those too weak to seek it'' (只有权力，还有那些无法获取权势的无能之辈).'
+      interval: 1
+      ease: 2.5
+    - character: 获取
+      pinyin: huò qǔ
+      meaning: To obtain / Acquire / Gain
+      explanation: 获 (capture / reap 艹+犭+只) + 取 (take 又+耳). Formal verb meaning to 'seek and obtain' power (获取权势).
+      interval: 1
+      ease: 2.5
+    - character: 权势
+      pinyin: quán shì
+      meaning: Power and influence / Dominance
+      explanation: '权 (authority 木+又) + 势 (force / momentum 执+力). Emphasizes political or magical dominance: those unable to obtain ''power'' (获取权势).'
+      interval: 1
+      ease: 2.5
+    - character: 无能之辈
+      pinyin: wú néng zhī bèi
+      meaning: Incompetent lot / Those too weak
+      explanation: 无能 (incapable / powerless) + 之 (literary 'of') + 辈 (generation / class of people 非+车). Literary phrase translating 'those too weak [to seek power]' (无法获取权势的无能之辈).
+      interval: 1
+      ease: 2.5
+    - character: 以后
+      pinyin: yǐ hòu
+      meaning: After / Afterwards / Since then
+      explanation: 以 (by / from) + 后 (after / behind). Combines with 从那 to mean 'from then on / ever since then' (从那以后).
+      interval: 1
+      ease: 2.5
+    - character: 忠心耿耿
+      pinyin: zhōng xīn gěng gěng
+      meaning: Utterly loyal / Most faithful and devoted
+      explanation: 忠心 (loyal heart 忠+心) + 耿耿 (bright / devoted 耳+火). Idiom describing Quirrell serving Voldemort 'faithfully' ever since (忠心耿耿地为他效劳).
+      interval: 1
+      ease: 2.5
+    - character: 为
+      pinyin: wèi
+      meaning: For / On behalf of
+      explanation: 'Preposition (fourth tone wèi) marking the beneficiary: serving ''for him'' (为他效劳).'
+      interval: 1
+      ease: 2.5
+    - character: 效劳
+      pinyin: xiào láo
+      meaning: To serve / Work in the service of
+      explanation: '效 (devote / render service 交+攵) + 劳 (toil / labor 艹+冖+力). To render service to a master: ''served him faithfully'' (忠心耿耿地为他效劳).'
+      interval: 1
+      ease: 2.5
+    - character: 许多
+      pinyin: xǔ duō
+      meaning: Many / A great number of
+      explanation: '许 (allow / many 讠+午) + 多 (many 夕+夕). Quantifier before 次: ''many times'' Quirrell let Voldemort down (有许多次令他失望过).'
+      interval: 1
+      ease: 2.5
+    - character: 令
+      pinyin: lìng
+      meaning: To make / Cause / Command
+      explanation: '亼 (gather) + 卩 (kneeling person). Causative verb in formal speech: ''caused him to be disappointed'' / let him down (令他失望).'
+      interval: 1
+      ease: 2.5
+    - character: 失望
+      pinyin: shī wàng
+      meaning: Disappointed / To lose hope
+      explanation: 失 (lose) + 望 (hope / gaze). Quirrell admits he 'disappointed' his master many times (令他失望过).
+      interval: 1
+      ease: 2.5
+    - character: 非常
+      pinyin: fēi cháng
+      meaning: Very / Extremely / Extraordinary
+      explanation: '非 (not) + 常 (ordinary). Intensifier: Voldemort was ''very strict / harsh'' with him (非常严厉) and ''very displeased'' (非常不高兴).'
+      interval: 1
+      ease: 2.5
+    - character: 严厉
+      pinyin: yán lì
+      meaning: Strict / Severe / Harsh
+      explanation: 严 (stern / tight) + 厉 (whetstone / severe 厂+万). Voldemort had to be 'very harsh' with Quirrell (他对我一直非常严厉).
+      interval: 1
+      ease: 2.5

@@ -1,0 +1,332 @@
+selected: true
+cards:
+    - character: 巨型
+      pinyin: jù xíng
+      meaning: Giant / Enormous / Oversized
+      explanation: 巨 (huge/gigantic) + 型 (土 earth + 刑 = model/type/size). Describes Snape swooping around like an oversized bat.
+      interval: 1
+      ease: 2.5
+    - character: 大
+      pinyin: dà
+      meaning: Big / Great / Large
+      explanation: Pictograph of a person with arms outstretched. Reinforces size in "巨型大蝙蝠" (giant big bat).
+      interval: 1
+      ease: 2.5
+    - character: 蝙蝠
+      pinyin: biān fú
+      meaning: Bat (animal)
+      explanation: 蝙 (虫 insect/creature + 扁 flat) + 蝠 (虫 + 畐 phonetic). Both characters use the 虫 radical; Snape is famously compared to an overgrown bat.
+      interval: 1
+      ease: 2.5
+    - character: 到处
+      pinyin: dào chù
+      meaning: Everywhere / All over the place
+      explanation: '到 (arrive/reach) + 处 (place). Means "everywhere": "到处乱飞" (flying/swooping around everywhere).'
+      interval: 1
+      ease: 2.5
+    - character: 乱
+      pinyin: luàn
+      meaning: Randomly / All over / Chaotically
+      explanation: '舌 + 乚. Used adverbially before a verb to indicate disorderly or erratic action: "到处乱飞" (swooping all over the place).'
+      interval: 1
+      ease: 2.5
+    - character: 飞
+      pinyin: fēi
+      meaning: To fly / To swoop
+      explanation: Pictograph of a bird or wings in flight. Figuratively describes Snape's billowy black robes as he sweeps through the castle.
+      interval: 1
+      ease: 2.5
+    - character: 对
+      pinyin: duì
+      meaning: To / For / Toward
+      explanation: '又 (hand) + 寸 (inch/measure). Preposition indicating the target or beneficiary: "这对我们倒是很有帮助" (this was actually very helpful to us).'
+      interval: 1
+      ease: 2.5
+    - character: 我们
+      pinyin: wǒ men
+      meaning: We / Us
+      explanation: 我 (I) + 们 (亻 plural suffix for people). First-person plural pronoun; Quirrell hints at himself and his master Voldemort.
+      interval: 1
+      ease: 2.5
+    - character: 倒是
+      pinyin: dào shì
+      meaning: Actually / On the contrary / Quite
+      explanation: 倒 (turn upside down / unexpectedly) + 是 (be). Adverbial phrase expressing that something turns out to be quite advantageous contrary to expectations.
+      interval: 1
+      ease: 2.5
+    - character: 很
+      pinyin: hěn
+      meaning: Very / Quite
+      explanation: '彳 (step) + 艮 (tough/blunt). Degree adverb modifying 有帮助: "很有帮助" (very helpful).'
+      interval: 1
+      ease: 2.5
+    - character: 有
+      pinyin: yǒu
+      meaning: To have / To possess
+      explanation: 扌/ナ (hand) + 月 (meat). Combined with an abstract noun like 帮助, forms an adjectival phrase ("有帮助" = helpful).
+      interval: 1
+      ease: 2.5
+    - character: 帮助
+      pinyin: bāng zhù
+      meaning: Help / Assistance
+      explanation: 帮 (帛 cloth + 邦 = assist/support) + 助 (且 + 力 strength = aid). Snape's sinister reputation was a great help in deflecting suspicion from Quirrell.
+      interval: 1
+      ease: 2.5
+    - character: 那里
+      pinyin: nà lǐ
+      meaning: There / That place
+      explanation: '那 (that) + 里 (inside/place). Distal location pronoun: "有他在那里放着" (with him there as a contrast).'
+      interval: 1
+      ease: 2.5
+    - character: 放
+      pinyin: fàng
+      meaning: To place / To put / To leave
+      explanation: 方 (square/direction) + 攵 (tap/action). In "有他在那里放着", idiomatically means having him situated there for everyone to see.
+      interval: 1
+      ease: 2.5
+    - character: 着
+      pinyin: zhe
+      meaning: Continuous aspect particle
+      explanation: '羊 + 目. Read zhe (neutral tone) to indicate a continuing state: "在那里放着" (placed/sitting right there).'
+      interval: 1
+      ease: 2.5
+    - character: 谁
+      pinyin: shéi
+      meaning: Who / Whom
+      explanation: '讠 (speech) + 隹 (short-tailed bird). Interrogative pronoun used in a rhetorical question: "谁还会怀疑..." (Who would still suspect...?).'
+      interval: 1
+      ease: 2.5
+    - character: 怀疑
+      pinyin: huái yí
+      meaning: To suspect / To doubt
+      explanation: 怀 (忄 heart + 不 = harbor in mind) + 疑 (doubt/suspect). Quirrell gloats that no one would suspect him while Snape was around.
+      interval: 1
+      ease: 2.5
+    - character: 可怜
+      pinyin: kě lián
+      meaning: Pitiful / Poor / Pathetic
+      explanation: 可 (worthy of / may) + 怜 (忄 heart + 令 = pity). Quirrell mocks his own persona as "poor, stuttering Professor Quirrell" ("可怜的，结结巴巴的奇洛教授").
+      interval: 1
+      ease: 2.5
+    - character: 结结巴巴
+      pinyin: jiē jiē bā bā
+      meaning: Stuttering / Stammering
+      explanation: 'AABB reduplication of 结巴 (jiē ba: 纟 silk/knot + 巴 = tongue-tied/stutter). Describes Quirrell''s feigned speech impediment.'
+      interval: 1
+      ease: 2.5
+    - character: 教授
+      pinyin: jiào shòu
+      meaning: Professor
+      explanation: '教 (孝 + 攵 = teach) + 授 (扌 hand + 受 = impart/confer). Academic title: "奇洛教授" (Professor Quirrell).'
+      interval: 1
+      ease: 2.5
+    - character: 呢
+      pinyin: ne
+      meaning: Modal particle (rhetorical / wh-question)
+      explanation: 口 (mouth) + 尼 (phonetic). Closes the rhetorical question "谁还会怀疑...奇洛教授呢？" (who would suspect... Professor Quirrell?).
+      interval: 1
+      ease: 2.5
+    - character: 无法
+      pinyin: wú fǎ
+      meaning: Unable to / Have no way to
+      explanation: '无 (without/not have) + 法 (氵 water + 去 = way/method). Literally "no way to": "哈利无法相信这一切" (Harry could not believe all this).'
+      interval: 1
+      ease: 2.5
+    - character: 相信
+      pinyin: xiāng xìn
+      meaning: To believe / To trust
+      explanation: 相 (mutual/examine) + 信 (亻 person + 言 word = truthful/believe). Harry cannot bring himself to believe Quirrell's revelation.
+      interval: 1
+      ease: 2.5
+    - character: 一切
+      pinyin: yī qiè
+      meaning: Everything / All of it
+      explanation: '一 (one/all) + 切 (刀 knife = cut/all). Refers to the entirety of the shocking situation: "这一切" (all of this).'
+      interval: 1
+      ease: 2.5
+    - character: 可能
+      pinyin: kě néng
+      meaning: Possible / Probable
+      explanation: 可 (can/may) + 能 (ability/can). Negated as "这不可能是真的" (This cannot possibly be true).
+      interval: 1
+      ease: 2.5
+    - character: 真
+      pinyin: zhēn
+      meaning: True / Real
+      explanation: '十 + 目 + 八. Used in the 是...的 structure "是真的" (is true/real): "这不可能是真的" (This cannot be true).'
+      interval: 1
+      ease: 2.5
+    - character: 曾经
+      pinyin: céng jīng
+      meaning: Once / Previously / In the past
+      explanation: '曾 (formerly/once) + 经 (纟 silk + 巠 = pass through/experience). Marks a past experience: "斯内普曾经想害死我！" (Snape once tried to kill me!).'
+      interval: 1
+      ease: 2.5
+    - character: 害死
+      pinyin: hài sǐ
+      meaning: To kill / To murder / To cause the death of
+      explanation: 害 (宀 + 丰 + 口 = harm/injure) + 死 (death, resultative complement). Verb-resultative compound meaning to harm someone to death.
+      interval: 1
+      ease: 2.5
+    - character: 那
+      pinyin: nà
+      meaning: That
+      explanation: '阝 (mound/city) + 冄. Distal demonstrative pronoun: "那次魁地奇比赛" (that Quidditch match).'
+      interval: 1
+      ease: 2.5
+    - character: 次
+      pinyin: cì
+      meaning: Time / Occurrence (measure word)
+      explanation: '冫 (ice/two) + 欠 (yawn/lack). Classifier for events or occurrences: "那次魁地奇比赛" (that Quidditch match).'
+      interval: 1
+      ease: 2.5
+    - character: 魁地奇
+      pinyin: Kuí dì qí
+      meaning: Quidditch
+      explanation: 魁 (鬼 ghost + 斗 = chief) + 地 (earth) + 奇 (marvelous). Official Mandarin phonetic translation of the wizarding sport Quidditch.
+      interval: 1
+      ease: 2.5
+    - character: 比赛
+      pinyin: bǐ sài
+      meaning: Match / Competition / Game
+      explanation: 比 (compare/compete) + 赛 (宀 + 贝 shell = compete/surpass). Refers to Harry's first Quidditch match.
+      interval: 1
+      ease: 2.5
+    - character: 时候
+      pinyin: shí hòu
+      meaning: Time / Moment / When
+      explanation: 时 (日 sun + 寸 = time) + 候 (亻 + 矢 = wait/time). Used in "...的时候" to mean "when / at the time of".
+      interval: 1
+      ease: 2.5
+    - character: 朋友
+      pinyin: péng yǒu
+      meaning: Friend
+      explanation: 朋 (two strings of shells = companion) + 友 (two hands joined = friend). Refers to Harry's friend Hermione Granger.
+      interval: 1
+      ease: 2.5
+    - character: 格兰杰
+      pinyin: Gé lán jié
+      meaning: Granger (Hermione Granger)
+      explanation: 格 (木 tree + 各 = standard) + 兰 (orchid) + 杰 (outstanding). Mandarin transliteration of Granger ("格兰杰小姐" = Miss Granger).
+      interval: 1
+      ease: 2.5
+    - character: 小姐
+      pinyin: xiǎo jiě
+      meaning: Miss / Young lady
+      explanation: '小 (small/young) + 姐 (女 woman + 且 = elder sister). Polite title used before a surname: "格兰杰小姐" (Miss Granger).'
+      interval: 1
+      ease: 2.5
+    - character: 冲
+      pinyin: chōng
+      meaning: To rush / To charge / To dash
+      explanation: '冫 + 中 (middle). Means to rush or dash forcefully: "冲过来" (rushed over).'
+      interval: 1
+      ease: 2.5
+    - character: 过来
+      pinyin: guò lái
+      meaning: To come over (directional complement)
+      explanation: '过 (pass/cross) + 来 (come toward speaker). Indicates movement toward the scene of action: "冲过来" (rushed over).'
+      interval: 1
+      ease: 2.5
+    - character: 点火
+      pinyin: diǎn huǒ
+      meaning: To light a fire / To set fire
+      explanation: 点 (灬 fire = kindle/light) + 火 (fire). Verb-object compound describing Hermione setting Snape's robes on fire.
+      interval: 1
+      ease: 2.5
+    - character: 烧
+      pinyin: shāo
+      meaning: To burn / To set on fire
+      explanation: 火 (fire) + 尧 (high, phonetic). Used in "点火烧斯内普" (set fire to burn Snape).
+      interval: 1
+      ease: 2.5
+    - character: 无意中
+      pinyin: wú yì zhōng
+      meaning: Inadvertently / Accidentally / Unintentionally
+      explanation: 无 (without) + 意 (音 + 心 = intention) + 中 (in the midst of). Hermione accidentally knocked Quirrell over while rushing to set Snape's robe on fire.
+      interval: 1
+      ease: 2.5
+    - character: 把
+      pinyin: bǎ
+      meaning: Disposal marker (bǎ construction)
+      explanation: '扌 (hand) + 巴. Preverbal object marker indicating that an action directly affects or disposes of the object: "把我撞倒了" (knocked me over).'
+      interval: 1
+      ease: 2.5
+    - character: 撞倒
+      pinyin: zhuàng dǎo
+      meaning: To knock down / To knock over
+      explanation: '撞 (扌 hand + 童 = collide/bump into) + 倒 (亻 + 到 = fall over, dǎo). Verb-resultative compound: Hermione bumped into Quirrell and knocked him headfirst.'
+      interval: 1
+      ease: 2.5
+    - character: 她
+      pinyin: tā
+      meaning: She / Her
+      explanation: 女 (woman) + 也. Third-person feminine pronoun referring to Hermione Granger.
+      interval: 1
+      ease: 2.5
+    - character: 破坏
+      pinyin: pò huài
+      meaning: To break / To ruin / To disrupt
+      explanation: 破 (石 stone + 皮 = break/shatter) + 坏 (土 earth + 不 = spoil/ruin). Hermione broke Quirrell's eye contact needed for the jinx.
+      interval: 1
+      ease: 2.5
+    - character: 凝视
+      pinyin: níng shì
+      meaning: Fixed gaze / Stare / Unblinking eye contact
+      explanation: 凝 (冫 ice + 疑 = congeal/fixate) + 视 (礻 + 见 see = look at). Refers to the unbroken eye contact required to curse Harry's broomstick.
+      interval: 1
+      ease: 2.5
+    - character: 其实
+      pinyin: qí shí
+      meaning: Actually / In fact / As a matter of fact
+      explanation: 其 (its/that) + 实 (real/fact). Introduces the underlying truth of how close Quirrell came to killing Harry.
+      interval: 1
+      ease: 2.5
+    - character: 要
+      pinyin: yào
+      meaning: If / To need (in 只要 = as long as)
+      explanation: '西 + 女. Here part of the conjunction 只要 (zhǐ yào: only need / as long as): "其实只要再坚持几秒钟" (in fact, given just a few more seconds).'
+      interval: 1
+      ease: 2.5
+    - character: 再
+      pinyin: zài
+      meaning: More / Again / Further
+      explanation: 'Indicates continuation or addition of time/action: "再坚持几秒钟" (hold on for a few more seconds).'
+      interval: 1
+      ease: 2.5
+    - character: 坚持
+      pinyin: jiān chí
+      meaning: To persist / To hold on / To keep up
+      explanation: 坚 (土 solid/firm) + 持 (扌 hand + 寺 = hold/maintain). Means to maintain the curse for just a few seconds longer.
+      interval: 1
+      ease: 2.5
+    - character: 几
+      pinyin: jǐ
+      meaning: A few / Several
+      explanation: 'Small table pictograph. Indefinite small number (roughly 2–9): "几秒钟" (a few seconds).'
+      interval: 1
+      ease: 2.5
+    - character: 秒钟
+      pinyin: miǎo zhōng
+      meaning: Seconds (of time)
+      explanation: '秒 (禾 grain beard = tiny unit/second) + 钟 (钅 metal + 中 = clock/time). Duration noun: "几秒钟" (a few seconds).'
+      interval: 1
+      ease: 2.5
+    - character: 就
+      pinyin: jiù
+      meaning: Then / Right away
+      explanation: 京 + 尤. Correlative adverb paired with 只要 ("只要...就..." = as long as..., then...) indicating an immediate consequence.
+      interval: 1
+      ease: 2.5
+    - character: 从
+      pinyin: cóng
+      meaning: From / Off
+      explanation: 'Two people following one another. Preposition marking point of separation: "从飞天扫帚上摔下去了" (thrown off the flying broomstick).'
+      interval: 1
+      ease: 2.5
+    - character: 飞天扫帚
+      pinyin: fēi tiān sǎo zhǒu
+      meaning: Flying broomstick
+      explanation: 飞天 (fly in the sky) + 扫帚 (扌 sweep + 帚 broom = broom). Standard Mandarin translation for a wizard's flying broomstick.
+      interval: 1
+      ease: 2.5

@@ -1,0 +1,338 @@
+selected: true
+cards:
+    - character: 气味
+      pinyin: qì wèi
+      meaning: Odor / Smell / Scent
+      explanation: 气 (air / breath / vapor) + 味 (taste / smell, 口 + 未). The strange odor (一股奇怪的气味) Harry notices when Quirrell leans close behind him.
+      interval: 1
+      ease: 2.5
+    - character: 似乎
+      pinyin: sì hū
+      meaning: It seems / As if / Seemingly
+      explanation: '似 (resemble 亻+以) + 乎 (classical particle). Indicates appearance or likelihood: the strange smell seems (似乎) to come from Quirrell''s turban.'
+      interval: 1
+      ease: 2.5
+    - character: 头
+      pinyin: tóu
+      meaning: Head / Top
+      explanation: Pictograph of a head with hair or bean-vessel (豆) form. Refers to Quirrell's head wrapped in his purple turban (奇洛头上的围巾).
+      interval: 1
+      ease: 2.5
+    - character: 围巾
+      pinyin: wéi jīn
+      meaning: Scarf / Turban / Muffler
+      explanation: 围 (enclose / wrap around 囗+韦) + 巾 (cloth / towel). Translates Quirrell's turban wrapped around his head (头上的围巾), concealing Voldemort's face.
+      interval: 1
+      ease: 2.5
+    - character: 闭
+      pinyin: bì
+      meaning: To close / To shut
+      explanation: 门 (door / gate) + 才 (timber crossbar). Harry closes his eyes (闭上眼睛) as he steps in front of the Mirror of Erised.
+      interval: 1
+      ease: 2.5
+    - character: 眼睛
+      pinyin: yǎn jing
+      meaning: Eyes
+      explanation: 眼 (eye 目+艮) + 睛 (eyeball / pupil 目+青). Harry closes and then opens his eyes (把眼睛睁开) before the Mirror of Erised.
+      interval: 1
+      ease: 2.5
+    - character: 随即
+      pinyin: suí jí
+      meaning: Immediately afterward / Promptly / Thereupon
+      explanation: 随 (follow 阝+有+辶) + 即 (at once / immediately). Harry steps before the mirror with eyes shut and immediately opens them (随即把眼睛睁开了).
+      interval: 1
+      ease: 2.5
+    - character: 睁
+      pinyin: zhēng
+      meaning: To open (the eyes)
+      explanation: '目 (eye) + 争 (strive / contend, phonetic). Specifically used for opening one''s eyes: Harry opens his eyes (把眼睛睁开了) to look into the Mirror.'
+      interval: 1
+      ease: 2.5
+    - character: 开
+      pinyin: kāi
+      meaning: Open / Away (resultative complement); to open
+      explanation: Pictograph of two hands removing a bar from a gate. Resultative complement in 睁开 (open wide one's eyes) as Harry gazes into the mirror.
+      interval: 1
+      ease: 2.5
+    - character: 开始
+      pinyin: kāi shǐ
+      meaning: Beginning / To start / At first
+      explanation: 开 (open) + 始 (begin 女+台). In 一开始 (at the very beginning), Harry's reflection looks pale and terrified before smiling.
+      interval: 1
+      ease: 2.5
+    - character: 脸色苍白
+      pinyin: liǎn sè cāng bái
+      meaning: Pale-faced / Ashen complexion
+      explanation: 脸色 (facial complexion) + 苍白 (ashy / deathly pale). Describes Harry's reflection in the mirror looking pale and frightened (脸色苍白) at first.
+      interval: 1
+      ease: 2.5
+    - character: 神情惶恐
+      pinyin: shén qíng huáng kǒng
+      meaning: Terrified expression / Look of alarm
+      explanation: 神情 (facial expression / demeanor) + 惶恐 (terrified and anxious 忄+皇, 巩+心). Describes the fearful expression on Harry's reflection at first glance.
+      interval: 1
+      ease: 2.5
+    - character: 片刻
+      pinyin: piàn kè
+      meaning: A brief moment / An instant
+      explanation: 片 (slice / sliver) + 刻 (quarter-hour / carve 亥+刂). After a brief moment (片刻之后), Harry's reflection in the mirror breaks into a smile.
+      interval: 1
+      ease: 2.5
+    - character: 之后
+      pinyin: zhī hòu
+      meaning: After / Afterward / Later
+      explanation: 之 (possessive/demonstrative particle) + 后 (after / behind). Combines with 片刻 to mean 'a moment later' (片刻之后).
+      interval: 1
+      ease: 2.5
+    - character: 便
+      pinyin: biàn
+      meaning: Then / Thereupon / Promptly
+      explanation: '亻 (person) + 更 (change). Literary adverb indicating immediate consequence: a moment later, his reflection promptly smiled (便露出了笑容).'
+      interval: 1
+      ease: 2.5
+    - character: 露出
+      pinyin: lù chū
+      meaning: To reveal / To show / To break into (a smile)
+      explanation: 露 (dew / reveal 雨+路) + 出 (come out). Harry's reflection in the Mirror reveals a smile (露出了笑容).
+      interval: 1
+      ease: 2.5
+    - character: 笑容
+      pinyin: xiào róng
+      meaning: Smile / Smiling expression
+      explanation: 笑 (smile / laugh 竹+夭) + 容 (facial appearance / contain 宀+谷). The reassuring smile shown by Harry's reflection before pulling out the Stone.
+      interval: 1
+      ease: 2.5
+    - character: 伸
+      pinyin: shēn
+      meaning: To stretch / To reach out / To extend
+      explanation: 亻 (person) + 申 (extend / stretch). Mirror-Harry reaches his hand into his pocket (把手伸进口袋).
+      interval: 1
+      ease: 2.5
+    - character: 进
+      pinyin: jìn
+      meaning: Into / To enter / Forward
+      explanation: 辶 (walk) + 井 (well, phonetic). Directional complement in 伸进口袋 (reach into the pocket) and 放进口袋 (put into the pocket).
+      interval: 1
+      ease: 2.5
+    - character: 口袋
+      pinyin: kǒu dài
+      meaning: Pocket / Bag / Sack
+      explanation: 口 (mouth / opening) + 袋 (pouch / bag 代+衣). The trouser pocket into which Mirror-Harry puts the Philosopher's Stone, causing it to appear in Harry's real pocket.
+      interval: 1
+      ease: 2.5
+    - character: 掏
+      pinyin: tāo
+      meaning: To fish out / To pull out (from a pocket or bag)
+      explanation: 扌 (hand) + 匋 (pottery, phonetic). Mirror-Harry reaches into his pocket and pulls out (掏出) a blood-red stone.
+      interval: 1
+      ease: 2.5
+    - character: 鲜红
+      pinyin: xiān hóng
+      meaning: Bright red / Scarlet / Blood-red
+      explanation: 鲜 (fresh / bright 鱼+羊) + 红 (red 纟+工). Describes the brilliant crimson color of the Philosopher's Stone (一块鲜红的石头).
+      interval: 1
+      ease: 2.5
+    - character: 眨眨
+      pinyin: zhǎ zhǎ
+      meaning: To blink / To wink (reduplicated)
+      explanation: '目 (eye) + 乏 (lack, phonetic). Reduplicated verb showing a quick, playful wink: Mirror-Harry winks (眨眨眼睛) and puts the Stone into his pocket.'
+      interval: 1
+      ease: 2.5
+    - character: 件
+      pinyin: jiàn
+      meaning: Piece / Item (measure word for objects, clothes, or matters)
+      explanation: 亻 (person) + 牛 (ox). Measure word in 一件重重的东西 (a heavy object) when the Stone drops into Harry's pocket.
+      interval: 1
+      ease: 2.5
+    - character: 重重
+      pinyin: zhòng zhòng
+      meaning: Very heavy / Weighty
+      explanation: 'Reduplication of 重 (zhòng: heavy, 千+里). Describes the solid, heavy weight of the Philosopher''s Stone (一件重重的东西) dropping into Harry''s pocket.'
+      interval: 1
+      ease: 2.5
+    - character: 真的
+      pinyin: zhēn de
+      meaning: Really / Truly / Actually
+      explanation: 真 (true / real) + 的 (adverbial/attributive particle). Emphasizes the miraculous reality that the Stone truly fell (真的落进了) into his pocket.
+      interval: 1
+      ease: 2.5
+    - character: 落进
+      pinyin: luò jìn
+      meaning: To fall into / To drop into
+      explanation: 落 (fall / drop 艹+洛) + 进 (enter). Something heavy actually drops into (落进了) Harry's real pocket as his reflection places it there.
+      interval: 1
+      ease: 2.5
+    - character: 不可思议
+      pinyin: bù kě sī yì
+      meaning: Unimaginable / Inconceivable / Incredible
+      explanation: 不可 (cannot) + 思议 (conceive or discuss in thought). Four-character idiom expressing Harry's amazement at magically receiving the Stone through Dumbledore's enchantment.
+      interval: 1
+      ease: 2.5
+    - character: 居然
+      pinyin: jū rán
+      meaning: Unexpectedly / To one's surprise / Actually
+      explanation: 居 (reside / occupy 尸+古) + 然 (thus / so). Expresses astonishment that Harry unexpectedly obtained the Philosopher's Stone just like that (他居然就这样得到了魔法石).
+      interval: 1
+      ease: 2.5
+    - character: 得到
+      pinyin: dé dào
+      meaning: To obtain / To get / To receive
+      explanation: 得 (obtain 彳+旦+寸) + 到 (arrive / achieve). Harry marvels that he has actually obtained the Philosopher's Stone (得到了魔法石) because he wanted to find it without using it.
+      interval: 1
+      ease: 2.5
+    - character: 怎么样
+      pinyin: zěn me yàng
+      meaning: How is it? / Well? / What's it like?
+      explanation: 怎么 (how) + 样 (manner / appearance). Quirrell impatiently demands 'Well?' (怎么样？) to know what Harry sees in the Mirror.
+      interval: 1
+      ease: 2.5
+    - character: 耐烦
+      pinyin: nài fán
+      meaning: 'Patient (usually in negative 不耐烦: impatient)'
+      explanation: 耐 (endure / bear 而+寸) + 烦 (vexed / annoyed 火+页). In 不耐烦地问 (asked impatiently), showing Quirrell's eagerness to get the Stone.
+      interval: 1
+      ease: 2.5
+    - character: 鼓
+      pinyin: gǔ
+      meaning: To muster / To rouse / Drum
+      explanation: '壴 (drum on stand) + 支 (hand holding drumstick). Metaphorically ''beating the drum'' to rouse spirit: Harry musters up his courage (鼓起勇气) to lie to Quirrell.'
+      interval: 1
+      ease: 2.5
+    - character: 勇气
+      pinyin: yǒng qì
+      meaning: Courage / Bravery / Nerve
+      explanation: 勇 (brave / bold 甬+力) + 气 (spirit / breath). Harry summons his courage (鼓起勇气) to stall Quirrell with a fabricated vision.
+      interval: 1
+      ease: 2.5
+    - character: 握手
+      pinyin: wò shǒu
+      meaning: To shake hands
+      explanation: '握 (grasp / hold 扌+屋) + 手 (hand). Separable verb: Harry claims he sees himself shaking hands with Dumbledore (跟邓布利多握手).'
+      interval: 1
+      ease: 2.5
+    - character: 胡乱
+      pinyin: hú luàn
+      meaning: At random / Carelessly / Wildly
+      explanation: '胡 (reckless / wild) + 乱 (disorder / random). Modifies 编造: Harry hastily makes up a story on the spot (胡乱编造地说).'
+      interval: 1
+      ease: 2.5
+    - character: 编造
+      pinyin: biān zào
+      meaning: To fabricate / To make up / To invent
+      explanation: 编 (weave / plait 纟+扁) + 造 (make / construct 辶+告). Literally 'weaving and constructing' a falsehood to hide that he now has the Stone.
+      interval: 1
+      ease: 2.5
+    - character: 赢得
+      pinyin: yíng dé
+      meaning: To win / To gain
+      explanation: 赢 (win 亡+口+月+贝+凡) + 得 (obtain). Harry lies that he sees himself winning the House Cup for Gryffindor (为格兰芬多赢得了学院杯冠军).
+      interval: 1
+      ease: 2.5
+    - character: 学院杯
+      pinyin: xué yuàn bēi
+      meaning: House Cup
+      explanation: 学院 (college / Hogwarts House) + 杯 (cup / trophy 木+不). The Hogwarts House Cup that Harry claims to see himself winning in the Mirror.
+      interval: 1
+      ease: 2.5
+    - character: 冠军
+      pinyin: guàn jūn
+      meaning: Champion / First place / Championship
+      explanation: '冠 (guàn: crown / top the list 冖+元+寸) + 军 (army). Originally ''first in the army''; here 学院杯冠军 means the House Cup championship.'
+      interval: 1
+      ease: 2.5
+    - character: 骂骂咧咧
+      pinyin: mà mà liē liē
+      meaning: Cursing and muttering / Grumbling profanities
+      explanation: AABB compound of 骂 (curse / scold 口+口+马) + 咧 (draw back corners of mouth 口+列). Quirrell starts cursing under his breath in frustration.
+      interval: 1
+      ease: 2.5
+    - character: 走开
+      pinyin: zǒu kāi
+      meaning: Get out of the way / Step aside / Go away
+      explanation: 走 (walk / leave) + 开 (away). Quirrell snaps at Harry to get out of the way (你给我走开) so he can look again.
+      interval: 1
+      ease: 2.5
+    - character: 退
+      pinyin: tuì
+      meaning: To step back / To retreat / To withdraw
+      explanation: 辶 (walk) + 艮 (stop / look back). Harry steps back to one side (退到一边时), hoping to slip away.
+      interval: 1
+      ease: 2.5
+    - character: 感觉
+      pinyin: gǎn jué
+      meaning: To feel / To sense / Sensation
+      explanation: 感 (feel 咸+心) + 觉 (perceive / sense). Harry feels (感觉到) the heavy Philosopher's Stone pressing against his thigh.
+      interval: 1
+      ease: 2.5
+    - character: 贴
+      pinyin: tiē
+      meaning: To press closely against / To stick / To paste
+      explanation: 贝 (shell) + 占 (occupy, phonetic). Describes the Stone resting snugly against Harry's thigh (贴在他的大腿上) inside his pocket.
+      interval: 1
+      ease: 2.5
+    - character: 大腿
+      pinyin: dà tuǐ
+      meaning: Thigh
+      explanation: 大 (big) + 腿 (leg 月+退). Harry feels the heavy Stone pressing against his thigh (大腿上) as he edges away.
+      interval: 1
+      ease: 2.5
+    - character: 敢
+      pinyin: gǎn
+      meaning: To dare
+      explanation: Modal verb expressing boldness or nerve. In the A-not-A question 敢不敢 (dare he or not), Harry wonders if he dares flee with the Stone right now.
+      interval: 1
+      ease: 2.5
+    - character: 带
+      pinyin: dài
+      meaning: To take along / To carry / Belt
+      explanation: Top depicts a sash with hanging ornaments + 巾 (cloth). In 带着它逃走 (take it with him and flee), referring to escaping with the Stone.
+      interval: 1
+      ease: 2.5
+    - character: 逃走
+      pinyin: táo zǒu
+      meaning: To flee / To run away / To escape
+      explanation: 逃 (flee / escape 辶+兆) + 走 (walk / leave). Harry wonders whether he dares make a run for it with the Stone (带着它逃走).
+      interval: 1
+      ease: 2.5
+    - character: 但
+      pinyin: dàn
+      meaning: But / However
+      explanation: 亻 (person) + 旦 (sunrise). Adversative conjunction introducing the sudden interruption before Harry can take five steps.
+      interval: 1
+      ease: 2.5
+    - character: 刚
+      pinyin: gāng
+      meaning: Just / Barely / Only just
+      explanation: '冈 (ridge, phonetic) + 刂 (knife). Indicates immediate sequence: he had barely walked five steps (他刚走了不到五步) when Voldemort''s voice rang out.'
+      interval: 1
+      ease: 2.5
+    - character: 五
+      pinyin: wǔ
+      meaning: Five (5)
+      explanation: Ancient cross-mark pictograph between heaven and earth representing the number five. Harry hadn't even walked five steps (不到五步) when the high voice spoke.
+      interval: 1
+      ease: 2.5
+    - character: 步
+      pinyin: bù
+      meaning: Step / Pace
+      explanation: 止 (foot) + inverted 止 (foot), depicting two feet stepping one after another. Used as a measure word for steps (不到五步).
+      interval: 1
+      ease: 2.5
+    - character: 嘴唇
+      pinyin: zuǐ chún
+      meaning: Lips
+      explanation: 嘴 (mouth 口+觜) + 唇 (lip 辰+口). A high voice speaks even though Quirrell's lips are not moving at all (奇洛的嘴唇根本没有动).
+      interval: 1
+      ease: 2.5
+    - character: 根本
+      pinyin: gēn běn
+      meaning: At all (with negative) / Fundamentally / Root
+      explanation: '根 (root 木+艮) + 本 (base of tree 木+一). Used with 没有 as an emphatic negative: Quirrell''s lips did not move at all (根本没有动).'
+      interval: 1
+      ease: 2.5
+    - character: 动
+      pinyin: dòng
+      meaning: To move / Movement
+      explanation: 云 (cloud) + 力 (strength). Quirrell's lips do not move (没有动) while Voldemort's voice speaks from under the turban.
+      interval: 1
+      ease: 2.5

@@ -1,0 +1,253 @@
+cards:
+    - character: 金色
+      pinyin: jīn sè
+      meaning: Golden (color)
+      explanation: 金 (gold / metal) + 色 (color). Waking in the hospital wing, Harry first sees something golden glinting above him (一个金色的东西).
+      interval: 1
+      ease: 2.5
+    - character: 头顶
+      pinyin: tóu dǐng
+      meaning: Above one's head / Crown of the head
+      explanation: '头 (head) + 顶 (丁 + 页 head: top / crown). Something golden glints right above Harry''s head (在他头顶上闪烁) as he regains consciousness.'
+      interval: 1
+      ease: 2.5
+    - character: 闪烁
+      pinyin: shǎn shuò
+      meaning: To glint / To twinkle / To sparkle
+      explanation: '闪 (门 gate + 人 person: flash) + 烁 (火 fire + 乐: shine / sparkle). Dumbledore''s spectacles glint above Harry like the Golden Snitch.'
+      interval: 1
+      ease: 2.5
+    - character: 飞贼
+      pinyin: fēi zéi
+      meaning: Golden Snitch (literally 'flying thief')
+      explanation: '飞 (fly) + 贼 (贝 shell + 戎 weapon: thief). Chinese translation of the Quidditch Snitch; groggy Harry mistakes Dumbledore''s glasses for the Snitch.'
+      interval: 1
+      ease: 2.5
+    - character: 胳膊
+      pinyin: gē bo
+      meaning: Arm
+      explanation: 胳 (月 flesh + 各 each) + 膊 (月 flesh + 尃 spread). Harry tries to catch the 'Snitch', but his arms are too heavy to lift (胳膊沉重得抬不起来).
+      interval: 1
+      ease: 2.5
+    - character: 沉重
+      pinyin: chén zhòng
+      meaning: Heavy / Weary
+      explanation: 沉 (sink / heavy) + 重 (heavy / weighty). Harry's arms feel leaden and heavy (沉重得抬不起来) as he wakes in the hospital wing.
+      interval: 1
+      ease: 2.5
+    - character: 抬
+      pinyin: tái
+      meaning: To lift / To raise
+      explanation: 扌 (hand) + 台 (platform/phonetic). Used in '抬不起来' (unable to lift up) describing Harry's heavy arms.
+      interval: 1
+      ease: 2.5
+    - character: 眨
+      pinyin: zhǎ
+      meaning: To blink / To wink
+      explanation: 目 (eye) + 乏 (lack/phonetic). Harry blinks his eyes (他眨了眨眼睛) and realizes the glinting object is a pair of glasses.
+      interval: 1
+      ease: 2.5
+    - character: 副
+      pinyin: fù
+      meaning: Measure word for pairs or sets (e.g., glasses, gloves, facial expressions)
+      explanation: '畐 (full/phonetic) + 刂 (knife). Classifier for items that come in joined pairs: ''一副眼镜'' (a pair of spectacles).'
+      interval: 1
+      ease: 2.5
+    - character: 眼镜
+      pinyin: yǎn jìng
+      meaning: Glasses / Spectacles
+      explanation: '眼 (eye) + 镜 (钅 metal + 竟: mirror / lens). Dumbledore''s half-moon spectacles (一副眼镜) glinting in the light.'
+      interval: 1
+      ease: 2.5
+    - character: 使劲
+      pinyin: shǐ jìn
+      meaning: To exert strength / Hard / With effort
+      explanation: 使 (use / exert) + 劲 (strength / energy). Harry blinks hard (使劲眨了眨眼睛) to bring his blurry vision into focus.
+      interval: 1
+      ease: 2.5
+    - character: 面前
+      pinyin: miàn qián
+      meaning: In front of / Before one's face
+      explanation: 面 (face) + 前 (front). As Harry's eyes focus, Dumbledore's smiling face appears before him (面前渐渐浮现出).
+      interval: 1
+      ease: 2.5
+    - character: 浮现
+      pinyin: fú xiàn
+      meaning: To emerge / To appear before one's eyes
+      explanation: '浮 (氵 water + 孚: float / surface) + 现 (王 + 见 see: appear). Dumbledore''s face gradually comes into view (渐渐浮现出).'
+      interval: 1
+      ease: 2.5
+    - character: 阿不思·邓布利多
+      pinyin: Ā bù sī · Dèng bù lì duō
+      meaning: Albus Dumbledore
+      explanation: Transliteration of Albus (阿不思) Dumbledore (邓布利多). The Headmaster of Hogwarts, who rescues Harry and greets him at his hospital bed.
+      interval: 1
+      ease: 2.5
+    - character: 笑眯眯
+      pinyin: xiào mī mī
+      meaning: Smilingly / Beaming with eyes narrowed in a smile
+      explanation: '笑 (竹 + 夭: smile) + 眯眯 (目 eye + 米 rice: narrowed eyes). Describes Dumbledore''s warm, beaming face (那张笑眯眯的脸).'
+      interval: 1
+      ease: 2.5
+    - character: 下午
+      pinyin: xià wǔ
+      meaning: Afternoon
+      explanation: 下 (latter / after) + 午 (noon). Dumbledore calmly greets Harry with 'Good afternoon, Harry' (下午好，哈利).
+      interval: 1
+      ease: 2.5
+    - character: 先是
+      pinyin: xiān shì
+      meaning: First / At first
+      explanation: '先 (first / before) + 是 (be). Correlative with 然后 (then): Harry first stares blankly at Dumbledore, then suddenly remembers Quirrell (先是呆呆地盯着他，然后……).'
+      interval: 1
+      ease: 2.5
+    - character: 先生
+      pinyin: xiān sheng
+      meaning: Sir / Mister
+      explanation: 先 (first / elder) + 生 (born / scholar). Respectful form of address used by Harry when speaking to Dumbledore (先生！魔法石！).
+      interval: 1
+      ease: 2.5
+    - character: 快
+      pinyin: kuài
+      meaning: Quick / Hurry
+      explanation: 忄 (heart) + 夬 (decide). Harry panics on waking and urges Dumbledore to hurry (先生，快——) before learning the danger has already passed.
+      interval: 1
+      ease: 2.5
+    - character: 不要
+      pinyin: bù yào
+      meaning: Do not / Don't
+      explanation: '不 (not) + 要 (want / need). Negative imperative: Dumbledore gently tells Harry ''Calm yourself / Don''t get excited'' (不要激动).'
+      interval: 1
+      ease: 2.5
+    - character: 激动
+      pinyin: jī dòng
+      meaning: Agitated / Excited / Worked up
+      explanation: '激 (氵 water + 敫: surge / stir up) + 动 (move). Dumbledore tells the frantic Harry not to get worked up (不要激动).'
+      interval: 1
+      ease: 2.5
+    - character: 亲爱
+      pinyin: qīn ài
+      meaning: Dear / Beloved
+      explanation: 亲 (intimate / close) + 爱 (love). Dumbledore addresses Harry affectionately as 'dear boy' (亲爱的孩子).
+      interval: 1
+      ease: 2.5
+    - character: 这些
+      pinyin: zhè xiē
+      meaning: These
+      explanation: 这 (this) + 些 (plural/some). Demonstrative determiner in '你说的这些话' (these things you are saying).
+      interval: 1
+      ease: 2.5
+    - character: 话
+      pinyin: huà
+      meaning: Words / Remarks / Speech
+      explanation: 讠 (speech) + 舌 (tongue). Refers to Harry's frantic warnings about Quirrell and the Stone (你说的这些话已经有点过时了).
+      interval: 1
+      ease: 2.5
+    - character: 有点
+      pinyin: yǒu diǎn
+      meaning: A little / Somewhat
+      explanation: 有 (have) + 点 (a bit / dot). Dumbledore understates that Harry's urgent warnings are 'a bit out of date' (有点过时了).
+      interval: 1
+      ease: 2.5
+    - character: 过时
+      pinyin: guò shí
+      meaning: Out of date / Behind the times
+      explanation: 过 (pass) + 时 (time). Literally 'past the time'; Dumbledore humorously tells Harry his news about Quirrell is a bit out of date.
+      interval: 1
+      ease: 2.5
+    - character: 请
+      pinyin: qǐng
+      meaning: Please
+      explanation: 讠 (speech) + 青 (green/phonetic). Polite request marker as Dumbledore asks Harry to calm down (请你镇静一些).
+      interval: 1
+      ease: 2.5
+    - character: 镇静
+      pinyin: zhèn jìng
+      meaning: Calm / Composed / To calm down
+      explanation: '镇 (钅 metal + 真 true: press down / calm) + 静 (青 + 争: quiet / still). Dumbledore asks Harry to stay calm (请你镇静一些) lest Madam Pomfrey throw him out.'
+      interval: 1
+      ease: 2.5
+    - character: 庞弗雷女士
+      pinyin: Páng fú léi nǚ shì
+      meaning: Madam Pomfrey
+      explanation: Transliteration of Pomfrey (庞弗雷) + 女士 (Madam / Lady). The strict Hogwarts matron who runs the hospital wing.
+      interval: 1
+      ease: 2.5
+    - character: 就要
+      pinyin: jiù yào
+      meaning: About to / Going to
+      explanation: '就 (soon / right away) + 要 (will / going to). Indicates imminent consequence: ''不然庞弗雷女士就要把我赶出去了'' (otherwise Madam Pomfrey will throw me out).'
+      interval: 1
+      ease: 2.5
+    - character: 出去
+      pinyin: chū qù
+      meaning: Out (directional complement)
+      explanation: 出 (exit / go out) + 去 (away). Used in '赶出去了' (drive/throw out of the hospital wing).
+      interval: 1
+      ease: 2.5
+    - character: 咽
+      pinyin: yàn
+      meaning: To swallow
+      explanation: '口 (mouth) + 因 (cause/phonetic). Read yàn when meaning ''to swallow'': Harry swallows hard (咽了口唾沫) and looks around.'
+      interval: 1
+      ease: 2.5
+    - character: 口
+      pinyin: kǒu
+      meaning: Mouthful (measure word) / Mouth
+      explanation: 'Pictograph of an open mouth. Used here as a measure word for a mouthful of saliva: ''咽了口唾沫'' (swallowed a mouthful of spit / gulped).'
+      interval: 1
+      ease: 2.5
+    - character: 唾沫
+      pinyin: tuò mo
+      meaning: Saliva / Spit
+      explanation: '唾 (口 mouth + 垂 droop: spit) + 沫 (氵 water + 末 end: foam / saliva). In the phrase ''咽了口唾沫'' (gulped / swallowed hard).'
+      interval: 1
+      ease: 2.5
+    - character: 环顾
+      pinyin: huán gù
+      meaning: To look around
+      explanation: '环 (王 jade + 不: ring / circle) + 顾 (厄 + 页 head: look back / look around). Harry looks around the room (环顾四周) and realizes he is in the hospital wing.'
+      interval: 1
+      ease: 2.5
+    - character: 意识
+      pinyin: yì shí
+      meaning: To realize / To be aware / Consciousness
+      explanation: '意 (音 sound + 心 heart: thought / meaning) + 识 (讠 speech + 只: know / recognize). With 到 (意识到), means ''to realize'' that he is in the hospital wing.'
+      interval: 1
+      ease: 2.5
+    - character: 医院
+      pinyin: yī yuàn
+      meaning: Hospital / Infirmary
+      explanation: '医 (匚 + 矢 arrow: heal / medicine) + 院 (阝 + 完: courtyard / institution). Refers to the Hogwarts hospital wing (医院里).'
+      interval: 1
+      ease: 2.5
+    - character: 躺
+      pinyin: tǎng
+      meaning: To lie down
+      explanation: 身 (body) + 尚 (still/phonetic). Harry is lying (他躺在) in a hospital bed with crisp white linen sheets.
+      interval: 1
+      ease: 2.5
+    - character: 铺
+      pinyin: pū
+      meaning: To spread / To make (a bed)
+      explanation: '钅 (metal) + 甫 (begin/phonetic). Read pū as a verb meaning ''to spread'': a hospital bed spread with clean white linen sheets (铺着洁白亚麻被单的病床).'
+      interval: 1
+      ease: 2.5
+    - character: 洁白
+      pinyin: jié bái
+      meaning: Spotlessly white / Pure white
+      explanation: '洁 (氵 water + 吉 lucky: clean / pure) + 白 (white). Describes the crisp, clean white linen sheets (洁白亚麻被单) on Harry''s hospital bed.'
+      interval: 1
+      ease: 2.5
+    - character: 亚麻
+      pinyin: yà má
+      meaning: Linen / Flax
+      explanation: '亚 (yà: second / Asia, phonetic) + 麻 (má: hemp / flax, 广 shelter + 林 twin plants). Harry wakes in the hospital wing on a bed with crisp white linen sheets.'
+      interval: 1
+      ease: 2.5
+    - character: 被单
+      pinyin: bèi dān
+      meaning: Bedsheet
+      explanation: '被 (bèi: quilt / bedding, 衤 clothing radical) + 单 (dān: single / sheet). The clean white linen bedsheets covering Harry''s hospital bed.'
+      interval: 1
+      ease: 2.5

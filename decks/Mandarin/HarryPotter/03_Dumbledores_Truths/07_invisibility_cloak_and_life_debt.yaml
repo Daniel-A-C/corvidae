@@ -1,0 +1,259 @@
+cards:
+    - character: 标有
+      pinyin: biāo yǒu
+      meaning: Marked with / Bearing (a mark)
+      explanation: 标 (mark/label) + 有 (to have). Describes Harry's body bearing (`身上标有`) such a wonderful mark of love.
+      interval: 1
+      ease: 2.5
+    - character: 美好
+      pinyin: měi hǎo
+      meaning: Beautiful / Fine / Glorious / Good
+      explanation: 美 (beautiful) + 好 (good). Describes the pure, good mark left by Lily's sacrificial love.
+      interval: 1
+      ease: 2.5
+    - character: 痛苦难忍
+      pinyin: tòng kǔ nán rěn
+      meaning: Unbearably painful / Agonizing beyond endurance
+      explanation: 痛苦 (pain/agony) + 难忍 (hard to endure). The excruciating agony Quirrell felt upon touching someone marked by love.
+      interval: 1
+      ease: 2.5
+    - character: 假装
+      pinyin: jiǎ zhuāng
+      meaning: To pretend / To feign
+      explanation: '假 (jiǎ: false/fake) + 装 (to act/dress up). Dumbledore tactfully pretends to take an interest in a bird outside the window while Harry wipes his tears.'
+      interval: 1
+      ease: 2.5
+    - character: 窗外
+      pinyin: chuāng wài
+      meaning: Outside the window
+      explanation: 窗 (window) + 外 (outside). Dumbledore gazes at a little bird outside the hospital wing window.
+      interval: 1
+      ease: 2.5
+    - character: 小鸟
+      pinyin: xiǎo niǎo
+      meaning: Little bird
+      explanation: 小 (small/little) + 鸟 (bird). The little bird on the windowsill that Dumbledore pretends to admire.
+      interval: 1
+      ease: 2.5
+    - character: 浓厚
+      pinyin: nóng hòu
+      meaning: Strong / Thick / Keen / Pronounced (of interest)
+      explanation: 浓 (liquid/dense/strong) + 厚 (thick/deep). Collocates with 兴趣 (`浓厚的兴趣` = a keen/deep interest).
+      interval: 1
+      ease: 2.5
+    - character: 兴趣
+      pinyin: xìng qù
+      meaning: Interest
+      explanation: '兴 (xìng: mood/enthusiasm) + 趣 (inclination/delight). Dumbledore feigns a keen interest in the bird to give Harry privacy.'
+      interval: 1
+      ease: 2.5
+    - character: 床单
+      pinyin: chuáng dān
+      meaning: Bedsheet
+      explanation: 床 (bed) + 单 (single sheet of cloth). Harry uses the hospital bedsheet to secretly wipe his tears dry.
+      interval: 1
+      ease: 2.5
+    - character: 眼泪
+      pinyin: yǎn lèi
+      meaning: Tears
+      explanation: '眼 (eye) + 泪 (氵 water + 目 eye: tear). Harry''s tears as he hears about his mother''s sacrifice.'
+      interval: 1
+      ease: 2.5
+    - character: 擦
+      pinyin: cā
+      meaning: To wipe / To rub
+      explanation: 扌 (hand) + 察 (inspect/brush closely). Harry wipes (`擦干`) his tears with the bedsheet.
+      interval: 1
+      ease: 2.5
+    - character: 干
+      pinyin: gān
+      meaning: Dry
+      explanation: '干 (gān: dry / shield). Resultative complement in `擦干` (wiped dry).'
+      interval: 1
+      ease: 2.5
+    - character: 重又
+      pinyin: chóng yòu
+      meaning: Once again / Anew
+      explanation: '重 (chóng: again/repeat) + 又 (again). When Harry''s voice once again returned to normal (`重又恢复正常`).'
+      interval: 1
+      ease: 2.5
+    - character: 正常
+      pinyin: zhèng cháng
+      meaning: Normal / Regular
+      explanation: 正 (proper/upright) + 常 (constant/ordinary). Harry waits until his voice sounds normal again before speaking.
+      interval: 1
+      ease: 2.5
+    - character: 说道
+      pinyin: shuō dào
+      meaning: To say / Said (in narrative)
+      explanation: 说 (to speak) + 道 (to say/utter, literary quotative verb). Introduces Harry's next question about the Invisibility Cloak.
+      interval: 1
+      ease: 2.5
+    - character: 隐形衣
+      pinyin: yǐn xíng yī
+      meaning: Invisibility Cloak
+      explanation: 隐 (hide/conceal) + 形 (form/body) + 衣 (garment/cloak). James Potter's Invisibility Cloak, which Dumbledore passed on to Harry.
+      interval: 1
+      ease: 2.5
+    - character: 呵
+      pinyin: hē
+      meaning: Ah / Oh (interjection)
+      explanation: 口 (mouth) + 可 (phonetic). Gentle exclamation (`呵——`) as Dumbledore explains how James happened to leave the cloak with him.
+      interval: 1
+      ease: 2.5
+    - character: 碰巧
+      pinyin: pèng qiǎo
+      meaning: By chance / Happen to / Coincidentally
+      explanation: 碰 (run into) + 巧 (coincidental/timely). Dumbledore says Harry's father happened to leave the cloak in his possession.
+      interval: 1
+      ease: 2.5
+    - character: 留给
+      pinyin: liú gěi
+      meaning: To leave to / To bequeath to
+      explanation: 留 (to leave behind) + 给 (to/for). James left the Invisibility Cloak with Dumbledore before his death.
+      interval: 1
+      ease: 2.5
+    - character: 大概
+      pinyin: dà gài
+      meaning: Probably / Most likely / Roughly
+      explanation: 大 (general/broad) + 概 (outline/approximate). Dumbledore remarks that he thought Harry would probably like the cloak.
+      interval: 1
+      ease: 2.5
+    - character: 狡黠
+      pinyin: jiǎo xiá
+      meaning: Sly / Cunning / Mischievous / Knowing
+      explanation: '狡 (犭 dog + 交: crafty) + 黠 (黑 black + 吉: clever/shrewd). Describes the knowing, mischievous twinkle in Dumbledore''s eyes (`狡黠的光芒`).'
+      interval: 1
+      ease: 2.5
+    - character: 光芒
+      pinyin: guāng máng
+      meaning: Gleam / Ray of light / Radiance
+      explanation: 光 (light) + 芒 (sharp point/ray). The bright, knowing gleam in Dumbledore's eyes.
+      interval: 1
+      ease: 2.5
+    - character: 有用
+      pinyin: yǒu yòng
+      meaning: Useful
+      explanation: 有 (to have) + 用 (use/utility). Dumbledore calls the Invisibility Cloak 'very useful stuff' (`很有用的东西`).
+      interval: 1
+      ease: 2.5
+    - character: 上学
+      pinyin: shàng xué
+      meaning: To attend school / To be at school
+      explanation: 上 (go to / attend) + 学 (school). Refers to when Harry's father was at school at Hogwarts (`在这里上学的时候`).
+      interval: 1
+      ease: 2.5
+    - character: 主要
+      pinyin: zhǔ yào
+      meaning: Mainly / Chiefly / Principal
+      explanation: 主 (main/master) + 要 (essential/important). James mainly used the cloak to sneak into the kitchens for food.
+      interval: 1
+      ease: 2.5
+    - character: 靠
+      pinyin: kào
+      meaning: To rely on / To depend on / By means of
+      explanation: 告 (report) + 非 (oppose — leaning against). James relied on (`靠它`) the cloak to sneak into the kitchens.
+      interval: 1
+      ease: 2.5
+    - character: 溜
+      pinyin: liū
+      meaning: To sneak / To slip / To glide
+      explanation: '氵 (water) + 留 (phonetic: slide smoothly). Used in `溜进厨房` (to sneak/slip into the kitchen).'
+      interval: 1
+      ease: 2.5
+    - character: 厨房
+      pinyin: chú fáng
+      meaning: Kitchen
+      explanation: '厨 (广 shelter + 豆 vessel + 寸 hand: kitchen) + 房 (room/house). The Hogwarts kitchens where James Potter sneaked to steal food.'
+      interval: 1
+      ease: 2.5
+    - character: 吃
+      pinyin: chī
+      meaning: To eat
+      explanation: 口 (mouth) + 乞 (phonetic). Used at the end of `偷东西吃` (steal things to eat).
+      interval: 1
+      ease: 2.5
+    - character: 是的
+      pinyin: shì de
+      meaning: Yes / That's right
+      explanation: 是 (to be / right) + 的 (affirmative particle). Harry confirming that his next question is indeed about Professor Snape.
+      interval: 1
+      ease: 2.5
+    - character: 看着不顺眼
+      pinyin: kàn zhe bù shùn yǎn
+      meaning: To find someone an eyesore / To dislike the sight of
+      explanation: '看着 (looking at) + 不顺眼 (not pleasing to the eye). Idiomatic phrase: James and Snape detested the sight of each other, much like Harry and Malfoy.'
+      interval: 1
+      ease: 2.5
+    - character: 马尔福
+      pinyin: Mǎ ěr fú
+      meaning: Malfoy (Draco Malfoy)
+      explanation: Phonetic transliteration of 'Malfoy'. Dumbledore compares James and Snape's schoolboy rivalry to Harry and Mr. Malfoy's.
+      interval: 1
+      ease: 2.5
+    - character: 后来
+      pinyin: hòu lái
+      meaning: Later / Afterwards
+      explanation: '后 (after/behind) + 来 (come). Marks what happened later: James did something Snape could never forgive (saving his life).'
+      interval: 1
+      ease: 2.5
+    - character: 幽幽
+      pinyin: yōu yōu
+      meaning: Faintly / Quietly and thoughtfully / Softly
+      explanation: 幽 (secluded/deep/dim) reduplicated. Describes Dumbledore speaking in a quiet, reflective, faraway voice (`幽幽地说`).
+      interval: 1
+      ease: 2.5
+    - character: 思想
+      pinyin: sī xiǎng
+      meaning: Mind / Thought / Thinking
+      explanation: '思 (田 head/field + 心 heart: to think) + 想 (to ponder/mind). Dumbledore musing on how funny/wondrous people''s minds (`人的思想`) are.'
+      interval: 1
+      ease: 2.5
+    - character: 奇妙
+      pinyin: qí miào
+      meaning: Wondrous / Marvelous / Strange and fascinating
+      explanation: 奇 (strange/remarkable) + 妙 (subtle/wonderful). Dumbledore remarks that the human mind is truly wondrous (`非常奇妙`).
+      interval: 1
+      ease: 2.5
+    - character: 忍受
+      pinyin: rěn shòu
+      meaning: To bear / To endure / To tolerate
+      explanation: '忍 (刃 blade over 心 heart: to endure) + 受 (to receive/suffer). Snape could not bear (`无法忍受`) being in James Potter''s debt.'
+      interval: 1
+      ease: 2.5
+    - character: 欠
+      pinyin: qiàn
+      meaning: To owe
+      explanation: Pictograph of a person yawning / lacking breath -> to lack or owe. Snape could not stand owing (`欠着`) Harry's father a life debt.
+      interval: 1
+      ease: 2.5
+    - character: 人情
+      pinyin: rén qíng
+      meaning: Favor / Debt of gratitude / Human sentiment
+      explanation: 人 (person) + 情 (feeling/favor). In `欠着你父亲的人情`, it means owing Harry's father a debt of gratitude for saving his life.
+      interval: 1
+      ease: 2.5
+    - character: 年
+      pinyin: nián
+      meaning: Year
+      explanation: Derived from 秊 (grain harvest cycle). Refers to `这一年` (this whole school year) during which Snape worked to protect Harry.
+      interval: 1
+      ease: 2.5
+    - character: 之所以
+      pinyin: zhī suǒ yǐ
+      meaning: The reason why...
+      explanation: 之 (possessive/connector) + 所以 (reason/wherefore). Pairs with `是因为...` to form 'The reason why [Snape protected you] is because...'
+      interval: 1
+      ease: 2.5
+    - character: 想方设法
+      pinyin: xiǎng fāng shè fǎ
+      meaning: To try every possible means / To do everything one can
+      explanation: 想方 (think of ways) + 设法 (devise methods). Idiom describing how Snape went to great lengths all year to protect Harry.
+      interval: 1
+      ease: 2.5
+    - character: 扯平
+      pinyin: chě píng
+      meaning: To call it even / To be quits / To square accounts
+      explanation: 扯 (to pull) + 平 (even/level). By saving Harry, Snape felt he and James could be even (`扯平`), owing each other nothing.
+      interval: 1
+      ease: 2.5

@@ -1,0 +1,253 @@
+cards:
+    - character: 嚷嚷
+      pinyin: rāng rang
+      meaning: To shout / To clamor / To make an uproar
+      explanation: '口 (mouth) + 襄 (xiāng: phonetic). Mrs. Weasley gently scolds Ginny not to shout so loudly (别大声嚷嚷) in the station.'
+      interval: 1
+      ease: 2.5
+    - character: 指指点点
+      pinyin: zhǐ zhǐ diǎn diǎn
+      meaning: To point at / To point and stare
+      explanation: 'AABB reduplication of 指点 (zhǐ: point with finger + diǎn: point out). Mrs. Weasley reminds Ginny that pointing at people (对别人指指点点) is rude.'
+      interval: 1
+      ease: 2.5
+    - character: 礼貌
+      pinyin: lǐ mào
+      meaning: Polite / Courtesy / Good manners
+      explanation: '礼 (lǐ: rite / courtesy, 礻 altar) + 貌 (mào: appearance / demeanor, 豸 + 貌). Mrs. Weasley tells Ginny it is impolite (不礼貌) to point at people.'
+      interval: 1
+      ease: 2.5
+    - character: 韦斯莱夫人
+      pinyin: Wéi sī lái fū rén
+      meaning: Mrs. Weasley (Molly Weasley)
+      explanation: '韦斯莱 (Wéi sī lái: Weasley) + 夫人 (fū rén: Mrs. / Lady). Ron and Ginny''s warm, motherly mum who greets Harry affectionately.'
+      interval: 1
+      ease: 2.5
+    - character: 低头
+      pinyin: dī tóu
+      meaning: To lower one's head / To look down
+      explanation: '低 (dī: low / lower) + 头 (tóu: head). Mrs. Weasley smiles warmly and looks down at the children (笑眯眯地低头看着他们).'
+      interval: 1
+      ease: 2.5
+    - character: 忙
+      pinyin: máng
+      meaning: Busy
+      explanation: 忄 (heart) + 亡 (lose/hurry). Mrs. Weasley asks if they had a busy year (这一年很忙吧), and Harry replies 'Very' (忙极了).
+      interval: 1
+      ease: 2.5
+    - character: 乳脂软糖
+      pinyin: rǔ zhī ruǎn táng
+      meaning: Fudge (cream fudge candy)
+      explanation: '乳脂 (rǔ zhī: milk fat / cream) + 软糖 (ruǎn táng: soft candy). The homemade Christmas fudge Mrs. Weasley sent Harry, for which he thanks her.'
+      interval: 1
+      ease: 2.5
+    - character: 毛衣
+      pinyin: máo yī
+      meaning: Sweater / Jumper
+      explanation: '毛 (máo: wool / hair) + 衣 (yī: clothing). The hand-knitted Weasley sweater Mrs. Weasley sent Harry for Christmas.'
+      interval: 1
+      ease: 2.5
+    - character: 没什么
+      pinyin: méi shén me
+      meaning: It's nothing / Think nothing of it / You're welcome
+      explanation: '没 (méi: nothing / not have) + 什么 (shén me: what / anything). Mrs. Weasley''s warm, modest reply (''Oh, that''s nothing, dear'') when Harry thanks her.'
+      interval: 1
+      ease: 2.5
+    - character: 弗农姨父
+      pinyin: Fú nóng yí fù
+      meaning: Uncle Vernon (Vernon Dursley)
+      explanation: '弗农 (Fú nóng: Vernon) + 姨父 (yí fù: uncle, mother''s sister''s husband). Harry''s burly, magic-hating Muggle uncle waiting impatiently to pick him up.'
+      interval: 1
+      ease: 2.5
+    - character: 红得发紫
+      pinyin: hóng de fā zǐ
+      meaning: Purple-faced / So red it turns purple
+      explanation: '红 (hóng: red) + 得 (de: degree complement marker) + 发紫 (fā zǐ: turning purple). Describes Uncle Vernon''s blotchy, purple-faced complexion.'
+      interval: 1
+      ease: 2.5
+    - character: 脸膛
+      pinyin: liǎn táng
+      meaning: Face / Facial expanse
+      explanation: '脸 (liǎn: face) + 膛 (táng: chest / cavity / expanse, 月 flesh + 堂 hall). Refers to Uncle Vernon''s broad, beefy, purple-flushed face.'
+      interval: 1
+      ease: 2.5
+    - character: 胡子
+      pinyin: hú zi
+      meaning: Mustache / Beard / Facial hair
+      explanation: '胡 (hú: beard / wattles) + 子 (zi: noun suffix). Refers to Uncle Vernon''s trademark bushy mustache (一大把胡子).'
+      interval: 1
+      ease: 2.5
+    - character: 愤怒
+      pinyin: fèn nù
+      meaning: Furious / Angry / Indignant
+      explanation: '愤 (fèn: resentful / indignant, 忄 heart + 贲) + 怒 (nù: wrath / rage, 奴 + 心 heart). Uncle Vernon glares at Harry with furious eyes.'
+      interval: 1
+      ease: 2.5
+    - character: 瞪
+      pinyin: dèng
+      meaning: To glare / To stare wide-eyed in anger
+      explanation: '目 (eye) + 登 (dēng: phonetic). Conveys an angry, wide-eyed glare as Uncle Vernon glares (瞪着) at Harry and his owl cage.'
+      interval: 1
+      ease: 2.5
+    - character: 挤满
+      pinyin: jǐ mǎn
+      meaning: Crowded with / Packed full of
+      explanation: '挤 (jǐ: crowd / squeeze) + 满 (mǎn: full). Describes the station platform packed full of ordinary people (挤满普通人的车站).'
+      interval: 1
+      ease: 2.5
+    - character: 普通人
+      pinyin: pǔ tōng rén
+      meaning: Ordinary people / Normal people
+      explanation: '普通 (pǔ tōng: ordinary / common) + 人 (rén: person / people). Represents Uncle Vernon''s perspective of the Muggle commuters at King''s Cross.'
+      interval: 1
+      ease: 2.5
+    - character: 车站
+      pinyin: chē zhàn
+      meaning: Station / Train station
+      explanation: '车 (chē: vehicle / train) + 站 (zhàn: stand / station). King''s Cross railway station where Vernon is horrified to see Harry carrying an owl.'
+      interval: 1
+      ease: 2.5
+    - character: 明目张胆
+      pinyin: míng mù zhāng dǎn
+      meaning: Brazenly / Openly and shamelessly / Flagrantly
+      explanation: 'Four-character idiom: 明目 (open eyes wide) + 张胆 (embolden the gall). Captures Vernon''s outrage at Harry brazenly carrying an owl in a cage in front of ordinary people.'
+      interval: 1
+      ease: 2.5
+    - character: 提
+      pinyin: tí
+      meaning: To carry (hanging from the hand) / To lift
+      explanation: '扌 (hand) + 是 (shì: phonetic). Specifically denotes carrying an object by a handle with arm hanging down, like Harry carrying Hedwig''s cage (提着笼子).'
+      interval: 1
+      ease: 2.5
+    - character: 笼子
+      pinyin: lóng zi
+      meaning: Cage / Basket
+      explanation: '笼 (lóng: cage, 竹 bamboo + 龙 dragon phonetic) + 子 (zi: noun suffix). The birdcage holding Harry''s snowy owl Hedwig.'
+      interval: 1
+      ease: 2.5
+    - character: 可恨
+      pinyin: kě hèn
+      meaning: Hateful / Detestable / Infuriating
+      explanation: '可 (kě: worthy of / -able) + 恨 (hèn: hate, 忄 heart + 艮). Expresses Uncle Vernon''s furious indignation (''真是可恨'') at Harry carrying an owl in public.'
+      interval: 1
+      ease: 2.5
+    - character: 佩妮姨妈
+      pinyin: Pèi nī yí mā
+      meaning: Aunt Petunia (Petunia Dursley)
+      explanation: '佩妮 (Pèi nī: Petunia) + 姨妈 (yí mā: aunt, mother''s sister). Harry''s Muggle aunt standing terrified behind Uncle Vernon.'
+      interval: 1
+      ease: 2.5
+    - character: 达力表哥
+      pinyin: Dá lì biǎo gē
+      meaning: Cousin Dudley (Dudley Dursley)
+      explanation: '达力 (Dá lì: Dudley) + 表哥 (biǎo gē: older male cousin on mother''s side). Harry''s spoiled cousin who shrinks back in alarm at the sight of Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 显出
+      pinyin: xiǎn chū
+      meaning: To show / To reveal / To display
+      explanation: '显 (xiǎn: manifest / show, 日 sun + 业) + 出 (chū: out). Aunt Petunia and Dudley immediately show (显出) an expression of terrified alarm upon seeing Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 惊惶不安
+      pinyin: jīng huáng bù ān
+      meaning: Terrified and uneasy / Panicked and alarmed
+      explanation: 'Idiom: 惊惶 (jīng huáng: alarmed / terrified, both with 忄/心 heart radicals) + 不安 (bù ān: uneasy / restless). Petunia and Dudley''s panicked look at the sight of Harry.'
+      interval: 1
+      ease: 2.5
+    - character: 家人
+      pinyin: jiā rén
+      meaning: Family / Family members
+      explanation: '家 (jiā: family / home) + 人 (rén: people / members). Mrs. Weasley politely greets the Dursleys: ''You must be Harry''s family!'''
+      interval: 1
+      ease: 2.5
+    - character: 小子
+      pinyin: xiǎo zi
+      meaning: Boy / Kid / Lad
+      explanation: '小 (xiǎo: young / small) + 子 (zi: person suffix). Uncle Vernon''s gruff, dismissive way of addressing Harry (''Hurry up, boy'').'
+      interval: 1
+      ease: 2.5
+    - character: 一整天
+      pinyin: yī zhěng tiān
+      meaning: The whole day / All day long
+      explanation: '一 (yī: one) + 整 (zhěng: whole / entire) + 天 (tiān: day). Vernon snaps that he doesn''t have all day (一整天) to waste.'
+      interval: 1
+      ease: 2.5
+    - character: 转身
+      pinyin: zhuǎn shēn
+      meaning: To turn around
+      explanation: '转 (zhuǎn: turn / rotate, 车 wheel + 专) + 身 (shēn: body). Uncle Vernon abruptly turns his back and walks away (转身走开了).'
+      interval: 1
+      ease: 2.5
+    - character: 留
+      pinyin: liú
+      meaning: To stay / To remain / To linger
+      explanation: 卯 + 田 (field). Combined with 下来 as 留下来 (stay behind / linger a moment) so Harry can say a final goodbye to Ron and Hermione.
+      interval: 1
+      ease: 2.5
+    - character: 祝
+      pinyin: zhù
+      meaning: To wish (someone well) / To express good wishes
+      explanation: '礻 (altar / prayer) + 兄 (elder brother kneeling in prayer). Hermione wishes Harry a good holiday: ''祝你假期——嗯——愉快'' (Hope you have a—er—good holiday).'
+      interval: 1
+      ease: 2.5
+    - character: 假期
+      pinyin: jià qī
+      meaning: Holiday / Vacation
+      explanation: '假 (jià: holiday / leave, fourth tone) + 期 (qī: period). Refers to the summer vacation ahead.'
+      interval: 1
+      ease: 2.5
+    - character: 嗯
+      pinyin: ńg
+      meaning: Er / Um / Well (hesitation interjection)
+      explanation: '口 (mouth) + 恩 (ēn: phonetic). Captures Hermione''s awkward hesitation (''Hope you have a—er—good holiday'') as she watches the dreadful Uncle Vernon.'
+      interval: 1
+      ease: 2.5
+    - character: 望
+      pinyin: wàng
+      meaning: To gaze at / To look into the distance
+      explanation: 亡 + 月 + 王. Hermione gazes in disbelief (望着) at Uncle Vernon's retreating back.
+      interval: 1
+      ease: 2.5
+    - character: 背影
+      pinyin: bèi yǐng
+      meaning: View of someone's back / Retreating figure
+      explanation: '背 (bèi: back) + 影 (yǐng: shadow / figure / silhouette). Hermione stares at Uncle Vernon''s retreating figure (背影), amazed anyone could be so unpleasant.'
+      interval: 1
+      ease: 2.5
+    - character: 讨厌
+      pinyin: tǎo yàn
+      meaning: Unpleasant / Disagreeable / Annoying / To dislike
+      explanation: '讨 (tǎo: provoke / invite) + 厌 (yàn: detest / loathe). Hermione is shocked that anyone in the world could be so unpleasant (令人讨厌).'
+      interval: 1
+      ease: 2.5
+    - character: 绽开
+      pinyin: zhàn kāi
+      meaning: To burst into (a smile) / To blossom / To split open
+      explanation: '绽 (zhàn: split / burst open like a flower bud, 纟 silk + 定) + 开 (kāi: open). A radiant grin blossoms across Harry''s face (脸上绽开了一个灿烂的笑容).'
+      interval: 1
+      ease: 2.5
+    - character: 灿烂
+      pinyin: càn làn
+      meaning: Radiant / Brilliant / Bright / Splendid
+      explanation: Both characters carry the 火 (fire) radical, evoking dazzling light. Describes the bright, beaming smile on Harry's face as he thinks of the summer ahead.
+      interval: 1
+      ease: 2.5
+    - character: 诧异
+      pinyin: chà yì
+      meaning: Astonished / Surprised / Puzzled
+      explanation: '诧 (chà: surprised, 讠 speech + 宅) + 异 (yì: strange / unusual). Ron and Hermione are surprised (感到诧异) to see Harry grinning so brightly.'
+      interval: 1
+      ease: 2.5
+    - character: 达力
+      pinyin: Dá lì
+      meaning: Dudley (Dudley Dursley)
+      explanation: Phonetic transliteration of Dudley (达 dá + 力 lì). In the final line of the book, Harry grins knowing the Dursleys don't know he isn't allowed to use magic at home.
+      interval: 1
+      ease: 2.5
+    - character: 开开心
+      pinyin: kāi kāi xīn
+      meaning: To have some fun / To amuse oneself
+      explanation: 'AAB reduplication of 开心 (kāi xīn: happy / have fun). In the closing words of Book 1, Harry looks forward to having a lot of fun with Dudley this summer (拿达力开开心).'
+      interval: 1
+      ease: 2.5
