@@ -5,9 +5,9 @@ A fast, lightweight terminal memory workstation and language learning environmen
 Designed to be extended instantly using human-readable YAML and plain-text files.
 
 ```
-       _____                      _     _            
-      / ____|                    (_)   | |           
-     | |     ___  _ ____   ___  _  __| | __ _  ___ 
+       _____                 _     _            
+      / ____|               (_)   | |           
+     | |     ___  _ ____   ___  __| | __ _  ___ 
      | |    / _ \| '__\ \ / / |/ _` |/ _` |/ _ \
      | |___| (_) | |   \ V /| | (_| | (_| |  __/
       \_____\___/|_|    \_/ |_|\__,_|\__,_|\___|
