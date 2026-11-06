@@ -62,6 +62,13 @@ var (
 	ReadingBoxStyle            = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#BD93F9")).Padding(1, 3).Width(78).Align(lipgloss.Center)
 	ReadingDiscussionCard      = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#50FA7B")).Padding(1, 3).Width(78).Align(lipgloss.Left)
 	ReadingWordDetailCard      = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#FF7CCB")).Padding(1, 3).Width(68).Align(lipgloss.Center)
+
+	// Matching Game styles
+	MatchColumnHeaderStyle = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#BD93F9"))
+	MatchCardBox           = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#6272A4")).Padding(0, 2)
+	MatchCardSelectedBox   = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#FF7CCB")).Padding(0, 2).Bold(true)
+	MatchCardMatchedBox    = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#50FA7B")).Foreground(lipgloss.Color("#6272A4")).Padding(0, 2)
+	MatchCardMismatchBox   = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#FF5555")).Padding(0, 2)
 )
 
 const AsciiLogo = `                           .-.

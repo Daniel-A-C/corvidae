@@ -37,6 +37,7 @@ const (
 	StateReadingWordDetail
 	StateReadingDiscussion
 	StateReadingComplete
+	StateMatch
 )
 
 const (
@@ -45,7 +46,19 @@ const (
 	ModeArabic
 	ModeMemorize
 	ModeReading
+	ModeMatch
 )
+
+// MatchBatchSize is the maximum number of card pairs displayed per matching game round.
+const MatchBatchSize = 5
+
+// MatchItem represents a single selectable item on either side of the matching board.
+type MatchItem struct {
+	CardRef deck.CardRef
+	Card    deck.Flashcard
+	PairID  int
+	Matched bool
+}
 
 // Model represents the Bubble Tea state model for Corvidae.
 type Model struct {
@@ -124,6 +137,24 @@ type Model struct {
 	ReadingCursor       int
 	ReadingSession      *reading.Session
 	ReadingWordFeedback string
+
+	// Matching Game state
+	MatchRoundStart    int
+	MatchLeftItems     []MatchItem
+	MatchRightItems    []MatchItem
+	MatchSelectedLeft  int
+	MatchSelectedRight int
+	MatchMismatchLeft  int
+	MatchMismatchRight int
+	MatchPairsMatched  int
+	MatchAttempts      int
+	MatchMistakes      int
+	MatchStreak        int
+	MatchBestStreak    int
+	MatchHidePinyin    bool
+	MatchLastFeedback  string
+	MatchLastIsError   bool
+	MatchLastCard      *deck.CardRef
 
 	Err    error
 	Width  int
@@ -571,6 +602,82 @@ func (m *Model) GenerateQuizOptions() {
 	}
 
 	m.QuizOptions, m.CorrectIndex = quiz.GenerateOptions(targetCard, candidateCards, 5)
+}
+
+// SetupMatch prepares all cards in the selected decks for a matching game session.
+func (m *Model) SetupMatch() {
+	var all []deck.CardRef
+	for file, d := range m.Decks {
+		for i := range d.Cards {
+			all = append(all, deck.CardRef{Filename: file, OrigIdx: i})
+		}
+	}
+
+	rand.Shuffle(len(all), func(i, j int) { all[i], all[j] = all[j], all[i] })
+	m.ActiveCards = all
+	m.MatchRoundStart = 0
+	m.MatchPairsMatched = 0
+	m.MatchAttempts = 0
+	m.MatchMistakes = 0
+	m.MatchStreak = 0
+	m.MatchBestStreak = 0
+	m.MatchLastFeedback = ""
+	m.MatchLastIsError = false
+	m.MatchLastCard = nil
+	m.SetupMatchRound()
+}
+
+// SetupMatchRound deals the current batch of up to MatchBatchSize cards onto the left and right columns.
+func (m *Model) SetupMatchRound() {
+	m.MatchSelectedLeft = -1
+	m.MatchSelectedRight = -1
+	m.MatchMismatchLeft = -1
+	m.MatchMismatchRight = -1
+
+	if m.MatchRoundStart >= len(m.ActiveCards) {
+		m.MatchLeftItems = nil
+		m.MatchRightItems = nil
+		return
+	}
+
+	end := m.MatchRoundStart + MatchBatchSize
+	if end > len(m.ActiveCards) {
+		end = len(m.ActiveCards)
+	}
+
+	batch := m.ActiveCards[m.MatchRoundStart:end]
+	left := make([]MatchItem, len(batch))
+	right := make([]MatchItem, len(batch))
+	for i, ref := range batch {
+		card := m.Decks[ref.Filename].Cards[ref.OrigIdx]
+		item := MatchItem{
+			CardRef: ref,
+			Card:    card,
+			PairID:  i,
+			Matched: false,
+		}
+		left[i] = item
+		right[i] = item
+	}
+
+	rand.Shuffle(len(left), func(i, j int) { left[i], left[j] = left[j], left[i] })
+	rand.Shuffle(len(right), func(i, j int) { right[i], right[j] = right[j], right[i] })
+
+	if len(right) > 1 {
+		allAligned := true
+		for i := range left {
+			if left[i].PairID != right[i].PairID {
+				allAligned = false
+				break
+			}
+		}
+		if allAligned {
+			right[0], right[1] = right[1], right[0]
+		}
+	}
+
+	m.MatchLeftItems = left
+	m.MatchRightItems = right
 }
 
 // SetupArabicDrill prepares question sets for the chosen Arabic drill type.

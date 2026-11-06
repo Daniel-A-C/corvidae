@@ -47,3 +47,12 @@ func (f Flashcard) FormatQuizOption() string {
 	}
 	return f.Meaning
 }
+
+// FormatMatchOption returns a formatted string representation suitable for the matching game,
+// optionally hiding the pinyin or pronunciation.
+func (f Flashcard) FormatMatchOption(hidePinyin bool) string {
+	if hidePinyin {
+		return f.Meaning
+	}
+	return f.FormatQuizOption()
+}

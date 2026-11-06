@@ -3122,3 +3122,224 @@ func TestQuizProgressBarAndAccuracy(t *testing.T) {
 	}
 }
 
+func TestMatchingGameModeSelectAndMultiRoundFlow(t *testing.T) {
+	tempDir := t.TempDir()
+	mandarinDir := filepath.Join(tempDir, "Mandarin")
+	if err := os.MkdirAll(mandarinDir, 0755); err != nil {
+		t.Fatal(err)
+	}
+
+	// Create 7 cards so Round 1 has 5 pairs and Round 2 has 2 pairs
+	cards := []deck.Flashcard{
+		{Character: "一", Pinyin: "yī", Meaning: "one"},
+		{Character: "二", Pinyin: "èr", Meaning: "two"},
+		{Character: "三", Pinyin: "sān", Meaning: "three"},
+		{Character: "四", Pinyin: "sì", Meaning: "four"},
+		{Character: "五", Pinyin: "wǔ", Meaning: "five"},
+		{Character: "六", Pinyin: "liù", Meaning: "six"},
+		{Character: "七", Pinyin: "qī", Meaning: "seven"},
+	}
+	if err := deck.SaveDeck(filepath.Join(mandarinDir, "numbers.yaml"), deck.Deck{Cards: cards}); err != nil {
+		t.Fatal(err)
+	}
+
+	m := New(tempDir)
+	modeView := m.View()
+	if !strings.Contains(modeView, "Matching Game") {
+		t.Fatalf("expected ModeSelect view to show 'Matching Game', got:\n%s", modeView)
+	}
+
+	// Press 'h' to select Matching Game mode
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'h'}})
+	m = updatedM.(Model)
+	if m.Mode != ModeMatch || m.State != StateDirSelect {
+		t.Fatalf("expected ModeMatch and StateDirSelect, got mode=%d, state=%d", m.Mode, m.State)
+	}
+
+	// Open Mandarin -> toggle numbers.yaml -> Enter to start Matching Game
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEnter})
+	m = updatedM.(Model)
+
+	if m.State != StateMatch {
+		t.Fatalf("expected StateMatch, got %d", m.State)
+	}
+	if len(m.ActiveCards) != 7 {
+		t.Fatalf("expected 7 active cards, got %d", len(m.ActiveCards))
+	}
+	if len(m.MatchLeftItems) != 5 || len(m.MatchRightItems) != 5 {
+		t.Fatalf("expected 5 items per side in Round 1, got left=%d, right=%d", len(m.MatchLeftItems), len(m.MatchRightItems))
+	}
+
+	viewR1 := m.View()
+	if !strings.Contains(viewR1, "Matching Game: Round 1 of 2") {
+		t.Errorf("expected Round 1 of 2 in view, got:\n%s", viewR1)
+	}
+
+	// Test selecting and deselecting left item 0 ('a')
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'a'}})
+	m = updatedM.(Model)
+	if m.MatchSelectedLeft != 0 {
+		t.Fatalf("expected MatchSelectedLeft=0, got %d", m.MatchSelectedLeft)
+	}
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'a'}})
+	m = updatedM.(Model)
+	if m.MatchSelectedLeft != -1 {
+		t.Fatalf("expected MatchSelectedLeft=-1 after toggling off, got %d", m.MatchSelectedLeft)
+	}
+
+	// Test deliberate mismatch in Round 1
+	targetPairID := m.MatchLeftItems[0].PairID
+	wrongRightIdx := -1
+	for rIdx, rItem := range m.MatchRightItems {
+		if rItem.PairID != targetPairID {
+			wrongRightIdx = rIdx
+			break
+		}
+	}
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'a'}})
+	m = updatedM.(Model)
+	wrongRightKey := IndexToKey(wrongRightIdx + 5)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(wrongRightKey)})
+	m = updatedM.(Model)
+
+	if m.MatchMistakes != 1 || m.MatchAttempts != 1 {
+		t.Fatalf("expected 1 mistake and 1 attempt, got mistakes=%d, attempts=%d", m.MatchMistakes, m.MatchAttempts)
+	}
+	if m.MatchMismatchLeft != 0 || m.MatchMismatchRight != wrongRightIdx {
+		t.Fatalf("expected mismatch indices recorded")
+	}
+
+	// Match all 5 pairs in Round 1 (testing both left-then-right and right-then-left order)
+	for lIdx := 0; lIdx < 5; lIdx++ {
+		pairID := m.MatchLeftItems[lIdx].PairID
+		rIdx := -1
+		for j, rItem := range m.MatchRightItems {
+			if rItem.PairID == pairID {
+				rIdx = j
+				break
+			}
+		}
+		lKey := IndexToKey(lIdx)
+		rKey := IndexToKey(rIdx + 5)
+		if lIdx%2 == 0 {
+			updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(lKey)})
+			m = updatedM.(Model)
+			updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(rKey)})
+			m = updatedM.(Model)
+		} else {
+			updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(rKey)})
+			m = updatedM.(Model)
+			updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(lKey)})
+			m = updatedM.(Model)
+		}
+	}
+
+	// Should automatically advance to Round 2 with the remaining 2 cards
+	if m.MatchRoundStart != 5 {
+		t.Fatalf("expected MatchRoundStart=5 for Round 2, got %d", m.MatchRoundStart)
+	}
+	if len(m.MatchLeftItems) != 2 || len(m.MatchRightItems) != 2 {
+		t.Fatalf("expected 2 items per side in Round 2, got left=%d, right=%d", len(m.MatchLeftItems), len(m.MatchRightItems))
+	}
+
+	viewR2 := m.View()
+	if !strings.Contains(viewR2, "Matching Game: Round 2 of 2") {
+		t.Errorf("expected Round 2 of 2 in view, got:\n%s", viewR2)
+	}
+
+	// Match the remaining 2 pairs in Round 2
+	for lIdx := 0; lIdx < 2; lIdx++ {
+		pairID := m.MatchLeftItems[lIdx].PairID
+		rIdx := -1
+		for j, rItem := range m.MatchRightItems {
+			if rItem.PairID == pairID {
+				rIdx = j
+				break
+			}
+		}
+		lKey := IndexToKey(lIdx)
+		rKey := IndexToKey(rIdx + 5)
+		updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(lKey)})
+		m = updatedM.(Model)
+		updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(rKey)})
+		m = updatedM.(Model)
+	}
+
+	// Game should be complete!
+	if m.MatchPairsMatched != 7 {
+		t.Fatalf("expected 7 pairs matched, got %d", m.MatchPairsMatched)
+	}
+	completeView := m.View()
+	if !strings.Contains(completeView, "Matching Game complete!") {
+		t.Errorf("expected completion screen, got:\n%s", completeView)
+	}
+	if !strings.Contains(completeView, "Matched: 7 of 7 pairs") {
+		t.Errorf("expected 'Matched: 7 of 7 pairs', got:\n%s", completeView)
+	}
+
+	// Press 'r' to play again
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'r'}})
+	m = updatedM.(Model)
+	if m.MatchRoundStart != 0 || m.MatchPairsMatched != 0 || len(m.MatchLeftItems) != 5 {
+		t.Fatalf("expected game reset on 'r', got roundStart=%d, matched=%d", m.MatchRoundStart, m.MatchPairsMatched)
+	}
+}
+
+func TestMatchingGamePinyinToggleAndMarkCard(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+	m.Mode = ModeMatch
+	m.SelectedDir = "Mandarin"
+	m.SelectedFiles["tech.yaml"] = true
+	if err := m.LoadSelectedDecks(); err != nil {
+		t.Fatal(err)
+	}
+	m.SetupMatch()
+	m.State = StateMatch
+
+	// Initially Pinyin is shown
+	view1 := m.View()
+	if !strings.Contains(view1, "diànnǎo - Computer") {
+		t.Errorf("expected view to contain 'diànnǎo - Computer' when Pinyin is visible, got:\n%s", view1)
+	}
+
+	// Press 'p' to hide Pinyin
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'p'}})
+	m = updatedM.(Model)
+	if !m.MatchHidePinyin {
+		t.Fatalf("expected MatchHidePinyin to be true after pressing 'p'")
+	}
+	view2 := m.View()
+	if strings.Contains(view2, "diànnǎo") {
+		t.Errorf("expected Pinyin 'diànnǎo' to be hidden, got:\n%s", view2)
+	}
+	if !strings.Contains(view2, "Computer") {
+		t.Errorf("expected meaning 'Computer' to still be visible, got:\n%s", view2)
+	}
+
+	// Select left item 0 ('a') and press 'm' to mark card
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'a'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'m'}})
+	m = updatedM.(Model)
+
+	if len(m.MarkedCards) != 1 {
+		t.Fatalf("expected 1 marked card after pressing 'm', got %d", len(m.MarkedCards))
+	}
+
+	// Press 'q' to return to Main Menu (not quitting the app)
+	updatedM, cmd := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'q'}})
+	if cmd != nil {
+		t.Fatalf("expected nil cmd when pressing 'q' in StateMatch, got %v", cmd)
+	}
+	m = updatedM.(Model)
+	if m.State != StateModeSelect {
+		t.Fatalf("expected StateModeSelect after 'q', got %d", m.State)
+	}
+}
+
+

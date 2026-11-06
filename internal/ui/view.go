@@ -57,6 +57,8 @@ func (m Model) View() string {
 		content = m.viewReadingDiscussion()
 	case StateReadingComplete:
 		content = m.viewReadingComplete()
+	case StateMatch:
+		content = m.viewMatch()
 	}
 
 	styledContent := lipgloss.NewStyle().Align(lipgloss.Center).Render(content)
@@ -73,6 +75,7 @@ func (m Model) viewModeSelect() string {
 		"Arabic Alphabet Academy",
 		"Memorize by Options",
 		"Learn by Reading",
+		"Matching Game",
 	}
 	for i, label := range modes {
 		key := IndexToKey(i)
@@ -102,7 +105,7 @@ func (m Model) viewModeSelect() string {
 		content += "\n" + ExplanationStyle.Render(m.StatusMessage) + "\n"
 	}
 
-	content += "\n" + HintStyle.Render("(Press a/s/d/f/g to select, Enter to confirm, q to quit)")
+	content += "\n" + HintStyle.Render("(Press a/s/d/f/g/h to select, Enter to confirm, q to quit)")
 	return content
 }
 
@@ -1327,5 +1330,171 @@ func (m Model) viewReadingComplete() string {
 		Align(lipgloss.Center)
 	return cardBox.Render(b.String())
 }
+
+func (m Model) viewMatch() string {
+	if len(m.ActiveCards) == 0 {
+		return fmt.Sprintf("No cards available to match!\n\n%s", HintStyle.Render("[Enter / q] Main Menu"))
+	}
+
+	totalCards := len(m.ActiveCards)
+	if m.MatchRoundStart >= totalCards {
+		accStr := "100%"
+		if m.MatchAttempts > 0 {
+			accStr = fmt.Sprintf("%.1f%%", float64(m.MatchPairsMatched)/float64(m.MatchAttempts)*100)
+		}
+		bar := strings.Repeat("█", 26)
+		progressBar := QuizProgressStyle.Render("[" + bar + "]")
+		summary := fmt.Sprintf("Matched: %d of %d pairs  •  Accuracy: %s  •  Best Streak: %d",
+			m.MatchPairsMatched, totalCards, accStr, m.MatchBestStreak)
+		return fmt.Sprintf("Matching Game complete!\n\n%s\n%s\n\n%s",
+			progressBar,
+			HintStyle.Render(summary),
+			HintStyle.Render("[r] Play again  •  [Enter / q] Main Menu"))
+	}
+
+	totalRounds := (totalCards + MatchBatchSize - 1) / MatchBatchSize
+	currentRound := (m.MatchRoundStart / MatchBatchSize) + 1
+
+	accStr := "100%"
+	if m.MatchAttempts > 0 {
+		accStr = fmt.Sprintf("%.1f%%", float64(m.MatchPairsMatched)/float64(m.MatchAttempts)*100)
+	}
+
+	barLen := 26
+	filled := int(float64(barLen) * float64(m.MatchPairsMatched) / float64(totalCards))
+	if filled > barLen {
+		filled = barLen
+	}
+	bar := strings.Repeat("█", filled) + strings.Repeat("░", barLen-filled)
+
+	header := fmt.Sprintf("Matching Game: Round %d of %d (%d/%d matched)  •  Accuracy: %s  •  Streak: %d",
+		currentRound, totalRounds, m.MatchPairsMatched, totalCards, accStr, m.MatchStreak)
+
+	leftWidth := 24
+	for _, item := range m.MatchLeftItems {
+		w := lipgloss.Width(item.Card.Character) + 10
+		if w > leftWidth {
+			leftWidth = w
+		}
+	}
+
+	rightWidth := 36
+	for _, item := range m.MatchRightItems {
+		optText := item.Card.FormatMatchOption(m.MatchHidePinyin)
+		w := lipgloss.Width(optText) + 10
+		if w > rightWidth {
+			rightWidth = w
+		}
+	}
+	if rightWidth > 54 {
+		rightWidth = 54
+	}
+
+	var leftRows []string
+	leftHeader := MatchColumnHeaderStyle.Width(leftWidth).Align(lipgloss.Center).Render("Characters [a-g]")
+	leftRows = append(leftRows, leftHeader)
+
+	for i, item := range m.MatchLeftItems {
+		key := IndexToKey(i)
+		star := ""
+		if m.isCardMarked(item.Card) {
+			star = MarkedStarStyle.Render(" ★")
+		}
+		var rowContent string
+		var boxStyle lipgloss.Style
+
+		switch {
+		case item.Matched:
+			rowContent = fmt.Sprintf("[✓]  %s%s", item.Card.Character, star)
+			boxStyle = MatchCardMatchedBox
+		case m.MatchSelectedLeft == i:
+			rowContent = fmt.Sprintf("%s ▶ %s%s", KeyStyle.Render(fmt.Sprintf("[%s]", key)), CursorStyle.Render(item.Card.Character), star)
+			boxStyle = MatchCardSelectedBox
+		case m.MatchMismatchLeft == i:
+			rowContent = fmt.Sprintf("%s ✗ %s%s", ErrorStyle.Render(fmt.Sprintf("[%s]", key)), ErrorStyle.Render(item.Card.Character), star)
+			boxStyle = MatchCardMismatchBox
+		default:
+			rowContent = fmt.Sprintf("%s   %s%s", KeyStyle.Render(fmt.Sprintf("[%s]", key)), CharStyle.Render(item.Card.Character), star)
+			boxStyle = MatchCardBox
+		}
+
+		leftRows = append(leftRows, boxStyle.Width(leftWidth).Align(lipgloss.Left).Render(rowContent))
+	}
+
+	var rightRows []string
+	rightTitle := "Pinyin / Meaning [h-;]"
+	if m.MatchHidePinyin {
+		rightTitle = "Meaning (Pinyin Hidden) [h-;]"
+	}
+	rightHeader := MatchColumnHeaderStyle.Width(rightWidth).Align(lipgloss.Center).Render(rightTitle)
+	rightRows = append(rightRows, rightHeader)
+
+	for i, item := range m.MatchRightItems {
+		key := IndexToKey(i + 5)
+		optText := item.Card.FormatMatchOption(m.MatchHidePinyin)
+		var rowContent string
+		var boxStyle lipgloss.Style
+
+		switch {
+		case item.Matched:
+			rowContent = fmt.Sprintf("[✓]  %s", optText)
+			boxStyle = MatchCardMatchedBox
+		case m.MatchSelectedRight == i:
+			rowContent = fmt.Sprintf("%s ▶ %s", KeyStyle.Render(fmt.Sprintf("[%s]", key)), CursorStyle.Render(optText))
+			boxStyle = MatchCardSelectedBox
+		case m.MatchMismatchRight == i:
+			rowContent = fmt.Sprintf("%s ✗ %s", ErrorStyle.Render(fmt.Sprintf("[%s]", key)), ErrorStyle.Render(optText))
+			boxStyle = MatchCardMismatchBox
+		default:
+			styledOpt := m.formatStyledMatchOption(item.Card)
+			rowContent = fmt.Sprintf("%s   %s", KeyStyle.Render(fmt.Sprintf("[%s]", key)), styledOpt)
+			boxStyle = MatchCardBox
+		}
+
+		rightRows = append(rightRows, boxStyle.Width(rightWidth).Align(lipgloss.Left).Render(rowContent))
+	}
+
+	leftCol := lipgloss.JoinVertical(lipgloss.Left, leftRows...)
+	rightCol := lipgloss.JoinVertical(lipgloss.Left, rightRows...)
+	board := lipgloss.JoinHorizontal(lipgloss.Top, leftCol, "    ", rightCol)
+
+	var feedbackLine string
+	if m.MatchLastFeedback != "" {
+		if m.MatchLastIsError {
+			feedbackLine = ErrorStyle.Render(m.MatchLastFeedback)
+		} else {
+			feedbackLine = CorrectStyle.Render(m.MatchLastFeedback)
+		}
+	} else {
+		feedbackLine = HintStyle.Render("Select a character [a-g] and its matching meaning [h-;]")
+	}
+
+	pinyinToggleLabel := "Hide Pinyin"
+	if m.MatchHidePinyin {
+		pinyinToggleLabel = "Show Pinyin"
+	}
+	controls := HintStyle.Render(fmt.Sprintf("([a-g] Left  •  [h-;] Right  •  [p] %s  •  [m] Mark card  •  [q] Main Menu)", pinyinToggleLabel))
+
+	content := HintStyle.Render(header) + "\n"
+	content += QuizProgressStyle.Render("["+bar+"]") + "\n\n"
+	content += board + "\n\n"
+	content += feedbackLine + "\n\n"
+	content += controls
+	return content
+}
+
+func (m Model) formatStyledMatchOption(card deck.Flashcard) string {
+	if m.MatchHidePinyin {
+		return MeaningStyle.Render(card.Meaning)
+	}
+	if card.Pinyin != "" {
+		return fmt.Sprintf("%s - %s", PinyinStyle.Render(card.Pinyin), MeaningStyle.Render(card.Meaning))
+	}
+	if card.Pronunciation != "" {
+		return fmt.Sprintf("%s - %s", PronunciationStyle.Render(card.Pronunciation), MeaningStyle.Render(card.Meaning))
+	}
+	return MeaningStyle.Render(card.Meaning)
+}
+
 
 

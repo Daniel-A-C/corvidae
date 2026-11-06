@@ -263,12 +263,39 @@ func (m *Model) startMarkedPractice() (tea.Model, tea.Cmd) {
 	if m.State == StateDirSelect && m.Mode == ModeReview {
 		m.SetupReview()
 		m.State = StateReview
+	} else if (m.State == StateDirSelect || m.State == StateMatch) && m.Mode == ModeMatch {
+		m.SetupMatch()
+		m.State = StateMatch
 	} else {
 		m.Mode = ModeQuiz
 		m.SetupQuiz()
 		m.State = StateQuiz
 	}
 	return *m, nil
+}
+
+// toggleMatchCardMarked toggles the marked status of the currently selected or most recently matched card in Matching Game mode.
+func (m *Model) toggleMatchCardMarked() (deck.Flashcard, bool, bool) {
+	var ref *deck.CardRef
+	if m.MatchSelectedLeft >= 0 && m.MatchSelectedLeft < len(m.MatchLeftItems) {
+		r := m.MatchLeftItems[m.MatchSelectedLeft].CardRef
+		ref = &r
+	} else if m.MatchSelectedRight >= 0 && m.MatchSelectedRight < len(m.MatchRightItems) {
+		r := m.MatchRightItems[m.MatchSelectedRight].CardRef
+		ref = &r
+	} else if m.MatchLastCard != nil {
+		ref = m.MatchLastCard
+	}
+	if ref == nil {
+		return deck.Flashcard{}, false, false
+	}
+	d, ok := m.Decks[ref.Filename]
+	if !ok || ref.OrigIdx >= len(d.Cards) {
+		return deck.Flashcard{}, false, false
+	}
+	card := d.Cards[ref.OrigIdx]
+	nowMarked := m.toggleCardMarkedWithSource(card, ref.Filename)
+	return card, nowMarked, true
 }
 
 // getLanguageDistractorCards gathers additional flashcards matching the given language,
