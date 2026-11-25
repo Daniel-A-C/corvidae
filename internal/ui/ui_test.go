@@ -3342,4 +3342,215 @@ func TestMatchingGamePinyinToggleAndMarkCard(t *testing.T) {
 	}
 }
 
+func TestQuizLongOriginDescriptorDoesNotOverflowWidth(t *testing.T) {
+	tempDir := t.TempDir()
+	nestedDir := filepath.Join(tempDir, "Mandarin", "HarryPotter", "05_The_House_Cup_and_Homecoming")
+	if err := os.MkdirAll(nestedDir, 0755); err != nil {
+		t.Fatal(err)
+	}
+	longFile := filepath.Join(nestedDir, "03_fifty_points_each_for_ron_and_hermione.yaml")
+	d := deck.Deck{
+		Cards: []deck.Flashcard{
+			{
+				Character:   "阻拦",
+				Pinyin:      "zǔ lán",
+				Meaning:     "To stop / To intercept / To bar the way",
+				Explanation: "阻 (obstruct / block: 阝 + 且) + 拦 (bar / hold back: 扌 + 兰). Snape rushed upstairs in an attempt to block Quirrell.",
+			},
+			{
+				Character:   "不仅",
+				Pinyin:      "bù jǐn",
+				Meaning:     "Not only",
+				Explanation: "Correlative conjunction paired with 甚至.",
+			},
+		},
+	}
+	if err := deck.SaveDeck(longFile, d); err != nil {
+		t.Fatal(err)
+	}
+
+	relPath := filepath.Join("Mandarin", "HarryPotter", "05_The_House_Cup_and_Homecoming", "03_fifty_points_each_for_ron_and_hermione.yaml")
+	for _, tc := range []struct {
+		name   string
+		width  int
+		height int
+	}{
+		{"standard terminal", 100, 40},
+		{"narrow terminal", 60, 30},
+	} {
+		t.Run(tc.name, func(t *testing.T) {
+			m := New(tempDir)
+			m.Mode = ModeQuiz
+			m.Width = tc.width
+			m.Height = tc.height
+			m.SelectedFiles[relPath] = true
+			if err := m.LoadSelectedDecks(); err != nil {
+				t.Fatal(err)
+			}
+			m.SetupQuiz()
+			m.State = StateQuiz
+
+			qInner := m.viewQuiz()
+			qView := m.View()
+			if strings.Contains(qView, "03_fifty_points_each_for_ron_and_hermione.yaml") {
+				t.Errorf("deck path should be hidden during question")
+			}
+
+			// Answer correctly to show feedback + long origin descriptor
+			correctKey := HummingbirdKeys[m.CorrectIndex]
+			updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(correctKey)})
+			m = updatedM.(Model)
+
+			fbInner := m.viewQuiz()
+			fbView := m.View()
+
+			if lipgloss.Width(qInner) != lipgloss.Width(fbInner) {
+				t.Errorf("quiz frame width changed on feedback: question=%d, feedback=%d",
+					lipgloss.Width(qInner), lipgloss.Width(fbInner))
+			}
+
+			for i, line := range strings.Split(fbView, "\n") {
+				if w := lipgloss.Width(line); w > tc.width {
+					t.Errorf("feedback line %d exceeded terminal width %d (got %d): %q", i, tc.width, w, line)
+				}
+			}
+
+			if !strings.Contains(fbView, "Source:") {
+				t.Errorf("expected feedback view to show 'Source:', got:\n%s", fbView)
+			}
+			if tc.width >= 80 && !strings.Contains(fbView, "03_fifty_points_each_for_ron_and_hermione.yaml") {
+				t.Errorf("expected feedback view to contain wrapped filename, got:\n%s", fbView)
+			}
+		})
+	}
+}
+
+func TestQuizVerticalAndHorizontalStability(t *testing.T) {
+	tempDir := t.TempDir()
+	nestedDir := filepath.Join(tempDir, "Mandarin", "HarryPotter", "05_The_House_Cup_and_Homecoming")
+	if err := os.MkdirAll(nestedDir, 0755); err != nil {
+		t.Fatal(err)
+	}
+	longFile := filepath.Join(nestedDir, "03_fifty_points_each_for_ron_and_hermione.yaml")
+	longExp := strings.Repeat("This is a detailed etymological explanation of the character components and narrative context. ", 3)
+	d := deck.Deck{
+		Cards: []deck.Flashcard{
+			{
+				Character:   "阻拦",
+				Pinyin:      "zǔ lán",
+				Meaning:     "To stop / To intercept",
+				Explanation: "Short note.",
+			},
+			{
+				Character:   "脑袋",
+				Pinyin:      "nǎo dài",
+				Meaning:     "Head / Brains",
+				Explanation: longExp,
+			},
+		},
+	}
+	if err := deck.SaveDeck(longFile, d); err != nil {
+		t.Fatal(err)
+	}
+
+	relPath := filepath.Join("Mandarin", "HarryPotter", "05_The_House_Cup_and_Homecoming", "03_fifty_points_each_for_ron_and_hermione.yaml")
+	m := New(tempDir)
+	m.Mode = ModeQuiz
+	m.Width = 100
+	m.Height = 40
+	m.SelectedFiles[relPath] = true
+	if err := m.LoadSelectedDecks(); err != nil {
+		t.Fatal(err)
+	}
+	m.SetupQuiz()
+	m.State = StateQuiz
+
+	findAnchor := func(view, needle string) (row, col int) {
+		for r, line := range strings.Split(view, "\n") {
+			if idx := strings.Index(line, needle); idx != -1 {
+				return r, lipgloss.Width(line[:idx])
+			}
+		}
+		return -1, -1
+	}
+	findLastAnchor := func(view, needle string) (row, col int) {
+		lines := strings.Split(view, "\n")
+		for r := len(lines) - 1; r >= 0; r-- {
+			if idx := strings.Index(lines[r], needle); idx != -1 {
+				return r, lipgloss.Width(lines[r][:idx])
+			}
+		}
+		return -1, -1
+	}
+
+	type snapshot struct {
+		name string
+		view string
+	}
+	var snaps []snapshot
+
+	// 1. Question (unmarked)
+	snaps = append(snaps, snapshot{"question_unmarked", m.View()})
+
+	// 2. Question (marked)
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'m'}})
+	m = updatedM.(Model)
+	snaps = append(snaps, snapshot{"question_marked", m.View()})
+
+	// 3. Feedback (correct)
+	correctKey := HummingbirdKeys[m.CorrectIndex]
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(correctKey)})
+	m = updatedM.(Model)
+	snaps = append(snaps, snapshot{"feedback_correct", m.View()})
+
+	// Advance to card 2 and answer incorrectly
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+	wrongIdx := (m.CorrectIndex + 1) % len(m.QuizOptions)
+	wrongKey := HummingbirdKeys[wrongIdx]
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(wrongKey)})
+	m = updatedM.(Model)
+	snaps = append(snaps, snapshot{"feedback_incorrect_long", m.View()})
+
+	base := snaps[0]
+	baseHeaderRow, baseHeaderCol := findAnchor(base.view, "Quiz: Question")
+	baseBoxRow, baseBoxCol := findAnchor(base.view, "╭")
+	baseDivRow, baseDivCol := findLastAnchor(base.view, "───")
+	baseFooterRow, baseFooterCol := findAnchor(base.view, "[m")
+
+	if baseHeaderRow == -1 || baseBoxRow == -1 || baseDivRow == -1 || baseFooterRow == -1 {
+		t.Fatalf("failed to find anchors in base view:\n%s", base.view)
+	}
+
+	// Verify left-justification inside the centered frame: header, box, divider, and footer share the same left column.
+	if baseHeaderCol != baseBoxCol || baseHeaderCol != baseDivCol || baseHeaderCol != baseFooterCol {
+		t.Errorf("expected left-justified alignment across zones, got cols header=%d box=%d div=%d footer=%d",
+			baseHeaderCol, baseBoxCol, baseDivCol, baseFooterCol)
+	}
+	if baseHeaderCol == 0 {
+		t.Errorf("expected quiz frame to be centered in 100-col terminal, got col=0")
+	}
+
+	for _, snap := range snaps[1:] {
+		hRow, hCol := findAnchor(snap.view, "Quiz: Question")
+		bRow, bCol := findAnchor(snap.view, "╭")
+		dRow, dCol := findLastAnchor(snap.view, "───")
+		fRow, fCol := findAnchor(snap.view, "[m")
+
+		if hRow != baseHeaderRow || hCol != baseHeaderCol {
+			t.Errorf("%s: header shifted from (%d,%d) to (%d,%d)", snap.name, baseHeaderRow, baseHeaderCol, hRow, hCol)
+		}
+		if bRow != baseBoxRow || bCol != baseBoxCol {
+			t.Errorf("%s: prompt box shifted from (%d,%d) to (%d,%d)", snap.name, baseBoxRow, baseBoxCol, bRow, bCol)
+		}
+		if dRow != baseDivRow || dCol != baseDivCol {
+			t.Errorf("%s: source divider shifted from (%d,%d) to (%d,%d)", snap.name, baseDivRow, baseDivCol, dRow, dCol)
+		}
+		if fRow != baseFooterRow || fCol != baseFooterCol {
+			t.Errorf("%s: footer shifted from (%d,%d) to (%d,%d)", snap.name, baseFooterRow, baseFooterCol, fRow, fCol)
+		}
+	}
+}
+
+
 

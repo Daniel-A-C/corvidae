@@ -50,6 +50,12 @@ var (
 	MemorizeWrongStyle    = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FF5555"))
 	MemorizeProgressStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("#50FA7B")).Bold(true)
 	QuizProgressStyle     = lipgloss.NewStyle().Foreground(lipgloss.Color("#50FA7B")).Bold(true)
+	QuizDividerStyle      = lipgloss.NewStyle().Foreground(lipgloss.Color("#44475A"))
+	QuizPromptBoxStyle    = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#BD93F9")).Padding(0, 2).Align(lipgloss.Left)
+	QuizExplanationStyle  = lipgloss.NewStyle().Foreground(lipgloss.Color("#EBCB8B")).Italic(true).Align(lipgloss.Left)
+	QuizSourceLabelStyle  = lipgloss.NewStyle().Foreground(lipgloss.Color("#6272A4")).Bold(true)
+	QuizSourcePathStyle   = lipgloss.NewStyle().Foreground(lipgloss.Color("#6272A4")).Italic(true)
+	QuizCompleteBoxStyle  = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#50FA7B")).Padding(1, 3).Align(lipgloss.Left)
 
 	// Learn by Reading styles
 	ReadingHeaderStyle         = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#BD93F9"))

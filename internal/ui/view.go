@@ -61,6 +61,10 @@ func (m Model) View() string {
 		content = m.viewMatch()
 	}
 
+	if m.State == StateQuiz {
+		return lipgloss.Place(m.Width, m.Height, lipgloss.Center, lipgloss.Center, content)
+	}
+
 	styledContent := lipgloss.NewStyle().Align(lipgloss.Center).Render(content)
 	return lipgloss.Place(m.Width, m.Height, lipgloss.Center, lipgloss.Center, styledContent)
 }
@@ -318,118 +322,7 @@ func (m Model) viewReview() string {
 	return content
 }
 
-func (m Model) viewQuiz() string {
-	if m.CurrentIndex >= len(m.ActiveCards) {
-		totalCards := len(m.ActiveCards)
-		accStr := "100%"
-		if totalCards > 0 {
-			accStr = fmt.Sprintf("%.1f%%", float64(m.QuizCorrect)/float64(totalCards)*100)
-		}
-		bar := strings.Repeat("█", 26)
-		progressBar := QuizProgressStyle.Render("[" + bar + "]")
-		summary := fmt.Sprintf("Score: %d of %d  •  Accuracy: %s", m.QuizCorrect, totalCards, accStr)
-		return fmt.Sprintf("Quiz complete!\n\n%s\n%s\n\n%s", progressBar, HintStyle.Render(summary), HintStyle.Render("[r] Retry quiz  •  [Enter / q] Main Menu"))
-	}
-
-	ref := m.ActiveCards[m.CurrentIndex]
-	card := m.Decks[ref.Filename].Cards[ref.OrigIdx]
-	isMarked := m.isCardMarked(card)
-
-	totalCards := len(m.ActiveCards)
-	current := m.CurrentIndex
-	pct := 0.0
-	if totalCards > 0 {
-		pct = float64(current) / float64(totalCards) * 100
-	}
-
-	answered := current
-	if m.ShowFeedback {
-		answered = current + 1
-	}
-	accStr := "100%"
-	if answered > 0 {
-		accStr = fmt.Sprintf("%.1f%%", float64(m.QuizCorrect)/float64(answered)*100)
-	}
-
-	barLen := 26
-	filled := 0
-	if totalCards > 0 {
-		filled = int(float64(barLen) * float64(current) / float64(totalCards))
-	}
-	if filled > barLen {
-		filled = barLen
-	}
-	bar := strings.Repeat("█", filled) + strings.Repeat("░", barLen-filled)
-
-	header := fmt.Sprintf("Quiz: Question %d of %d (%.1f%%)  •  Accuracy: %s", m.CurrentIndex+1, totalCards, pct, accStr)
-	if m.ShowFeedback {
-		displayName, err := filepath.Rel(m.BaseDir, ref.Filename)
-		if err != nil {
-			displayName = ref.Filename
-		}
-		header += fmt.Sprintf("  •  %s", displayName)
-	}
-	if isMarked {
-		header += "  " + MarkedBadgeStyle.Render("★ MARKED")
-	}
-
-	content := HintStyle.Render(header) + "\n"
-	content += QuizProgressStyle.Render("["+bar+"]") + "\n\n"
-	content += CharStyle.Render(card.Character) + "\n\n"
-
-	if m.ShowFeedback {
-		if m.IsCorrect {
-			content += CorrectStyle.Render("Correct!") + "\n\n"
-			if card.Pinyin != "" {
-				content += fmt.Sprintf("Pinyin:  %s\n", PinyinStyle.Render(card.Pinyin))
-			} else if card.Pronunciation != "" {
-				content += fmt.Sprintf("Pronunciation: %s\n", PronunciationStyle.Render(card.Pronunciation))
-			}
-			content += fmt.Sprintf("Meaning: %s\n\n", MeaningStyle.Render(card.Meaning))
-			if card.Explanation != "" {
-				content += ExplanationStyle.Render(card.Explanation) + "\n\n"
-			}
-		} else {
-			content += ErrorStyle.Render("Incorrect!") + "\n\n"
-			content += fmt.Sprintf("The correct answer was: %s\n\n", CorrectStyle.Render(m.QuizOptions[m.CorrectIndex]))
-			if card.Explanation != "" {
-				content += ExplanationStyle.Render(card.Explanation) + "\n\n"
-			}
-		}
-
-		var markHint string
-		if isMarked {
-			markHint = fmt.Sprintf("[%s] Unmark  •  ", KeyStyle.Render("m/u"))
-		} else {
-			markHint = fmt.Sprintf("[%s] Mark card  •  ", KeyStyle.Render("m"))
-		}
-		if !m.IsCorrect {
-			overrideHint := fmt.Sprintf("[%s] I knew it (wrong button)  •  ", KeyStyle.Render("k"))
-			content += HintStyle.Render(fmt.Sprintf("[ %s%sSpacebar to continue ]", markHint, overrideHint))
-		} else {
-			content += HintStyle.Render(fmt.Sprintf("[ %sSpacebar to continue ]", markHint))
-		}
-		return content
-	}
-
-	for i, opt := range m.QuizOptions {
-		key := IndexToKey(i)
-		keyBadge := KeyStyle.Render(fmt.Sprintf("[%s]", key))
-		content += fmt.Sprintf("%s %s\n", keyBadge, opt)
-		if (i+1)%5 == 0 && i < len(m.QuizOptions)-1 {
-			content += "\n"
-		}
-	}
-
-	var markHint string
-	if isMarked {
-		markHint = fmt.Sprintf("[%s] Unmark card  •  ", KeyStyle.Render("m"))
-	} else {
-		markHint = fmt.Sprintf("[%s] Mark card  •  ", KeyStyle.Render("m"))
-	}
-	content += "\n" + HintStyle.Render(fmt.Sprintf("(%sPress key to select, q to quit to menu)", markHint))
-	return content
-}
+// viewQuiz is implemented in quiz_view.go.
 
 func (m Model) viewArabicMenu() string {
 	var b strings.Builder
