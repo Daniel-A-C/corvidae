@@ -23,6 +23,17 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		if msg.String() == "ctrl+c" {
 			return m, tea.Quit
 		}
+		if m.ShowHelp {
+			switch msg.String() {
+			case "esc", "?", "f1", " ", "enter", "q":
+				m.ShowHelp = false
+			}
+			return m, nil
+		}
+		if msg.String() == "f1" || (msg.String() == "?" && m.canToggleHelpWithQuestionMark()) {
+			m.ShowHelp = true
+			return m, nil
+		}
 		if msg.String() == "q" && !m.isSelectionKey("q") && m.State != StateQuiz && m.State != StateMatch {
 			return m, tea.Quit
 		}
@@ -539,6 +550,11 @@ func (m Model) startPractice() (tea.Model, tea.Cmd) {
 }
 
 func (m Model) updateReview(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	if msg.String() == "esc" {
+		m.State = StateModeSelect
+		return m, nil
+	}
+
 	if len(m.ActiveCards) == 0 || m.CurrentIndex >= len(m.ActiveCards) {
 		if msg.String() == "r" {
 			var all []deck.CardRef
@@ -552,6 +568,7 @@ func (m Model) updateReview(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 			m.CurrentIndex = 0
 			m.ShowAnswer = false
 			m.ShowExplanation = false
+			m.ReviewGrades = [6]int{}
 		} else if msg.String() == "enter" {
 			m.State = StateModeSelect
 		}
@@ -607,6 +624,9 @@ func (m Model) updateReview(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 			return m, nil
 		}
 
+		if grade >= 0 && grade < len(m.ReviewGrades) {
+			m.ReviewGrades[grade]++
+		}
 		m.CurrentIndex++
 		m.ShowAnswer = false
 		m.ShowExplanation = false
@@ -657,12 +677,14 @@ func (m Model) updateQuiz(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 				}
 				m.IsCorrect = true
 				m.ShowFeedback = false
+				m.QuizSelectedIdx = -1
 				m.CurrentIndex++
 				m.GenerateQuizOptions()
 				return m, nil
 			}
 		case " ", "enter":
 			m.ShowFeedback = false
+			m.QuizSelectedIdx = -1
 			m.CurrentIndex++
 			m.GenerateQuizOptions()
 			return m, nil
@@ -695,6 +717,7 @@ func (m Model) updateQuiz(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 		}
 	}
 	if choiceIdx != -1 && choiceIdx < len(m.QuizOptions) {
+		m.QuizSelectedIdx = choiceIdx
 		m.ShowFeedback = true
 		m.IsCorrect = (choiceIdx == m.CorrectIndex)
 		if m.IsCorrect {

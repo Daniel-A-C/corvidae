@@ -77,16 +77,18 @@ type Model struct {
 	CurrentIndex    int
 	ShowAnswer      bool
 	ShowExplanation bool
+	ReviewGrades    [6]int
 
 	// Quiz state
-	QuizOptions    []string
-	CorrectIndex   int
-	ShowFeedback   bool
-	IsCorrect      bool
-	QuizCorrect    int
-	QuizStreak     int
-	QuizPrevStreak int
-	QuizBestStreak int
+	QuizOptions     []string
+	CorrectIndex    int
+	QuizSelectedIdx int
+	ShowFeedback    bool
+	IsCorrect       bool
+	QuizCorrect     int
+	QuizStreak      int
+	QuizPrevStreak  int
+	QuizBestStreak  int
 
 	// Arabic Academy state
 	ArabicMenuCursor    int
@@ -155,6 +157,8 @@ type Model struct {
 	MatchLastFeedback  string
 	MatchLastIsError   bool
 	MatchLastCard      *deck.CardRef
+
+	ShowHelp bool
 
 	Err    error
 	Width  int
@@ -538,6 +542,7 @@ func (m *Model) SetupReview() {
 	m.CurrentIndex = 0
 	m.ShowAnswer = false
 	m.ShowExplanation = false
+	m.ReviewGrades = [6]int{}
 }
 
 // SetupQuiz prepares all cards in the selected decks for a quiz session.
@@ -552,6 +557,7 @@ func (m *Model) SetupQuiz() {
 	rand.Shuffle(len(all), func(i, j int) { all[i], all[j] = all[j], all[i] })
 	m.ActiveCards = all
 	m.CurrentIndex = 0
+	m.QuizSelectedIdx = -1
 	m.ShowFeedback = false
 	m.IsCorrect = false
 	m.QuizCorrect = 0

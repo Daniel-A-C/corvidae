@@ -2009,7 +2009,7 @@ func TestMemorizeBoxFixedDimensionsAndOptionsStability(t *testing.T) {
 			t.Errorf("word %d: expected box height %d, got %d", idx, expectedBoxHeight, boxHeight)
 		}
 
-		topBorderWidth := lipgloss.Width(lines[boxStartRow])
+		topBorderWidth := lipgloss.Width(strings.TrimSpace(lines[boxStartRow]))
 		if topBorderWidth != expectedBoxWidth {
 			t.Errorf("word %d: expected box width %d, got %d", idx, expectedBoxWidth, topBorderWidth)
 		}
@@ -3554,3 +3554,221 @@ func TestQuizVerticalAndHorizontalStability(t *testing.T) {
 
 
 
+
+func TestReviewFixedZoneStabilityAndIntervalPreview(t *testing.T) {
+	tempDir := t.TempDir()
+	nestedDir := filepath.Join(tempDir, "Mandarin", "HarryPotter", "05_The_House_Cup_and_Homecoming")
+	if err := os.MkdirAll(nestedDir, 0755); err != nil {
+		t.Fatal(err)
+	}
+	longFile := filepath.Join(nestedDir, "03_fifty_points_each_for_ron_and_hermione.yaml")
+	d := deck.Deck{
+		Cards: []deck.Flashcard{
+			{
+				Character:   "阻拦",
+				Pinyin:      "zǔ lán",
+				Meaning:     "To stop / To intercept",
+				Explanation: "阻 (obstruct) + 拦 (hold back). Used when blocking someone's path.",
+				Reps:        1,
+				Interval:    1,
+				Ease:        2.5,
+			},
+		},
+	}
+	if err := deck.SaveDeck(longFile, d); err != nil {
+		t.Fatal(err)
+	}
+
+	relPath := filepath.Join("Mandarin", "HarryPotter", "05_The_House_Cup_and_Homecoming", "03_fifty_points_each_for_ron_and_hermione.yaml")
+	m := New(tempDir)
+	m.Mode = ModeReview
+	m.Width = 100
+	m.Height = 40
+	m.SelectedFiles[relPath] = true
+	if err := m.LoadSelectedDecks(); err != nil {
+		t.Fatal(err)
+	}
+	m.SetupReview()
+	m.State = StateReview
+
+	findAnchor := func(view, needle string) (row, col int) {
+		for r, line := range strings.Split(view, "\n") {
+			if idx := strings.Index(line, needle); idx != -1 {
+				return r, lipgloss.Width(line[:idx])
+			}
+		}
+		return -1, -1
+	}
+
+	hiddenView := m.View()
+	baseHRow, baseHCol := findAnchor(hiddenView, "Review: Card")
+	baseBRow, baseBCol := findAnchor(hiddenView, "╭")
+	baseSRow, baseSCol := findAnchor(hiddenView, "Source:")
+
+	// Reveal answer
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeySpace})
+	m = updatedM.(Model)
+	revealedView := m.View()
+
+	// Verify live predicted interval previews (Reps=1 -> Good gives 6d, Blackout gives 1d)
+	if !strings.Contains(revealedView, "(6d)") || !strings.Contains(revealedView, "(1d)") {
+		t.Errorf("expected revealed review view to show live predicted intervals (1d) and (6d), got:\n%s", revealedView)
+	}
+
+	// Toggle explanation + mark card
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'e'}})
+	m = updatedM.(Model)
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'m'}})
+	m = updatedM.(Model)
+	expMarkedView := m.View()
+
+	for name, view := range map[string]string{
+		"revealed":            revealedView,
+		"explanation_marked":  expMarkedView,
+	} {
+		hRow, hCol := findAnchor(view, "Review: Card")
+		bRow, bCol := findAnchor(view, "╭")
+		sRow, sCol := findAnchor(view, "Source:")
+		if hRow != baseHRow || hCol != baseHCol {
+			t.Errorf("%s: header shifted from (%d,%d) to (%d,%d)", name, baseHRow, baseHCol, hRow, hCol)
+		}
+		if bRow != baseBRow || bCol != baseBCol {
+			t.Errorf("%s: prompt box shifted from (%d,%d) to (%d,%d)", name, baseBRow, baseBCol, bRow, bCol)
+		}
+		if sRow != baseSRow || sCol != baseSCol {
+			t.Errorf("%s: source block shifted from (%d,%d) to (%d,%d)", name, baseSRow, baseSCol, sRow, sCol)
+		}
+		for i, line := range strings.Split(view, "\n") {
+			if w := lipgloss.Width(line); w > m.Width {
+				t.Errorf("%s: line %d exceeded terminal width %d (got %d)", name, i, m.Width, w)
+			}
+		}
+	}
+
+	// Esc returns to Main Menu
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.State != StateModeSelect {
+		t.Errorf("expected Esc in Review to return to StateModeSelect, got %d", m.State)
+	}
+}
+
+func TestQuizWrongAnswerShowsSelectedOption(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+	m.Mode = ModeQuiz
+	m.Width = 100
+	m.Height = 40
+	m.SelectedDir = "Mandarin"
+	m.SelectedFiles["tech.yaml"] = true
+	if err := m.LoadSelectedDecks(); err != nil {
+		t.Fatal(err)
+	}
+	m.SetupQuiz()
+	m.State = StateQuiz
+
+	wrongIdx := (m.CorrectIndex + 1) % len(m.QuizOptions)
+	wrongKey := HummingbirdKeys[wrongIdx]
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune(wrongKey)})
+	m = updatedM.(Model)
+
+	fbView := m.View()
+	if !strings.Contains(fbView, "You selected:") {
+		t.Errorf("expected wrong quiz feedback to show 'You selected:', got:\n%s", fbView)
+	}
+	if !strings.Contains(fbView, "The correct answer was:") {
+		t.Errorf("expected wrong quiz feedback to show 'The correct answer was:', got:\n%s", fbView)
+	}
+}
+
+func TestMatchBoardWidthStabilityAndNarrowTerminal(t *testing.T) {
+	tempDir := t.TempDir()
+	dir := filepath.Join(tempDir, "Mandarin")
+	if err := os.MkdirAll(dir, 0755); err != nil {
+		t.Fatal(err)
+	}
+	var cards []deck.Flashcard
+	for i := 0; i < 7; i++ {
+		meaning := fmt.Sprintf("Meaning %d", i)
+		if i == 6 {
+			meaning = "A very long English definition that should be truncated cleanly without overflowing"
+		}
+		cards = append(cards, deck.Flashcard{
+			Character: fmt.Sprintf("词%d", i),
+			Pinyin:    fmt.Sprintf("cí %d", i),
+			Meaning:   meaning,
+		})
+	}
+	if err := deck.SaveDeck(filepath.Join(dir, "long.yaml"), deck.Deck{Cards: cards}); err != nil {
+		t.Fatal(err)
+	}
+
+	for _, termW := range []int{60, 100} {
+		m := New(tempDir)
+		m.Mode = ModeMatch
+		m.Width = termW
+		m.Height = 40
+		m.SelectedFiles[filepath.Join("Mandarin", "long.yaml")] = true
+		if err := m.LoadSelectedDecks(); err != nil {
+			t.Fatal(err)
+		}
+		m.SetupMatch()
+		m.State = StateMatch
+
+		r1Inner := m.viewMatch()
+		r1View := m.View()
+		for i, line := range strings.Split(r1View, "\n") {
+			if w := lipgloss.Width(line); w > termW {
+				t.Errorf("termW=%d round 1 line %d exceeded width (got %d)", termW, i, w)
+			}
+		}
+
+		// Jump to round 2 and confirm board width stays identical
+		m.MatchRoundStart = MatchBatchSize
+		m.SetupMatchRound()
+		r2Inner := m.viewMatch()
+		if lipgloss.Width(r1Inner) != lipgloss.Width(r2Inner) {
+			t.Errorf("termW=%d: match board width changed between rounds: r1=%d r2=%d",
+				termW, lipgloss.Width(r1Inner), lipgloss.Width(r2Inner))
+		}
+	}
+}
+
+func TestHelpOverlayToggleAndDismiss(t *testing.T) {
+	decksDir := setupTestDecks(t)
+	m := New(decksDir)
+	m.Width = 100
+	m.Height = 40
+
+	// Open with '?' on Main Menu
+	updatedM, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune{'?'}})
+	m = updatedM.(Model)
+	if !m.ShowHelp {
+		t.Fatalf("expected ShowHelp to be true after '?'")
+	}
+	helpView := m.View()
+	if !strings.Contains(helpView, "Keyboard Shortcuts") || !strings.Contains(helpView, "Hummingbird 30-Key Layout") {
+		t.Errorf("expected help overlay content, got:\n%s", helpView)
+	}
+
+	// Dismiss with Esc without changing underlying state
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyEsc})
+	m = updatedM.(Model)
+	if m.ShowHelp {
+		t.Fatalf("expected ShowHelp to be false after Esc")
+	}
+	if m.State != StateModeSelect {
+		t.Fatalf("expected StateModeSelect to remain unchanged, got %d", m.State)
+	}
+
+	// Open with F1 in StateDirSelect (where '?' is reserved for Shift+/)
+	m.State = StateDirSelect
+	updatedM, _ = m.Update(tea.KeyMsg{Type: tea.KeyF1})
+	m = updatedM.(Model)
+	if !m.ShowHelp {
+		t.Fatalf("expected F1 to open help overlay in StateDirSelect")
+	}
+	if !strings.Contains(m.View(), "Folders") {
+		t.Errorf("expected context-aware Folders help, got:\n%s", m.View())
+	}
+}

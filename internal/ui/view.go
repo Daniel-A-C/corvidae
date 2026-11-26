@@ -16,6 +16,9 @@ func (m Model) View() string {
 	if m.Err != nil {
 		return fmt.Sprintf("Error: %v\n", m.Err)
 	}
+	if m.ShowHelp {
+		return lipgloss.Place(m.Width, m.Height, lipgloss.Center, lipgloss.Center, m.viewHelpOverlay())
+	}
 
 	var content string
 	switch m.State {
@@ -61,37 +64,89 @@ func (m Model) View() string {
 		content = m.viewMatch()
 	}
 
-	if m.State == StateQuiz {
-		return lipgloss.Place(m.Width, m.Height, lipgloss.Center, lipgloss.Center, content)
-	}
+	return lipgloss.Place(m.Width, m.Height, lipgloss.Center, lipgloss.Center, content)
+}
 
-	styledContent := lipgloss.NewStyle().Align(lipgloss.Center).Render(content)
-	return lipgloss.Place(m.Width, m.Height, lipgloss.Center, lipgloss.Center, styledContent)
+func (m Model) modeDisplayName() string {
+	switch m.Mode {
+	case ModeReview:
+		return "SM-2 Review"
+	case ModeQuiz:
+		return "Quiz"
+	case ModeArabic:
+		return "Arabic Academy"
+	case ModeMemorize:
+		return "Memorize"
+	case ModeReading:
+		return "Reading"
+	case ModeMatch:
+		return "Matching Game"
+	default:
+		return "Practice"
+	}
 }
 
 func (m Model) viewModeSelect() string {
-	content := LogoStyle.Render(AsciiLogo) + "\n\n"
-	content += "Select Mode:\n\n"
+	frameWidth := m.frameWidth()
 
-	modes := []string{
-		"Spaced Repetition (SM-2)",
-		"Multiple Choice Quiz",
-		"Arabic Alphabet Academy",
-		"Memorize by Options",
-		"Learn by Reading",
-		"Matching Game",
+	logo := lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Center).Render(LogoStyle.Render(AsciiLogo))
+	tagline := lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Center).Render(HintStyle.Render("Terminal Memory Workstation"))
+
+	var b strings.Builder
+	b.WriteString(logo + "\n")
+	b.WriteString(tagline + "\n\n")
+
+	// Status strip
+	selectedCount := m.countSelectedDecks()
+	markedCount := len(m.MarkedCards)
+	var pills []string
+	if selectedCount == 1 {
+		pills = append(pills, DashboardPillStyle.Render("1 deck selected"))
+	} else if selectedCount > 1 {
+		pills = append(pills, DashboardPillStyle.Render(fmt.Sprintf("%d decks selected", selectedCount)))
 	}
-	for i, label := range modes {
+	if markedCount == 1 {
+		pills = append(pills, DashboardPillStyle.Render(MarkedStarStyle.Render("★")+" 1 marked"))
+	} else if markedCount > 1 {
+		pills = append(pills, DashboardPillStyle.Render(MarkedStarStyle.Render("★")+fmt.Sprintf(" %d marked", markedCount)))
+	}
+
+	headerLeft := SectionTitleStyle.Render("Select Mode")
+	headerRight := strings.Join(pills, "  ")
+	b.WriteString(renderSplitLine(headerLeft, headerRight, frameWidth) + "\n")
+	b.WriteString(renderDivider(frameWidth) + "\n\n")
+
+	modes := []struct {
+		title string
+		desc  string
+	}{
+		{"Spaced Repetition (SM-2)", "Daily due flashcards & scheduling"},
+		{"Multiple Choice Quiz", "5-choice recall with live streak"},
+		{"Arabic Alphabet Academy", "28 letters, cursive forms & drills"},
+		{"Memorize by Options", "Word-by-word text recitation"},
+		{"Learn by Reading", "Diglot weave immersion reader"},
+		{"Matching Game", "Two-column home-row speed pairs"},
+	}
+
+	const titleColWidth = 27
+	for i, mode := range modes {
 		key := IndexToKey(i)
 		keyBadge := KeyStyle.Render(fmt.Sprintf("[%s]", key))
 		cursor := "  "
+		paddedTitle := fmt.Sprintf("%-*s", titleColWidth, mode.title)
+		label := paddedTitle
 		if m.Mode == i {
 			cursor = "> "
-			label = CursorStyle.Render(label)
+			label = CursorStyle.Render(paddedTitle)
 		}
-		content += fmt.Sprintf("%s%s %s\n", CursorStyle.Render(cursor), keyBadge, label)
+		if frameWidth >= 60 {
+			desc := HintStyle.Render(truncateToWidth(mode.desc, frameWidth-titleColWidth-9))
+			b.WriteString(fmt.Sprintf("%s%s  %s %s\n", CursorStyle.Render(cursor), keyBadge, label, desc))
+		} else {
+			b.WriteString(fmt.Sprintf("%s%s  %s\n", CursorStyle.Render(cursor), keyBadge, label))
+		}
 	}
-	markedCount := len(m.MarkedCards)
+
 	if markedCount > 0 {
 		var cardWord string
 		if markedCount == 1 {
@@ -99,31 +154,48 @@ func (m Model) viewModeSelect() string {
 		} else {
 			cardWord = fmt.Sprintf("%d cards", markedCount)
 		}
-		content += "\n" + fmt.Sprintf("  %s %s\n",
+		b.WriteString("\n" + fmt.Sprintf("  %s  %s\n",
 			KeyStyle.Render("[m]"),
 			MarkedStarStyle.Render(fmt.Sprintf("★ Practice Marked Cards (%s)", cardWord)),
-		)
+		))
 	}
 
 	if m.StatusMessage != "" {
-		content += "\n" + ExplanationStyle.Render(m.StatusMessage) + "\n"
+		b.WriteString("\n" + QuizExplanationStyle.Width(frameWidth).Render(m.StatusMessage) + "\n")
 	}
 
-	content += "\n" + HintStyle.Render("(Press a/s/d/f/g/h to select, Enter to confirm, q to quit)")
-	return content
+	b.WriteString("\n" + renderDivider(frameWidth) + "\n")
+	footerRaw := fmt.Sprintf("[%s] Select  •  [%s] Confirm  •  [%s] Help  •  [%s] Quit",
+		KeyStyle.Render("a-h"), KeyStyle.Render("Enter"), KeyStyle.Render("?"), KeyStyle.Render("q"))
+	b.WriteString(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw)))
+
+	return renderFrame(frameWidth, b.String())
 }
 
 func (m Model) viewDirSelect() string {
+	frameWidth := m.frameWidth()
 	if len(m.Dirs) == 0 && m.SelectedDir != "" {
-		return fmt.Sprintf("No directories found in %s/%s.\n\n%s", m.BaseDir, m.SelectedDir, HintStyle.Render("(Press Esc to return, q to quit)"))
+		empty := fmt.Sprintf("No directories found in %s/%s.\n\n%s",
+			m.BaseDir, m.SelectedDir, HintStyle.Render("[Esc] Back  •  [q] Quit"))
+		return renderFrame(frameWidth, empty)
 	}
 
-	var content string
+	var breadcrumb string
 	if m.SelectedDir == "" {
-		content = "Select Deck Directory / Language:\n\n"
+		breadcrumb = "Decks"
 	} else {
-		content = fmt.Sprintf("Select Deck Directory (%s):\n\n", m.SelectedDir)
+		breadcrumb = "Decks › " + strings.ReplaceAll(filepath.ToSlash(m.SelectedDir), "/", " › ")
 	}
+	modePill := ModePillStyle.Render(m.modeDisplayName())
+	availHeader := frameWidth - lipgloss.Width(modePill) - 2
+	if availHeader < 12 {
+		availHeader = 12
+	}
+	headerLine := renderSplitLine(BreadcrumbStyle.Render(truncateToWidth(breadcrumb, availHeader)), modePill, frameWidth)
+
+	var b strings.Builder
+	b.WriteString(headerLine + "\n")
+	b.WriteString(renderDivider(frameWidth) + "\n")
 
 	for i, dir := range m.Dirs {
 		key := IndexToKey(i)
@@ -140,9 +212,9 @@ func (m Model) viewDirSelect() string {
 		count := deck.CountDecksInDir(m.BaseDir, dirRelPath)
 		var countStr string
 		if count == 1 {
-			countStr = HintStyle.Render(" (1 deck)")
+			countStr = HintStyle.Render("(1 deck)")
 		} else {
-			countStr = HintStyle.Render(fmt.Sprintf(" (%d decks)", count))
+			countStr = HintStyle.Render(fmt.Sprintf("(%d decks)", count))
 		}
 
 		selectedCount, totalDecks := m.countSelectedDecksInDir(dirRelPath)
@@ -159,9 +231,11 @@ func (m Model) viewDirSelect() string {
 			cursor = "> "
 			label = CursorStyle.Render(label)
 		}
-		content += fmt.Sprintf("%s%s%s%s%s\n", CursorStyle.Render(cursor), keyBadge, label, countStr, indicator)
+		leftPart := fmt.Sprintf("%s%s%s", CursorStyle.Render(cursor), keyBadge, label)
+		rightPart := countStr + indicator
+		b.WriteString(renderSplitLine(leftPart, rightPart, frameWidth) + "\n")
 		if (i+1)%5 == 0 && i < len(m.Dirs)-1 {
-			content += "\n"
+			b.WriteString("\n")
 		}
 	}
 
@@ -185,13 +259,14 @@ func (m Model) viewDirSelect() string {
 			label = CursorStyle.Render(label)
 		}
 		keyBadge := KeyStyle.Render("[m]") + " "
-		content += fmt.Sprintf("\n%s%s%s%s\n", CursorStyle.Render(cursor), keyBadge, label, countStr)
+		b.WriteString(fmt.Sprintf("\n%s%s%s%s\n", CursorStyle.Render(cursor), keyBadge, label, countStr))
 	}
 
 	if m.StatusMessage != "" {
-		content += "\n" + ExplanationStyle.Render(m.StatusMessage) + "\n"
+		b.WriteString("\n" + QuizExplanationStyle.Width(frameWidth).Render(m.StatusMessage) + "\n")
 	}
 
+	b.WriteString("\n" + renderDivider(frameWidth) + "\n")
 	selectedCount := m.countSelectedDecks()
 	if selectedCount > 0 {
 		var deckWord string
@@ -200,31 +275,41 @@ func (m Model) viewDirSelect() string {
 		} else {
 			deckWord = fmt.Sprintf("%d decks", selectedCount)
 		}
-		content += "\n" + CorrectStyle.Render(fmt.Sprintf("%s selected across folders  •  [Tab] Start Practice  •  [u] Deselect All", deckWord)) + "\n"
-		content += "\n" + HintStyle.Render("(Press key to open, Shift+key to select folder, Tab to start, [u] Deselect all, Esc to go back, q to quit)")
+		b.WriteString(renderSplitLine(
+			CorrectStyle.Render(fmt.Sprintf("%s selected across folders", deckWord)),
+			CorrectStyle.Render("[Tab] Start  •  [u] Deselect All"),
+			frameWidth,
+		) + "\n")
+		footerRaw := fmt.Sprintf("[%s] Open  •  [%s] Toggle folder  •  [%s] Start  •  [%s] Back  •  [%s] Quit",
+			KeyStyle.Render("key"), KeyStyle.Render("Shift+key"), KeyStyle.Render("Tab"), KeyStyle.Render("Esc"), KeyStyle.Render("q"))
+		b.WriteString(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw)))
 	} else {
-		content += "\n" + HintStyle.Render("(Press key to open, Shift+key to select folder, [m] Marked Cards, Esc to go back, q to quit)")
+		footerRaw := fmt.Sprintf("[%s] Open  •  [%s] Toggle folder  •  [%s] Marked  •  [%s] Back  •  [%s] Quit",
+			KeyStyle.Render("key"), KeyStyle.Render("Shift+key"), KeyStyle.Render("m"), KeyStyle.Render("Esc"), KeyStyle.Render("q"))
+		b.WriteString(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw)))
 	}
-	return content
+	return renderFrame(frameWidth, b.String())
 }
 
 func (m Model) viewDeckSelect() string {
+	frameWidth := m.frameWidth()
 	if len(m.DeckFiles) == 0 {
-		return fmt.Sprintf("No .yaml files found in %s/%s.\n\n%s", m.BaseDir, m.SelectedDir, HintStyle.Render("(Press Esc or Enter to go back, q to quit)"))
+		empty := fmt.Sprintf("No .yaml files found in %s/%s.\n\n%s",
+			m.BaseDir, m.SelectedDir, HintStyle.Render("[Esc / Enter] Back  •  [q] Quit"))
+		return renderFrame(frameWidth, empty)
 	}
 
-	content := fmt.Sprintf("Select decks to practice (%s)", m.SelectedDir)
-	selectedCount := m.countSelectedDecks()
-	if selectedCount > 0 {
-		var deckWord string
-		if selectedCount == 1 {
-			deckWord = "1 deck selected"
-		} else {
-			deckWord = fmt.Sprintf("%d decks selected", selectedCount)
-		}
-		content += fmt.Sprintf(" [%s]", deckWord)
+	breadcrumb := "Decks › " + strings.ReplaceAll(filepath.ToSlash(m.SelectedDir), "/", " › ")
+	modePill := ModePillStyle.Render(m.modeDisplayName())
+	availHeader := frameWidth - lipgloss.Width(modePill) - 2
+	if availHeader < 12 {
+		availHeader = 12
 	}
-	content += ":\n\n"
+	headerLine := renderSplitLine(BreadcrumbStyle.Render(truncateToWidth(breadcrumb, availHeader)), modePill, frameWidth)
+
+	var b strings.Builder
+	b.WriteString(headerLine + "\n")
+	b.WriteString(renderDivider(frameWidth) + "\n")
 
 	for i, file := range m.DeckFiles {
 		key := IndexToKey(i)
@@ -237,26 +322,28 @@ func (m Model) viewDeckSelect() string {
 			cursor = "> "
 		}
 
-		check := "[ ]"
+		check := HintStyle.Render("[ ]")
 		if m.isDeckSelected(file) {
-			check = "[x]"
+			check = FolderSelectedStyle.Render("[✓]")
 		}
 
 		displayFile := file
 		if m.Cursor == i {
 			displayFile = CursorStyle.Render(file)
 		}
-		line := fmt.Sprintf("%s%s%s %s", CursorStyle.Render(cursor), keyBadge, KeyStyle.Render(check), displayFile)
-		content += line + "\n"
+		line := fmt.Sprintf("%s%s%s %s", CursorStyle.Render(cursor), keyBadge, check, displayFile)
+		b.WriteString(line + "\n")
 		if (i+1)%5 == 0 && i < len(m.DeckFiles)-1 {
-			content += "\n"
+			b.WriteString("\n")
 		}
 	}
 
 	if m.StatusMessage != "" {
-		content += "\n" + ExplanationStyle.Render(m.StatusMessage) + "\n"
+		b.WriteString("\n" + QuizExplanationStyle.Width(frameWidth).Render(m.StatusMessage) + "\n")
 	}
 
+	b.WriteString("\n" + renderDivider(frameWidth) + "\n")
+	selectedCount := m.countSelectedDecks()
 	if selectedCount > 0 {
 		var deckWord string
 		if selectedCount == 1 {
@@ -264,84 +351,43 @@ func (m Model) viewDeckSelect() string {
 		} else {
 			deckWord = fmt.Sprintf("%d decks", selectedCount)
 		}
-		content += "\n" + CorrectStyle.Render(fmt.Sprintf("%s selected across folders  •  [Enter] Start Practice  •  [u] Deselect All", deckWord)) + "\n"
-		content += "\n" + HintStyle.Render("(Press key to toggle, [u] Deselect all, Enter to confirm, Esc to go back, q to quit)")
+		b.WriteString(renderSplitLine(
+			CorrectStyle.Render(fmt.Sprintf("%s selected across folders", deckWord)),
+			CorrectStyle.Render("[Enter] Start  •  [u] Deselect All"),
+			frameWidth,
+		) + "\n")
+		footerRaw := fmt.Sprintf("[%s] Toggle  •  [%s] Toggle all  •  [%s] Start  •  [%s] Back  •  [%s] Quit",
+			KeyStyle.Render("key/Space"), KeyStyle.Render("Shift+Enter"), KeyStyle.Render("Enter"), KeyStyle.Render("Esc"), KeyStyle.Render("q"))
+		b.WriteString(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw)))
 	} else {
-		content += "\n" + HintStyle.Render("(Press key to toggle, Enter to confirm, Esc to go back, q to quit)")
+		footerRaw := fmt.Sprintf("[%s] Toggle  •  [%s] Toggle all  •  [%s] Back  •  [%s] Quit",
+			KeyStyle.Render("key/Space"), KeyStyle.Render("Shift+Enter"), KeyStyle.Render("Esc"), KeyStyle.Render("q"))
+		b.WriteString(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw)))
 	}
-	return content
+	return renderFrame(frameWidth, b.String())
 }
 
-func (m Model) viewReview() string {
-	if len(m.ActiveCards) == 0 {
-		return fmt.Sprintf("No cards due today!\n\n%s", HintStyle.Render("[r] Review all cards anyway  •  [Enter] Main Menu  •  [q] Quit"))
-	}
-	if m.CurrentIndex >= len(m.ActiveCards) {
-		return fmt.Sprintf("Daily review complete! Great job.\n\n%s", HintStyle.Render("[r] Review all cards again  •  [Enter] Main Menu  •  [q] Quit"))
-	}
-
-	ref := m.ActiveCards[m.CurrentIndex]
-	card := m.Decks[ref.Filename].Cards[ref.OrigIdx]
-	displayName, err := filepath.Rel(m.BaseDir, ref.Filename)
-	if err != nil {
-		displayName = ref.Filename
-	}
-
-	header := fmt.Sprintf("Card %d of %d  •  %s", m.CurrentIndex+1, len(m.ActiveCards), displayName)
-	if m.isCardMarked(card) {
-		header += "  " + MarkedBadgeStyle.Render("★ MARKED")
-	}
-
-	content := HintStyle.Render(header) + "\n\n"
-	content += CharStyle.Render(card.Character) + "\n\n"
-
-	if !m.ShowAnswer {
-		content += HintStyle.Render("[ Spacebar to reveal ]") + "\n"
-		content += "\n" + HintStyle.Render("([m] Toggle Mark  •  Press 'q' to quit)")
-		return content
-	}
-
-	if card.Pinyin != "" {
-		content += fmt.Sprintf("Pinyin:  %s\n", PinyinStyle.Render(card.Pinyin))
-	} else if card.Pronunciation != "" {
-		content += fmt.Sprintf("Pronunciation: %s\n", PronunciationStyle.Render(card.Pronunciation))
-	}
-	content += fmt.Sprintf("Meaning: %s\n\n", MeaningStyle.Render(card.Meaning))
-
-	if m.ShowExplanation && card.Explanation != "" {
-		content += ExplanationStyle.Render(card.Explanation) + "\n\n"
-	}
-
-	content += "How well did you know this?\n"
-	content += fmt.Sprintf("[%s] Blackout  [%s] Wrong  [%s] Hard\n",
-		KeyStyle.Render("d"), KeyStyle.Render("f"), KeyStyle.Render("g"))
-	content += fmt.Sprintf("[%s] Good      [%s] Easy   [%s] Perfect\n",
-		KeyStyle.Render("h"), KeyStyle.Render("j"), KeyStyle.Render("k"))
-
-	content += "\n" + HintStyle.Render("[e] Toggle Explanation  •  [m] Toggle Mark  •  [q] Quit")
-	return content
-}
-
+// viewReview is implemented in review_view.go.
 // viewQuiz is implemented in quiz_view.go.
 
 func (m Model) viewArabicMenu() string {
+	frameWidth := m.frameWidth()
 	var b strings.Builder
-	title := ArabicHeaderStyle.Render("★ ARABIC ALPHABET ACADEMY ★") + "\n"
-	sub := ArabicSubHeaderStyle.Render("أكاديمية الحروف العربية — Master the Modern Standard Arabic Script") + "\n\n"
-	b.WriteString(title)
-	b.WriteString(sub)
-	b.WriteString("Select Learning Activity:\n\n")
+	b.WriteString(ArabicHeaderStyle.Render("★ ARABIC ALPHABET ACADEMY ★") + "\n")
+	b.WriteString(ArabicSubHeaderStyle.Render("أكاديمية الحروف العربية — Master the Modern Standard Arabic Script") + "\n")
+	b.WriteString(renderDivider(frameWidth) + "\n\n")
+	b.WriteString(SectionTitleStyle.Render("Select Learning Activity") + "\n\n")
 
 	activities := []struct {
 		title string
 		desc  string
 	}{
-		{"Alphabet Explorer & Letter Inspector", "Interactive 28-letter browser with 4 cursive shapes, sounds, & examples"},
-		{"Positional Forms Drill", "Master Isolated, Initial, Medial, and Final cursive recognition"},
-		{"Letter Sounds & Transliteration Quiz", "Connect letters, names, IPA sounds, and transliterations"},
+		{"Alphabet Explorer & Letter Inspector", "28-letter browser with 4 cursive shapes, sounds & examples"},
+		{"Positional Forms Drill", "Master Isolated, Initial, Medial & Final cursive recognition"},
+		{"Letter Sounds & Transliteration Quiz", "Connect letters, names, IPA sounds & transliterations"},
 		{"Minimal Pairs & Confusable Letters", "Contrast tricky letters (ت/ط, د/ض, س/ص, ذ/ظ, ح/ه, ع/غ)"},
 		{"Non-Connecting Letters Drill", "Drill the 6 non-connecting letters (ا, د, ذ, ر, ز, و)"},
-		{"Sun & Moon Letters Drill", "Master definite article (الـ) assimilation and pronunciation"},
+		{"Sun & Moon Letters Drill", "Master definite article (الـ) assimilation & pronunciation"},
 		{"Progressive Guided Lessons", "Step-by-step curriculum through 8 pedagogical stages"},
 	}
 
@@ -354,28 +400,41 @@ func (m Model) viewArabicMenu() string {
 			cursor = "> "
 			label = CursorStyle.Render(label)
 		}
-		descStr := HintStyle.Render(" — " + act.desc)
-		b.WriteString(fmt.Sprintf("%s%s %s%s\n", CursorStyle.Render(cursor), keyBadge, label, descStr))
+		b.WriteString(fmt.Sprintf("%s%s %s\n", CursorStyle.Render(cursor), keyBadge, label))
+		b.WriteString(fmt.Sprintf("      %s\n", HintStyle.Render(truncateToWidth(act.desc, frameWidth-6))))
 		if i == 0 || i == 3 || i == 5 {
 			b.WriteString("\n")
 		}
 	}
 
-	b.WriteString("\n" + HintStyle.Render("(Press key to select, Enter to confirm, Esc to return to Main Menu, q to quit)"))
-	return b.String()
+	b.WriteString("\n" + renderDivider(frameWidth) + "\n")
+	footerRaw := fmt.Sprintf("[%s] Select  •  [%s] Confirm  •  [%s] Help  •  [%s] Main Menu  •  [%s] Quit",
+		KeyStyle.Render("a-j"), KeyStyle.Render("Enter"), KeyStyle.Render("?"), KeyStyle.Render("Esc"), KeyStyle.Render("q"))
+	b.WriteString(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw)))
+	return renderFrame(frameWidth, b.String())
 }
 
 func (m Model) viewArabicExplorer() string {
+	frameWidth := responsiveFrameWidth(m.Width, 78, 44)
+	boxInnerWidth := frameWidth - 2
+	if boxInnerWidth < 24 {
+		boxInnerWidth = 24
+	}
+	contentWidth := boxInnerWidth - 4 // ArabicCardBox has Padding(1, 2)
+	if contentWidth < 20 {
+		contentWidth = 20
+	}
+
 	var b strings.Builder
-	header := ArabicHeaderStyle.Render("ALPHABET EXPLORER & LETTER INSPECTOR") + "\n"
+	b.WriteString(ArabicHeaderStyle.Render("ALPHABET EXPLORER & LETTER INSPECTOR") + "\n")
 	var tabBar string
 	if m.ArabicExplorerTab == 0 {
-		tabBar = CorrectStyle.Render("[ Tab 1: The 28 Letters (Active) ]") + "   " + HintStyle.Render("[ Tab 2: Auxiliary & Harakat (Tab to switch) ]")
+		tabBar = CorrectStyle.Render("[ Tab 1: The 28 Letters ]") + "   " + HintStyle.Render("Tab 2: Auxiliary & Harakat (Tab)")
 	} else {
-		tabBar = HintStyle.Render("[ Tab 1: The 28 Letters (Tab to switch) ]") + "   " + CorrectStyle.Render("[ Tab 2: Auxiliary & Harakat (Active) ]")
+		tabBar = HintStyle.Render("Tab 1: The 28 Letters (Tab)") + "   " + CorrectStyle.Render("[ Tab 2: Auxiliary & Harakat ]")
 	}
-	b.WriteString(header)
-	b.WriteString(tabBar + "\n\n")
+	b.WriteString(tabBar + "\n")
+	b.WriteString(renderDivider(frameWidth) + "\n\n")
 
 	if m.ArabicExplorerTab == 0 {
 		cursor := m.ArabicLetterCursor
@@ -384,7 +443,6 @@ func (m Model) viewArabicExplorer() string {
 		}
 		l := arabic.Letters[cursor]
 
-		// Alphabet Strip
 		var strip strings.Builder
 		for idx, item := range arabic.Letters {
 			glyph := item.Forms.Isolated
@@ -397,14 +455,23 @@ func (m Model) viewArabicExplorer() string {
 				strip.WriteString("\n")
 			}
 		}
-		b.WriteString(strip.String() + "\n\n")
+		b.WriteString(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Center).Render(strip.String()) + "\n\n")
 
-		cellStyle := lipgloss.NewStyle().Width(15).Align(lipgloss.Center)
+		cellW := (contentWidth - 5) / 4
+		if cellW > 15 {
+			cellW = 15
+		}
+		if cellW < 8 {
+			cellW = 8
+		}
+		bar := strings.Repeat("─", cellW)
+		cellStyle := lipgloss.NewStyle().Width(cellW).Align(lipgloss.Center)
 		posTable := fmt.Sprintf(
-			"┌───────────────┬───────────────┬───────────────┬───────────────┐\n"+
+			"┌%s┬%s┬%s┬%s┐\n"+
 				"│%s│%s│%s│%s│\n"+
 				"│%s│%s│%s│%s│\n"+
-				"└───────────────┴───────────────┴───────────────┴───────────────┘",
+				"└%s┴%s┴%s┴%s┘",
+			bar, bar, bar, bar,
 			cellStyle.Render("Isolated"),
 			cellStyle.Render("Initial"),
 			cellStyle.Render("Medial"),
@@ -413,6 +480,7 @@ func (m Model) viewArabicExplorer() string {
 			cellStyle.Render(ArabicFormGlyph.Render(l.Forms.Initial)),
 			cellStyle.Render(ArabicFormGlyph.Render(l.Forms.Medial)),
 			cellStyle.Render(ArabicFormGlyph.Render(l.Forms.Final)),
+			bar, bar, bar, bar,
 		)
 
 		letterHeader := fmt.Sprintf("%s   %s (%s)",
@@ -426,28 +494,28 @@ func (m Model) viewArabicExplorer() string {
 			PronunciationStyle.Render(l.IPA),
 		)
 
-		soundInfo := fmt.Sprintf("Sound & Articulation: %s", l.SoundDesc)
+		soundLines := strings.Join(wrapLabeledText("", "Sound & Articulation: ", l.SoundDesc, lipgloss.NewStyle(), contentWidth), "\n")
 
-		connBadge := BadgeConnectorStyle.Render("[✓ Dual-Connecting Letter]")
+		connBadge := BadgeConnectorStyle.Render("[✓ Dual-Connecting]")
 		if !l.IsConnector {
-			connBadge = BadgeNonConnectorStyle.Render("[⚠️ Non-Connecting Letter (Never connects to left)]")
+			connBadge = BadgeNonConnectorStyle.Render("[⚠️ Non-Connecting]")
 		}
 
-		sunMoonBadge := BadgeMoonStyle.Render("[🌙 Moon Letter (al-)]")
+		sunMoonBadge := BadgeMoonStyle.Render("[🌙 Moon Letter]")
 		if l.IsSunLetter {
-			sunMoonBadge = BadgeSunStyle.Render("[☀️ Sun Letter (assimilates)]")
+			sunMoonBadge = BadgeSunStyle.Render("[☀️ Sun Letter]")
 		}
 
 		emphaticBadge := ""
 		if l.Emphatic {
-			emphaticBadge = "   " + ErrorStyle.Render("[Emphatic / Heavy]")
+			emphaticBadge = "  " + ErrorStyle.Render("[Emphatic]")
 		}
 
 		groupInfo := HintStyle.Render(fmt.Sprintf("Group %d: %s", l.PedGroup, l.GroupName))
 
 		tips := ""
 		if l.Tips != "" {
-			tips = "\nMnemonic / Tip: " + ExplanationStyle.Render(l.Tips)
+			tips = "\n" + strings.Join(wrapLabeledText("", "Tip: ", l.Tips, QuizExplanationStyle, contentWidth), "\n")
 		}
 
 		var exStr strings.Builder
@@ -462,18 +530,20 @@ func (m Model) viewArabicExplorer() string {
 		}
 
 		cardContent := fmt.Sprintf(
-			"%s\n%s\n%s\n\n%s\n\n%s   %s%s   •   %s%s\n\n%s",
+			"%s\n%s\n%s\n\n%s\n\n%s  %s%s\n%s%s\n\n%s",
 			letterHeader,
 			phonetics,
-			soundInfo,
+			soundLines,
 			posTable,
 			connBadge, sunMoonBadge, emphaticBadge, groupInfo,
 			tips,
-			exStr.String(),
+			strings.TrimRight(exStr.String(), "\n"),
 		)
 
-		b.WriteString(ArabicCardBox.Render(cardContent) + "\n\n")
-		b.WriteString(HintStyle.Render("(←/h Prev Letter • →/l Next Letter • Tab Toggle Auxiliary • Esc/b Return to Menu • q Quit)"))
+		b.WriteString(ArabicCardBox.Width(boxInnerWidth).Render(cardContent) + "\n\n")
+		footerRaw := fmt.Sprintf("[%s] Prev/Next  •  [%s] Switch Tab  •  [%s] Help  •  [%s] Back  •  [%s] Quit",
+			KeyStyle.Render("←→/hl"), KeyStyle.Render("Tab"), KeyStyle.Render("?"), KeyStyle.Render("Esc"), KeyStyle.Render("q"))
+		b.WriteString(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw)))
 	} else {
 		cursor := m.ArabicAuxCursor
 		if cursor < 0 || cursor >= len(arabic.AuxiliaryItems) {
@@ -492,98 +562,161 @@ func (m Model) viewArabicExplorer() string {
 				strip.WriteString("\n")
 			}
 		}
-		b.WriteString(strip.String() + "\n\n")
+		b.WriteString(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Center).Render(strip.String()) + "\n\n")
 
+		descLines := strings.Join(wrapLabeledText("", "Description: ", item.Description, lipgloss.NewStyle(), contentWidth), "\n")
 		cardContent := fmt.Sprintf(
-			"%s\n\n%s (%s)\n\nCategory: %s\nTransliteration: %s\n\nDescription: %s\n\nExample in Word: %s\n",
+			"%s   %s (%s)\n\nCategory: %s\nTransliteration: %s\n\n%s\n\nExample in Word: %s",
 			ArabicGlyphHuge.Render(item.Arabic),
 			ArabicHeaderStyle.Render(item.Name),
 			KeyStyle.Render(fmt.Sprintf("%d of %d", cursor+1, len(arabic.AuxiliaryItems))),
 			MeaningStyle.Render(item.Category),
 			PinyinStyle.Render(item.Translit),
-			item.Description,
+			descLines,
 			CorrectStyle.Render(item.Example),
 		)
 
-		b.WriteString(ArabicCardBox.Render(cardContent) + "\n\n")
-		b.WriteString(HintStyle.Render("(←/h Prev Item • →/l Next Item • Tab Toggle 28 Letters • Esc/b Return to Menu • q Quit)"))
+		b.WriteString(ArabicCardBox.Width(boxInnerWidth).Render(cardContent) + "\n\n")
+		footerRaw := fmt.Sprintf("[%s] Prev/Next  •  [%s] Switch Tab  •  [%s] Help  •  [%s] Back  •  [%s] Quit",
+			KeyStyle.Render("←→/hl"), KeyStyle.Render("Tab"), KeyStyle.Render("?"), KeyStyle.Render("Esc"), KeyStyle.Render("q"))
+		b.WriteString(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw)))
 	}
 
-	return b.String()
+	return renderFrame(frameWidth, b.String())
 }
 
 func (m Model) viewArabicDrill() string {
+	frameWidth := m.frameWidth()
+
 	if len(m.ArabicQuestions) == 0 {
-		return fmt.Sprintf("No questions loaded.\n\n%s", HintStyle.Render("[Enter / Esc] Return to Menu"))
+		controls := HintStyle.Render(fmt.Sprintf("[%s] Return to Menu", KeyStyle.Render("Enter / Esc")))
+		return renderFrame(frameWidth, renderCompleteCard(frameWidth, "No questions loaded.", "", nil, controls))
 	}
 
 	if m.ArabicQuestionIdx >= len(m.ArabicQuestions) {
-		pct := (m.ArabicScore * 100) / len(m.ArabicQuestions)
+		total := len(m.ArabicQuestions)
+		pct := (m.ArabicScore * 100) / total
 		statusMsg := "Excellent! You've mastered this session!"
 		if pct < 70 {
 			statusMsg = "Good effort! Regular practice will make these letter shapes automatic."
 		}
-
-		result := fmt.Sprintf(
-			"%s\n\nFinal Score: %s / %s (%d%%)\n\n%s\n\n%s",
-			ArabicHeaderStyle.Render("★ DRILL COMPLETED ★"),
-			CorrectStyle.Render(fmt.Sprintf("%d", m.ArabicScore)),
-			KeyStyle.Render(fmt.Sprintf("%d", len(m.ArabicQuestions))),
-			pct,
-			ExplanationStyle.Render(statusMsg),
-			HintStyle.Render("[r] Retry Drill  •  [Enter / Esc] Academy Menu  •  [q] Quit"),
-		)
-		return result
+		barLen := 26
+		if frameWidth < 46 {
+			barLen = 16
+		}
+		bar := renderProgressBar(total, total, barLen)
+		stats := []string{
+			fmt.Sprintf("Final Score: %s / %s (%d%%)",
+				CorrectStyle.Render(fmt.Sprintf("%d", m.ArabicScore)),
+				KeyStyle.Render(fmt.Sprintf("%d", total)),
+				pct),
+			QuizExplanationStyle.Width(frameWidth - 8).Render(statusMsg),
+		}
+		controls := HintStyle.Render(fmt.Sprintf("[%s] Retry Drill  •  [%s] Academy Menu  •  [%s] Quit",
+			KeyStyle.Render("r"), KeyStyle.Render("Enter / Esc"), KeyStyle.Render("q")))
+		return renderFrame(frameWidth, renderCompleteCard(frameWidth, "★ DRILL COMPLETED ★", bar, stats, controls))
 	}
 
 	q := m.ArabicQuestions[m.ArabicQuestionIdx]
-	header := fmt.Sprintf("Question %d of %d   •   Score: %d/%d",
-		m.ArabicQuestionIdx+1, len(m.ArabicQuestions), m.ArabicScore, m.ArabicQuestionIdx)
+	total := len(m.ArabicQuestions)
+	answered := m.ArabicQuestionIdx
+	if m.ArabicShowFeedback {
+		answered++
+	}
+	accStr := "100%"
+	if answered > 0 {
+		accStr = fmt.Sprintf("%.0f%%", float64(m.ArabicScore)/float64(answered)*100)
+	}
 
-	var b strings.Builder
-	b.WriteString(HintStyle.Render(header) + "\n\n")
-	b.WriteString(ArabicHeaderStyle.Render(q.Prompt) + "\n")
+	// Zone 1: Fixed 2-line Header
+	headerLine1 := HintStyle.Render(fmt.Sprintf("Arabic Drill: Question %d of %d  •  Score: %d/%d  •  Accuracy: %s",
+		m.ArabicQuestionIdx+1, total, m.ArabicScore, answered, accStr))
+	barLen := 26
+	if frameWidth < 46 {
+		barLen = 16
+	}
+	headerLine2 := renderProgressBar(answered, total, barLen)
+	headerZone := headerLine1 + "\n" + headerLine2
+
+	// Zone 2: Prompt Card
+	boxInnerWidth := frameWidth - 2
+	if boxInnerWidth < 16 {
+		boxInnerWidth = 16
+	}
+	var promptLines []string
+	promptLines = append(promptLines, ArabicHeaderStyle.Render(q.Prompt))
 	if q.SubPrompt != "" {
-		b.WriteString(HintStyle.Render(q.SubPrompt) + "\n")
+		promptLines = append(promptLines, HintStyle.Render(q.SubPrompt))
 	}
-	b.WriteString("\n")
-
 	if q.Glyph != "" {
-		b.WriteString(ArabicGlyphHuge.Render(q.Glyph) + "\n\n")
+		promptLines = append(promptLines, "")
+		promptLines = append(promptLines, ArabicGlyphHuge.Render(q.Glyph))
 	}
+	promptZone := QuizPromptBoxStyle.Width(boxInnerWidth).Render(strings.Join(promptLines, "\n"))
 
+	// Zone 3: Fixed-height Body (options or feedback)
+	const drillBodyHeight = 10
+	var bodyLines []string
 	if m.ArabicShowFeedback {
 		if m.ArabicIsCorrect {
-			b.WriteString(CorrectStyle.Render("✓ Correct!") + "\n\n")
+			bodyLines = append(bodyLines, "  "+CorrectStyle.Render("✓ Correct!"))
 		} else {
-			b.WriteString(ErrorStyle.Render("✗ Incorrect!") + "\n\n")
-			b.WriteString(fmt.Sprintf("The correct answer was: %s\n\n", CorrectStyle.Render(q.Options[q.CorrectIndex])))
+			bodyLines = append(bodyLines, "  "+ErrorStyle.Render("✗ Incorrect!"))
+			bodyLines = append(bodyLines, "")
+			bodyLines = append(bodyLines, wrapLabeledText("  ", "The correct answer was: ", q.Options[q.CorrectIndex], CorrectStyle, frameWidth)...)
 		}
 		if q.Explanation != "" {
-			b.WriteString(ExplanationStyle.Render(q.Explanation) + "\n\n")
+			bodyLines = append(bodyLines, "")
+			expW := frameWidth - 4
+			if expW < 20 {
+				expW = 20
+			}
+			for _, el := range strings.Split(QuizExplanationStyle.Width(expW).Render(q.Explanation), "\n") {
+				bodyLines = append(bodyLines, "  "+el)
+			}
 		}
-		b.WriteString(HintStyle.Render("[ Spacebar or Enter to continue ]"))
-		return b.String()
-	}
-
-	for i, opt := range q.Options {
-		key := IndexToKey(i)
-		keyBadge := KeyStyle.Render(fmt.Sprintf("[%s]", key))
-		b.WriteString(fmt.Sprintf("%s %s\n", keyBadge, opt))
-		if (i+1)%5 == 0 && i < len(q.Options)-1 {
-			b.WriteString("\n")
+	} else {
+		for i, opt := range q.Options {
+			key := IndexToKey(i)
+			keyBadge := KeyStyle.Render(fmt.Sprintf("[%s]", key))
+			bodyLines = append(bodyLines, fmt.Sprintf("  %s  %s", keyBadge, opt))
+			if (i+1)%5 == 0 && i < len(q.Options)-1 {
+				bodyLines = append(bodyLines, "")
+			}
 		}
 	}
+	bodyZone := fitBlockHeight(strings.Join(bodyLines, "\n"), drillBodyHeight)
 
-	b.WriteString("\n" + HintStyle.Render("(Press key to select, Esc to return to menu, q to quit)"))
-	return b.String()
+	// Zone 4: Divider + Fixed Footer
+	var footerRaw string
+	if m.ArabicShowFeedback {
+		footerRaw = fmt.Sprintf("[%s] Continue  •  [%s] Help  •  [%s] Menu",
+			KeyStyle.Render("Spacebar / Enter"), KeyStyle.Render("?"), KeyStyle.Render("Esc"))
+	} else {
+		footerRaw = fmt.Sprintf("Press key to select  •  [%s] Help  •  [%s] Menu  •  [%s] Quit",
+			KeyStyle.Render("?"), KeyStyle.Render("Esc"), KeyStyle.Render("q"))
+	}
+	footerZone := renderDivider(frameWidth) + "\n" +
+		fitBlockHeight(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw)), 2)
+
+	assembled := lipgloss.JoinVertical(
+		lipgloss.Left,
+		headerZone,
+		"",
+		promptZone,
+		"",
+		bodyZone,
+		footerZone,
+	)
+	return renderFrame(frameWidth, assembled)
 }
 
 func (m Model) viewArabicStages() string {
+	frameWidth := m.frameWidth()
 	var b strings.Builder
 	b.WriteString(ArabicHeaderStyle.Render("PROGRESSIVE GUIDED LESSONS") + "\n")
-	b.WriteString(ArabicSubHeaderStyle.Render("8 Structured Stages from The Anchors to Auxiliary Marks") + "\n\n")
-	b.WriteString("Select Stage to Study & Drill:\n\n")
+	b.WriteString(ArabicSubHeaderStyle.Render("8 Structured Stages from The Anchors to Auxiliary Marks") + "\n")
+	b.WriteString(renderDivider(frameWidth) + "\n\n")
 
 	for i, st := range arabic.Stages {
 		key := IndexToKey(i)
@@ -604,20 +737,25 @@ func (m Model) viewArabicStages() string {
 					glyphs = append(glyphs, l.Forms.Isolated)
 				}
 			}
-			letterPreview = fmt.Sprintf(" (%s)", strings.Join(glyphs, " "))
+			letterPreview = fmt.Sprintf("(%s)", strings.Join(glyphs, " "))
 		} else {
-			letterPreview = " (ء, ة, ى, َ, ُ, ِ, ْ, ّ, ً)"
+			letterPreview = "(ء, ة, ى, َ, ُ, ِ, ْ, ّ, ً)"
 		}
 
-		b.WriteString(fmt.Sprintf("%s%s %s%s\n", CursorStyle.Render(cursor), keyBadge, name, CorrectStyle.Render(letterPreview)))
-		b.WriteString(fmt.Sprintf("     %s\n\n", HintStyle.Render(st.Description)))
+		leftPart := fmt.Sprintf("%s%s %s", CursorStyle.Render(cursor), keyBadge, name)
+		b.WriteString(renderSplitLine(leftPart, CorrectStyle.Render(letterPreview), frameWidth) + "\n")
+		b.WriteString(fmt.Sprintf("      %s\n\n", HintStyle.Render(truncateToWidth(st.Description, frameWidth-6))))
 	}
 
-	b.WriteString(HintStyle.Render("(Press key / Enter to view stage, Esc to return to menu, q to quit)"))
-	return b.String()
+	b.WriteString(renderDivider(frameWidth) + "\n")
+	footerRaw := fmt.Sprintf("[%s] View Stage  •  [%s] Help  •  [%s] Back  •  [%s] Quit",
+		KeyStyle.Render("key / Enter"), KeyStyle.Render("?"), KeyStyle.Render("Esc"), KeyStyle.Render("q"))
+	b.WriteString(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw)))
+	return renderFrame(frameWidth, b.String())
 }
 
 func (m Model) viewArabicStageView() string {
+	frameWidth := responsiveFrameWidth(m.Width, 78, 44)
 	cursor := m.ArabicStageCursor
 	if cursor < 0 || cursor >= len(arabic.Stages) {
 		cursor = 0
@@ -626,61 +764,74 @@ func (m Model) viewArabicStageView() string {
 
 	var b strings.Builder
 	b.WriteString(ArabicHeaderStyle.Render(fmt.Sprintf("STAGE %d: %s", st.Number, st.Name)) + "\n")
-	b.WriteString(HintStyle.Render(st.Description) + "\n\n")
+	b.WriteString(HintStyle.Render(st.Description) + "\n")
+	b.WriteString(renderDivider(frameWidth) + "\n\n")
 
 	if len(st.LetterIDs) > 0 {
-		b.WriteString("Letters in this stage:\n\n")
 		for _, id := range st.LetterIDs {
 			l := arabic.GetLetterByID(id)
 			if l == nil {
 				continue
 			}
-			connBadge := "[dual-connector]"
+			connBadge := BadgeConnectorStyle.Render("[dual-connector]")
 			if !l.IsConnector {
-				connBadge = "[non-connector ⚠️]"
+				connBadge = BadgeNonConnectorStyle.Render("[non-connector ⚠️]")
 			}
-			sunMoonBadge := "[moon]"
+			sunMoonBadge := BadgeMoonStyle.Render("[moon]")
 			if l.IsSunLetter {
-				sunMoonBadge = "[sun]"
+				sunMoonBadge = BadgeSunStyle.Render("[sun]")
 			}
-			b.WriteString(fmt.Sprintf("  %s  %s (%s)  •  Forms: [%s | %s | %s | %s]  •  %s %s\n",
+			left := fmt.Sprintf("  %s  %s (%s)  •  [%s | %s | %s | %s]",
 				ArabicGlyphHuge.Render(l.Forms.Isolated),
 				ArabicHeaderStyle.Render(l.ArabicName),
 				KeyStyle.Render(l.EnglishName),
 				l.Forms.Isolated, l.Forms.Initial, l.Forms.Medial, l.Forms.Final,
-				BadgeConnectorStyle.Render(connBadge),
-				BadgeMoonStyle.Render(sunMoonBadge),
-			))
-			b.WriteString(fmt.Sprintf("      Sound: %s  •  Tip: %s\n\n",
-				PinyinStyle.Render(l.SoundDesc),
-				ExplanationStyle.Render(l.Tips),
-			))
+			)
+			b.WriteString(renderSplitLine(left, connBadge+" "+sunMoonBadge, frameWidth) + "\n")
+			for _, sl := range wrapLabeledText("      ", "Sound: ", l.SoundDesc, PinyinStyle, frameWidth) {
+				b.WriteString(sl + "\n")
+			}
+			if l.Tips != "" {
+				for _, tl := range wrapLabeledText("      ", "Tip:   ", l.Tips, QuizExplanationStyle, frameWidth) {
+					b.WriteString(tl + "\n")
+				}
+			}
+			b.WriteString("\n")
 		}
 	} else {
-		b.WriteString("Auxiliary characters and diacritics in this stage:\n\n")
 		for _, a := range arabic.AuxiliaryItems {
-			b.WriteString(fmt.Sprintf("  %s  %s  •  %s\n      %s  •  Example: %s\n\n",
+			b.WriteString(fmt.Sprintf("  %s  %s  •  %s\n",
 				ArabicGlyphHuge.Render(a.Arabic),
 				ArabicHeaderStyle.Render(a.Name),
 				MeaningStyle.Render(a.Category),
-				HintStyle.Render(a.Description),
-				CorrectStyle.Render(a.Example),
 			))
+			for _, dl := range wrapPlainText(a.Description+"  •  Example: "+a.Example, frameWidth-6) {
+				b.WriteString("      " + HintStyle.Render(dl) + "\n")
+			}
+			b.WriteString("\n")
 		}
 	}
 
-	b.WriteString(HintStyle.Render("[Space / Enter] Start Stage Drill  •  [Esc / b] Back to Stages List  •  [q] Quit"))
-	return b.String()
+	b.WriteString(renderDivider(frameWidth) + "\n")
+	footerRaw := fmt.Sprintf("[%s] Start Stage Drill  •  [%s] Back to Stages  •  [%s] Quit",
+		KeyStyle.Render("Space / Enter"), KeyStyle.Render("Esc / b"), KeyStyle.Render("q"))
+	b.WriteString(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw)))
+	return renderFrame(frameWidth, b.String())
 }
 
 func (m Model) viewMemorizeSelectText() string {
+	frameWidth := m.frameWidth()
 	if len(m.MemorizeTexts) == 0 {
-		return fmt.Sprintf("No memorization texts found in %s.\n\nPlace .yaml or .txt files in %s/\n\n%s",
-			m.TextsDir, m.TextsDir, HintStyle.Render("(Press Esc to return, q to quit)"))
+		empty := fmt.Sprintf("No memorization texts found in %s.\n\nPlace .yaml or .txt files in %s/\n\n%s",
+			m.TextsDir, m.TextsDir, HintStyle.Render("[Esc] Return  •  [q] Quit"))
+		return renderFrame(frameWidth, empty)
 	}
 
-	content := MemorizeTitleStyle.Render("★ MEMORIZE BY OPTIONS ★") + "\n"
-	content += MemorizeSubStyle.Render("Work through a text word by word with plausible options:") + "\n\n"
+	var b strings.Builder
+	optPill := ModePillStyle.Render(fmt.Sprintf("Options: %d", m.MemorizeOptionCount))
+	b.WriteString(renderSplitLine(MemorizeTitleStyle.Render("★ MEMORIZE BY OPTIONS ★"), optPill, frameWidth) + "\n")
+	b.WriteString(MemorizeSubStyle.Render("Work through a text word by word with plausible options") + "\n")
+	b.WriteString(renderDivider(frameWidth) + "\n\n")
 
 	for i, t := range m.MemorizeTexts {
 		key := IndexToKey(i)
@@ -695,23 +846,26 @@ func (m Model) viewMemorizeSelectText() string {
 			label = CursorStyle.Render(label)
 		}
 
-		info := fmt.Sprintf(" (%d words)", t.WordCount)
+		info := fmt.Sprintf("%d words", t.WordCount)
 		if t.Progress > 0 && t.WordCount > 0 {
 			pct := float64(t.Progress) / float64(t.WordCount) * 100
-			info += fmt.Sprintf(" • In progress: %d/%d (%.0f%%)", t.Progress, t.WordCount, pct)
+			info += fmt.Sprintf("  •  %d/%d (%.0f%%)", t.Progress, t.WordCount, pct)
 		}
-		infoStr := HintStyle.Render(info)
-
-		content += fmt.Sprintf("%s%s%s%s\n", CursorStyle.Render(cursor), keyBadge, label, infoStr)
+		leftPart := fmt.Sprintf("%s%s%s", CursorStyle.Render(cursor), keyBadge, label)
+		b.WriteString(renderSplitLine(leftPart, HintStyle.Render(info), frameWidth) + "\n")
 	}
 
-	content += "\n" + HintStyle.Render(fmt.Sprintf("(Press key or Enter to select text  •  [o / 2-5] Options: %d  •  Esc to return  •  q to quit)", m.MemorizeOptionCount))
-	return content
+	b.WriteString("\n" + renderDivider(frameWidth) + "\n")
+	footerRaw := fmt.Sprintf("[%s] Select  •  [%s] Options (%d)  •  [%s] Help  •  [%s] Back  •  [%s] Quit",
+		KeyStyle.Render("key / Enter"), KeyStyle.Render("o / 2-5"), m.MemorizeOptionCount, KeyStyle.Render("?"), KeyStyle.Render("Esc"), KeyStyle.Render("q"))
+	b.WriteString(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw)))
+	return renderFrame(frameWidth, b.String())
 }
 
 func (m Model) viewMemorizePortionSelect() string {
+	frameWidth := m.frameWidth()
 	if m.MemorizeActiveText == nil || len(m.MemorizeSections) == 0 {
-		return fmt.Sprintf("No sections found for this text.\n\n%s", HintStyle.Render("[Esc] Back"))
+		return renderFrame(frameWidth, fmt.Sprintf("No sections found for this text.\n\n%s", HintStyle.Render("[Esc] Back")))
 	}
 
 	startSec := m.MemorizeSections[m.PortionStartSection]
@@ -721,8 +875,10 @@ func (m Model) viewMemorizePortionSelect() string {
 	numSections := m.PortionEndSection - m.PortionStartSection + 1
 
 	var b strings.Builder
-	b.WriteString(MemorizeTitleStyle.Render("★ PORTION SELECTOR ★") + "\n")
-	b.WriteString(MemorizeHeaderStyle.Render(m.MemorizeActiveText.Title) + "\n\n")
+	optPill := ModePillStyle.Render(fmt.Sprintf("Options: %d", m.MemorizeOptionCount))
+	b.WriteString(renderSplitLine(MemorizeTitleStyle.Render("★ PORTION SELECTOR ★"), optPill, frameWidth) + "\n")
+	b.WriteString(MemorizeHeaderStyle.Render(m.MemorizeActiveText.Title) + "\n")
+	b.WriteString(renderDivider(frameWidth) + "\n\n")
 
 	if m.PortionCompletedMsg != "" {
 		b.WriteString(CorrectStyle.Render(m.PortionCompletedMsg) + "\n\n")
@@ -737,11 +893,27 @@ func (m Model) viewMemorizePortionSelect() string {
 	if totalWords > 0 {
 		pctRange = float64(portionWords) / float64(totalWords) * 100
 	}
-	summary := fmt.Sprintf("Selected: %s  •  %d sections  •  %d of %d words (%.1f%%)  •  Options: %d",
-		rangeLabel, numSections, portionWords, totalWords, pctRange, m.MemorizeOptionCount)
-	b.WriteString(MemorizeSubStyle.Render(summary) + "\n\n")
+	summary := fmt.Sprintf("Selected: %s  •  %d sections  •  %d of %d words (%.1f%%)",
+		rangeLabel, numSections, portionWords, totalWords, pctRange)
+	b.WriteString(MemorizeSubStyle.Render(summary) + "\n")
 
-	// Selector rows with indicators
+	// Compact visual range bar across the full text
+	rangeBarLen := 26
+	if frameWidth < 46 {
+		rangeBarLen = 16
+	}
+	totalSecs := len(m.MemorizeSections)
+	var rangeBar strings.Builder
+	for pos := 0; pos < rangeBarLen; pos++ {
+		secIdx := pos * totalSecs / rangeBarLen
+		if secIdx >= m.PortionStartSection && secIdx <= m.PortionEndSection {
+			rangeBar.WriteString("█")
+		} else {
+			rangeBar.WriteString("░")
+		}
+	}
+	b.WriteString(MemorizeProgressStyle.Render("["+rangeBar.String()+"]") + "\n\n")
+
 	cursorStart := "  "
 	cursorEnd := "  "
 	startBadge := "Start"
@@ -757,14 +929,17 @@ func (m Model) viewMemorizePortionSelect() string {
 
 	startVal := KeyStyle.Render(fmt.Sprintf("< [ %s ] >", startSec.Label))
 	endVal := KeyStyle.Render(fmt.Sprintf("< [ %s ] >", endSec.Label))
+	previewMax := frameWidth - 34
+	if previewMax < 12 {
+		previewMax = 12
+	}
 
 	b.WriteString(fmt.Sprintf("%s[%s]: %s  %s\n",
-		cursorStart, startBadge, startVal, HintStyle.Render("\""+startSec.Preview+"\"")))
+		cursorStart, startBadge, startVal, HintStyle.Render("\""+truncateToWidth(startSec.Preview, previewMax)+"\"")))
 	b.WriteString(fmt.Sprintf("%s[%s]:   %s  %s\n\n",
-		cursorEnd, endBadge, endVal, HintStyle.Render("\""+endSec.Preview+"\"")))
+		cursorEnd, endBadge, endVal, HintStyle.Render("\""+truncateToWidth(endSec.Preview, previewMax)+"\"")))
 
-	// Window preview of sections around the selection
-	b.WriteString("Section Overview:\n")
+	b.WriteString(SectionTitleStyle.Render("Section Overview") + "\n")
 	windowStart := m.PortionStartSection - 2
 	if windowStart < 0 {
 		windowStart = 0
@@ -782,7 +957,8 @@ func (m Model) viewMemorizePortionSelect() string {
 		sec := m.MemorizeSections[i]
 		inRange := (i >= m.PortionStartSection && i <= m.PortionEndSection)
 		prefix := "    "
-		line := fmt.Sprintf("%-10s (%2d words): %s", sec.Label, sec.WordCount, sec.Preview)
+		secPreview := truncateToWidth(sec.Preview, frameWidth-34)
+		line := fmt.Sprintf("%-10s (%2d words): %s", sec.Label, sec.WordCount, secPreview)
 		tag := ""
 		if i == m.PortionStartSection && i == m.PortionEndSection {
 			tag = " " + MarkedBadgeStyle.Render("PORTION")
@@ -800,12 +976,14 @@ func (m Model) viewMemorizePortionSelect() string {
 		}
 	}
 
-	b.WriteString("\n" + HintStyle.Render("[Tab / ↑↓] Switch Start/End  •  [←→ / hl] Shift  •  [x] Expand  •  [n] Advance") + "\n")
-	b.WriteString(HintStyle.Render(fmt.Sprintf("[o / 2-5] Options: %d  •  [a] Select All  •  [Enter / Space] Practice Portion  •  [Esc] Back", m.MemorizeOptionCount)))
-	return b.String()
+	b.WriteString("\n" + renderDivider(frameWidth) + "\n")
+	b.WriteString(HintStyle.Render("[Tab / ↑↓] Switch Start/End  •  [←→ / hl] Shift  •  [x] Expand  •  [n] Advance") + "\n")
+	b.WriteString(HintStyle.Render(fmt.Sprintf("[o / 2-5] Options: %d  •  [a] Select All  •  [Enter / Space] Practice  •  [Esc] Back", m.MemorizeOptionCount)))
+	return renderFrame(frameWidth, b.String())
 }
 
 func (m Model) viewMemorize() string {
+	frameWidth := m.frameWidth()
 	if m.MemorizeActiveText == nil || m.MemorizeCurrentIndex >= m.PortionEndWordIdx {
 		return m.viewMemorizeComplete()
 	}
@@ -823,14 +1001,9 @@ func (m Model) viewMemorize() string {
 	}
 
 	barLen := 26
-	filled := 0
-	if totalPortionWords > 0 {
-		filled = int(float64(barLen) * float64(currentInPortion) / float64(totalPortionWords))
+	if frameWidth < 46 {
+		barLen = 16
 	}
-	if filled > barLen {
-		filled = barLen
-	}
-	bar := strings.Repeat("█", filled) + strings.Repeat("░", barLen-filled)
 
 	var portionTitle string
 	if len(m.MemorizeSections) > 0 && m.PortionStartSection < len(m.MemorizeSections) && m.PortionEndSection < len(m.MemorizeSections) {
@@ -843,15 +1016,22 @@ func (m Model) viewMemorize() string {
 		}
 	}
 
-	var b strings.Builder
-	b.WriteString(MemorizeHeaderStyle.Render(fmt.Sprintf("★ %s%s ★", m.MemorizeActiveText.Title, portionTitle)) + "\n")
-	b.WriteString(HintStyle.Render(fmt.Sprintf("Portion Word %d of %d (%.1f%%)  •  Accuracy: %s  •  Streak: %d  •  Options: %d",
-		currentInPortion+1, totalPortionWords, pct, accStr, m.MemorizeStreak, len(m.MemorizeCurrentOptions))) + "\n")
-	b.WriteString(MemorizeProgressStyle.Render("["+bar+"]") + "\n\n")
+	optPill := ModePillStyle.Render(fmt.Sprintf("Options: %d", len(m.MemorizeCurrentOptions)))
+	titleLeft := MemorizeHeaderStyle.Render(fmt.Sprintf("★ %s%s", m.MemorizeActiveText.Title, portionTitle))
+	headerLine1 := renderSplitLine(titleLeft, optPill, frameWidth)
+	headerLine2 := HintStyle.Render(fmt.Sprintf("Portion Word %d of %d (%.1f%%)  •  Accuracy: %s",
+		currentInPortion+1, totalPortionWords, pct, accStr))
+	headerLine3 := renderProgressBar(currentInPortion, totalPortionWords, barLen) + "  " + formatStreakBadge(m.MemorizeStreak)
 
-	// Build rolling text window (last ~30 words) in a fixed-size card box
+	// Build rolling text window (last ~30 words) in a responsive fixed-size card box
 	maxContentLines := 4
-	boxWidth := 66
+	boxWidth := frameWidth - 2
+	if boxWidth > 66 {
+		boxWidth = 66
+	}
+	if boxWidth < 24 {
+		boxWidth = 24
+	}
 	padX := 2
 	padY := 1
 	boxHeight := maxContentLines + (padY * 2) // 6 inner height: 4 content + 2 vertical pad
@@ -863,9 +1043,7 @@ func (m Model) viewMemorize() string {
 	var passage strings.Builder
 	for i := startIdx; i < m.MemorizeCurrentIndex; i++ {
 		item := m.MemorizeActiveText.Words[i]
-		pfx := item.Prefix
-		pfx = strings.ReplaceAll(pfx, "\n", " ")
-		pfx = strings.TrimSpace(pfx)
+		pfx := strings.TrimSpace(strings.ReplaceAll(item.Prefix, "\n", " "))
 		if pfx != "" {
 			if passage.Len() > 0 {
 				passage.WriteString(" ")
@@ -879,9 +1057,7 @@ func (m Model) viewMemorize() string {
 	}
 
 	activeItem := m.MemorizeActiveText.Words[m.MemorizeCurrentIndex]
-	activePfx := activeItem.Prefix
-	activePfx = strings.ReplaceAll(activePfx, "\n", " ")
-	activePfx = strings.TrimSpace(activePfx)
+	activePfx := strings.TrimSpace(strings.ReplaceAll(activeItem.Prefix, "\n", " "))
 	if activePfx != "" {
 		if passage.Len() > 0 {
 			passage.WriteString(" ")
@@ -926,89 +1102,102 @@ func (m Model) viewMemorize() string {
 		renderedBox = strings.Join(result, "\n")
 	}
 
-	b.WriteString(renderedBox + "\n\n")
-
+	// Fixed-height body zone (8 lines) so feedback <-> options never shifts vertically
+	const memorizeBodyHeight = 8
+	var bodyLines []string
+	var footerRaw string
 	if m.MemorizeShowFeedback {
 		wrongWord := ""
 		if m.MemorizeSelectedOption >= 0 && m.MemorizeSelectedOption < len(m.MemorizeCurrentOptions) {
 			wrongWord = m.MemorizeCurrentOptions[m.MemorizeSelectedOption]
 		}
-		b.WriteString(MemorizeWrongStyle.Render(fmt.Sprintf("✗ Incorrect: \"%s\"", wrongWord)) + "\n")
-		b.WriteString(MemorizeSuccessStyle.Render(fmt.Sprintf("✓ The correct word was: \"%s\"", activeItem.Word)) + "\n\n")
-		b.WriteString(HintStyle.Render(fmt.Sprintf("[ Spacebar / Enter to continue  •  [%s] I knew it (wrong button)  •  [r] Retry this word  •  [o] Options ]", KeyStyle.Render("k"))) + "\n")
-		b.WriteString("\n\n\n\n") // Pad so feedback matches the height of options mode
-		return b.String()
+		bodyLines = append(bodyLines, "  "+MemorizeWrongStyle.Render(fmt.Sprintf("✗ Incorrect: \"%s\"", wrongWord)))
+		bodyLines = append(bodyLines, "  "+MemorizeSuccessStyle.Render(fmt.Sprintf("✓ The correct word was: \"%s\"", activeItem.Word)))
+		footerRaw = fmt.Sprintf("[%s] Continue  •  [%s] I knew it (wrong button)  •  [%s] Retry word  •  [%s] Options",
+			KeyStyle.Render("Spacebar / Enter"), KeyStyle.Render("k"), KeyStyle.Render("r"), KeyStyle.Render("o"))
+	} else {
+		bodyLines = append(bodyLines, HintStyle.Render(fmt.Sprintf("Choose the next word (%d options):", len(m.MemorizeCurrentOptions))))
+		bodyLines = append(bodyLines, "")
+		for i, opt := range m.MemorizeCurrentOptions {
+			key := IndexToKey(i)
+			keyBadge := KeyStyle.Render(fmt.Sprintf("[%s]", key))
+			numBadge := HintStyle.Render(fmt.Sprintf("(%d)", i+1))
+			optRender := MemorizeCompleted.Render(opt)
+			bodyLines = append(bodyLines, fmt.Sprintf("  %s %s  %s", keyBadge, numBadge, optRender))
+		}
+		var keyList []string
+		for i := 0; i < len(m.MemorizeCurrentOptions); i++ {
+			keyList = append(keyList, IndexToKey(i))
+		}
+		keyStr := strings.Join(keyList, "/")
+		numStr := fmt.Sprintf("1-%d", len(m.MemorizeCurrentOptions))
+		footerRaw = fmt.Sprintf("(Press key [%s] or [%s] to select  •  [o] Options (%d)  •  [r] Restart  •  [?] Help  •  [Esc] Back)",
+			keyStr, numStr, len(m.MemorizeCurrentOptions))
 	}
+	bodyZone := fitBlockHeight(strings.Join(bodyLines, "\n"), memorizeBodyHeight)
+	footerZone := renderDivider(frameWidth) + "\n" +
+		fitBlockHeight(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw)), 2)
 
-	b.WriteString(fmt.Sprintf("Choose the next word (%d options):\n\n", len(m.MemorizeCurrentOptions)))
-	for i, opt := range m.MemorizeCurrentOptions {
-		key := IndexToKey(i)
-		keyBadge := KeyStyle.Render(fmt.Sprintf("[%s]", key))
-		numBadge := HintStyle.Render(fmt.Sprintf("(%d)", i+1))
-		optRender := MemorizeCompleted.Render(opt)
-		b.WriteString(fmt.Sprintf("  %s %s  %s\n", keyBadge, numBadge, optRender))
-	}
-	for i := len(m.MemorizeCurrentOptions); i < 5; i++ {
-		b.WriteString("\n")
-	}
-
-	var keyList []string
-	for i := 0; i < len(m.MemorizeCurrentOptions); i++ {
-		keyList = append(keyList, IndexToKey(i))
-	}
-	keyStr := strings.Join(keyList, "/")
-	numStr := fmt.Sprintf("1-%d", len(m.MemorizeCurrentOptions))
-
-	b.WriteString("\n" + HintStyle.Render(fmt.Sprintf("(Press key [%s] or [%s] to select  •  [o] Options (%d)  •  [r] Restart  •  [Esc] Back  •  [q] Quit)",
-		keyStr, numStr, len(m.MemorizeCurrentOptions))))
-	return b.String()
+	assembled := lipgloss.JoinVertical(
+		lipgloss.Left,
+		headerLine1,
+		headerLine2,
+		headerLine3,
+		"",
+		renderedBox,
+		"",
+		bodyZone,
+		footerZone,
+	)
+	return renderFrame(frameWidth, assembled)
 }
 
 func (m Model) viewMemorizeComplete() string {
-	title := "★ TEXT MEMORIZATION COMPLETE! ★"
+	frameWidth := m.frameWidth()
 	totalWords := 0
+	textTitle := ""
 	if m.MemorizeActiveText != nil {
 		totalWords = len(m.MemorizeActiveText.Words)
+		textTitle = m.MemorizeActiveText.Title
 	}
 	attempts := totalWords + m.MemorizeMistakes
 	acc := 100.0
 	if attempts > 0 {
 		acc = float64(totalWords) / float64(attempts) * 100
 	}
-
-	var b strings.Builder
-	b.WriteString(MemorizeSuccessStyle.Render(title) + "\n\n")
-	if m.MemorizeActiveText != nil {
-		b.WriteString(MemorizeHeaderStyle.Render(m.MemorizeActiveText.Title) + "\n\n")
+	barLen := 26
+	if frameWidth < 46 {
+		barLen = 16
 	}
-	b.WriteString(fmt.Sprintf("Total Words:    %d\n", totalWords))
-	b.WriteString(fmt.Sprintf("First-Try Acc:  %.1f%%\n", acc))
-	b.WriteString(fmt.Sprintf("Mistakes:       %d\n", m.MemorizeMistakes))
-	b.WriteString(fmt.Sprintf("Best Streak:    %d words\n", m.MemorizeBestStreak))
-	b.WriteString(fmt.Sprintf("Options:        %d\n\n", m.MemorizeOptionCount))
+	bar := renderProgressBar(totalWords, totalWords, barLen)
+	var stats []string
+	if textTitle != "" {
+		stats = append(stats, MemorizeHeaderStyle.Render(textTitle))
+	}
+	stats = append(stats,
+		HintStyle.Render(fmt.Sprintf("Total Words: %d  •  First-Try Acc: %.1f%%", totalWords, acc)),
+		HintStyle.Render(fmt.Sprintf("Mistakes: %d  •  Best Streak: %d words  •  Options: %d", m.MemorizeMistakes, m.MemorizeBestStreak, m.MemorizeOptionCount)),
+	)
+	controls := HintStyle.Render(fmt.Sprintf("[%s] Options (%d)  •  [%s] Again  •  [%s] Texts  •  [%s] Quit",
+		KeyStyle.Render("o / 2-5"), m.MemorizeOptionCount, KeyStyle.Render("r"), KeyStyle.Render("Enter"), KeyStyle.Render("q")))
 
-	b.WriteString(HintStyle.Render(fmt.Sprintf("[o / 2-5] Options: %d  •  [r] Memorize again  •  [Enter] Select another text  •  [q] Quit", m.MemorizeOptionCount)))
-
-	cardBox := lipgloss.NewStyle().
-		Border(lipgloss.RoundedBorder()).
-		BorderForeground(lipgloss.Color("#50FA7B")).
-		Padding(1, 4).
-		Align(lipgloss.Center)
-	return cardBox.Render(b.String())
+	return renderFrame(frameWidth, renderCompleteCard(frameWidth, "★ TEXT MEMORIZATION COMPLETE! ★", bar, stats, controls))
 }
 
 func (m Model) viewReadingSelectText() string {
+	frameWidth := responsiveFrameWidth(m.Width, 78, 44)
 	var b strings.Builder
 	b.WriteString(ReadingHeaderStyle.Render("★ Corvidae: Learn by Reading (Diglot Weave) ★") + "\n")
-	b.WriteString(HintStyle.Render("Read literature and scripture with progressive target language vocabulary immersion.") + "\n\n")
+	b.WriteString(HintStyle.Render("Read literature and scripture with progressive target language vocabulary immersion.") + "\n")
+	b.WriteString(renderDivider(frameWidth) + "\n\n")
 
 	if len(m.ReadingTexts) == 0 {
 		b.WriteString(ErrorStyle.Render(fmt.Sprintf("No texts found in %s.", m.ReadingDir)) + "\n\n")
 		b.WriteString(HintStyle.Render("[Esc] Return to Mode Select  •  [q] Quit"))
-		return b.String()
+		return renderFrame(frameWidth, b.String())
 	}
 
-	b.WriteString("Select a Text to Read:\n\n")
+	b.WriteString(SectionTitleStyle.Render("Select a Text to Read") + "\n\n")
 	for i, t := range m.ReadingTexts {
 		key := IndexToKey(i)
 		keyBadge := ""
@@ -1031,12 +1220,15 @@ func (m Model) viewReadingSelectText() string {
 			progressStr = HintStyle.Render(fmt.Sprintf("(Sentence %d of %d • %.0f%%)", t.Progress+1, t.SentenceCount, pct))
 		}
 
-		b.WriteString(fmt.Sprintf("%s%s%s  %s  %s  %s\n",
-			CursorStyle.Render(cursor), keyBadge, label, catBadge, langBadge, progressStr))
+		leftPart := fmt.Sprintf("%s%s%s  %s %s", CursorStyle.Render(cursor), keyBadge, label, catBadge, langBadge)
+		b.WriteString(renderSplitLine(leftPart, progressStr, frameWidth) + "\n")
 	}
 
-	b.WriteString("\n" + HintStyle.Render("(Press a/s to select, Enter/Space to start reading, Esc to return, q to quit)"))
-	return b.String()
+	b.WriteString("\n" + renderDivider(frameWidth) + "\n")
+	footerRaw := fmt.Sprintf("[%s] Select  •  [%s] Start Reading  •  [%s] Help  •  [%s] Back  •  [%s] Quit",
+		KeyStyle.Render("a/s"), KeyStyle.Render("Enter/Space"), KeyStyle.Render("?"), KeyStyle.Render("Esc"), KeyStyle.Render("q"))
+	b.WriteString(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw)))
+	return renderFrame(frameWidth, b.String())
 }
 
 func (m Model) viewReading() string {
@@ -1050,6 +1242,12 @@ func (m Model) viewReading() string {
 		return m.viewReadingComplete()
 	}
 
+	frameWidth := responsiveFrameWidth(m.Width, 78, 44)
+	boxInnerWidth := frameWidth - 2
+	if boxInnerWidth < 24 {
+		boxInnerWidth = 24
+	}
+
 	totalSentences := len(session.Text.Sentences)
 	currentSentNum := session.SentenceIdx + 1
 	pct := 0.0
@@ -1057,28 +1255,29 @@ func (m Model) viewReading() string {
 		pct = float64(currentSentNum) / float64(totalSentences) * 100
 	}
 
-	var b strings.Builder
 	titleLine := fmt.Sprintf("📖 %s", session.Text.Title)
 	if session.Text.Source != "" {
 		titleLine += fmt.Sprintf(" (%s)", session.Text.Source)
 	}
-	b.WriteString(ReadingHeaderStyle.Render(titleLine) + "\n")
-	b.WriteString(HintStyle.Render(fmt.Sprintf("Sentence %d of %d (%.0f%%)  •  Language: %s",
-		currentSentNum, totalSentences, pct, session.Text.Language)) + "\n\n")
+	langPill := ModePillStyle.Render(session.Text.Language)
+	headerLine1 := renderSplitLine(ReadingHeaderStyle.Render(truncateToWidth(titleLine, frameWidth-lipgloss.Width(langPill)-2)), langPill, frameWidth)
 
-	// Aggressiveness meter
-	barLen := 5
-	filled := session.Aggressiveness
-	if filled > barLen {
-		filled = barLen
+	barLen := 20
+	if frameWidth < 54 {
+		barLen = 12
 	}
-	meter := strings.Repeat("█", filled) + strings.Repeat("░", barLen-filled)
+	filled := session.Aggressiveness
+	if filled > 5 {
+		filled = 5
+	}
+	meter := strings.Repeat("█", filled) + strings.Repeat("░", 5-filled)
 	aggLabel := reading.AggressivenessLabels[session.Aggressiveness]
-	b.WriteString(HintStyle.Render("Aggressiveness: ") +
+	headerLine2 := renderProgressBar(currentSentNum, totalSentences, barLen) + "  " +
+		HintStyle.Render(fmt.Sprintf("Sentence %d of %d (%.0f%%)", currentSentNum, totalSentences, pct))
+	headerLine3 := HintStyle.Render("Aggressiveness: ") +
 		ReadingAggressivenessStyle.Render("["+meter+"] "+aggLabel) +
-		HintStyle.Render("  [-/+] Tune  •  [0] Pure English") + "\n\n")
+		HintStyle.Render("  [-/+]")
 
-	// Render weaved sentence with center justification
 	var sentenceRender strings.Builder
 	for _, seg := range session.CurrentWeave.Segments {
 		if !seg.IsSubstituted {
@@ -1090,20 +1289,39 @@ func (m Model) viewReading() string {
 		}
 	}
 
-	b.WriteString(ReadingBoxStyle.Render(strings.TrimSpace(sentenceRender.String())) + "\n\n")
+	readingBox := ReadingBoxStyle.Width(boxInnerWidth).Render(strings.TrimSpace(sentenceRender.String()))
 
-	// Substituted words quick-reference legend
+	var legendLine string
 	if len(session.CurrentWeave.SubstitutedWords) > 0 {
 		var wordBadges []string
 		for _, sw := range session.CurrentWeave.SubstitutedWords {
 			badge := ReadingKeyBadge.Render(sw.Key) + ":" + ReadingWordSubstituted.Render(sw.Translation.Target)
 			wordBadges = append(wordBadges, badge)
 		}
-		b.WriteString(HintStyle.Render("Unknown words? Press key: ") + strings.Join(wordBadges, "  ") + "\n\n")
+		legendLine = HintStyle.Render("Inspect word: ") + strings.Join(wordBadges, "  ")
+	} else {
+		legendLine = HintStyle.Render("Pure English mode — press [+] to weave vocabulary")
 	}
 
-	b.WriteString(HintStyle.Render("[Space / Enter / n] Got It (Next)  •  [h] Discussion & Grammar  •  [p] Prev  •  [r] Restart  •  [Esc] Texts"))
-	return b.String()
+	footerRaw := fmt.Sprintf("[%s] Next  •  [%s] Grammar  •  [%s] Prev  •  [%s] Tune  •  [%s] Pure Eng  •  [%s] Texts",
+		KeyStyle.Render("Space/Enter"), KeyStyle.Render("h"), KeyStyle.Render("p"),
+		KeyStyle.Render("-/+"), KeyStyle.Render("0"), KeyStyle.Render("Esc"))
+	footerZone := renderDivider(frameWidth) + "\n" +
+		lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw))
+
+	assembled := lipgloss.JoinVertical(
+		lipgloss.Left,
+		headerLine1,
+		headerLine2,
+		headerLine3,
+		"",
+		readingBox,
+		"",
+		lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(legendLine),
+		"",
+		footerZone,
+	)
+	return renderFrame(frameWidth, assembled)
 }
 
 func (m Model) viewReadingWordDetail() string {
@@ -1111,13 +1329,23 @@ func (m Model) viewReadingWordDetail() string {
 		return m.viewReading()
 	}
 
+	frameWidth := responsiveFrameWidth(m.Width, 72, 42)
+	boxInnerWidth := frameWidth - 2
+	if boxInnerWidth < 24 {
+		boxInnerWidth = 24
+	}
+	contentWidth := boxInnerWidth - 6 // Padding(1, 3)
+	if contentWidth < 18 {
+		contentWidth = 18
+	}
+
 	sw := m.ReadingSession.SelectedWord
 	trans := sw.Translation
 
 	var b strings.Builder
-	b.WriteString(ReadingHeaderStyle.Render("★ VOCABULARY DETAIL & RECALL ★") + "\n\n")
+	b.WriteString(ReadingHeaderStyle.Render("★ VOCABULARY DETAIL & RECALL ★") + "\n")
+	b.WriteString(renderDivider(contentWidth) + "\n\n")
 
-	// Prominent glyph
 	b.WriteString(CharStyle.Render(trans.Target) + "\n")
 	if trans.Pinyin != "" {
 		b.WriteString(PinyinStyle.Render(trans.Pinyin) + "\n")
@@ -1128,19 +1356,21 @@ func (m Model) viewReadingWordDetail() string {
 	b.WriteString(MeaningStyle.Render("“"+trans.Meaning+"”") + "\n\n")
 
 	if trans.Explanation != "" {
-		b.WriteString(ExplanationStyle.Render(trans.Explanation) + "\n\n")
+		b.WriteString(QuizExplanationStyle.Width(contentWidth).Render(trans.Explanation) + "\n\n")
 	}
 
-	// Status note
 	b.WriteString(HintStyle.Render(fmt.Sprintf("Original English: \"%s\"  •  Tracking: Marked as Learning", sw.Original)) + "\n")
 
 	if m.ReadingWordFeedback != "" {
 		b.WriteString("\n" + CorrectStyle.Render(m.ReadingWordFeedback) + "\n")
 	}
 
-	b.WriteString("\n" + HintStyle.Render("[m] Add to Marked Flashcards  •  [k] Actually I Know This  •  [Space / Enter / Esc] Return"))
+	b.WriteString("\n" + renderDivider(contentWidth) + "\n")
+	footerRaw := fmt.Sprintf("[%s] Add to Marked  •  [%s] I Know This  •  [%s] Return",
+		KeyStyle.Render("m"), KeyStyle.Render("k"), KeyStyle.Render("Space / Esc"))
+	b.WriteString(HintStyle.Render(footerRaw))
 
-	return ReadingWordDetailCard.Render(b.String())
+	return renderFrame(frameWidth, ReadingWordDetailCard.Width(boxInnerWidth).Render(b.String()))
 }
 
 func (m Model) viewReadingDiscussion() string {
@@ -1154,11 +1384,22 @@ func (m Model) viewReadingDiscussion() string {
 		return m.viewReadingComplete()
 	}
 
+	frameWidth := responsiveFrameWidth(m.Width, 78, 44)
+	boxInnerWidth := frameWidth - 2
+	if boxInnerWidth < 24 {
+		boxInnerWidth = 24
+	}
+	contentWidth := boxInnerWidth - 6 // Padding(1, 3)
+	if contentWidth < 18 {
+		contentWidth = 18
+	}
+
 	var b strings.Builder
-	b.WriteString(ReadingHeaderStyle.Render("★ SENTENCE GRAMMAR & TRANSLATION DISCUSSION ★") + "\n\n")
+	b.WriteString(ReadingHeaderStyle.Render("★ SENTENCE GRAMMAR & TRANSLATION DISCUSSION ★") + "\n")
+	b.WriteString(renderDivider(contentWidth) + "\n\n")
 
 	b.WriteString(KeyStyle.Render("English:") + "\n")
-	b.WriteString(MemorizeCompleted.Render(sent.English) + "\n\n")
+	b.WriteString(lipgloss.NewStyle().Width(contentWidth).Render(MemorizeCompleted.Render(sent.English)) + "\n\n")
 
 	if sent.NaturalTarget != "" {
 		b.WriteString(ReadingWordSubstituted.Render(fmt.Sprintf("Natural %s (Word Order):", session.Text.Language)) + "\n")
@@ -1171,7 +1412,7 @@ func (m Model) viewReadingDiscussion() string {
 
 	if sent.GrammarNote != "" {
 		b.WriteString(ReadingAggressivenessStyle.Render("Grammar & Contrast Notes:") + "\n")
-		b.WriteString(ExplanationStyle.Align(lipgloss.Left).Render(sent.GrammarNote) + "\n\n")
+		b.WriteString(QuizExplanationStyle.Width(contentWidth).Render(sent.GrammarNote) + "\n\n")
 	}
 
 	if len(sent.Words) > 0 {
@@ -1192,202 +1433,42 @@ func (m Model) viewReadingDiscussion() string {
 		b.WriteString(strings.Join(vocabLines, "\n") + "\n\n")
 	}
 
-	b.WriteString(HintStyle.Render("[Space / Enter / n] Next Sentence  •  [h / Esc] Back to Reading  •  [p] Prev  •  [-/+] Aggressiveness"))
+	b.WriteString(renderDivider(contentWidth) + "\n")
+	footerRaw := fmt.Sprintf("[%s] Next Sentence  •  [%s] Back to Reading  •  [%s] Prev  •  [%s] Aggressiveness",
+		KeyStyle.Render("Space/Enter/n"), KeyStyle.Render("h/Esc"), KeyStyle.Render("p"), KeyStyle.Render("-/+"))
+	b.WriteString(HintStyle.Render(footerRaw))
 
-	return ReadingDiscussionCard.Render(b.String())
+	return renderFrame(frameWidth, ReadingDiscussionCard.Width(boxInnerWidth).Render(b.String()))
 }
 
 func (m Model) viewReadingComplete() string {
-	title := "★ TEXT READING COMPLETE! ★"
+	frameWidth := m.frameWidth()
 	totalSentences := 0
 	textTitle := ""
 	if m.ReadingSession != nil && m.ReadingSession.Text != nil {
 		totalSentences = len(m.ReadingSession.Text.Sentences)
 		textTitle = m.ReadingSession.Text.Title
 	}
-
-	var b strings.Builder
-	b.WriteString(MemorizeSuccessStyle.Render(title) + "\n\n")
-	if textTitle != "" {
-		b.WriteString(ReadingHeaderStyle.Render(textTitle) + "\n\n")
-	}
-	b.WriteString(fmt.Sprintf("Total Sentences Completed: %d\n", totalSentences))
-	b.WriteString("Your vocabulary recall and progress have been saved.\n\n")
-
-	b.WriteString(HintStyle.Render("[r] Read Again from Beginning  •  [Enter / Space] Select Another Text  •  [q] Quit"))
-
-	cardBox := lipgloss.NewStyle().
-		Border(lipgloss.RoundedBorder()).
-		BorderForeground(lipgloss.Color("#50FA7B")).
-		Padding(1, 4).
-		Align(lipgloss.Center)
-	return cardBox.Render(b.String())
-}
-
-func (m Model) viewMatch() string {
-	if len(m.ActiveCards) == 0 {
-		return fmt.Sprintf("No cards available to match!\n\n%s", HintStyle.Render("[Enter / q] Main Menu"))
-	}
-
-	totalCards := len(m.ActiveCards)
-	if m.MatchRoundStart >= totalCards {
-		accStr := "100%"
-		if m.MatchAttempts > 0 {
-			accStr = fmt.Sprintf("%.1f%%", float64(m.MatchPairsMatched)/float64(m.MatchAttempts)*100)
-		}
-		bar := strings.Repeat("█", 26)
-		progressBar := QuizProgressStyle.Render("[" + bar + "]")
-		summary := fmt.Sprintf("Matched: %d of %d pairs  •  Accuracy: %s  •  Best Streak: %d",
-			m.MatchPairsMatched, totalCards, accStr, m.MatchBestStreak)
-		return fmt.Sprintf("Matching Game complete!\n\n%s\n%s\n\n%s",
-			progressBar,
-			HintStyle.Render(summary),
-			HintStyle.Render("[r] Play again  •  [Enter / q] Main Menu"))
-	}
-
-	totalRounds := (totalCards + MatchBatchSize - 1) / MatchBatchSize
-	currentRound := (m.MatchRoundStart / MatchBatchSize) + 1
-
-	accStr := "100%"
-	if m.MatchAttempts > 0 {
-		accStr = fmt.Sprintf("%.1f%%", float64(m.MatchPairsMatched)/float64(m.MatchAttempts)*100)
-	}
-
 	barLen := 26
-	filled := int(float64(barLen) * float64(m.MatchPairsMatched) / float64(totalCards))
-	if filled > barLen {
-		filled = barLen
+	if frameWidth < 46 {
+		barLen = 16
 	}
-	bar := strings.Repeat("█", filled) + strings.Repeat("░", barLen-filled)
-
-	header := fmt.Sprintf("Matching Game: Round %d of %d (%d/%d matched)  •  Accuracy: %s  •  Streak: %d",
-		currentRound, totalRounds, m.MatchPairsMatched, totalCards, accStr, m.MatchStreak)
-
-	leftWidth := 24
-	for _, item := range m.MatchLeftItems {
-		w := lipgloss.Width(item.Card.Character) + 10
-		if w > leftWidth {
-			leftWidth = w
-		}
+	bar := renderProgressBar(totalSentences, totalSentences, barLen)
+	var stats []string
+	if textTitle != "" {
+		stats = append(stats, ReadingHeaderStyle.Render(textTitle))
 	}
+	stats = append(stats,
+		HintStyle.Render(fmt.Sprintf("Total Sentences Completed: %d", totalSentences)),
+		HintStyle.Render("Your vocabulary recall and progress have been saved."),
+	)
+	controls := HintStyle.Render(fmt.Sprintf("[%s] Read Again  •  [%s] Select Another Text  •  [%s] Quit",
+		KeyStyle.Render("r"), KeyStyle.Render("Enter / Space"), KeyStyle.Render("q")))
 
-	rightWidth := 36
-	for _, item := range m.MatchRightItems {
-		optText := item.Card.FormatMatchOption(m.MatchHidePinyin)
-		w := lipgloss.Width(optText) + 10
-		if w > rightWidth {
-			rightWidth = w
-		}
-	}
-	if rightWidth > 54 {
-		rightWidth = 54
-	}
-
-	var leftRows []string
-	leftHeader := MatchColumnHeaderStyle.Width(leftWidth).Align(lipgloss.Center).Render("Characters [a-g]")
-	leftRows = append(leftRows, leftHeader)
-
-	for i, item := range m.MatchLeftItems {
-		key := IndexToKey(i)
-		star := ""
-		if m.isCardMarked(item.Card) {
-			star = MarkedStarStyle.Render(" ★")
-		}
-		var rowContent string
-		var boxStyle lipgloss.Style
-
-		switch {
-		case item.Matched:
-			rowContent = fmt.Sprintf("[✓]  %s%s", item.Card.Character, star)
-			boxStyle = MatchCardMatchedBox
-		case m.MatchSelectedLeft == i:
-			rowContent = fmt.Sprintf("%s ▶ %s%s", KeyStyle.Render(fmt.Sprintf("[%s]", key)), CursorStyle.Render(item.Card.Character), star)
-			boxStyle = MatchCardSelectedBox
-		case m.MatchMismatchLeft == i:
-			rowContent = fmt.Sprintf("%s ✗ %s%s", ErrorStyle.Render(fmt.Sprintf("[%s]", key)), ErrorStyle.Render(item.Card.Character), star)
-			boxStyle = MatchCardMismatchBox
-		default:
-			rowContent = fmt.Sprintf("%s   %s%s", KeyStyle.Render(fmt.Sprintf("[%s]", key)), CharStyle.Render(item.Card.Character), star)
-			boxStyle = MatchCardBox
-		}
-
-		leftRows = append(leftRows, boxStyle.Width(leftWidth).Align(lipgloss.Left).Render(rowContent))
-	}
-
-	var rightRows []string
-	rightTitle := "Pinyin / Meaning [h-;]"
-	if m.MatchHidePinyin {
-		rightTitle = "Meaning (Pinyin Hidden) [h-;]"
-	}
-	rightHeader := MatchColumnHeaderStyle.Width(rightWidth).Align(lipgloss.Center).Render(rightTitle)
-	rightRows = append(rightRows, rightHeader)
-
-	for i, item := range m.MatchRightItems {
-		key := IndexToKey(i + 5)
-		optText := item.Card.FormatMatchOption(m.MatchHidePinyin)
-		var rowContent string
-		var boxStyle lipgloss.Style
-
-		switch {
-		case item.Matched:
-			rowContent = fmt.Sprintf("[✓]  %s", optText)
-			boxStyle = MatchCardMatchedBox
-		case m.MatchSelectedRight == i:
-			rowContent = fmt.Sprintf("%s ▶ %s", KeyStyle.Render(fmt.Sprintf("[%s]", key)), CursorStyle.Render(optText))
-			boxStyle = MatchCardSelectedBox
-		case m.MatchMismatchRight == i:
-			rowContent = fmt.Sprintf("%s ✗ %s", ErrorStyle.Render(fmt.Sprintf("[%s]", key)), ErrorStyle.Render(optText))
-			boxStyle = MatchCardMismatchBox
-		default:
-			styledOpt := m.formatStyledMatchOption(item.Card)
-			rowContent = fmt.Sprintf("%s   %s", KeyStyle.Render(fmt.Sprintf("[%s]", key)), styledOpt)
-			boxStyle = MatchCardBox
-		}
-
-		rightRows = append(rightRows, boxStyle.Width(rightWidth).Align(lipgloss.Left).Render(rowContent))
-	}
-
-	leftCol := lipgloss.JoinVertical(lipgloss.Left, leftRows...)
-	rightCol := lipgloss.JoinVertical(lipgloss.Left, rightRows...)
-	board := lipgloss.JoinHorizontal(lipgloss.Top, leftCol, "    ", rightCol)
-
-	var feedbackLine string
-	if m.MatchLastFeedback != "" {
-		if m.MatchLastIsError {
-			feedbackLine = ErrorStyle.Render(m.MatchLastFeedback)
-		} else {
-			feedbackLine = CorrectStyle.Render(m.MatchLastFeedback)
-		}
-	} else {
-		feedbackLine = HintStyle.Render("Select a character [a-g] and its matching meaning [h-;]")
-	}
-
-	pinyinToggleLabel := "Hide Pinyin"
-	if m.MatchHidePinyin {
-		pinyinToggleLabel = "Show Pinyin"
-	}
-	controls := HintStyle.Render(fmt.Sprintf("([a-g] Left  •  [h-;] Right  •  [p] %s  •  [m] Mark card  •  [q] Main Menu)", pinyinToggleLabel))
-
-	content := HintStyle.Render(header) + "\n"
-	content += QuizProgressStyle.Render("["+bar+"]") + "\n\n"
-	content += board + "\n\n"
-	content += feedbackLine + "\n\n"
-	content += controls
-	return content
+	return renderFrame(frameWidth, renderCompleteCard(frameWidth, "★ TEXT READING COMPLETE! ★", bar, stats, controls))
 }
 
-func (m Model) formatStyledMatchOption(card deck.Flashcard) string {
-	if m.MatchHidePinyin {
-		return MeaningStyle.Render(card.Meaning)
-	}
-	if card.Pinyin != "" {
-		return fmt.Sprintf("%s - %s", PinyinStyle.Render(card.Pinyin), MeaningStyle.Render(card.Meaning))
-	}
-	if card.Pronunciation != "" {
-		return fmt.Sprintf("%s - %s", PronunciationStyle.Render(card.Pronunciation), MeaningStyle.Render(card.Meaning))
-	}
-	return MeaningStyle.Render(card.Meaning)
-}
+// viewMatch is implemented in match_view.go.
 
 
 
