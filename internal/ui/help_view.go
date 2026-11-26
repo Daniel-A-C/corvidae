@@ -61,6 +61,8 @@ func (m Model) contextHelpBindings() (string, []helpBinding) {
 			{"↑ / ↓ / j / k", "Move mode selection cursor"},
 			{"Enter / Space", "Confirm selected mode"},
 			{"m", "Practice Marked (starred) cards"},
+			{"i", "Open Study Dashboard & Heatmap"},
+			{"c", "Open Settings (config.yaml)"},
 			{"q / Ctrl+C", "Quit Corvidae"},
 		}
 	case StateDirSelect:
@@ -95,6 +97,7 @@ func (m Model) contextHelpBindings() (string, []helpBinding) {
 			{"a-g or 1-5", "Select multiple-choice answer"},
 			{"Space / Enter", "Advance after feedback"},
 			{"k / w", "I knew it! (override misclick)"},
+			{"S (Shift+S)", "Toggle Quiz → SM-2 Sync"},
 			{"m / u", "Mark or unmark card"},
 			{"r", "Retry quiz (on completion)"},
 			{"Esc / q", "Return to Main Menu"},
@@ -104,17 +107,34 @@ func (m Model) contextHelpBindings() (string, []helpBinding) {
 			{"a-g or 1-5", "Select left column (Character)"},
 			{"h-; or 6-0", "Select right column (Meaning)"},
 			{"p", "Toggle Pinyin visibility"},
+			{"S (Shift+S)", "Toggle Match → SM-2 Sync"},
 			{"m", "Mark selected or last matched card"},
 			{"Esc / q", "Return to Main Menu"},
 		}
 	case StateMemorizeSelectText, StateMemorizePortionSelect, StateMemorize, StateMemorizeComplete:
 		return "Memorize", []helpBinding{
-			{"a-g or 1-5", "Choose next word"},
+			{"a-g or 1-5", "Choose next word (Options mode)"},
+			{"a-z", "Type first letter (Typing mode)"},
+			{"t / Tab", "Toggle Options ↔ First-Letter Typing"},
 			{"o / 2-5", "Change number of options (2–5)"},
+			{"d", "Select next due sections (Portion Select)"},
 			{"k / w", "I knew it! (override mistake)"},
 			{"Tab / ← → / [ ]", "Adjust portion Start / End bounds"},
-			{"x / c / n / p", "Expand, contract, next, prev chunk"},
 			{"r / Esc", "Restart portion / Go back"},
+		}
+	case StateDashboard:
+		return "Study Dashboard", []helpBinding{
+			{"r", "Refresh card maturity & stats"},
+			{"c", "Open Settings"},
+			{"Esc / Enter", "Return to Main Menu"},
+			{"q", "Quit Corvidae"},
+		}
+	case StateSettings:
+		return "Settings", []helpBinding{
+			{"a - g / Space", "Toggle or cycle selected setting"},
+			{"↑ / ↓ / j / k", "Move settings cursor"},
+			{"Esc / b", "Return to Main Menu"},
+			{"q", "Quit Corvidae"},
 		}
 	case StateReadingSelectText, StateReading, StateReadingWordDetail, StateReadingDiscussion, StateReadingComplete:
 		return "Learn by Reading", []helpBinding{

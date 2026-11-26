@@ -9,7 +9,11 @@ import (
 	"regexp"
 	"sort"
 	"strings"
+	"time"
+	"unicode"
 
+	"flashcards/internal/sm2"
+	"golang.org/x/text/unicode/norm"
 	"gopkg.in/yaml.v3"
 )
 
@@ -27,27 +31,40 @@ type WordItem struct {
 	Prefix  string   `yaml:"prefix,omitempty" json:"prefix,omitempty"`
 }
 
+// SectionReview stores SM-2 spaced repetition scheduling metadata for a single memorization section.
+type SectionReview struct {
+	Interval     int     `yaml:"interval,omitempty" json:"interval,omitempty"`
+	Ease         float64 `yaml:"ease,omitempty" json:"ease,omitempty"`
+	Reps         int     `yaml:"reps,omitempty" json:"reps,omitempty"`
+	NextReview   string  `yaml:"next_review,omitempty" json:"next_review,omitempty"`
+	LastAccuracy float64 `yaml:"last_accuracy,omitempty" json:"last_accuracy,omitempty"`
+	LastMode     string  `yaml:"last_mode,omitempty" json:"last_mode,omitempty"`
+}
+
 // Text represents a full text to be memorized, with metadata and items.
 type Text struct {
-	Title        string     `yaml:"title" json:"title"`
-	Language     string     `yaml:"language,omitempty" json:"language,omitempty"`
-	Description  string     `yaml:"description,omitempty" json:"description,omitempty"`
-	Progress     int        `yaml:"progress,omitempty" json:"progress,omitempty"`
-	BestStreak   int        `yaml:"best_streak,omitempty" json:"best_streak,omitempty"`
-	Mistakes     int        `yaml:"mistakes,omitempty" json:"mistakes,omitempty"`
-	OptionsCount int        `yaml:"options_count,omitempty" json:"options_count,omitempty"`
-	Words        []WordItem `yaml:"words" json:"words"`
-	FilePath     string     `yaml:"-" json:"-"`
+	Title           string                   `yaml:"title" json:"title"`
+	Language        string                   `yaml:"language,omitempty" json:"language,omitempty"`
+	Description     string                   `yaml:"description,omitempty" json:"description,omitempty"`
+	Progress        int                      `yaml:"progress,omitempty" json:"progress,omitempty"`
+	BestStreak      int                      `yaml:"best_streak,omitempty" json:"best_streak,omitempty"`
+	Mistakes        int                      `yaml:"mistakes,omitempty" json:"mistakes,omitempty"`
+	OptionsCount    int                      `yaml:"options_count,omitempty" json:"options_count,omitempty"`
+	SectionProgress map[string]SectionReview `yaml:"section_progress,omitempty" json:"section_progress,omitempty"`
+	Words           []WordItem               `yaml:"words" json:"words"`
+	FilePath        string                   `yaml:"-" json:"-"`
 }
 
 // TextHeader provides summary information for listing available memorization texts.
 type TextHeader struct {
-	Title     string
-	Filename  string
-	FullPath  string
-	WordCount int
-	Progress  int
-	Language  string
+	Title         string
+	Filename      string
+	FullPath      string
+	WordCount     int
+	Progress      int
+	Language      string
+	DueSections   int
+	TotalSections int
 }
 
 // Section represents a continuous portion or unit of a text (e.g. verse or paragraph).
@@ -263,13 +280,16 @@ func ListTexts(dir string) ([]TextHeader, error) {
 			title = stem
 		}
 
+		sections := loaded.GetSections()
 		headers = append(headers, TextHeader{
-			Title:     title,
-			Filename:  chosenFile,
-			FullPath:  fullPath,
-			WordCount: len(loaded.Words),
-			Progress:  loaded.Progress,
-			Language:  loaded.Language,
+			Title:         title,
+			Filename:      chosenFile,
+			FullPath:      fullPath,
+			WordCount:     len(loaded.Words),
+			Progress:      loaded.Progress,
+			Language:      loaded.Language,
+			DueSections:   loaded.DueSectionCount(time.Now()),
+			TotalSections: len(sections),
 		})
 	}
 
@@ -553,4 +573,157 @@ func ShuffleOptions(item WordItem, count ...int) ([]string, int) {
 // ShuffleOptionsWithCount prepares a randomized slice with a specific number of options for the given item.
 func ShuffleOptionsWithCount(item WordItem, count int) ([]string, int) {
 	return ShuffleOptions(item, count)
+}
+
+// normalizeRune strips diacritics via NFD decomposition and lowercases a single rune.
+func normalizeRune(r rune) rune {
+	decomposed := norm.NFD.String(string(r))
+	for _, dr := range decomposed {
+		if unicode.Is(unicode.Mn, dr) {
+			continue
+		}
+		return unicode.ToLower(dr)
+	}
+	return unicode.ToLower(r)
+}
+
+// FirstLetter returns the normalized (lowercase, diacritic-stripped) first letter or digit of word.
+// Leading punctuation (e.g. ¡, ¿, ", ', () is skipped. Returns 0 if no letter/digit is found.
+func FirstLetter(word string) rune {
+	for _, r := range word {
+		if unicode.IsLetter(r) || unicode.IsDigit(r) {
+			return normalizeRune(r)
+		}
+	}
+	for _, r := range word {
+		if !unicode.IsSpace(r) {
+			return normalizeRune(r)
+		}
+	}
+	return 0
+}
+
+// MatchesFirstLetter reports whether the typed rune matches the first letter of word,
+// ignoring case and diacritical marks (e.g. 'e' matches "Ésta", 'n' matches "ñandú").
+func MatchesFirstLetter(word string, input rune) bool {
+	target := FirstLetter(word)
+	if target == 0 {
+		return false
+	}
+	return normalizeRune(input) == target
+}
+
+// SectionKey returns a stable map key for a Section's spaced-repetition record.
+func SectionKey(sec Section) string {
+	if sec.Number != "" {
+		return sec.Number
+	}
+	return fmt.Sprintf("%d", sec.Index+1)
+}
+
+// SectionReviewFor returns the stored SectionReview for sec, if any.
+func (t *Text) SectionReviewFor(sec Section) (SectionReview, bool) {
+	if t == nil || t.SectionProgress == nil {
+		return SectionReview{}, false
+	}
+	rev, ok := t.SectionProgress[SectionKey(sec)]
+	return rev, ok
+}
+
+// IsSectionDue reports whether sec has never been reviewed or its NextReview date is on or before now.
+func (t *Text) IsSectionDue(sec Section, now time.Time) bool {
+	if now.IsZero() {
+		now = time.Now()
+	}
+	rev, ok := t.SectionReviewFor(sec)
+	if !ok || rev.NextReview == "" {
+		return true
+	}
+	return rev.NextReview <= now.Format("2006-01-02")
+}
+
+// DueSectionCount returns how many sections in t are currently due for review.
+func (t *Text) DueSectionCount(now time.Time) int {
+	if t == nil {
+		return 0
+	}
+	sections := t.GetSections()
+	due := 0
+	for _, sec := range sections {
+		if t.IsSectionDue(sec, now) {
+			due++
+		}
+	}
+	return due
+}
+
+// GradeFromAccuracy maps a portion's accuracy percentage (0..100) to an SM-2 grade (1..5).
+func GradeFromAccuracy(acc float64) int {
+	switch {
+	case acc >= 99.95:
+		return sm2.GradePerfect
+	case acc >= 95.0:
+		return sm2.GradeEasy
+	case acc >= 85.0:
+		return sm2.GradeGood
+	case acc >= 70.0:
+		return sm2.GradeHard
+	default:
+		return sm2.GradeWrong
+	}
+}
+
+// RecordPortionReview updates SM-2 scheduling metadata for every section in [startSec..endSec].
+func (t *Text) RecordPortionReview(sections []Section, startSec, endSec int, acc float64, mode string, now time.Time) {
+	if t == nil || len(sections) == 0 {
+		return
+	}
+	if startSec < 0 {
+		startSec = 0
+	}
+	if endSec >= len(sections) {
+		endSec = len(sections) - 1
+	}
+	if startSec > endSec {
+		return
+	}
+	if t.SectionProgress == nil {
+		t.SectionProgress = make(map[string]SectionReview)
+	}
+	grade := GradeFromAccuracy(acc)
+	for i := startSec; i <= endSec; i++ {
+		key := SectionKey(sections[i])
+		cur := t.SectionProgress[key]
+		interval, reps, ease, next := sm2.Schedule(cur.Interval, cur.Reps, cur.Ease, grade, now)
+		t.SectionProgress[key] = SectionReview{
+			Interval:     interval,
+			Ease:         ease,
+			Reps:         reps,
+			NextReview:   next,
+			LastAccuracy: acc,
+			LastMode:     mode,
+		}
+	}
+}
+
+// NextDueRange finds the first due section and returns a contiguous due range (up to 5 sections).
+func (t *Text) NextDueRange(sections []Section, now time.Time) (int, int, bool) {
+	if t == nil || len(sections) == 0 {
+		return 0, 0, false
+	}
+	start := -1
+	for i, sec := range sections {
+		if t.IsSectionDue(sec, now) {
+			start = i
+			break
+		}
+	}
+	if start == -1 {
+		return 0, 0, false
+	}
+	end := start
+	for end+1 < len(sections) && (end-start+1) < 5 && t.IsSectionDue(sections[end+1], now) {
+		end++
+	}
+	return start, end, true
 }

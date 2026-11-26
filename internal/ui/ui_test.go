@@ -1541,8 +1541,8 @@ func TestMemorizeModeNavigation(t *testing.T) {
 	if len(m.MemorizeActiveText.Words) != 423 {
 		t.Errorf("expected 423 words in Filemón, got %d", len(m.MemorizeActiveText.Words))
 	}
-	if len(m.MemorizeCurrentOptions) != 5 {
-		t.Errorf("expected 5 options, got %d", len(m.MemorizeCurrentOptions))
+	if len(m.MemorizeCurrentOptions) != m.MemorizeOptionCount {
+		t.Errorf("expected %d options, got %d", m.MemorizeOptionCount, len(m.MemorizeCurrentOptions))
 	}
 
 	// Verify correct option

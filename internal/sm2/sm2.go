@@ -20,37 +20,43 @@ const (
 	GradePerfect  = 5
 )
 
-// CalculateSM2 updates card spaced repetition parameters (interval, ease, reps, next_review)
-// according to the SuperMemo-2 (SM-2) algorithm. If now is zero, time.Now() is used.
-func CalculateSM2(card deck.Flashcard, grade int, now time.Time) deck.Flashcard {
+// Schedule computes updated SM-2 parameters (interval, reps, ease, nextReview) for any spaced-repetition item.
+// If now is zero, time.Now() is used.
+func Schedule(interval, reps int, ease float64, grade int, now time.Time) (int, int, float64, string) {
 	if now.IsZero() {
 		now = time.Now()
 	}
 
-	if card.Ease == 0 {
-		card.Ease = DefaultEase
+	if ease == 0 {
+		ease = DefaultEase
 	}
 
 	if grade >= GradeGood {
-		if card.Reps == 0 {
-			card.Interval = 1
-		} else if card.Reps == 1 {
-			card.Interval = 6
+		if reps == 0 {
+			interval = 1
+		} else if reps == 1 {
+			interval = 6
 		} else {
-			card.Interval = int(math.Round(float64(card.Interval) * card.Ease))
+			interval = int(math.Round(float64(interval) * ease))
 		}
-		card.Reps++
+		reps++
 	} else {
-		card.Reps = 0
-		card.Interval = 1
+		reps = 0
+		interval = 1
 	}
 
-	card.Ease = card.Ease + (0.1 - float64(5-grade)*(0.08+float64(5-grade)*0.02))
-	if card.Ease < MinEase {
-		card.Ease = MinEase
+	ease = ease + (0.1 - float64(5-grade)*(0.08+float64(5-grade)*0.02))
+	if ease < MinEase {
+		ease = MinEase
 	}
 
-	next := now.AddDate(0, 0, card.Interval)
-	card.NextReview = next.Format("2006-01-02")
+	next := now.AddDate(0, 0, interval)
+	return interval, reps, ease, next.Format("2006-01-02")
+}
+
+// CalculateSM2 updates card spaced repetition parameters (interval, ease, reps, next_review)
+// according to the SuperMemo-2 (SM-2) algorithm. If now is zero, time.Now() is used.
+func CalculateSM2(card deck.Flashcard, grade int, now time.Time) deck.Flashcard {
+	card.Interval, card.Reps, card.Ease, card.NextReview = Schedule(card.Interval, card.Reps, card.Ease, grade, now)
 	return card
 }

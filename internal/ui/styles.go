@@ -91,6 +91,15 @@ var (
 	MatchCardSelectedBox   = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#FF7CCB")).Padding(0, 2).Bold(true)
 	MatchCardMatchedBox    = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#50FA7B")).Foreground(lipgloss.Color("#6272A4")).Padding(0, 2)
 	MatchCardMismatchBox   = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#FF5555")).Padding(0, 2)
+
+	// Dashboard Heatmap & Due Badge styles
+	HeatmapLevel0Style = lipgloss.NewStyle().Foreground(lipgloss.Color("#44475A"))
+	HeatmapLevel1Style = lipgloss.NewStyle().Foreground(lipgloss.Color("#2D6A4F"))
+	HeatmapLevel2Style = lipgloss.NewStyle().Foreground(lipgloss.Color("#40916C"))
+	HeatmapLevel3Style = lipgloss.NewStyle().Foreground(lipgloss.Color("#50FA7B"))
+	HeatmapLevel4Style = lipgloss.NewStyle().Foreground(lipgloss.Color("#95FFB0")).Bold(true)
+	DueBadgeStyle      = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FFB86C"))
+	SyncOnPillStyle    = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#50FA7B")).Background(lipgloss.Color("#2D3047")).Padding(0, 1)
 )
 
 const AsciiLogo = `                           .-.

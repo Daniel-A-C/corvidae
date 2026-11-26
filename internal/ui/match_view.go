@@ -65,7 +65,11 @@ func (m Model) viewMatch() string {
 	if m.MatchHidePinyin {
 		pinyinPillText = "Pinyin: OFF"
 	}
-	headerLine1 := renderSplitLine(leftStats, ModePillStyle.Render(pinyinPillText), frameWidth)
+	rightPills := ModePillStyle.Render(pinyinPillText)
+	if m.Config != nil && m.Config.MatchSM2Sync {
+		rightPills = SyncOnPillStyle.Render("SM-2: ON") + " " + rightPills
+	}
+	headerLine1 := renderSplitLine(leftStats, rightPills, frameWidth)
 
 	barLen := 26
 	if frameWidth < 50 {

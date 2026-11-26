@@ -11,10 +11,13 @@ import (
 
 	tea "github.com/charmbracelet/bubbletea"
 	"flashcards/internal/arabic"
+	"flashcards/internal/config"
 	"flashcards/internal/deck"
 	"flashcards/internal/memorize"
 	"flashcards/internal/quiz"
 	"flashcards/internal/reading"
+	"flashcards/internal/sm2"
+	"flashcards/internal/stats"
 )
 
 const (
@@ -38,6 +41,8 @@ const (
 	StateReadingDiscussion
 	StateReadingComplete
 	StateMatch
+	StateDashboard
+	StateSettings
 )
 
 const (
@@ -80,15 +85,16 @@ type Model struct {
 	ReviewGrades    [6]int
 
 	// Quiz state
-	QuizOptions     []string
-	CorrectIndex    int
-	QuizSelectedIdx int
-	ShowFeedback    bool
-	IsCorrect       bool
-	QuizCorrect     int
-	QuizStreak      int
-	QuizPrevStreak  int
-	QuizBestStreak  int
+	QuizOptions          []string
+	CorrectIndex         int
+	QuizSelectedIdx      int
+	ShowFeedback         bool
+	IsCorrect            bool
+	QuizCorrect          int
+	QuizStreak           int
+	QuizPrevStreak       int
+	QuizBestStreak       int
+	QuizLastCardSnapshot *deck.Flashcard
 
 	// Arabic Academy state
 	ArabicMenuCursor    int
@@ -119,9 +125,12 @@ type Model struct {
 	PortionFocus           int // 0: Start, 1: End
 	PortionStartWordIdx    int
 	PortionEndWordIdx      int
-	PortionCompletedMsg    string
-	MemorizeOptionCount    int // Number of options per word: 2 to 5 (default 5)
-	MemorizeCurrentIndex   int
+	PortionCompletedMsg         string
+	MemorizeOptionCount         int // Number of options per word: 2 to 5 (default 5)
+	MemorizeOptionCountExplicit bool
+	MemorizeTypingMode          bool // false = Options, true = First-Letter Typing
+	MemorizeTypedWrong          string
+	MemorizeCurrentIndex        int
 	MemorizeCurrentOptions []string
 	MemorizeCorrectIndex   int
 	MemorizeSelectedOption int
@@ -141,22 +150,29 @@ type Model struct {
 	ReadingWordFeedback string
 
 	// Matching Game state
-	MatchRoundStart    int
-	MatchLeftItems     []MatchItem
-	MatchRightItems    []MatchItem
-	MatchSelectedLeft  int
-	MatchSelectedRight int
-	MatchMismatchLeft  int
-	MatchMismatchRight int
-	MatchPairsMatched  int
-	MatchAttempts      int
-	MatchMistakes      int
-	MatchStreak        int
-	MatchBestStreak    int
-	MatchHidePinyin    bool
-	MatchLastFeedback  string
-	MatchLastIsError   bool
-	MatchLastCard      *deck.CardRef
+	MatchRoundStart     int
+	MatchLeftItems      []MatchItem
+	MatchRightItems     []MatchItem
+	MatchSelectedLeft   int
+	MatchSelectedRight  int
+	MatchMismatchLeft   int
+	MatchMismatchRight  int
+	MatchPairsMatched   int
+	MatchAttempts       int
+	MatchMistakes       int
+	MatchStreak         int
+	MatchBestStreak     int
+	MatchHidePinyin     bool
+	MatchLastFeedback   string
+	MatchLastIsError    bool
+	MatchLastCard       *deck.CardRef
+	MatchCardHadMistake map[int]bool
+
+	// Config, Stats, Dashboard & Settings
+	Config            *config.Config
+	Stats             *stats.Store
+	DashboardMaturity stats.DeckMaturity
+	SettingsCursor    int
 
 	ShowHelp bool
 
@@ -172,35 +188,99 @@ func New(baseDir string) Model {
 
 // NewWithOptions initializes and returns a new Model with specified deck, text, and reading directories.
 func NewWithOptions(baseDir, textsDir string, readingDir ...string) Model {
-	if baseDir == "" {
-		baseDir = "decks"
+	cfg := config.Default()
+	cfg.FilePath = "" // Avoid creating a config.yaml in tests or programmatic callers unless NewWithConfig is used
+	if baseDir != "" {
+		cfg.DecksDir = baseDir
 	}
-	if textsDir == "" {
-		textsDir = "memorizationTexts"
+	if textsDir != "" {
+		cfg.TextsDir = textsDir
 	}
-	rd := "readingTranslationTexts"
 	if len(readingDir) > 0 && readingDir[0] != "" {
-		rd = readingDir[0]
+		cfg.ReadingDir = readingDir[0]
 	}
+	cfg.StatsFile = ""
+	return NewWithConfig(cfg)
+}
 
-	dirs, err := deck.GetDeckDirectories(baseDir)
-	prog, _ := reading.LoadProgress(filepath.Join(rd, "reading_progress.yaml"))
+// NewWithConfig initializes and returns a new Model configured from cfg.
+func NewWithConfig(cfg *config.Config) Model {
+	if cfg == nil {
+		cfg = config.Default()
+	}
+	cfgCopy := *cfg
+	filePath := cfgCopy.FilePath
+	statsFile := cfgCopy.StatsFile
+	cfgCopy.Normalize()
+	cfgCopy.FilePath = filePath
+	cfgCopy.StatsFile = statsFile
+
+	dirs, err := deck.GetDeckDirectories(cfgCopy.DecksDir)
+	prog, _ := reading.LoadProgress(filepath.Join(cfgCopy.ReadingDir, "reading_progress.yaml"))
+
+	var st *stats.Store
+	if statsFile != "" {
+		st, _ = stats.Load(statsFile)
+	} else {
+		st = stats.NewEmpty("")
+		st.FilePath = ""
+	}
 
 	m := Model{
-		BaseDir:             baseDir,
-		TextsDir:            textsDir,
-		ReadingDir:          rd,
+		BaseDir:             cfgCopy.DecksDir,
+		TextsDir:            cfgCopy.TextsDir,
+		ReadingDir:          cfgCopy.ReadingDir,
 		ReadingProgress:     prog,
+		Config:              &cfgCopy,
+		Stats:               st,
 		State:               StateModeSelect,
 		Mode:                ModeReview,
 		Dirs:                dirs,
 		SelectedFiles:       make(map[string]bool),
-		MemorizeOptionCount: 5,
+		MemorizeOptionCount: cfgCopy.MemorizeOptions,
+		MemorizeTypingMode:  cfgCopy.MemorizeMode == config.MemorizeModeTyping,
+		MatchHidePinyin:     cfgCopy.MatchHidePinyin,
+		MatchCardHadMistake: make(map[int]bool),
 		Err:                 err,
 	}
 	m.LoadMarkedDeck()
 	m.LoadPersistedSelectedDecks()
 	return m
+}
+
+// saveConfig persists current Config to disk if a FilePath is configured.
+func (m *Model) saveConfig() {
+	if m.Config != nil && m.Config.FilePath != "" {
+		_ = m.Config.Save()
+	}
+}
+
+// syncCardSM2 applies SM-2 grade to a card in m.Decks and saves the deck file.
+// Returns the pre-update card snapshot so callers (e.g. Quiz "I knew it") can roll back if needed.
+func (m *Model) syncCardSM2(ref deck.CardRef, grade int) *deck.Flashcard {
+	d, ok := m.Decks[ref.Filename]
+	if !ok || ref.OrigIdx < 0 || ref.OrigIdx >= len(d.Cards) {
+		return nil
+	}
+	snapshot := d.Cards[ref.OrigIdx]
+	d.Cards[ref.OrigIdx] = sm2.CalculateSM2(d.Cards[ref.OrigIdx], grade, time.Now())
+	m.Decks[ref.Filename] = d
+	_ = deck.SaveDeck(ref.Filename, d)
+	return &snapshot
+}
+
+// restoreCardAndSyncSM2 restores a pre-answer snapshot and applies a corrected SM-2 grade.
+func (m *Model) restoreCardAndSyncSM2(ref deck.CardRef, snapshot *deck.Flashcard, grade int) {
+	if snapshot == nil {
+		return
+	}
+	d, ok := m.Decks[ref.Filename]
+	if !ok || ref.OrigIdx < 0 || ref.OrigIdx >= len(d.Cards) {
+		return
+	}
+	d.Cards[ref.OrigIdx] = sm2.CalculateSM2(*snapshot, grade, time.Now())
+	m.Decks[ref.Filename] = d
+	_ = deck.SaveDeck(ref.Filename, d)
 }
 
 // MarkWordAsFlashcard adds a vocabulary word from reading mode to the Marked Cards deck.
@@ -564,6 +644,7 @@ func (m *Model) SetupQuiz() {
 	m.QuizStreak = 0
 	m.QuizPrevStreak = 0
 	m.QuizBestStreak = 0
+	m.QuizLastCardSnapshot = nil
 	m.GenerateQuizOptions()
 }
 
@@ -639,6 +720,7 @@ func (m *Model) SetupMatchRound() {
 	m.MatchSelectedRight = -1
 	m.MatchMismatchLeft = -1
 	m.MatchMismatchRight = -1
+	m.MatchCardHadMistake = make(map[int]bool)
 
 	if m.MatchRoundStart >= len(m.ActiveCards) {
 		m.MatchLeftItems = nil
@@ -720,8 +802,27 @@ func (m *Model) SetMemorizeOptionCount(count int) {
 		count = 5
 	}
 	m.MemorizeOptionCount = count
+	m.MemorizeOptionCountExplicit = true
+	if m.Config != nil {
+		m.Config.MemorizeOptions = count
+		m.saveConfig()
+	}
 	if m.MemorizeActiveText != nil {
 		m.MemorizeActiveText.OptionsCount = count
+	}
+}
+
+// ToggleMemorizeTypingMode switches between Multiple-Choice Options and First-Letter Typing recitation.
+func (m *Model) ToggleMemorizeTypingMode() {
+	m.MemorizeTypingMode = !m.MemorizeTypingMode
+	m.MemorizeTypedWrong = ""
+	if m.Config != nil {
+		if m.MemorizeTypingMode {
+			m.Config.MemorizeMode = config.MemorizeModeTyping
+		} else {
+			m.Config.MemorizeMode = config.MemorizeModeOpts
+		}
+		m.saveConfig()
 	}
 }
 
@@ -759,7 +860,7 @@ func (m *Model) SelectMemorizeText(filePath string) error {
 		return err
 	}
 	m.MemorizeActiveText = loaded
-	if loaded.OptionsCount >= 2 && loaded.OptionsCount <= 5 {
+	if !m.MemorizeOptionCountExplicit && loaded.OptionsCount >= 2 && loaded.OptionsCount <= 5 {
 		m.MemorizeOptionCount = loaded.OptionsCount
 	}
 	m.MemorizeSections = loaded.GetSections()

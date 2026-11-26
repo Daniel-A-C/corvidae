@@ -102,11 +102,14 @@ func (m Model) renderQuizHeader(frameWidth int, isMarked bool) string {
 	leftStats := HintStyle.Render(fmt.Sprintf("Quiz: Question %d of %d (%.1f%%)  •  Accuracy: %s",
 		m.CurrentIndex+1, totalCards, pct, accStr))
 
-	badge := ""
-	if isMarked {
-		badge = MarkedBadgeStyle.Render("★ MARKED")
+	var badges []string
+	if m.Config != nil && m.Config.QuizSM2Sync {
+		badges = append(badges, SyncOnPillStyle.Render("SM-2: ON"))
 	}
-	line1 := renderSplitLine(leftStats, badge, frameWidth)
+	if isMarked {
+		badges = append(badges, MarkedBadgeStyle.Render("★ MARKED"))
+	}
+	line1 := renderSplitLine(leftStats, strings.Join(badges, " "), frameWidth)
 
 	barLen := 26
 	if frameWidth < 46 {

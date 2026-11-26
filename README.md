@@ -19,13 +19,15 @@ Designed to be extended instantly using human-readable YAML and plain-text files
 
 - **Terminal-Native:** High-performance, responsive TUI built with Charm's `bubbletea` and `lipgloss`.
 - **Spaced Repetition (SM-2):** Intelligent scheduling that optimizes recall intervals based on historical performance.
-- **Multiple Choice Quiz Mode:** Active multiple-choice quizzes with context-matched distractors from your target language.
+- **Multiple Choice Quiz Mode:** Active multiple-choice quizzes with context-matched distractors, live streak & accuracy, `"I knew it"` misclick recovery, and optional SM-2 sync.
+- **Matching Game:** Two-column home-row speed matching (`a–g` vs `h–;`) with live Pinyin toggle (`[p]`) and optional SM-2 sync.
 - **Arabic Alphabet Academy:** Comprehensive curriculum for learning the 28 Arabic letters across 4 cursive forms, phonetics, articulation points, Harakat (short vowels), auxiliary marks, and 6 interactive drills.
 - **Learn by Reading (Diglot Weave):** Read literature or scripture while vocabulary is progressively substituted with target language words, accompanied by deep grammar discussions.
-- **Memorize by Options:** Memorize long texts verse-by-verse with continuous portion selection, streak counters, and instant distractor choices.
-- **Marked / Starred Cards:** Press `[m]` anywhere (review, quiz, reading) to star difficult words into a dedicated `marked.yaml` deck for focused drill sessions.
-- **Hummingbird 30-Key Home-Row Selection:** Direct, zero-scroll access to any menu item, deck, or choice via ergonomic home-row letter mapping.
-- **Persistent Deck Selection:** Active deck selections are saved to disk in your deck files (`selected: true`) and persist across sessions.
+- **Memorize Texts (Options + First-Letter Typing + Section SRS):** Memorize long texts verse-by-verse via 2–5 options or diacritic-insensitive first-letter typing, with per-section SM-2 scheduling and due-range selection (`[d]`).
+- **Study Dashboard & Activity Heatmap:** Track streaks, a 12–16 week terminal activity heatmap (`stats.yaml`), flashcard maturity (New / Learning / Mature / Due / Leeches), and 30-day mode breakdowns.
+- **Persistent Config (`config.yaml`) & Settings Screen:** Save preferences (directories, SM-2 sync, Pinyin visibility, Memorize mode/options) in-app via `[c]` or `--config`.
+- **Marked / Starred Cards:** Press `[m]` anywhere (review, quiz, matching, reading) to star difficult words into a dedicated `marked.yaml` deck for focused drill sessions.
+- **Hummingbird 30-Key Home-Row Selection & Help Overlay:** Direct, zero-scroll access via home-row mapping, `Shift+key` batch folder selection, and a context-sensitive `[?]` Help overlay.
 - **Human-Readable YAML & Text Files:** Simple, plain-text schemas make generating decks by hand or with AI agents effortless.
 
 ---
@@ -61,6 +63,7 @@ Corvidae can be pointed to custom directories from anywhere:
 
 | Flag | Shorthand | Default | Description |
 | :--- | :--- | :--- | :--- |
+| `--config` | `-c` | `config.yaml` | Path to persistent YAML configuration file |
 | `--decks` | `-d` | `decks` | Path to flashcard decks directory |
 | `--texts` | `-t` | `memorizationTexts` | Path to memorization texts directory |
 | `--reading` | `-r` | `readingTranslationTexts` | Path to reading translation texts directory |
@@ -76,20 +79,22 @@ corvidae -d ~/Documents/decks -r ~/Documents/readingTexts
 
 ## Modes & Workflows
 
-When you launch Corvidae, you are presented with 5 core modes plus instant access to your Marked Cards deck:
+When you launch Corvidae, you are presented with 6 core study modes plus instant access to Marked Cards, your Study Dashboard, and Settings:
 
 ```
 Select Mode:
   [a] > Spaced Repetition (SM-2)
   [s]   Multiple Choice Quiz
   [d]   Arabic Alphabet Academy
-  [f]   Memorize by Options
+  [f]   Memorize Texts
   [g]   Learn by Reading
+  [h]   Matching Game
 
   [m] ★ Practice Marked Cards (14 cards)
+  [i]   Study Dashboard & Heatmap    [c] Settings (config.yaml)
 ```
 
-Use home-row shortcuts `[a, s, d, f, g]` or `[j/k / ↑↓]` to select a mode. Press `[m]` to jump immediately into your starred cards.
+Use home-row shortcuts `[a–h]` or `[j/k / ↑↓]` to select a mode. Press `[m]` for starred cards, `[i]` for the Study Dashboard & Activity Heatmap, `[c]` for Settings, or `[?]` anywhere for context-sensitive keyboard help.
 
 ---
 
@@ -228,7 +233,25 @@ Read literature or scripture in English while vocabulary from your target langua
 
 ---
 
-### 6. Marked Cards System
+### 6. Matching Game
+
+Rapid two-column home-row pair matching (`[a-g]` Characters vs. `[h-;]` Pinyin/Meanings) dealt in 5-pair rounds:
+
+- Press `[p]` to toggle Pinyin/pronunciation visibility (persisted to `config.yaml`).
+- Press `[S]` (Shift+S) to toggle **Match → SM-2 Sync** (clean matches grade `Good`, pairs matched after a mismatch grade `Hard`).
+- Press `[m]` to mark the currently selected or most recently matched card.
+
+---
+
+### 7. Study Dashboard, Activity Heatmap & Persistent Config
+
+- **Study Dashboard (`[i]`):** Displays your current & longest daily streaks, a 12–16 week terminal activity heatmap persisted to `stats.yaml`, live flashcard maturity across `decks/` (Due Today, New, Learning, Mature, Leeches), and a 30-day breakdown across all 6 modes.
+- **Settings (`[c]`):** Toggle `Quiz → SM-2 Sync`, `Match → SM-2 Sync`, `Match: Hide Pinyin`, `Memorize Mode` (Options vs. First-Letter Typing), and `Memorize Option Count` (2–5), automatically saved to `config.yaml`.
+- **Memorize First-Letter Typing & Section SRS:** Press `[t]` in Memorize mode to switch between Options and diacritic-insensitive First-Letter Typing (e.g. `e` matches `Ésta`, `q` matches `¿Quién`). Completing any portion updates per-section SM-2 intervals in the text's `.yaml` file; press `[d]` in the Portion Selector to jump straight to the next due verses.
+
+---
+
+### 8. Marked Cards System
 
 Corvidae features a unified **Marked Cards** workflow across all modes:
 
