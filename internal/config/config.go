@@ -14,6 +14,7 @@ const (
 	DefaultDecksDir    = "decks"
 	DefaultTextsDir    = "memorizationTexts"
 	DefaultReadingDir  = "readingTranslationTexts"
+	DefaultForgeDir    = "forge"
 	DefaultStatsFile   = "stats.yaml"
 	MemorizeModeOpts   = "options"
 	MemorizeModeTyping = "typing"
@@ -24,9 +25,11 @@ type Config struct {
 	DecksDir        string `yaml:"decks_dir,omitempty"`
 	TextsDir        string `yaml:"texts_dir,omitempty"`
 	ReadingDir      string `yaml:"reading_dir,omitempty"`
+	ForgeDir        string `yaml:"forge_dir,omitempty"`
 	StatsFile       string `yaml:"stats_file,omitempty"`
 	QuizSM2Sync     bool   `yaml:"quiz_sm2_sync"`
 	MatchSM2Sync    bool   `yaml:"match_sm2_sync"`
+	ForgeSM2Sync    bool   `yaml:"forge_sm2_sync"`
 	MatchHidePinyin bool   `yaml:"match_hide_pinyin"`
 	MemorizeOptions int    `yaml:"memorize_options,omitempty"` // 2 to 5
 	MemorizeMode    string `yaml:"memorize_mode,omitempty"`    // "options" or "typing"
@@ -39,9 +42,11 @@ func Default() *Config {
 		DecksDir:        DefaultDecksDir,
 		TextsDir:        DefaultTextsDir,
 		ReadingDir:      DefaultReadingDir,
+		ForgeDir:        DefaultForgeDir,
 		StatsFile:       DefaultStatsFile,
 		QuizSM2Sync:     false,
 		MatchSM2Sync:    false,
+		ForgeSM2Sync:    false,
 		MatchHidePinyin: false,
 		MemorizeOptions: 5,
 		MemorizeMode:    MemorizeModeOpts,
@@ -59,6 +64,9 @@ func (c *Config) Normalize() {
 	}
 	if c.ReadingDir == "" {
 		c.ReadingDir = DefaultReadingDir
+	}
+	if c.ForgeDir == "" {
+		c.ForgeDir = DefaultForgeDir
 	}
 	if c.StatsFile == "" {
 		c.StatsFile = DefaultStatsFile

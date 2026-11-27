@@ -28,6 +28,10 @@ func main() {
 	flag.StringVar(&readingDir, "reading", config.DefaultReadingDir, "path to the reading translation texts directory")
 	flag.StringVar(&readingDir, "r", config.DefaultReadingDir, "path to the reading translation texts directory (shorthand)")
 
+	var forgeDir string
+	flag.StringVar(&forgeDir, "forge", config.DefaultForgeDir, "path to the Morpheme Forge lexicon & progress directory")
+	flag.StringVar(&forgeDir, "f", config.DefaultForgeDir, "path to the Morpheme Forge lexicon & progress directory (shorthand)")
+
 	var memorizeOptions int
 	flag.IntVar(&memorizeOptions, "options", 5, "number of choices in Memorize by Options mode (2-5)")
 	flag.IntVar(&memorizeOptions, "o", 5, "number of choices in Memorize by Options mode (2-5) (shorthand)")
@@ -58,6 +62,9 @@ func main() {
 	}
 	if explicitFlags["reading"] || explicitFlags["r"] {
 		cfg.ReadingDir = readingDir
+	}
+	if explicitFlags["forge"] || explicitFlags["f"] {
+		cfg.ForgeDir = forgeDir
 	}
 	if (explicitFlags["options"] || explicitFlags["o"]) && memorizeOptions >= 2 && memorizeOptions <= 5 {
 		cfg.MemorizeOptions = memorizeOptions

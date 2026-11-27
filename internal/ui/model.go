@@ -13,6 +13,7 @@ import (
 	"flashcards/internal/arabic"
 	"flashcards/internal/config"
 	"flashcards/internal/deck"
+	"flashcards/internal/forge"
 	"flashcards/internal/memorize"
 	"flashcards/internal/quiz"
 	"flashcards/internal/reading"
@@ -43,6 +44,11 @@ const (
 	StateMatch
 	StateDashboard
 	StateSettings
+	StateForgeMenu
+	StateForgePlay
+	StateForgeProve
+	StateForgeShop
+	StateForgeRunOver
 )
 
 const (
@@ -52,6 +58,7 @@ const (
 	ModeMemorize
 	ModeReading
 	ModeMatch
+	ModeForge
 )
 
 // MatchBatchSize is the maximum number of card pairs displayed per matching game round.
@@ -174,6 +181,17 @@ type Model struct {
 	DashboardMaturity stats.DeckMaturity
 	SettingsCursor    int
 
+	// Morpheme Forge (Mandarin Roguelike) state
+	ForgeDir           string
+	ForgeLexicon       *forge.Lexicon
+	ForgeProgress      *forge.ProgressStore
+	ForgeRun           *forge.Run
+	ForgeMenuCursor    int
+	ForgeShowBreakdown bool
+	ForgeMissPause     bool
+	ForgeShowInfo      bool
+	ForgeLastReward    int
+
 	ShowHelp bool
 
 	Err    error
@@ -230,6 +248,7 @@ func NewWithConfig(cfg *config.Config) Model {
 		BaseDir:             cfgCopy.DecksDir,
 		TextsDir:            cfgCopy.TextsDir,
 		ReadingDir:          cfgCopy.ReadingDir,
+		ForgeDir:            cfgCopy.ForgeDir,
 		ReadingProgress:     prog,
 		Config:              &cfgCopy,
 		Stats:               st,

@@ -100,6 +100,23 @@ var (
 	HeatmapLevel4Style = lipgloss.NewStyle().Foreground(lipgloss.Color("#95FFB0")).Bold(true)
 	DueBadgeStyle      = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FFB86C"))
 	SyncOnPillStyle    = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#50FA7B")).Background(lipgloss.Color("#2D3047")).Padding(0, 1)
+
+	// Morpheme Forge styles
+	ForgeTitleStyle       = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FF7CCB"))
+	ForgeChipsStyle       = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#8BE9FD"))
+	ForgeMultStyle        = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FF5555"))
+	ForgeCoinStyle        = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#F1FA8C"))
+	ForgeBossPillStyle    = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FF5555")).Background(lipgloss.Color("#3D1E2E")).Padding(0, 1)
+	ForgeRelicPillStyle   = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#F1FA8C")).Background(lipgloss.Color("#2D3047")).Padding(0, 1)
+	ForgeCardGlassBox     = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#FF7CCB")).Padding(0, 1)
+	ForgeCardFoilBox      = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#BD93F9")).Padding(0, 1)
+	ForgeCardGoldBox      = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#F1FA8C")).Padding(0, 1)
+	ForgeCardStagedBox    = lipgloss.NewStyle().Border(lipgloss.DoubleBorder()).BorderForeground(lipgloss.Color("#50FA7B")).Padding(0, 1)
+	ForgeSuitNatureStyle  = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#50FA7B"))
+	ForgeSuitHumanStyle   = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FF7CCB"))
+	ForgeSuitCraftStyle   = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FFB86C"))
+	ForgeSuitCoreStyle    = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#8BE9FD"))
+	ForgeStageBoxStyle    = lipgloss.NewStyle().Border(lipgloss.RoundedBorder()).BorderForeground(lipgloss.Color("#8BE9FD")).Padding(0, 2)
 )
 
 const AsciiLogo = `                           .-.

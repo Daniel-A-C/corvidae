@@ -57,13 +57,24 @@ func (m Model) contextHelpBindings() (string, []helpBinding) {
 	switch m.State {
 	case StateModeSelect:
 		return "Main Menu", []helpBinding{
-			{"a - h", "Jump directly to a study mode"},
-			{"↑ / ↓ / j / k", "Move mode selection cursor"},
+			{"a - j", "Jump directly to a study mode"},
+			{"↑ / ↓", "Move mode selection cursor"},
 			{"Enter / Space", "Confirm selected mode"},
 			{"m", "Practice Marked (starred) cards"},
 			{"i", "Open Study Dashboard & Heatmap"},
 			{"c", "Open Settings (config.yaml)"},
 			{"q / Ctrl+C", "Quit Corvidae"},
+		}
+	case StateForgeMenu, StateForgePlay, StateForgeProve, StateForgeShop, StateForgeRunOver:
+		return "Morpheme Forge", []helpBinding{
+			{"a - l", "Stage Hanzi cards from your 9-card hand"},
+			{"Space", "Start a new word slot (Double/Triple Forge)"},
+			{"Tab", "Start a Pivot Chain reusing the last Hanzi (⇄)"},
+			{"Backspace / x", "Undo last Hanzi / Clear staged play"},
+			{"Enter", "Commit Play & Prove forged words (a-g / 1-5)"},
+			{";", "Discard currently staged hand cards"},
+			{"v", "Toggle Hand Levels & Held Relics reference"},
+			{"Esc", "Clear staging / Return to Forge Menu"},
 		}
 	case StateDirSelect:
 		return "Folders", []helpBinding{

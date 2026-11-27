@@ -16,6 +16,7 @@ type settingRow struct {
 func (m Model) settingsRows() []settingRow {
 	quizSync := "OFF"
 	matchSync := "OFF"
+	forgeSync := "OFF"
 	hidePinyin := "OFF"
 	if m.Config != nil {
 		if m.Config.QuizSM2Sync {
@@ -23,6 +24,9 @@ func (m Model) settingsRows() []settingRow {
 		}
 		if m.Config.MatchSM2Sync {
 			matchSync = "ON"
+		}
+		if m.Config.ForgeSM2Sync {
+			forgeSync = "ON"
 		}
 		if m.Config.MatchHidePinyin {
 			hidePinyin = "ON"
@@ -58,6 +62,11 @@ func (m Model) settingsRows() []settingRow {
 			label: "Memorize Option Count",
 			desc:  "Number of choices shown in Memorize by Options (2–5)",
 			value: fmt.Sprintf("%d options", m.MemorizeOptionCount),
+		},
+		{
+			label: "Forge → SM-2 Deck Sync",
+			desc:  "Also sync proven Morpheme Forge compounds to matching Mandarin decks",
+			value: forgeSync,
 		},
 	}
 }

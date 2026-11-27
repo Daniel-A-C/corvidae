@@ -65,6 +65,16 @@ func (m Model) View() string {
 		content = m.viewDashboard()
 	case StateSettings:
 		content = m.viewSettings()
+	case StateForgeMenu:
+		content = m.viewForgeMenu()
+	case StateForgePlay:
+		content = m.viewForgePlay()
+	case StateForgeProve:
+		content = m.viewForgeProve()
+	case StateForgeShop:
+		content = m.viewForgeShop()
+	case StateForgeRunOver:
+		content = m.viewForgeRunOver()
 	}
 
 	return lipgloss.Place(m.Width, m.Height, lipgloss.Center, lipgloss.Center, content)
@@ -84,6 +94,8 @@ func (m Model) modeDisplayName() string {
 		return "Reading"
 	case ModeMatch:
 		return "Matching Game"
+	case ModeForge:
+		return "Morpheme Forge"
 	default:
 		return "Practice"
 	}
@@ -129,6 +141,7 @@ func (m Model) viewModeSelect() string {
 		{"Memorize Texts", "Options or first-letter recitation + SRS"},
 		{"Learn by Reading", "Diglot weave immersion reader"},
 		{"Matching Game", "Two-column home-row speed pairs"},
+		{"Morpheme Forge (Mandarin)", "Hanzi compound & pivot-chain roguelike"},
 	}
 
 	const titleColWidth = 27
@@ -176,7 +189,7 @@ func (m Model) viewModeSelect() string {
 
 	b.WriteString("\n" + renderDivider(frameWidth) + "\n")
 	footerRaw := fmt.Sprintf("[%s] Select  •  [%s] Confirm  •  [%s] Dashboard  •  [%s] Settings  •  [%s] Help  •  [%s] Quit",
-		KeyStyle.Render("a-h"), KeyStyle.Render("Enter"), KeyStyle.Render("i"), KeyStyle.Render("c"), KeyStyle.Render("?"), KeyStyle.Render("q"))
+		KeyStyle.Render("a-j"), KeyStyle.Render("Enter"), KeyStyle.Render("i"), KeyStyle.Render("c"), KeyStyle.Render("?"), KeyStyle.Render("q"))
 	b.WriteString(lipgloss.NewStyle().Width(frameWidth).Align(lipgloss.Left).Render(HintStyle.Render(footerRaw)))
 
 	return renderFrame(frameWidth, b.String())

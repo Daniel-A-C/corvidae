@@ -29,7 +29,7 @@ func (m Model) updateDashboard(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 }
 
 func (m Model) updateSettings(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
-	const numSettings = 5
+	const numSettings = 6
 
 	idx := KeyToIndex(msg.String())
 	if idx >= 0 && idx < numSettings {
@@ -76,6 +76,9 @@ func (m *Model) toggleSetting(idx int) {
 		m.ToggleMemorizeTypingMode()
 	case 4:
 		m.CycleMemorizeOptionCount()
+	case 5:
+		m.Config.ForgeSM2Sync = !m.Config.ForgeSM2Sync
+		m.saveConfig()
 	}
 	if m.Config.FilePath != "" {
 		m.StatusMessage = "✓ Saved to " + m.Config.FilePath

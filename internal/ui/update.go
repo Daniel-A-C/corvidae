@@ -31,7 +31,8 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m, nil
 		}
 		inMemorizeTyping := m.State == StateMemorize && m.MemorizeTypingMode && !m.MemorizeShowFeedback
-		if msg.String() == "q" && !inMemorizeTyping && !m.isSelectionKey("q") && m.State != StateQuiz && m.State != StateMatch {
+		inForge := m.State == StateForgeMenu || m.State == StateForgePlay || m.State == StateForgeProve || m.State == StateForgeShop || m.State == StateForgeRunOver
+		if msg.String() == "q" && !inMemorizeTyping && !inForge && !m.isSelectionKey("q") && m.State != StateQuiz && m.State != StateMatch {
 			return m, tea.Quit
 		}
 
@@ -80,6 +81,16 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m.updateDashboard(msg)
 		case StateSettings:
 			return m.updateSettings(msg)
+		case StateForgeMenu:
+			return m.updateForgeMenu(msg)
+		case StateForgePlay:
+			return m.updateForgePlay(msg)
+		case StateForgeProve:
+			return m.updateForgeProve(msg)
+		case StateForgeShop:
+			return m.updateForgeShop(msg)
+		case StateForgeRunOver:
+			return m.updateForgeRunOver(msg)
 		}
 
 	case tea.MouseMsg:
@@ -105,7 +116,7 @@ func (m Model) isSelectionKey(key string) bool {
 	}
 	switch m.State {
 	case StateModeSelect:
-		return idx < 6
+		return idx < 7
 	case StateDirSelect:
 		return idx < len(m.Dirs)
 	case StateDeckSelect:
@@ -143,7 +154,7 @@ func (m Model) isSelectionKey(key string) bool {
 			return true
 		}
 	case StateSettings:
-		return idx < 5
+		return idx < 6
 	}
 	return false
 }
@@ -181,12 +192,15 @@ func (m Model) updateModeSelect(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	case "h":
 		m.Mode = ModeMatch
 		return m.confirmModeSelect()
+	case "j":
+		m.Mode = ModeForge
+		return m.confirmModeSelect()
 	case "up", "k":
 		if m.Mode > 0 {
 			m.Mode--
 		}
-	case "down", "j":
-		if m.Mode < 5 {
+	case "down":
+		if m.Mode < 6 {
 			m.Mode++
 		}
 	case "enter", " ":
@@ -199,6 +213,11 @@ func (m Model) confirmModeSelect() (tea.Model, tea.Cmd) {
 	if m.Mode == ModeArabic {
 		m.ArabicMenuCursor = 0
 		m.State = StateArabicMenu
+		return m, nil
+	}
+
+	if m.Mode == ModeForge {
+		m.openForgeMenu()
 		return m, nil
 	}
 

@@ -24,6 +24,7 @@ type DailyActivity struct {
 	MemorizeWords    int    `yaml:"memorize_words,omitempty"`
 	ReadingSentences int    `yaml:"reading_sentences,omitempty"`
 	ArabicDrills     int    `yaml:"arabic_drills,omitempty"`
+	ForgeWords       int    `yaml:"forge_words,omitempty"`
 }
 
 // Total returns the combined count of study actions logged on this day.
@@ -31,7 +32,7 @@ func (d *DailyActivity) Total() int {
 	if d == nil {
 		return 0
 	}
-	return d.Reviews + d.QuizAnswered + d.MatchPairs + d.MemorizeWords + d.ReadingSentences + d.ArabicDrills
+	return d.Reviews + d.QuizAnswered + d.MatchPairs + d.MemorizeWords + d.ReadingSentences + d.ArabicDrills + d.ForgeWords
 }
 
 // Store persists daily study activity indexed by YYYY-MM-DD date string.
@@ -182,6 +183,15 @@ func (s *Store) RecordArabicDrill(now time.Time) {
 		return
 	}
 	s.dayEntry(now).ArabicDrills++
+	_ = s.Save()
+}
+
+// RecordForgeWord logs one proven word in Morpheme Forge and saves.
+func (s *Store) RecordForgeWord(now time.Time) {
+	if s == nil {
+		return
+	}
+	s.dayEntry(now).ForgeWords++
 	_ = s.Save()
 }
 

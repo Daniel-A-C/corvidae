@@ -1,0 +1,2825 @@
+# Morpheme Forge — Mandarin Lexicon (seeded from Harry Potter & Gospel of John decks)
+hanzi:
+  - char: "一"
+    pinyin: "yī"
+    tone: 1
+    meaning: "One (1)"
+    suit: core
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, mind_and_people, volatile_scholar]
+  - char: "上"
+    pinyin: "shàng"
+    tone: 4
+    meaning: "On / Upon"
+    suit: core
+    standalone: true
+    starter_decks: [john_gospel, mind_and_people]
+  - char: "下"
+    pinyin: "xià"
+    tone: 4
+    meaning: "Under (conditions) / Below / Down"
+    suit: core
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, mind_and_people, volatile_scholar]
+  - char: "不"
+    pinyin: "bù"
+    tone: 4
+    meaning: "Not / No"
+    suit: core
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, mind_and_people, volatile_scholar]
+  - char: "个"
+    pinyin: "gè"
+    tone: 4
+    meaning: "General measure word / Individual"
+    suit: core
+    standalone: true
+    starter_decks: [mind_and_people]
+  - char: "为"
+    pinyin: "wèi"
+    tone: 4
+    meaning: "For / On behalf of"
+    suit: core
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, mind_and_people, volatile_scholar]
+  - char: "么"
+    pinyin: "me"
+    tone: 1
+    meaning: "interrogative suffix (what/how)"
+    suit: core
+    standalone: false
+    starter_decks: [harry_potter, mind_and_people, volatile_scholar]
+  - char: "之"
+    pinyin: "zhī"
+    tone: 1
+    meaning: "of / possessive particle"
+    suit: core
+    standalone: true
+    starter_decks: [mind_and_people]
+  - char: "了"
+    pinyin: "le"
+    tone: 4
+    meaning: "Aspect particle (completed action / change of..."
+    suit: core
+    standalone: true
+  - char: "于"
+    pinyin: "yú"
+    tone: 2
+    meaning: "at / in / regarding"
+    suit: core
+    standalone: true
+    starter_decks: [mind_and_people]
+  - char: "些"
+    pinyin: "xiē"
+    tone: 1
+    meaning: "Some / A bit / Slightly"
+    suit: core
+    standalone: true
+  - char: "亮"
+    pinyin: "liàng"
+    tone: 4
+    meaning: "bright / light / shine"
+    suit: nature
+    standalone: true
+  - char: "人"
+    pinyin: "rén"
+    tone: 2
+    meaning: "People / Others"
+    suit: human
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, mind_and_people, volatile_scholar]
+  - char: "什"
+    pinyin: "shén"
+    tone: 2
+    meaning: "what (in 什么)"
+    suit: human
+    standalone: false
+  - char: "今"
+    pinyin: "jīn"
+    tone: 1
+    meaning: "now / today / present"
+    suit: human
+    standalone: true
+  - char: "从"
+    pinyin: "cóng"
+    tone: 2
+    meaning: "From / Off"
+    suit: human
+    standalone: true
+  - char: "以"
+    pinyin: "yǐ"
+    tone: 3
+    meaning: "In order to / So as to / By means of"
+    suit: human
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, mind_and_people, volatile_scholar]
+  - char: "儿"
+    pinyin: "ér"
+    tone: 2
+    meaning: "child / son / suffix"
+    suit: human
+    standalone: true
+    starter_decks: [mind_and_people, volatile_scholar]
+  - char: "先"
+    pinyin: "xiān"
+    tone: 1
+    meaning: "First / In advance"
+    suit: human
+    standalone: true
+    starter_decks: [john_gospel]
+  - char: "再"
+    pinyin: "zài"
+    tone: 4
+    meaning: "More / Again / Further"
+    suit: core
+    standalone: true
+  - char: "冷"
+    pinyin: "lěng"
+    tone: 3
+    meaning: "cold / chilly"
+    suit: nature
+    standalone: true
+  - char: "出"
+    pinyin: "chū"
+    tone: 1
+    meaning: "Out / Forth (directional complement)"
+    suit: craft
+    standalone: true
+    starter_decks: [harry_potter, volatile_scholar]
+  - char: "到"
+    pinyin: "dào"
+    tone: 4
+    meaning: "To / Onto / Until"
+    suit: craft
+    standalone: true
+    starter_decks: [harry_potter, volatile_scholar]
+  - char: "前"
+    pinyin: "qián"
+    tone: 2
+    meaning: "Ago / Before / In front"
+    suit: craft
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, volatile_scholar]
+  - char: "动"
+    pinyin: "dòng"
+    tone: 4
+    meaning: "To move / Movement"
+    suit: craft
+    standalone: true
+  - char: "原"
+    pinyin: "yuán"
+    tone: 2
+    meaning: "original / source / plain"
+    suit: nature
+    standalone: true
+  - char: "去"
+    pinyin: "qù"
+    tone: 4
+    meaning: "To go"
+    suit: craft
+    standalone: true
+    starter_decks: [harry_potter, volatile_scholar]
+  - char: "双"
+    pinyin: "shuāng"
+    tone: 1
+    meaning: "pair / double / both"
+    suit: core
+    standalone: true
+  - char: "发"
+    pinyin: "fā"
+    tone: 1
+    meaning: "To emit / Send out / Issue"
+    suit: craft
+    standalone: true
+  - char: "口"
+    pinyin: "kǒu"
+    tone: 3
+    meaning: "Mouthful (measure word) / Mouth"
+    suit: human
+    standalone: true
+  - char: "只"
+    pinyin: "zhī"
+    tone: 1
+    meaning: "Measure word for animals / birds"
+    suit: human
+    standalone: true
+    starter_decks: [john_gospel, mind_and_people]
+  - char: "可"
+    pinyin: "kě"
+    tone: 3
+    meaning: "Truly / Indeed (emphatic adverb) / Can"
+    suit: human
+    standalone: true
+    starter_decks: [mind_and_people]
+  - char: "同"
+    pinyin: "tóng"
+    tone: 2
+    meaning: "With"
+    suit: human
+    standalone: true
+    starter_decks: [mind_and_people]
+  - char: "后"
+    pinyin: "hòu"
+    tone: 4
+    meaning: "behind / after / back"
+    suit: human
+    standalone: true
+    starter_decks: [harry_potter, mind_and_people, volatile_scholar]
+  - char: "向"
+    pinyin: "xiàng"
+    tone: 4
+    meaning: "Toward / To / In the direction of"
+    suit: human
+    standalone: true
+  - char: "听"
+    pinyin: "tīng"
+    tone: 1
+    meaning: "To listen / To hear"
+    suit: human
+    standalone: true
+  - char: "味"
+    pinyin: "wèi"
+    tone: 4
+    meaning: "taste / flavor / smell"
+    suit: human
+    standalone: true
+  - char: "命"
+    pinyin: "mìng"
+    tone: 4
+    meaning: "Life / Fate / Command"
+    suit: human
+    standalone: true
+  - char: "哪"
+    pinyin: "nǎ"
+    tone: 3
+    meaning: "Which"
+    suit: human
+    standalone: true
+    starter_decks: [john_gospel]
+  - char: "回"
+    pinyin: "huí"
+    tone: 2
+    meaning: "Matter / Occurrence (measure word in 怎么回事) /..."
+    suit: craft
+    standalone: true
+  - char: "因"
+    pinyin: "yīn"
+    tone: 1
+    meaning: "Because of / From"
+    suit: craft
+    standalone: true
+  - char: "在"
+    pinyin: "zài"
+    tone: 4
+    meaning: "To be located at / in / on"
+    suit: nature
+    standalone: true
+    starter_decks: [john_gospel]
+  - char: "地"
+    pinyin: "de"
+    tone: 4
+    meaning: "Adverbial particle (-ly)"
+    suit: nature
+    standalone: true
+  - char: "外"
+    pinyin: "wài"
+    tone: 4
+    meaning: "Outside / Beyond (east of)"
+    suit: core
+    standalone: true
+  - char: "多"
+    pinyin: "duō"
+    tone: 1
+    meaning: "How (to what extent) / Many / Much"
+    suit: core
+    standalone: true
+    starter_decks: [mind_and_people]
+  - char: "大"
+    pinyin: "dà"
+    tone: 4
+    meaning: "Big / Great / Large"
+    suit: core
+    standalone: true
+    starter_decks: [mind_and_people]
+  - char: "天"
+    pinyin: "tiān"
+    tone: 1
+    meaning: "Day / Sky / Heaven"
+    suit: nature
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, volatile_scholar]
+  - char: "头"
+    pinyin: "tóu"
+    tone: 2
+    meaning: "Head / Top"
+    suit: human
+    standalone: true
+  - char: "好"
+    pinyin: "hǎo"
+    tone: 3
+    meaning: "Well / All right / Good"
+    suit: human
+    standalone: true
+    starter_decks: [mind_and_people]
+  - char: "如"
+    pinyin: "rú"
+    tone: 2
+    meaning: "like / as / if"
+    suit: human
+    standalone: true
+  - char: "子"
+    pinyin: "zǐ"
+    tone: 3
+    meaning: "child / son / noun suffix"
+    suit: human
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, mind_and_people, volatile_scholar]
+  - char: "学"
+    pinyin: "xué"
+    tone: 2
+    meaning: "to study / learn / school"
+    suit: human
+    standalone: true
+  - char: "实"
+    pinyin: "shí"
+    tone: 2
+    meaning: "real / solid / true"
+    suit: craft
+    standalone: true
+  - char: "家"
+    pinyin: "jiā"
+    tone: 1
+    meaning: "home / family / specialist"
+    suit: craft
+    standalone: true
+  - char: "对"
+    pinyin: "duì"
+    tone: 4
+    meaning: "To / For / Toward"
+    suit: craft
+    standalone: true
+  - char: "小"
+    pinyin: "xiǎo"
+    tone: 3
+    meaning: "Small / Tiny"
+    suit: core
+    standalone: true
+    starter_decks: [mind_and_people]
+  - char: "少"
+    pinyin: "shǎo"
+    tone: 3
+    meaning: "few / little / young"
+    suit: core
+    standalone: true
+  - char: "差"
+    pinyin: "chà"
+    tone: 4
+    meaning: "differ / lack / poor"
+    suit: core
+    standalone: true
+  - char: "年"
+    pinyin: "nián"
+    tone: 2
+    meaning: "Year"
+    suit: nature
+    standalone: true
+  - char: "开"
+    pinyin: "kāi"
+    tone: 1
+    meaning: "Open / Away (resultative complement)"
+    suit: craft
+    standalone: true
+  - char: "当"
+    pinyin: "dāng"
+    tone: 1
+    meaning: "To serve as / To act as / To be"
+    suit: craft
+    standalone: true
+  - char: "得"
+    pinyin: "de"
+    tone: 4
+    meaning: "Structural particle (degree complement)"
+    suit: craft
+    standalone: true
+  - char: "心"
+    pinyin: "xīn"
+    tone: 1
+    meaning: "heart / mind / center"
+    suit: human
+    standalone: true
+  - char: "快"
+    pinyin: "kuài"
+    tone: 4
+    meaning: "Quick / Hurry"
+    suit: human
+    standalone: true
+  - char: "怎"
+    pinyin: "zěn"
+    tone: 3
+    meaning: "how / why"
+    suit: human
+    standalone: false
+  - char: "思"
+    pinyin: "sī"
+    tone: 1
+    meaning: "to think / consider / thought"
+    suit: human
+    standalone: true
+  - char: "想"
+    pinyin: "xiǎng"
+    tone: 3
+    meaning: "To think / To want / To miss"
+    suit: human
+    standalone: true
+    starter_decks: [mind_and_people]
+  - char: "意"
+    pinyin: "yì"
+    tone: 4
+    meaning: "meaning / idea / intention"
+    suit: human
+    standalone: true
+    starter_decks: [mind_and_people]
+  - char: "感"
+    pinyin: "gǎn"
+    tone: 3
+    meaning: "to feel / sense / emotion"
+    suit: human
+    standalone: true
+  - char: "所"
+    pinyin: "suǒ"
+    tone: 3
+    meaning: "Particle before a verb nominalizing the actio..."
+    suit: craft
+    standalone: true
+  - char: "手"
+    pinyin: "shǒu"
+    tone: 3
+    meaning: "Hand"
+    suit: human
+    standalone: true
+    starter_decks: [mind_and_people]
+  - char: "打"
+    pinyin: "dǎ"
+    tone: 3
+    meaning: "To strike / To make (a gesture or action)"
+    suit: human
+    standalone: true
+  - char: "指"
+    pinyin: "zhǐ"
+    tone: 3
+    meaning: "To refer to / Point at / Finger"
+    suit: human
+    standalone: true
+    starter_decks: [mind_and_people]
+  - char: "接"
+    pinyin: "jiē"
+    tone: 1
+    meaning: "to receive / connect / catch"
+    suit: human
+    standalone: true
+  - char: "整"
+    pinyin: "zhěng"
+    tone: 3
+    meaning: "whole / entire / tidy"
+    suit: craft
+    standalone: true
+  - char: "日"
+    pinyin: "rì"
+    tone: 4
+    meaning: "Day of the month / Sun / Date"
+    suit: nature
+    standalone: true
+    starter_decks: [john_gospel]
+  - char: "时"
+    pinyin: "shí"
+    tone: 2
+    meaning: "When / Time"
+    suit: nature
+    standalone: true
+    starter_decks: [harry_potter, volatile_scholar]
+  - char: "明"
+    pinyin: "míng"
+    tone: 2
+    meaning: "bright / clear / next"
+    suit: nature
+    standalone: true
+    starter_decks: [john_gospel]
+  - char: "是"
+    pinyin: "shì"
+    tone: 4
+    meaning: "To be (is, am, are)"
+    suit: nature
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, volatile_scholar]
+  - char: "显"
+    pinyin: "xiǎn"
+    tone: 3
+    meaning: "obvious / apparent / show"
+    suit: nature
+    standalone: true
+  - char: "最"
+    pinyin: "zuì"
+    tone: 4
+    meaning: "Most / -est (superlative adverb)"
+    suit: nature
+    standalone: true
+  - char: "有"
+    pinyin: "yǒu"
+    tone: 3
+    meaning: "To have / There is / There are"
+    suit: nature
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, volatile_scholar]
+  - char: "本"
+    pinyin: "běn"
+    tone: 3
+    meaning: "Measure word for books and albums"
+    suit: nature
+    standalone: true
+    starter_decks: [harry_potter, volatile_scholar]
+  - char: "来"
+    pinyin: "lái"
+    tone: 2
+    meaning: "To come / (bring on!)"
+    suit: nature
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, volatile_scholar]
+  - char: "样"
+    pinyin: "yàng"
+    tone: 4
+    meaning: "Kind / Type / Sort"
+    suit: nature
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, volatile_scholar]
+  - char: "次"
+    pinyin: "cì"
+    tone: 4
+    meaning: "Time / Occurrence (measure word)"
+    suit: core
+    standalone: true
+    starter_decks: [john_gospel]
+  - char: "正"
+    pinyin: "zhèng"
+    tone: 4
+    meaning: "In the process of / Right now"
+    suit: core
+    standalone: true
+    starter_decks: [mind_and_people]
+  - char: "此"
+    pinyin: "cǐ"
+    tone: 3
+    meaning: "this / these"
+    suit: core
+    standalone: true
+  - char: "死"
+    pinyin: "sǐ"
+    tone: 3
+    meaning: "To die / To death (resultative complement)"
+    suit: core
+    standalone: true
+  - char: "没"
+    pinyin: "méi"
+    tone: 2
+    meaning: "Did not / Have not"
+    suit: nature
+    standalone: true
+  - char: "法"
+    pinyin: "fǎ"
+    tone: 3
+    meaning: "law / method / way"
+    suit: craft
+    standalone: true
+  - char: "活"
+    pinyin: "huó"
+    tone: 2
+    meaning: "To live / Alive"
+    suit: nature
+    standalone: true
+  - char: "点"
+    pinyin: "diǎn"
+    tone: 3
+    meaning: "O'clock / Hour / Dot / A little"
+    suit: nature
+    standalone: true
+    starter_decks: [harry_potter, volatile_scholar]
+  - char: "然"
+    pinyin: "rán"
+    tone: 2
+    meaning: "so / thus / however"
+    suit: nature
+    standalone: true
+    starter_decks: [harry_potter, volatile_scholar]
+  - char: "照"
+    pinyin: "zhào"
+    tone: 4
+    meaning: "To look into (a mirror) / Shine / Reflect"
+    suit: nature
+    standalone: true
+  - char: "现"
+    pinyin: "xiàn"
+    tone: 4
+    meaning: "present / appear / now"
+    suit: craft
+    standalone: true
+  - char: "生"
+    pinyin: "shēng"
+    tone: 1
+    meaning: "life / birth / grow"
+    suit: nature
+    standalone: true
+    starter_decks: [harry_potter, volatile_scholar]
+  - char: "的"
+    pinyin: "de"
+    tone: 4
+    meaning: "Possessive / Attributive particle"
+    suit: craft
+    standalone: true
+  - char: "直"
+    pinyin: "zhí"
+    tone: 2
+    meaning: "straight / direct / continuous"
+    suit: craft
+    standalone: true
+  - char: "看"
+    pinyin: "kàn"
+    tone: 4
+    meaning: "To look / To see / To read / To watch"
+    suit: human
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, mind_and_people, volatile_scholar]
+  - char: "真"
+    pinyin: "zhēn"
+    tone: 1
+    meaning: "True / Real"
+    suit: craft
+    standalone: true
+  - char: "眼"
+    pinyin: "yǎn"
+    tone: 3
+    meaning: "eye / glance"
+    suit: human
+    standalone: true
+  - char: "着"
+    pinyin: "zhe"
+    tone: 4
+    meaning: "Continuous aspect particle"
+    suit: human
+    standalone: true
+  - char: "知"
+    pinyin: "zhī"
+    tone: 1
+    meaning: "to know / aware"
+    suit: human
+    standalone: true
+    starter_decks: [john_gospel]
+  - char: "种"
+    pinyin: "zhǒng"
+    tone: 3
+    meaning: "Kind / Sort / Type"
+    suit: core
+    standalone: true
+  - char: "笑"
+    pinyin: "xiào"
+    tone: 4
+    meaning: "To smile / To laugh"
+    suit: human
+    standalone: true
+  - char: "类"
+    pinyin: "lèi"
+    tone: 4
+    meaning: "kind / type / category"
+    suit: core
+    standalone: true
+  - char: "紧"
+    pinyin: "jǐn"
+    tone: 3
+    meaning: "Tight / Closely / Taut"
+    suit: craft
+    standalone: true
+  - char: "红"
+    pinyin: "hóng"
+    tone: 2
+    meaning: "Red"
+    suit: core
+    standalone: true
+  - char: "级"
+    pinyin: "jí"
+    tone: 2
+    meaning: "level / grade / rank"
+    suit: craft
+    standalone: true
+  - char: "终"
+    pinyin: "zhōng"
+    tone: 1
+    meaning: "end / finish / finally"
+    suit: craft
+    standalone: true
+  - char: "绝"
+    pinyin: "jué"
+    tone: 2
+    meaning: "sever / absolute / extinguish"
+    suit: craft
+    standalone: true
+  - char: "能"
+    pinyin: "néng"
+    tone: 2
+    meaning: "Can / To be able to / May"
+    suit: core
+    standalone: true
+  - char: "脑"
+    pinyin: "nǎo"
+    tone: 3
+    meaning: "brain / mind"
+    suit: human
+    standalone: true
+  - char: "腿"
+    pinyin: "tuǐ"
+    tone: 3
+    meaning: "Leg"
+    suit: core
+    standalone: true
+  - char: "臂"
+    pinyin: "bì"
+    tone: 4
+    meaning: "arm"
+    suit: human
+    standalone: true
+  - char: "自"
+    pinyin: "zì"
+    tone: 4
+    meaning: "self / from / naturally"
+    suit: human
+    standalone: true
+  - char: "至"
+    pinyin: "zhì"
+    tone: 4
+    meaning: "to / until / extreme"
+    suit: craft
+    standalone: true
+  - char: "致"
+    pinyin: "zhì"
+    tone: 4
+    meaning: "send / devote / cause"
+    suit: craft
+    standalone: true
+  - char: "色"
+    pinyin: "sè"
+    tone: 4
+    meaning: "color / expression / look"
+    suit: nature
+    standalone: true
+  - char: "若"
+    pinyin: "ruò"
+    tone: 4
+    meaning: "If / Provided that"
+    suit: core
+    standalone: true
+  - char: "行"
+    pinyin: "xíng"
+    tone: 2
+    meaning: "Alright / Anyway / Enough of that"
+    suit: craft
+    standalone: true
+  - char: "袋"
+    pinyin: "dài"
+    tone: 4
+    meaning: "bag / pocket / pouch"
+    suit: craft
+    standalone: true
+  - char: "要"
+    pinyin: "yào"
+    tone: 4
+    meaning: "To want / To need / Going to"
+    suit: craft
+    standalone: true
+    starter_decks: [john_gospel, volatile_scholar]
+  - char: "见"
+    pinyin: "jiàn"
+    tone: 4
+    meaning: "To perceive / See (resultative complement)"
+    suit: human
+    standalone: true
+    starter_decks: [john_gospel, mind_and_people]
+  - char: "觉"
+    pinyin: "jiào"
+    tone: 4
+    meaning: "Sleep / Nap (classifier for a stretch of sleep)"
+    suit: human
+    standalone: true
+  - char: "解"
+    pinyin: "jiě"
+    tone: 3
+    meaning: "To untie / To unwrap / To loosen"
+    suit: human
+    standalone: true
+  - char: "许"
+    pinyin: "xǔ"
+    tone: 3
+    meaning: "to allow / perhaps / promise"
+    suit: human
+    standalone: true
+  - char: "论"
+    pinyin: "lùn"
+    tone: 4
+    meaning: "discuss / theory / argue"
+    suit: human
+    standalone: true
+  - char: "话"
+    pinyin: "huà"
+    tone: 4
+    meaning: "Words / Remarks / Speech"
+    suit: human
+    standalone: true
+  - char: "说"
+    pinyin: "shuō"
+    tone: 1
+    meaning: "To speak / To say"
+    suit: human
+    standalone: true
+  - char: "谈"
+    pinyin: "tán"
+    tone: 2
+    meaning: "To talk / To speak / To converse"
+    suit: core
+    standalone: true
+  - char: "谎"
+    pinyin: "huǎng"
+    tone: 3
+    meaning: "lie / falsehood"
+    suit: human
+    standalone: true
+  - char: "走"
+    pinyin: "zǒu"
+    tone: 3
+    meaning: "To walk / Go"
+    suit: craft
+    standalone: true
+  - char: "赶"
+    pinyin: "gǎn"
+    tone: 3
+    meaning: "To hurry / Catch up / Beat someone to it"
+    suit: craft
+    standalone: true
+  - char: "起"
+    pinyin: "qǐ"
+    tone: 3
+    meaning: "To rise / To develop / To conceive (a feeling)"
+    suit: craft
+    standalone: true
+  - char: "身"
+    pinyin: "shēn"
+    tone: 1
+    meaning: "body / self / life"
+    suit: human
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, mind_and_people, volatile_scholar]
+  - char: "转"
+    pinyin: "zhuàn"
+    tone: 4
+    meaning: "To wander around / To stroll / To turn in cir..."
+    suit: craft
+    standalone: true
+  - char: "边"
+    pinyin: "biān"
+    tone: 1
+    meaning: "side / edge / border"
+    suit: craft
+    standalone: true
+  - char: "过"
+    pinyin: "guò"
+    tone: 4
+    meaning: "To pass / However (in 不过)"
+    suit: craft
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, volatile_scholar]
+  - char: "近"
+    pinyin: "jìn"
+    tone: 4
+    meaning: "near / close / recent"
+    suit: craft
+    standalone: true
+  - char: "还"
+    pinyin: "hái"
+    tone: 2
+    meaning: "Still / Even / Yet"
+    suit: craft
+    standalone: true
+  - char: "这"
+    pinyin: "zhè"
+    tone: 4
+    meaning: "This"
+    suit: craft
+    standalone: true
+    starter_decks: [harry_potter, volatile_scholar]
+  - char: "进"
+    pinyin: "jìn"
+    tone: 4
+    meaning: "Into / To enter / Forward"
+    suit: craft
+    standalone: true
+  - char: "逃"
+    pinyin: "táo"
+    tone: 2
+    meaning: "escape / flee"
+    suit: craft
+    standalone: true
+  - char: "通"
+    pinyin: "tōng"
+    tone: 1
+    meaning: "pass through / connect / common"
+    suit: craft
+    standalone: true
+  - char: "逼"
+    pinyin: "bī"
+    tone: 1
+    meaning: "force / compel / close in"
+    suit: craft
+    standalone: true
+  - char: "道"
+    pinyin: "dào"
+    tone: 4
+    meaning: "Streak / Slit / Line (measure word for long n..."
+    suit: craft
+    standalone: true
+  - char: "那"
+    pinyin: "nà"
+    tone: 4
+    meaning: "That"
+    suit: craft
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, volatile_scholar]
+  - char: "里"
+    pinyin: "lǐ"
+    tone: 3
+    meaning: "Inside / Within"
+    suit: craft
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, volatile_scholar]
+  - char: "重"
+    pinyin: "zhòng"
+    tone: 4
+    meaning: "heavy / important / repeat"
+    suit: core
+    standalone: true
+  - char: "金"
+    pinyin: "jīn"
+    tone: 1
+    meaning: "gold / metal / money"
+    suit: craft
+    standalone: true
+  - char: "错"
+    pinyin: "cuò"
+    tone: 4
+    meaning: "wrong / mistake / error"
+    suit: craft
+    standalone: true
+  - char: "镜"
+    pinyin: "jìng"
+    tone: 4
+    meaning: "mirror / lens / glass"
+    suit: craft
+    standalone: true
+  - char: "长"
+    pinyin: "zhǎng"
+    tone: 3
+    meaning: "To grow (polyphone: zhǎng to grow"
+    suit: core
+    standalone: true
+  - char: "间"
+    pinyin: "jiān"
+    tone: 1
+    meaning: "between / room / space"
+    suit: craft
+    standalone: true
+  - char: "静"
+    pinyin: "jìng"
+    tone: 4
+    meaning: "Quiet, calm, tranquil (common given name)"
+    suit: human
+    standalone: true
+  - char: "面"
+    pinyin: "miàn"
+    tone: 4
+    meaning: "Measure word for flat, smooth objects (mirror..."
+    suit: human
+    standalone: true
+    starter_decks: [harry_potter, john_gospel, mind_and_people, volatile_scholar]
+  - char: "魔"
+    pinyin: "mó"
+    tone: 2
+    meaning: "magic / demon / spell"
+    suit: human
+    standalone: true
+  - char: "鲜"
+    pinyin: "xiān"
+    tone: 1
+    meaning: "fresh / bright / vivid"
+    suit: nature
+    standalone: true
+
+compounds:
+  - word: "一下"
+    pinyin: "yī xià"
+    tones: [1, 4]
+    meaning: "Once / A bit / Briefly (verbal measure)"
+    domain: harry_potter
+  - word: "一个"
+    pinyin: "yí gè"
+    tones: [2, 4]
+    meaning: "A / One / An individual"
+    domain: john
+  - word: "一些"
+    pinyin: "yī xiē"
+    tones: [1, 1]
+    meaning: "Some / A few"
+    domain: harry_potter
+  - word: "一向"
+    pinyin: "yī xiàng"
+    tones: [1, 4]
+    meaning: "Always / All along"
+    domain: harry_potter
+  - word: "一天"
+    pinyin: "yì tiān"
+    tones: [4, 1]
+    meaning: "One day / That day"
+    domain: john
+  - word: "一来"
+    pinyin: "yī lái"
+    tones: [1, 2]
+    meaning: "Once (something happens) / As a result"
+    domain: harry_potter
+  - word: "一样"
+    pinyin: "yī yàng"
+    tones: [1, 4]
+    meaning: "Same / Equally / Like (in 像……一样)"
+    domain: both
+  - word: "一点"
+    pinyin: "yī diǎn"
+    tones: [1, 3]
+    meaning: "A bit / At all (with negation)"
+    domain: harry_potter
+  - word: "一生"
+    pinyin: "yī shēng"
+    tones: [1, 1]
+    meaning: "All one's life / Lifetime"
+    domain: harry_potter
+  - word: "一直"
+    pinyin: "yī zhí"
+    tones: [1, 2]
+    meaning: "Continuously / All along / Nonstop"
+    domain: harry_potter
+  - word: "一眼"
+    pinyin: "yī yǎn"
+    tones: [1, 3]
+    meaning: "A glance / One look"
+    domain: harry_potter
+  - word: "一致"
+    pinyin: "yī zhì"
+    tones: [1, 4]
+    meaning: "Unanimously / In agreement / Consistent"
+    domain: harry_potter
+  - word: "一起"
+    pinyin: "yī qǐ"
+    tones: [1, 3]
+    meaning: "Together / In the same place"
+    domain: harry_potter
+  - word: "一边"
+    pinyin: "yī biān"
+    tones: [1, 1]
+    meaning: "At the same time / While (doing something)"
+    domain: harry_potter
+  - word: "上学"
+    pinyin: "shàng xué"
+    tones: [4, 2]
+    meaning: "To attend school / To be at school"
+    domain: harry_potter
+  - word: "上来"
+    pinyin: "shàng lái"
+    tones: [4, 2]
+    meaning: "To come up / Surge forward"
+    domain: harry_potter
+  - word: "下去"
+    pinyin: "xià qù"
+    tones: [4, 4]
+    meaning: "Down / Downward (directional complement)"
+    domain: harry_potter
+  - word: "下来"
+    pinyin: "xià lái"
+    tones: [4, 2]
+    meaning: "Down (directional complement indicating downward mo..."
+    domain: harry_potter
+  - word: "下面"
+    pinyin: "xià miàn"
+    tones: [4, 4]
+    meaning: "Below / Underneath"
+    domain: both
+  - word: "不再"
+    pinyin: "bù zài"
+    tones: [4, 4]
+    meaning: "No longer / Not again"
+    domain: harry_potter
+  - word: "不同"
+    pinyin: "bù tóng"
+    tones: [4, 2]
+    meaning: "Different / Not the same"
+    domain: harry_potter
+  - word: "不是"
+    pinyin: "bú shì"
+    tones: [2, 4]
+    meaning: "Is not / Not to be"
+    domain: john
+  - word: "不然"
+    pinyin: "bù rán"
+    tones: [4, 2]
+    meaning: "Otherwise / Or else"
+    domain: harry_potter
+  - word: "不行"
+    pinyin: "bù xíng"
+    tones: [4, 2]
+    meaning: "No way / Out of the question / Won't do"
+    domain: harry_potter
+  - word: "不要"
+    pinyin: "bù yào"
+    tones: [4, 4]
+    meaning: "Do not / Don't"
+    domain: harry_potter
+  - word: "不解"
+    pinyin: "bù jiě"
+    tones: [4, 3]
+    meaning: "Puzzled / Perplexed / Unable to understand"
+    domain: harry_potter
+  - word: "不许"
+    pinyin: "bù xǔ"
+    tones: [4, 3]
+    meaning: "Not allowed / Must not / Forbid"
+    domain: harry_potter
+  - word: "不论"
+    pinyin: "bù lùn"
+    tones: [4, 4]
+    meaning: "No matter / Regardless of"
+    domain: harry_potter
+  - word: "不过"
+    pinyin: "bù guò"
+    tones: [4, 4]
+    meaning: "However / But / Only"
+    domain: harry_potter
+  - word: "不错"
+    pinyin: "bù cuò"
+    tones: [4, 4]
+    meaning: "Not bad / Pretty good / Well done"
+    domain: harry_potter
+  - word: "为了"
+    pinyin: "wèi le"
+    tones: [4, 4]
+    meaning: "In order to / For the sake of"
+    domain: harry_potter
+  - word: "为此"
+    pinyin: "wèi cǐ"
+    tones: [4, 3]
+    meaning: "For this / On account of this"
+    domain: harry_potter
+  - word: "为要"
+    pinyin: "wèi yào"
+    tones: [4, 4]
+    meaning: "In order to / For the purpose of"
+    domain: john
+  - word: "之一"
+    pinyin: "zhī yī"
+    tones: [1, 1]
+    meaning: "One of..."
+    domain: harry_potter
+  - word: "之前"
+    pinyin: "zhī qián"
+    tones: [1, 2]
+    meaning: "Before / Prior to"
+    domain: harry_potter
+  - word: "之后"
+    pinyin: "zhī hòu"
+    tones: [1, 4]
+    meaning: "After / Afterward / Later"
+    domain: harry_potter
+  - word: "之间"
+    pinyin: "zhī jiān"
+    tones: [1, 1]
+    meaning: "Between / Among"
+    domain: harry_potter
+  - word: "了解"
+    pinyin: "liǎo jiě"
+    tones: [3, 3]
+    meaning: "To understand / To find out / To know well"
+    domain: harry_potter
+  - word: "于是"
+    pinyin: "yú shì"
+    tones: [2, 4]
+    meaning: "Thereupon / So / Consequently"
+    domain: both
+  - word: "人子"
+    pinyin: "rén zǐ"
+    tones: [2, 3]
+    meaning: "The Son of Man"
+    domain: john
+  - word: "人意"
+    pinyin: "rén yì"
+    tones: [2, 4]
+    meaning: "Human will / Will of man"
+    domain: john
+  - word: "人类"
+    pinyin: "rén lèi"
+    tones: [2, 4]
+    meaning: "Humanity / Mankind / Human beings"
+    domain: harry_potter
+  - word: "什么"
+    pinyin: "shén me"
+    tones: [2, 1]
+    meaning: "What / Anything (with 也/都)"
+    domain: harry_potter
+  - word: "今天"
+    pinyin: "jīn tiān"
+    tones: [1, 1]
+    meaning: "Today"
+    domain: harry_potter
+  - word: "今年"
+    pinyin: "jīn nián"
+    tones: [1, 2]
+    meaning: "This year"
+    domain: harry_potter
+  - word: "从不"
+    pinyin: "cóng bù"
+    tones: [2, 4]
+    meaning: "Never"
+    domain: harry_potter
+  - word: "从来"
+    pinyin: "cóng lái"
+    tones: [2, 2]
+    meaning: "Ever / Always (with negative: never)"
+    domain: both
+  - word: "从此"
+    pinyin: "cóng cǐ"
+    tones: [2, 3]
+    meaning: "From then on / Henceforth"
+    domain: harry_potter
+  - word: "以为"
+    pinyin: "yǐ wéi"
+    tones: [3, 2]
+    meaning: "To think (mistakenly) / To assume"
+    domain: harry_potter
+  - word: "以前"
+    pinyin: "yǐ qián"
+    tones: [3, 2]
+    meaning: "Before / Prior to"
+    domain: john
+  - word: "以后"
+    pinyin: "yǐ hòu"
+    tones: [3, 4]
+    meaning: "After / Afterwards / Since then"
+    domain: both
+  - word: "儿子"
+    pinyin: "ér zi"
+    tones: [2, 3]
+    meaning: "Son"
+    domain: john
+  - word: "先前"
+    pinyin: "xiān qián"
+    tones: [1, 2]
+    meaning: "Previously / Beforehand"
+    domain: john
+  - word: "先是"
+    pinyin: "xiān shì"
+    tones: [1, 4]
+    meaning: "First / At first"
+    domain: harry_potter
+  - word: "先生"
+    pinyin: "xiān sheng"
+    tones: [1, 1]
+    meaning: "Sir / Mister"
+    domain: harry_potter
+  - word: "先知"
+    pinyin: "xiān zhī"
+    tones: [1, 1]
+    meaning: "Prophet"
+    domain: john
+  - word: "再见"
+    pinyin: "zài jiàn"
+    tones: [4, 4]
+    meaning: "Goodbye / See you again"
+    domain: harry_potter
+  - word: "冷冷"
+    pinyin: "lěng lěng"
+    tones: [3, 3]
+    meaning: "Coldly / Icy"
+    domain: harry_potter
+  - word: "冷笑"
+    pinyin: "lěng xiào"
+    tones: [3, 4]
+    meaning: "Cold laugh / Sneer / Grim laugh"
+    domain: harry_potter
+  - word: "冷静"
+    pinyin: "lěng jìng"
+    tones: [3, 4]
+    meaning: "Calm / Cool-headed / Composed"
+    domain: harry_potter
+  - word: "出于"
+    pinyin: "chū yú"
+    tones: [1, 2]
+    meaning: "Out of / Stemming from"
+    domain: harry_potter
+  - word: "出去"
+    pinyin: "chū qù"
+    tones: [1, 4]
+    meaning: "Out (directional complement)"
+    domain: harry_potter
+  - word: "出口"
+    pinyin: "chū kǒu"
+    tones: [1, 3]
+    meaning: "Exit / Way out"
+    domain: harry_potter
+  - word: "出来"
+    pinyin: "chū lái"
+    tones: [1, 2]
+    meaning: "Out (directional complement)"
+    domain: harry_potter
+  - word: "到来"
+    pinyin: "dào lái"
+    tones: [4, 2]
+    meaning: "To arrive / Arrival / Coming"
+    domain: harry_potter
+  - word: "前面"
+    pinyin: "qián miàn"
+    tones: [2, 4]
+    meaning: "In front / Ahead / Forefront"
+    domain: harry_potter
+  - word: "动手"
+    pinyin: "dòng shǒu"
+    tones: [4, 3]
+    meaning: "To start / To strike / To lay hands on"
+    domain: harry_potter
+  - word: "原因"
+    pinyin: "yuán yīn"
+    tones: [2, 1]
+    meaning: "Reason / Cause"
+    domain: harry_potter
+  - word: "原地"
+    pinyin: "yuán dì"
+    tones: [2, 4]
+    meaning: "In place / On the spot"
+    domain: harry_potter
+  - word: "原本"
+    pinyin: "yuán běn"
+    tones: [2, 3]
+    meaning: "Originally / Where there should have been"
+    domain: harry_potter
+  - word: "原来"
+    pinyin: "yuán lái"
+    tones: [2, 2]
+    meaning: "It turns out that / So (indicating sudden realization)"
+    domain: harry_potter
+  - word: "双手"
+    pinyin: "shuāng shǒu"
+    tones: [1, 3]
+    meaning: "Both hands"
+    domain: harry_potter
+  - word: "双腿"
+    pinyin: "shuāng tuǐ"
+    tones: [1, 3]
+    meaning: "Both legs"
+    domain: harry_potter
+  - word: "双臂"
+    pinyin: "shuāng bì"
+    tones: [1, 4]
+    meaning: "Both arms"
+    domain: harry_potter
+  - word: "发亮"
+    pinyin: "fā liàng"
+    tones: [1, 4]
+    meaning: "To shine / To gleam / Shiny"
+    domain: harry_potter
+  - word: "发现"
+    pinyin: "fā xiàn"
+    tones: [1, 4]
+    meaning: "To discover / To realize / To notice"
+    domain: harry_potter
+  - word: "发生"
+    pinyin: "fā shēng"
+    tones: [1, 1]
+    meaning: "To happen / Occur / Take place"
+    domain: harry_potter
+  - word: "口味"
+    pinyin: "kǒu wèi"
+    tones: [3, 4]
+    meaning: "Flavor / Taste / Palate"
+    domain: harry_potter
+  - word: "口袋"
+    pinyin: "kǒu dài"
+    tones: [3, 4]
+    meaning: "Pocket / Bag / Sack"
+    domain: harry_potter
+  - word: "只好"
+    pinyin: "zhǐ hǎo"
+    tones: [3, 3]
+    meaning: "To have no choice but to / Can only"
+    domain: harry_potter
+  - word: "只是"
+    pinyin: "zhǐ shì"
+    tones: [3, 4]
+    meaning: "Only / Merely / Simply"
+    domain: both
+  - word: "只有"
+    pinyin: "zhǐ yǒu"
+    tones: [3, 3]
+    meaning: "Only"
+    domain: both
+  - word: "只要"
+    pinyin: "zhǐ yào"
+    tones: [3, 4]
+    meaning: "As long as / Provided that"
+    domain: harry_potter
+  - word: "只见"
+    pinyin: "zhǐ jiàn"
+    tones: [3, 4]
+    meaning: "Only to see / Right before one's eyes"
+    domain: harry_potter
+  - word: "可以"
+    pinyin: "kě yǐ"
+    tones: [3, 3]
+    meaning: "Can / Able to"
+    domain: both
+  - word: "可是"
+    pinyin: "kě shì"
+    tones: [3, 4]
+    meaning: "But / However"
+    domain: harry_potter
+  - word: "可笑"
+    pinyin: "kě xiào"
+    tones: [3, 4]
+    meaning: "Laughable / Ridiculous / Absurd"
+    domain: harry_potter
+  - word: "可能"
+    pinyin: "kě néng"
+    tones: [3, 2]
+    meaning: "Possible / Probable"
+    domain: harry_potter
+  - word: "同在"
+    pinyin: "tóng zài"
+    tones: [2, 4]
+    meaning: "To be with / Together with / Abide with"
+    domain: john
+  - word: "同学"
+    pinyin: "tóng xué"
+    tones: [2, 2]
+    meaning: "Schoolmate / Classmate"
+    domain: harry_potter
+  - word: "同时"
+    pinyin: "tóng shí"
+    tones: [2, 2]
+    meaning: "At the same time / Simultaneously"
+    domain: harry_potter
+  - word: "同样"
+    pinyin: "tóng yàng"
+    tones: [2, 4]
+    meaning: "Equally / Just as much / Likewise"
+    domain: harry_potter
+  - word: "后来"
+    pinyin: "hòu lái"
+    tones: [4, 2]
+    meaning: "Later / Afterwards"
+    domain: harry_potter
+  - word: "后面"
+    pinyin: "hòu miàn"
+    tones: [4, 4]
+    meaning: "Behind / The back / Rear"
+    domain: harry_potter
+  - word: "向前"
+    pinyin: "xiàng qián"
+    tones: [4, 2]
+    meaning: "Forward / Ahead"
+    domain: harry_potter
+  - word: "听听"
+    pinyin: "tīng tīng"
+    tones: [1, 1]
+    meaning: "To listen (for a bit)"
+    domain: harry_potter
+  - word: "听见"
+    pinyin: "tīng jiàn"
+    tones: [1, 4]
+    meaning: "To hear"
+    domain: both
+  - word: "味道"
+    pinyin: "wèi dào"
+    tones: [4, 4]
+    meaning: "Taste / Flavor / Smell"
+    domain: harry_potter
+  - word: "哪儿"
+    pinyin: "nǎ ér"
+    tones: [3, 2]
+    meaning: "Where"
+    domain: harry_potter
+  - word: "哪里"
+    pinyin: "nǎ lǐ"
+    tones: [3, 3]
+    meaning: "How could / Where (rhetorical negation)"
+    domain: both
+  - word: "回到"
+    pinyin: "huí dào"
+    tones: [2, 4]
+    meaning: "To return to / To come back to"
+    domain: harry_potter
+  - word: "回去"
+    pinyin: "huí qù"
+    tones: [2, 4]
+    meaning: "To go back / To return"
+    domain: harry_potter
+  - word: "回来"
+    pinyin: "huí lái"
+    tones: [2, 2]
+    meaning: "To come back / To return"
+    domain: harry_potter
+  - word: "因为"
+    pinyin: "yīn wèi"
+    tones: [1, 4]
+    meaning: "Because / Owing to"
+    domain: both
+  - word: "因此"
+    pinyin: "yīn cǐ"
+    tones: [1, 3]
+    meaning: "Therefore / For this reason"
+    domain: harry_potter
+  - word: "在外"
+    pinyin: "zài wài"
+    tones: [4, 4]
+    meaning: "Outside / Exposed"
+    domain: harry_potter
+  - word: "地上"
+    pinyin: "dì shang"
+    tones: [4, 4]
+    meaning: "On the ground / On the floor"
+    domain: harry_potter
+  - word: "地下"
+    pinyin: "dì xià"
+    tones: [4, 4]
+    meaning: "Underground"
+    domain: harry_potter
+  - word: "外面"
+    pinyin: "wài miàn"
+    tones: [4, 4]
+    meaning: "Outside"
+    domain: harry_potter
+  - word: "多么"
+    pinyin: "duō me"
+    tones: [1, 1]
+    meaning: "How / What (exclamatory)"
+    domain: harry_potter
+  - word: "多少"
+    pinyin: "duō shao"
+    tones: [1, 3]
+    meaning: "How much / How many / Any amount of"
+    domain: harry_potter
+  - word: "大大"
+    pinyin: "dà dà"
+    tones: [4, 4]
+    meaning: "Greatly / Enormously"
+    domain: harry_potter
+  - word: "大家"
+    pinyin: "dà jiā"
+    tones: [4, 1]
+    meaning: "Everyone / All"
+    domain: harry_potter
+  - word: "大笑"
+    pinyin: "dà xiào"
+    tones: [4, 4]
+    meaning: "To laugh loudly / To burst out laughing"
+    domain: harry_potter
+  - word: "大腿"
+    pinyin: "dà tuǐ"
+    tones: [4, 3]
+    meaning: "Thigh"
+    domain: harry_potter
+  - word: "天亮"
+    pinyin: "tiān liàng"
+    tones: [1, 4]
+    meaning: "Dawn / Daybreak / Daylight"
+    domain: harry_potter
+  - word: "天哪"
+    pinyin: "tiān na"
+    tones: [1, 3]
+    meaning: "Good heavens! / My goodness!"
+    domain: harry_potter
+  - word: "头脑"
+    pinyin: "tóu nǎo"
+    tones: [2, 3]
+    meaning: "Mind / Brain / Head"
+    domain: harry_potter
+  - word: "好人"
+    pinyin: "hǎo rén"
+    tones: [3, 2]
+    meaning: "Good person / Nice guy"
+    domain: harry_potter
+  - word: "好好"
+    pinyin: "hǎo hǎo"
+    tones: [3, 3]
+    meaning: "Properly / Thoroughly / Well"
+    domain: harry_potter
+  - word: "好的"
+    pinyin: "hǎo de"
+    tones: [3, 4]
+    meaning: "Good thing / Anything good"
+    domain: john
+  - word: "如下"
+    pinyin: "rú xià"
+    tones: [2, 4]
+    meaning: "As follows"
+    domain: harry_potter
+  - word: "如今"
+    pinyin: "rú jīn"
+    tones: [2, 1]
+    meaning: "Now / At present"
+    domain: john
+  - word: "学生"
+    pinyin: "xué shēng"
+    tones: [2, 1]
+    meaning: "Student / Pupil"
+    domain: harry_potter
+  - word: "实在"
+    pinyin: "shí zài"
+    tones: [2, 4]
+    meaning: "Really / Indeed / Truly"
+    domain: harry_potter
+  - word: "实话"
+    pinyin: "shí huà"
+    tones: [2, 4]
+    meaning: "The truth / Honest words"
+    domain: harry_potter
+  - word: "家人"
+    pinyin: "jiā rén"
+    tones: [1, 2]
+    meaning: "Family / Family members"
+    domain: harry_potter
+  - word: "家里"
+    pinyin: "jiā lǐ"
+    tones: [1, 3]
+    meaning: "Home / At home / In the house"
+    domain: harry_potter
+  - word: "对于"
+    pinyin: "duì yú"
+    tones: [4, 2]
+    meaning: "For / Regarding / As for"
+    domain: harry_potter
+  - word: "小命"
+    pinyin: "xiǎo mìng"
+    tones: [3, 4]
+    meaning: "One's (puny) life (colloquial/belittling)"
+    domain: harry_potter
+  - word: "小子"
+    pinyin: "xiǎo zi"
+    tones: [3, 3]
+    meaning: "Boy / Kid / Lad"
+    domain: harry_potter
+  - word: "小小"
+    pinyin: "xiǎo xiǎo"
+    tones: [3, 3]
+    meaning: "Small / Slight / Little"
+    domain: harry_potter
+  - word: "小心"
+    pinyin: "xiǎo xīn"
+    tones: [3, 1]
+    meaning: "Careful / Cautious (不小心 = accidentally / by mistake)"
+    domain: harry_potter
+  - word: "差来"
+    pinyin: "chāi lái"
+    tones: [1, 2]
+    meaning: "Sent / Dispatched"
+    domain: john
+  - word: "差点"
+    pinyin: "chà diǎn"
+    tones: [4, 3]
+    meaning: "Nearly / Almost"
+    domain: harry_potter
+  - word: "年级"
+    pinyin: "nián jí"
+    tones: [2, 2]
+    meaning: "Grade / Year (in school)"
+    domain: harry_potter
+  - word: "年终"
+    pinyin: "nián zhōng"
+    tones: [2, 1]
+    meaning: "End-of-year / Year-end"
+    domain: harry_potter
+  - word: "当年"
+    pinyin: "dāng nián"
+    tones: [1, 2]
+    meaning: "Back in those years / In those days"
+    domain: harry_potter
+  - word: "当时"
+    pinyin: "dāng shí"
+    tones: [1, 2]
+    meaning: "At that time / Right then"
+    domain: harry_potter
+  - word: "当然"
+    pinyin: "dāng rán"
+    tones: [1, 2]
+    meaning: "Of course / Naturally"
+    domain: harry_potter
+  - word: "当面"
+    pinyin: "dāng miàn"
+    tones: [1, 4]
+    meaning: "To someone's face / In person"
+    domain: harry_potter
+  - word: "得到"
+    pinyin: "dé dào"
+    tones: [2, 4]
+    meaning: "To obtain / To get / To receive"
+    domain: harry_potter
+  - word: "心思"
+    pinyin: "xīn sī"
+    tones: [1, 1]
+    meaning: "Thought / Effort / Mental energy"
+    domain: harry_potter
+  - word: "心里"
+    pinyin: "xīn lǐ"
+    tones: [1, 3]
+    meaning: "In the heart / In one's mind"
+    domain: both
+  - word: "快活"
+    pinyin: "kuài huo"
+    tones: [4, 2]
+    meaning: "Cheerful / Happy / Cheered up"
+    domain: harry_potter
+  - word: "快点"
+    pinyin: "kuài diǎn"
+    tones: [4, 3]
+    meaning: "Hurry up / Quickly"
+    domain: harry_potter
+  - word: "快要"
+    pinyin: "kuài yào"
+    tones: [4, 4]
+    meaning: "About to / Nearly / Soon"
+    domain: harry_potter
+  - word: "怎么"
+    pinyin: "zěn me"
+    tones: [3, 1]
+    meaning: "How / What"
+    domain: harry_potter
+  - word: "怎样"
+    pinyin: "zěn yàng"
+    tones: [3, 4]
+    meaning: "How / In what way"
+    domain: harry_potter
+  - word: "思想"
+    pinyin: "sī xiǎng"
+    tones: [1, 3]
+    meaning: "Mind / Thought / Thinking"
+    domain: harry_potter
+  - word: "想到"
+    pinyin: "xiǎng dào"
+    tones: [3, 4]
+    meaning: "To think of / To call to mind"
+    domain: harry_potter
+  - word: "想法"
+    pinyin: "xiǎng fǎ"
+    tones: [3, 3]
+    meaning: "Idea / Notion / Way of thinking"
+    domain: harry_potter
+  - word: "想要"
+    pinyin: "xiǎng yào"
+    tones: [3, 4]
+    meaning: "To intend to / Desire to"
+    domain: john
+  - word: "想起"
+    pinyin: "xiǎng qǐ"
+    tones: [3, 3]
+    meaning: "To recall / Remember / Think of"
+    domain: harry_potter
+  - word: "意味"
+    pinyin: "yì wèi"
+    tones: [4, 4]
+    meaning: "To mean / Signify / Imply"
+    domain: harry_potter
+  - word: "意外"
+    pinyin: "yì wài"
+    tones: [4, 4]
+    meaning: "Surprised / Unexpected / Accident"
+    domain: harry_potter
+  - word: "意思"
+    pinyin: "yì si"
+    tones: [4, 1]
+    meaning: "Meaning / Idea"
+    domain: harry_potter
+  - word: "感人"
+    pinyin: "gǎn rén"
+    tones: [3, 2]
+    meaning: "Touching / Moving"
+    domain: harry_potter
+  - word: "感到"
+    pinyin: "gǎn dào"
+    tones: [3, 4]
+    meaning: "To feel / To sense"
+    domain: harry_potter
+  - word: "感觉"
+    pinyin: "gǎn jué"
+    tones: [3, 2]
+    meaning: "To feel / To sense / Sensation"
+    domain: harry_potter
+  - word: "所以"
+    pinyin: "suǒ yǐ"
+    tones: [3, 3]
+    meaning: "Therefore / So / Consequently"
+    domain: harry_potter
+  - word: "手指"
+    pinyin: "shǒu zhǐ"
+    tones: [3, 3]
+    meaning: "Finger"
+    domain: harry_potter
+  - word: "手臂"
+    pinyin: "shǒu bì"
+    tones: [3, 4]
+    meaning: "Arm"
+    domain: harry_potter
+  - word: "手里"
+    pinyin: "shǒu lǐ"
+    tones: [3, 3]
+    meaning: "In one's hand(s)"
+    domain: harry_potter
+  - word: "打听"
+    pinyin: "dǎ tīng"
+    tones: [3, 1]
+    meaning: "To inquire about / To pry / To find out"
+    domain: harry_potter
+  - word: "打开"
+    pinyin: "dǎ kāi"
+    tones: [3, 1]
+    meaning: "To open / To unfold"
+    domain: harry_potter
+  - word: "打死"
+    pinyin: "dǎ sǐ"
+    tones: [3, 3]
+    meaning: "To beat to death / To kill"
+    domain: harry_potter
+  - word: "指出"
+    pinyin: "zhǐ chū"
+    tones: [3, 1]
+    meaning: "To point out / Indicate / Show"
+    domain: harry_potter
+  - word: "指指"
+    pinyin: "zhǐ zhǐ"
+    tones: [3, 3]
+    meaning: "To point at"
+    domain: harry_potter
+  - word: "指着"
+    pinyin: "zhǐ zhe"
+    tones: [3, 4]
+    meaning: "Pointing at / Referring to"
+    domain: john
+  - word: "接着"
+    pinyin: "jiē zhe"
+    tones: [1, 4]
+    meaning: "Then / Immediately after / Next"
+    domain: harry_potter
+  - word: "整个"
+    pinyin: "zhěng gè"
+    tones: [3, 4]
+    meaning: "The whole / The entire"
+    domain: harry_potter
+  - word: "整整"
+    pinyin: "zhěng zhěng"
+    tones: [3, 3]
+    meaning: "A full / Whole / Exactly"
+    domain: harry_potter
+  - word: "日子"
+    pinyin: "rì zi"
+    tones: [4, 3]
+    meaning: "Day / Days / Date / Life"
+    domain: harry_potter
+  - word: "时间"
+    pinyin: "shí jiān"
+    tones: [2, 1]
+    meaning: "Time"
+    domain: harry_potter
+  - word: "明天"
+    pinyin: "míng tiān"
+    tones: [2, 1]
+    meaning: "Tomorrow"
+    domain: harry_potter
+  - word: "明年"
+    pinyin: "míng nián"
+    tones: [2, 2]
+    meaning: "Next year"
+    domain: harry_potter
+  - word: "明明"
+    pinyin: "míng míng"
+    tones: [2, 2]
+    meaning: "Clearly / Obviously / Plainly"
+    domain: harry_potter
+  - word: "明说"
+    pinyin: "míng shuō"
+    tones: [2, 1]
+    meaning: "To state clearly / Confess openly"
+    domain: john
+  - word: "是的"
+    pinyin: "shì de"
+    tones: [4, 4]
+    meaning: "Yes / That's right"
+    domain: harry_potter
+  - word: "显出"
+    pinyin: "xiǎn chū"
+    tones: [3, 1]
+    meaning: "To show / To reveal / To display"
+    domain: harry_potter
+  - word: "显得"
+    pinyin: "xiǎn de"
+    tones: [3, 4]
+    meaning: "To seem / To appear / To look"
+    domain: harry_potter
+  - word: "显明"
+    pinyin: "xiǎn míng"
+    tones: [3, 2]
+    meaning: "To manifest / Reveal clearly"
+    domain: john
+  - word: "显然"
+    pinyin: "xiǎn rán"
+    tones: [3, 2]
+    meaning: "Obviously / Evidently / Clearly"
+    domain: harry_potter
+  - word: "最后"
+    pinyin: "zuì hòu"
+    tones: [4, 4]
+    meaning: "Last / Final / Finally"
+    domain: harry_potter
+  - word: "最好"
+    pinyin: "zuì hǎo"
+    tones: [4, 3]
+    meaning: "Had better / Best"
+    domain: harry_potter
+  - word: "最小"
+    pinyin: "zuì xiǎo"
+    tones: [4, 3]
+    meaning: "Youngest / Smallest"
+    domain: harry_potter
+  - word: "最近"
+    pinyin: "zuì jìn"
+    tones: [4, 4]
+    meaning: "Recently / Lately"
+    domain: harry_potter
+  - word: "有些"
+    pinyin: "yǒu xiē"
+    tones: [3, 1]
+    meaning: "Some"
+    domain: harry_potter
+  - word: "有人"
+    pinyin: "yǒu rén"
+    tones: [3, 2]
+    meaning: "Someone / A visitor"
+    domain: harry_potter
+  - word: "有意"
+    pinyin: "yǒu yì"
+    tones: [3, 4]
+    meaning: "Intentionally / On purpose / Deliberately"
+    domain: harry_potter
+  - word: "有所"
+    pinyin: "yǒu suǒ"
+    tones: [3, 3]
+    meaning: "Somewhat / To some extent (literary prefix before 2..."
+    domain: harry_potter
+  - word: "有点"
+    pinyin: "yǒu diǎn"
+    tones: [3, 3]
+    meaning: "A little / Somewhat"
+    domain: harry_potter
+  - word: "有的"
+    pinyin: "yǒu de"
+    tones: [3, 4]
+    meaning: "Some / (with 时候) Sometimes"
+    domain: harry_potter
+  - word: "本人"
+    pinyin: "běn rén"
+    tones: [3, 2]
+    meaning: "Oneself / In person"
+    domain: harry_potter
+  - word: "本来"
+    pinyin: "běn lái"
+    tones: [3, 2]
+    meaning: "Originally / At first"
+    domain: both
+  - word: "本能"
+    pinyin: "běn néng"
+    tones: [3, 2]
+    meaning: "Instinct"
+    domain: harry_potter
+  - word: "本身"
+    pinyin: "běn shēn"
+    tones: [3, 1]
+    meaning: "Itself / In itself"
+    domain: harry_potter
+  - word: "来看"
+    pinyin: "lái kàn"
+    tones: [2, 4]
+    meaning: "To come see / To visit"
+    domain: harry_potter
+  - word: "来着"
+    pinyin: "lái zhe"
+    tones: [2, 4]
+    meaning: "Modal particle recalling a recent past event"
+    domain: harry_potter
+  - word: "来说"
+    pinyin: "lái shuō"
+    tones: [2, 1]
+    meaning: "For / As far as ... is concerned"
+    domain: harry_potter
+  - word: "样子"
+    pinyin: "yàng zi"
+    tones: [4, 3]
+    meaning: "Appearance / Shape / State"
+    domain: harry_potter
+  - word: "样样"
+    pinyin: "yàng yàng"
+    tones: [4, 4]
+    meaning: "Everything / Every single thing / All kinds"
+    domain: harry_potter
+  - word: "次日"
+    pinyin: "cì rì"
+    tones: [4, 4]
+    meaning: "The next day"
+    domain: john
+  - word: "正在"
+    pinyin: "zhèng zài"
+    tones: [4, 4]
+    meaning: "In the process of / Right now (progressive aspect m..."
+    domain: harry_potter
+  - word: "正好"
+    pinyin: "zhèng hǎo"
+    tones: [4, 3]
+    meaning: "Just in time / Just right / Happen to"
+    domain: harry_potter
+  - word: "正如"
+    pinyin: "zhèng rú"
+    tones: [4, 2]
+    meaning: "Just as / Exactly like"
+    domain: harry_potter
+  - word: "正是"
+    pinyin: "zhèng shì"
+    tones: [4, 4]
+    meaning: "Is none other than / Is precisely"
+    domain: both
+  - word: "死死"
+    pinyin: "sǐ sǐ"
+    tones: [3, 3]
+    meaning: "Tightly / To the death / Rigidly"
+    domain: harry_potter
+  - word: "死活"
+    pinyin: "sǐ huó"
+    tones: [3, 2]
+    meaning: "Life or death / Fate"
+    domain: harry_potter
+  - word: "没命"
+    pinyin: "méi mìng"
+    tones: [2, 4]
+    meaning: "To lose one's life / To die"
+    domain: harry_potter
+  - word: "没有"
+    pinyin: "méi yǒu"
+    tones: [2, 3]
+    meaning: "Did not / Have not"
+    domain: both
+  - word: "没错"
+    pinyin: "méi cuò"
+    tones: [2, 4]
+    meaning: "That's right / Quite right / Correct"
+    domain: harry_potter
+  - word: "法子"
+    pinyin: "fǎ zi"
+    tones: [3, 3]
+    meaning: "Way / Method"
+    domain: harry_potter
+  - word: "点头"
+    pinyin: "diǎn tóu"
+    tones: [3, 2]
+    meaning: "To nod one's head"
+    domain: harry_potter
+  - word: "然后"
+    pinyin: "rán hòu"
+    tones: [2, 4]
+    meaning: "Then / After that / Afterwards"
+    domain: harry_potter
+  - word: "照亮"
+    pinyin: "zhào liàng"
+    tones: [4, 4]
+    meaning: "To enlighten / Illuminate"
+    domain: john
+  - word: "照照"
+    pinyin: "zhào zhào"
+    tones: [4, 4]
+    meaning: "To take a look in (a mirror)"
+    domain: harry_potter
+  - word: "现在"
+    pinyin: "xiàn zài"
+    tones: [4, 4]
+    meaning: "Now / At present"
+    domain: harry_potter
+  - word: "生命"
+    pinyin: "shēng mìng"
+    tones: [1, 4]
+    meaning: "Life"
+    domain: both
+  - word: "生活"
+    pinyin: "shēng huó"
+    tones: [1, 2]
+    meaning: "Life / Daily living"
+    domain: harry_potter
+  - word: "的话"
+    pinyin: "de huà"
+    tones: [4, 4]
+    meaning: "If (conditional particle placed at end of clause)"
+    domain: harry_potter
+  - word: "直到"
+    pinyin: "zhí dào"
+    tones: [2, 4]
+    meaning: "Until / Right up to"
+    domain: harry_potter
+  - word: "直接"
+    pinyin: "zhí jiē"
+    tones: [2, 1]
+    meaning: "Directly / Straight"
+    domain: harry_potter
+  - word: "直逼"
+    pinyin: "zhí bī"
+    tones: [2, 1]
+    meaning: "To press close to / Close right in on"
+    domain: harry_potter
+  - word: "看到"
+    pinyin: "kàn dào"
+    tones: [4, 4]
+    meaning: "To see / Catch sight of"
+    domain: harry_potter
+  - word: "看哪"
+    pinyin: "kàn na"
+    tones: [4, 3]
+    meaning: "Behold! / Look!"
+    domain: john
+  - word: "看来"
+    pinyin: "kàn lái"
+    tones: [4, 2]
+    meaning: "It seems / It appears"
+    domain: harry_potter
+  - word: "看看"
+    pinyin: "kàn kàn"
+    tones: [4, 4]
+    meaning: "To take a look / To examine"
+    domain: harry_potter
+  - word: "看见"
+    pinyin: "kàn jiàn"
+    tones: [4, 4]
+    meaning: "To see / To catch sight of"
+    domain: both
+  - word: "真实"
+    pinyin: "zhēn shí"
+    tones: [1, 2]
+    meaning: "True / Real / Authentic"
+    domain: harry_potter
+  - word: "真是"
+    pinyin: "zhēn shì"
+    tones: [1, 4]
+    meaning: "Really is / Truly / What a..."
+    domain: harry_potter
+  - word: "真正"
+    pinyin: "zhēn zhèng"
+    tones: [1, 4]
+    meaning: "Truly / Genuinely / Real"
+    domain: harry_potter
+  - word: "真的"
+    pinyin: "zhēn de"
+    tones: [1, 4]
+    meaning: "Really / Truly / Actually"
+    domain: harry_potter
+  - word: "眼前"
+    pinyin: "yǎn qián"
+    tones: [3, 2]
+    meaning: "Before one's eyes / Field of vision"
+    domain: harry_potter
+  - word: "眼镜"
+    pinyin: "yǎn jìng"
+    tones: [3, 4]
+    meaning: "Glasses / Spectacles"
+    domain: harry_potter
+  - word: "知觉"
+    pinyin: "zhī jué"
+    tones: [1, 2]
+    meaning: "Feeling / Sensation / Consciousness"
+    domain: harry_potter
+  - word: "知道"
+    pinyin: "zhī dào"
+    tones: [1, 4]
+    meaning: "To know / To realize / To be aware of"
+    domain: both
+  - word: "种类"
+    pinyin: "zhǒng lèi"
+    tones: [3, 4]
+    meaning: "Kinds / Types / Varieties"
+    domain: harry_potter
+  - word: "紧紧"
+    pinyin: "jǐn jǐn"
+    tones: [3, 3]
+    meaning: "Tightly / Closely"
+    domain: harry_potter
+  - word: "级长"
+    pinyin: "jí zhǎng"
+    tones: [2, 3]
+    meaning: "Prefect / Class monitor"
+    domain: harry_potter
+  - word: "终于"
+    pinyin: "zhōng yú"
+    tones: [1, 2]
+    meaning: "Finally / At last"
+    domain: harry_potter
+  - word: "绝不"
+    pinyin: "jué bù"
+    tones: [2, 4]
+    meaning: "By no means / Definitely not / Never"
+    domain: harry_potter
+  - word: "绝对"
+    pinyin: "jué duì"
+    tones: [2, 4]
+    meaning: "Absolutely / Categorically"
+    domain: harry_potter
+  - word: "脑子"
+    pinyin: "nǎo zi"
+    tones: [3, 3]
+    meaning: "Brain / Mind / Head"
+    domain: harry_potter
+  - word: "脑袋"
+    pinyin: "nǎo dài"
+    tones: [3, 4]
+    meaning: "Head / Brains"
+    domain: harry_potter
+  - word: "自动"
+    pinyin: "zì dòng"
+    tones: [4, 4]
+    meaning: "Automatically / Of one's own accord"
+    domain: harry_potter
+  - word: "自然"
+    pinyin: "zì rán"
+    tones: [4, 2]
+    meaning: "Naturally / Of course / Nature"
+    domain: harry_potter
+  - word: "至于"
+    pinyin: "zhì yú"
+    tones: [4, 2]
+    meaning: "As for / As to"
+    domain: harry_potter
+  - word: "至少"
+    pinyin: "zhì shǎo"
+    tones: [4, 3]
+    meaning: "At least"
+    domain: harry_potter
+  - word: "致命"
+    pinyin: "zhì mìng"
+    tones: [4, 4]
+    meaning: "Fatal / Deadly / Lethal"
+    domain: harry_potter
+  - word: "若是"
+    pinyin: "ruò shì"
+    tones: [4, 4]
+    meaning: "If / Supposing that"
+    domain: harry_potter
+  - word: "行动"
+    pinyin: "xíng dòng"
+    tones: [2, 4]
+    meaning: "To take action / To act / Action"
+    domain: harry_potter
+  - word: "行走"
+    pinyin: "xíng zǒu"
+    tones: [2, 3]
+    meaning: "To walk / Walk by"
+    domain: john
+  - word: "见过"
+    pinyin: "jiàn guò"
+    tones: [4, 4]
+    meaning: "Have seen / Beheld with own eyes"
+    domain: john
+  - word: "觉得"
+    pinyin: "jué de"
+    tones: [2, 4]
+    meaning: "To feel / Think / Find"
+    domain: harry_potter
+  - word: "许多"
+    pinyin: "xǔ duō"
+    tones: [3, 1]
+    meaning: "Many / A great number of"
+    domain: harry_potter
+  - word: "说话"
+    pinyin: "shuō huà"
+    tones: [1, 4]
+    meaning: "To speak / To talk"
+    domain: harry_potter
+  - word: "说谎"
+    pinyin: "shuō huǎng"
+    tones: [1, 3]
+    meaning: "To tell a lie / To lie"
+    domain: harry_potter
+  - word: "说道"
+    pinyin: "shuō dào"
+    tones: [1, 4]
+    meaning: "To say / Said (in narrative)"
+    domain: harry_potter
+  - word: "谈论"
+    pinyin: "tán lùn"
+    tones: [2, 4]
+    meaning: "To talk about / To discuss"
+    domain: harry_potter
+  - word: "谈谈"
+    pinyin: "tán tán"
+    tones: [2, 2]
+    meaning: "To talk a bit / Discuss"
+    domain: harry_potter
+  - word: "谎话"
+    pinyin: "huǎng huà"
+    tones: [3, 4]
+    meaning: "Lie / Falsehood"
+    domain: harry_potter
+  - word: "走向"
+    pinyin: "zǒu xiàng"
+    tones: [3, 4]
+    meaning: "To walk toward / To head toward"
+    domain: harry_potter
+  - word: "走开"
+    pinyin: "zǒu kāi"
+    tones: [3, 1]
+    meaning: "Get out of the way / Step aside / Go away"
+    domain: harry_potter
+  - word: "赶到"
+    pinyin: "gǎn dào"
+    tones: [3, 4]
+    meaning: "To hurry to / To rush to"
+    domain: harry_potter
+  - word: "赶来"
+    pinyin: "gǎn lái"
+    tones: [3, 2]
+    meaning: "To hurry over / Rush here"
+    domain: harry_potter
+  - word: "赶紧"
+    pinyin: "gǎn jǐn"
+    tones: [3, 3]
+    meaning: "Hurriedly / Losing no time / Right away"
+    domain: harry_potter
+  - word: "起来"
+    pinyin: "qǐ lái"
+    tones: [3, 2]
+    meaning: "To start doing (inchoative complement) / To get up"
+    domain: harry_potter
+  - word: "起身"
+    pinyin: "qǐ shēn"
+    tones: [3, 1]
+    meaning: "To get up / Rise to one's feet"
+    domain: harry_potter
+  - word: "身上"
+    pinyin: "shēn shang"
+    tones: [1, 4]
+    meaning: "On the body / Upon someone"
+    domain: both
+  - word: "身后"
+    pinyin: "shēn hòu"
+    tones: [1, 4]
+    meaning: "Behind one's body / Behind"
+    domain: harry_potter
+  - word: "身子"
+    pinyin: "shēn zi"
+    tones: [1, 3]
+    meaning: "Body / Torso"
+    domain: harry_potter
+  - word: "身边"
+    pinyin: "shēn biān"
+    tones: [1, 1]
+    meaning: "By one's side / Past someone"
+    domain: harry_potter
+  - word: "转动"
+    pinyin: "zhuǎn dòng"
+    tones: [3, 4]
+    meaning: "To turn / Spin / Work (of the mind)"
+    domain: harry_potter
+  - word: "转向"
+    pinyin: "zhuǎn xiàng"
+    tones: [3, 4]
+    meaning: "To turn toward / Face"
+    domain: harry_potter
+  - word: "转身"
+    pinyin: "zhuǎn shēn"
+    tones: [3, 1]
+    meaning: "To turn around"
+    domain: harry_potter
+  - word: "过人"
+    pinyin: "guò rén"
+    tones: [4, 2]
+    meaning: "Surpassing others / Extraordinary / Outstanding"
+    domain: harry_potter
+  - word: "过去"
+    pinyin: "guò qù"
+    tones: [4, 4]
+    meaning: "To go over / Pass over"
+    domain: harry_potter
+  - word: "过时"
+    pinyin: "guò shí"
+    tones: [4, 2]
+    meaning: "Out of date / Behind the times"
+    domain: harry_potter
+  - word: "过来"
+    pinyin: "guò lái"
+    tones: [4, 2]
+    meaning: "To come over (directional complement)"
+    domain: harry_potter
+  - word: "还是"
+    pinyin: "hái shì"
+    tones: [2, 4]
+    meaning: "Still was / Was still / Or"
+    domain: harry_potter
+  - word: "还有"
+    pinyin: "hái yǒu"
+    tones: [2, 3]
+    meaning: "And also / In addition / There is also"
+    domain: harry_potter
+  - word: "还能"
+    pinyin: "hái néng"
+    tones: [2, 2]
+    meaning: "Can still / Could possibly"
+    domain: john
+  - word: "还要"
+    pinyin: "hái yào"
+    tones: [2, 4]
+    meaning: "Also want to / Still / In addition"
+    domain: harry_potter
+  - word: "这个"
+    pinyin: "zhè gè"
+    tones: [4, 4]
+    meaning: "This / This one"
+    domain: harry_potter
+  - word: "这么"
+    pinyin: "zhè me"
+    tones: [4, 1]
+    meaning: "So / Like this / In this way"
+    domain: harry_potter
+  - word: "这些"
+    pinyin: "zhè xiē"
+    tones: [4, 1]
+    meaning: "These"
+    domain: harry_potter
+  - word: "这儿"
+    pinyin: "zhè ér"
+    tones: [4, 2]
+    meaning: "Here"
+    domain: harry_potter
+  - word: "这时"
+    pinyin: "zhè shí"
+    tones: [4, 2]
+    meaning: "At this moment / This time"
+    domain: harry_potter
+  - word: "这样"
+    pinyin: "zhè yàng"
+    tones: [4, 4]
+    meaning: "Like this / So / This way"
+    domain: harry_potter
+  - word: "这次"
+    pinyin: "zhè cì"
+    tones: [4, 4]
+    meaning: "This time"
+    domain: harry_potter
+  - word: "这种"
+    pinyin: "zhè zhǒng"
+    tones: [4, 3]
+    meaning: "This kind of / Such"
+    domain: harry_potter
+  - word: "这里"
+    pinyin: "zhè lǐ"
+    tones: [4, 3]
+    meaning: "Here / This place"
+    domain: harry_potter
+  - word: "进去"
+    pinyin: "jìn qù"
+    tones: [4, 4]
+    meaning: "To go in / Enter"
+    domain: harry_potter
+  - word: "进来"
+    pinyin: "jìn lái"
+    tones: [4, 2]
+    meaning: "To come in / Inward"
+    domain: harry_potter
+  - word: "进行"
+    pinyin: "jìn xíng"
+    tones: [4, 2]
+    meaning: "To proceed / To progress / To carry on"
+    domain: harry_potter
+  - word: "逃生"
+    pinyin: "táo shēng"
+    tones: [2, 1]
+    meaning: "To escape with one's life / To survive"
+    domain: harry_potter
+  - word: "逃走"
+    pinyin: "táo zǒu"
+    tones: [2, 3]
+    meaning: "To flee / To run away / To escape"
+    domain: harry_potter
+  - word: "通知"
+    pinyin: "tōng zhī"
+    tones: [1, 1]
+    meaning: "Notice / Notification / To notify"
+    domain: harry_potter
+  - word: "通红"
+    pinyin: "tōng hóng"
+    tones: [1, 2]
+    meaning: "Bright red / Scarlet all over"
+    domain: harry_potter
+  - word: "通过"
+    pinyin: "tōng guò"
+    tones: [1, 4]
+    meaning: "To get past / To pass through"
+    domain: harry_potter
+  - word: "逼近"
+    pinyin: "bī jìn"
+    tones: [1, 4]
+    meaning: "To close in on / To advance upon / To press near"
+    domain: harry_potter
+  - word: "那个"
+    pinyin: "nà gè"
+    tones: [4, 4]
+    meaning: "That / That one"
+    domain: harry_potter
+  - word: "那么"
+    pinyin: "nà me"
+    tones: [4, 1]
+    meaning: "So / To such a degree / Like that"
+    domain: harry_potter
+  - word: "那些"
+    pinyin: "nà xiē"
+    tones: [4, 1]
+    meaning: "Those"
+    domain: both
+  - word: "那儿"
+    pinyin: "nà ér"
+    tones: [4, 2]
+    meaning: "There / That place"
+    domain: harry_potter
+  - word: "那天"
+    pinyin: "nà tiān"
+    tones: [4, 1]
+    meaning: "That day"
+    domain: harry_potter
+  - word: "那时"
+    pinyin: "nà shí"
+    tones: [4, 2]
+    meaning: "At that time / Back then"
+    domain: john
+  - word: "那样"
+    pinyin: "nà yàng"
+    tones: [4, 4]
+    meaning: "Like that / In that case"
+    domain: harry_potter
+  - word: "那种"
+    pinyin: "nà zhǒng"
+    tones: [4, 3]
+    meaning: "That kind of / That sort of"
+    domain: harry_potter
+  - word: "那边"
+    pinyin: "nà biān"
+    tones: [4, 1]
+    meaning: "Over there / That side"
+    domain: harry_potter
+  - word: "那里"
+    pinyin: "nà lǐ"
+    tones: [4, 3]
+    meaning: "There / That place"
+    domain: both
+  - word: "里头"
+    pinyin: "lǐ tou"
+    tones: [3, 2]
+    meaning: "Inside / Within"
+    domain: john
+  - word: "里面"
+    pinyin: "lǐ miàn"
+    tones: [3, 4]
+    meaning: "Inside / Interior"
+    domain: harry_potter
+  - word: "重重"
+    pinyin: "zhòng zhòng"
+    tones: [4, 4]
+    meaning: "Very heavy / Weighty"
+    domain: harry_potter
+  - word: "金子"
+    pinyin: "jīn zi"
+    tones: [1, 3]
+    meaning: "Gold"
+    domain: harry_potter
+  - word: "金色"
+    pinyin: "jīn sè"
+    tones: [1, 4]
+    meaning: "Golden (color)"
+    domain: harry_potter
+  - word: "错过"
+    pinyin: "cuò guò"
+    tones: [4, 4]
+    meaning: "To miss / Pass by each other"
+    domain: harry_potter
+  - word: "镜子"
+    pinyin: "jìng zi"
+    tones: [4, 3]
+    meaning: "Mirror"
+    domain: harry_potter
+  - word: "长大"
+    pinyin: "zhǎng dà"
+    tones: [3, 4]
+    meaning: "To grow up / To grow older"
+    domain: harry_potter
+  - word: "静静"
+    pinyin: "jìng jìng"
+    tones: [4, 4]
+    meaning: "Quietly / Still / Peacefully"
+    domain: harry_potter
+  - word: "面前"
+    pinyin: "miàn qián"
+    tones: [4, 2]
+    meaning: "In front of / Before one's face"
+    domain: harry_potter
+  - word: "面对"
+    pinyin: "miàn duì"
+    tones: [4, 4]
+    meaning: "To face / To confront"
+    domain: harry_potter
+  - word: "魔法"
+    pinyin: "mó fǎ"
+    tones: [2, 3]
+    meaning: "Magic / Witchcraft"
+    domain: harry_potter
+  - word: "魔镜"
+    pinyin: "mó jìng"
+    tones: [2, 4]
+    meaning: "Magic mirror"
+    domain: harry_potter
+  - word: "鲜红"
+    pinyin: "xiān hóng"
+    tones: [1, 2]
+    meaning: "Bright red / Scarlet / Blood-red"
+    domain: harry_potter
+  - word: "一下子"
+    pinyin: "yī xià zi"
+    tones: [1, 4, 3]
+    meaning: "All at once / In an instant / Suddenly"
+    domain: harry_potter
+  - word: "一个个"
+    pinyin: "yī gè gè"
+    tones: [1, 4, 4]
+    meaning: "One by one / One after another"
+    domain: harry_potter
+  - word: "一整天"
+    pinyin: "yī zhěng tiān"
+    tones: [1, 3, 1]
+    meaning: "The whole day / All day long"
+    domain: harry_potter
+  - word: "一时间"
+    pinyin: "yī shí jiān"
+    tones: [1, 2, 1]
+    meaning: "For a moment / For a while"
+    domain: harry_potter
+  - word: "一点儿"
+    pinyin: "yī diǎn ér"
+    tones: [1, 3, 2]
+    meaning: "Even a little bit / The slightest (with negative)"
+    domain: harry_potter
+  - word: "不得不"
+    pinyin: "bù dé bù"
+    tones: [4, 2, 4]
+    meaning: "Have no choice but to / Cannot help but / Must"
+    domain: harry_potter
+  - word: "为什么"
+    pinyin: "wèi shén me"
+    tones: [4, 2, 1]
+    meaning: "Why / For what reason"
+    domain: harry_potter
+  - word: "之所以"
+    pinyin: "zhī suǒ yǐ"
+    tones: [1, 3, 3]
+    meaning: "The reason why..."
+    domain: harry_potter
+  - word: "了不起"
+    pinyin: "liǎo bù qǐ"
+    tones: [3, 4, 3]
+    meaning: "Amazing / Extraordinary / Remarkable"
+    domain: harry_potter
+  - word: "从来不"
+    pinyin: "cóng lái bù"
+    tones: [2, 2, 4]
+    meaning: "Never / Have never"
+    domain: harry_potter
+  - word: "再次日"
+    pinyin: "zài cì rì"
+    tones: [4, 4, 4]
+    meaning: "Again the next day"
+    domain: john
+  - word: "天开了"
+    pinyin: "tiān kāi le"
+    tones: [1, 1, 4]
+    meaning: "Heaven opened"
+    domain: john
+  - word: "差不多"
+    pinyin: "chà bu duō"
+    tones: [4, 4, 1]
+    meaning: "Almost / Nearly / Pretty much"
+    domain: harry_potter
+  - word: "开开心"
+    pinyin: "kāi kāi xīn"
+    tones: [1, 1, 1]
+    meaning: "To have some fun / To amuse oneself"
+    domain: harry_potter
+  - word: "怎么样"
+    pinyin: "zěn me yàng"
+    tones: [3, 1, 4]
+    meaning: "How is it? / Well? / What's it like?"
+    domain: harry_potter
+  - word: "没什么"
+    pinyin: "méi shén me"
+    tones: [2, 2, 1]
+    meaning: "It's nothing / Think nothing of it / You're welcome"
+    domain: harry_potter
+  - word: "照镜子"
+    pinyin: "zhào jìng zi"
+    tones: [4, 4, 3]
+    meaning: "To look in the mirror"
+    domain: harry_potter
+  - word: "看上去"
+    pinyin: "kàn shàng qù"
+    tones: [4, 4, 4]
+    meaning: "To look like / To seem / By appearance"
+    domain: harry_potter
+  - word: "看样子"
+    pinyin: "kàn yàng zi"
+    tones: [4, 4, 3]
+    meaning: "It looks like / By the look of it / Seemingly"
+    domain: harry_potter
+  - word: "紧接着"
+    pinyin: "jǐn jiē zhe"
+    tones: [3, 1, 4]
+    meaning: "Immediately afterward / Right after"
+    domain: harry_potter
+  - word: "红通通"
+    pinyin: "hóng tōng tōng"
+    tones: [2, 1, 1]
+    meaning: "Glowing red / Bright red"
+    domain: harry_potter
+  - word: "转过身"
+    pinyin: "zhuǎn guò shēn"
+    tones: [3, 4, 1]
+    meaning: "To turn around"
+    domain: both
+  - word: "重重地"
+    pinyin: "zhòng zhòng de"
+    tones: [4, 4, 4]
+    meaning: "Heavily / Hard / Profoundly"
+    domain: harry_potter
+  - word: "面对面"
+    pinyin: "miàn duì miàn"
+    tones: [4, 4, 4]
+    meaning: "Face to face"
+    domain: harry_potter
+  - word: "鲜红色"
+    pinyin: "xiān hóng sè"
+    tones: [1, 2, 4]
+    meaning: "Scarlet / Bright red"
+    domain: harry_potter
+  - word: "上去下来"
+    pinyin: "shàng qu xià lai"
+    tones: [4, 4, 4, 2]
+    meaning: "Ascending and descending"
+    domain: john
+  - word: "不以为然"
+    pinyin: "bù yǐ wéi rán"
+    tones: [4, 3, 2, 2]
+    meaning: "Disapprovingly / Not thinking it right"
+    domain: harry_potter
+  - word: "原原本本"
+    pinyin: "yuán yuán běn běn"
+    tones: [2, 2, 3, 3]
+    meaning: "From beginning to end / In full detail"
+    domain: harry_potter
+  - word: "可不可以"
+    pinyin: "kě bù kě yǐ"
+    tones: [3, 4, 3, 3]
+    meaning: "May I / Is it alright if"
+    domain: harry_potter
+  - word: "多多少少"
+    pinyin: "duō duō shǎo shǎo"
+    tones: [1, 1, 3, 3]
+    meaning: "More or less / To some extent"
+    domain: harry_potter
+  - word: "实实在在"
+    pinyin: "shí shí zài zài"
+    tones: [2, 2, 4, 4]
+    meaning: "Truly, truly / Verily, verily (Amen, Amen)"
+    domain: john
+  - word: "差一点儿"
+    pinyin: "chà yī diǎn ér"
+    tones: [4, 1, 3, 2]
+    meaning: "Almost / Nearly"
+    domain: harry_potter
+  - word: "指指点点"
+    pinyin: "zhǐ zhǐ diǎn diǎn"
+    tones: [3, 3, 3, 3]
+    meaning: "To point at / To point and stare"
+    domain: harry_potter
+  - word: "若有所思"
+    pinyin: "ruò yǒu suǒ sī"
+    tones: [4, 3, 3, 1]
+    meaning: "Thoughtfully / Pensive / As if lost in thought"
+    domain: harry_potter
