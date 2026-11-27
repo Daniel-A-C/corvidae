@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math"
 	"math/rand"
+	"sort"
 	"strings"
 )
 
@@ -740,4 +741,141 @@ func boolInt(b bool) int {
 		return 1
 	}
 	return 0
+}
+
+// FindMissedOpportunities scans the hand the player was holding before committing
+// and returns up to maxHints high-value compounds or Pivot Chains they did not play.
+func FindMissedOpportunities(
+	hand []DeckCard,
+	playedWords []string,
+	lex *Lexicon,
+	prog *ProgressStore,
+	maxHints int,
+) []MissedHint {
+	if lex == nil || len(hand) == 0 || maxHints <= 0 {
+		return nil
+	}
+
+	// Count available copies of each glyph in hand
+	avail := make(map[string]int, len(hand))
+	for _, c := range hand {
+		avail[c.Glyph]++
+	}
+
+	playedSet := make(map[string]bool, len(playedWords))
+	for _, w := range playedWords {
+		playedSet[w] = true
+	}
+
+	// Collect all formable compounds from this hand
+	seen := make(map[string]bool)
+	var formable []*CompoundEntry
+	for g := range avail {
+		for _, comp := range lex.CompoundsByChar[g] {
+			if seen[comp.Word] {
+				continue
+			}
+			seen[comp.Word] = true
+			if canFormWord(comp.Word, avail) {
+				formable = append(formable, comp)
+			}
+		}
+	}
+	if len(formable) == 0 {
+		return nil
+	}
+
+	// Rank unplayed compounds: longer words first, then volatile/unmastered, then alphabetical
+	var unplayed []*CompoundEntry
+	for _, c := range formable {
+		if !playedSet[c.Word] {
+			unplayed = append(unplayed, c)
+		}
+	}
+	sort.Slice(unplayed, func(i, j int) bool {
+		li, lj := len([]rune(unplayed[i].Word)), len([]rune(unplayed[j].Word))
+		if li != lj {
+			return li > lj
+		}
+		vi := prog != nil && prog.IsVolatileCompound(unplayed[i].Word)
+		vj := prog != nil && prog.IsVolatileCompound(unplayed[j].Word)
+		if vi != vj {
+			return vi
+		}
+		return unplayed[i].Word < unplayed[j].Word
+	})
+
+	var hints []MissedHint
+	usedInPivot := make(map[string]bool)
+
+	// 1. Look for the best unplayed Pivot Chain (w1's last rune == w2's first rune,
+	//    and all runes of w1 + w2[1:] fit within hand's glyph counts).
+	for i := 0; i < len(formable) && len(hints) == 0; i++ {
+		w1 := formable[i]
+		r1 := []rune(w1.Word)
+		if len(r1) < 2 {
+			continue
+		}
+		bridge := r1[len(r1)-1]
+		for j := 0; j < len(formable); j++ {
+			if i == j {
+				continue
+			}
+			w2 := formable[j]
+			r2 := []rune(w2.Word)
+			if len(r2) < 2 || r2[0] != bridge {
+				continue
+			}
+			// Skip if player already played both words
+			if playedSet[w1.Word] && playedSet[w2.Word] {
+				continue
+			}
+			// Check combined char counts (bridge is shared once!)
+			combined := string(r1) + string(r2[1:])
+			if !canFormWord(combined, avail) {
+				continue
+			}
+			hints = append(hints, MissedHint{
+				IsPivot: true,
+				Label:   fmt.Sprintf("⇄ Pivot: %s (%s) ⇄ %s (%s)", w1.Word, w1.Pinyin, w2.Word, w2.Pinyin),
+				Detail:  fmt.Sprintf("%s  ⇄  %s", w1.Meaning, w2.Meaning),
+			})
+			usedInPivot[w1.Word] = true
+			usedInPivot[w2.Word] = true
+			break
+		}
+	}
+
+	// 2. Fill remaining hint slots with top unplayed individual compounds
+	for _, c := range unplayed {
+		if len(hints) >= maxHints {
+			break
+		}
+		if usedInPivot[c.Word] {
+			continue
+		}
+		tag := ""
+		if len([]rune(c.Word)) >= 3 {
+			tag = fmt.Sprintf("[%d-char] ", len([]rune(c.Word)))
+		}
+		hints = append(hints, MissedHint{
+			IsPivot: false,
+			Label:   fmt.Sprintf("%s%s (%s)", tag, c.Word, c.Pinyin),
+			Detail:  c.Meaning,
+		})
+	}
+
+	return hints
+}
+
+func canFormWord(word string, avail map[string]int) bool {
+	need := make(map[string]int)
+	for _, r := range word {
+		g := string(r)
+		need[g]++
+		if need[g] > avail[g] {
+			return false
+		}
+	}
+	return true
 }

@@ -237,3 +237,57 @@ func TestParallelProgressAndMandarinDeckSync(t *testing.T) {
 		t.Errorf("expected synced flashcard Reps=1 Interval=1, got %+v", updated.Cards[0])
 	}
 }
+
+func TestFindMissedOpportunities(t *testing.T) {
+	lex := loadRealLexicon(t)
+	prog := NewEmptyProgress("")
+
+	// Find a pivot pair A+B and B+C so we can verify pivot hint detection
+	var w1, w2 *CompoundEntry
+	var a, b, c string
+	for i := range lex.Compounds {
+		r1 := []rune(lex.Compounds[i].Word)
+		if len(r1) != 2 {
+			continue
+		}
+		bridge := string(r1[1])
+		for _, cand := range lex.CompoundsByChar[bridge] {
+			r2 := []rune(cand.Word)
+			if len(r2) == 2 && string(r2[0]) == bridge && string(r2[1]) != string(r1[0]) && string(r2[1]) != bridge {
+				w1 = &lex.Compounds[i]
+				w2 = cand
+				a, b, c = string(r1[0]), bridge, string(r2[1])
+				break
+			}
+		}
+		if w1 != nil {
+			break
+		}
+	}
+	if w1 == nil || w2 == nil {
+		t.Fatalf("could not find pivot pair in lexicon")
+	}
+
+	hand := []DeckCard{
+		{ID: 1, Glyph: a},
+		{ID: 2, Glyph: b},
+		{ID: 3, Glyph: c},
+	}
+
+	// If player didn't play either word, FindMissedOpportunities should surface the Pivot Chain
+	hints := FindMissedOpportunities(hand, nil, lex, prog, 4)
+	if len(hints) == 0 {
+		t.Fatalf("expected at least 1 missed hint for hand %s,%s,%s", a, b, c)
+	}
+	if !hints[0].IsPivot {
+		t.Errorf("expected first hint to be a Pivot Chain, got %+v", hints[0])
+	}
+
+	// If player already played both words, neither should appear as missed
+	hintsAfter := FindMissedOpportunities(hand, []string{w1.Word, w2.Word}, lex, prog, 4)
+	for _, h := range hintsAfter {
+		if h.IsPivot && (h.Label == hints[0].Label) {
+			t.Errorf("should not suggest already-played pivot chain")
+		}
+	}
+}

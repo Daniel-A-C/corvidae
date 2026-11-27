@@ -425,6 +425,7 @@ func (r *Run) CommitPlay() bool {
 	if len(r.Challenges) == 0 {
 		// All staged words were invalid -> immediate fizzle, costs 1 Hand
 		res := ScorePlay(r, r.Staged, r.Challenges, r.PendingInvalid, r.PassedFlags)
+		res.MissedHints = FindMissedOpportunities(r.Hand, nil, r.Lexicon, r.Progress, 4)
 		r.LastPlayResult = &res
 		r.finishCommittedHand()
 		return false
@@ -462,6 +463,11 @@ func (r *Run) AnswerProve(optionIdx int, now time.Time, syncDecks bool, baseDeck
 	r.ProveIdx++
 	if r.ProveIdx >= len(r.Challenges) {
 		res := ScorePlay(r, r.Staged, r.Challenges, r.PendingInvalid, r.PassedFlags)
+		var playedWords []string
+		for _, c := range r.Challenges {
+			playedWords = append(playedWords, c.Word)
+		}
+		res.MissedHints = FindMissedOpportunities(r.Hand, playedWords, r.Lexicon, r.Progress, 4)
 		r.LastPlayResult = &res
 		r.BlindScore += res.TotalScore
 		r.Money += res.CoinsEarned

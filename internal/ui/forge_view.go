@@ -311,6 +311,24 @@ func (m Model) renderForgeBreakdown(run *forge.Run, frameWidth int) string {
 	}
 	b.WriteString(totalLine + "\n\n")
 
+	if len(res.MissedHints) > 0 {
+		b.WriteString(SectionTitleStyle.Render("💡 Also Available in That Hand:") + "\n")
+		for _, hint := range res.MissedHints {
+			if hint.IsPivot {
+				b.WriteString(fmt.Sprintf("  %s\n    %s\n",
+					HotStreakStyle.Render(hint.Label),
+					HintStyle.Render(truncateToWidth(hint.Detail, frameWidth-8)),
+				))
+			} else {
+				b.WriteString(fmt.Sprintf("  • %s — %s\n",
+					PinyinStyle.Render(hint.Label),
+					HintStyle.Render(truncateToWidth(hint.Detail, frameWidth-34)),
+				))
+			}
+		}
+		b.WriteString("\n")
+	}
+
 	if run.BlindCleared() {
 		if run.WonRun && run.Ante == forge.WinAnte && run.BlindKind == forge.BlindBoss {
 			b.WriteString(CorrectStyle.Render("★ ANTE 6 BOSS DEFEATED — YOU WON THE RUN! (Press Enter to enter Shop & Endless Mode) ★") + "\n")

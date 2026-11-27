@@ -269,6 +269,14 @@ type ScoreEvent struct {
 	Detail string
 }
 
+// MissedHint represents a strong compound or Pivot Chain that was available in the player's
+// hand on the just-completed turn, shown after the turn for learning.
+type MissedHint struct {
+	IsPivot bool
+	Label   string // e.g. "发现 (fā xiàn)" or "回来 ⇄ 来到"
+	Detail  string // e.g. "to discover" or "to return ⇄ to arrive"
+}
+
 // PlayResult holds the complete scoring breakdown of a committed hand.
 type PlayResult struct {
 	HandType       HandType
@@ -283,6 +291,7 @@ type PlayResult struct {
 	GlassShattered bool
 	Words          []WordOutcome
 	Events         []ScoreEvent
+	MissedHints    []MissedHint
 }
 
 // StarterArchetype describes one of the selectable starting decks for a Forge run.
